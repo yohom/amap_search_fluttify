@@ -1,0 +1,4 @@
+enum AMapSearchCoordinateType {
+  AMapSearchCoordinateTypeGPS,
+  AMapSearchCoordinateTypeAMap
+}

@@ -1,0 +1,4 @@
+enum AMapCloudSortType {
+  AMapCloudSortTypeDESC,
+  AMapCloudSortTypeASC
+}
