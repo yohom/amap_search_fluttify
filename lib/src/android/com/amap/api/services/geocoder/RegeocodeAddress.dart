@@ -314,6 +314,21 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_geocoder_RegeocodeRoad>> getRoads() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getRoads([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getRoads', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it);
+  }
+  
    Future<void> setRoads(List<com_amap_api_services_geocoder_RegeocodeRoad> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setRoads([])');
@@ -327,6 +342,21 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
     // 返回值
     return result;
+  }
+  
+   Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getPois([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getPois', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_PoiItem()..refId = it);
   }
   
    Future<void> setPois(List<com_amap_api_services_core_PoiItem> var1) async {
@@ -344,6 +374,21 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_road_Crossroad>> getCrossroads() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCrossroads([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getCrossroads', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_road_Crossroad()..refId = it);
+  }
+  
    Future<void> setCrossroads(List<com_amap_api_services_road_Crossroad> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCrossroads([])');
@@ -359,6 +404,21 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_geocoder_BusinessArea>> getBusinessAreas() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBusinessAreas([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getBusinessAreas', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it);
+  }
+  
    Future<void> setBusinessAreas(List<com_amap_api_services_geocoder_BusinessArea> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBusinessAreas([])');
@@ -372,6 +432,21 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
     // 返回值
     return result;
+  }
+  
+   Future<List<com_amap_api_services_geocoder_AoiItem>> getAois() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAois([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.RegeocodeAddress::getAois', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it);
   }
   
    Future<void> setAois(List<com_amap_api_services_geocoder_AoiItem> var1) async {

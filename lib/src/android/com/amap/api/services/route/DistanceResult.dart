@@ -44,6 +44,21 @@ class com_amap_api_services_route_DistanceResult extends Ref_Android  {
     return com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result;
   }
   
+   Future<List<com_amap_api_services_route_DistanceItem>> getDistanceResults() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.DistanceResult::getDistanceResults', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_DistanceItem()..refId = it);
+  }
+  
    Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])');

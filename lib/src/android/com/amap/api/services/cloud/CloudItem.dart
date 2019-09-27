@@ -164,6 +164,21 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_cloud_CloudImage>> getCloudImage() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.cloud.CloudItem::getCloudImage', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_cloud_CloudImage()..refId = it);
+  }
+  
    Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');

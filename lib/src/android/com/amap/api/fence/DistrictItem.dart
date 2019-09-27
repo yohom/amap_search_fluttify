@@ -74,6 +74,21 @@ class com_amap_api_fence_DistrictItem extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_location_DPoint>> getPolyline() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::getPolyline([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.fence.DistrictItem::getPolyline', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_location_DPoint()..refId = it);
+  }
+  
    Future<void> setPolyline(List<com_amap_api_location_DPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.DistrictItem@$refId::setPolyline([])');

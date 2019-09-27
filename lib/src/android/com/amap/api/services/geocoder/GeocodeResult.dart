@@ -44,6 +44,21 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getGeocodeAddressList() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeAddressList([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it);
+  }
+  
    Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList([])');

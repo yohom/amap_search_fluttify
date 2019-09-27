@@ -104,6 +104,51 @@ class com_amap_api_services_route_RouteRailwayItem extends Ref_Android  {
     return com_amap_api_services_route_RailwayStationItem()..refId = result;
   }
   
+   Future<List<com_amap_api_services_route_RailwayStationItem>> getViastops() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getViastops([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getViastops', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it);
+  }
+  
+   Future<List<com_amap_api_services_route_Railway>> getAlters() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getAlters([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getAlters', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_Railway()..refId = it);
+  }
+  
+   Future<List<com_amap_api_services_route_RailwaySpace>> getSpaces() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::getSpaces([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteRailwayItem::getSpaces', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_RailwaySpace()..refId = it);
+  }
+  
    Future<void> setTime(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteRailwayItem@$refId::setTime([\'var1\':$var1])');

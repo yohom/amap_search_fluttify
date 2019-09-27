@@ -74,4 +74,49 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
     return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
   }
   
+   Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPois([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getPois', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_PoiItem()..refId = it);
+  }
+  
+   Future<List<String>> getSearchSuggestionKeywords() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionKeywords([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).cast<String>();
+  }
+  
+   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCitys() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionCitys([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_SuggestionCity()..refId = it);
+  }
+  
 }

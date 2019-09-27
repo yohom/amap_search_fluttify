@@ -194,6 +194,21 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getCoordinates() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getCoordinates', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
    Future<void> setCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates([])');

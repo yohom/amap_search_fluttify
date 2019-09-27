@@ -14,6 +14,21 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
 
   // 生成方法们
+   Future<List<com_amap_api_services_route_WalkPath>> getPaths() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getPaths([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.WalkRouteResult::getPaths', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_WalkPath()..refId = it);
+  }
+  
    Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setPaths([])');

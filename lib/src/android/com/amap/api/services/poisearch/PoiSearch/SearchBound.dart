@@ -104,4 +104,19 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::getPolyGonList', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
 }

@@ -89,6 +89,21 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getPolylines() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getPolylines([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
    Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::clone([])');

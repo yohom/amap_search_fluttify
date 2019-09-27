@@ -21,6 +21,8 @@ mixin com_amap_api_fence_GeoFenceManagerBase on java_lang_Object {
   
   Future<void> removeGeoFence() {}
   
+  Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() {}
+  
   Future<void> setGeoFenceAble(String var1, bool var2) {}
   
   Future<void> pauseGeoFence() {}

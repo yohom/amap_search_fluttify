@@ -13,4 +13,6 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   
   Future<void> requestInputtipsAsyn() {}
   
+  Future<List<com_amap_api_services_help_Tip>> requestInputtips() {}
+  
 }

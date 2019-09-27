@@ -29,6 +29,21 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
     return com_amap_api_services_geocoder_RegeocodeAddress()..refId = result;
   }
   
+   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName', {"var1": var1.refId, "refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it);
+  }
+  
    Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])');

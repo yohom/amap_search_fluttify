@@ -329,6 +329,21 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getPolyline([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.TruckStep::getPolyline', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
    Future<String> getAction() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getAction([])');
@@ -357,6 +372,36 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
     // 返回值
     return result;
+  }
+  
+   Future<List<com_amap_api_services_route_RouteSearchCity>> getRouteSearchCityList() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getRouteSearchCityList([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.TruckStep::getRouteSearchCityList', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_RouteSearchCity()..refId = it);
+  }
+  
+   Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getTMCs([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.TruckStep::getTMCs', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_TMC()..refId = it);
   }
   
 }

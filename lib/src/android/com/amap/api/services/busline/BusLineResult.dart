@@ -59,4 +59,49 @@ class com_amap_api_services_busline_BusLineResult extends Ref_Android  {
     return com_amap_api_services_busline_BusLineQuery()..refId = result;
   }
   
+   Future<List<String>> getSearchSuggestionKeywords() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionKeywords([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.busline.BusLineResult::getSearchSuggestionKeywords', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).cast<String>();
+  }
+  
+   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCities() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionCities([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.busline.BusLineResult::getSearchSuggestionCities', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_SuggestionCity()..refId = it);
+  }
+  
+   Future<List<com_amap_api_services_busline_BusLineItem>> getBusLines() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.busline.BusLineResult@$refId::getBusLines([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.busline.BusLineResult::getBusLines', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_busline_BusLineItem()..refId = it);
+  }
+  
 }

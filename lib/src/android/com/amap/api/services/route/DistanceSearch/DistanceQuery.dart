@@ -29,6 +29,21 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getOrigins() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getOrigins([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
    Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getDestination([])');

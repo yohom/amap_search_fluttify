@@ -14,6 +14,21 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends Ref_Andr
   
 
   // 生成方法们
+   Future<List<com_amap_api_services_routepoisearch_RoutePOIItem>> getRoutePois() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchResult::getRoutePois', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it);
+  }
+  
    Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery([])');

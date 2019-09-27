@@ -59,6 +59,21 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getPassedByPoints() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedByPoints', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
    Future<String> getAvoidRoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad([])');

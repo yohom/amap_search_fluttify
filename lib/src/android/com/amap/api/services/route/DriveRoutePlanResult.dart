@@ -14,6 +14,21 @@ class com_amap_api_services_route_DriveRoutePlanResult extends Ref_Android  {
   
 
   // 生成方法们
+   Future<List<com_amap_api_services_route_DrivePlanPath>> getPaths() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getPaths', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_DrivePlanPath()..refId = it);
+  }
+  
    Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths([])');
@@ -27,6 +42,21 @@ class com_amap_api_services_route_DriveRoutePlanResult extends Ref_Android  {
   
     // 返回值
     return result;
+  }
+  
+   Future<List<com_amap_api_services_route_TimeInfo>> getTimeInfos() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getTimeInfos', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_route_TimeInfo()..refId = it);
   }
   
    Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo> var1) async {

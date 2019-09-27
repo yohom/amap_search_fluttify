@@ -134,6 +134,21 @@ class com_amap_api_services_busline_BusLineItem extends Ref_Android  {
     return result;
   }
   
+   Future<List<com_amap_api_services_core_LatLonPoint>> getDirectionsCoordinates() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getDirectionsCoordinates([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+  }
+  
    Future<void> setDirectionsCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::setDirectionsCoordinates([])');
@@ -147,6 +162,21 @@ class com_amap_api_services_busline_BusLineItem extends Ref_Android  {
   
     // 返回值
     return result;
+  }
+  
+   Future<List<com_amap_api_services_core_LatLonPoint>> getBounds() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBounds([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.busline.BusLineItem::getBounds', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
   }
   
    Future<void> setBounds(List<com_amap_api_services_core_LatLonPoint> var1) async {
@@ -342,6 +372,21 @@ class com_amap_api_services_busline_BusLineItem extends Ref_Android  {
   
     // 返回值
     return result;
+  }
+  
+   Future<List<com_amap_api_services_busline_BusStationItem>> getBusStations() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.busline.BusLineItem@$refId::getBusStations([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.busline.BusLineItem::getBusStations', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_busline_BusStationItem()..refId = it);
   }
   
    Future<void> setBusStations(List<com_amap_api_services_busline_BusStationItem> var1) async {

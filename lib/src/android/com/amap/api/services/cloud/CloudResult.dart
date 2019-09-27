@@ -74,6 +74,21 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
     return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result;
   }
   
+   Future<List<com_amap_api_services_cloud_CloudItem>> getClouds() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getClouds([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.cloud.CloudResult::getClouds', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    return (result as List).map((it) => com_amap_api_services_cloud_CloudItem()..refId = it);
+  }
+  
    Future<int> getTotalCount() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount([])');
