@@ -26,7 +26,7 @@ class com_amap_api_services_route_RideRouteResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_RidePath()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_RidePath()..refId = it).toList();
   }
   
    Future<void> setPaths(List<com_amap_api_services_route_RidePath> var1) async {

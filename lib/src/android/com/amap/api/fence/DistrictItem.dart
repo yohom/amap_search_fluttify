@@ -86,7 +86,7 @@ class com_amap_api_fence_DistrictItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_location_DPoint()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_location_DPoint()..refId = it).toList();
   }
   
    Future<void> setPolyline(List<com_amap_api_location_DPoint> var1) async {

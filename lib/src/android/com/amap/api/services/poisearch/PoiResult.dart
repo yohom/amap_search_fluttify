@@ -86,7 +86,7 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_PoiItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
   }
   
    Future<List<String>> getSearchSuggestionKeywords() async {
@@ -116,7 +116,7 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_SuggestionCity()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList();
   }
   
 }

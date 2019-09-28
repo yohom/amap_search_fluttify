@@ -41,7 +41,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
   }
   
    Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {

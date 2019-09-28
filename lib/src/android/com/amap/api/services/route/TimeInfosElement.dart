@@ -161,7 +161,7 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_TMC()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
   }
   
 }

@@ -116,7 +116,7 @@ class com_amap_api_services_route_RouteRailwayItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it).toList();
   }
   
    Future<List<com_amap_api_services_route_Railway>> getAlters() async {
@@ -131,7 +131,7 @@ class com_amap_api_services_route_RouteRailwayItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_Railway()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_Railway()..refId = it).toList();
   }
   
    Future<List<com_amap_api_services_route_RailwaySpace>> getSpaces() async {
@@ -146,7 +146,7 @@ class com_amap_api_services_route_RouteRailwayItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_RailwaySpace()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_RailwaySpace()..refId = it).toList();
   }
   
    Future<void> setTime(String var1) async {

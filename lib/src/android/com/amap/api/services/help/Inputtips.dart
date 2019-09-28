@@ -103,7 +103,7 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_help_Tip()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it).toList();
   }
   
 }

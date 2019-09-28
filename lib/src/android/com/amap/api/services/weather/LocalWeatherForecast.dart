@@ -146,7 +146,7 @@ class com_amap_api_services_weather_LocalWeatherForecast extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_weather_LocalDayWeatherForecast()..refId = it).toList();
   }
   
    Future<void> setWeatherForecast(List<com_amap_api_services_weather_LocalDayWeatherForecast> var1) async {

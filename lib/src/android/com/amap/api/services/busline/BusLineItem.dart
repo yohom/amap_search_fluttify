@@ -146,7 +146,7 @@ class com_amap_api_services_busline_BusLineItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
   }
   
    Future<void> setDirectionsCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
@@ -176,7 +176,7 @@ class com_amap_api_services_busline_BusLineItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
   }
   
    Future<void> setBounds(List<com_amap_api_services_core_LatLonPoint> var1) async {
@@ -386,7 +386,7 @@ class com_amap_api_services_busline_BusLineItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_busline_BusStationItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it).toList();
   }
   
    Future<void> setBusStations(List<com_amap_api_services_busline_BusStationItem> var1) async {

@@ -26,7 +26,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_DrivePlanPath()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_DrivePlanPath()..refId = it).toList();
   }
   
    Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath> var1) async {
@@ -56,7 +56,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_TimeInfo()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TimeInfo()..refId = it).toList();
   }
   
    Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo> var1) async {

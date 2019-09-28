@@ -26,7 +26,7 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_WalkPath()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_WalkPath()..refId = it).toList();
   }
   
    Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {

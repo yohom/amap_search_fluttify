@@ -86,7 +86,7 @@ class com_amap_api_services_busline_BusStationResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_SuggestionCity()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList();
   }
   
    Future<List<com_amap_api_services_busline_BusStationItem>> getBusStations() async {
@@ -101,7 +101,7 @@ class com_amap_api_services_busline_BusStationResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_busline_BusStationItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it).toList();
   }
   
 }

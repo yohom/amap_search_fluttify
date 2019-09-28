@@ -103,7 +103,7 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_fence_GeoFence()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it).toList();
   }
   
    Future<void> setGeoFenceAble(String var1, bool var2) async {

@@ -56,7 +56,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
   }
   
    Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress> var1) async {

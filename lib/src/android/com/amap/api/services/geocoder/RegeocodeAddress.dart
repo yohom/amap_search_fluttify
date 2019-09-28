@@ -326,7 +326,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it).toList();
   }
   
    Future<void> setRoads(List<com_amap_api_services_geocoder_RegeocodeRoad> var1) async {
@@ -356,7 +356,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_PoiItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
   }
   
    Future<void> setPois(List<com_amap_api_services_core_PoiItem> var1) async {
@@ -386,7 +386,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_road_Crossroad()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it).toList();
   }
   
    Future<void> setCrossroads(List<com_amap_api_services_road_Crossroad> var1) async {
@@ -416,7 +416,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it).toList();
   }
   
    Future<void> setBusinessAreas(List<com_amap_api_services_geocoder_BusinessArea> var1) async {
@@ -446,7 +446,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it).toList();
   }
   
    Future<void> setAois(List<com_amap_api_services_geocoder_AoiItem> var1) async {

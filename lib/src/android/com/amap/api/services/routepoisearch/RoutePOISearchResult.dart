@@ -26,7 +26,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends Ref_Andr
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it).toList();
   }
   
    Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {

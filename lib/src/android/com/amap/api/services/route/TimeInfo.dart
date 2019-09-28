@@ -56,7 +56,7 @@ class com_amap_api_services_route_TimeInfo extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_TimeInfosElement()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TimeInfosElement()..refId = it).toList();
   }
   
    Future<void> setElements(List<com_amap_api_services_route_TimeInfosElement> var1) async {

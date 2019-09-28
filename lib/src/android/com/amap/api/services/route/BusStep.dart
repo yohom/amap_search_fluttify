@@ -56,7 +56,7 @@ class com_amap_api_services_route_BusStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_RouteBusLineItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_RouteBusLineItem()..refId = it).toList();
   }
   
    Future<void> setBusLines(List<com_amap_api_services_route_RouteBusLineItem> var1) async {

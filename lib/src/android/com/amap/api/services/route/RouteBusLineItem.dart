@@ -86,7 +86,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
   }
   
    Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
@@ -146,7 +146,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_busline_BusStationItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it).toList();
   }
   
    Future<void> setPassStations(List<com_amap_api_services_busline_BusStationItem> var1) async {

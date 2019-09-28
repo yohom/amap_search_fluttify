@@ -266,7 +266,7 @@ class com_amap_api_services_route_DriveStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
   }
   
    Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
@@ -356,7 +356,7 @@ class com_amap_api_services_route_DriveStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_RouteSearchCity()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_RouteSearchCity()..refId = it).toList();
   }
   
    Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity> var1) async {
@@ -386,7 +386,7 @@ class com_amap_api_services_route_DriveStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_route_TMC()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
   }
   
    Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {

@@ -2,7 +2,7 @@
 
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSString *, NSObject *> *, FlutterResult);
 
-NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
+NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
 @implementation AmapSearchFluttifyPlugin {
   NSObject <FlutterPluginRegistrar> * _registrar;
@@ -34,7 +34,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapURLSearch::openAMapNavigation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapNaviConfig* config = (AMapNaviConfig*) REF_MAP[@([args[@"config"] integerValue])];
+          AMapNaviConfig* config = (AMapNaviConfig*) HEAP[@([args[@"config"] integerValue])];
       
           // 调用对象引用
       
@@ -51,7 +51,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapURLSearch::openAMapRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRouteConfig* config = (AMapRouteConfig*) REF_MAP[@([args[@"config"] integerValue])];
+          AMapRouteConfig* config = (AMapRouteConfig*) HEAP[@([args[@"config"] integerValue])];
       
           // 调用对象引用
       
@@ -68,7 +68,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapURLSearch::openAMapPOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOIConfig* config = (AMapPOIConfig*) REF_MAP[@([args[@"config"] integerValue])];
+          AMapPOIConfig* config = (AMapPOIConfig*) HEAP[@([args[@"config"] integerValue])];
       
           // 调用对象引用
       
@@ -97,7 +97,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用结果
           NSInteger returnRefId = [result hash];
-          REF_MAP[@(returnRefId)] = result;
+          HEAP[@(returnRefId)] = result;
       
           methodResult(@(returnRefId));
       },
@@ -107,7 +107,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchObject * ref = (AMapSearchObject *) REF_MAP[@(refId)];
+          AMapSearchObject * ref = (AMapSearchObject *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription(暂未实现参数打印)", @(refId));
@@ -136,18 +136,18 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用结果
           NSInteger returnRefId = [result hash];
-          REF_MAP[@(returnRefId)] = result;
+          HEAP[@(returnRefId)] = result;
       
           methodResult(@(returnRefId));
       },
       @"AMapNearbySearchManagerDelegate::nearbyInfoForUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapNearbySearchManager* manager = (AMapNearbySearchManager*) REF_MAP[@([args[@"manager"] integerValue])];
+          AMapNearbySearchManager* manager = (AMapNearbySearchManager*) HEAP[@([args[@"manager"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) REF_MAP[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::nearbyInfoForUploading(暂未实现参数打印)", @(refId));
@@ -157,18 +157,18 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用结果
           NSInteger returnRefId = [result hash];
-          REF_MAP[@(returnRefId)] = result;
+          HEAP[@(returnRefId)] = result;
       
           methodResult(@(returnRefId));
       },
       @"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          NSError* error = (NSError*) REF_MAP[@([args[@"error"] integerValue])];
+          NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) REF_MAP[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onNearbyInfoUploadedWithError(暂未实现参数打印)", @(refId));
@@ -182,11 +182,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          NSError* error = (NSError*) REF_MAP[@([args[@"error"] integerValue])];
+          NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) REF_MAP[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onUserInfoClearedWithError(暂未实现参数打印)", @(refId));
@@ -203,7 +203,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::init(暂未实现参数打印)", @(refId));
@@ -213,7 +213,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用结果
           NSInteger returnRefId = [result hash];
-          REF_MAP[@(returnRefId)] = result;
+          HEAP[@(returnRefId)] = result;
       
           methodResult(@(returnRefId));
       },
@@ -223,7 +223,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests(暂未实现参数打印)", @(refId));
@@ -237,11 +237,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(暂未实现参数打印)", @(refId));
@@ -255,11 +255,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapPOIKeywordsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(暂未实现参数打印)", @(refId));
@@ -273,11 +273,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(暂未实现参数打印)", @(refId));
@@ -291,11 +291,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(暂未实现参数打印)", @(refId));
@@ -309,11 +309,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapRoutePOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(暂未实现参数打印)", @(refId));
@@ -327,11 +327,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapGeocodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(暂未实现参数打印)", @(refId));
@@ -345,11 +345,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapReGoecodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(暂未实现参数打印)", @(refId));
@@ -363,11 +363,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapInputTipsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(暂未实现参数打印)", @(refId));
@@ -381,11 +381,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapBusStopSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(暂未实现参数打印)", @(refId));
@@ -399,11 +399,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapBusLineIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(暂未实现参数打印)", @(refId));
@@ -417,11 +417,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapBusLineNameSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(暂未实现参数打印)", @(refId));
@@ -435,11 +435,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapDistrictSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(暂未实现参数打印)", @(refId));
@@ -453,11 +453,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapDrivingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(暂未实现参数打印)", @(refId));
@@ -471,11 +471,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapWalkingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(暂未实现参数打印)", @(refId));
@@ -489,11 +489,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapTransitRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(暂未实现参数打印)", @(refId));
@@ -507,11 +507,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapRidingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(暂未实现参数打印)", @(refId));
@@ -525,11 +525,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapTruckRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(暂未实现参数打印)", @(refId));
@@ -543,11 +543,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapFutureRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(暂未实现参数打印)", @(refId));
@@ -561,11 +561,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapWeatherSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(暂未实现参数打印)", @(refId));
@@ -579,11 +579,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapRoadTrafficSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(暂未实现参数打印)", @(refId));
@@ -597,11 +597,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapRoadTrafficCircleSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(暂未实现参数打印)", @(refId));
@@ -615,11 +615,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapDistanceSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(暂未实现参数打印)", @(refId));
@@ -633,11 +633,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapNearbySearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(暂未实现参数打印)", @(refId));
@@ -651,11 +651,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapCloudPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(暂未实现参数打印)", @(refId));
@@ -669,11 +669,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapCloudPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(暂未实现参数打印)", @(refId));
@@ -687,11 +687,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapCloudPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(暂未实现参数打印)", @(refId));
@@ -705,11 +705,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapCloudPOILocalSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(暂未实现参数打印)", @(refId));
@@ -723,11 +723,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapLocationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(暂未实现参数打印)", @(refId));
@@ -741,11 +741,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapPOIShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(暂未实现参数打印)", @(refId));
@@ -759,11 +759,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapRouteShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(暂未实现参数打印)", @(refId));
@@ -777,11 +777,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchAPI::AMapNavigationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(暂未实现参数打印)", @(refId));
@@ -795,13 +795,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onPOISearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapPOISearchBaseRequest* request = (AMapPOISearchBaseRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapPOISearchBaseRequest* request = (AMapPOISearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapPOISearchResponse* response = (AMapPOISearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapPOISearchResponse* response = (AMapPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onPOISearchDone(暂未实现参数打印)", @(refId));
@@ -815,13 +815,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onRoutePOISearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoutePOISearchDone(暂未实现参数打印)", @(refId));
@@ -835,13 +835,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onGeocodeSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onGeocodeSearchDone(暂未实现参数打印)", @(refId));
@@ -855,13 +855,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onReGeocodeSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onReGeocodeSearchDone(暂未实现参数打印)", @(refId));
@@ -875,13 +875,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onInputTipsSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onInputTipsSearchDone(暂未实现参数打印)", @(refId));
@@ -895,13 +895,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onBusStopSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusStopSearchDone(暂未实现参数打印)", @(refId));
@@ -915,13 +915,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onBusLineSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapBusLineBaseSearchRequest* request = (AMapBusLineBaseSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapBusLineBaseSearchRequest* request = (AMapBusLineBaseSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusLineSearchDone(暂未实现参数打印)", @(refId));
@@ -935,13 +935,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onDistrictSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistrictSearchDone(暂未实现参数打印)", @(refId));
@@ -955,13 +955,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onRouteSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRouteSearchDone(暂未实现参数打印)", @(refId));
@@ -975,13 +975,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onFutureRouteSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onFutureRouteSearchDone(暂未实现参数打印)", @(refId));
@@ -995,13 +995,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onDistanceSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistanceSearchDone(暂未实现参数打印)", @(refId));
@@ -1015,13 +1015,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onWeatherSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onWeatherSearchDone(暂未实现参数打印)", @(refId));
@@ -1035,13 +1035,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onRoadTrafficSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapRoadTrafficSearchBaseRequest* request = (AMapRoadTrafficSearchBaseRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapRoadTrafficSearchBaseRequest* request = (AMapRoadTrafficSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoadTrafficSearchDone(暂未实现参数打印)", @(refId));
@@ -1055,13 +1055,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onNearbySearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onNearbySearchDone(暂未实现参数打印)", @(refId));
@@ -1075,13 +1075,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onCloudSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapCloudSearchBaseRequest* request = (AMapCloudSearchBaseRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapCloudSearchBaseRequest* request = (AMapCloudSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onCloudSearchDone(暂未实现参数打印)", @(refId));
@@ -1095,13 +1095,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"AMapSearchDelegate::onShareSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
-          AMapShareSearchBaseRequest* request = (AMapShareSearchBaseRequest*) REF_MAP[@([args[@"request"] integerValue])];
+          AMapShareSearchBaseRequest* request = (AMapShareSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // 引用参数
-          AMapShareSearchResponse* response = (AMapShareSearchResponse*) REF_MAP[@([args[@"response"] integerValue])];
+          AMapShareSearchResponse* response = (AMapShareSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) REF_MAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onShareSearchDone(暂未实现参数打印)", @(refId));
@@ -1117,7 +1117,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
       
       
@@ -1129,7 +1129,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
       
       
@@ -1141,7 +1141,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
           NSLog(@"AMapNaviConfig::get_destination:结构体getter暂时不支持");
       
@@ -1153,7 +1153,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
       
       
@@ -1165,7 +1165,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
       
       
@@ -1177,7 +1177,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
       
       
@@ -1189,7 +1189,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           NSLog(@"AMapRouteConfig::get_startCoordinate:结构体getter暂时不支持");
       
@@ -1201,7 +1201,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           NSLog(@"AMapRouteConfig::get_destinationCoordinate:结构体getter暂时不支持");
       
@@ -1213,7 +1213,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
       
       
@@ -1225,7 +1225,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
       
       
@@ -1237,7 +1237,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
       
       
@@ -1249,7 +1249,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
       
       
@@ -1261,7 +1261,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
       
       
@@ -1273,7 +1273,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
       
       
@@ -1285,7 +1285,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           NSLog(@"AMapPOIConfig::get_leftTopCoordinate:结构体getter暂时不支持");
       
@@ -1297,7 +1297,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           NSLog(@"AMapPOIConfig::get_rightBottomCoordinate:结构体getter暂时不支持");
       
@@ -1309,7 +1309,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
       
       
@@ -1321,7 +1321,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
       
       
@@ -1333,7 +1333,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
       
       
@@ -1345,7 +1345,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
       
       
@@ -1357,7 +1357,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1369,7 +1369,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1381,7 +1381,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1393,7 +1393,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1405,7 +1405,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1417,7 +1417,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1429,7 +1429,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -1441,7 +1441,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1453,7 +1453,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1465,7 +1465,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1477,7 +1477,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1489,7 +1489,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1501,7 +1501,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1513,7 +1513,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1525,7 +1525,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1537,7 +1537,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1549,7 +1549,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1561,7 +1561,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1573,7 +1573,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) REF_MAP[@(refId)];
+          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1585,7 +1585,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) REF_MAP[@(refId)];
+          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1597,7 +1597,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1609,7 +1609,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1621,7 +1621,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1633,7 +1633,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1645,7 +1645,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1657,7 +1657,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1669,7 +1669,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) REF_MAP[@(refId)];
+          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1681,7 +1681,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1693,7 +1693,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1705,7 +1705,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1717,7 +1717,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1729,7 +1729,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1741,7 +1741,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) REF_MAP[@(refId)];
+          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1753,7 +1753,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1765,7 +1765,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1777,7 +1777,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) REF_MAP[@(refId)];
+          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1789,7 +1789,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1801,7 +1801,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1813,7 +1813,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1825,7 +1825,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1837,7 +1837,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1849,7 +1849,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1861,7 +1861,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1873,7 +1873,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1885,7 +1885,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1897,7 +1897,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) REF_MAP[@(refId)];
+          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1909,7 +1909,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) REF_MAP[@(refId)];
+          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -1921,7 +1921,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1933,7 +1933,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1945,7 +1945,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1957,7 +1957,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1969,7 +1969,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1981,7 +1981,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -1993,7 +1993,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) REF_MAP[@(refId)];
+          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2005,7 +2005,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) REF_MAP[@(refId)];
+          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2017,7 +2017,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) REF_MAP[@(refId)];
+          AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2029,7 +2029,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) REF_MAP[@(refId)];
+          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2041,7 +2041,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2053,7 +2053,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2065,7 +2065,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2077,7 +2077,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2089,7 +2089,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2101,7 +2101,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2113,7 +2113,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2125,7 +2125,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2137,7 +2137,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2149,7 +2149,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2161,7 +2161,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2173,7 +2173,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2185,7 +2185,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2197,7 +2197,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2209,7 +2209,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2221,7 +2221,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2233,7 +2233,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2245,7 +2245,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2257,7 +2257,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2269,7 +2269,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2281,7 +2281,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) REF_MAP[@(refId)];
+          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2293,7 +2293,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) REF_MAP[@(refId)];
+          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2305,7 +2305,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2317,7 +2317,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2329,7 +2329,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2341,7 +2341,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2353,7 +2353,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2365,7 +2365,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2377,7 +2377,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2389,7 +2389,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2401,7 +2401,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2413,7 +2413,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2425,7 +2425,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2437,7 +2437,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2449,7 +2449,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2461,7 +2461,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) REF_MAP[@(refId)];
+          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2473,7 +2473,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) REF_MAP[@(refId)];
+          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2485,7 +2485,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) REF_MAP[@(refId)];
+          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2497,7 +2497,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) REF_MAP[@(refId)];
+          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2509,7 +2509,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2521,7 +2521,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2533,7 +2533,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2545,7 +2545,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2557,7 +2557,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2569,7 +2569,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2581,7 +2581,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2593,7 +2593,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2605,7 +2605,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2617,7 +2617,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2629,7 +2629,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2641,7 +2641,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2653,7 +2653,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) REF_MAP[@(refId)];
+          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2665,7 +2665,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2677,7 +2677,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2689,7 +2689,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2701,7 +2701,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2713,7 +2713,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
       
       
@@ -2725,7 +2725,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2737,7 +2737,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2749,7 +2749,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2761,7 +2761,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2773,7 +2773,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2785,7 +2785,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2797,7 +2797,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2809,7 +2809,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2821,7 +2821,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) REF_MAP[@(refId)];
+          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
       
       
       
@@ -2833,7 +2833,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2845,7 +2845,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2857,7 +2857,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2869,7 +2869,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2881,7 +2881,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2893,7 +2893,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2905,7 +2905,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2917,7 +2917,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2929,7 +2929,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2941,7 +2941,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2953,7 +2953,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2965,7 +2965,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2977,7 +2977,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -2989,7 +2989,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3001,7 +3001,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3013,7 +3013,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapShareSearchResponse * ref = (AMapShareSearchResponse *) REF_MAP[@(refId)];
+          AMapShareSearchResponse * ref = (AMapShareSearchResponse *) HEAP[@(refId)];
       
       
       
@@ -3025,7 +3025,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3037,7 +3037,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3049,7 +3049,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3061,7 +3061,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3073,7 +3073,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3085,7 +3085,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3097,7 +3097,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3109,7 +3109,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3121,7 +3121,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3133,7 +3133,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3145,7 +3145,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3157,7 +3157,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
       
       
@@ -3169,7 +3169,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) REF_MAP[@(refId)];
+          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
       
       
       
@@ -3181,7 +3181,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) REF_MAP[@(refId)];
+          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
       
       
       
@@ -3193,7 +3193,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
       
       
@@ -3205,7 +3205,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
       
       
@@ -3217,7 +3217,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
       
       
@@ -3229,7 +3229,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
       
       
@@ -3241,7 +3241,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3253,7 +3253,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3265,7 +3265,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3277,7 +3277,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3289,7 +3289,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3301,7 +3301,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3313,7 +3313,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
       
       
@@ -3325,7 +3325,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) REF_MAP[@(refId)];
+          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
       
       
       
@@ -3337,7 +3337,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) REF_MAP[@(refId)];
+          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
       
       
       
@@ -3349,7 +3349,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) REF_MAP[@(refId)];
+          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
       
       
@@ -3361,7 +3361,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) REF_MAP[@(refId)];
+          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
       
       
@@ -3373,7 +3373,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) REF_MAP[@(refId)];
+          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
       
       
@@ -3385,7 +3385,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) REF_MAP[@(refId)];
+          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
       
       
@@ -3397,7 +3397,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) REF_MAP[@(refId)];
+          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
       
       
@@ -3409,7 +3409,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) REF_MAP[@(refId)];
+          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
       
       
@@ -3421,7 +3421,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3433,7 +3433,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3445,7 +3445,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3457,7 +3457,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3469,7 +3469,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3481,7 +3481,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3493,7 +3493,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
       
       
@@ -3505,7 +3505,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
       
       
@@ -3517,7 +3517,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
       
       
@@ -3529,7 +3529,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
       
       
@@ -3541,7 +3541,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
       
       
@@ -3553,7 +3553,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
       
       
@@ -3565,7 +3565,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3577,7 +3577,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3589,7 +3589,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3601,7 +3601,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3613,7 +3613,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3625,7 +3625,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3637,7 +3637,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3649,7 +3649,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3661,7 +3661,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3673,7 +3673,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3685,7 +3685,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3697,7 +3697,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3709,7 +3709,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3721,7 +3721,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3733,7 +3733,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3745,7 +3745,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3757,7 +3757,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3769,7 +3769,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3781,7 +3781,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3793,7 +3793,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3805,7 +3805,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3817,7 +3817,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3829,7 +3829,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3841,7 +3841,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3853,7 +3853,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3865,7 +3865,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3877,7 +3877,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
       
       
@@ -3889,7 +3889,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
       
       
@@ -3901,7 +3901,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
       
       
@@ -3913,7 +3913,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
       
       
@@ -3925,7 +3925,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
       
       
@@ -3937,7 +3937,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
       
       
@@ -3949,7 +3949,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
       
       
@@ -3961,7 +3961,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
       
       
@@ -3973,7 +3973,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
       
       
@@ -3985,7 +3985,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
       
       
@@ -3997,7 +3997,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
       
       
@@ -4009,7 +4009,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4021,7 +4021,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4033,7 +4033,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4045,7 +4045,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4057,7 +4057,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4069,7 +4069,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4081,7 +4081,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
       
       
@@ -4093,7 +4093,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
       
       
@@ -4105,7 +4105,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
       
       
@@ -4117,7 +4117,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
       
       
@@ -4129,7 +4129,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
       
       
@@ -4141,7 +4141,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
       
       
@@ -4153,7 +4153,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) REF_MAP[@(refId)];
+          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
       
       
       
@@ -4165,7 +4165,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) REF_MAP[@(refId)];
+          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
       
       
       
@@ -4177,7 +4177,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4189,7 +4189,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4201,7 +4201,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4213,7 +4213,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4225,7 +4225,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4237,7 +4237,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4249,7 +4249,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4261,7 +4261,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4273,7 +4273,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4285,7 +4285,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4297,7 +4297,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
       
       
@@ -4309,7 +4309,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) REF_MAP[@(refId)];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
       
       
       
@@ -4321,7 +4321,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) REF_MAP[@(refId)];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
       
       
       
@@ -4333,7 +4333,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4345,7 +4345,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4357,7 +4357,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4369,7 +4369,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4381,7 +4381,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4393,7 +4393,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4405,7 +4405,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4417,7 +4417,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4429,7 +4429,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4441,7 +4441,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4453,7 +4453,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
       
       
@@ -4465,7 +4465,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
       
       
@@ -4477,7 +4477,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
       
       
@@ -4489,7 +4489,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
       
       
@@ -4501,7 +4501,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
       
       
@@ -4513,7 +4513,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
       
       
@@ -4525,7 +4525,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
       
       
@@ -4537,7 +4537,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4549,7 +4549,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4561,7 +4561,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4573,7 +4573,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4585,7 +4585,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4597,7 +4597,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4609,7 +4609,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4621,7 +4621,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4633,7 +4633,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4645,7 +4645,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4657,7 +4657,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4669,7 +4669,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4681,7 +4681,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4693,7 +4693,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4705,7 +4705,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4717,7 +4717,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4729,7 +4729,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4741,7 +4741,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
       
       
@@ -4753,7 +4753,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
       
       
@@ -4765,7 +4765,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
       
       
@@ -4777,7 +4777,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
       
       
@@ -4789,7 +4789,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
       
       
@@ -4801,7 +4801,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
       
       
@@ -4813,7 +4813,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) REF_MAP[@(refId)];
+          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
       
       
@@ -4825,7 +4825,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) REF_MAP[@(refId)];
+          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
       
       
@@ -4837,7 +4837,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) REF_MAP[@(refId)];
+          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
       
       
@@ -4849,7 +4849,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4861,7 +4861,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4873,7 +4873,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4885,7 +4885,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4897,7 +4897,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4909,7 +4909,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4921,7 +4921,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4933,7 +4933,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4945,7 +4945,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4957,7 +4957,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4969,7 +4969,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
       
       
@@ -4981,7 +4981,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -4993,7 +4993,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -5005,7 +5005,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -5017,7 +5017,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -5029,7 +5029,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -5041,7 +5041,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -5053,7 +5053,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
       
       
@@ -5065,7 +5065,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) REF_MAP[@(refId)];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
       
       
@@ -5077,7 +5077,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) REF_MAP[@(refId)];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
       
       
@@ -5089,7 +5089,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) REF_MAP[@(refId)];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
       
       
@@ -5101,7 +5101,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) REF_MAP[@(refId)];
+          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
       
       
       
@@ -5113,7 +5113,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
       
       
@@ -5125,7 +5125,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
       
       
@@ -5137,7 +5137,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
       
       
@@ -5149,7 +5149,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
       
       
@@ -5161,7 +5161,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
       
       
@@ -5173,7 +5173,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
       
       
@@ -5185,7 +5185,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
       
       
@@ -5197,7 +5197,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
       
       
@@ -5209,7 +5209,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
       
       
@@ -5221,7 +5221,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
       
       
@@ -5233,7 +5233,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5245,7 +5245,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5257,7 +5257,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5269,7 +5269,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5281,7 +5281,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5293,7 +5293,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5305,7 +5305,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5317,7 +5317,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
       
       
@@ -5329,7 +5329,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) REF_MAP[@(refId)];
+          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
       
       
       
@@ -5341,7 +5341,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) REF_MAP[@(refId)];
+          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
       
       
       
@@ -5353,7 +5353,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5365,7 +5365,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5377,7 +5377,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5389,7 +5389,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5401,7 +5401,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5413,7 +5413,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5425,7 +5425,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5437,7 +5437,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
       
       
@@ -5449,7 +5449,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5461,7 +5461,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5473,7 +5473,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5485,7 +5485,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5497,7 +5497,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5509,7 +5509,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5521,7 +5521,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
       
       
@@ -5533,7 +5533,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
       
       
@@ -5545,7 +5545,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
       
       
@@ -5557,7 +5557,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
       
       
@@ -5569,7 +5569,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
       
       
@@ -5581,7 +5581,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
       
       
@@ -5593,7 +5593,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) REF_MAP[@(refId)];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
       
       
@@ -5605,7 +5605,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) REF_MAP[@(refId)];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
       
       
@@ -5617,7 +5617,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) REF_MAP[@(refId)];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
       
       
@@ -5629,7 +5629,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
       
       
@@ -5641,7 +5641,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
       
       
@@ -5653,7 +5653,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
       
       
@@ -5665,7 +5665,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
       
       
@@ -5677,7 +5677,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
       
       
@@ -5689,7 +5689,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
       
       
@@ -5701,7 +5701,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5713,7 +5713,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5725,7 +5725,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5737,7 +5737,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5749,7 +5749,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5761,7 +5761,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5773,7 +5773,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5785,7 +5785,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5797,7 +5797,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
       
       
@@ -5809,7 +5809,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5821,7 +5821,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5833,7 +5833,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5845,7 +5845,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5857,7 +5857,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5869,7 +5869,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5881,7 +5881,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5893,7 +5893,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5905,7 +5905,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5917,7 +5917,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5929,7 +5929,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5941,7 +5941,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5953,7 +5953,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5965,7 +5965,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
       
       
@@ -5977,7 +5977,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) REF_MAP[@(refId)];
+          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
       
       
@@ -5989,7 +5989,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) REF_MAP[@(refId)];
+          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
       
       
@@ -6001,7 +6001,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) REF_MAP[@(refId)];
+          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
       
       
@@ -6013,7 +6013,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
       
       
@@ -6025,7 +6025,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
       
       
@@ -6037,7 +6037,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
       
       
@@ -6049,7 +6049,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
       
       
@@ -6061,7 +6061,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
       
       
@@ -6073,7 +6073,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
       
       
@@ -6085,7 +6085,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
       
       
@@ -6097,7 +6097,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
       
       
@@ -6109,7 +6109,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
       
       
@@ -6121,7 +6121,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
       
       
@@ -6133,7 +6133,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
       
       
@@ -6145,7 +6145,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
       
       
@@ -6157,7 +6157,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) REF_MAP[@(refId)];
+          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
       
       
       
@@ -6169,7 +6169,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) REF_MAP[@(refId)];
+          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
       
       
       
@@ -6181,7 +6181,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) REF_MAP[@(refId)];
+          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
       
       
@@ -6193,7 +6193,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) REF_MAP[@(refId)];
+          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
       
       
@@ -6205,7 +6205,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) REF_MAP[@(refId)];
+          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
       
       
@@ -6217,7 +6217,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6229,7 +6229,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6241,7 +6241,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6253,7 +6253,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6265,7 +6265,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6277,7 +6277,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6289,7 +6289,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
       
       
@@ -6301,7 +6301,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) REF_MAP[@(refId)];
+          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
       
       
@@ -6313,7 +6313,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) REF_MAP[@(refId)];
+          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
       
       
@@ -6325,7 +6325,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) REF_MAP[@(refId)];
+          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
           NSLog(@"AMapNearbyUploadInfo::get_coordinate:结构体getter暂时不支持");
       
@@ -6337,7 +6337,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
       
       
@@ -6349,7 +6349,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
       
       
@@ -6361,7 +6361,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
       
       
@@ -6376,7 +6376,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * appScheme = (NSString *) args[@"appScheme"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
           ref.appScheme = appScheme;
           methodResult(@"success");
@@ -6390,7 +6390,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * appName = (NSString *) args[@"appName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
           ref.appName = appName;
           methodResult(@"success");
@@ -6401,12 +6401,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 结构体参数
-          NSValue* destinationValue = (NSValue*) REF_MAP[@([args[@"destination"] integerValue])];
+          NSValue* destinationValue = (NSValue*) HEAP[@([args[@"destination"] integerValue])];
           CLLocationCoordinate2D destination;
           [destinationValue getValue:&destination];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -6420,7 +6420,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapDrivingStrategy strategy = (AMapDrivingStrategy) [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) REF_MAP[@(refId)];
+          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -6434,7 +6434,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * appScheme = (NSString *) args[@"appScheme"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.appScheme = appScheme;
           methodResult(@"success");
@@ -6448,7 +6448,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * appName = (NSString *) args[@"appName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.appName = appName;
           methodResult(@"success");
@@ -6459,12 +6459,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 结构体参数
-          NSValue* startCoordinateValue = (NSValue*) REF_MAP[@([args[@"startCoordinate"] integerValue])];
+          NSValue* startCoordinateValue = (NSValue*) HEAP[@([args[@"startCoordinate"] integerValue])];
           CLLocationCoordinate2D startCoordinate;
           [startCoordinateValue getValue:&startCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -6475,12 +6475,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 结构体参数
-          NSValue* destinationCoordinateValue = (NSValue*) REF_MAP[@([args[@"destinationCoordinate"] integerValue])];
+          NSValue* destinationCoordinateValue = (NSValue*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
           CLLocationCoordinate2D destinationCoordinate;
           [destinationCoordinateValue getValue:&destinationCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -6494,7 +6494,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapDrivingStrategy drivingStrategy = (AMapDrivingStrategy) [args[@"drivingStrategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.drivingStrategy = drivingStrategy;
           methodResult(@"success");
@@ -6508,7 +6508,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapTransitStrategy transitStrategy = (AMapTransitStrategy) [args[@"transitStrategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.transitStrategy = transitStrategy;
           methodResult(@"success");
@@ -6522,7 +6522,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapRouteSearchType routeType = (AMapRouteSearchType) [args[@"routeType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) REF_MAP[@(refId)];
+          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
           ref.routeType = routeType;
           methodResult(@"success");
@@ -6536,7 +6536,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * appScheme = (NSString *) args[@"appScheme"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           ref.appScheme = appScheme;
           methodResult(@"success");
@@ -6550,7 +6550,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * appName = (NSString *) args[@"appName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           ref.appName = appName;
           methodResult(@"success");
@@ -6564,7 +6564,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -6575,12 +6575,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 结构体参数
-          NSValue* leftTopCoordinateValue = (NSValue*) REF_MAP[@([args[@"leftTopCoordinate"] integerValue])];
+          NSValue* leftTopCoordinateValue = (NSValue*) HEAP[@([args[@"leftTopCoordinate"] integerValue])];
           CLLocationCoordinate2D leftTopCoordinate;
           [leftTopCoordinateValue getValue:&leftTopCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           ref.leftTopCoordinate = leftTopCoordinate;
           methodResult(@"success");
@@ -6591,12 +6591,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 结构体参数
-          NSValue* rightBottomCoordinateValue = (NSValue*) REF_MAP[@([args[@"rightBottomCoordinate"] integerValue])];
+          NSValue* rightBottomCoordinateValue = (NSValue*) HEAP[@([args[@"rightBottomCoordinate"] integerValue])];
           CLLocationCoordinate2D rightBottomCoordinate;
           [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) REF_MAP[@(refId)];
+          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
           ref.rightBottomCoordinate = rightBottomCoordinate;
           methodResult(@"success");
@@ -6610,7 +6610,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * apiKey = (NSString *) args[@"apiKey"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
           ref.apiKey = apiKey;
           methodResult(@"success");
@@ -6624,7 +6624,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL enableHTTPS = [args[@"enableHTTPS"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
           ref.enableHTTPS = enableHTTPS;
           methodResult(@"success");
@@ -6638,7 +6638,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL crashReportEnabled = [args[@"crashReportEnabled"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) REF_MAP[@(refId)];
+          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
           ref.crashReportEnabled = crashReportEnabled;
           methodResult(@"success");
@@ -6652,7 +6652,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * types = (NSString *) args[@"types"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.types = types;
           methodResult(@"success");
@@ -6666,7 +6666,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger sortrule = [args[@"sortrule"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.sortrule = sortrule;
           methodResult(@"success");
@@ -6680,7 +6680,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -6694,7 +6694,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -6708,7 +6708,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * building = (NSString *) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -6722,7 +6722,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -6736,7 +6736,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireSubPOIs = [args[@"requireSubPOIs"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) REF_MAP[@(refId)];
+          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
           ref.requireSubPOIs = requireSubPOIs;
           methodResult(@"success");
@@ -6750,7 +6750,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -6764,7 +6764,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -6778,7 +6778,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -6792,7 +6792,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL cityLimit = [args[@"cityLimit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
           ref.cityLimit = cityLimit;
           methodResult(@"success");
@@ -6803,10 +6803,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -6820,7 +6820,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -6831,10 +6831,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -6848,7 +6848,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -6862,7 +6862,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -6876,7 +6876,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -6887,10 +6887,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPolygon * polygon = (AMapGeoPolygon *) REF_MAP[@([args[@"polygon"] integerValue])];
+          AMapGeoPolygon * polygon = (AMapGeoPolygon *) HEAP[@([args[@"polygon"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
       
           ref.polygon = polygon;
           methodResult(@"success");
@@ -6904,7 +6904,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) REF_MAP[@(refId)];
+          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -6915,10 +6915,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapSuggestion * suggestion = (AMapSuggestion *) REF_MAP[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion * suggestion = (AMapSuggestion *) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) REF_MAP[@(refId)];
+          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
           methodResult(@"success");
@@ -6929,10 +6929,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) REF_MAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -6943,10 +6943,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) REF_MAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -6960,7 +6960,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapRoutePOISearchType searchType = (AMapRoutePOISearchType) [args[@"searchType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
           ref.searchType = searchType;
           methodResult(@"success");
@@ -6974,7 +6974,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -6988,7 +6988,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger range = [args[@"range"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
           ref.range = range;
           methodResult(@"success");
@@ -7002,7 +7002,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * polylineStr = (NSString *) args[@"polylineStr"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) REF_MAP[@(refId)];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
           ref.polylineStr = polylineStr;
           methodResult(@"success");
@@ -7016,7 +7016,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) REF_MAP[@(refId)];
+          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7030,7 +7030,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -7044,7 +7044,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -7058,7 +7058,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * types = (NSString *) args[@"types"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
           ref.types = types;
           methodResult(@"success");
@@ -7072,7 +7072,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL cityLimit = [args[@"cityLimit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
           ref.cityLimit = cityLimit;
           methodResult(@"success");
@@ -7086,7 +7086,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * location = (NSString *) args[@"location"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) REF_MAP[@(refId)];
+          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -7100,7 +7100,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) REF_MAP[@(refId)];
+          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7114,7 +7114,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * address = (NSString *) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -7128,7 +7128,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -7142,7 +7142,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) REF_MAP[@(refId)];
+          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7156,7 +7156,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -7167,10 +7167,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -7184,7 +7184,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -7198,7 +7198,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * poitype = (NSString *) args[@"poitype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
           ref.poitype = poitype;
           methodResult(@"success");
@@ -7209,10 +7209,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapReGeocode * regeocode = (AMapReGeocode *) REF_MAP[@([args[@"regeocode"] integerValue])];
+          AMapReGeocode * regeocode = (AMapReGeocode *) HEAP[@([args[@"regeocode"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) REF_MAP[@(refId)];
+          AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) HEAP[@(refId)];
       
           ref.regeocode = regeocode;
           methodResult(@"success");
@@ -7226,7 +7226,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -7240,7 +7240,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -7254,7 +7254,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -7268,7 +7268,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) REF_MAP[@(refId)];
+          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -7282,7 +7282,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) REF_MAP[@(refId)];
+          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7293,10 +7293,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapSuggestion * suggestion = (AMapSuggestion *) REF_MAP[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion * suggestion = (AMapSuggestion *) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) REF_MAP[@(refId)];
+          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
           methodResult(@"success");
@@ -7310,7 +7310,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -7324,7 +7324,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -7338,7 +7338,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -7352,7 +7352,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -7366,7 +7366,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -7380,7 +7380,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) REF_MAP[@(refId)];
+          AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -7394,7 +7394,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) REF_MAP[@(refId)];
+          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7405,10 +7405,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapSuggestion * suggestion = (AMapSuggestion *) REF_MAP[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion * suggestion = (AMapSuggestion *) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) REF_MAP[@(refId)];
+          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
           methodResult(@"success");
@@ -7422,7 +7422,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) REF_MAP[@(refId)];
+          AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -7436,7 +7436,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) REF_MAP[@(refId)];
+          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7447,10 +7447,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) REF_MAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -7461,10 +7461,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) REF_MAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -7478,7 +7478,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -7492,7 +7492,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * avoidroad = (NSString *) args[@"avoidroad"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.avoidroad = avoidroad;
           methodResult(@"success");
@@ -7506,7 +7506,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * originId = (NSString *) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -7520,7 +7520,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationId = (NSString *) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -7534,7 +7534,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * origintype = (NSString *) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -7548,7 +7548,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationtype = (NSString *) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -7562,7 +7562,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -7576,7 +7576,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * plateProvince = (NSString *) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -7590,7 +7590,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * plateNumber = (NSString *) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -7604,7 +7604,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger ferry = [args[@"ferry"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.ferry = ferry;
           methodResult(@"success");
@@ -7618,7 +7618,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger cartype = [args[@"cartype"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.cartype = cartype;
           methodResult(@"success");
@@ -7632,7 +7632,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger multipath = [args[@"multipath"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.multipath = multipath;
           methodResult(@"success");
@@ -7646,7 +7646,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -7660,7 +7660,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -7674,7 +7674,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationCity = (NSString *) args[@"destinationCity"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationCity = destinationCity;
           methodResult(@"success");
@@ -7688,7 +7688,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL nightflag = [args[@"nightflag"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
           ref.nightflag = nightflag;
           methodResult(@"success");
@@ -7702,7 +7702,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -7716,7 +7716,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -7730,7 +7730,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) REF_MAP[@(refId)];
+          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -7741,10 +7741,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapRoute * route = (AMapRoute *) REF_MAP[@([args[@"route"] integerValue])];
+          AMapRoute * route = (AMapRoute *) HEAP[@([args[@"route"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) REF_MAP[@(refId)];
+          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
       
           ref.route = route;
           methodResult(@"success");
@@ -7758,7 +7758,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -7772,7 +7772,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * originId = (NSString *) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -7786,7 +7786,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationId = (NSString *) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -7800,7 +7800,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * origintype = (NSString *) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -7814,7 +7814,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationtype = (NSString *) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -7828,7 +7828,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * plateProvince = (NSString *) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -7842,7 +7842,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * plateNumber = (NSString *) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -7856,7 +7856,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapTruckSizeType size = (AMapTruckSizeType) [args[@"size"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.size = size;
           methodResult(@"success");
@@ -7870,7 +7870,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat height = [args[@"height"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.height = height;
           methodResult(@"success");
@@ -7884,7 +7884,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat width = [args[@"width"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.width = width;
           methodResult(@"success");
@@ -7898,7 +7898,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat load = [args[@"load"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.load = load;
           methodResult(@"success");
@@ -7912,7 +7912,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat weight = [args[@"weight"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.weight = weight;
           methodResult(@"success");
@@ -7926,7 +7926,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger axis = [args[@"axis"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
           ref.axis = axis;
           methodResult(@"success");
@@ -7937,10 +7937,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) REF_MAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) REF_MAP[@(refId)];
+          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -7954,7 +7954,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) REF_MAP[@(refId)];
+          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -7968,7 +7968,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) REF_MAP[@(refId)];
+          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -7982,7 +7982,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapWeatherType type = (AMapWeatherType) [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) REF_MAP[@(refId)];
+          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -7996,7 +7996,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger level = [args[@"level"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -8010,7 +8010,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -8024,7 +8024,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * roadName = (NSString *) args[@"roadName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
       
           ref.roadName = roadName;
           methodResult(@"success");
@@ -8038,7 +8038,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -8049,10 +8049,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8066,7 +8066,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) REF_MAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -8077,10 +8077,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapTrafficInfo * trafficInfo = (AMapTrafficInfo *) REF_MAP[@([args[@"trafficInfo"] integerValue])];
+          AMapTrafficInfo * trafficInfo = (AMapTrafficInfo *) HEAP[@([args[@"trafficInfo"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) REF_MAP[@(refId)];
+          AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) HEAP[@(refId)];
       
           ref.trafficInfo = trafficInfo;
           methodResult(@"success");
@@ -8091,10 +8091,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * center = (AMapGeoPoint *) REF_MAP[@([args[@"center"] integerValue])];
+          AMapGeoPoint * center = (AMapGeoPoint *) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -8108,7 +8108,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -8122,7 +8122,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapNearbySearchType searchType = (AMapNearbySearchType) [args[@"searchType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
           ref.searchType = searchType;
           methodResult(@"success");
@@ -8136,7 +8136,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger timeRange = [args[@"timeRange"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
           ref.timeRange = timeRange;
           methodResult(@"success");
@@ -8150,7 +8150,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger limit = [args[@"limit"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) REF_MAP[@(refId)];
+          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
           ref.limit = limit;
           methodResult(@"success");
@@ -8164,7 +8164,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) REF_MAP[@(refId)];
+          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8178,7 +8178,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * tableID = (NSString *) args[@"tableID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
           ref.tableID = tableID;
           methodResult(@"success");
@@ -8192,7 +8192,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * sortFields = (NSString *) args[@"sortFields"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
           ref.sortFields = sortFields;
           methodResult(@"success");
@@ -8206,7 +8206,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapCloudSortType sortType = (AMapCloudSortType) [args[@"sortType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
           ref.sortType = sortType;
           methodResult(@"success");
@@ -8220,7 +8220,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -8234,7 +8234,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) REF_MAP[@(refId)];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -8245,10 +8245,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * center = (AMapGeoPoint *) REF_MAP[@([args[@"center"] integerValue])];
+          AMapGeoPoint * center = (AMapGeoPoint *) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -8262,7 +8262,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -8276,7 +8276,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8287,10 +8287,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPolygon * polygon = (AMapGeoPolygon *) REF_MAP[@([args[@"polygon"] integerValue])];
+          AMapGeoPolygon * polygon = (AMapGeoPolygon *) HEAP[@([args[@"polygon"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
       
           ref.polygon = polygon;
           methodResult(@"success");
@@ -8304,7 +8304,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8318,7 +8318,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger uid = [args[@"uid"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -8332,7 +8332,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * keywords = (NSString *) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8346,7 +8346,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) REF_MAP[@(refId)];
+          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8360,7 +8360,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) REF_MAP[@(refId)];
+          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8371,10 +8371,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8388,7 +8388,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -8402,7 +8402,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -8413,10 +8413,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8430,7 +8430,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -8444,7 +8444,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * address = (NSString *) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) REF_MAP[@(refId)];
+          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -8458,7 +8458,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -8472,7 +8472,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -8483,10 +8483,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * startCoordinate = (AMapGeoPoint *) REF_MAP[@([args[@"startCoordinate"] integerValue])];
+          AMapGeoPoint * startCoordinate = (AMapGeoPoint *) HEAP[@([args[@"startCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -8497,10 +8497,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destinationCoordinate = (AMapGeoPoint *) REF_MAP[@([args[@"destinationCoordinate"] integerValue])];
+          AMapGeoPoint * destinationCoordinate = (AMapGeoPoint *) HEAP[@([args[@"destinationCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -8514,7 +8514,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * startName = (NSString *) args[@"startName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
           ref.startName = startName;
           methodResult(@"success");
@@ -8528,7 +8528,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationName = (NSString *) args[@"destinationName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) REF_MAP[@(refId)];
+          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
           ref.destinationName = destinationName;
           methodResult(@"success");
@@ -8542,7 +8542,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -8553,10 +8553,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * startCoordinate = (AMapGeoPoint *) REF_MAP[@([args[@"startCoordinate"] integerValue])];
+          AMapGeoPoint * startCoordinate = (AMapGeoPoint *) HEAP[@([args[@"startCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -8567,10 +8567,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destinationCoordinate = (AMapGeoPoint *) REF_MAP[@([args[@"destinationCoordinate"] integerValue])];
+          AMapGeoPoint * destinationCoordinate = (AMapGeoPoint *) HEAP[@([args[@"destinationCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) REF_MAP[@(refId)];
+          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -8584,7 +8584,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * shareURL = (NSString *) args[@"shareURL"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapShareSearchResponse * ref = (AMapShareSearchResponse *) REF_MAP[@(refId)];
+          AMapShareSearchResponse * ref = (AMapShareSearchResponse *) HEAP[@(refId)];
       
           ref.shareURL = shareURL;
           methodResult(@"success");
@@ -8598,7 +8598,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * beginTime = (NSString *) args[@"beginTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.beginTime = beginTime;
           methodResult(@"success");
@@ -8612,7 +8612,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger interval = [args[@"interval"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.interval = interval;
           methodResult(@"success");
@@ -8626,7 +8626,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger timeCount = [args[@"timeCount"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.timeCount = timeCount;
           methodResult(@"success");
@@ -8640,7 +8640,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -8654,7 +8654,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * originId = (NSString *) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -8668,7 +8668,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationId = (NSString *) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -8682,7 +8682,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * origintype = (NSString *) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -8696,7 +8696,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * destinationtype = (NSString *) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -8710,7 +8710,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * parentId = (NSString *) args[@"parentId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.parentId = parentId;
           methodResult(@"success");
@@ -8724,7 +8724,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * plateProvince = (NSString *) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -8738,7 +8738,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * plateNumber = (NSString *) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -8752,7 +8752,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger cartype = [args[@"cartype"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) REF_MAP[@(refId)];
+          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
           ref.cartype = cartype;
           methodResult(@"success");
@@ -8766,7 +8766,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat latitude = [args[@"latitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) REF_MAP[@(refId)];
+          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
       
           ref.latitude = latitude;
           methodResult(@"success");
@@ -8780,7 +8780,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat longitude = [args[@"longitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) REF_MAP[@(refId)];
+          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
       
           ref.longitude = longitude;
           methodResult(@"success");
@@ -8794,7 +8794,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8808,7 +8808,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -8822,7 +8822,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -8836,7 +8836,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger num = [args[@"num"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) REF_MAP[@(refId)];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
           ref.num = num;
           methodResult(@"success");
@@ -8850,7 +8850,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -8864,7 +8864,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -8878,7 +8878,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -8892,7 +8892,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * district = (NSString *) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -8906,7 +8906,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * address = (NSString *) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -8917,10 +8917,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8934,7 +8934,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * typecode = (NSString *) args[@"typecode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) REF_MAP[@(refId)];
+          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
           ref.typecode = typecode;
           methodResult(@"success");
@@ -8948,7 +8948,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * title = (NSString *) args[@"title"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) REF_MAP[@(refId)];
+          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
       
           ref.title = title;
           methodResult(@"success");
@@ -8962,7 +8962,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * url = (NSString *) args[@"url"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) REF_MAP[@(refId)];
+          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
       
           ref.url = url;
           methodResult(@"success");
@@ -8976,7 +8976,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat rating = [args[@"rating"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) REF_MAP[@(refId)];
+          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
           ref.rating = rating;
           methodResult(@"success");
@@ -8990,7 +8990,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) REF_MAP[@(refId)];
+          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -9004,7 +9004,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * openTime = (NSString *) args[@"openTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) REF_MAP[@(refId)];
+          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
           ref.openTime = openTime;
           methodResult(@"success");
@@ -9018,7 +9018,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger floor = [args[@"floor"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) REF_MAP[@(refId)];
+          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
           ref.floor = floor;
           methodResult(@"success");
@@ -9032,7 +9032,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * floorName = (NSString *) args[@"floorName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) REF_MAP[@(refId)];
+          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
           ref.floorName = floorName;
           methodResult(@"success");
@@ -9046,7 +9046,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * pid = (NSString *) args[@"pid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) REF_MAP[@(refId)];
+          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
           ref.pid = pid;
           methodResult(@"success");
@@ -9060,7 +9060,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9074,7 +9074,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -9088,7 +9088,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * sname = (NSString *) args[@"sname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.sname = sname;
           methodResult(@"success");
@@ -9099,10 +9099,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9116,7 +9116,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * address = (NSString *) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -9130,7 +9130,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -9144,7 +9144,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * subtype = (NSString *) args[@"subtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) REF_MAP[@(refId)];
+          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
           ref.subtype = subtype;
           methodResult(@"success");
@@ -9158,7 +9158,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9172,7 +9172,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -9183,10 +9183,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9200,7 +9200,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -9214,7 +9214,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) REF_MAP[@(refId)];
+          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -9228,7 +9228,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9242,7 +9242,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -9256,7 +9256,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * type = (NSString *) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -9270,7 +9270,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * typecode = (NSString *) args[@"typecode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.typecode = typecode;
           methodResult(@"success");
@@ -9281,10 +9281,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9298,7 +9298,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * address = (NSString *) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -9312,7 +9312,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * tel = (NSString *) args[@"tel"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.tel = tel;
           methodResult(@"success");
@@ -9326,7 +9326,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -9340,7 +9340,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * parkingType = (NSString *) args[@"parkingType"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.parkingType = parkingType;
           methodResult(@"success");
@@ -9354,7 +9354,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * shopID = (NSString *) args[@"shopID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.shopID = shopID;
           methodResult(@"success");
@@ -9368,7 +9368,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * postcode = (NSString *) args[@"postcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.postcode = postcode;
           methodResult(@"success");
@@ -9382,7 +9382,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * website = (NSString *) args[@"website"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.website = website;
           methodResult(@"success");
@@ -9396,7 +9396,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * email = (NSString *) args[@"email"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.email = email;
           methodResult(@"success");
@@ -9410,7 +9410,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * province = (NSString *) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -9424,7 +9424,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * pcode = (NSString *) args[@"pcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.pcode = pcode;
           methodResult(@"success");
@@ -9438,7 +9438,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9452,7 +9452,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -9466,7 +9466,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * district = (NSString *) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -9480,7 +9480,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -9494,7 +9494,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * gridcode = (NSString *) args[@"gridcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.gridcode = gridcode;
           methodResult(@"success");
@@ -9505,10 +9505,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * enterLocation = (AMapGeoPoint *) REF_MAP[@([args[@"enterLocation"] integerValue])];
+          AMapGeoPoint * enterLocation = (AMapGeoPoint *) HEAP[@([args[@"enterLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.enterLocation = enterLocation;
           methodResult(@"success");
@@ -9519,10 +9519,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * exitLocation = (AMapGeoPoint *) REF_MAP[@([args[@"exitLocation"] integerValue])];
+          AMapGeoPoint * exitLocation = (AMapGeoPoint *) HEAP[@([args[@"exitLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.exitLocation = exitLocation;
           methodResult(@"success");
@@ -9536,7 +9536,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * direction = (NSString *) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -9550,7 +9550,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL hasIndoorMap = [args[@"hasIndoorMap"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.hasIndoorMap = hasIndoorMap;
           methodResult(@"success");
@@ -9564,7 +9564,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * businessArea = (NSString *) args[@"businessArea"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.businessArea = businessArea;
           methodResult(@"success");
@@ -9575,10 +9575,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapIndoorData * indoorData = (AMapIndoorData *) REF_MAP[@([args[@"indoorData"] integerValue])];
+          AMapIndoorData * indoorData = (AMapIndoorData *) HEAP[@([args[@"indoorData"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.indoorData = indoorData;
           methodResult(@"success");
@@ -9589,10 +9589,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapPOIExtension * extensionInfo = (AMapPOIExtension *) REF_MAP[@([args[@"extensionInfo"] integerValue])];
+          AMapPOIExtension * extensionInfo = (AMapPOIExtension *) HEAP[@([args[@"extensionInfo"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) REF_MAP[@(refId)];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
           ref.extensionInfo = extensionInfo;
           methodResult(@"success");
@@ -9606,7 +9606,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9620,7 +9620,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -9634,7 +9634,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -9645,10 +9645,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9662,7 +9662,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat area = [args[@"area"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) REF_MAP[@(refId)];
+          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
           ref.area = area;
           methodResult(@"success");
@@ -9676,7 +9676,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9690,7 +9690,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -9704,7 +9704,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -9718,7 +9718,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * direction = (NSString *) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -9729,10 +9729,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) REF_MAP[@(refId)];
+          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9746,7 +9746,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -9760,7 +9760,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * direction = (NSString *) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -9771,10 +9771,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9788,7 +9788,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * firstId = (NSString *) args[@"firstId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.firstId = firstId;
           methodResult(@"success");
@@ -9802,7 +9802,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * firstName = (NSString *) args[@"firstName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.firstName = firstName;
           methodResult(@"success");
@@ -9816,7 +9816,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * secondId = (NSString *) args[@"secondId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.secondId = secondId;
           methodResult(@"success");
@@ -9830,7 +9830,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * secondName = (NSString *) args[@"secondName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) REF_MAP[@(refId)];
+          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
           ref.secondName = secondName;
           methodResult(@"success");
@@ -9844,7 +9844,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * street = (NSString *) args[@"street"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
           ref.street = street;
           methodResult(@"success");
@@ -9858,7 +9858,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * number = (NSString *) args[@"number"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
           ref.number = number;
           methodResult(@"success");
@@ -9869,10 +9869,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9886,7 +9886,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -9900,7 +9900,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * direction = (NSString *) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) REF_MAP[@(refId)];
+          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -9914,7 +9914,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) REF_MAP[@(refId)];
+          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -9925,10 +9925,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) REF_MAP[@(refId)];
+          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9942,7 +9942,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * country = (NSString *) args[@"country"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.country = country;
           methodResult(@"success");
@@ -9956,7 +9956,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * province = (NSString *) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -9970,7 +9970,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9984,7 +9984,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -9998,7 +9998,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * district = (NSString *) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -10012,7 +10012,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -10026,7 +10026,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * township = (NSString *) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.township = township;
           methodResult(@"success");
@@ -10040,7 +10040,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * towncode = (NSString *) args[@"towncode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.towncode = towncode;
           methodResult(@"success");
@@ -10054,7 +10054,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * neighborhood = (NSString *) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.neighborhood = neighborhood;
           methodResult(@"success");
@@ -10068,7 +10068,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * building = (NSString *) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -10079,10 +10079,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapStreetNumber * streetNumber = (AMapStreetNumber *) REF_MAP[@([args[@"streetNumber"] integerValue])];
+          AMapStreetNumber * streetNumber = (AMapStreetNumber *) HEAP[@([args[@"streetNumber"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) REF_MAP[@(refId)];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
           ref.streetNumber = streetNumber;
           methodResult(@"success");
@@ -10096,7 +10096,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * formattedAddress = (NSString *) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) REF_MAP[@(refId)];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
       
           ref.formattedAddress = formattedAddress;
           methodResult(@"success");
@@ -10107,10 +10107,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapAddressComponent * addressComponent = (AMapAddressComponent *) REF_MAP[@([args[@"addressComponent"] integerValue])];
+          AMapAddressComponent * addressComponent = (AMapAddressComponent *) HEAP[@([args[@"addressComponent"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) REF_MAP[@(refId)];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
       
           ref.addressComponent = addressComponent;
           methodResult(@"success");
@@ -10124,7 +10124,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * formattedAddress = (NSString *) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.formattedAddress = formattedAddress;
           methodResult(@"success");
@@ -10138,7 +10138,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * province = (NSString *) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -10152,7 +10152,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10166,7 +10166,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -10180,7 +10180,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * district = (NSString *) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -10194,7 +10194,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -10208,7 +10208,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * township = (NSString *) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.township = township;
           methodResult(@"success");
@@ -10222,7 +10222,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * neighborhood = (NSString *) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.neighborhood = neighborhood;
           methodResult(@"success");
@@ -10236,7 +10236,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * building = (NSString *) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -10247,10 +10247,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10264,7 +10264,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * level = (NSString *) args[@"level"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) REF_MAP[@(refId)];
+          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -10278,7 +10278,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -10292,7 +10292,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -10306,7 +10306,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -10320,7 +10320,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -10331,10 +10331,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10348,7 +10348,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * sequence = (NSString *) args[@"sequence"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) REF_MAP[@(refId)];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
           ref.sequence = sequence;
           methodResult(@"success");
@@ -10362,7 +10362,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -10376,7 +10376,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * type = (NSString *) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -10390,7 +10390,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -10404,7 +10404,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * polyline = (NSString *) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -10418,7 +10418,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -10432,7 +10432,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * startStop = (NSString *) args[@"startStop"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.startStop = startStop;
           methodResult(@"success");
@@ -10446,7 +10446,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * endStop = (NSString *) args[@"endStop"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.endStop = endStop;
           methodResult(@"success");
@@ -10457,10 +10457,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10474,7 +10474,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * startTime = (NSString *) args[@"startTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.startTime = startTime;
           methodResult(@"success");
@@ -10488,7 +10488,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * endTime = (NSString *) args[@"endTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.endTime = endTime;
           methodResult(@"success");
@@ -10502,7 +10502,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * company = (NSString *) args[@"company"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.company = company;
           methodResult(@"success");
@@ -10516,7 +10516,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat distance = [args[@"distance"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -10530,7 +10530,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat basicPrice = [args[@"basicPrice"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.basicPrice = basicPrice;
           methodResult(@"success");
@@ -10544,7 +10544,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat totalPrice = [args[@"totalPrice"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.totalPrice = totalPrice;
           methodResult(@"success");
@@ -10555,10 +10555,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPolygon * bounds = (AMapGeoPolygon *) REF_MAP[@([args[@"bounds"] integerValue])];
+          AMapGeoPolygon * bounds = (AMapGeoPolygon *) HEAP[@([args[@"bounds"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.bounds = bounds;
           methodResult(@"success");
@@ -10569,10 +10569,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapBusStop * departureStop = (AMapBusStop *) REF_MAP[@([args[@"departureStop"] integerValue])];
+          AMapBusStop * departureStop = (AMapBusStop *) HEAP[@([args[@"departureStop"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.departureStop = departureStop;
           methodResult(@"success");
@@ -10583,10 +10583,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapBusStop * arrivalStop = (AMapBusStop *) REF_MAP[@([args[@"arrivalStop"] integerValue])];
+          AMapBusStop * arrivalStop = (AMapBusStop *) HEAP[@([args[@"arrivalStop"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.arrivalStop = arrivalStop;
           methodResult(@"success");
@@ -10600,7 +10600,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) REF_MAP[@(refId)];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -10614,7 +10614,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -10628,7 +10628,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * citycode = (NSString *) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -10642,7 +10642,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -10656,7 +10656,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * level = (NSString *) args[@"level"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -10667,10 +10667,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * center = (AMapGeoPoint *) REF_MAP[@([args[@"center"] integerValue])];
+          AMapGeoPoint * center = (AMapGeoPoint *) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) REF_MAP[@(refId)];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -10684,7 +10684,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) REF_MAP[@(refId)];
+          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -10698,7 +10698,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * status = (NSString *) args[@"status"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) REF_MAP[@(refId)];
+          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -10712,7 +10712,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * polyline = (NSString *) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) REF_MAP[@(refId)];
+          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -10726,7 +10726,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * instruction = (NSString *) args[@"instruction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.instruction = instruction;
           methodResult(@"success");
@@ -10740,7 +10740,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * orientation = (NSString *) args[@"orientation"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.orientation = orientation;
           methodResult(@"success");
@@ -10754,7 +10754,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * road = (NSString *) args[@"road"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.road = road;
           methodResult(@"success");
@@ -10768,7 +10768,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -10782,7 +10782,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -10796,7 +10796,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * polyline = (NSString *) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -10810,7 +10810,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * action = (NSString *) args[@"action"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.action = action;
           methodResult(@"success");
@@ -10824,7 +10824,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * assistantAction = (NSString *) args[@"assistantAction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.assistantAction = assistantAction;
           methodResult(@"success");
@@ -10838,7 +10838,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat tolls = [args[@"tolls"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.tolls = tolls;
           methodResult(@"success");
@@ -10852,7 +10852,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger tollDistance = [args[@"tollDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.tollDistance = tollDistance;
           methodResult(@"success");
@@ -10866,7 +10866,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * tollRoad = (NSString *) args[@"tollRoad"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) REF_MAP[@(refId)];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
           ref.tollRoad = tollRoad;
           methodResult(@"success");
@@ -10880,7 +10880,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -10894,7 +10894,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -10908,7 +10908,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * strategy = (NSString *) args[@"strategy"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -10922,7 +10922,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat tolls = [args[@"tolls"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.tolls = tolls;
           methodResult(@"success");
@@ -10936,7 +10936,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger tollDistance = [args[@"tollDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.tollDistance = tollDistance;
           methodResult(@"success");
@@ -10950,7 +10950,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger totalTrafficLights = [args[@"totalTrafficLights"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.totalTrafficLights = totalTrafficLights;
           methodResult(@"success");
@@ -10964,7 +10964,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger restriction = [args[@"restriction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) REF_MAP[@(refId)];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
           ref.restriction = restriction;
           methodResult(@"success");
@@ -10978,7 +10978,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) REF_MAP[@(refId)];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -10992,7 +10992,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger pathindex = [args[@"pathindex"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) REF_MAP[@(refId)];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
           ref.pathindex = pathindex;
           methodResult(@"success");
@@ -11006,7 +11006,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger restriction = [args[@"restriction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) REF_MAP[@(refId)];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
           ref.restriction = restriction;
           methodResult(@"success");
@@ -11020,7 +11020,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * startTime = (NSString *) args[@"startTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) REF_MAP[@(refId)];
+          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
       
           ref.startTime = startTime;
           methodResult(@"success");
@@ -11031,10 +11031,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) REF_MAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -11045,10 +11045,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) REF_MAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -11062,7 +11062,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11076,7 +11076,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) REF_MAP[@(refId)];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -11087,10 +11087,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) REF_MAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -11101,10 +11101,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) REF_MAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -11118,7 +11118,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11132,7 +11132,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -11146,7 +11146,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * sname = (NSString *) args[@"sname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
           ref.sname = sname;
           methodResult(@"success");
@@ -11160,7 +11160,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * tname = (NSString *) args[@"tname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) REF_MAP[@(refId)];
+          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
           ref.tname = tname;
           methodResult(@"success");
@@ -11174,7 +11174,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11188,7 +11188,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11199,10 +11199,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11216,7 +11216,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11230,7 +11230,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * time = (NSString *) args[@"time"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.time = time;
           methodResult(@"success");
@@ -11244,7 +11244,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger wait = [args[@"wait"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.wait = wait;
           methodResult(@"success");
@@ -11258,7 +11258,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL isStart = [args[@"isStart"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.isStart = isStart;
           methodResult(@"success");
@@ -11272,7 +11272,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL isEnd = [args[@"isEnd"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) REF_MAP[@(refId)];
+          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
           ref.isEnd = isEnd;
           methodResult(@"success");
@@ -11286,7 +11286,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * code = (NSString *) args[@"code"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) REF_MAP[@(refId)];
+          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
       
           ref.code = code;
           methodResult(@"success");
@@ -11300,7 +11300,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) REF_MAP[@(refId)];
+          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -11314,7 +11314,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11328,7 +11328,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11342,7 +11342,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * trip = (NSString *) args[@"trip"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.trip = trip;
           methodResult(@"success");
@@ -11356,7 +11356,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * type = (NSString *) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -11370,7 +11370,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11384,7 +11384,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger time = [args[@"time"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.time = time;
           methodResult(@"success");
@@ -11395,10 +11395,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapRailwayStation * departureStation = (AMapRailwayStation *) REF_MAP[@([args[@"departureStation"] integerValue])];
+          AMapRailwayStation * departureStation = (AMapRailwayStation *) HEAP[@([args[@"departureStation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.departureStation = departureStation;
           methodResult(@"success");
@@ -11409,10 +11409,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapRailwayStation * arrivalStation = (AMapRailwayStation *) REF_MAP[@([args[@"arrivalStation"] integerValue])];
+          AMapRailwayStation * arrivalStation = (AMapRailwayStation *) HEAP[@([args[@"arrivalStation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) REF_MAP[@(refId)];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
           ref.arrivalStation = arrivalStation;
           methodResult(@"success");
@@ -11423,10 +11423,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapWalking * walking = (AMapWalking *) REF_MAP[@([args[@"walking"] integerValue])];
+          AMapWalking * walking = (AMapWalking *) HEAP[@([args[@"walking"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.walking = walking;
           methodResult(@"success");
@@ -11437,10 +11437,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapTaxi * taxi = (AMapTaxi *) REF_MAP[@([args[@"taxi"] integerValue])];
+          AMapTaxi * taxi = (AMapTaxi *) HEAP[@([args[@"taxi"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.taxi = taxi;
           methodResult(@"success");
@@ -11451,10 +11451,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapRailway * railway = (AMapRailway *) REF_MAP[@([args[@"railway"] integerValue])];
+          AMapRailway * railway = (AMapRailway *) HEAP[@([args[@"railway"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.railway = railway;
           methodResult(@"success");
@@ -11468,7 +11468,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * enterName = (NSString *) args[@"enterName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.enterName = enterName;
           methodResult(@"success");
@@ -11479,10 +11479,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * enterLocation = (AMapGeoPoint *) REF_MAP[@([args[@"enterLocation"] integerValue])];
+          AMapGeoPoint * enterLocation = (AMapGeoPoint *) HEAP[@([args[@"enterLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.enterLocation = enterLocation;
           methodResult(@"success");
@@ -11496,7 +11496,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * exitName = (NSString *) args[@"exitName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.exitName = exitName;
           methodResult(@"success");
@@ -11507,10 +11507,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * exitLocation = (AMapGeoPoint *) REF_MAP[@([args[@"exitLocation"] integerValue])];
+          AMapGeoPoint * exitLocation = (AMapGeoPoint *) HEAP[@([args[@"exitLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) REF_MAP[@(refId)];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
           ref.exitLocation = exitLocation;
           methodResult(@"success");
@@ -11524,7 +11524,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -11538,7 +11538,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -11552,7 +11552,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           BOOL nightflag = [args[@"nightflag"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
           ref.nightflag = nightflag;
           methodResult(@"success");
@@ -11566,7 +11566,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger walkingDistance = [args[@"walkingDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
           ref.walkingDistance = walkingDistance;
           methodResult(@"success");
@@ -11580,7 +11580,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) REF_MAP[@(refId)];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11591,10 +11591,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) REF_MAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) REF_MAP[@(refId)];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -11605,10 +11605,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) REF_MAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) REF_MAP[@(refId)];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -11622,7 +11622,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat taxiCost = [args[@"taxiCost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) REF_MAP[@(refId)];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
           ref.taxiCost = taxiCost;
           methodResult(@"success");
@@ -11636,7 +11636,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger originID = [args[@"originID"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
           ref.originID = originID;
           methodResult(@"success");
@@ -11650,7 +11650,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger destID = [args[@"destID"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
           ref.destID = destID;
           methodResult(@"success");
@@ -11664,7 +11664,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11678,7 +11678,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -11692,7 +11692,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * info = (NSString *) args[@"info"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
           ref.info = info;
           methodResult(@"success");
@@ -11706,7 +11706,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger code = [args[@"code"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) REF_MAP[@(refId)];
+          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
           ref.code = code;
           methodResult(@"success");
@@ -11720,7 +11720,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11734,7 +11734,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * province = (NSString *) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -11748,7 +11748,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -11762,7 +11762,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * weather = (NSString *) args[@"weather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.weather = weather;
           methodResult(@"success");
@@ -11776,7 +11776,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * temperature = (NSString *) args[@"temperature"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.temperature = temperature;
           methodResult(@"success");
@@ -11790,7 +11790,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * windDirection = (NSString *) args[@"windDirection"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.windDirection = windDirection;
           methodResult(@"success");
@@ -11804,7 +11804,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * windPower = (NSString *) args[@"windPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.windPower = windPower;
           methodResult(@"success");
@@ -11818,7 +11818,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * humidity = (NSString *) args[@"humidity"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.humidity = humidity;
           methodResult(@"success");
@@ -11832,7 +11832,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * reportTime = (NSString *) args[@"reportTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) REF_MAP[@(refId)];
+          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
           ref.reportTime = reportTime;
           methodResult(@"success");
@@ -11846,7 +11846,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * date = (NSString *) args[@"date"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.date = date;
           methodResult(@"success");
@@ -11860,7 +11860,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * week = (NSString *) args[@"week"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.week = week;
           methodResult(@"success");
@@ -11874,7 +11874,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * dayWeather = (NSString *) args[@"dayWeather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.dayWeather = dayWeather;
           methodResult(@"success");
@@ -11888,7 +11888,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * nightWeather = (NSString *) args[@"nightWeather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.nightWeather = nightWeather;
           methodResult(@"success");
@@ -11902,7 +11902,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * dayTemp = (NSString *) args[@"dayTemp"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.dayTemp = dayTemp;
           methodResult(@"success");
@@ -11916,7 +11916,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * nightTemp = (NSString *) args[@"nightTemp"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.nightTemp = nightTemp;
           methodResult(@"success");
@@ -11930,7 +11930,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * dayWind = (NSString *) args[@"dayWind"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.dayWind = dayWind;
           methodResult(@"success");
@@ -11944,7 +11944,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * nightWind = (NSString *) args[@"nightWind"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.nightWind = nightWind;
           methodResult(@"success");
@@ -11958,7 +11958,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * dayPower = (NSString *) args[@"dayPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.dayPower = dayPower;
           methodResult(@"success");
@@ -11972,7 +11972,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * nightPower = (NSString *) args[@"nightPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
           ref.nightPower = nightPower;
           methodResult(@"success");
@@ -11986,7 +11986,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * adcode = (NSString *) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12000,7 +12000,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * province = (NSString *) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -12014,7 +12014,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * city = (NSString *) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -12028,7 +12028,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * reportTime = (NSString *) args[@"reportTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) REF_MAP[@(refId)];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
           ref.reportTime = reportTime;
           methodResult(@"success");
@@ -12042,7 +12042,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * userID = (NSString *) args[@"userID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) REF_MAP[@(refId)];
+          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
           ref.userID = userID;
           methodResult(@"success");
@@ -12053,10 +12053,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) REF_MAP[@(refId)];
+          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12070,7 +12070,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           CGFloat distance = [args[@"distance"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) REF_MAP[@(refId)];
+          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12084,7 +12084,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * evaluationDescription = (NSString *) args[@"evaluationDescription"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
           ref.evaluationDescription = evaluationDescription;
           methodResult(@"success");
@@ -12098,7 +12098,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger status = [args[@"status"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -12112,7 +12112,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * expedite = (NSString *) args[@"expedite"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
           ref.expedite = expedite;
           methodResult(@"success");
@@ -12126,7 +12126,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * congested = (NSString *) args[@"congested"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
           ref.congested = congested;
           methodResult(@"success");
@@ -12140,7 +12140,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * blocked = (NSString *) args[@"blocked"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
           ref.blocked = blocked;
           methodResult(@"success");
@@ -12154,7 +12154,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * unknown = (NSString *) args[@"unknown"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) REF_MAP[@(refId)];
+          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
           ref.unknown = unknown;
           methodResult(@"success");
@@ -12168,7 +12168,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12182,7 +12182,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger status = [args[@"status"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -12196,7 +12196,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * direction = (NSString *) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -12210,7 +12210,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           float angle = [args[@"angle"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
           ref.angle = angle;
           methodResult(@"success");
@@ -12224,7 +12224,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           float speed = [args[@"speed"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
           ref.speed = speed;
           methodResult(@"success");
@@ -12238,7 +12238,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * polyline = (NSString *) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) REF_MAP[@(refId)];
+          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -12252,7 +12252,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * statusDescription = (NSString *) args[@"statusDescription"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) REF_MAP[@(refId)];
+          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
       
           ref.statusDescription = statusDescription;
           methodResult(@"success");
@@ -12263,10 +12263,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapTrafficEvaluation * evaluation = (AMapTrafficEvaluation *) REF_MAP[@([args[@"evaluation"] integerValue])];
+          AMapTrafficEvaluation * evaluation = (AMapTrafficEvaluation *) HEAP[@([args[@"evaluation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) REF_MAP[@(refId)];
+          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
       
           ref.evaluation = evaluation;
           methodResult(@"success");
@@ -12280,7 +12280,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * uid = (NSString *) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) REF_MAP[@(refId)];
+          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12294,7 +12294,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * preurl = (NSString *) args[@"preurl"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) REF_MAP[@(refId)];
+          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
           ref.preurl = preurl;
           methodResult(@"success");
@@ -12308,7 +12308,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * url = (NSString *) args[@"url"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) REF_MAP[@(refId)];
+          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
           ref.url = url;
           methodResult(@"success");
@@ -12322,7 +12322,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger uid = [args[@"uid"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12336,7 +12336,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * name = (NSString *) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12347,10 +12347,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) REF_MAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12364,7 +12364,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * address = (NSString *) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -12378,7 +12378,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * createTime = (NSString *) args[@"createTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.createTime = createTime;
           methodResult(@"success");
@@ -12392,7 +12392,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * updateTime = (NSString *) args[@"updateTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.updateTime = updateTime;
           methodResult(@"success");
@@ -12406,7 +12406,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) REF_MAP[@(refId)];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12420,7 +12420,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSString * userID = (NSString *) args[@"userID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) REF_MAP[@(refId)];
+          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
           ref.userID = userID;
           methodResult(@"success");
@@ -12434,7 +12434,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapSearchCoordinateType coordinateType = (AMapSearchCoordinateType) [args[@"coordinateType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) REF_MAP[@(refId)];
+          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
           ref.coordinateType = coordinateType;
           methodResult(@"success");
@@ -12445,12 +12445,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
           // 参数
           // 结构体参数
-          NSValue* coordinateValue = (NSValue*) REF_MAP[@([args[@"coordinate"] integerValue])];
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
           CLLocationCoordinate2D coordinate;
           [coordinateValue getValue:&coordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) REF_MAP[@(refId)];
+          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
           ref.coordinate = coordinate;
           methodResult(@"success");
@@ -12463,7 +12463,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -12477,7 +12477,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSInteger timeout = [args[@"timeout"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           ref.timeout = timeout;
           methodResult(@"success");
@@ -12491,7 +12491,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           AMapSearchLanguage language = (AMapSearchLanguage) [args[@"language"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) REF_MAP[@(refId)];
+          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
           ref.language = language;
           methodResult(@"success");
@@ -12500,7 +12500,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapURLSearch class]];
           methodResult(@(isTargetType));
@@ -12509,7 +12509,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNaviConfig class]];
           methodResult(@(isTargetType));
@@ -12518,7 +12518,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteConfig class]];
           methodResult(@(isTargetType));
@@ -12527,7 +12527,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIConfig class]];
           methodResult(@(isTargetType));
@@ -12536,7 +12536,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapServices class]];
           methodResult(@(isTargetType));
@@ -12545,7 +12545,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -12554,7 +12554,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIIDSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12563,7 +12563,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIKeywordsSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12572,7 +12572,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIAroundSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12581,7 +12581,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIPolygonSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12590,7 +12590,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchResponse class]];
           methodResult(@(isTargetType));
@@ -12599,7 +12599,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchRequest class]];
           methodResult(@(isTargetType));
@@ -12608,7 +12608,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchResponse class]];
           methodResult(@(isTargetType));
@@ -12617,7 +12617,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12626,7 +12626,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12635,7 +12635,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12644,7 +12644,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12653,7 +12653,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12662,7 +12662,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12671,7 +12671,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12680,7 +12680,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12689,7 +12689,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineBaseSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12698,7 +12698,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineNameSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12707,7 +12707,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineIDSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12716,7 +12716,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12725,7 +12725,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistrictSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12734,7 +12734,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistrictSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12743,7 +12743,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -12752,7 +12752,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDrivingRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12761,7 +12761,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWalkingRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12770,7 +12770,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTransitRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12779,7 +12779,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRidingRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12788,7 +12788,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12797,7 +12797,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRidingRouteSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12806,7 +12806,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTruckRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12815,7 +12815,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistanceSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12824,7 +12824,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistanceSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12833,7 +12833,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWeatherSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12842,7 +12842,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWeatherSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12851,7 +12851,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -12860,7 +12860,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12869,7 +12869,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficCircleSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12878,7 +12878,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchResponse class]];
           methodResult(@(isTargetType));
@@ -12887,7 +12887,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchRequest class]];
           methodResult(@(isTargetType));
@@ -12896,7 +12896,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchResponse class]];
           methodResult(@(isTargetType));
@@ -12905,7 +12905,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -12914,7 +12914,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIAroundSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12923,7 +12923,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIPolygonSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12932,7 +12932,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIIDSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12941,7 +12941,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOILocalSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12950,7 +12950,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOISearchResponse class]];
           methodResult(@(isTargetType));
@@ -12959,7 +12959,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapShareSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -12968,7 +12968,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocationShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12977,7 +12977,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12986,7 +12986,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -12995,7 +12995,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNavigationShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -13004,7 +13004,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapShareSearchResponse class]];
           methodResult(@(isTargetType));
@@ -13013,7 +13013,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -13022,7 +13022,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureRouteSearchResponse class]];
           methodResult(@(isTargetType));
@@ -13031,7 +13031,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSearchObject class]];
           methodResult(@(isTargetType));
@@ -13040,7 +13040,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeoPoint class]];
           methodResult(@(isTargetType));
@@ -13049,7 +13049,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeoPolygon class]];
           methodResult(@(isTargetType));
@@ -13058,7 +13058,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCity class]];
           methodResult(@(isTargetType));
@@ -13067,7 +13067,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSuggestion class]];
           methodResult(@(isTargetType));
@@ -13076,7 +13076,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTip class]];
           methodResult(@(isTargetType));
@@ -13085,7 +13085,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapImage class]];
           methodResult(@(isTargetType));
@@ -13094,7 +13094,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIExtension class]];
           methodResult(@(isTargetType));
@@ -13103,7 +13103,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapIndoorData class]];
           methodResult(@(isTargetType));
@@ -13112,7 +13112,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSubPOI class]];
           methodResult(@(isTargetType));
@@ -13121,7 +13121,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOI class]];
           methodResult(@(isTargetType));
@@ -13130,7 +13130,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOI class]];
           methodResult(@(isTargetType));
@@ -13139,7 +13139,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapAOI class]];
           methodResult(@(isTargetType));
@@ -13148,7 +13148,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoad class]];
           methodResult(@(isTargetType));
@@ -13157,7 +13157,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadInter class]];
           methodResult(@(isTargetType));
@@ -13166,7 +13166,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapStreetNumber class]];
           methodResult(@(isTargetType));
@@ -13175,7 +13175,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusinessArea class]];
           methodResult(@(isTargetType));
@@ -13184,7 +13184,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapAddressComponent class]];
           methodResult(@(isTargetType));
@@ -13193,7 +13193,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapReGeocode class]];
           methodResult(@(isTargetType));
@@ -13202,7 +13202,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeocode class]];
           methodResult(@(isTargetType));
@@ -13211,7 +13211,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusStop class]];
           methodResult(@(isTargetType));
@@ -13220,7 +13220,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLine class]];
           methodResult(@(isTargetType));
@@ -13229,7 +13229,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistrict class]];
           methodResult(@(isTargetType));
@@ -13238,7 +13238,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTMC class]];
           methodResult(@(isTargetType));
@@ -13247,7 +13247,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapStep class]];
           methodResult(@(isTargetType));
@@ -13256,7 +13256,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPath class]];
           methodResult(@(isTargetType));
@@ -13265,7 +13265,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureTimeInfoElement class]];
           methodResult(@(isTargetType));
@@ -13274,7 +13274,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureTimeInfo class]];
           methodResult(@(isTargetType));
@@ -13283,7 +13283,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWalking class]];
           methodResult(@(isTargetType));
@@ -13292,7 +13292,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTaxi class]];
           methodResult(@(isTargetType));
@@ -13301,7 +13301,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRailwayStation class]];
           methodResult(@(isTargetType));
@@ -13310,7 +13310,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRailwaySpace class]];
           methodResult(@(isTargetType));
@@ -13319,7 +13319,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRailway class]];
           methodResult(@(isTargetType));
@@ -13328,7 +13328,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSegment class]];
           methodResult(@(isTargetType));
@@ -13337,7 +13337,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTransit class]];
           methodResult(@(isTargetType));
@@ -13346,7 +13346,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoute class]];
           methodResult(@(isTargetType));
@@ -13355,7 +13355,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistanceResult class]];
           methodResult(@(isTargetType));
@@ -13364,7 +13364,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocalWeatherLive class]];
           methodResult(@(isTargetType));
@@ -13373,7 +13373,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocalDayWeatherForecast class]];
           methodResult(@(isTargetType));
@@ -13382,7 +13382,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocalWeatherForecast class]];
           methodResult(@(isTargetType));
@@ -13391,7 +13391,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbyUserInfo class]];
           methodResult(@(isTargetType));
@@ -13400,7 +13400,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTrafficEvaluation class]];
           methodResult(@(isTargetType));
@@ -13409,7 +13409,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTrafficRoad class]];
           methodResult(@(isTargetType));
@@ -13418,7 +13418,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTrafficInfo class]];
           methodResult(@(isTargetType));
@@ -13427,7 +13427,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudImage class]];
           methodResult(@(isTargetType));
@@ -13436,7 +13436,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOI class]];
           methodResult(@(isTargetType));
@@ -13445,7 +13445,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbyUploadInfo class]];
           methodResult(@(isTargetType));
@@ -13454,7 +13454,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchManager class]];
           methodResult(@(isTargetType));
@@ -13463,7 +13463,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::isKindOfAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSearchAPI class]];
           methodResult(@(isTargetType));
@@ -13472,12 +13472,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapURLSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapURLSearch *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13485,12 +13485,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNaviConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNaviConfig *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13498,12 +13498,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRouteConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteConfig *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13511,12 +13511,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIConfig": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIConfig *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13524,12 +13524,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapServices": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapServices *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13537,12 +13537,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOISearchBaseRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13550,12 +13550,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIIDSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13563,12 +13563,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIKeywordsSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13576,12 +13576,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIAroundSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13589,12 +13589,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIPolygonSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13602,12 +13602,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOISearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13615,12 +13615,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoutePOISearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13628,12 +13628,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoutePOISearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13641,12 +13641,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapInputTipsSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13654,12 +13654,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapInputTipsSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13667,12 +13667,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeocodeSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13680,12 +13680,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeocodeSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13693,12 +13693,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapReGeocodeSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13706,12 +13706,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapReGeocodeSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13719,12 +13719,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusStopSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13732,12 +13732,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusStopSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13745,12 +13745,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineBaseSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13758,12 +13758,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineNameSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13771,12 +13771,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineIDSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13784,12 +13784,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13797,12 +13797,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistrictSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13810,12 +13810,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistrictSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13823,12 +13823,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteSearchBaseRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13836,12 +13836,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDrivingRouteSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13849,12 +13849,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWalkingRouteSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13862,12 +13862,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTransitRouteSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13875,12 +13875,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRidingRouteSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13888,12 +13888,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13901,12 +13901,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRidingRouteSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13914,12 +13914,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTruckRouteSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13927,12 +13927,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistanceSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13940,12 +13940,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistanceSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13953,12 +13953,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWeatherSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13966,12 +13966,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWeatherSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13979,12 +13979,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficSearchBaseRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -13992,12 +13992,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14005,12 +14005,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficCircleSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14018,12 +14018,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14031,12 +14031,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbySearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14044,12 +14044,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbySearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14057,12 +14057,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudSearchBaseRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14070,12 +14070,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOIAroundSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14083,12 +14083,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOIPolygonSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14096,12 +14096,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOIIDSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14109,12 +14109,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOILocalSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14122,12 +14122,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOISearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14135,12 +14135,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapShareSearchBaseRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14148,12 +14148,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocationShareSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14161,12 +14161,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIShareSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14174,12 +14174,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteShareSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14187,12 +14187,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNavigationShareSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14200,12 +14200,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapShareSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14213,12 +14213,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureRouteSearchRequest *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14226,12 +14226,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureRouteSearchResponse *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14239,12 +14239,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSearchObject *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14252,12 +14252,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeoPoint *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14265,12 +14265,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeoPolygon *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14278,12 +14278,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCity *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14291,12 +14291,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSuggestion *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14304,12 +14304,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTip *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14317,12 +14317,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapImage *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14330,12 +14330,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIExtension *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14343,12 +14343,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapIndoorData *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14356,12 +14356,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSubPOI *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14369,12 +14369,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoutePOI *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14382,12 +14382,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOI *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14395,12 +14395,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapAOI *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14408,12 +14408,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoad *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14421,12 +14421,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadInter *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14434,12 +14434,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapStreetNumber *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14447,12 +14447,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusinessArea *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14460,12 +14460,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapAddressComponent *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14473,12 +14473,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapReGeocode *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14486,12 +14486,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeocode *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14499,12 +14499,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusStop *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14512,12 +14512,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLine *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14525,12 +14525,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistrict *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14538,12 +14538,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTMC *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14551,12 +14551,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapStep *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14564,12 +14564,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPath *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14577,12 +14577,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureTimeInfoElement *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14590,12 +14590,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureTimeInfo *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14603,12 +14603,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWalking *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14616,12 +14616,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTaxi *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14629,12 +14629,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRailwayStation *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14642,12 +14642,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRailwaySpace *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14655,12 +14655,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRailway *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14668,12 +14668,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSegment *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14681,12 +14681,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTransit *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14694,12 +14694,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoute *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14707,12 +14707,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistanceResult *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14720,12 +14720,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocalWeatherLive *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14733,12 +14733,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocalDayWeatherForecast *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14746,12 +14746,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocalWeatherForecast *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14759,12 +14759,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbyUserInfo *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14772,12 +14772,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTrafficEvaluation *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14785,12 +14785,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTrafficRoad *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14798,12 +14798,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTrafficInfo *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14811,12 +14811,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudImage *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14824,12 +14824,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOI *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14837,12 +14837,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbyUploadInfo *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14850,12 +14850,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbySearchManager *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14863,12 +14863,12 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"RefClass::asAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = REF_MAP[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSearchAPI *) ref;
-          // 放回REF_MAP
-          REF_MAP[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -14877,7 +14877,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapURLSearch");
       
           AMapURLSearch* ref = [[AMapURLSearch alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14886,7 +14886,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapNaviConfig");
       
           AMapNaviConfig* ref = [[AMapNaviConfig alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14895,7 +14895,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRouteConfig");
       
           AMapRouteConfig* ref = [[AMapRouteConfig alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14904,7 +14904,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIConfig");
       
           AMapPOIConfig* ref = [[AMapPOIConfig alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14913,7 +14913,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapServices");
       
           AMapServices* ref = [[AMapServices alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14922,7 +14922,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOISearchBaseRequest");
       
           AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14931,7 +14931,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIIDSearchRequest");
       
           AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14940,7 +14940,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIKeywordsSearchRequest");
       
           AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14949,7 +14949,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIAroundSearchRequest");
       
           AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14958,7 +14958,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIPolygonSearchRequest");
       
           AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14967,7 +14967,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOISearchResponse");
       
           AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14976,7 +14976,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoutePOISearchRequest");
       
           AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14985,7 +14985,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoutePOISearchResponse");
       
           AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -14994,7 +14994,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapInputTipsSearchRequest");
       
           AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15003,7 +15003,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapInputTipsSearchResponse");
       
           AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15012,7 +15012,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapGeocodeSearchRequest");
       
           AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15021,7 +15021,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
       
           AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15030,7 +15030,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapReGeocodeSearchRequest");
       
           AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15039,7 +15039,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapReGeocodeSearchResponse");
       
           AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15048,7 +15048,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusStopSearchRequest");
       
           AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15057,7 +15057,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusStopSearchResponse");
       
           AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15066,7 +15066,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusLineBaseSearchRequest");
       
           AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15075,7 +15075,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusLineNameSearchRequest");
       
           AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15084,7 +15084,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusLineIDSearchRequest");
       
           AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15093,7 +15093,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusLineSearchResponse");
       
           AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15102,7 +15102,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDistrictSearchRequest");
       
           AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15111,7 +15111,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDistrictSearchResponse");
       
           AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15120,7 +15120,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRouteSearchBaseRequest");
       
           AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15129,7 +15129,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDrivingRouteSearchRequest");
       
           AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15138,7 +15138,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapWalkingRouteSearchRequest");
       
           AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15147,7 +15147,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTransitRouteSearchRequest");
       
           AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15156,7 +15156,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRidingRouteSearchRequest");
       
           AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15165,7 +15165,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRouteSearchResponse");
       
           AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15174,7 +15174,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRidingRouteSearchResponse");
       
           AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15183,7 +15183,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTruckRouteSearchRequest");
       
           AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15192,7 +15192,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDistanceSearchRequest");
       
           AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15201,7 +15201,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDistanceSearchResponse");
       
           AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15210,7 +15210,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapWeatherSearchRequest");
       
           AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15219,7 +15219,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapWeatherSearchResponse");
       
           AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15228,7 +15228,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoadTrafficSearchBaseRequest");
       
           AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15237,7 +15237,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoadTrafficSearchRequest");
       
           AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15246,7 +15246,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoadTrafficCircleSearchRequest");
       
           AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15255,7 +15255,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoadTrafficSearchResponse");
       
           AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15264,7 +15264,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapNearbySearchRequest");
       
           AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15273,7 +15273,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapNearbySearchResponse");
       
           AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15282,7 +15282,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudSearchBaseRequest");
       
           AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15291,7 +15291,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudPOIAroundSearchRequest");
       
           AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15300,7 +15300,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudPOIPolygonSearchRequest");
       
           AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15309,7 +15309,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudPOIIDSearchRequest");
       
           AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15318,7 +15318,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudPOILocalSearchRequest");
       
           AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15327,7 +15327,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudPOISearchResponse");
       
           AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15336,7 +15336,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapShareSearchBaseRequest");
       
           AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15345,7 +15345,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapLocationShareSearchRequest");
       
           AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15354,7 +15354,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIShareSearchRequest");
       
           AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15363,7 +15363,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRouteShareSearchRequest");
       
           AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15372,7 +15372,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapNavigationShareSearchRequest");
       
           AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15381,7 +15381,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapShareSearchResponse");
       
           AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15390,7 +15390,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapFutureRouteSearchRequest");
       
           AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15399,7 +15399,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapFutureRouteSearchResponse");
       
           AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15408,7 +15408,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapSearchObject");
       
           AMapSearchObject* ref = [[AMapSearchObject alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15417,7 +15417,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapGeoPoint");
       
           AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15426,7 +15426,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapGeoPolygon");
       
           AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15435,7 +15435,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCity");
       
           AMapCity* ref = [[AMapCity alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15444,7 +15444,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapSuggestion");
       
           AMapSuggestion* ref = [[AMapSuggestion alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15453,7 +15453,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTip");
       
           AMapTip* ref = [[AMapTip alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15462,7 +15462,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapImage");
       
           AMapImage* ref = [[AMapImage alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15471,7 +15471,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOIExtension");
       
           AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15480,7 +15480,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapIndoorData");
       
           AMapIndoorData* ref = [[AMapIndoorData alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15489,7 +15489,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapSubPOI");
       
           AMapSubPOI* ref = [[AMapSubPOI alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15498,7 +15498,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoutePOI");
       
           AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15507,7 +15507,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPOI");
       
           AMapPOI* ref = [[AMapPOI alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15516,7 +15516,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapAOI");
       
           AMapAOI* ref = [[AMapAOI alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15525,7 +15525,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoad");
       
           AMapRoad* ref = [[AMapRoad alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15534,7 +15534,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoadInter");
       
           AMapRoadInter* ref = [[AMapRoadInter alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15543,7 +15543,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapStreetNumber");
       
           AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15552,7 +15552,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusinessArea");
       
           AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15561,7 +15561,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapAddressComponent");
       
           AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15570,7 +15570,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapReGeocode");
       
           AMapReGeocode* ref = [[AMapReGeocode alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15579,7 +15579,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapGeocode");
       
           AMapGeocode* ref = [[AMapGeocode alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15588,7 +15588,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusStop");
       
           AMapBusStop* ref = [[AMapBusStop alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15597,7 +15597,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapBusLine");
       
           AMapBusLine* ref = [[AMapBusLine alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15606,7 +15606,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDistrict");
       
           AMapDistrict* ref = [[AMapDistrict alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15615,7 +15615,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTMC");
       
           AMapTMC* ref = [[AMapTMC alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15624,7 +15624,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapStep");
       
           AMapStep* ref = [[AMapStep alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15633,7 +15633,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapPath");
       
           AMapPath* ref = [[AMapPath alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15642,7 +15642,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapFutureTimeInfoElement");
       
           AMapFutureTimeInfoElement* ref = [[AMapFutureTimeInfoElement alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15651,7 +15651,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapFutureTimeInfo");
       
           AMapFutureTimeInfo* ref = [[AMapFutureTimeInfo alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15660,7 +15660,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapWalking");
       
           AMapWalking* ref = [[AMapWalking alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15669,7 +15669,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTaxi");
       
           AMapTaxi* ref = [[AMapTaxi alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15678,7 +15678,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRailwayStation");
       
           AMapRailwayStation* ref = [[AMapRailwayStation alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15687,7 +15687,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRailwaySpace");
       
           AMapRailwaySpace* ref = [[AMapRailwaySpace alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15696,7 +15696,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRailway");
       
           AMapRailway* ref = [[AMapRailway alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15705,7 +15705,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapSegment");
       
           AMapSegment* ref = [[AMapSegment alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15714,7 +15714,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTransit");
       
           AMapTransit* ref = [[AMapTransit alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15723,7 +15723,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapRoute");
       
           AMapRoute* ref = [[AMapRoute alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15732,7 +15732,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapDistanceResult");
       
           AMapDistanceResult* ref = [[AMapDistanceResult alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15741,7 +15741,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapLocalWeatherLive");
       
           AMapLocalWeatherLive* ref = [[AMapLocalWeatherLive alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15750,7 +15750,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapLocalDayWeatherForecast");
       
           AMapLocalDayWeatherForecast* ref = [[AMapLocalDayWeatherForecast alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15759,7 +15759,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapLocalWeatherForecast");
       
           AMapLocalWeatherForecast* ref = [[AMapLocalWeatherForecast alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15768,7 +15768,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapNearbyUserInfo");
       
           AMapNearbyUserInfo* ref = [[AMapNearbyUserInfo alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15777,7 +15777,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTrafficEvaluation");
       
           AMapTrafficEvaluation* ref = [[AMapTrafficEvaluation alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15786,7 +15786,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTrafficRoad");
       
           AMapTrafficRoad* ref = [[AMapTrafficRoad alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15795,7 +15795,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapTrafficInfo");
       
           AMapTrafficInfo* ref = [[AMapTrafficInfo alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15804,7 +15804,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudImage");
       
           AMapCloudImage* ref = [[AMapCloudImage alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15813,7 +15813,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapCloudPOI");
       
           AMapCloudPOI* ref = [[AMapCloudPOI alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15822,7 +15822,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapNearbyUploadInfo");
       
           AMapNearbyUploadInfo* ref = [[AMapNearbyUploadInfo alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15830,9 +15830,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
       @"ObjectFactory::createAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNearbySearchManager");
       
-          // todo
-          AMapNearbySearchManager* ref = [AMapNearbySearchManager alloc];
-          REF_MAP[@(ref.hash)] = ref;
+          AMapNearbySearchManager* ref = [[AMapNearbySearchManager alloc] init];
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15841,7 +15840,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
           NSLog(@"ObjectFactory::createAMapSearchAPI");
       
           AMapSearchAPI* ref = [[AMapSearchAPI alloc] init];
-          REF_MAP[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       },
@@ -15854,7 +15853,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
 
 + (void)registerWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar {
   // 引用Map
-  REF_MAP = @{}.mutableCopy;
+  HEAP = @{}.mutableCopy;
 
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"me.yohom/amap_search_fluttify"
@@ -15871,10 +15870,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
 - (void)handleMethodCall:(FlutterMethodCall *)methodCall result:(FlutterResult)methodResult {
   NSDictionary<NSString *, id> *args = (NSDictionary<NSString *, id> *) [methodCall arguments];
   if ([@"ObjectFactory::release" isEqualToString:methodCall.method]) {
-    [REF_MAP removeObjectForKey:(NSNumber *) args[@"refId"]];
+    [HEAP removeObjectForKey:(NSNumber *) args[@"refId"]];
     methodResult(@"success");
   } else if ([@"ObjectFactory::clearRefMap" isEqualToString:methodCall.method]) {
-    [REF_MAP removeAllObjects];
+    [HEAP removeAllObjects];
     methodResult(@"success");
   } else if ([@"ObjectFactory::createCLLocationCoordinate2D" isEqualToString:methodCall.method]) {
     CLLocationDegrees latitude = [args[@"latitude"] doubleValue];
@@ -15883,7 +15882,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *REF_MAP;
     CLLocationCoordinate2D data = CLLocationCoordinate2DMake(latitude, longitude);
 
     NSValue* dataValue = [NSValue value:&data withObjCType:@encode(CLLocationCoordinate2D)];
-    REF_MAP[@(dataValue.hash)] = dataValue;
+    HEAP[@(dataValue.hash)] = dataValue;
 
     methodResult(@(dataValue.hash));
   } else {

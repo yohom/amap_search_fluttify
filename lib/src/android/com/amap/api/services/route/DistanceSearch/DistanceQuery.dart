@@ -41,7 +41,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_services_core_LatLonPoint()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
   }
   
    Future<com_amap_api_services_core_LatLonPoint> getDestination() async {

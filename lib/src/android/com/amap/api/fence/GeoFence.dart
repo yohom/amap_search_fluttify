@@ -176,7 +176,7 @@ class com_amap_api_fence_GeoFence extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).map((it) => com_amap_api_fence_DistrictItem()..refId = it);
+    return (result as List).cast<int>().map((it) => com_amap_api_fence_DistrictItem()..refId = it).toList();
   }
   
    Future<void> setDistrictItemList(List<com_amap_api_fence_DistrictItem> var1) async {
