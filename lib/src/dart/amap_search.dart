@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:amap_search_fluttify/src/android/android.export.dart';
@@ -26,12 +27,11 @@ class AmapSearch {
     );
   }
 
-  static Future search({
-    String keyword = '',
-    String city = '',
-    OnPoiSearched onPoiSearched,
-  }) {
-    return platform(
+  static Future<List<Poi>> search({String keyword = '', String city = ''}) {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<List<Poi>>();
+    platform(
       android: () async {
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
@@ -42,13 +42,13 @@ class AmapSearch {
                 context, query);
 
         await _androidApi
-            .setOnPoiSearchListener(_AndroidPoiListener(onPoiSearched));
+            .setOnPoiSearchListener(_AndroidPoiListener(_controller));
         await _androidApi.searchPOIAsyn();
       },
       ios: () async {
         _iosApi ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
-        await _iosApi.set_delegate(_IOSPoiListener(onPoiSearched));
+        await _iosApi.set_delegate(_IOSPoiListener(_controller));
 
         final request =
             await ObjectFactory_iOS.createAMapPOIKeywordsSearchRequest();
@@ -58,40 +58,44 @@ class AmapSearch {
         await _iosApi.AMapPOIKeywordsSearch(request);
       },
     );
+    return _controller.stream.first;
   }
 }
 
 class _AndroidPoiListener extends java_lang_Object
     with com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener {
-  _AndroidPoiListener(this._onPoiSearched);
+  _AndroidPoiListener(this._streamController);
 
-  final OnPoiSearched _onPoiSearched;
+  final StreamController _streamController;
 
   @override
   Future<void> onPoiSearched(
-      com_amap_api_services_poisearch_PoiResult var1, int var2) async {
-    if (_onPoiSearched != null) {
-      _onPoiSearched([
-        for (final item in (await var1.getPois())) Poi(await item.getTitle())
-      ]);
-    }
+    com_amap_api_services_poisearch_PoiResult var1,
+    int var2,
+  ) async {
+    final poiList = [
+      for (final item in (await var1.getPois())) Poi(await item.getTitle())
+    ];
+    _streamController?.add(poiList);
+    _streamController?.close();
   }
 }
 
 class _IOSPoiListener extends NSObject with AMapSearchDelegate {
-  _IOSPoiListener(this._onPoiSearched);
+  _IOSPoiListener(this._streamController);
 
-  final OnPoiSearched _onPoiSearched;
+  final StreamController<List<Poi>> _streamController;
 
   @override
   Future<void> onPOISearchDoneResponse(
-      AMapPOISearchBaseRequest request, AMapPOISearchResponse response) async {
-    if (_onPoiSearched != null) {
-      _onPoiSearched([
-        for (final item in (await response.get_pois()))
-          Poi(await item.get_name())
-      ]);
-    }
+    AMapPOISearchBaseRequest request,
+    AMapPOISearchResponse response,
+  ) async {
+    final poiList = [
+      for (final item in (await response.get_pois())) Poi(await item.get_name())
+    ];
+    _streamController?.add(poiList);
+    _streamController?.close();
   }
 }
 
