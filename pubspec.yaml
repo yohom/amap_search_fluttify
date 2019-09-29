@@ -1,5 +1,5 @@
 name: amap_search_fluttify
-description: A new flutter plugin project.
+description: A `Amap` search component, based on `fluttify` engine.
 version: 0.0.1+1
 author: yohom <382146139@qq.com>
 homepage: https://github.com/yohom/amap_search_fluttify
