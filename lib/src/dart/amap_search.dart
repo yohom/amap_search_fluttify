@@ -26,12 +26,16 @@ class AmapSearch {
     );
   }
 
-  static Future search(String keyword, OnPoiSearched onPoiSearched) {
+  static Future search({
+    String keyword = '',
+    String city = '',
+    OnPoiSearched onPoiSearched,
+  }) {
     return platform(
       android: () async {
         final query = await ObjectFactory_Android
-            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String(
-                keyword, '');
+            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
+                keyword, '', city);
         final context = await ObjectFactory_Android.getandroid_app_Activity();
         _androidApi = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
@@ -49,18 +53,11 @@ class AmapSearch {
         final request =
             await ObjectFactory_iOS.createAMapPOIKeywordsSearchRequest();
         await request.set_keywords(keyword);
+        await request.set_city(city);
 
         await _iosApi.AMapPOIKeywordsSearch(request);
       },
     );
-  }
-}
-
-Future platform({FutureCallback android, FutureCallback ios}) async {
-  if (Platform.isAndroid) {
-    if (android != null && Platform.isAndroid) return await android();
-  } else if (Platform.isIOS) {
-    if (ios != null && Platform.isIOS) return await ios();
   }
 }
 
@@ -73,9 +70,11 @@ class _AndroidPoiListener extends java_lang_Object
   @override
   Future<void> onPoiSearched(
       com_amap_api_services_poisearch_PoiResult var1, int var2) async {
-    return _onPoiSearched([
-      for (final item in (await var1.getPois())) Poi(await item.getTitle())
-    ]);
+    if (_onPoiSearched != null) {
+      _onPoiSearched([
+        for (final item in (await var1.getPois())) Poi(await item.getTitle())
+      ]);
+    }
   }
 }
 
@@ -87,8 +86,19 @@ class _IOSPoiListener extends NSObject with AMapSearchDelegate {
   @override
   Future<void> onPOISearchDoneResponse(
       AMapPOISearchBaseRequest request, AMapPOISearchResponse response) async {
-    _onPoiSearched([
-      for (final item in (await response.get_pois())) Poi(await item.get_name())
-    ]);
+    if (_onPoiSearched != null) {
+      _onPoiSearched([
+        for (final item in (await response.get_pois()))
+          Poi(await item.get_name())
+      ]);
+    }
+  }
+}
+
+Future platform({FutureCallback android, FutureCallback ios}) async {
+  if (Platform.isAndroid) {
+    if (android != null && Platform.isAndroid) return await android();
+  } else if (Platform.isIOS) {
+    if (ios != null && Platform.isIOS) return await ios();
   }
 }
