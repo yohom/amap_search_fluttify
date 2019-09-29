@@ -93,7 +93,7 @@ packages:
     source: hosted
     version: "0.1.2"
   decorated_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: decorated_flutter
       url: "https://pub.dartlang.org"
