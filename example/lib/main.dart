@@ -6,7 +6,7 @@ import 'widgets/function_group.widget.dart';
 import 'widgets/function_item.widget.dart';
 
 void main() async {
-  await AmapSearch.init('7a04506d15fdb7585707f7091d715ef4');
+  await AmapSearch.init('f583e0d5b70400167993615c3adc3ced');
 
   runApp(MyApp());
 }

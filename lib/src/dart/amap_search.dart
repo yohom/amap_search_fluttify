@@ -2,8 +2,10 @@ import 'dart:io';
 
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 
+import 'model/poi.dart';
+
 typedef Future FutureCallback();
-typedef Future OnPoiSearched(com_amap_api_services_poisearch_PoiResult result);
+typedef Future OnPoiSearched(List<Poi> pois);
 
 class AmapSearch {
   static AMapSearchAPI _iosApi;
@@ -34,11 +36,20 @@ class AmapSearch {
             .createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
                 context, query);
 
-        await _androidApi.setOnPoiSearchListener(PoiListener(onPoiSearched));
+        await _androidApi
+            .setOnPoiSearchListener(_AndroidPoiListener(onPoiSearched));
         await _androidApi.searchPOIAsyn();
       },
       ios: () async {
         _iosApi ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        await _iosApi.set_delegate(_IOSPoiListener(onPoiSearched));
+
+        final request =
+            await ObjectFactory_iOS.createAMapPOIKeywordsSearchRequest();
+        await request.set_keywords(keyword);
+
+        await _iosApi.AMapPOIKeywordsSearch(request);
       },
     );
   }
@@ -52,15 +63,31 @@ Future platform({FutureCallback android, FutureCallback ios}) async {
   }
 }
 
-class PoiListener extends java_lang_Object
+class _AndroidPoiListener extends java_lang_Object
     with com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener {
-  PoiListener(this._onPoiSearched);
+  _AndroidPoiListener(this._onPoiSearched);
 
   final OnPoiSearched _onPoiSearched;
 
   @override
   Future<void> onPoiSearched(
       com_amap_api_services_poisearch_PoiResult var1, int var2) async {
-    return _onPoiSearched(var1);
+    return _onPoiSearched([
+      for (final item in (await var1.getPois())) Poi(await item.getTitle())
+    ]);
+  }
+}
+
+class _IOSPoiListener extends NSObject with AMapSearchDelegate {
+  _IOSPoiListener(this._onPoiSearched);
+
+  final OnPoiSearched _onPoiSearched;
+
+  @override
+  Future<void> onPOISearchDoneResponse(
+      AMapPOISearchBaseRequest request, AMapPOISearchResponse response) async {
+    _onPoiSearched([
+      for (final item in (await response.get_pois())) Poi(await item.get_name())
+    ]);
   }
 }

@@ -10,10 +10,9 @@ class _GetPoiScreenState extends State<GetPoiScreen> {
   @override
   void initState() {
     super.initState();
-    AmapSearch.search('金职院', (poi) async {
-      final pois = await poi.getPois();
+    AmapSearch.search('金职院', (pois) async {
       for (final poi in pois) {
-        print(await poi.getTitle());
+        print(poi.title);
       }
     });
   }
