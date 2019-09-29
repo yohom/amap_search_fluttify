@@ -13,6 +13,11 @@ class AMapInputTipsSearchResponse extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapTip>> get_tips() async {
+    final result = await _channel.invokeMethod("AMapInputTipsSearchResponse::get_tips", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapTip()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_count(int count) async {

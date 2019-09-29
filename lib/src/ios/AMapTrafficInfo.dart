@@ -15,7 +15,12 @@ class AMapTrafficInfo extends AMapSearchObject  {
   
   Future<AMapTrafficEvaluation> get_evaluation() async {
     final result = await _channel.invokeMethod("AMapTrafficInfo::get_evaluation", {'refId': refId});
-    return result;
+    return AMapTrafficEvaluation()..refId = result;
+  }
+  
+  Future<List<AMapTrafficRoad>> get_roads() async {
+    final result = await _channel.invokeMethod("AMapTrafficInfo::get_roads", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it).toList();
   }
   
 

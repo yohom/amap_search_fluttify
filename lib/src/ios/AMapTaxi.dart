@@ -10,12 +10,12 @@ class AMapTaxi extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await _channel.invokeMethod("AMapTaxi::get_origin", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await _channel.invokeMethod("AMapTaxi::get_destination", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_distance() async {

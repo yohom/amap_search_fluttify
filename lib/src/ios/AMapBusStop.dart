@@ -30,7 +30,12 @@ class AMapBusStop extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapBusStop::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
+  }
+  
+  Future<List<AMapBusLine>> get_buslines() async {
+    final result = await _channel.invokeMethod("AMapBusStop::get_buslines", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapBusLine()..refId = it).toList();
   }
   
   Future<String> get_sequence() async {

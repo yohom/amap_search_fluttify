@@ -15,7 +15,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject  {
   
   Future<AMapWeatherType> get_type() async {
     final result = await _channel.invokeMethod("AMapWeatherSearchRequest::get_type", {'refId': refId});
-    return result;
+    return AMapWeatherType.values[result];
   }
   
 

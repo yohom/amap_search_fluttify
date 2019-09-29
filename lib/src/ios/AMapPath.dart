@@ -23,6 +23,11 @@ class AMapPath extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapStep>> get_steps() async {
+    final result = await _channel.invokeMethod("AMapPath::get_steps", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapStep()..refId = it).toList();
+  }
+  
   Future<double> get_tolls() async {
     final result = await _channel.invokeMethod("AMapPath::get_tolls", {'refId': refId});
     return result;

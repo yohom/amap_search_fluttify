@@ -15,7 +15,7 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest  {
   
   Future<AMapGeoPolygon> get_polygon() async {
     final result = await _channel.invokeMethod("AMapPOIPolygonSearchRequest::get_polygon", {'refId': refId});
-    return result;
+    return AMapGeoPolygon()..refId = result;
   }
   
 

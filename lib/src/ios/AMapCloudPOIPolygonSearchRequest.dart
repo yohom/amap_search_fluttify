@@ -10,7 +10,7 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest  {
   // 生成getters
   Future<AMapGeoPolygon> get_polygon() async {
     final result = await _channel.invokeMethod("AMapCloudPOIPolygonSearchRequest::get_polygon", {'refId': refId});
-    return result;
+    return AMapGeoPolygon()..refId = result;
   }
   
   Future<String> get_keywords() async {

@@ -15,7 +15,27 @@ class AMapReGeocode extends AMapSearchObject  {
   
   Future<AMapAddressComponent> get_addressComponent() async {
     final result = await _channel.invokeMethod("AMapReGeocode::get_addressComponent", {'refId': refId});
-    return result;
+    return AMapAddressComponent()..refId = result;
+  }
+  
+  Future<List<AMapRoad>> get_roads() async {
+    final result = await _channel.invokeMethod("AMapReGeocode::get_roads", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapRoad()..refId = it).toList();
+  }
+  
+  Future<List<AMapRoadInter>> get_roadinters() async {
+    final result = await _channel.invokeMethod("AMapReGeocode::get_roadinters", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapRoadInter()..refId = it).toList();
+  }
+  
+  Future<List<AMapPOI>> get_pois() async {
+    final result = await _channel.invokeMethod("AMapReGeocode::get_pois", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList();
+  }
+  
+  Future<List<AMapAOI>> get_aois() async {
+    final result = await _channel.invokeMethod("AMapReGeocode::get_aois", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapAOI()..refId = it).toList();
   }
   
 

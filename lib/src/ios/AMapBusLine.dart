@@ -45,7 +45,7 @@ class AMapBusLine extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapBusLine::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_startTime() async {
@@ -80,17 +80,27 @@ class AMapBusLine extends AMapSearchObject  {
   
   Future<AMapGeoPolygon> get_bounds() async {
     final result = await _channel.invokeMethod("AMapBusLine::get_bounds", {'refId': refId});
-    return result;
+    return AMapGeoPolygon()..refId = result;
+  }
+  
+  Future<List<AMapBusStop>> get_busStops() async {
+    final result = await _channel.invokeMethod("AMapBusLine::get_busStops", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList();
   }
   
   Future<AMapBusStop> get_departureStop() async {
     final result = await _channel.invokeMethod("AMapBusLine::get_departureStop", {'refId': refId});
-    return result;
+    return AMapBusStop()..refId = result;
   }
   
   Future<AMapBusStop> get_arrivalStop() async {
     final result = await _channel.invokeMethod("AMapBusLine::get_arrivalStop", {'refId': refId});
-    return result;
+    return AMapBusStop()..refId = result;
+  }
+  
+  Future<List<AMapBusStop>> get_viaBusStops() async {
+    final result = await _channel.invokeMethod("AMapBusLine::get_viaBusStops", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList();
   }
   
   Future<int> get_duration() async {

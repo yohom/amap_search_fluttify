@@ -28,6 +28,11 @@ class AMapLocalWeatherForecast extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapLocalDayWeatherForecast>> get_casts() async {
+    final result = await _channel.invokeMethod("AMapLocalWeatherForecast::get_casts", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_adcode(String adcode) async {

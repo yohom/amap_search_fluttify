@@ -15,7 +15,7 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
   
   Future<AMapRoute> get_route() async {
     final result = await _channel.invokeMethod("AMapRouteSearchResponse::get_route", {'refId': refId});
-    return result;
+    return AMapRoute()..refId = result;
   }
   
 

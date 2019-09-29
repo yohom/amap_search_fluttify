@@ -10,7 +10,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
     final result = await _channel.invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'refId': refId});
-    return result;
+    return AMapTrafficInfo()..refId = result;
   }
   
 

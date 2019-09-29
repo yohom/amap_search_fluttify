@@ -13,6 +13,11 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<String>> get_filter() async {
+    final result = await _channel.invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'refId': refId});
+    return result;
+  }
+  
   Future<String> get_sortFields() async {
     final result = await _channel.invokeMethod("AMapCloudSearchBaseRequest::get_sortFields", {'refId': refId});
     return result;
@@ -20,7 +25,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject  {
   
   Future<AMapCloudSortType> get_sortType() async {
     final result = await _channel.invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'refId': refId});
-    return result;
+    return AMapCloudSortType.values[result];
   }
   
   Future<int> get_offset() async {

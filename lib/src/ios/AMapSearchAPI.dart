@@ -8,11 +8,6 @@ class AMapSearchAPI extends NSObject  {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
   // 生成getters
-  Future<AMapSearchDelegate> get_delegate() async {
-    final result = await _channel.invokeMethod("AMapSearchAPI::get_delegate", {'refId': refId});
-    return result;
-  }
-  
   Future<int> get_timeout() async {
     final result = await _channel.invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
     return result;
@@ -20,7 +15,7 @@ class AMapSearchAPI extends NSObject  {
   
   Future<AMapSearchLanguage> get_language() async {
     final result = await _channel.invokeMethod("AMapSearchAPI::get_language", {'refId': refId});
-    return result;
+    return AMapSearchLanguage.values[result];
   }
   
 

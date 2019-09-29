@@ -10,7 +10,7 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest  {
   // 生成getters
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapLocationShareSearchRequest::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_name() async {

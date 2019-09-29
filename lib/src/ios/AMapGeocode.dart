@@ -55,7 +55,7 @@ class AMapGeocode extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapGeocode::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_level() async {

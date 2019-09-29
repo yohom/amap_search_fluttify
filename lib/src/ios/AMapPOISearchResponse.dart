@@ -15,7 +15,12 @@ class AMapPOISearchResponse extends AMapSearchObject  {
   
   Future<AMapSuggestion> get_suggestion() async {
     final result = await _channel.invokeMethod("AMapPOISearchResponse::get_suggestion", {'refId': refId});
-    return result;
+    return AMapSuggestion()..refId = result;
+  }
+  
+  Future<List<AMapPOI>> get_pois() async {
+    final result = await _channel.invokeMethod("AMapPOISearchResponse::get_pois", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList();
   }
   
 

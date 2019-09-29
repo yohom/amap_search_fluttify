@@ -29,6 +29,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [AMapURLSearch getLatestAMapApp ];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapURLSearch::openAMapNavigation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -46,7 +47,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL result = [AMapURLSearch openAMapNavigation: config];
       
           // 调用结果
-          methodResult(@"success");
+          // 返回值: Value
+          methodResult(@(result));
       },
       @"AMapURLSearch::openAMapRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -63,7 +65,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL result = [AMapURLSearch openAMapRouteSearch: config];
       
           // 调用结果
-          methodResult(@"success");
+          // 返回值: Value
+          methodResult(@(result));
       },
       @"AMapURLSearch::openAMapPOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -80,7 +83,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL result = [AMapURLSearch openAMapPOISearch: config];
       
           // 调用结果
-          methodResult(@"success");
+          // 返回值: Value
+          methodResult(@(result));
       },
       @"AMapServices::sharedServices": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -96,10 +100,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapServices* result = [AMapServices sharedServices];
       
           // 调用结果
-          NSInteger returnRefId = [result hash];
-          HEAP[@(returnRefId)] = result;
-      
-          methodResult(@(returnRefId));
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       @"AMapSearchObject::formattedDescription": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -116,6 +119,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSString* result = [ref formattedDescription];
       
           // 调用结果
+          // 返回值: jsonable
           methodResult(result);
       },
       @"AMapGeoPoint::locationWithLatitudeLongitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -135,10 +139,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapGeoPoint* result = [AMapGeoPoint locationWithLatitude: lat longitude: lon];
       
           // 调用结果
-          NSInteger returnRefId = [result hash];
-          HEAP[@(returnRefId)] = result;
-      
-          methodResult(@(returnRefId));
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       @"AMapNearbySearchManagerDelegate::nearbyInfoForUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -156,10 +159,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapNearbyUploadInfo* result = [ref nearbyInfoForUploading: manager];
       
           // 调用结果
-          NSInteger returnRefId = [result hash];
-          HEAP[@(returnRefId)] = result;
-      
-          methodResult(@(returnRefId));
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       @"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -177,6 +179,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onNearbyInfoUploadedWithError : error];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -195,6 +198,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onUserInfoClearedWithError : error];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::init": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -212,10 +216,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapSearchAPI* result = [ref init];
       
           // 调用结果
-          NSInteger returnRefId = [result hash];
-          HEAP[@(returnRefId)] = result;
-      
-          methodResult(@(returnRefId));
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       @"AMapSearchAPI::cancelAllRequests": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -232,6 +235,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref cancelAllRequests ];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -250,6 +254,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapPOIIDSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapPOIKeywordsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -268,6 +273,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapPOIKeywordsSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -286,6 +292,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapPOIAroundSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -304,6 +311,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapPOIPolygonSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapRoutePOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -322,6 +330,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapRoutePOISearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapGeocodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -340,6 +349,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapGeocodeSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapReGoecodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -358,6 +368,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapReGoecodeSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapInputTipsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -376,6 +387,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapInputTipsSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapBusStopSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -394,6 +406,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapBusStopSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapBusLineIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -412,6 +425,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapBusLineIDSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapBusLineNameSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -430,6 +444,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapBusLineNameSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapDistrictSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -448,6 +463,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapDistrictSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapDrivingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -466,6 +482,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapDrivingRouteSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapWalkingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -484,6 +501,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapWalkingRouteSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapTransitRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -502,6 +520,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapTransitRouteSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapRidingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -520,6 +539,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapRidingRouteSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapTruckRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -538,6 +558,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapTruckRouteSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapFutureRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -556,6 +577,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapFutureRouteSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapWeatherSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -574,6 +596,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapWeatherSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapRoadTrafficSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -592,6 +615,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapRoadTrafficSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapRoadTrafficCircleSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -610,6 +634,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapRoadTrafficCircleSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapDistanceSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -628,6 +653,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapDistanceSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapNearbySearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -646,6 +672,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapNearbySearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapCloudPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -664,6 +691,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapCloudPOIAroundSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapCloudPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -682,6 +710,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapCloudPOIPolygonSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapCloudPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -700,6 +729,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapCloudPOIIDSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapCloudPOILocalSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -718,6 +748,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapCloudPOILocalSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapLocationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -736,6 +767,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapLocationShareSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapPOIShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -754,6 +786,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapPOIShareSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapRouteShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -772,6 +805,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapRouteShareSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchAPI::AMapNavigationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -790,6 +824,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref AMapNavigationShareSearch : request];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onPOISearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -810,6 +845,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onPOISearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onRoutePOISearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -830,6 +866,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onRoutePOISearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onGeocodeSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -850,6 +887,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onGeocodeSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onReGeocodeSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -870,6 +908,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onReGeocodeSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onInputTipsSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -890,6 +929,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onInputTipsSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onBusStopSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -910,6 +950,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onBusStopSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onBusLineSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -930,6 +971,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onBusLineSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onDistrictSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -950,6 +992,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onDistrictSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onRouteSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -970,6 +1013,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onRouteSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onFutureRouteSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -990,6 +1034,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onFutureRouteSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onDistanceSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1010,6 +1055,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onDistanceSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onWeatherSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1030,6 +1076,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onWeatherSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onRoadTrafficSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1050,6 +1097,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onRoadTrafficSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onNearbySearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1070,6 +1118,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onNearbySearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onCloudSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1090,6 +1139,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onCloudSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapSearchDelegate::onShareSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1110,6 +1160,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [ref onShareSearchDone : request response: response];
       
           // 调用结果
+          // 无返回值
           methodResult(@"success");
       },
       @"AMapNaviConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1119,9 +1170,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.appScheme;
       
       
-          methodResult(@(ref.appScheme.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapNaviConfig::get_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1131,9 +1186,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.appName;
       
       
-          methodResult(@(ref.appName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapNaviConfig::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1143,7 +1202,16 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          CLLocationCoordinate2D result = ref.destination;
+      
           NSLog(@"AMapNaviConfig::get_destination:结构体getter暂时不支持");
+      
+          // 返回值: 结构体
+          // NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          // HEAP[@(resultValue.hash)] = resultValue;
+          //
+          // methodResult(@(resultValue.hash));
       
           methodResult(nil/* 结构体getter暂时不支持 */);
       },
@@ -1155,9 +1223,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapDrivingStrategy result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1167,9 +1239,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.appScheme;
       
       
-          methodResult(@(ref.appScheme.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRouteConfig::get_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1179,9 +1255,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.appName;
       
       
-          methodResult(@(ref.appName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRouteConfig::get_startCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1191,7 +1271,16 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          CLLocationCoordinate2D result = ref.startCoordinate;
+      
           NSLog(@"AMapRouteConfig::get_startCoordinate:结构体getter暂时不支持");
+      
+          // 返回值: 结构体
+          // NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          // HEAP[@(resultValue.hash)] = resultValue;
+          //
+          // methodResult(@(resultValue.hash));
       
           methodResult(nil/* 结构体getter暂时不支持 */);
       },
@@ -1203,7 +1292,16 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          CLLocationCoordinate2D result = ref.destinationCoordinate;
+      
           NSLog(@"AMapRouteConfig::get_destinationCoordinate:结构体getter暂时不支持");
+      
+          // 返回值: 结构体
+          // NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          // HEAP[@(resultValue.hash)] = resultValue;
+          //
+          // methodResult(@(resultValue.hash));
       
           methodResult(nil/* 结构体getter暂时不支持 */);
       },
@@ -1215,9 +1313,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapDrivingStrategy result = ref.drivingStrategy;
       
       
-          methodResult(@(ref.drivingStrategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteConfig::get_transitStrategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1227,9 +1329,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapTransitStrategy result = ref.transitStrategy;
       
       
-          methodResult(@(ref.transitStrategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteConfig::get_routeType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1239,9 +1345,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapRouteSearchType result = ref.routeType;
       
       
-          methodResult(@(ref.routeType));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOIConfig::get_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1251,9 +1361,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.appScheme;
       
       
-          methodResult(@(ref.appScheme.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIConfig::get_appName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1263,9 +1377,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.appName;
       
       
-          methodResult(@(ref.appName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIConfig::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1275,9 +1393,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIConfig::get_leftTopCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1287,7 +1409,16 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          CLLocationCoordinate2D result = ref.leftTopCoordinate;
+      
           NSLog(@"AMapPOIConfig::get_leftTopCoordinate:结构体getter暂时不支持");
+      
+          // 返回值: 结构体
+          // NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          // HEAP[@(resultValue.hash)] = resultValue;
+          //
+          // methodResult(@(resultValue.hash));
       
           methodResult(nil/* 结构体getter暂时不支持 */);
       },
@@ -1299,7 +1430,16 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
       
+          // 开始调用
+          CLLocationCoordinate2D result = ref.rightBottomCoordinate;
+      
           NSLog(@"AMapPOIConfig::get_rightBottomCoordinate:结构体getter暂时不支持");
+      
+          // 返回值: 结构体
+          // NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          // HEAP[@(resultValue.hash)] = resultValue;
+          //
+          // methodResult(@(resultValue.hash));
       
           methodResult(nil/* 结构体getter暂时不支持 */);
       },
@@ -1311,9 +1451,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.apiKey;
       
       
-          methodResult(@(ref.apiKey.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapServices::get_enableHTTPS": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1323,9 +1467,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.enableHTTPS;
       
       
-          methodResult(@(ref.enableHTTPS));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapServices::get_crashReportEnabled": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1335,9 +1483,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.crashReportEnabled;
       
       
-          methodResult(@(ref.crashReportEnabled));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapServices::get_identifier": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1347,9 +1499,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapServices * ref = (AMapServices *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.identifier;
       
       
-          methodResult(@(ref.identifier.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOISearchBaseRequest::get_types": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1359,9 +1515,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.types;
       
       
-          methodResult(@(ref.types.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOISearchBaseRequest::get_sortrule": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1371,9 +1531,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.sortrule;
       
       
-          methodResult(@(ref.sortrule));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOISearchBaseRequest::get_offset": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1383,9 +1547,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.offset;
       
       
-          methodResult(@(ref.offset));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOISearchBaseRequest::get_page": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1395,9 +1563,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.page;
       
       
-          methodResult(@(ref.page));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOISearchBaseRequest::get_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1407,9 +1579,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.building;
       
       
-          methodResult(@(ref.building.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOISearchBaseRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1419,9 +1595,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireExtension;
       
       
-          methodResult(@(ref.requireExtension));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOISearchBaseRequest::get_requireSubPOIs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1431,9 +1611,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireSubPOIs;
       
       
-          methodResult(@(ref.requireSubPOIs));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOIIDSearchRequest::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1443,9 +1627,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIKeywordsSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1455,9 +1643,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIKeywordsSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1467,9 +1659,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIKeywordsSearchRequest::get_cityLimit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1479,9 +1675,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.cityLimit;
       
       
-          methodResult(@(ref.cityLimit));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOIKeywordsSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1491,9 +1691,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOIAroundSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1503,9 +1708,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIAroundSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1515,9 +1724,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOIAroundSearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1527,9 +1741,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.radius;
       
       
-          methodResult(@(ref.radius));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOIAroundSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1539,9 +1757,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIPolygonSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1551,9 +1773,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIPolygonSearchRequest::get_polygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1563,9 +1789,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPolygon* result = ref.polygon;
       
       
-          methodResult(@(ref.polygon.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOISearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1575,9 +1806,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOISearchResponse::get_suggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1587,9 +1822,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapSuggestion* result = ref.suggestion;
       
       
-          methodResult(@(ref.suggestion.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapPOISearchResponse::get_pois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPOISearchResponse::get_pois");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapPOI*>* result = ref.pois;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapRoutePOISearchRequest::get_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1599,9 +1862,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.origin;
       
       
-          methodResult(@(ref.origin.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoutePOISearchRequest::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1611,9 +1879,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destination;
       
       
-          methodResult(@(ref.destination.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoutePOISearchRequest::get_searchType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1623,9 +1896,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapRoutePOISearchType result = ref.searchType;
       
       
-          methodResult(@(ref.searchType));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoutePOISearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1635,9 +1912,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoutePOISearchRequest::get_range": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1647,9 +1928,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.range;
       
       
-          methodResult(@(ref.range));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoutePOISearchRequest::get_polylineStr": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1659,9 +1944,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.polylineStr;
       
       
-          methodResult(@(ref.polylineStr.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapRoutePOISearchRequest::get_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoutePOISearchRequest::get_polyline");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeoPoint*>* result = ref.polyline;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapRoutePOISearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1671,9 +1983,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapRoutePOISearchResponse::get_pois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoutePOISearchResponse::get_pois");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapRoutePOI*>* result = ref.pois;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapInputTipsSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1683,9 +2022,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapInputTipsSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1695,9 +2038,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapInputTipsSearchRequest::get_types": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1707,9 +2054,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.types;
       
       
-          methodResult(@(ref.types.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapInputTipsSearchRequest::get_cityLimit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1719,9 +2070,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.cityLimit;
       
       
-          methodResult(@(ref.cityLimit));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapInputTipsSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1731,9 +2086,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapInputTipsSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1743,9 +2102,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapInputTipsSearchResponse::get_tips": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapInputTipsSearchResponse::get_tips");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapTip*>* result = ref.tips;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapGeocodeSearchRequest::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1755,9 +2141,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.address;
       
       
-          methodResult(@(ref.address.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocodeSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1767,9 +2157,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocodeSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1779,9 +2173,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapGeocodeSearchResponse::get_geocodes": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapGeocodeSearchResponse::get_geocodes");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeocode*>* result = ref.geocodes;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapReGeocodeSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1791,9 +2212,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireExtension;
       
       
-          methodResult(@(ref.requireExtension));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapReGeocodeSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1803,9 +2228,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapReGeocodeSearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1815,9 +2245,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.radius;
       
       
-          methodResult(@(ref.radius));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapReGeocodeSearchRequest::get_poitype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1827,9 +2261,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.poitype;
       
       
-          methodResult(@(ref.poitype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapReGeocodeSearchResponse::get_regeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1839,9 +2277,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapReGeocode* result = ref.regeocode;
       
       
-          methodResult(@(ref.regeocode.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapBusStopSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1851,9 +2294,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStopSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1863,9 +2310,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStopSearchRequest::get_offset": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1875,9 +2326,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.offset;
       
       
-          methodResult(@(ref.offset));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusStopSearchRequest::get_page": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1887,9 +2342,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.page;
       
       
-          methodResult(@(ref.page));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusStopSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1899,9 +2358,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusStopSearchResponse::get_suggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1911,9 +2374,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapSuggestion* result = ref.suggestion;
       
       
-          methodResult(@(ref.suggestion.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapBusStopSearchResponse::get_busstops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusStopSearchResponse::get_busstops");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusStop*>* result = ref.busstops;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapBusLineBaseSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1923,9 +2414,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLineBaseSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1935,9 +2430,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireExtension;
       
       
-          methodResult(@(ref.requireExtension));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLineBaseSearchRequest::get_offset": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1947,9 +2446,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.offset;
       
       
-          methodResult(@(ref.offset));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLineBaseSearchRequest::get_page": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1959,9 +2462,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.page;
       
       
-          methodResult(@(ref.page));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLineNameSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1971,9 +2478,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLineIDSearchRequest::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1983,9 +2494,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLineSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -1995,9 +2510,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLineSearchResponse::get_suggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2007,9 +2526,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapSuggestion* result = ref.suggestion;
       
       
-          methodResult(@(ref.suggestion.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapBusLineSearchResponse::get_buslines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusLineSearchResponse::get_buslines");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusLine*>* result = ref.buslines;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapDistrictSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2019,9 +2566,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDistrictSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2031,9 +2582,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapDistrictSearchResponse::get_districts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrictSearchResponse::get_districts");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapDistrict*>* result = ref.districts;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapRouteSearchBaseRequest::get_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2043,9 +2621,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.origin;
       
       
-          methodResult(@(ref.origin.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRouteSearchBaseRequest::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2055,9 +2638,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destination;
       
       
-          methodResult(@(ref.destination.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapDrivingRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2067,9 +2655,59 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapDrivingRouteSearchRequest::get_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDrivingRouteSearchRequest::get_waypoints");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeoPoint*>* result = ref.waypoints;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapDrivingRouteSearchRequest::get_avoidpolygons": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDrivingRouteSearchRequest::get_avoidpolygons");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeoPolygon*>* result = ref.avoidpolygons;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapDrivingRouteSearchRequest::get_avoidroad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2079,9 +2717,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.avoidroad;
       
       
-          methodResult(@(ref.avoidroad.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2091,9 +2733,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.originId;
       
       
-          methodResult(@(ref.originId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2103,9 +2749,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationId;
       
       
-          methodResult(@(ref.destinationId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2115,9 +2765,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.origintype;
       
       
-          methodResult(@(ref.origintype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2127,9 +2781,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationtype;
       
       
-          methodResult(@(ref.destinationtype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2139,9 +2797,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireExtension;
       
       
-          methodResult(@(ref.requireExtension));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDrivingRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2151,9 +2813,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.plateProvince;
       
       
-          methodResult(@(ref.plateProvince.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2163,9 +2829,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.plateNumber;
       
       
-          methodResult(@(ref.plateNumber.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDrivingRouteSearchRequest::get_ferry": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2175,9 +2845,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.ferry;
       
       
-          methodResult(@(ref.ferry));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDrivingRouteSearchRequest::get_cartype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2187,9 +2861,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.cartype;
       
       
-          methodResult(@(ref.cartype));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapWalkingRouteSearchRequest::get_multipath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2199,9 +2877,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.multipath;
       
       
-          methodResult(@(ref.multipath));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTransitRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2211,9 +2893,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTransitRouteSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2223,9 +2909,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTransitRouteSearchRequest::get_destinationCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2235,9 +2925,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationCity;
       
       
-          methodResult(@(ref.destinationCity.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTransitRouteSearchRequest::get_nightflag": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2247,9 +2941,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.nightflag;
       
       
-          methodResult(@(ref.nightflag));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTransitRouteSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2259,9 +2957,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireExtension;
       
       
-          methodResult(@(ref.requireExtension));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRidingRouteSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2271,9 +2973,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.type;
       
       
-          methodResult(@(ref.type));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2283,9 +2989,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteSearchResponse::get_route": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2295,9 +3005,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapRoute* result = ref.route;
       
       
-          methodResult(@(ref.route.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapTruckRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2307,9 +3022,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapTruckRouteSearchRequest::get_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapTruckRouteSearchRequest::get_waypoints");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeoPoint*>* result = ref.waypoints;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapTruckRouteSearchRequest::get_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2319,9 +3061,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.originId;
       
       
-          methodResult(@(ref.originId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTruckRouteSearchRequest::get_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2331,9 +3077,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationId;
       
       
-          methodResult(@(ref.destinationId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTruckRouteSearchRequest::get_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2343,9 +3093,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.origintype;
       
       
-          methodResult(@(ref.origintype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTruckRouteSearchRequest::get_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2355,9 +3109,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationtype;
       
       
-          methodResult(@(ref.destinationtype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTruckRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2367,9 +3125,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.plateProvince;
       
       
-          methodResult(@(ref.plateProvince.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTruckRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2379,9 +3141,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.plateNumber;
       
       
-          methodResult(@(ref.plateNumber.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTruckRouteSearchRequest::get_size": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2391,9 +3157,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapTruckSizeType result = ref.size;
       
       
-          methodResult(@(ref.size));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTruckRouteSearchRequest::get_height": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2403,9 +3173,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.height;
       
       
-          methodResult(@(ref.height));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTruckRouteSearchRequest::get_width": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2415,9 +3189,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.width;
       
       
-          methodResult(@(ref.width));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTruckRouteSearchRequest::get_load": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2427,9 +3205,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.load;
       
       
-          methodResult(@(ref.load));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTruckRouteSearchRequest::get_weight": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2439,9 +3221,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.weight;
       
       
-          methodResult(@(ref.weight));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTruckRouteSearchRequest::get_axis": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2451,9 +3237,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.axis;
       
       
-          methodResult(@(ref.axis));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapDistanceSearchRequest::get_origins": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistanceSearchRequest::get_origins");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeoPoint*>* result = ref.origins;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapDistanceSearchRequest::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2463,9 +3276,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destination;
       
       
-          methodResult(@(ref.destination.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapDistanceSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2475,9 +3293,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.type;
       
       
-          methodResult(@(ref.type));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapDistanceSearchResponse::get_results": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistanceSearchResponse::get_results");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistanceSearchResponse * ref = (AMapDistanceSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapDistanceResult*>* result = ref.results;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapWeatherSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2487,9 +3332,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapWeatherSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2499,9 +3348,59 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapWeatherType result = ref.type;
       
       
-          methodResult(@(ref.type));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapWeatherSearchResponse::get_lives": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapWeatherSearchResponse::get_lives");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapWeatherSearchResponse * ref = (AMapWeatherSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapLocalWeatherLive*>* result = ref.lives;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapWeatherSearchResponse::get_forecasts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapWeatherSearchResponse::get_forecasts");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapWeatherSearchResponse * ref = (AMapWeatherSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapRoadTrafficSearchBaseRequest::get_level": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2511,9 +3410,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.level;
       
       
-          methodResult(@(ref.level));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoadTrafficSearchBaseRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2523,9 +3426,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.requireExtension;
       
       
-          methodResult(@(ref.requireExtension));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoadTrafficSearchRequest::get_roadName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2535,9 +3442,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.roadName;
       
       
-          methodResult(@(ref.roadName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoadTrafficSearchRequest::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2547,9 +3458,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoadTrafficCircleSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2559,9 +3474,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoadTrafficCircleSearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2571,9 +3491,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.radius;
       
       
-          methodResult(@(ref.radius));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoadTrafficSearchResponse::get_trafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2583,9 +3507,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapTrafficInfo* result = ref.trafficInfo;
       
       
-          methodResult(@(ref.trafficInfo.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapNearbySearchRequest::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2595,9 +3524,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.center;
       
       
-          methodResult(@(ref.center.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapNearbySearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2607,9 +3541,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.radius;
       
       
-          methodResult(@(ref.radius));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNearbySearchRequest::get_searchType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2619,9 +3557,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapNearbySearchType result = ref.searchType;
       
       
-          methodResult(@(ref.searchType));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNearbySearchRequest::get_timeRange": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2631,9 +3573,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.timeRange;
       
       
-          methodResult(@(ref.timeRange));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNearbySearchRequest::get_limit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2643,9 +3589,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.limit;
       
       
-          methodResult(@(ref.limit));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNearbySearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2655,9 +3605,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapNearbySearchResponse::get_infos": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapNearbySearchResponse::get_infos");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapNearbyUserInfo*>* result = ref.infos;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapCloudSearchBaseRequest::get_tableID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2667,9 +3644,29 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.tableID;
       
       
-          methodResult(@(ref.tableID.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapCloudSearchBaseRequest::get_filter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCloudSearchBaseRequest::get_filter");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<NSString*>* result = ref.filter;
+      
+      
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudSearchBaseRequest::get_sortFields": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2679,9 +3676,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.sortFields;
       
       
-          methodResult(@(ref.sortFields.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudSearchBaseRequest::get_sortType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2691,9 +3692,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapCloudSortType result = ref.sortType;
       
       
-          methodResult(@(ref.sortType));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapCloudSearchBaseRequest::get_offset": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2703,9 +3708,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.offset;
       
       
-          methodResult(@(ref.offset));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapCloudSearchBaseRequest::get_page": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2715,9 +3724,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.page;
       
       
-          methodResult(@(ref.page));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapCloudPOIAroundSearchRequest::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2727,9 +3740,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.center;
       
       
-          methodResult(@(ref.center.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapCloudPOIAroundSearchRequest::get_radius": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2739,9 +3757,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.radius;
       
       
-          methodResult(@(ref.radius));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapCloudPOIAroundSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2751,9 +3773,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOIPolygonSearchRequest::get_polygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2763,9 +3789,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPolygon* result = ref.polygon;
       
       
-          methodResult(@(ref.polygon.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapCloudPOIPolygonSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2775,9 +3806,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOIIDSearchRequest::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2787,9 +3822,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.uid;
       
       
-          methodResult(@(ref.uid));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapCloudPOILocalSearchRequest::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2799,9 +3838,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.keywords;
       
       
-          methodResult(@(ref.keywords.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOILocalSearchRequest::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2811,9 +3854,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOISearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2823,9 +3870,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.count;
       
       
-          methodResult(@(ref.count));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapCloudPOISearchResponse::get_POIs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCloudPOISearchResponse::get_POIs");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapCloudPOI*>* result = ref.POIs;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapLocationShareSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2835,9 +3909,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapLocationShareSearchRequest::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2847,9 +3926,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIShareSearchRequest::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2859,9 +3942,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIShareSearchRequest::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2871,9 +3958,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOIShareSearchRequest::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2883,9 +3975,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIShareSearchRequest::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2895,9 +3991,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.address;
       
       
-          methodResult(@(ref.address.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRouteShareSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2907,9 +4007,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteShareSearchRequest::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2919,9 +4023,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.type;
       
       
-          methodResult(@(ref.type));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRouteShareSearchRequest::get_startCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2931,9 +4039,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.startCoordinate;
       
       
-          methodResult(@(ref.startCoordinate.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRouteShareSearchRequest::get_destinationCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2943,9 +4056,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destinationCoordinate;
       
       
-          methodResult(@(ref.destinationCoordinate.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRouteShareSearchRequest::get_startName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2955,9 +4073,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.startName;
       
       
-          methodResult(@(ref.startName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRouteShareSearchRequest::get_destinationName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2967,9 +4089,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationName;
       
       
-          methodResult(@(ref.destinationName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapNavigationShareSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2979,9 +4105,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNavigationShareSearchRequest::get_startCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -2991,9 +4121,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.startCoordinate;
       
       
-          methodResult(@(ref.startCoordinate.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapNavigationShareSearchRequest::get_destinationCoordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3003,9 +4138,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destinationCoordinate;
       
       
-          methodResult(@(ref.destinationCoordinate.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapShareSearchResponse::get_shareURL": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3015,9 +4155,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapShareSearchResponse * ref = (AMapShareSearchResponse *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.shareURL;
       
       
-          methodResult(@(ref.shareURL.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_beginTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3027,9 +4171,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.beginTime;
       
       
-          methodResult(@(ref.beginTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_interval": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3039,9 +4187,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.interval;
       
       
-          methodResult(@(ref.interval));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapFutureRouteSearchRequest::get_timeCount": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3051,9 +4203,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.timeCount;
       
       
-          methodResult(@(ref.timeCount));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapFutureRouteSearchRequest::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3063,9 +4219,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.strategy;
       
       
-          methodResult(@(ref.strategy));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapFutureRouteSearchRequest::get_originId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3075,9 +4235,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.originId;
       
       
-          methodResult(@(ref.originId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_destinationId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3087,9 +4251,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationId;
       
       
-          methodResult(@(ref.destinationId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_origintype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3099,9 +4267,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.origintype;
       
       
-          methodResult(@(ref.origintype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_destinationtype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3111,9 +4283,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.destinationtype;
       
       
-          methodResult(@(ref.destinationtype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_parentId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3123,9 +4299,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.parentId;
       
       
-          methodResult(@(ref.parentId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_plateProvince": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3135,9 +4315,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.plateProvince;
       
       
-          methodResult(@(ref.plateProvince.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_plateNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3147,9 +4331,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.plateNumber;
       
       
-          methodResult(@(ref.plateNumber.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapFutureRouteSearchRequest::get_cartype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3159,9 +4347,59 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.cartype;
       
       
-          methodResult(@(ref.cartype));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapFutureRouteSearchResponse::get_paths": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureRouteSearchResponse::get_paths");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureRouteSearchResponse * ref = (AMapFutureRouteSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapPath*>* result = ref.paths;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapFutureRouteSearchResponse::get_timeInfos": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureRouteSearchResponse::get_timeInfos");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureRouteSearchResponse * ref = (AMapFutureRouteSearchResponse *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapFutureTimeInfo*>* result = ref.timeInfos;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapGeoPoint::get_latitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3171,9 +4409,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.latitude;
       
       
-          methodResult(@(ref.latitude));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapGeoPoint::get_longitude": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3183,9 +4425,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.longitude;
       
       
-          methodResult(@(ref.longitude));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapGeoPolygon::get_points": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapGeoPolygon::get_points");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapGeoPolygon * ref = (AMapGeoPolygon *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapGeoPoint*>* result = ref.points;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapCity::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3195,9 +4464,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCity::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3207,9 +4480,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCity::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3219,9 +4496,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCity::get_num": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3231,9 +4512,75 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCity * ref = (AMapCity *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.num;
       
       
-          methodResult(@(ref.num));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapCity::get_districts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCity::get_districts");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapDistrict*>* result = ref.districts;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapSuggestion::get_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapSuggestion::get_keywords");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapSuggestion * ref = (AMapSuggestion *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<NSString*>* result = ref.keywords;
+      
+      
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapSuggestion::get_cities": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapSuggestion::get_cities");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapSuggestion * ref = (AMapSuggestion *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapCity*>* result = ref.cities;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapTip::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3243,9 +4590,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTip::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3255,9 +4606,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTip::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3267,9 +4622,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTip::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3279,9 +4638,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.district;
       
       
-          methodResult(@(ref.district.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTip::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3291,9 +4654,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.address;
       
       
-          methodResult(@(ref.address.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTip::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3303,9 +4670,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapTip::get_typecode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3315,9 +4687,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTip * ref = (AMapTip *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.typecode;
       
       
-          methodResult(@(ref.typecode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapImage::get_title": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3327,9 +4703,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapImage * ref = (AMapImage *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.title;
       
       
-          methodResult(@(ref.title.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapImage::get_url": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3339,9 +4719,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapImage * ref = (AMapImage *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.url;
       
       
-          methodResult(@(ref.url.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOIExtension::get_rating": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3351,9 +4735,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.rating;
       
       
-          methodResult(@(ref.rating));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOIExtension::get_cost": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3363,9 +4751,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.cost;
       
       
-          methodResult(@(ref.cost));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOIExtension::get_openTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3375,9 +4767,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.openTime;
       
       
-          methodResult(@(ref.openTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapIndoorData::get_floor": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3387,9 +4783,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.floor;
       
       
-          methodResult(@(ref.floor));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapIndoorData::get_floorName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3399,9 +4799,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.floorName;
       
       
-          methodResult(@(ref.floorName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapIndoorData::get_pid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3411,9 +4815,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.pid;
       
       
-          methodResult(@(ref.pid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSubPOI::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3423,9 +4831,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSubPOI::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3435,9 +4847,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSubPOI::get_sname": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3447,9 +4863,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.sname;
       
       
-          methodResult(@(ref.sname.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSubPOI::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3459,9 +4879,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapSubPOI::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3471,9 +4896,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.address;
       
       
-          methodResult(@(ref.address.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSubPOI::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3483,9 +4912,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapSubPOI::get_subtype": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3495,9 +4928,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.subtype;
       
       
-          methodResult(@(ref.subtype.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoutePOI::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3507,9 +4944,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoutePOI::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3519,9 +4960,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoutePOI::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3531,9 +4976,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoutePOI::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3543,9 +4993,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoutePOI::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3555,9 +5009,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOI::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3567,9 +5025,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3579,9 +5041,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3591,9 +5057,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.type;
       
       
-          methodResult(@(ref.type.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_typecode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3603,9 +5073,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.typecode;
       
       
-          methodResult(@(ref.typecode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3615,9 +5089,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOI::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3627,9 +5106,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.address;
       
       
-          methodResult(@(ref.address.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_tel": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3639,9 +5122,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.tel;
       
       
-          methodResult(@(ref.tel.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3651,9 +5138,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOI::get_parkingType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3663,9 +5154,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.parkingType;
       
       
-          methodResult(@(ref.parkingType.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_shopID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3675,9 +5170,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.shopID;
       
       
-          methodResult(@(ref.shopID.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_postcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3687,9 +5186,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.postcode;
       
       
-          methodResult(@(ref.postcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_website": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3699,9 +5202,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.website;
       
       
-          methodResult(@(ref.website.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_email": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3711,9 +5218,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.email;
       
       
-          methodResult(@(ref.email.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3723,9 +5234,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.province;
       
       
-          methodResult(@(ref.province.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_pcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3735,9 +5250,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.pcode;
       
       
-          methodResult(@(ref.pcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3747,9 +5266,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3759,9 +5282,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3771,9 +5298,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.district;
       
       
-          methodResult(@(ref.district.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3783,9 +5314,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_gridcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3795,9 +5330,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.gridcode;
       
       
-          methodResult(@(ref.gridcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_enterLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3807,9 +5346,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.enterLocation;
       
       
-          methodResult(@(ref.enterLocation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOI::get_exitLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3819,9 +5363,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.exitLocation;
       
       
-          methodResult(@(ref.exitLocation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapPOI::get_direction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3831,9 +5380,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.direction;
       
       
-          methodResult(@(ref.direction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_hasIndoorMap": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3843,9 +5396,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.hasIndoorMap;
       
       
-          methodResult(@(ref.hasIndoorMap));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPOI::get_businessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3855,9 +5412,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.businessArea;
       
       
-          methodResult(@(ref.businessArea.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapPOI::get_indoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3867,9 +5428,60 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapIndoorData* result = ref.indoorData;
       
       
-          methodResult(@(ref.indoorData.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapPOI::get_subPOIs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPOI::get_subPOIs");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapSubPOI*>* result = ref.subPOIs;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapPOI::get_images": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPOI::get_images");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapImage*>* result = ref.images;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapPOI::get_extensionInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3879,9 +5491,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapPOIExtension* result = ref.extensionInfo;
       
       
-          methodResult(@(ref.extensionInfo.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapAOI::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3891,9 +5508,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAOI::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3903,9 +5524,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAOI::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3915,9 +5540,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAOI::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3927,9 +5556,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapAOI::get_area": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3939,9 +5573,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.area;
       
       
-          methodResult(@(ref.area));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoad::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3951,9 +5589,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoad::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3963,9 +5605,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoad::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3975,9 +5621,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoad::get_direction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3987,9 +5637,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.direction;
       
       
-          methodResult(@(ref.direction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoad::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -3999,9 +5653,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoadInter::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4011,9 +5670,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoadInter::get_direction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4023,9 +5686,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.direction;
       
       
-          methodResult(@(ref.direction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoadInter::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4035,9 +5702,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoadInter::get_firstId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4047,9 +5719,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.firstId;
       
       
-          methodResult(@(ref.firstId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoadInter::get_firstName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4059,9 +5735,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.firstName;
       
       
-          methodResult(@(ref.firstName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoadInter::get_secondId": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4071,9 +5751,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.secondId;
       
       
-          methodResult(@(ref.secondId.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRoadInter::get_secondName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4083,9 +5767,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.secondName;
       
       
-          methodResult(@(ref.secondName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStreetNumber::get_street": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4095,9 +5783,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.street;
       
       
-          methodResult(@(ref.street.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStreetNumber::get_number": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4107,9 +5799,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.number;
       
       
-          methodResult(@(ref.number.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStreetNumber::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4119,9 +5815,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapStreetNumber::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4131,9 +5832,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapStreetNumber::get_direction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4143,9 +5848,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.direction;
       
       
-          methodResult(@(ref.direction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusinessArea::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4155,9 +5864,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusinessArea::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4167,9 +5880,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapAddressComponent::get_country": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4179,9 +5897,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.country;
       
       
-          methodResult(@(ref.country.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4191,9 +5913,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.province;
       
       
-          methodResult(@(ref.province.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4203,9 +5929,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4215,9 +5945,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4227,9 +5961,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.district;
       
       
-          methodResult(@(ref.district.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4239,9 +5977,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_township": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4251,9 +5993,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.township;
       
       
-          methodResult(@(ref.township.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_towncode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4263,9 +6009,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.towncode;
       
       
-          methodResult(@(ref.towncode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4275,9 +6025,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.neighborhood;
       
       
-          methodResult(@(ref.neighborhood.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4287,9 +6041,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.building;
       
       
-          methodResult(@(ref.building.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapAddressComponent::get_streetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4299,9 +6057,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapStreetNumber* result = ref.streetNumber;
       
       
-          methodResult(@(ref.streetNumber.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapAddressComponent::get_businessAreas": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapAddressComponent::get_businessAreas");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusinessArea*>* result = ref.businessAreas;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapReGeocode::get_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4311,9 +6097,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.formattedAddress;
       
       
-          methodResult(@(ref.formattedAddress.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapReGeocode::get_addressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4323,9 +6113,106 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapAddressComponent* result = ref.addressComponent;
       
       
-          methodResult(@(ref.addressComponent.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapReGeocode::get_roads": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::get_roads");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapRoad*>* result = ref.roads;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapReGeocode::get_roadinters": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::get_roadinters");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapRoadInter*>* result = ref.roadinters;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapReGeocode::get_pois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::get_pois");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapPOI*>* result = ref.pois;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapReGeocode::get_aois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::get_aois");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapAOI*>* result = ref.aois;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapGeocode::get_formattedAddress": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4335,9 +6222,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.formattedAddress;
       
       
-          methodResult(@(ref.formattedAddress.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4347,9 +6238,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.province;
       
       
-          methodResult(@(ref.province.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4359,9 +6254,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4371,9 +6270,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_district": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4383,9 +6286,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.district;
       
       
-          methodResult(@(ref.district.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4395,9 +6302,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_township": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4407,9 +6318,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.township;
       
       
-          methodResult(@(ref.township.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_neighborhood": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4419,9 +6334,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.neighborhood;
       
       
-          methodResult(@(ref.neighborhood.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_building": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4431,9 +6350,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.building;
       
       
-          methodResult(@(ref.building.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapGeocode::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4443,9 +6366,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapGeocode::get_level": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4455,9 +6383,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.level;
       
       
-          methodResult(@(ref.level.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStop::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4467,9 +6399,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStop::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4479,9 +6415,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStop::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4491,9 +6431,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStop::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4503,9 +6447,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusStop::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4515,9 +6463,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapBusStop::get_buslines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusStop::get_buslines");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusLine*>* result = ref.buslines;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapBusStop::get_sequence": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4527,9 +6503,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.sequence;
       
       
-          methodResult(@(ref.sequence.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4539,9 +6519,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4551,9 +6535,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.type;
       
       
-          methodResult(@(ref.type.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4563,9 +6551,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4575,9 +6567,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.polyline;
       
       
-          methodResult(@(ref.polyline.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4587,9 +6583,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_startStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4599,9 +6599,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.startStop;
       
       
-          methodResult(@(ref.startStop.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_endStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4611,9 +6615,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.endStop;
       
       
-          methodResult(@(ref.endStop.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4623,9 +6631,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapBusLine::get_startTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4635,9 +6648,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.startTime;
       
       
-          methodResult(@(ref.startTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_endTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4647,9 +6664,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.endTime;
       
       
-          methodResult(@(ref.endTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_company": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4659,9 +6680,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.company;
       
       
-          methodResult(@(ref.company.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapBusLine::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4671,9 +6696,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLine::get_basicPrice": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4683,9 +6712,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.basicPrice;
       
       
-          methodResult(@(ref.basicPrice));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLine::get_totalPrice": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4695,9 +6728,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.totalPrice;
       
       
-          methodResult(@(ref.totalPrice));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapBusLine::get_bounds": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4707,9 +6744,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPolygon* result = ref.bounds;
       
       
-          methodResult(@(ref.bounds.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapBusLine::get_busStops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusLine::get_busStops");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusStop*>* result = ref.busStops;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapBusLine::get_departureStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4719,9 +6784,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapBusStop* result = ref.departureStop;
       
       
-          methodResult(@(ref.departureStop.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapBusLine::get_arrivalStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4731,9 +6801,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapBusStop* result = ref.arrivalStop;
       
       
-          methodResult(@(ref.arrivalStop.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapBusLine::get_viaBusStops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusLine::get_viaBusStops");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusStop*>* result = ref.viaBusStops;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapBusLine::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4743,9 +6841,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDistrict::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4755,9 +6857,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDistrict::get_citycode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4767,9 +6873,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.citycode;
       
       
-          methodResult(@(ref.citycode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDistrict::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4779,9 +6889,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDistrict::get_level": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4791,9 +6905,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.level;
       
       
-          methodResult(@(ref.level.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDistrict::get_center": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4803,9 +6921,53 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.center;
       
       
-          methodResult(@(ref.center.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapDistrict::get_districts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrict::get_districts");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapDistrict*>* result = ref.districts;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapDistrict::get_polylines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrict::get_polylines");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<NSString*>* result = ref.polylines;
+      
+      
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTMC::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4815,9 +6977,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTMC::get_status": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4827,9 +6993,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.status;
       
       
-          methodResult(@(ref.status.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTMC::get_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4839,9 +7009,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.polyline;
       
       
-          methodResult(@(ref.polyline.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_instruction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4851,9 +7025,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.instruction;
       
       
-          methodResult(@(ref.instruction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_orientation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4863,9 +7041,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.orientation;
       
       
-          methodResult(@(ref.orientation.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_road": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4875,9 +7057,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.road;
       
       
-          methodResult(@(ref.road.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4887,9 +7073,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapStep::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4899,9 +7089,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapStep::get_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4911,9 +7105,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.polyline;
       
       
-          methodResult(@(ref.polyline.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_action": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4923,9 +7121,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.action;
       
       
-          methodResult(@(ref.action.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_assistantAction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4935,9 +7137,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.assistantAction;
       
       
-          methodResult(@(ref.assistantAction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapStep::get_tolls": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4947,9 +7153,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.tolls;
       
       
-          methodResult(@(ref.tolls));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapStep::get_tollDistance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4959,9 +7169,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.tollDistance;
       
       
-          methodResult(@(ref.tollDistance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapStep::get_tollRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4971,9 +7185,59 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapStep * ref = (AMapStep *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.tollRoad;
       
       
-          methodResult(@(ref.tollRoad.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapStep::get_cities": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapStep::get_cities");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapCity*>* result = ref.cities;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapStep::get_tmcs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapStep::get_tmcs");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapTMC*>* result = ref.tmcs;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapPath::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4983,9 +7247,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPath::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -4995,9 +7263,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPath::get_strategy": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5007,9 +7279,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.strategy;
       
       
-          methodResult(@(ref.strategy.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapPath::get_steps": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPath::get_steps");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapStep*>* result = ref.steps;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapPath::get_tolls": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5019,9 +7318,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.tolls;
       
       
-          methodResult(@(ref.tolls));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPath::get_tollDistance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5031,9 +7334,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.tollDistance;
       
       
-          methodResult(@(ref.tollDistance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPath::get_totalTrafficLights": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5043,9 +7350,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.totalTrafficLights;
       
       
-          methodResult(@(ref.totalTrafficLights));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapPath::get_restriction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5055,9 +7366,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapPath * ref = (AMapPath *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.restriction;
       
       
-          methodResult(@(ref.restriction));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapFutureTimeInfoElement::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5067,9 +7382,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapFutureTimeInfoElement::get_pathindex": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5079,9 +7398,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.pathindex;
       
       
-          methodResult(@(ref.pathindex));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapFutureTimeInfoElement::get_restriction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5091,9 +7414,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.restriction;
       
       
-          methodResult(@(ref.restriction));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapFutureTimeInfoElement::get_tmcs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureTimeInfoElement::get_tmcs");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapTMC*>* result = ref.tmcs;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapFutureTimeInfo::get_startTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5103,9 +7453,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.startTime;
       
       
-          methodResult(@(ref.startTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapFutureTimeInfo::get_elements": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureTimeInfo::get_elements");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapFutureTimeInfoElement*>* result = ref.elements;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapWalking::get_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5115,9 +7492,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.origin;
       
       
-          methodResult(@(ref.origin.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapWalking::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5127,9 +7509,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destination;
       
       
-          methodResult(@(ref.destination.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapWalking::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5139,9 +7526,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapWalking::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5151,9 +7542,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapWalking::get_steps": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapWalking::get_steps");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapStep*>* result = ref.steps;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapTaxi::get_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5163,9 +7581,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.origin;
       
       
-          methodResult(@(ref.origin.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapTaxi::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5175,9 +7598,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destination;
       
       
-          methodResult(@(ref.destination.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapTaxi::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5187,9 +7615,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTaxi::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5199,9 +7631,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTaxi::get_sname": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5211,9 +7647,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.sname;
       
       
-          methodResult(@(ref.sname.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTaxi::get_tname": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5223,9 +7663,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.tname;
       
       
-          methodResult(@(ref.tname.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailwayStation::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5235,9 +7679,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailwayStation::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5247,9 +7695,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailwayStation::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5259,9 +7711,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRailwayStation::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5271,9 +7728,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailwayStation::get_time": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5283,9 +7744,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.time;
       
       
-          methodResult(@(ref.time.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailwayStation::get_wait": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5295,9 +7760,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.wait;
       
       
-          methodResult(@(ref.wait));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRailwayStation::get_isStart": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5307,9 +7776,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.isStart;
       
       
-          methodResult(@(ref.isStart));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRailwayStation::get_isEnd": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5319,9 +7792,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.isEnd;
       
       
-          methodResult(@(ref.isEnd));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRailwaySpace::get_code": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5331,9 +7808,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.code;
       
       
-          methodResult(@(ref.code.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailwaySpace::get_cost": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5343,9 +7824,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.cost;
       
       
-          methodResult(@(ref.cost));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRailway::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5355,9 +7840,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailway::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5367,9 +7856,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailway::get_trip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5379,9 +7872,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.trip;
       
       
-          methodResult(@(ref.trip.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailway::get_type": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5391,9 +7888,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.type;
       
       
-          methodResult(@(ref.type.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapRailway::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5403,9 +7904,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRailway::get_time": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5415,9 +7920,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.time;
       
       
-          methodResult(@(ref.time));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRailway::get_departureStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5427,9 +7936,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapRailwayStation* result = ref.departureStation;
       
       
-          methodResult(@(ref.departureStation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRailway::get_arrivalStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5439,9 +7953,83 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapRailwayStation* result = ref.arrivalStation;
       
       
-          methodResult(@(ref.arrivalStation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapRailway::get_spaces": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRailway::get_spaces");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapRailwaySpace*>* result = ref.spaces;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapRailway::get_viaStops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRailway::get_viaStops");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapRailwayStation*>* result = ref.viaStops;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapRailway::get_alters": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRailway::get_alters");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapRailway*>* result = ref.alters;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapSegment::get_walking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5451,9 +8039,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapWalking* result = ref.walking;
       
       
-          methodResult(@(ref.walking.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapSegment::get_buslines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapSegment::get_buslines");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapBusLine*>* result = ref.buslines;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapSegment::get_taxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5463,9 +8079,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapTaxi* result = ref.taxi;
       
       
-          methodResult(@(ref.taxi.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapSegment::get_railway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5475,9 +8096,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapRailway* result = ref.railway;
       
       
-          methodResult(@(ref.railway.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapSegment::get_enterName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5487,9 +8113,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.enterName;
       
       
-          methodResult(@(ref.enterName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSegment::get_enterLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5499,9 +8129,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.enterLocation;
       
       
-          methodResult(@(ref.enterLocation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapSegment::get_exitName": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5511,9 +8146,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.exitName;
       
       
-          methodResult(@(ref.exitName.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapSegment::get_exitLocation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5523,9 +8162,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.exitLocation;
       
       
-          methodResult(@(ref.exitLocation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapTransit::get_cost": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5535,9 +8179,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.cost;
       
       
-          methodResult(@(ref.cost));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTransit::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5547,9 +8195,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTransit::get_nightflag": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5559,9 +8211,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
+          // 开始调用
+          BOOL result = ref.nightflag;
       
       
-          methodResult(@(ref.nightflag));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTransit::get_walkingDistance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5571,9 +8227,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.walkingDistance;
       
       
-          methodResult(@(ref.walkingDistance));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapTransit::get_segments": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapTransit::get_segments");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapSegment*>* result = ref.segments;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapTransit::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5583,9 +8266,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapRoute::get_origin": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5595,9 +8282,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.origin;
       
       
-          methodResult(@(ref.origin.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoute::get_destination": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5607,9 +8299,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.destination;
       
       
-          methodResult(@(ref.destination.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapRoute::get_taxiCost": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5619,9 +8316,59 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.taxiCost;
       
       
-          methodResult(@(ref.taxiCost));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapRoute::get_paths": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoute::get_paths");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapPath*>* result = ref.paths;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
+      },
+      
+      @"AMapRoute::get_transits": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoute::get_transits");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapTransit*>* result = ref.transits;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapDistanceResult::get_originID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5631,9 +8378,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.originID;
       
       
-          methodResult(@(ref.originID));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDistanceResult::get_destID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5643,9 +8394,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.destID;
       
       
-          methodResult(@(ref.destID));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDistanceResult::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5655,9 +8410,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDistanceResult::get_duration": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5667,9 +8426,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.duration;
       
       
-          methodResult(@(ref.duration));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDistanceResult::get_info": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5679,9 +8442,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.info;
       
       
-          methodResult(@(ref.info.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapDistanceResult::get_code": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5691,9 +8458,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.code;
       
       
-          methodResult(@(ref.code));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapLocalWeatherLive::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5703,9 +8474,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5715,9 +8490,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.province;
       
       
-          methodResult(@(ref.province.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5727,9 +8506,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_weather": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5739,9 +8522,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.weather;
       
       
-          methodResult(@(ref.weather.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_temperature": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5751,9 +8538,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.temperature;
       
       
-          methodResult(@(ref.temperature.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_windDirection": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5763,9 +8554,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.windDirection;
       
       
-          methodResult(@(ref.windDirection.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_windPower": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5775,9 +8570,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.windPower;
       
       
-          methodResult(@(ref.windPower.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_humidity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5787,9 +8586,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.humidity;
       
       
-          methodResult(@(ref.humidity.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherLive::get_reportTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5799,9 +8602,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.reportTime;
       
       
-          methodResult(@(ref.reportTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_date": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5811,9 +8618,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.date;
       
       
-          methodResult(@(ref.date.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_week": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5823,9 +8634,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.week;
       
       
-          methodResult(@(ref.week.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_dayWeather": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5835,9 +8650,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.dayWeather;
       
       
-          methodResult(@(ref.dayWeather.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_nightWeather": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5847,9 +8666,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.nightWeather;
       
       
-          methodResult(@(ref.nightWeather.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_dayTemp": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5859,9 +8682,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.dayTemp;
       
       
-          methodResult(@(ref.dayTemp.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_nightTemp": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5871,9 +8698,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.nightTemp;
       
       
-          methodResult(@(ref.nightTemp.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_dayWind": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5883,9 +8714,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.dayWind;
       
       
-          methodResult(@(ref.dayWind.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_nightWind": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5895,9 +8730,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.nightWind;
       
       
-          methodResult(@(ref.nightWind.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_dayPower": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5907,9 +8746,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.dayPower;
       
       
-          methodResult(@(ref.dayPower.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalDayWeatherForecast::get_nightPower": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5919,9 +8762,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.nightPower;
       
       
-          methodResult(@(ref.nightPower.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherForecast::get_adcode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5931,9 +8778,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.adcode;
       
       
-          methodResult(@(ref.adcode.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherForecast::get_province": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5943,9 +8794,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.province;
       
       
-          methodResult(@(ref.province.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherForecast::get_city": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5955,9 +8810,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.city;
       
       
-          methodResult(@(ref.city.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapLocalWeatherForecast::get_reportTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5967,9 +8826,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.reportTime;
       
       
-          methodResult(@(ref.reportTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
+      },
+      
+      @"AMapLocalWeatherForecast::get_casts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapLocalWeatherForecast::get_casts");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapLocalDayWeatherForecast*>* result = ref.casts;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapNearbyUserInfo::get_userID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5979,9 +8865,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.userID;
       
       
-          methodResult(@(ref.userID.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapNearbyUserInfo::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -5991,9 +8881,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapNearbyUserInfo::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6003,9 +8898,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          CGFloat result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTrafficEvaluation::get_evaluationDescription": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6015,9 +8914,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.evaluationDescription;
       
       
-          methodResult(@(ref.evaluationDescription.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficEvaluation::get_status": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6027,9 +8930,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.status;
       
       
-          methodResult(@(ref.status));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTrafficEvaluation::get_expedite": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6039,9 +8946,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.expedite;
       
       
-          methodResult(@(ref.expedite.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficEvaluation::get_congested": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6051,9 +8962,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.congested;
       
       
-          methodResult(@(ref.congested.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficEvaluation::get_blocked": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6063,9 +8978,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.blocked;
       
       
-          methodResult(@(ref.blocked.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficEvaluation::get_unknown": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6075,9 +8994,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.unknown;
       
       
-          methodResult(@(ref.unknown.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficRoad::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6087,9 +9010,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficRoad::get_status": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6099,9 +9026,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.status;
       
       
-          methodResult(@(ref.status));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTrafficRoad::get_direction": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6111,9 +9042,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.direction;
       
       
-          methodResult(@(ref.direction.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficRoad::get_angle": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6123,9 +9058,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          float result = ref.angle;
       
       
-          methodResult(@(ref.angle));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTrafficRoad::get_speed": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6135,9 +9074,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          float result = ref.speed;
       
       
-          methodResult(@(ref.speed));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapTrafficRoad::get_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6147,9 +9090,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.polyline;
       
       
-          methodResult(@(ref.polyline.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficInfo::get_statusDescription": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6159,9 +9106,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.statusDescription;
       
       
-          methodResult(@(ref.statusDescription.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapTrafficInfo::get_evaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6171,9 +9122,37 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapTrafficEvaluation* result = ref.evaluation;
       
       
-          methodResult(@(ref.evaluation.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      
+      @"AMapTrafficInfo::get_roads": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapTrafficInfo::get_roads");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapTrafficRoad*>* result = ref.roads;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapCloudImage::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6183,9 +9162,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.uid;
       
       
-          methodResult(@(ref.uid.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudImage::get_preurl": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6195,9 +9178,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.preurl;
       
       
-          methodResult(@(ref.preurl.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudImage::get_url": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6207,9 +9194,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.url;
       
       
-          methodResult(@(ref.url.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOI::get_uid": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6219,9 +9210,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.uid;
       
       
-          methodResult(@(ref.uid));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapCloudPOI::get_name": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6231,9 +9226,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.name;
       
       
-          methodResult(@(ref.name.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOI::get_location": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6243,9 +9242,14 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapGeoPoint* result = ref.location;
       
       
-          methodResult(@(ref.location.hash));
+      
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
       },
       
       @"AMapCloudPOI::get_address": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6255,9 +9259,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.address;
       
       
-          methodResult(@(ref.address.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOI::get_createTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6267,9 +9275,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.createTime;
       
       
-          methodResult(@(ref.createTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOI::get_updateTime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6279,9 +9291,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.updateTime;
       
       
-          methodResult(@(ref.updateTime.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapCloudPOI::get_distance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6291,9 +9307,36 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.distance;
       
       
-          methodResult(@(ref.distance));
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapCloudPOI::get_images": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCloudPOI::get_images");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+      
+          // 开始调用
+          NSArray<AMapCloudImage*>* result = ref.images;
+      
+      
+      
+          // 返回值: 列表
+          NSMutableArray* refIdList = [NSMutableArray array];
+          for (int i = 0; i < result.count; i++) {
+              NSObject* object = [result objectAtIndex:i];
+              [refIdList addObject: @(object.hash)];
+              HEAP[@([object hash])] = object;
+          }
+      
+          methodResult(refIdList);
       },
       
       @"AMapNearbyUploadInfo::get_userID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6303,9 +9346,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          NSString* result = ref.userID;
       
       
-          methodResult(@(ref.userID.hash));
+      
+          // 返回值: jsonable
+          methodResult(result);
       },
       
       @"AMapNearbyUploadInfo::get_coordinateType": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6315,9 +9362,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapSearchCoordinateType result = ref.coordinateType;
       
       
-          methodResult(@(ref.coordinateType));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNearbyUploadInfo::get_coordinate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6327,21 +9378,18 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
       
+          // 开始调用
+          CLLocationCoordinate2D result = ref.coordinate;
+      
           NSLog(@"AMapNearbyUploadInfo::get_coordinate:结构体getter暂时不支持");
       
+          // 返回值: 结构体
+          // NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
+          // HEAP[@(resultValue.hash)] = resultValue;
+          //
+          // methodResult(@(resultValue.hash));
+      
           methodResult(nil/* 结构体getter暂时不支持 */);
-      },
-      
-      @"AMapSearchAPI::get_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"AMapSearchAPI::get_delegate");
-      
-          // 引用对象
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
-      
-      
-      
-          methodResult(@(ref.delegate.hash));
       },
       
       @"AMapSearchAPI::get_timeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6351,9 +9399,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
+          // 开始调用
+          NSInteger result = ref.timeout;
       
       
-          methodResult(@(ref.timeout));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapSearchAPI::get_language": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -6363,9 +9415,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger refId = [args[@"refId"] integerValue];
           AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
       
+          // 开始调用
+          AMapSearchLanguage result = ref.language;
       
       
-          methodResult(@(ref.language));
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNaviConfig::set_appScheme": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -15830,7 +18886,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       @"ObjectFactory::createAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNearbySearchManager");
       
-          AMapNearbySearchManager* ref = [[AMapNearbySearchManager alloc] init];
+          AMapNearbySearchManager* ref = [AMapNearbySearchManager alloc];
           HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
@@ -15903,6 +18959,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapNearbySearchManagerDelegate::nearbyInfoForUploading");
 
+  HEAP[@(manager.hash)] = manager;
+
   // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
   // 相关issue https://github.com/flutter/flutter/issues/28310
   NSLog(@"暂不支持有返回值的回调方法");
@@ -15917,6 +18975,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError");
 
+  HEAP[@(error.hash)] = error;
+
   [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": @(error.hash)}];
   
 }
@@ -15928,6 +18988,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError");
+
+  HEAP[@(error.hash)] = error;
 
   [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": @(error.hash)}];
   
@@ -15941,6 +19003,8 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::AMapSearchRequestDidFailWithError");
 
+  HEAP[@(error.hash)] = error;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError" arguments:@{@"request": @(((NSObject*) request).hash), @"error": @(error.hash)}];
   
 }
@@ -15952,6 +19016,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onPOISearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -15965,6 +19032,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onRoutePOISearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -15976,6 +19046,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onGeocodeSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -15989,6 +19062,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onReGeocodeSearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16000,6 +19076,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onInputTipsSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -16013,6 +19092,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onBusStopSearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16024,6 +19106,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onBusLineSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -16037,6 +19122,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onDistrictSearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16048,6 +19136,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onRouteSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -16061,6 +19152,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onFutureRouteSearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16072,6 +19166,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onDistanceSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -16085,6 +19182,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onWeatherSearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16096,6 +19196,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
@@ -16109,6 +19212,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onNearbySearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16121,6 +19227,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onCloudSearchDoneResponse");
 
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
+
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   
 }
@@ -16132,6 +19241,9 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
             binaryMessenger:[_registrar messenger]];
 
   NSLog(@"AMapSearchDelegate::onShareSearchDoneResponse");
+
+  HEAP[@(request.hash)] = request;
+  HEAP[@(response.hash)] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
   

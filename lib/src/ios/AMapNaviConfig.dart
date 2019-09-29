@@ -20,12 +20,12 @@ class AMapNaviConfig extends NSObject  {
   
   Future<CLLocationCoordinate2D> get_destination() async {
     final result = await _channel.invokeMethod("AMapNaviConfig::get_destination", {'refId': refId});
-    return result;
+    return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<AMapDrivingStrategy> get_strategy() async {
     final result = await _channel.invokeMethod("AMapNaviConfig::get_strategy", {'refId': refId});
-    return result;
+    return AMapDrivingStrategy.values[result];
   }
   
 

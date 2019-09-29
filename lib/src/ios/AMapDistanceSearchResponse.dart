@@ -8,6 +8,10 @@ class AMapDistanceSearchResponse extends AMapSearchObject  {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
   // 生成getters
+  Future<List<AMapDistanceResult>> get_results() async {
+    final result = await _channel.invokeMethod("AMapDistanceSearchResponse::get_results", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapDistanceResult()..refId = it).toList();
+  }
   
 
   // 生成setters

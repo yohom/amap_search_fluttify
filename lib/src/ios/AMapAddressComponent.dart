@@ -60,7 +60,12 @@ class AMapAddressComponent extends AMapSearchObject  {
   
   Future<AMapStreetNumber> get_streetNumber() async {
     final result = await _channel.invokeMethod("AMapAddressComponent::get_streetNumber", {'refId': refId});
-    return result;
+    return AMapStreetNumber()..refId = result;
+  }
+  
+  Future<List<AMapBusinessArea>> get_businessAreas() async {
+    final result = await _channel.invokeMethod("AMapAddressComponent::get_businessAreas", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it).toList();
   }
   
 

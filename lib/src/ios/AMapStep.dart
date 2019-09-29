@@ -63,6 +63,16 @@ class AMapStep extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapCity>> get_cities() async {
+    final result = await _channel.invokeMethod("AMapStep::get_cities", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapCity()..refId = it).toList();
+  }
+  
+  Future<List<AMapTMC>> get_tmcs() async {
+    final result = await _channel.invokeMethod("AMapStep::get_tmcs", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapTMC()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_instruction(String instruction) async {

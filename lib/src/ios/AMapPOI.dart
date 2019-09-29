@@ -30,7 +30,7 @@ class AMapPOI extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapPOI::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_address() async {
@@ -110,12 +110,12 @@ class AMapPOI extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_enterLocation() async {
     final result = await _channel.invokeMethod("AMapPOI::get_enterLocation", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_exitLocation() async {
     final result = await _channel.invokeMethod("AMapPOI::get_exitLocation", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_direction() async {
@@ -135,12 +135,22 @@ class AMapPOI extends AMapSearchObject  {
   
   Future<AMapIndoorData> get_indoorData() async {
     final result = await _channel.invokeMethod("AMapPOI::get_indoorData", {'refId': refId});
-    return result;
+    return AMapIndoorData()..refId = result;
+  }
+  
+  Future<List<AMapSubPOI>> get_subPOIs() async {
+    final result = await _channel.invokeMethod("AMapPOI::get_subPOIs", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapSubPOI()..refId = it).toList();
+  }
+  
+  Future<List<AMapImage>> get_images() async {
+    final result = await _channel.invokeMethod("AMapPOI::get_images", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapImage()..refId = it).toList();
   }
   
   Future<AMapPOIExtension> get_extensionInfo() async {
     final result = await _channel.invokeMethod("AMapPOI::get_extensionInfo", {'refId': refId});
-    return result;
+    return AMapPOIExtension()..refId = result;
   }
   
 

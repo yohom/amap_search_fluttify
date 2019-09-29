@@ -10,7 +10,7 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
   // 生成getters
   Future<AMapGeoPoint> get_center() async {
     final result = await _channel.invokeMethod("AMapCloudPOIAroundSearchRequest::get_center", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_radius() async {

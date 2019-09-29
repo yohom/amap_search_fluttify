@@ -10,17 +10,22 @@ class AMapSegment extends AMapSearchObject  {
   // 生成getters
   Future<AMapWalking> get_walking() async {
     final result = await _channel.invokeMethod("AMapSegment::get_walking", {'refId': refId});
-    return result;
+    return AMapWalking()..refId = result;
+  }
+  
+  Future<List<AMapBusLine>> get_buslines() async {
+    final result = await _channel.invokeMethod("AMapSegment::get_buslines", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapBusLine()..refId = it).toList();
   }
   
   Future<AMapTaxi> get_taxi() async {
     final result = await _channel.invokeMethod("AMapSegment::get_taxi", {'refId': refId});
-    return result;
+    return AMapTaxi()..refId = result;
   }
   
   Future<AMapRailway> get_railway() async {
     final result = await _channel.invokeMethod("AMapSegment::get_railway", {'refId': refId});
-    return result;
+    return AMapRailway()..refId = result;
   }
   
   Future<String> get_enterName() async {
@@ -30,7 +35,7 @@ class AMapSegment extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_enterLocation() async {
     final result = await _channel.invokeMethod("AMapSegment::get_enterLocation", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_exitName() async {
@@ -40,7 +45,7 @@ class AMapSegment extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_exitLocation() async {
     final result = await _channel.invokeMethod("AMapSegment::get_exitLocation", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
 

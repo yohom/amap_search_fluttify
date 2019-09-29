@@ -15,7 +15,7 @@ class AMapPOIAroundSearchRequest extends AMapPOISearchBaseRequest  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapPOIAroundSearchRequest::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_radius() async {

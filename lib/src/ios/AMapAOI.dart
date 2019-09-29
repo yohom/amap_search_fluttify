@@ -25,7 +25,7 @@ class AMapAOI extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapAOI::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<double> get_area() async {

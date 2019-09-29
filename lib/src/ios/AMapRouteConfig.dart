@@ -20,27 +20,27 @@ class AMapRouteConfig extends NSObject  {
   
   Future<CLLocationCoordinate2D> get_startCoordinate() async {
     final result = await _channel.invokeMethod("AMapRouteConfig::get_startCoordinate", {'refId': refId});
-    return result;
+    return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<CLLocationCoordinate2D> get_destinationCoordinate() async {
     final result = await _channel.invokeMethod("AMapRouteConfig::get_destinationCoordinate", {'refId': refId});
-    return result;
+    return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<AMapDrivingStrategy> get_drivingStrategy() async {
     final result = await _channel.invokeMethod("AMapRouteConfig::get_drivingStrategy", {'refId': refId});
-    return result;
+    return AMapDrivingStrategy.values[result];
   }
   
   Future<AMapTransitStrategy> get_transitStrategy() async {
     final result = await _channel.invokeMethod("AMapRouteConfig::get_transitStrategy", {'refId': refId});
-    return result;
+    return AMapTransitStrategy.values[result];
   }
   
   Future<AMapRouteSearchType> get_routeType() async {
     final result = await _channel.invokeMethod("AMapRouteConfig::get_routeType", {'refId': refId});
-    return result;
+    return AMapRouteSearchType.values[result];
   }
   
 

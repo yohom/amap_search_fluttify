@@ -25,7 +25,7 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapPOIKeywordsSearchRequest::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
 

@@ -13,6 +13,11 @@ class AMapDistrictSearchResponse extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapDistrict>> get_districts() async {
+    final result = await _channel.invokeMethod("AMapDistrictSearchResponse::get_districts", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_count(int count) async {

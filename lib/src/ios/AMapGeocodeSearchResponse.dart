@@ -13,6 +13,11 @@ class AMapGeocodeSearchResponse extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapGeocode>> get_geocodes() async {
+    final result = await _channel.invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapGeocode()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_count(int count) async {

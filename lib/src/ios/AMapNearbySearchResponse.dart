@@ -13,6 +13,11 @@ class AMapNearbySearchResponse extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapNearbyUserInfo>> get_infos() async {
+    final result = await _channel.invokeMethod("AMapNearbySearchResponse::get_infos", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_count(int count) async {

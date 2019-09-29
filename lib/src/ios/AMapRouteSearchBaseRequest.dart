@@ -10,12 +10,12 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await _channel.invokeMethod("AMapRouteSearchBaseRequest::get_origin", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await _channel.invokeMethod("AMapRouteSearchBaseRequest::get_destination", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
 

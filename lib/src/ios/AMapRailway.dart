@@ -40,12 +40,27 @@ class AMapRailway extends AMapSearchObject  {
   
   Future<AMapRailwayStation> get_departureStation() async {
     final result = await _channel.invokeMethod("AMapRailway::get_departureStation", {'refId': refId});
-    return result;
+    return AMapRailwayStation()..refId = result;
   }
   
   Future<AMapRailwayStation> get_arrivalStation() async {
     final result = await _channel.invokeMethod("AMapRailway::get_arrivalStation", {'refId': refId});
-    return result;
+    return AMapRailwayStation()..refId = result;
+  }
+  
+  Future<List<AMapRailwaySpace>> get_spaces() async {
+    final result = await _channel.invokeMethod("AMapRailway::get_spaces", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it).toList();
+  }
+  
+  Future<List<AMapRailwayStation>> get_viaStops() async {
+    final result = await _channel.invokeMethod("AMapRailway::get_viaStops", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it).toList();
+  }
+  
+  Future<List<AMapRailway>> get_alters() async {
+    final result = await _channel.invokeMethod("AMapRailway::get_alters", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapRailway()..refId = it).toList();
   }
   
 

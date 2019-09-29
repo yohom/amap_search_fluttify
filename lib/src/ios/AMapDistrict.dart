@@ -30,6 +30,16 @@ class AMapDistrict extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_center() async {
     final result = await _channel.invokeMethod("AMapDistrict::get_center", {'refId': refId});
+    return AMapGeoPoint()..refId = result;
+  }
+  
+  Future<List<AMapDistrict>> get_districts() async {
+    final result = await _channel.invokeMethod("AMapDistrict::get_districts", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList();
+  }
+  
+  Future<List<String>> get_polylines() async {
+    final result = await _channel.invokeMethod("AMapDistrict::get_polylines", {'refId': refId});
     return result;
   }
   

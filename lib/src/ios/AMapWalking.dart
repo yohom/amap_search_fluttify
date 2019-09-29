@@ -10,12 +10,12 @@ class AMapWalking extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await _channel.invokeMethod("AMapWalking::get_origin", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await _channel.invokeMethod("AMapWalking::get_destination", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_distance() async {
@@ -26,6 +26,11 @@ class AMapWalking extends AMapSearchObject  {
   Future<int> get_duration() async {
     final result = await _channel.invokeMethod("AMapWalking::get_duration", {'refId': refId});
     return result;
+  }
+  
+  Future<List<AMapStep>> get_steps() async {
+    final result = await _channel.invokeMethod("AMapWalking::get_steps", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapStep()..refId = it).toList();
   }
   
 

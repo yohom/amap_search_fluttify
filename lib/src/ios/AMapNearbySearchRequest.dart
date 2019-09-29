@@ -10,7 +10,7 @@ class AMapNearbySearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_center() async {
     final result = await _channel.invokeMethod("AMapNearbySearchRequest::get_center", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_radius() async {
@@ -20,7 +20,7 @@ class AMapNearbySearchRequest extends AMapSearchObject  {
   
   Future<AMapNearbySearchType> get_searchType() async {
     final result = await _channel.invokeMethod("AMapNearbySearchRequest::get_searchType", {'refId': refId});
-    return result;
+    return AMapNearbySearchType.values[result];
   }
   
   Future<int> get_timeRange() async {

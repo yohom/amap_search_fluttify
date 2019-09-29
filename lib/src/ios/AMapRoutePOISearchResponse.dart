@@ -13,6 +13,11 @@ class AMapRoutePOISearchResponse extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapRoutePOI>> get_pois() async {
+    final result = await _channel.invokeMethod("AMapRoutePOISearchResponse::get_pois", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapRoutePOI()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_count(int count) async {

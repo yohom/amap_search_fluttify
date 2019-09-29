@@ -15,12 +15,12 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
   
   Future<AMapGeoPoint> get_startCoordinate() async {
     final result = await _channel.invokeMethod("AMapNavigationShareSearchRequest::get_startCoordinate", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_destinationCoordinate() async {
     final result = await _channel.invokeMethod("AMapNavigationShareSearchRequest::get_destinationCoordinate", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
 

@@ -28,6 +28,11 @@ class AMapTransit extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapSegment>> get_segments() async {
+    final result = await _channel.invokeMethod("AMapTransit::get_segments", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapSegment()..refId = it).toList();
+  }
+  
   Future<int> get_distance() async {
     final result = await _channel.invokeMethod("AMapTransit::get_distance", {'refId': refId});
     return result;

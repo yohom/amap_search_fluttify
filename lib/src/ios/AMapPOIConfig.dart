@@ -25,12 +25,12 @@ class AMapPOIConfig extends NSObject  {
   
   Future<CLLocationCoordinate2D> get_leftTopCoordinate() async {
     final result = await _channel.invokeMethod("AMapPOIConfig::get_leftTopCoordinate", {'refId': refId});
-    return result;
+    return CLLocationCoordinate2D()..refId = result;
   }
   
   Future<CLLocationCoordinate2D> get_rightBottomCoordinate() async {
     final result = await _channel.invokeMethod("AMapPOIConfig::get_rightBottomCoordinate", {'refId': refId});
-    return result;
+    return CLLocationCoordinate2D()..refId = result;
   }
   
 

@@ -13,6 +13,11 @@ class AMapCloudPOISearchResponse extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapCloudPOI>> get_POIs() async {
+    final result = await _channel.invokeMethod("AMapCloudPOISearchResponse::get_POIs", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapCloudPOI()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_count(int count) async {

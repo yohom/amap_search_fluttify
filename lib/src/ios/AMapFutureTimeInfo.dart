@@ -13,6 +13,11 @@ class AMapFutureTimeInfo extends AMapSearchObject  {
     return result;
   }
   
+  Future<List<AMapFutureTimeInfoElement>> get_elements() async {
+    final result = await _channel.invokeMethod("AMapFutureTimeInfo::get_elements", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it).toList();
+  }
+  
 
   // 生成setters
   Future<void> set_startTime(String startTime) async {

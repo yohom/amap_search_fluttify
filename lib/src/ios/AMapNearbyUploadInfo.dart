@@ -15,12 +15,12 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   
   Future<AMapSearchCoordinateType> get_coordinateType() async {
     final result = await _channel.invokeMethod("AMapNearbyUploadInfo::get_coordinateType", {'refId': refId});
-    return result;
+    return AMapSearchCoordinateType.values[result];
   }
   
   Future<CLLocationCoordinate2D> get_coordinate() async {
     final result = await _channel.invokeMethod("AMapNearbyUploadInfo::get_coordinate", {'refId': refId});
-    return result;
+    return CLLocationCoordinate2D()..refId = result;
   }
   
 

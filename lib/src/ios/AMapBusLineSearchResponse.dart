@@ -15,7 +15,12 @@ class AMapBusLineSearchResponse extends AMapSearchObject  {
   
   Future<AMapSuggestion> get_suggestion() async {
     final result = await _channel.invokeMethod("AMapBusLineSearchResponse::get_suggestion", {'refId': refId});
-    return result;
+    return AMapSuggestion()..refId = result;
+  }
+  
+  Future<List<AMapBusLine>> get_buslines() async {
+    final result = await _channel.invokeMethod("AMapBusLineSearchResponse::get_buslines", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapBusLine()..refId = it).toList();
   }
   
 

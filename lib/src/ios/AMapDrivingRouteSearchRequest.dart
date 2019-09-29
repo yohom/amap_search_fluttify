@@ -13,6 +13,16 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
     return result;
   }
   
+  Future<List<AMapGeoPoint>> get_waypoints() async {
+    final result = await _channel.invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
+  }
+  
+  Future<List<AMapGeoPolygon>> get_avoidpolygons() async {
+    final result = await _channel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapGeoPolygon()..refId = it).toList();
+  }
+  
   Future<String> get_avoidroad() async {
     final result = await _channel.invokeMethod("AMapDrivingRouteSearchRequest::get_avoidroad", {'refId': refId});
     return result;

@@ -13,6 +13,11 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest  {
     return result;
   }
   
+  Future<List<AMapGeoPoint>> get_waypoints() async {
+    final result = await _channel.invokeMethod("AMapTruckRouteSearchRequest::get_waypoints", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
+  }
+  
   Future<String> get_originId() async {
     final result = await _channel.invokeMethod("AMapTruckRouteSearchRequest::get_originId", {'refId': refId});
     return result;
@@ -45,7 +50,7 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   
   Future<AMapTruckSizeType> get_size() async {
     final result = await _channel.invokeMethod("AMapTruckRouteSearchRequest::get_size", {'refId': refId});
-    return result;
+    return AMapTruckSizeType.values[result];
   }
   
   Future<double> get_height() async {

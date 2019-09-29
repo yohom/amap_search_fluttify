@@ -10,17 +10,17 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await _channel.invokeMethod("AMapRoutePOISearchRequest::get_origin", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await _channel.invokeMethod("AMapRoutePOISearchRequest::get_destination", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapRoutePOISearchType> get_searchType() async {
     final result = await _channel.invokeMethod("AMapRoutePOISearchRequest::get_searchType", {'refId': refId});
-    return result;
+    return AMapRoutePOISearchType.values[result];
   }
   
   Future<int> get_strategy() async {
@@ -36,6 +36,11 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   Future<String> get_polylineStr() async {
     final result = await _channel.invokeMethod("AMapRoutePOISearchRequest::get_polylineStr", {'refId': refId});
     return result;
+  }
+  
+  Future<List<AMapGeoPoint>> get_polyline() async {
+    final result = await _channel.invokeMethod("AMapRoutePOISearchRequest::get_polyline", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
   }
   
 

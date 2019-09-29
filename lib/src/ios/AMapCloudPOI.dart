@@ -20,7 +20,7 @@ class AMapCloudPOI extends AMapSearchObject  {
   
   Future<AMapGeoPoint> get_location() async {
     final result = await _channel.invokeMethod("AMapCloudPOI::get_location", {'refId': refId});
-    return result;
+    return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_address() async {
@@ -41,6 +41,11 @@ class AMapCloudPOI extends AMapSearchObject  {
   Future<int> get_distance() async {
     final result = await _channel.invokeMethod("AMapCloudPOI::get_distance", {'refId': refId});
     return result;
+  }
+  
+  Future<List<AMapCloudImage>> get_images() async {
+    final result = await _channel.invokeMethod("AMapCloudPOI::get_images", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapCloudImage()..refId = it).toList();
   }
   
 

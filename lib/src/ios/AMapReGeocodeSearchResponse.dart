@@ -10,7 +10,7 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<AMapReGeocode> get_regeocode() async {
     final result = await _channel.invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'refId': refId});
-    return result;
+    return AMapReGeocode()..refId = result;
   }
   
 
