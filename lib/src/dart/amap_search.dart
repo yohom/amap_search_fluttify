@@ -1,6 +1,7 @@
 import 'dart:io';
 
-import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+import 'package:amap_search_fluttify/src/android/android.export.dart';
+import 'package:amap_search_fluttify/src/ios/ios.export.dart';
 
 import 'model/poi.dart';
 
