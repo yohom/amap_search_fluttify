@@ -1,13 +1,39 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
-class GetPoiScreen extends StatefulWidget {
+class GetPoiScreen extends StatelessWidget {
   @override
-  _GetPoiScreenState createState() => _GetPoiScreenState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      appBar: AppBar(title: Text('GetPoi')),
+      body: ListView(
+        children: <Widget>[
+          FunctionItem(
+            label: '关键字检索POI',
+            sublabel: 'KeywordPoiScreen',
+            target: KeywordPoiScreen(),
+          ),
+          FunctionItem(
+            label: '周边检索POI',
+            sublabel: 'AroundPoiScreen',
+            target: AroundPoiScreen(),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
-class _GetPoiScreenState extends State<GetPoiScreen> {
+/// 关键字检索POI
+class KeywordPoiScreen extends StatefulWidget {
+  @override
+  _KeywordPoiScreenState createState() => _KeywordPoiScreenState();
+}
+
+class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 
@@ -17,7 +43,7 @@ class _GetPoiScreenState extends State<GetPoiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('GetPoi')),
+      appBar: AppBar(title: Text('关键字检索POI')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
@@ -31,9 +57,73 @@ class _GetPoiScreenState extends State<GetPoiScreen> {
           ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.search(
-                keyword: _keywordController.text,
+              final poiList = await AmapSearch.searchKeyword(
+                _keywordController.text,
                 city: _cityController.text,
+              );
+              setState(() {
+                _poiList = poiList;
+              });
+            },
+            child: Text('搜索'),
+          ),
+          Text(_poiList.map((it) => it.title).join("\n")),
+        ],
+      ),
+    );
+  }
+}
+
+/// 关键字检索POI
+class AroundPoiScreen extends StatefulWidget {
+  @override
+  _AroundPoiScreenState createState() => _AroundPoiScreenState();
+}
+
+class _AroundPoiScreenState extends State<AroundPoiScreen> {
+  final _keywordController = TextEditingController();
+  final _latController = TextEditingController(text: '29.08');
+  final _lngController = TextEditingController(text: '119.65');
+
+  List<Poi> _poiList = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      appBar: AppBar(title: Text('周边检索POI')),
+      body: DecoratedColumn(
+        padding: EdgeInsets.all(kSpaceBig),
+        children: <Widget>[
+          TextFormField(
+            controller: _keywordController,
+            decoration: InputDecoration(hintText: '输入关键字'),
+          ),
+          DecoratedRow(
+            children: <Widget>[
+              Flexible(
+                child: TextField(
+                  controller: _latController,
+                  decoration: InputDecoration(hintText: '输入纬度'),
+                ),
+              ),
+              SPACE_SMALL_HORIZONTAL,
+              Flexible(
+                child: TextField(
+                  controller: _lngController,
+                  decoration: InputDecoration(hintText: '输入经度'),
+                ),
+              ),
+            ],
+          ),
+          RaisedButton(
+            onPressed: () async {
+              final poiList = await AmapSearch.searchAround(
+                LatLng(
+                  double.tryParse(_latController.text) ?? 29.08,
+                  double.tryParse(_lngController.text) ?? 119.65,
+                ),
+                keyword: _keywordController.text,
               );
               setState(() {
                 _poiList = poiList;
