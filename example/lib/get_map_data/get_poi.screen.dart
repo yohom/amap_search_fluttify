@@ -183,7 +183,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
             },
             child: Text('搜索'),
           ),
-          Text(_inputTipList.map((it) => it.name).join("\n")),
+          Text(_inputTipList.map((it) => it.toString()).join("\n")),
         ],
       ),
     );

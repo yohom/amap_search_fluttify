@@ -1,7 +1,28 @@
 class Poi {
   final String title;
+  final String cityName;
+  final String cityCode;
+  final String provinceName;
+  final String provinceCode;
+  final String tel;
+  final String poiId;
+  final int distance;
 
-  Poi(this.title);
+  Poi({
+    this.title,
+    this.cityName,
+    this.cityCode,
+    this.provinceName,
+    this.provinceCode,
+    this.tel,
+    this.poiId,
+    this.distance,
+  });
+
+  @override
+  String toString() {
+    return 'Poi{title: $title, cityName: $cityName, cityCode: $cityCode, provinceName: $provinceName, provinceCode: $provinceCode, tel: $tel, poiId: $poiId, distance: $distance}';
+  }
 }
 
 class LatLng {
@@ -23,4 +44,9 @@ class InputTip {
     this.address,
     this.district,
   });
+
+  @override
+  String toString() {
+    return 'InputTip{name: $name, poiId: $poiId, address: $address, district: $district}';
+  }
 }

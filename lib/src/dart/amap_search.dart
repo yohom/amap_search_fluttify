@@ -218,7 +218,17 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     final poiList = [
-      for (final item in (await var1.getPois())) Poi(await item.getTitle())
+      for (final item in (await var1.getPois()))
+        Poi(
+          title: await item.getTitle(),
+          cityName: await item.getCityName(),
+          cityCode: await item.getCityCode(),
+          provinceName: await item.getProvinceName(),
+          provinceCode: await item.getProvinceCode(),
+          tel: await item.getTel(),
+          poiId: await item.getPoiId(),
+          distance: await item.getDistance(),
+        )
     ];
     _streamController?.add(poiList);
     _streamController?.close();
@@ -253,7 +263,17 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapPOISearchResponse response,
   ) async {
     final poiList = [
-      for (final item in (await response.get_pois())) Poi(await item.get_name())
+      for (final item in (await response.get_pois()))
+        Poi(
+          title: await item.get_name(),
+          cityName: await item.get_city(),
+          cityCode: await item.get_citycode(),
+          provinceName: await item.get_province(),
+          provinceCode: await item.get_pcode(),
+          tel: await item.get_tel(),
+          poiId: await item.get_uid(),
+          distance: await item.get_distance(),
+        )
     ];
     _streamController?.add(poiList);
     _streamController?.close();
