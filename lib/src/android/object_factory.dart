@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 import 'package:amap_search_fluttify/src/android/android.export.dart';
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return
 class ObjectFactory_Android {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
@@ -335,6 +335,11 @@ class ObjectFactory_Android {
   static Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> createcom_amap_api_services_route_RouteSearch_RideRouteQuery__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__');
     return com_amap_api_services_route_RouteSearch_RideRouteQuery()..refId = refId;
+  }
+  
+  static Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String(com_amap_api_services_route_RouteSearch_FromAndTo var1, int var2, List<com_amap_api_services_core_LatLonPoint> var3, List<List<com_amap_api_services_core_LatLonPoint>> var4, String var5) async {
+    final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String', {"var1": var1.refId, "var2": var2, "var3": var3.map((it) => it.refId).toList(), "var4": [] /* 暂不支持嵌套列表 */, "var5": var5});
+    return com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = refId;
   }
   
   static Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__() async {

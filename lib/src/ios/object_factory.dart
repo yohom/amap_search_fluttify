@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.dart';
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return
 class ObjectFactory_iOS {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
