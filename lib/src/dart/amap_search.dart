@@ -50,7 +50,7 @@ class AmapSearch {
 
         // 设置回调
         await _androidPoiSearch
-            .setOnPoiSearchListener(_AndroidPoiListener(_controller));
+            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
@@ -59,7 +59,7 @@ class AmapSearch {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSPoiListener(_controller));
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建请求对象
         final request =
@@ -115,7 +115,7 @@ class AmapSearch {
 
         // 设置回调
         await _androidPoiSearch
-            .setOnPoiSearchListener(_AndroidPoiListener(_controller));
+            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
@@ -124,7 +124,7 @@ class AmapSearch {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
-        await _iosSearch.set_delegate(_IOSPoiListener(_controller));
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建周边搜索请求
         final request =
@@ -176,7 +176,7 @@ class AmapSearch {
 
         // 设置回调
         await _androidInputTip
-            .setInputtipsListener(_AndroidInputTipListener(_controller));
+            .setInputtipsListener(_AndroidSearchListener(_controller));
 
         // 开始搜索
         await _androidInputTip.requestInputtipsAsyn();
@@ -184,34 +184,31 @@ class AmapSearch {
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
-//        // 设置回调
-//        await _iosSearch.set_delegate(_IOSPoiListener(_controller));
-//
-//        // 创建周边搜索请求
-//        final request =
-//            await ObjectFactory_iOS.createAMapPOIAroundSearchRequest();
-//        // 设置关键字
-//        await request.set_keywords(keyword);
-//        // 设置城市
-//        await request.set_city(city);
-//        // 创建中心点
-//        final location = await ObjectFactory_iOS.createAMapGeoPoint();
-//        await location.set_latitude(center.latitude);
-//        await location.set_longitude(center.longitude);
-//        await request.set_location(location);
-//
-//        // 开始搜索
-//        await _iosSearch.AMapPOIAroundSearch(request);
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapInputTipsSearchRequest();
+        // 设置关键字
+        await request.set_keywords(keyword);
+        // 设置城市
+        await request.set_city(city);
+
+        // 开始搜索
+        await _iosSearch.AMapInputTipsSearch(request);
       },
     );
     return _controller.stream.first;
   }
 }
 
-/// android: Poi搜索监听
-class _AndroidPoiListener extends java_lang_Object
-    with com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener {
-  _AndroidPoiListener(this._streamController);
+/// android: 搜索监听
+class _AndroidSearchListener extends java_lang_Object
+    with
+        com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener,
+        com_amap_api_services_help_Inputtips_InputtipsListener {
+  _AndroidSearchListener(this._streamController);
 
   final StreamController _streamController;
 
@@ -226,14 +223,6 @@ class _AndroidPoiListener extends java_lang_Object
     _streamController?.add(poiList);
     _streamController?.close();
   }
-}
-
-/// android: 输入提示搜索监听
-class _AndroidInputTipListener extends java_lang_Object
-    with com_amap_api_services_help_Inputtips_InputtipsListener {
-  _AndroidInputTipListener(this._streamController);
-
-  final StreamController<List<InputTip>> _streamController;
 
   @override
   Future<void> onGetInputtips(
@@ -246,11 +235,11 @@ class _AndroidInputTipListener extends java_lang_Object
   }
 }
 
-/// ios: Poi搜索监听
-class _IOSPoiListener extends NSObject with AMapSearchDelegate {
-  _IOSPoiListener(this._streamController);
+/// ios: 搜索监听
+class _IOSSearchListener extends NSObject with AMapSearchDelegate {
+  _IOSSearchListener(this._streamController);
 
-  final StreamController<List<Poi>> _streamController;
+  final StreamController _streamController;
 
   @override
   Future<void> onPOISearchDoneResponse(
@@ -261,6 +250,19 @@ class _IOSPoiListener extends NSObject with AMapSearchDelegate {
       for (final item in (await response.get_pois())) Poi(await item.get_name())
     ];
     _streamController?.add(poiList);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onInputTipsSearchDoneResponse(
+    AMapInputTipsSearchRequest request,
+    AMapInputTipsSearchResponse response,
+  ) async {
+    final inputTipList = [
+      for (final item in (await response.get_tips()))
+        InputTip(await item.get_name())
+    ];
+    _streamController?.add(inputTipList);
     _streamController?.close();
   }
 }
