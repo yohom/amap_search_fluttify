@@ -256,6 +256,70 @@ class AmapSearch {
     );
     return _controller.stream.first;
   }
+
+  /// 逆地理编码（坐标转地址）
+  ///
+  /// 输入关键字[keyword], 并且限制所在城市[city]
+  static Future<ReGeocode> searchReGeocode(
+    LatLng latLng, {
+    double radius = 200.0,
+  }) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<ReGeocode>();
+
+    platform(
+      android: () async {
+        // 创建中心点
+        final latLngPoint = await ObjectFactory_Android
+            .createcom_amap_api_services_core_LatLonPoint__double__double(
+                latLng.latitude, latLng.longitude);
+
+        // 创建查询对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String(
+                latLngPoint, radius, 'AMAP');
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidGeocodeSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context(
+                context);
+
+        // 设置回调
+        await _androidGeocodeSearch
+            .setOnGeocodeSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidGeocodeSearch.getFromLocationAsyn(query);
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 创建中心点
+        final amapLocation = await ObjectFactory_iOS.createAMapGeoPoint();
+        await amapLocation.set_latitude(latLng.latitude);
+        await amapLocation.set_longitude(latLng.longitude);
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapReGeocodeSearchRequest();
+        // 设置中心点
+        await request.set_location(amapLocation);
+        // 设置半径
+        await request.set_radius(radius.toInt());
+
+        // 开始搜索
+        await _iosSearch.AMapReGoecodeSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
 }
 
 /// android: 搜索监听
@@ -324,7 +388,20 @@ class _AndroidSearchListener extends java_lang_Object
 
   @override
   Future<void> onRegeocodeSearched(
-      com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {}
+      com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {
+    final result = await var1.getRegeocodeAddress();
+    final reGeocode = ReGeocode(
+      provinceName: await result.getProvince(),
+      cityName: await result.getCity(),
+      cityCode: await result.getCityCode(),
+      districtName: await result.getDistrict(),
+      building: await result.getBuilding(),
+      country: await result.getCountry(),
+      formatAddress: await result.getFormatAddress(),
+    );
+    _streamController?.add(reGeocode);
+    _streamController?.close();
+  }
 }
 
 /// ios: 搜索监听
@@ -374,8 +451,10 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onGeocodeSearchDoneResponse(AMapGeocodeSearchRequest request,
-      AMapGeocodeSearchResponse response) async {
+  Future<void> onGeocodeSearchDoneResponse(
+    AMapGeocodeSearchRequest request,
+    AMapGeocodeSearchResponse response,
+  ) async {
     final geocode = [
       for (final item in (await response.get_geocodes()))
         Geocode(
@@ -386,6 +465,26 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
         )
     ];
     _streamController?.add(geocode);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onReGeocodeSearchDoneResponse(
+    AMapReGeocodeSearchRequest request,
+    AMapReGeocodeSearchResponse response,
+  ) async {
+    final result = await response.get_regeocode();
+    final address = await result.get_addressComponent();
+    final reGeocode = ReGeocode(
+      provinceName: await address.get_province(),
+      cityName: await address.get_city(),
+      cityCode: await address.get_citycode(),
+      districtName: await address.get_district(),
+      building: await address.get_building(),
+      country: await address.get_country(),
+      formatAddress: await result.get_formattedAddress(),
+    );
+    _streamController?.add(reGeocode);
     _streamController?.close();
   }
 }

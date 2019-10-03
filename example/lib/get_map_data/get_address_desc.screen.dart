@@ -81,11 +81,11 @@ class AddressDecodeScreen extends StatefulWidget {
 }
 
 class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
-  final _keywordController = TextEditingController();
-  final _latController = TextEditingController(text: '29.08');
-  final _lngController = TextEditingController(text: '119.65');
+  final _latController = TextEditingController(text: '39.9824');
+  final _lngController = TextEditingController(text: '116.3053');
+  final _radiusController = TextEditingController(text: '200.0');
 
-  List<Poi> _poiList = [];
+  ReGeocode _reGeocode;
 
   @override
   Widget build(BuildContext context) {
@@ -95,43 +95,42 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
-          TextFormField(
-            controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入关键字'),
-          ),
           DecoratedRow(
             children: <Widget>[
               Flexible(
-                child: TextField(
+                child: TextFormField(
                   controller: _latController,
                   decoration: InputDecoration(hintText: '输入纬度'),
                 ),
               ),
-              SPACE_SMALL_HORIZONTAL,
               Flexible(
-                child: TextField(
+                child: TextFormField(
                   controller: _lngController,
                   decoration: InputDecoration(hintText: '输入经度'),
                 ),
               ),
             ],
           ),
+          TextFormField(
+            controller: _radiusController,
+            decoration: InputDecoration(hintText: '输入范围半径'),
+          ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.searchAround(
+              final reGeocodeList = await AmapSearch.searchReGeocode(
                 LatLng(
-                  double.tryParse(_latController.text) ?? 29.08,
-                  double.tryParse(_lngController.text) ?? 119.65,
+                  double.parse(_latController.text),
+                  double.parse(_lngController.text),
                 ),
-                keyword: _keywordController.text,
+                radius: 200.0,
               );
               setState(() {
-                _poiList = poiList;
+                _reGeocode = reGeocodeList;
               });
             },
             child: Text('搜索'),
           ),
-          Text(_poiList.map((it) => it.title).join("\n")),
+          Text(_reGeocode?.toString() ?? ''),
         ],
       ),
     );

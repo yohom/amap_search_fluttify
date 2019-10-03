@@ -68,12 +68,26 @@ class Geocode {
 }
 
 class ReGeocode {
-  final LatLng latLng;
+  final String provinceName;
+  final String cityName;
+  final String cityCode;
+  final String districtName;
+  final String building;
+  final String country;
+  final String formatAddress;
 
-  ReGeocode({this.latLng});
+  ReGeocode({
+    this.provinceName,
+    this.cityName,
+    this.cityCode,
+    this.districtName,
+    this.building,
+    this.country,
+    this.formatAddress,
+  });
 
   @override
   String toString() {
-    return 'ReGeocode{latLng: $latLng}';
+    return 'ReGeocode{provinceName: $provinceName, cityName: $cityName, cityCode: $cityCode, districtName: $districtName, building: $building, country: $country, formatAddress: $formatAddress}';
   }
 }
