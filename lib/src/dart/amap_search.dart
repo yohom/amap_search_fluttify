@@ -1,16 +1,15 @@
-import 'dart:io';
+import 'dart:async';
 
 import 'package:amap_search_fluttify/src/android/android.export.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.dart';
 
-import 'model/poi.dart';
-
-typedef Future FutureCallback();
-typedef Future OnPoiSearched(List<Poi> pois);
+import 'models.dart';
+import 'utils.dart';
 
 class AmapSearch {
-  static AMapSearchAPI _iosApi;
-  static com_amap_api_services_poisearch_PoiSearch _androidApi;
+  static AMapSearchAPI _iosSearch;
+  static com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
+  static com_amap_api_services_help_Inputtips _androidInputTip;
 
   /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
   static Future init(String iosKey) async {
@@ -26,69 +25,244 @@ class AmapSearch {
     );
   }
 
-  static Future search(String keyword, OnPoiSearched onPoiSearched) {
-    return platform(
+  /// 关键字搜索poi
+  ///
+  /// 在城市[city]搜索关键字[keyword]的poi
+  static Future<List<Poi>> searchKeyword(String keyword, {String city = ''}) {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<List<Poi>>();
+
+    platform(
       android: () async {
+        // 创建查询对象
         final query = await ObjectFactory_Android
-            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String(
-                keyword, '');
+            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
+                keyword, '', city);
+
+        // 获取android上下文
         final context = await ObjectFactory_Android.getandroid_app_Activity();
-        _androidApi = await ObjectFactory_Android
+
+        // 创建搜索对象
+        _androidPoiSearch = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
                 context, query);
 
-        await _androidApi
-            .setOnPoiSearchListener(_AndroidPoiListener(onPoiSearched));
-        await _androidApi.searchPOIAsyn();
+        // 设置回调
+        await _androidPoiSearch
+            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidPoiSearch.searchPOIAsyn();
       },
       ios: () async {
-        _iosApi ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
-        await _iosApi.set_delegate(_IOSPoiListener(onPoiSearched));
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
+        // 创建请求对象
         final request =
             await ObjectFactory_iOS.createAMapPOIKeywordsSearchRequest();
+        // 设置关键字
         await request.set_keywords(keyword);
+        // 设置城市
+        await request.set_city(city);
 
-        await _iosApi.AMapPOIKeywordsSearch(request);
+        // 开始搜索
+        await _iosSearch.AMapPOIKeywordsSearch(request);
       },
     );
+    return _controller.stream.first;
+  }
+
+  /// 周边搜索poi
+  ///
+  /// 在中心点[center]周边搜索关键字[keyword]和城市[city]的poi
+  static Future<List<Poi>> searchAround(
+    LatLng center, {
+    String keyword = '',
+    String city = '',
+  }) {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<List<Poi>>();
+
+    platform(
+      android: () async {
+        // 创建查询对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
+                keyword, '', city);
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidPoiSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
+                context, query);
+
+        // 创建中心点
+        final centerLatLng = await ObjectFactory_Android
+            .createcom_amap_api_services_core_LatLonPoint__double__double(
+                center.latitude, center.longitude);
+        // 创建边界
+        final bound = await ObjectFactory_Android
+            .createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int(
+                centerLatLng, 1000);
+        await _androidPoiSearch.setBound(bound);
+
+        // 设置回调
+        await _androidPoiSearch
+            .setOnPoiSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidPoiSearch.searchPOIAsyn();
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建周边搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapPOIAroundSearchRequest();
+        // 设置关键字
+        await request.set_keywords(keyword);
+        // 设置城市
+        await request.set_city(city);
+        // 创建中心点
+        final location = await ObjectFactory_iOS.createAMapGeoPoint();
+        await location.set_latitude(center.latitude);
+        await location.set_longitude(center.longitude);
+        await request.set_location(location);
+
+        // 开始搜索
+        await _iosSearch.AMapPOIAroundSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
+
+  /// 输入内容自动提示
+  ///
+  /// 输入关键字[keyword], 并且限制所在城市[city]
+  static Future<List<InputTip>> fetchInputTips(
+    String keyword, {
+    String city = '',
+  }) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<List<InputTip>>();
+
+    platform(
+      android: () async {
+        // 创建查询对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_help_InputtipsQuery__String__String(
+                keyword, city);
+        // 限制在当前城市
+        await query.setCityLimit(true);
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidInputTip = await ObjectFactory_Android
+            .createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery(
+                context, query);
+
+        // 设置回调
+        await _androidInputTip
+            .setInputtipsListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidInputTip.requestInputtipsAsyn();
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapInputTipsSearchRequest();
+        // 设置关键字
+        await request.set_keywords(keyword);
+        // 设置城市
+        await request.set_city(city);
+
+        // 开始搜索
+        await _iosSearch.AMapInputTipsSearch(request);
+      },
+    );
+    return _controller.stream.first;
   }
 }
 
-Future platform({FutureCallback android, FutureCallback ios}) async {
-  if (Platform.isAndroid) {
-    if (android != null && Platform.isAndroid) return await android();
-  } else if (Platform.isIOS) {
-    if (ios != null && Platform.isIOS) return await ios();
-  }
-}
+/// android: 搜索监听
+class _AndroidSearchListener extends java_lang_Object
+    with
+        com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener,
+        com_amap_api_services_help_Inputtips_InputtipsListener {
+  _AndroidSearchListener(this._streamController);
 
-class _AndroidPoiListener extends java_lang_Object
-    with com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener {
-  _AndroidPoiListener(this._onPoiSearched);
-
-  final OnPoiSearched _onPoiSearched;
+  final StreamController _streamController;
 
   @override
   Future<void> onPoiSearched(
-      com_amap_api_services_poisearch_PoiResult var1, int var2) async {
-    return _onPoiSearched([
+    com_amap_api_services_poisearch_PoiResult var1,
+    int var2,
+  ) async {
+    final poiList = [
       for (final item in (await var1.getPois())) Poi(await item.getTitle())
-    ]);
+    ];
+    _streamController?.add(poiList);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onGetInputtips(
+      List<com_amap_api_services_help_Tip> var1, int var2) async {
+    final inputTipList = [
+      for (final item in var1) InputTip(await item.getName())
+    ];
+    _streamController?.add(inputTipList);
+    _streamController?.close();
   }
 }
 
-class _IOSPoiListener extends NSObject with AMapSearchDelegate {
-  _IOSPoiListener(this._onPoiSearched);
+/// ios: 搜索监听
+class _IOSSearchListener extends NSObject with AMapSearchDelegate {
+  _IOSSearchListener(this._streamController);
 
-  final OnPoiSearched _onPoiSearched;
+  final StreamController _streamController;
 
   @override
   Future<void> onPOISearchDoneResponse(
-      AMapPOISearchBaseRequest request, AMapPOISearchResponse response) async {
-    _onPoiSearched([
+    AMapPOISearchBaseRequest request,
+    AMapPOISearchResponse response,
+  ) async {
+    final poiList = [
       for (final item in (await response.get_pois())) Poi(await item.get_name())
-    ]);
+    ];
+    _streamController?.add(poiList);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onInputTipsSearchDoneResponse(
+    AMapInputTipsSearchRequest request,
+    AMapInputTipsSearchResponse response,
+  ) async {
+    final inputTipList = [
+      for (final item in (await response.get_tips()))
+        InputTip(await item.get_name())
+    ];
+    _streamController?.add(inputTipList);
+    _streamController?.close();
   }
 }

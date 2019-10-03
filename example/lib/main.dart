@@ -31,12 +31,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AMaps examples'),
-        backgroundColor: Colors.black,
-        centerTitle: true,
-      ),
-      backgroundColor: Colors.grey.shade200,
+      appBar: AppBar(title: const Text('AMaps examples')),
       body: ListView(
         children: <Widget>[
           FunctionGroup(
@@ -44,39 +39,39 @@ class Home extends StatelessWidget {
             children: <Widget>[
               FunctionItem(
                 label: '获取POI数据',
-                sublabel: 'ControlInteractionScreen',
+                sublabel: 'GetPoiScreen',
                 target: GetPoiScreen(),
               ),
-              FunctionItem(
-                label: '获取地址描述数据',
-                sublabel: 'GestureInteractionScreen',
-                target: GetPoiScreen(),
-              ),
-              FunctionItem(
-                label: '获取行政区划数据',
-                sublabel: 'CodeInteractionScreen',
-                target: GetPoiScreen(),
-              ),
-              FunctionItem(
-                label: '获取公交数据',
-                sublabel: 'ScreenShotScreen',
-                target: GetPoiScreen(),
-              ),
-              FunctionItem(
-                label: '后获取天气数据',
-                sublabel: 'ScreenShotScreen',
-                target: GetPoiScreen(),
-              ),
-              FunctionItem(
-                label: '获取业务数据(云图功能)',
-                sublabel: 'ScreenShotScreen',
-                target: GetPoiScreen(),
-              ),
-              FunctionItem(
-                label: '获取交通态势信息',
-                sublabel: 'ScreenShotScreen',
-                target: GetPoiScreen(),
-              ),
+//              FunctionItem(
+//                label: '获取地址描述数据',
+//                sublabel: 'GestureInteractionScreen',
+//                target: GetPoiScreen(),
+//              ),
+//              FunctionItem(
+//                label: '获取行政区划数据',
+//                sublabel: 'CodeInteractionScreen',
+//                target: GetPoiScreen(),
+//              ),
+//              FunctionItem(
+//                label: '获取公交数据',
+//                sublabel: 'ScreenShotScreen',
+//                target: GetPoiScreen(),
+//              ),
+//              FunctionItem(
+//                label: '后获取天气数据',
+//                sublabel: 'ScreenShotScreen',
+//                target: GetPoiScreen(),
+//              ),
+//              FunctionItem(
+//                label: '获取业务数据(云图功能)',
+//                sublabel: 'ScreenShotScreen',
+//                target: GetPoiScreen(),
+//              ),
+//              FunctionItem(
+//                label: '获取交通态势信息',
+//                sublabel: 'ScreenShotScreen',
+//                target: GetPoiScreen(),
+//              ),
             ],
           ),
         ],

@@ -18959,8 +18959,25 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapNearbySearchManagerDelegate::nearbyInfoForUploading");
 
-  HEAP[@(manager.hash)] = manager;
+  // 构造可以直接传输的参数
+  NSNumber* argmanager = @(manager.hash);
+  HEAP[argmanager] = manager;
 
+  // __block #__callback_result_type__# _callbackResult = nil;
+  // [channel invokeMethod:@"#__callback_method__#"
+  //             arguments:@{#__callback_args__#}
+  //                result:^(id result) {
+  //                  #__raw_callback_result__#
+  //                }];
+  //
+  // while (_callbackResult == nil) {
+  //   // _callbackResult有值前, 空转
+  // }
+  //
+  // #__struct_value__#
+  //
+  // return #__callback_result__#;
+  
   // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
   // 相关issue https://github.com/flutter/flutter/issues/28310
   NSLog(@"暂不支持有返回值的回调方法");
@@ -18975,9 +18992,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError");
 
-  HEAP[@(error.hash)] = error;
+  // 构造可以直接传输的参数
+  NSNumber* argerror = @(error.hash);
+  HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": @(error.hash)}];
+  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": argerror}];
   
 }
 
@@ -18989,9 +19008,11 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError");
 
-  HEAP[@(error.hash)] = error;
+  // 构造可以直接传输的参数
+  NSNumber* argerror = @(error.hash);
+  HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": @(error.hash)}];
+  [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": argerror}];
   
 }
 
@@ -19003,9 +19024,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::AMapSearchRequestDidFailWithError");
 
-  HEAP[@(error.hash)] = error;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(((NSObject*) request).hash);
+  HEAP[argrequest] = request;
+  NSNumber* argerror = @(error.hash);
+  HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError" arguments:@{@"request": @(((NSObject*) request).hash), @"error": @(error.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError" arguments:@{@"request": argrequest, @"error": argerror}];
   
 }
 
@@ -19017,10 +19042,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onPOISearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19032,10 +19060,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onRoutePOISearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19047,10 +19078,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onGeocodeSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19062,10 +19096,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onReGeocodeSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19077,10 +19114,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onInputTipsSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19092,10 +19132,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onBusStopSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19107,10 +19150,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onBusLineSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19122,10 +19168,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onDistrictSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19137,10 +19186,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onRouteSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19152,10 +19204,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onFutureRouteSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19167,10 +19222,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onDistanceSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19182,10 +19240,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onWeatherSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19197,10 +19258,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19212,10 +19276,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onNearbySearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19227,10 +19294,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onCloudSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -19242,10 +19312,13 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
 
   NSLog(@"AMapSearchDelegate::onShareSearchDoneResponse");
 
-  HEAP[@(request.hash)] = request;
-  HEAP[@(response.hash)] = response;
+  // 构造可以直接传输的参数
+  NSNumber* argrequest = @(request.hash);
+  HEAP[argrequest] = request;
+  NSNumber* argresponse = @(response.hash);
+  HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDoneResponse" arguments:@{@"request": @(request.hash), @"response": @(response.hash)}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 

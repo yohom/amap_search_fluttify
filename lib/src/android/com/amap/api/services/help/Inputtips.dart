@@ -4,7 +4,7 @@ import 'package:amap_search_fluttify/src/ios/ios.export.dart';
 import 'package:amap_search_fluttify/src/android/android.export.dart';
 import 'package:flutter/services.dart';
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return
 class com_amap_api_services_help_Inputtips extends Ref_Android  {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
@@ -66,7 +66,7 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
               print('fluttify-dart-callback: onGetInputtips([\'var2\':$args[var2]])');
         
                 // 调用回调方法
-              var1?.onGetInputtips([], args['var2']);
+              var1?.onGetInputtips((args['var1'] as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it).toList(), args['var2']);
               break;
             default:
               break;

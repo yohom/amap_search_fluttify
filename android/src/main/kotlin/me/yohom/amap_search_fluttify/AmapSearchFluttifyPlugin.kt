@@ -3332,12 +3332,19 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onGeoFenceCreateFinished([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
+                    val argvar2 = var2
+                    val argvar3 = var3
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2,
-                "var3" to var3)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2,
+                            "var3" to argvar3
+                        )
                     )
         
                     // 方法返回值
@@ -4114,12 +4121,19 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onGeoFenceCreateFinished([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
+                    val argvar2 = var2
+                    val argvar3 = var3
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.fence.GeoFenceListener::onGeoFenceCreateFinished",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2,
-                "var3" to var3)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2,
+                            "var3" to argvar3
+                        )
                     )
         
                     // 方法返回值
@@ -5142,11 +5156,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRoadTrafficSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -6321,11 +6341,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusStationSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -6433,11 +6459,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusLineSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -9440,11 +9472,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onPoiSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -9455,11 +9493,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onPoiItemSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -11024,11 +11068,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -11039,11 +11089,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDriveRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -11054,11 +11110,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWalkRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -11069,11 +11131,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRideRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -11106,11 +11174,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onTruckRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -11143,11 +11217,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDriveRoutePlanSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -14812,11 +14892,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDistanceSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -18590,10 +18676,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -18604,11 +18695,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -18619,10 +18716,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -18655,10 +18757,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -18669,11 +18776,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -18684,10 +18797,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -18756,10 +18874,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: OnUploadInfoCallback([])")
         
+                    // 处理成可以传输的参数
+        
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.UploadInfoCallback::OnUploadInfoCallback",
-                        mapOf<String, Any?>()
+                        mapOf<String, Any?>(
+            
+                        )
                     )
         
                     // 方法返回值
@@ -19294,11 +19417,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRoutePoiSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::onRoutePoiSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -20212,11 +20341,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onCloudSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -20227,11 +20362,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onCloudItemDetailSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -21319,11 +21460,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWeatherLiveSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -21334,11 +21481,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWeatherForecastSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -21934,11 +22087,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRegeocodeSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -21949,11 +22108,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onGeocodeSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -24272,10 +24437,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDistrictSearched([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 })
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -25141,11 +25311,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onGetInputtips([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25288,10 +25464,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDistrictSearched([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 })
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -25364,11 +25545,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusStationSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25456,11 +25643,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25471,11 +25664,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDriveRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25486,11 +25685,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWalkRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25501,11 +25706,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRideRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25538,11 +25749,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onTruckRouteSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25575,11 +25792,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDriveRoutePlanSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25846,11 +26069,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onPoiShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25861,11 +26090,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onLocationShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25876,11 +26111,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNaviShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25891,11 +26132,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25906,11 +26153,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWalkRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -25921,11 +26174,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDrivingRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26174,11 +26433,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRoutePoiSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::onRoutePoiSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26286,11 +26551,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRoadTrafficSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26439,11 +26710,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onGetInputtips([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.map { it.apply { HEAP[it.hashCode()] = it }.hashCode() }
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26557,11 +26834,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onRegeocodeSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26572,11 +26855,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onGeocodeSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26645,11 +26934,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onCloudSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26660,11 +26955,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onCloudItemDetailSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26774,11 +27075,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDistanceSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26811,11 +27118,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onPoiSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -26826,11 +27139,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onPoiItemSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27105,11 +27424,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWeatherLiveSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27120,11 +27445,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWeatherForecastSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27157,10 +27488,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -27171,11 +27507,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27186,10 +27528,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -27222,10 +27569,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -27236,11 +27588,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27251,10 +27609,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded",
-                        mapOf<String, Any?>("var1" to var1)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1
+                        )
                     )
         
                     // 方法返回值
@@ -27323,10 +27686,15 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: OnUploadInfoCallback([])")
         
+                    // 处理成可以传输的参数
+        
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.nearby.UploadInfoCallback::OnUploadInfoCallback",
-                        mapOf<String, Any?>()
+                        mapOf<String, Any?>(
+            
+                        )
                     )
         
                     // 方法返回值
@@ -27470,11 +27838,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusLineSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1.apply { HEAP[hashCode()] = this }.hashCode()
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched",
-                        mapOf<String, Any?>("var1" to var1.hashCode().apply { HEAP[this] = var1 },
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27636,11 +28010,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onPoiShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27651,11 +28031,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onLocationShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27666,11 +28052,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onNaviShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27681,11 +28073,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onBusRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27696,11 +28094,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onWalkRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
@@ -27711,11 +28115,17 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                     // 日志打印
                     println("fluttify-kotlin-callback: onDrivingRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
         
+                    // 处理成可以传输的参数
+                    val argvar1 = var1
+                    val argvar2 = var2
+        
                     // 开始回调
                     callbackChannel.invokeMethod(
                         "Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched",
-                        mapOf<String, Any?>("var1" to var1,
-                "var2" to var2)
+                        mapOf<String, Any?>(
+                            "var1" to argvar1,
+                            "var2" to argvar2
+                        )
                     )
         
                     // 方法返回值
