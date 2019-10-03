@@ -13,6 +13,14 @@ class LatLng {
 
 class InputTip {
   final String name;
+  final String poiId;
+  final String address;
+  final String district;
 
-  InputTip(this.name);
+  InputTip({
+    this.name,
+    this.poiId,
+    this.address,
+    this.district,
+  });
 }

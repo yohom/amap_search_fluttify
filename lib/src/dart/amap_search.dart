@@ -228,7 +228,13 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onGetInputtips(
       List<com_amap_api_services_help_Tip> var1, int var2) async {
     final inputTipList = [
-      for (final item in var1) InputTip(await item.getName())
+      for (final item in var1)
+        InputTip(
+          name: await item.getName(),
+          poiId: await item.getPoiID(),
+          address: await item.getAddress(),
+          district: await item.getDistrict(),
+        )
     ];
     _streamController?.add(inputTipList);
     _streamController?.close();
@@ -260,7 +266,12 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     final inputTipList = [
       for (final item in (await response.get_tips()))
-        InputTip(await item.get_name())
+        InputTip(
+          name: await item.get_name(),
+          poiId: await item.get_uid(),
+          address: await item.get_address(),
+          district: await item.get_district(),
+        )
     ];
     _streamController?.add(inputTipList);
     _streamController?.close();
