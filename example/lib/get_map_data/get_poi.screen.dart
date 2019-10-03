@@ -8,7 +8,7 @@ class GetPoiScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('GetPoi')),
+      appBar: AppBar(title: Text('获取POI数据')),
       body: ListView(
         children: <Widget>[
           FunctionItem(
@@ -183,7 +183,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
             },
             child: Text('搜索'),
           ),
-          Text(_inputTipList.map((it) => it.name).join("\n")),
+          Text(_inputTipList.map((it) => it.toString()).join("\n")),
         ],
       ),
     );

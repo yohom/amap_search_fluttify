@@ -1,6 +1,7 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:flutter/material.dart';
 
+import 'get_map_data/get_address_desc.screen.dart';
 import 'get_map_data/get_poi.screen.dart';
 import 'widgets/function_group.widget.dart';
 import 'widgets/function_item.widget.dart';
@@ -42,11 +43,11 @@ class Home extends StatelessWidget {
                 sublabel: 'GetPoiScreen',
                 target: GetPoiScreen(),
               ),
-//              FunctionItem(
-//                label: '获取地址描述数据',
-//                sublabel: 'GestureInteractionScreen',
-//                target: GetPoiScreen(),
-//              ),
+              FunctionItem(
+                label: '获取地址描述数据',
+                sublabel: 'GetAddressDescScreen',
+                target: GetAddressDescScreen(),
+              ),
 //              FunctionItem(
 //                label: '获取行政区划数据',
 //                sublabel: 'CodeInteractionScreen',
