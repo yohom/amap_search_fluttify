@@ -1,3 +1,4 @@
-## 0.0.1
-
-* TODO: Describe initial release.
+## 0.0.2
+- poi关键字搜索
+- poi附近搜索
+- 输入提示
