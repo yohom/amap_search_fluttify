@@ -151,6 +151,7 @@ class InputTipScreen extends StatefulWidget {
 
 class _InputTipScreenState extends State<InputTipScreen> {
   final _keywordController = TextEditingController();
+  final _cityController = TextEditingController();
 
   List<InputTip> _inputTipList = [];
 
@@ -158,7 +159,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('周边检索POI')),
+      appBar: AppBar(title: Text('输入内容自动提示')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
@@ -166,11 +167,15 @@ class _InputTipScreenState extends State<InputTipScreen> {
             controller: _keywordController,
             decoration: InputDecoration(hintText: '输入关键字'),
           ),
+          TextFormField(
+            controller: _cityController,
+            decoration: InputDecoration(hintText: '输入所在城市'),
+          ),
           RaisedButton(
             onPressed: () async {
               final inputTipList = await AmapSearch.fetchInputTips(
                 _keywordController.text,
-                city: '金华',
+                city: _cityController.text,
               );
               setState(() {
                 _inputTipList = inputTipList;
