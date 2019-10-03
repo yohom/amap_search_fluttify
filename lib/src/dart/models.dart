@@ -10,3 +10,9 @@ class LatLng {
 
   LatLng(this.latitude, this.longitude);
 }
+
+class InputTip {
+  final String name;
+
+  InputTip(this.name);
+}

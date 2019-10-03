@@ -21,6 +21,11 @@ class GetPoiScreen extends StatelessWidget {
             sublabel: 'AroundPoiScreen',
             target: AroundPoiScreen(),
           ),
+          FunctionItem(
+            label: '输入提示',
+            sublabel: 'InputTipScreen',
+            target: InputTipScreen(),
+          ),
         ],
       ),
     );
@@ -132,6 +137,48 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
             child: Text('搜索'),
           ),
           Text(_poiList.map((it) => it.title).join("\n")),
+        ],
+      ),
+    );
+  }
+}
+
+/// 输入提示
+class InputTipScreen extends StatefulWidget {
+  @override
+  _InputTipScreenState createState() => _InputTipScreenState();
+}
+
+class _InputTipScreenState extends State<InputTipScreen> {
+  final _keywordController = TextEditingController();
+
+  List<InputTip> _inputTipList = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      appBar: AppBar(title: Text('周边检索POI')),
+      body: DecoratedColumn(
+        padding: EdgeInsets.all(kSpaceBig),
+        children: <Widget>[
+          TextFormField(
+            controller: _keywordController,
+            decoration: InputDecoration(hintText: '输入关键字'),
+          ),
+          RaisedButton(
+            onPressed: () async {
+              final inputTipList = await AmapSearch.fetchInputTips(
+                _keywordController.text,
+                city: '金华',
+              );
+              setState(() {
+                _inputTipList = inputTipList;
+              });
+            },
+            child: Text('搜索'),
+          ),
+          Text(_inputTipList.map((it) => it.name).join("\n")),
         ],
       ),
     );
