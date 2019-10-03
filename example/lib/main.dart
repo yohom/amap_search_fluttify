@@ -5,6 +5,7 @@ import 'get_map_data/get_address_desc.screen.dart';
 import 'get_map_data/get_poi.screen.dart';
 import 'widgets/function_group.widget.dart';
 import 'widgets/function_item.widget.dart';
+import 'widgets/todo.screen.dart';
 
 void main() async {
   await AmapSearch.init('f583e0d5b70400167993615c3adc3ced');
@@ -48,31 +49,31 @@ class Home extends StatelessWidget {
                 sublabel: 'GetAddressDescScreen',
                 target: GetAddressDescScreen(),
               ),
-//              FunctionItem(
-//                label: '获取行政区划数据',
-//                sublabel: 'CodeInteractionScreen',
-//                target: GetPoiScreen(),
-//              ),
-//              FunctionItem(
-//                label: '获取公交数据',
-//                sublabel: 'ScreenShotScreen',
-//                target: GetPoiScreen(),
-//              ),
-//              FunctionItem(
-//                label: '后获取天气数据',
-//                sublabel: 'ScreenShotScreen',
-//                target: GetPoiScreen(),
-//              ),
-//              FunctionItem(
-//                label: '获取业务数据(云图功能)',
-//                sublabel: 'ScreenShotScreen',
-//                target: GetPoiScreen(),
-//              ),
-//              FunctionItem(
-//                label: '获取交通态势信息',
-//                sublabel: 'ScreenShotScreen',
-//                target: GetPoiScreen(),
-//              ),
+              FunctionItem(
+                label: '获取行政区划数据',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+              FunctionItem(
+                label: '获取公交数据',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+              FunctionItem(
+                label: '后获取天气数据',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+              FunctionItem(
+                label: '获取业务数据(云图功能)',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+              FunctionItem(
+                label: '获取交通态势信息',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
             ],
           ),
         ],
