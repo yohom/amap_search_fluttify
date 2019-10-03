@@ -3,28 +3,23 @@ import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
-class GetPoiScreen extends StatelessWidget {
+class GetAddressDescScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('获取POI数据')),
+      appBar: AppBar(title: Text('获取地址描述数据')),
       body: ListView(
         children: <Widget>[
           FunctionItem(
-            label: '关键字检索POI',
-            sublabel: 'KeywordPoiScreen',
-            target: KeywordPoiScreen(),
+            label: '地理编码（地址转坐标）',
+            sublabel: 'AddressEncodeScreen',
+            target: AddressEncodeScreen(),
           ),
           FunctionItem(
-            label: '周边检索POI',
-            sublabel: 'AroundPoiScreen',
-            target: AroundPoiScreen(),
-          ),
-          FunctionItem(
-            label: '输入提示',
-            sublabel: 'InputTipScreen',
-            target: InputTipScreen(),
+            label: '逆地理编码（坐标转地址）',
+            sublabel: 'AddressDecodeScreen',
+            target: AddressDecodeScreen(),
           ),
         ],
       ),
@@ -32,23 +27,23 @@ class GetPoiScreen extends StatelessWidget {
   }
 }
 
-/// 关键字检索POI
-class KeywordPoiScreen extends StatefulWidget {
+/// 地理编码（地址转坐标）
+class AddressEncodeScreen extends StatefulWidget {
   @override
-  _KeywordPoiScreenState createState() => _KeywordPoiScreenState();
+  _AddressEncodeScreenState createState() => _AddressEncodeScreenState();
 }
 
-class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
+class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 
-  List<Poi> _poiList = [];
+  List<Geocode> _geocodeList = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('关键字检索POI')),
+      appBar: AppBar(title: Text('地理编码（地址转坐标）')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
@@ -62,30 +57,30 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
           ),
           RaisedButton(
             onPressed: () async {
-              final poiList = await AmapSearch.searchKeyword(
+              final geocodeList = await AmapSearch.searchGeocode(
                 _keywordController.text,
                 city: _cityController.text,
               );
               setState(() {
-                _poiList = poiList;
+                _geocodeList = geocodeList;
               });
             },
             child: Text('搜索'),
           ),
-          Text(_poiList.map((it) => it.title).join("\n")),
+          Text(_geocodeList.map((it) => it.toString()).join("\n")),
         ],
       ),
     );
   }
 }
 
-/// 关键字检索POI
-class AroundPoiScreen extends StatefulWidget {
+/// 逆地理编码（坐标转地址）
+class AddressDecodeScreen extends StatefulWidget {
   @override
-  _AroundPoiScreenState createState() => _AroundPoiScreenState();
+  _AddressDecodeScreenState createState() => _AddressDecodeScreenState();
 }
 
-class _AroundPoiScreenState extends State<AroundPoiScreen> {
+class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
   final _keywordController = TextEditingController();
   final _latController = TextEditingController(text: '29.08');
   final _lngController = TextEditingController(text: '119.65');
@@ -96,7 +91,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('周边检索POI')),
+      appBar: AppBar(title: Text('逆地理编码（坐标转地址）')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
@@ -137,53 +132,6 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
             child: Text('搜索'),
           ),
           Text(_poiList.map((it) => it.title).join("\n")),
-        ],
-      ),
-    );
-  }
-}
-
-/// 输入提示
-class InputTipScreen extends StatefulWidget {
-  @override
-  _InputTipScreenState createState() => _InputTipScreenState();
-}
-
-class _InputTipScreenState extends State<InputTipScreen> {
-  final _keywordController = TextEditingController();
-  final _cityController = TextEditingController();
-
-  List<InputTip> _inputTipList = [];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('输入内容自动提示')),
-      body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
-        children: <Widget>[
-          TextFormField(
-            controller: _keywordController,
-            decoration: InputDecoration(hintText: '输入关键字'),
-          ),
-          TextFormField(
-            controller: _cityController,
-            decoration: InputDecoration(hintText: '输入所在城市'),
-          ),
-          RaisedButton(
-            onPressed: () async {
-              final inputTipList = await AmapSearch.fetchInputTips(
-                _keywordController.text,
-                city: _cityController.text,
-              );
-              setState(() {
-                _inputTipList = inputTipList;
-              });
-            },
-            child: Text('搜索'),
-          ),
-          Text(_inputTipList.map((it) => it.toString()).join("\n")),
         ],
       ),
     );

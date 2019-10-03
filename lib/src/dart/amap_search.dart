@@ -10,6 +10,7 @@ class AmapSearch {
   static AMapSearchAPI _iosSearch;
   static com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
   static com_amap_api_services_help_Inputtips _androidInputTip;
+  static com_amap_api_services_geocoder_GeocodeSearch _androidGeocodeSearch;
 
   /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
   static Future init(String iosKey) async {
@@ -201,13 +202,68 @@ class AmapSearch {
     );
     return _controller.stream.first;
   }
+
+  /// 地理编码（地址转坐标）
+  ///
+  /// 输入关键字[keyword], 并且限制所在城市[city]
+  static Future<List<Geocode>> searchGeocode(
+    String keyword, {
+    String city = '',
+  }) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<List<Geocode>>();
+
+    platform(
+      android: () async {
+        // 创建查询对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_geocoder_GeocodeQuery__String__String(
+                keyword, city);
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidGeocodeSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context(
+                context);
+
+        // 设置回调
+        await _androidGeocodeSearch
+            .setOnGeocodeSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidGeocodeSearch.getFromLocationNameAsyn(query);
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapGeocodeSearchRequest();
+        // 设置关键字
+        await request.set_address(keyword);
+        // 设置城市
+        await request.set_city(city);
+
+        // 开始搜索
+        await _iosSearch.AMapGeocodeSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
 }
 
 /// android: 搜索监听
 class _AndroidSearchListener extends java_lang_Object
     with
         com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener,
-        com_amap_api_services_help_Inputtips_InputtipsListener {
+        com_amap_api_services_help_Inputtips_InputtipsListener,
+        com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener {
   _AndroidSearchListener(this._streamController);
 
   final StreamController _streamController;
@@ -249,6 +305,26 @@ class _AndroidSearchListener extends java_lang_Object
     _streamController?.add(inputTipList);
     _streamController?.close();
   }
+
+  @override
+  Future<void> onGeocodeSearched(
+      com_amap_api_services_geocoder_GeocodeResult var1, int var2) async {
+    final geocode = [
+      for (final item in (await var1.getGeocodeAddressList()))
+        Geocode(
+          latLng: LatLng(
+            await (await item.getLatLonPoint()).getLatitude(),
+            await (await item.getLatLonPoint()).getLongitude(),
+          ),
+        )
+    ];
+    _streamController?.add(geocode);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onRegeocodeSearched(
+      com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {}
 }
 
 /// ios: 搜索监听
@@ -294,6 +370,22 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
         )
     ];
     _streamController?.add(inputTipList);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onGeocodeSearchDoneResponse(AMapGeocodeSearchRequest request,
+      AMapGeocodeSearchResponse response) async {
+    final geocode = [
+      for (final item in (await response.get_geocodes()))
+        Geocode(
+          latLng: LatLng(
+            await (await item.get_location()).get_latitude(),
+            await (await item.get_location()).get_longitude(),
+          ),
+        )
+    ];
+    _streamController?.add(geocode);
     _streamController?.close();
   }
 }

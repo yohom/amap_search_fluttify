@@ -30,6 +30,11 @@ class LatLng {
   final double longitude;
 
   LatLng(this.latitude, this.longitude);
+
+  @override
+  String toString() {
+    return 'LatLng{latitude: $latitude, longitude: $longitude}';
+  }
 }
 
 class InputTip {
@@ -48,5 +53,27 @@ class InputTip {
   @override
   String toString() {
     return 'InputTip{name: $name, poiId: $poiId, address: $address, district: $district}';
+  }
+}
+
+class Geocode {
+  final LatLng latLng;
+
+  Geocode({this.latLng});
+
+  @override
+  String toString() {
+    return 'Geocode{latLng: $latLng}';
+  }
+}
+
+class ReGeocode {
+  final LatLng latLng;
+
+  ReGeocode({this.latLng});
+
+  @override
+  String toString() {
+    return 'ReGeocode{latLng: $latLng}';
   }
 }
