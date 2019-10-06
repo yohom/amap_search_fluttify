@@ -27,6 +27,12 @@ class AMapRoutePOISearchResponse extends AMapSearchObject  {
   
   }
   
+  Future<void> set_pois(List<AMapRoutePOI> pois) async {
+    await _channel.invokeMethod('AMapRoutePOISearchResponse::set_pois', {'refId': refId, "pois": pois.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

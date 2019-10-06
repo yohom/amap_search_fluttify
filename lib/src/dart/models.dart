@@ -101,14 +101,14 @@ class LatLng with ToFutureString {
   Future<double> get futureLat {
     return platform(
       android: () => _androidModel.getLatitude(),
-      ios: () => _iosModel.get_latitude(),
+      ios: () async => latitude ?? _iosModel.get_latitude(),
     );
   }
 
   Future<double> get futureLng {
     return platform(
       android: () => _androidModel.getLongitude(),
-      ios: () => _iosModel.get_longitude(),
+      ios: () async => longitude ?? _iosModel.get_longitude(),
     );
   }
 
@@ -183,7 +183,7 @@ class Geocode with ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'Geocode{latLng: ${await latLng}}';
+    return 'Geocode{latLng: ${(await latLng).toFutureString()}}';
   }
 }
 
@@ -258,12 +258,16 @@ class ReGeocode with ToFutureString {
 class DriveRouteResult with ToFutureString {
   DriveRouteResult.android(this._androidModel);
 
+  DriveRouteResult.ios(this._iosModel);
+
   com_amap_api_services_route_DriveRouteResult _androidModel;
+  AMapRoute _iosModel;
 
   Future<double> get taxiCost async {
-    return platform(android: () {
-      return _androidModel.getTaxiCost();
-    });
+    return platform(
+      android: () => _androidModel.getTaxiCost(),
+      ios: () => _iosModel.get_taxiCost(),
+    );
   }
 
   Future<List<DrivePath>> get drivePathList {
@@ -271,6 +275,11 @@ class DriveRouteResult with ToFutureString {
       android: () async {
         return (await _androidModel.getPaths())
             .map((it) => DrivePath.android(it))
+            .toList();
+      },
+      ios: () async {
+        return (await _iosModel.get_paths())
+            .map((it) => DrivePath.ios(it))
             .toList();
       },
     );
@@ -285,12 +294,19 @@ class DriveRouteResult with ToFutureString {
 class DrivePath with ToFutureString {
   DrivePath.android(this._androidModel);
 
+  DrivePath.ios(this._iosModel);
+
   com_amap_api_services_route_DrivePath _androidModel;
+  AMapPath _iosModel;
 
   Future<List<DriveStep>> get driveStepList {
     return platform(android: () async {
       return (await _androidModel.getSteps())
           .map((it) => DriveStep.android(it))
+          .toList();
+    }, ios: () async {
+      return (await _iosModel.get_steps())
+          .map((it) => DriveStep.ios(it))
           .toList();
     });
   }
@@ -304,53 +320,64 @@ class DrivePath with ToFutureString {
 class DriveStep with ToFutureString {
   DriveStep.android(this._androidModel);
 
+  DriveStep.ios(this._iosModel);
+
   com_amap_api_services_route_DriveStep _androidModel;
+  AMapStep _iosModel;
 
   Future<String> get instruction {
     return platform(
       android: () => _androidModel.getInstruction(),
+      ios: () => _iosModel.get_instruction(),
     );
   }
 
   Future<String> get orientation {
     return platform(
       android: () => _androidModel.getOrientation(),
+      ios: () => _iosModel.get_orientation(),
     );
   }
 
   Future<String> get road {
     return platform(
       android: () => _androidModel.getRoad(),
+      ios: () => _iosModel.get_road(),
     );
   }
 
   Future<double> get distance {
     return platform(
       android: () => _androidModel.getDistance(),
+      ios: () => _iosModel.get_distance().then((it) => it.toDouble()),
     );
   }
 
   Future<double> get tolls {
     return platform(
       android: () => _androidModel.getTolls(),
+      ios: () => _iosModel.get_tolls(),
     );
   }
 
   Future<double> get tollDistance {
     return platform(
       android: () => _androidModel.getTollDistance(),
+      ios: () => _iosModel.get_tollDistance().then((it) => it.toDouble()),
     );
   }
 
   Future<String> get tollRoad {
     return platform(
       android: () => _androidModel.getTollRoad(),
+      ios: () => _iosModel.get_tollRoad(),
     );
   }
 
   Future<double> get duration {
     return platform(
       android: () => _androidModel.getDuration(),
+      ios: () => _iosModel.get_duration().then((it) => it.toDouble()),
     );
   }
 
@@ -359,18 +386,28 @@ class DriveStep with ToFutureString {
       android: () async => (await _androidModel.getPolyline())
           .map((it) => LatLng.android(it))
           .toList(),
+      ios: () async {
+        final latLngString = await _iosModel.get_polyline();
+        return latLngString
+            .split(';')
+            .map((latLngPair) => latLngPair.split(','))
+            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .toList();
+      },
     );
   }
 
   Future<String> get action {
     return platform(
       android: () => _androidModel.getAction(),
+      ios: () => _iosModel.get_action(),
     );
   }
 
   Future<String> get assistantAction {
     return platform(
       android: () => _androidModel.getAssistantAction(),
+      ios: () => _iosModel.get_assistantAction(),
     );
   }
 
@@ -378,6 +415,8 @@ class DriveStep with ToFutureString {
     return platform(
       android: () async =>
           (await _androidModel.getTMCs()).map((it) => TMC.android(it)).toList(),
+      ios: () async =>
+          (await _iosModel.get_tmcs()).map((it) => TMC.ios(it)).toList(),
     );
   }
 
@@ -388,19 +427,24 @@ class DriveStep with ToFutureString {
 }
 
 class TMC with ToFutureString {
-  TMC.android(this._androidModel);
+  TMC.android(this._androidModel) : _iosModel = null;
+
+  TMC.ios(this._iosModel) : _androidModel = null;
 
   final com_amap_api_services_route_TMC _androidModel;
+  final AMapTMC _iosModel;
 
   Future<int> get distance async {
     return platform(
       android: () => _androidModel.getDistance(),
+      ios: () => _iosModel.get_distance(),
     );
   }
 
   Future<String> get status {
     return platform(
       android: () => _androidModel.getStatus(),
+      ios: () => _iosModel.get_status(),
     );
   }
 
@@ -409,6 +453,14 @@ class TMC with ToFutureString {
       android: () async => (await _androidModel.getPolyline())
           .map((it) => LatLng.android(it))
           .toList(),
+      ios: () async {
+        final latLngString = await _iosModel.get_polyline();
+        return latLngString
+            .split(';')
+            .map((latLngPair) => latLngPair.split(','))
+            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .toList();
+      },
     );
   }
 

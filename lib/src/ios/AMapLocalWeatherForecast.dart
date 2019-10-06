@@ -60,6 +60,12 @@ class AMapLocalWeatherForecast extends AMapSearchObject  {
   
   }
   
+  Future<void> set_casts(List<AMapLocalDayWeatherForecast> casts) async {
+    await _channel.invokeMethod('AMapLocalWeatherForecast::set_casts', {'refId': refId, "casts": casts.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

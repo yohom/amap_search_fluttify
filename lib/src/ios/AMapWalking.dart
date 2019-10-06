@@ -60,6 +60,12 @@ class AMapWalking extends AMapSearchObject  {
   
   }
   
+  Future<void> set_steps(List<AMapStep> steps) async {
+    await _channel.invokeMethod('AMapWalking::set_steps', {'refId': refId, "steps": steps.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

@@ -331,7 +331,6 @@ class AmapSearch {
     @required LatLng to,
     List<LatLng> passedByPoints = const [],
     String avoidRoad = '',
-    double radius = 200.0,
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
@@ -395,24 +394,43 @@ class AmapSearch {
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
-        // 创建中心点
-        final amapLocation = await ObjectFactory_iOS.createAMapGeoPoint();
-        await amapLocation.set_latitude(from.latitude);
-        await amapLocation.set_longitude(from.longitude);
+        // 创建起点
+        final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
+        await fromLatLng.set_latitude(from.latitude);
+        await fromLatLng.set_longitude(from.longitude);
+        // 创建终点
+        final toLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
+        await toLatLng.set_latitude(to.latitude);
+        await toLatLng.set_longitude(to.longitude);
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
         final request =
-            await ObjectFactory_iOS.createAMapReGeocodeSearchRequest();
-        // 设置中心点
-        await request.set_location(amapLocation);
-        // 设置半径
-        await request.set_radius(radius.toInt());
+            await ObjectFactory_iOS.createAMapDrivingRouteSearchRequest();
+        // 设置起点
+        await request.set_origin(fromLatLng);
+        // 设置终点
+        await request.set_destination(toLatLng);
+        // 设置避开道路
+        await request.set_avoidroad(avoidRoad);
+        // 策略 默认0 速度优先
+        await request.set_strategy(0);
+        // 设置途经点
+        final List<AMapGeoPoint> passby = [];
+        for (var item in passedByPoints) {
+          final geoPoint = await ObjectFactory_iOS.createAMapGeoPoint();
+          await geoPoint.set_latitude(item.latitude);
+          await geoPoint.set_longitude(item.longitude);
+          passby.add(geoPoint);
+        }
+        await request.set_waypoints(passby);
+        // 暂不支持避开区域
+//        await request.set_avoidpolygons([]);
 
         // 开始搜索
-        await _iosSearch.AMapReGoecodeSearch(request);
+        await _iosSearch.AMapDrivingRouteSearch(request);
       },
     );
     return _controller.stream.first;
@@ -528,6 +546,16 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     final reGeocode = ReGeocode.ios(await response.get_regeocode());
     _streamController?.add(reGeocode);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onRouteSearchDoneResponse(
+    AMapRouteSearchBaseRequest request,
+    AMapRouteSearchResponse response,
+  ) async {
+    final route = DriveRouteResult.ios(await response.get_route());
+    _streamController?.add(route);
     _streamController?.close();
   }
 }

@@ -38,6 +38,12 @@ class AMapBusLineSearchResponse extends AMapSearchObject  {
   
   }
   
+  Future<void> set_buslines(List<AMapBusLine> buslines) async {
+    await _channel.invokeMethod('AMapBusLineSearchResponse::set_buslines', {'refId': refId, "buslines": buslines.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

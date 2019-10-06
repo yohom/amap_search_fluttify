@@ -110,7 +110,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchObject * ref = (AMapSearchObject *) HEAP[@(refId)];
+          AMapSearchObject* ref = (AMapSearchObject*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription(暂未实现参数打印)", @(refId));
@@ -137,6 +137,25 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 开始调用
           AMapGeoPoint* result = [AMapGeoPoint locationWithLatitude: lat longitude: lon];
+      
+          // 调用结果
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      @"AMapGeoPolygon::polygonWithPoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+          // jsonable参数
+          NSArray* points = (NSArray*) args[@"points"];
+      
+          // 调用对象引用
+      
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapGeoPolygon::polygonWithPoints(暂未实现参数打印)");
+      
+          // 开始调用
+          AMapGeoPolygon* result = [AMapGeoPolygon polygonWithPoints: points];
       
           // 调用结果
           // 返回值: 引用
@@ -207,7 +226,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::init(暂未实现参数打印)", @(refId));
@@ -226,7 +245,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests(暂未实现参数打印)", @(refId));
@@ -245,7 +264,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(暂未实现参数打印)", @(refId));
@@ -264,7 +283,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(暂未实现参数打印)", @(refId));
@@ -283,7 +302,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(暂未实现参数打印)", @(refId));
@@ -302,7 +321,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(暂未实现参数打印)", @(refId));
@@ -321,7 +340,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(暂未实现参数打印)", @(refId));
@@ -340,7 +359,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(暂未实现参数打印)", @(refId));
@@ -359,7 +378,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(暂未实现参数打印)", @(refId));
@@ -378,7 +397,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(暂未实现参数打印)", @(refId));
@@ -397,7 +416,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(暂未实现参数打印)", @(refId));
@@ -416,7 +435,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(暂未实现参数打印)", @(refId));
@@ -435,7 +454,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(暂未实现参数打印)", @(refId));
@@ -454,7 +473,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(暂未实现参数打印)", @(refId));
@@ -473,7 +492,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(暂未实现参数打印)", @(refId));
@@ -492,7 +511,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(暂未实现参数打印)", @(refId));
@@ -511,7 +530,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(暂未实现参数打印)", @(refId));
@@ -530,7 +549,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(暂未实现参数打印)", @(refId));
@@ -549,7 +568,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(暂未实现参数打印)", @(refId));
@@ -568,7 +587,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(暂未实现参数打印)", @(refId));
@@ -587,7 +606,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(暂未实现参数打印)", @(refId));
@@ -606,7 +625,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(暂未实现参数打印)", @(refId));
@@ -625,7 +644,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(暂未实现参数打印)", @(refId));
@@ -644,7 +663,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(暂未实现参数打印)", @(refId));
@@ -663,7 +682,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(暂未实现参数打印)", @(refId));
@@ -682,7 +701,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(暂未实现参数打印)", @(refId));
@@ -701,7 +720,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(暂未实现参数打印)", @(refId));
@@ -720,7 +739,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(暂未实现参数打印)", @(refId));
@@ -739,7 +758,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(暂未实现参数打印)", @(refId));
@@ -758,7 +777,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(暂未实现参数打印)", @(refId));
@@ -777,7 +796,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(暂未实现参数打印)", @(refId));
@@ -796,7 +815,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(暂未实现参数打印)", @(refId));
@@ -815,7 +834,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 调用对象引用
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 日志打印
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(暂未实现参数打印)", @(refId));
@@ -1168,7 +1187,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.appScheme;
@@ -1184,7 +1203,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.appName;
@@ -1200,7 +1219,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           // 开始调用
           CLLocationCoordinate2D result = ref.destination;
@@ -1221,7 +1240,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           // 开始调用
           AMapDrivingStrategy result = ref.strategy;
@@ -1237,7 +1256,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.appScheme;
@@ -1253,7 +1272,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.appName;
@@ -1269,7 +1288,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           CLLocationCoordinate2D result = ref.startCoordinate;
@@ -1290,7 +1309,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           CLLocationCoordinate2D result = ref.destinationCoordinate;
@@ -1311,7 +1330,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           AMapDrivingStrategy result = ref.drivingStrategy;
@@ -1327,7 +1346,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           AMapTransitStrategy result = ref.transitStrategy;
@@ -1343,7 +1362,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           // 开始调用
           AMapRouteSearchType result = ref.routeType;
@@ -1359,7 +1378,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.appScheme;
@@ -1375,7 +1394,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.appName;
@@ -1391,7 +1410,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -1407,7 +1426,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           // 开始调用
           CLLocationCoordinate2D result = ref.leftTopCoordinate;
@@ -1428,7 +1447,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           // 开始调用
           CLLocationCoordinate2D result = ref.rightBottomCoordinate;
@@ -1449,7 +1468,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.apiKey;
@@ -1465,7 +1484,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.enableHTTPS;
@@ -1481,7 +1500,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.crashReportEnabled;
@@ -1497,7 +1516,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.identifier;
@@ -1513,7 +1532,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.types;
@@ -1529,7 +1548,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.sortrule;
@@ -1545,7 +1564,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.offset;
@@ -1561,7 +1580,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.page;
@@ -1577,7 +1596,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.building;
@@ -1593,7 +1612,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireExtension;
@@ -1609,7 +1628,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireSubPOIs;
@@ -1625,7 +1644,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) HEAP[@(refId)];
+          AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -1641,7 +1660,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -1657,7 +1676,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -1673,7 +1692,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.cityLimit;
@@ -1689,7 +1708,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -1706,7 +1725,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -1722,7 +1741,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -1739,7 +1758,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.radius;
@@ -1755,7 +1774,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -1771,7 +1790,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -1787,7 +1806,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPolygon* result = ref.polygon;
@@ -1804,7 +1823,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -1820,7 +1839,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           AMapSuggestion* result = ref.suggestion;
@@ -1837,7 +1856,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapPOI*>* result = ref.pois;
@@ -1860,7 +1879,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.origin;
@@ -1877,7 +1896,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destination;
@@ -1894,7 +1913,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapRoutePOISearchType result = ref.searchType;
@@ -1910,7 +1929,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -1926,7 +1945,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.range;
@@ -1942,7 +1961,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.polylineStr;
@@ -1958,7 +1977,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeoPoint*>* result = ref.polyline;
@@ -1981,7 +2000,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -1997,7 +2016,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapRoutePOI*>* result = ref.pois;
@@ -2020,7 +2039,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -2036,7 +2055,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -2052,7 +2071,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.types;
@@ -2068,7 +2087,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.cityLimit;
@@ -2084,7 +2103,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.location;
@@ -2100,7 +2119,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -2116,7 +2135,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapTip*>* result = ref.tips;
@@ -2139,7 +2158,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.address;
@@ -2155,7 +2174,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -2171,7 +2190,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -2187,7 +2206,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeocode*>* result = ref.geocodes;
@@ -2210,7 +2229,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireExtension;
@@ -2226,7 +2245,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -2243,7 +2262,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.radius;
@@ -2259,7 +2278,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.poitype;
@@ -2275,7 +2294,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) HEAP[@(refId)];
+          AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           AMapReGeocode* result = ref.regeocode;
@@ -2292,7 +2311,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -2308,7 +2327,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -2324,7 +2343,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.offset;
@@ -2340,7 +2359,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.page;
@@ -2356,7 +2375,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -2372,7 +2391,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           AMapSuggestion* result = ref.suggestion;
@@ -2389,7 +2408,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusStop*>* result = ref.busstops;
@@ -2412,7 +2431,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -2428,7 +2447,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireExtension;
@@ -2444,7 +2463,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.offset;
@@ -2460,7 +2479,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.page;
@@ -2476,7 +2495,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) HEAP[@(refId)];
+          AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -2492,7 +2511,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) HEAP[@(refId)];
+          AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -2508,7 +2527,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -2524,7 +2543,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           AMapSuggestion* result = ref.suggestion;
@@ -2541,7 +2560,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusLine*>* result = ref.buslines;
@@ -2564,7 +2583,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) HEAP[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -2580,7 +2599,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -2596,7 +2615,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapDistrict*>* result = ref.districts;
@@ -2619,7 +2638,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.origin;
@@ -2636,7 +2655,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destination;
@@ -2653,7 +2672,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -2669,7 +2688,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeoPoint*>* result = ref.waypoints;
@@ -2692,7 +2711,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeoPolygon*>* result = ref.avoidpolygons;
@@ -2715,7 +2734,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.avoidroad;
@@ -2731,7 +2750,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.originId;
@@ -2747,7 +2766,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationId;
@@ -2763,7 +2782,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.origintype;
@@ -2779,7 +2798,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationtype;
@@ -2795,7 +2814,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireExtension;
@@ -2811,7 +2830,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.plateProvince;
@@ -2827,7 +2846,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.plateNumber;
@@ -2843,7 +2862,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.ferry;
@@ -2859,7 +2878,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.cartype;
@@ -2875,7 +2894,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) HEAP[@(refId)];
+          AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.multipath;
@@ -2891,7 +2910,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -2907,7 +2926,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -2923,7 +2942,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationCity;
@@ -2939,7 +2958,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.nightflag;
@@ -2955,7 +2974,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireExtension;
@@ -2971,7 +2990,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) HEAP[@(refId)];
+          AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.type;
@@ -2987,7 +3006,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -3003,7 +3022,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           AMapRoute* result = ref.route;
@@ -3020,7 +3039,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -3036,7 +3055,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeoPoint*>* result = ref.waypoints;
@@ -3059,7 +3078,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.originId;
@@ -3075,7 +3094,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationId;
@@ -3091,7 +3110,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.origintype;
@@ -3107,7 +3126,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationtype;
@@ -3123,7 +3142,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.plateProvince;
@@ -3139,7 +3158,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.plateNumber;
@@ -3155,7 +3174,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapTruckSizeType result = ref.size;
@@ -3171,7 +3190,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.height;
@@ -3187,7 +3206,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.width;
@@ -3203,7 +3222,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.load;
@@ -3219,7 +3238,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.weight;
@@ -3235,7 +3254,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.axis;
@@ -3251,7 +3270,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeoPoint*>* result = ref.origins;
@@ -3274,7 +3293,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destination;
@@ -3291,7 +3310,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.type;
@@ -3307,7 +3326,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchResponse * ref = (AMapDistanceSearchResponse *) HEAP[@(refId)];
+          AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapDistanceResult*>* result = ref.results;
@@ -3330,7 +3349,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -3346,7 +3365,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapWeatherType result = ref.type;
@@ -3362,7 +3381,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchResponse * ref = (AMapWeatherSearchResponse *) HEAP[@(refId)];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapLocalWeatherLive*>* result = ref.lives;
@@ -3385,7 +3404,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchResponse * ref = (AMapWeatherSearchResponse *) HEAP[@(refId)];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
@@ -3408,7 +3427,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.level;
@@ -3424,7 +3443,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.requireExtension;
@@ -3440,7 +3459,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.roadName;
@@ -3456,7 +3475,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -3472,7 +3491,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -3489,7 +3508,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.radius;
@@ -3505,7 +3524,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) HEAP[@(refId)];
+          AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           AMapTrafficInfo* result = ref.trafficInfo;
@@ -3522,7 +3541,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.center;
@@ -3539,7 +3558,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.radius;
@@ -3555,7 +3574,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapNearbySearchType result = ref.searchType;
@@ -3571,7 +3590,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.timeRange;
@@ -3587,7 +3606,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.limit;
@@ -3603,7 +3622,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -3619,7 +3638,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapNearbyUserInfo*>* result = ref.infos;
@@ -3642,7 +3661,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.tableID;
@@ -3658,7 +3677,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<NSString*>* result = ref.filter;
@@ -3674,7 +3693,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.sortFields;
@@ -3690,7 +3709,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapCloudSortType result = ref.sortType;
@@ -3706,7 +3725,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.offset;
@@ -3722,7 +3741,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.page;
@@ -3738,7 +3757,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.center;
@@ -3755,7 +3774,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.radius;
@@ -3771,7 +3790,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -3787,7 +3806,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPolygon* result = ref.polygon;
@@ -3804,7 +3823,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -3820,7 +3839,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.uid;
@@ -3836,7 +3855,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.keywords;
@@ -3852,7 +3871,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -3868,7 +3887,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.count;
@@ -3884,7 +3903,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapCloudPOI*>* result = ref.POIs;
@@ -3907,7 +3926,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -3924,7 +3943,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -3940,7 +3959,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -3956,7 +3975,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -3973,7 +3992,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -3989,7 +4008,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.address;
@@ -4005,7 +4024,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -4021,7 +4040,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.type;
@@ -4037,7 +4056,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.startCoordinate;
@@ -4054,7 +4073,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destinationCoordinate;
@@ -4071,7 +4090,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.startName;
@@ -4087,7 +4106,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationName;
@@ -4103,7 +4122,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -4119,7 +4138,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.startCoordinate;
@@ -4136,7 +4155,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destinationCoordinate;
@@ -4153,7 +4172,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapShareSearchResponse * ref = (AMapShareSearchResponse *) HEAP[@(refId)];
+          AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.shareURL;
@@ -4169,7 +4188,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.beginTime;
@@ -4185,7 +4204,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.interval;
@@ -4201,7 +4220,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.timeCount;
@@ -4217,7 +4236,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.strategy;
@@ -4233,7 +4252,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.originId;
@@ -4249,7 +4268,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationId;
@@ -4265,7 +4284,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.origintype;
@@ -4281,7 +4300,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.destinationtype;
@@ -4297,7 +4316,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.parentId;
@@ -4313,7 +4332,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.plateProvince;
@@ -4329,7 +4348,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.plateNumber;
@@ -4345,7 +4364,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.cartype;
@@ -4361,7 +4380,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchResponse * ref = (AMapFutureRouteSearchResponse *) HEAP[@(refId)];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapPath*>* result = ref.paths;
@@ -4384,7 +4403,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchResponse * ref = (AMapFutureRouteSearchResponse *) HEAP[@(refId)];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapFutureTimeInfo*>* result = ref.timeInfos;
@@ -4407,7 +4426,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.latitude;
@@ -4423,7 +4442,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.longitude;
@@ -4439,7 +4458,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPolygon * ref = (AMapGeoPolygon *) HEAP[@(refId)];
+          AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapGeoPoint*>* result = ref.points;
@@ -4462,7 +4481,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -4478,7 +4497,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -4494,7 +4513,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -4510,7 +4529,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.num;
@@ -4526,7 +4545,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapDistrict*>* result = ref.districts;
@@ -4549,7 +4568,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSuggestion * ref = (AMapSuggestion *) HEAP[@(refId)];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<NSString*>* result = ref.keywords;
@@ -4565,7 +4584,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSuggestion * ref = (AMapSuggestion *) HEAP[@(refId)];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapCity*>* result = ref.cities;
@@ -4588,7 +4607,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -4604,7 +4623,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -4620,7 +4639,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -4636,7 +4655,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.district;
@@ -4652,7 +4671,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.address;
@@ -4668,7 +4687,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -4685,7 +4704,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.typecode;
@@ -4701,7 +4720,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.title;
@@ -4717,7 +4736,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.url;
@@ -4733,7 +4752,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.rating;
@@ -4749,7 +4768,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.cost;
@@ -4765,7 +4784,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.openTime;
@@ -4781,7 +4800,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.floor;
@@ -4797,7 +4816,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.floorName;
@@ -4813,7 +4832,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.pid;
@@ -4829,7 +4848,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -4845,7 +4864,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -4861,7 +4880,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.sname;
@@ -4877,7 +4896,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -4894,7 +4913,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.address;
@@ -4910,7 +4929,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -4926,7 +4945,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.subtype;
@@ -4942,7 +4961,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -4958,7 +4977,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -4974,7 +4993,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -4991,7 +5010,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -5007,7 +5026,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -5023,7 +5042,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -5039,7 +5058,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -5055,7 +5074,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.type;
@@ -5071,7 +5090,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.typecode;
@@ -5087,7 +5106,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -5104,7 +5123,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.address;
@@ -5120,7 +5139,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.tel;
@@ -5136,7 +5155,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -5152,7 +5171,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.parkingType;
@@ -5168,7 +5187,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.shopID;
@@ -5184,7 +5203,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.postcode;
@@ -5200,7 +5219,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.website;
@@ -5216,7 +5235,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.email;
@@ -5232,7 +5251,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.province;
@@ -5248,7 +5267,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.pcode;
@@ -5264,7 +5283,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -5280,7 +5299,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -5296,7 +5315,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.district;
@@ -5312,7 +5331,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -5328,7 +5347,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.gridcode;
@@ -5344,7 +5363,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.enterLocation;
@@ -5361,7 +5380,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.exitLocation;
@@ -5378,7 +5397,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.direction;
@@ -5394,7 +5413,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.hasIndoorMap;
@@ -5410,7 +5429,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.businessArea;
@@ -5426,7 +5445,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapIndoorData* result = ref.indoorData;
@@ -5443,7 +5462,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapSubPOI*>* result = ref.subPOIs;
@@ -5466,7 +5485,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapImage*>* result = ref.images;
@@ -5489,7 +5508,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapPOIExtension* result = ref.extensionInfo;
@@ -5506,7 +5525,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -5522,7 +5541,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -5538,7 +5557,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -5554,7 +5573,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -5571,7 +5590,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.area;
@@ -5587,7 +5606,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -5603,7 +5622,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -5619,7 +5638,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -5635,7 +5654,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.direction;
@@ -5651,7 +5670,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -5668,7 +5687,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -5684,7 +5703,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.direction;
@@ -5700,7 +5719,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -5717,7 +5736,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.firstId;
@@ -5733,7 +5752,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.firstName;
@@ -5749,7 +5768,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.secondId;
@@ -5765,7 +5784,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.secondName;
@@ -5781,7 +5800,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.street;
@@ -5797,7 +5816,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.number;
@@ -5813,7 +5832,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -5830,7 +5849,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -5846,7 +5865,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.direction;
@@ -5862,7 +5881,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -5878,7 +5897,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -5895,7 +5914,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.country;
@@ -5911,7 +5930,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.province;
@@ -5927,7 +5946,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -5943,7 +5962,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -5959,7 +5978,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.district;
@@ -5975,7 +5994,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -5991,7 +6010,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.township;
@@ -6007,7 +6026,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.towncode;
@@ -6023,7 +6042,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.neighborhood;
@@ -6039,7 +6058,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.building;
@@ -6055,7 +6074,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           AMapStreetNumber* result = ref.streetNumber;
@@ -6072,7 +6091,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusinessArea*>* result = ref.businessAreas;
@@ -6095,7 +6114,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.formattedAddress;
@@ -6111,7 +6130,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // 开始调用
           AMapAddressComponent* result = ref.addressComponent;
@@ -6128,7 +6147,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapRoad*>* result = ref.roads;
@@ -6151,7 +6170,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapRoadInter*>* result = ref.roadinters;
@@ -6174,7 +6193,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapPOI*>* result = ref.pois;
@@ -6197,7 +6216,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapAOI*>* result = ref.aois;
@@ -6220,7 +6239,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.formattedAddress;
@@ -6236,7 +6255,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.province;
@@ -6252,7 +6271,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -6268,7 +6287,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -6284,7 +6303,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.district;
@@ -6300,7 +6319,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -6316,7 +6335,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.township;
@@ -6332,7 +6351,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.neighborhood;
@@ -6348,7 +6367,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.building;
@@ -6364,7 +6383,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -6381,7 +6400,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.level;
@@ -6397,7 +6416,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -6413,7 +6432,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -6429,7 +6448,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -6445,7 +6464,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -6461,7 +6480,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -6478,7 +6497,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusLine*>* result = ref.buslines;
@@ -6501,7 +6520,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.sequence;
@@ -6517,7 +6536,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -6533,7 +6552,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.type;
@@ -6549,7 +6568,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -6565,7 +6584,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.polyline;
@@ -6581,7 +6600,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -6597,7 +6616,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.startStop;
@@ -6613,7 +6632,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.endStop;
@@ -6629,7 +6648,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -6646,7 +6665,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.startTime;
@@ -6662,7 +6681,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.endTime;
@@ -6678,7 +6697,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.company;
@@ -6694,7 +6713,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.distance;
@@ -6710,7 +6729,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.basicPrice;
@@ -6726,7 +6745,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.totalPrice;
@@ -6742,7 +6761,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPolygon* result = ref.bounds;
@@ -6759,7 +6778,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusStop*>* result = ref.busStops;
@@ -6782,7 +6801,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           AMapBusStop* result = ref.departureStop;
@@ -6799,7 +6818,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           AMapBusStop* result = ref.arrivalStop;
@@ -6816,7 +6835,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusStop*>* result = ref.viaBusStops;
@@ -6839,7 +6858,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -6855,7 +6874,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -6871,7 +6890,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.citycode;
@@ -6887,7 +6906,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -6903,7 +6922,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.level;
@@ -6919,7 +6938,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.center;
@@ -6936,7 +6955,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapDistrict*>* result = ref.districts;
@@ -6959,7 +6978,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<NSString*>* result = ref.polylines;
@@ -6975,7 +6994,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -6991,7 +7010,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.status;
@@ -7007,7 +7026,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.polyline;
@@ -7023,7 +7042,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.instruction;
@@ -7039,7 +7058,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.orientation;
@@ -7055,7 +7074,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.road;
@@ -7071,7 +7090,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -7087,7 +7106,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -7103,7 +7122,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.polyline;
@@ -7119,7 +7138,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.action;
@@ -7135,7 +7154,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.assistantAction;
@@ -7151,7 +7170,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.tolls;
@@ -7167,7 +7186,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.tollDistance;
@@ -7183,7 +7202,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.tollRoad;
@@ -7199,7 +7218,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapCity*>* result = ref.cities;
@@ -7222,7 +7241,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapTMC*>* result = ref.tmcs;
@@ -7245,7 +7264,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -7261,7 +7280,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -7277,7 +7296,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.strategy;
@@ -7293,7 +7312,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapStep*>* result = ref.steps;
@@ -7316,7 +7335,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.tolls;
@@ -7332,7 +7351,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.tollDistance;
@@ -7348,7 +7367,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.totalTrafficLights;
@@ -7364,7 +7383,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.restriction;
@@ -7380,7 +7399,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -7396,7 +7415,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.pathindex;
@@ -7412,7 +7431,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.restriction;
@@ -7428,7 +7447,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapTMC*>* result = ref.tmcs;
@@ -7451,7 +7470,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.startTime;
@@ -7467,7 +7486,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapFutureTimeInfoElement*>* result = ref.elements;
@@ -7490,7 +7509,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.origin;
@@ -7507,7 +7526,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destination;
@@ -7524,7 +7543,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -7540,7 +7559,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -7556,7 +7575,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapStep*>* result = ref.steps;
@@ -7579,7 +7598,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.origin;
@@ -7596,7 +7615,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destination;
@@ -7613,7 +7632,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -7629,7 +7648,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -7645,7 +7664,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.sname;
@@ -7661,7 +7680,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.tname;
@@ -7677,7 +7696,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -7693,7 +7712,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -7709,7 +7728,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -7726,7 +7745,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -7742,7 +7761,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.time;
@@ -7758,7 +7777,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.wait;
@@ -7774,7 +7793,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.isStart;
@@ -7790,7 +7809,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.isEnd;
@@ -7806,7 +7825,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.code;
@@ -7822,7 +7841,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.cost;
@@ -7838,7 +7857,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -7854,7 +7873,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -7870,7 +7889,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.trip;
@@ -7886,7 +7905,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.type;
@@ -7902,7 +7921,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -7918,7 +7937,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.time;
@@ -7934,7 +7953,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           AMapRailwayStation* result = ref.departureStation;
@@ -7951,7 +7970,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           AMapRailwayStation* result = ref.arrivalStation;
@@ -7968,7 +7987,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapRailwaySpace*>* result = ref.spaces;
@@ -7991,7 +8010,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapRailwayStation*>* result = ref.viaStops;
@@ -8014,7 +8033,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapRailway*>* result = ref.alters;
@@ -8037,7 +8056,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           AMapWalking* result = ref.walking;
@@ -8054,7 +8073,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapBusLine*>* result = ref.buslines;
@@ -8077,7 +8096,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           AMapTaxi* result = ref.taxi;
@@ -8094,7 +8113,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           AMapRailway* result = ref.railway;
@@ -8111,7 +8130,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.enterName;
@@ -8127,7 +8146,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.enterLocation;
@@ -8144,7 +8163,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.exitName;
@@ -8160,7 +8179,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.exitLocation;
@@ -8177,7 +8196,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.cost;
@@ -8193,7 +8212,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -8209,7 +8228,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // 开始调用
           BOOL result = ref.nightflag;
@@ -8225,7 +8244,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.walkingDistance;
@@ -8241,7 +8260,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapSegment*>* result = ref.segments;
@@ -8264,7 +8283,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -8280,7 +8299,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.origin;
@@ -8297,7 +8316,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.destination;
@@ -8314,7 +8333,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.taxiCost;
@@ -8330,7 +8349,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapPath*>* result = ref.paths;
@@ -8353,7 +8372,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapTransit*>* result = ref.transits;
@@ -8376,7 +8395,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.originID;
@@ -8392,7 +8411,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.destID;
@@ -8408,7 +8427,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -8424,7 +8443,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.duration;
@@ -8440,7 +8459,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.info;
@@ -8456,7 +8475,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.code;
@@ -8472,7 +8491,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -8488,7 +8507,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.province;
@@ -8504,7 +8523,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -8520,7 +8539,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.weather;
@@ -8536,7 +8555,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.temperature;
@@ -8552,7 +8571,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.windDirection;
@@ -8568,7 +8587,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.windPower;
@@ -8584,7 +8603,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.humidity;
@@ -8600,7 +8619,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.reportTime;
@@ -8616,7 +8635,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.date;
@@ -8632,7 +8651,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.week;
@@ -8648,7 +8667,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.dayWeather;
@@ -8664,7 +8683,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.nightWeather;
@@ -8680,7 +8699,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.dayTemp;
@@ -8696,7 +8715,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.nightTemp;
@@ -8712,7 +8731,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.dayWind;
@@ -8728,7 +8747,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.nightWind;
@@ -8744,7 +8763,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.dayPower;
@@ -8760,7 +8779,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.nightPower;
@@ -8776,7 +8795,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.adcode;
@@ -8792,7 +8811,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.province;
@@ -8808,7 +8827,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.city;
@@ -8824,7 +8843,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.reportTime;
@@ -8840,7 +8859,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapLocalDayWeatherForecast*>* result = ref.casts;
@@ -8863,7 +8882,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.userID;
@@ -8879,7 +8898,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -8896,7 +8915,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           // 开始调用
           CGFloat result = ref.distance;
@@ -8912,7 +8931,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.evaluationDescription;
@@ -8928,7 +8947,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.status;
@@ -8944,7 +8963,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.expedite;
@@ -8960,7 +8979,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.congested;
@@ -8976,7 +8995,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.blocked;
@@ -8992,7 +9011,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.unknown;
@@ -9008,7 +9027,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -9024,7 +9043,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.status;
@@ -9040,7 +9059,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.direction;
@@ -9056,7 +9075,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // 开始调用
           float result = ref.angle;
@@ -9072,7 +9091,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // 开始调用
           float result = ref.speed;
@@ -9088,7 +9107,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.polyline;
@@ -9104,7 +9123,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.statusDescription;
@@ -9120,7 +9139,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           // 开始调用
           AMapTrafficEvaluation* result = ref.evaluation;
@@ -9137,7 +9156,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapTrafficRoad*>* result = ref.roads;
@@ -9160,7 +9179,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.uid;
@@ -9176,7 +9195,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.preurl;
@@ -9192,7 +9211,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.url;
@@ -9208,7 +9227,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.uid;
@@ -9224,7 +9243,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.name;
@@ -9240,7 +9259,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           AMapGeoPoint* result = ref.location;
@@ -9257,7 +9276,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.address;
@@ -9273,7 +9292,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.createTime;
@@ -9289,7 +9308,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.updateTime;
@@ -9305,7 +9324,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.distance;
@@ -9321,7 +9340,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // 开始调用
           NSArray<AMapCloudImage*>* result = ref.images;
@@ -9344,7 +9363,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           // 开始调用
           NSString* result = ref.userID;
@@ -9360,7 +9379,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           // 开始调用
           AMapSearchCoordinateType result = ref.coordinateType;
@@ -9376,7 +9395,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           // 开始调用
           CLLocationCoordinate2D result = ref.coordinate;
@@ -9397,7 +9416,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 开始调用
           NSInteger result = ref.timeout;
@@ -9413,7 +9432,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // 开始调用
           AMapSearchLanguage result = ref.language;
@@ -9429,10 +9448,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * appScheme = (NSString *) args[@"appScheme"];
+          NSString* appScheme = (NSString*) args[@"appScheme"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           ref.appScheme = appScheme;
           methodResult(@"success");
@@ -9443,10 +9462,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * appName = (NSString *) args[@"appName"];
+          NSString* appName = (NSString*) args[@"appName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           ref.appName = appName;
           methodResult(@"success");
@@ -9462,7 +9481,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [destinationValue getValue:&destination];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -9476,7 +9495,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapDrivingStrategy strategy = (AMapDrivingStrategy) [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNaviConfig * ref = (AMapNaviConfig *) HEAP[@(refId)];
+          AMapNaviConfig* ref = (AMapNaviConfig*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -9487,10 +9506,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * appScheme = (NSString *) args[@"appScheme"];
+          NSString* appScheme = (NSString*) args[@"appScheme"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.appScheme = appScheme;
           methodResult(@"success");
@@ -9501,10 +9520,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * appName = (NSString *) args[@"appName"];
+          NSString* appName = (NSString*) args[@"appName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.appName = appName;
           methodResult(@"success");
@@ -9520,7 +9539,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [startCoordinateValue getValue:&startCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -9536,7 +9555,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [destinationCoordinateValue getValue:&destinationCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -9550,7 +9569,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapDrivingStrategy drivingStrategy = (AMapDrivingStrategy) [args[@"drivingStrategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.drivingStrategy = drivingStrategy;
           methodResult(@"success");
@@ -9564,7 +9583,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapTransitStrategy transitStrategy = (AMapTransitStrategy) [args[@"transitStrategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.transitStrategy = transitStrategy;
           methodResult(@"success");
@@ -9578,7 +9597,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapRouteSearchType routeType = (AMapRouteSearchType) [args[@"routeType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteConfig * ref = (AMapRouteConfig *) HEAP[@(refId)];
+          AMapRouteConfig* ref = (AMapRouteConfig*) HEAP[@(refId)];
       
           ref.routeType = routeType;
           methodResult(@"success");
@@ -9589,10 +9608,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * appScheme = (NSString *) args[@"appScheme"];
+          NSString* appScheme = (NSString*) args[@"appScheme"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           ref.appScheme = appScheme;
           methodResult(@"success");
@@ -9603,10 +9622,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * appName = (NSString *) args[@"appName"];
+          NSString* appName = (NSString*) args[@"appName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           ref.appName = appName;
           methodResult(@"success");
@@ -9617,10 +9636,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -9636,7 +9655,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [leftTopCoordinateValue getValue:&leftTopCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           ref.leftTopCoordinate = leftTopCoordinate;
           methodResult(@"success");
@@ -9652,7 +9671,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [rightBottomCoordinateValue getValue:&rightBottomCoordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIConfig * ref = (AMapPOIConfig *) HEAP[@(refId)];
+          AMapPOIConfig* ref = (AMapPOIConfig*) HEAP[@(refId)];
       
           ref.rightBottomCoordinate = rightBottomCoordinate;
           methodResult(@"success");
@@ -9663,10 +9682,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * apiKey = (NSString *) args[@"apiKey"];
+          NSString* apiKey = (NSString*) args[@"apiKey"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           ref.apiKey = apiKey;
           methodResult(@"success");
@@ -9680,7 +9699,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL enableHTTPS = [args[@"enableHTTPS"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           ref.enableHTTPS = enableHTTPS;
           methodResult(@"success");
@@ -9694,7 +9713,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL crashReportEnabled = [args[@"crashReportEnabled"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapServices * ref = (AMapServices *) HEAP[@(refId)];
+          AMapServices* ref = (AMapServices*) HEAP[@(refId)];
       
           ref.crashReportEnabled = crashReportEnabled;
           methodResult(@"success");
@@ -9705,10 +9724,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * types = (NSString *) args[@"types"];
+          NSString* types = (NSString*) args[@"types"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.types = types;
           methodResult(@"success");
@@ -9722,7 +9741,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger sortrule = [args[@"sortrule"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.sortrule = sortrule;
           methodResult(@"success");
@@ -9736,7 +9755,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -9750,7 +9769,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -9761,10 +9780,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * building = (NSString *) args[@"building"];
+          NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -9778,7 +9797,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -9792,7 +9811,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireSubPOIs = [args[@"requireSubPOIs"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest * ref = (AMapPOISearchBaseRequest *) HEAP[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.requireSubPOIs = requireSubPOIs;
           methodResult(@"success");
@@ -9803,10 +9822,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIIDSearchRequest * ref = (AMapPOIIDSearchRequest *) HEAP[@(refId)];
+          AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9817,10 +9836,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -9831,10 +9850,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9848,7 +9867,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL cityLimit = [args[@"cityLimit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.cityLimit = cityLimit;
           methodResult(@"success");
@@ -9859,10 +9878,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest * ref = (AMapPOIKeywordsSearchRequest *) HEAP[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9873,10 +9892,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -9887,10 +9906,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9904,7 +9923,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -9915,10 +9934,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest * ref = (AMapPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9929,10 +9948,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -9943,10 +9962,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPolygon * polygon = (AMapGeoPolygon *) HEAP[@([args[@"polygon"] integerValue])];
+          AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[@([args[@"polygon"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest * ref = (AMapPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.polygon = polygon;
           methodResult(@"success");
@@ -9960,7 +9979,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -9971,12 +9990,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapSuggestion * suggestion = (AMapSuggestion *) HEAP[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse * ref = (AMapPOISearchResponse *) HEAP[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
+          methodResult(@"success");
+      },
+      
+      @"AMapPOISearchResponse::set_pois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPOISearchResponse::set_pois");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
+          NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
+          for (int i = 0; i < pois.count; i++) {
+              AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
+              [pois addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
+      
+          ref.pois = pois;
           methodResult(@"success");
       },
       
@@ -9985,10 +10023,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -9999,10 +10037,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -10016,7 +10054,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapRoutePOISearchType searchType = (AMapRoutePOISearchType) [args[@"searchType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.searchType = searchType;
           methodResult(@"success");
@@ -10030,7 +10068,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -10044,7 +10082,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger range = [args[@"range"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.range = range;
           methodResult(@"success");
@@ -10055,12 +10093,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * polylineStr = (NSString *) args[@"polylineStr"];
+          NSString* polylineStr = (NSString*) args[@"polylineStr"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest * ref = (AMapRoutePOISearchRequest *) HEAP[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.polylineStr = polylineStr;
+          methodResult(@"success");
+      },
+      
+      @"AMapRoutePOISearchRequest::set_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoutePOISearchRequest::set_polyline");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* polylineRefArray = (NSArray<NSNumber*> *) args[@"polyline"];
+          NSMutableArray<AMapGeoPoint*>* polyline = [NSMutableArray arrayWithCapacity:polylineRefArray.count];
+          for (int i = 0; i < polyline.count; i++) {
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[polylineRefArray objectAtIndex:i]];
+              [polyline addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
+      
+          ref.polyline = polyline;
           methodResult(@"success");
       },
       
@@ -10072,9 +10129,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse * ref = (AMapRoutePOISearchResponse *) HEAP[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
+          methodResult(@"success");
+      },
+      
+      @"AMapRoutePOISearchResponse::set_pois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoutePOISearchResponse::set_pois");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
+          NSMutableArray<AMapRoutePOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
+          for (int i = 0; i < pois.count; i++) {
+              AMapRoutePOI* item = (AMapRoutePOI*) HEAP[[poisRefArray objectAtIndex:i]];
+              [pois addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
+      
+          ref.pois = pois;
           methodResult(@"success");
       },
       
@@ -10083,10 +10159,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10097,10 +10173,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10111,10 +10187,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * types = (NSString *) args[@"types"];
+          NSString* types = (NSString*) args[@"types"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.types = types;
           methodResult(@"success");
@@ -10128,7 +10204,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL cityLimit = [args[@"cityLimit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.cityLimit = cityLimit;
           methodResult(@"success");
@@ -10139,10 +10215,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * location = (NSString *) args[@"location"];
+          NSString* location = (NSString*) args[@"location"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest * ref = (AMapInputTipsSearchRequest *) HEAP[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10156,9 +10232,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse * ref = (AMapInputTipsSearchResponse *) HEAP[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
+          methodResult(@"success");
+      },
+      
+      @"AMapInputTipsSearchResponse::set_tips": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapInputTipsSearchResponse::set_tips");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* tipsRefArray = (NSArray<NSNumber*> *) args[@"tips"];
+          NSMutableArray<AMapTip*>* tips = [NSMutableArray arrayWithCapacity:tipsRefArray.count];
+          for (int i = 0; i < tips.count; i++) {
+              AMapTip* item = (AMapTip*) HEAP[[tipsRefArray objectAtIndex:i]];
+              [tips addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
+      
+          ref.tips = tips;
           methodResult(@"success");
       },
       
@@ -10167,10 +10262,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * address = (NSString *) args[@"address"];
+          NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -10181,10 +10276,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest * ref = (AMapGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10198,9 +10293,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse * ref = (AMapGeocodeSearchResponse *) HEAP[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
+          methodResult(@"success");
+      },
+      
+      @"AMapGeocodeSearchResponse::set_geocodes": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapGeocodeSearchResponse::set_geocodes");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* geocodesRefArray = (NSArray<NSNumber*> *) args[@"geocodes"];
+          NSMutableArray<AMapGeocode*>* geocodes = [NSMutableArray arrayWithCapacity:geocodesRefArray.count];
+          for (int i = 0; i < geocodes.count; i++) {
+              AMapGeocode* item = (AMapGeocode*) HEAP[[geocodesRefArray objectAtIndex:i]];
+              [geocodes addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
+      
+          ref.geocodes = geocodes;
           methodResult(@"success");
       },
       
@@ -10212,7 +10326,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -10223,10 +10337,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10240,7 +10354,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -10251,10 +10365,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * poitype = (NSString *) args[@"poitype"];
+          NSString* poitype = (NSString*) args[@"poitype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest * ref = (AMapReGeocodeSearchRequest *) HEAP[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.poitype = poitype;
           methodResult(@"success");
@@ -10265,10 +10379,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapReGeocode * regeocode = (AMapReGeocode *) HEAP[@([args[@"regeocode"] integerValue])];
+          AMapReGeocode* regeocode = (AMapReGeocode*) HEAP[@([args[@"regeocode"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchResponse * ref = (AMapReGeocodeSearchResponse *) HEAP[@(refId)];
+          AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP[@(refId)];
       
           ref.regeocode = regeocode;
           methodResult(@"success");
@@ -10279,10 +10393,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10293,10 +10407,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10310,7 +10424,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -10324,7 +10438,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest * ref = (AMapBusStopSearchRequest *) HEAP[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -10338,7 +10452,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -10349,12 +10463,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapSuggestion * suggestion = (AMapSuggestion *) HEAP[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse * ref = (AMapBusStopSearchResponse *) HEAP[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
+          methodResult(@"success");
+      },
+      
+      @"AMapBusStopSearchResponse::set_busstops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusStopSearchResponse::set_busstops");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* busstopsRefArray = (NSArray<NSNumber*> *) args[@"busstops"];
+          NSMutableArray<AMapBusStop*>* busstops = [NSMutableArray arrayWithCapacity:busstopsRefArray.count];
+          for (int i = 0; i < busstops.count; i++) {
+              AMapBusStop* item = (AMapBusStop*) HEAP[[busstopsRefArray objectAtIndex:i]];
+              [busstops addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
+      
+          ref.busstops = busstops;
           methodResult(@"success");
       },
       
@@ -10363,10 +10496,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10380,7 +10513,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -10394,7 +10527,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -10408,7 +10541,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest * ref = (AMapBusLineBaseSearchRequest *) HEAP[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -10419,10 +10552,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineNameSearchRequest * ref = (AMapBusLineNameSearchRequest *) HEAP[@(refId)];
+          AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10433,10 +10566,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineIDSearchRequest * ref = (AMapBusLineIDSearchRequest *) HEAP[@(refId)];
+          AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -10450,7 +10583,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -10461,12 +10594,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapSuggestion * suggestion = (AMapSuggestion *) HEAP[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse * ref = (AMapBusLineSearchResponse *) HEAP[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
+          methodResult(@"success");
+      },
+      
+      @"AMapBusLineSearchResponse::set_buslines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusLineSearchResponse::set_buslines");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
+          NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
+          for (int i = 0; i < buslines.count; i++) {
+              AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
+              [buslines addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
+      
+          ref.buslines = buslines;
           methodResult(@"success");
       },
       
@@ -10475,10 +10627,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest * ref = (AMapDistrictSearchRequest *) HEAP[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10492,9 +10644,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse * ref = (AMapDistrictSearchResponse *) HEAP[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistrictSearchResponse::set_districts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrictSearchResponse::set_districts");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
+          NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
+          for (int i = 0; i < districts.count; i++) {
+              AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
+              [districts addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
+      
+          ref.districts = districts;
           methodResult(@"success");
       },
       
@@ -10503,10 +10674,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -10517,10 +10688,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest * ref = (AMapRouteSearchBaseRequest *) HEAP[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -10534,9 +10705,47 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
+          methodResult(@"success");
+      },
+      
+      @"AMapDrivingRouteSearchRequest::set_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDrivingRouteSearchRequest::set_waypoints");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
+          NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
+          for (int i = 0; i < waypoints.count; i++) {
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:i]];
+              [waypoints addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
+      
+          ref.waypoints = waypoints;
+          methodResult(@"success");
+      },
+      
+      @"AMapDrivingRouteSearchRequest::set_avoidpolygons": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDrivingRouteSearchRequest::set_avoidpolygons");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* avoidpolygonsRefArray = (NSArray<NSNumber*> *) args[@"avoidpolygons"];
+          NSMutableArray<AMapGeoPolygon*>* avoidpolygons = [NSMutableArray arrayWithCapacity:avoidpolygonsRefArray.count];
+          for (int i = 0; i < avoidpolygons.count; i++) {
+              AMapGeoPolygon* item = (AMapGeoPolygon*) HEAP[[avoidpolygonsRefArray objectAtIndex:i]];
+              [avoidpolygons addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
+      
+          ref.avoidpolygons = avoidpolygons;
           methodResult(@"success");
       },
       
@@ -10545,10 +10754,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * avoidroad = (NSString *) args[@"avoidroad"];
+          NSString* avoidroad = (NSString*) args[@"avoidroad"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.avoidroad = avoidroad;
           methodResult(@"success");
@@ -10559,10 +10768,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * originId = (NSString *) args[@"originId"];
+          NSString* originId = (NSString*) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -10573,10 +10782,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationId = (NSString *) args[@"destinationId"];
+          NSString* destinationId = (NSString*) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -10587,10 +10796,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * origintype = (NSString *) args[@"origintype"];
+          NSString* origintype = (NSString*) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -10601,10 +10810,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationtype = (NSString *) args[@"destinationtype"];
+          NSString* destinationtype = (NSString*) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -10618,7 +10827,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -10629,10 +10838,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * plateProvince = (NSString *) args[@"plateProvince"];
+          NSString* plateProvince = (NSString*) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -10643,10 +10852,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * plateNumber = (NSString *) args[@"plateNumber"];
+          NSString* plateNumber = (NSString*) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -10660,7 +10869,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger ferry = [args[@"ferry"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.ferry = ferry;
           methodResult(@"success");
@@ -10674,7 +10883,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger cartype = [args[@"cartype"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest * ref = (AMapDrivingRouteSearchRequest *) HEAP[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.cartype = cartype;
           methodResult(@"success");
@@ -10688,7 +10897,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger multipath = [args[@"multipath"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalkingRouteSearchRequest * ref = (AMapWalkingRouteSearchRequest *) HEAP[@(refId)];
+          AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.multipath = multipath;
           methodResult(@"success");
@@ -10702,7 +10911,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -10713,10 +10922,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10727,10 +10936,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationCity = (NSString *) args[@"destinationCity"];
+          NSString* destinationCity = (NSString*) args[@"destinationCity"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationCity = destinationCity;
           methodResult(@"success");
@@ -10744,7 +10953,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL nightflag = [args[@"nightflag"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.nightflag = nightflag;
           methodResult(@"success");
@@ -10758,7 +10967,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest * ref = (AMapTransitRouteSearchRequest *) HEAP[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -10772,7 +10981,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRidingRouteSearchRequest * ref = (AMapRidingRouteSearchRequest *) HEAP[@(refId)];
+          AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -10786,7 +10995,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -10797,10 +11006,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapRoute * route = (AMapRoute *) HEAP[@([args[@"route"] integerValue])];
+          AMapRoute* route = (AMapRoute*) HEAP[@([args[@"route"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse * ref = (AMapRouteSearchResponse *) HEAP[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           ref.route = route;
           methodResult(@"success");
@@ -10814,9 +11023,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
+          methodResult(@"success");
+      },
+      
+      @"AMapTruckRouteSearchRequest::set_waypoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapTruckRouteSearchRequest::set_waypoints");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
+          NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
+          for (int i = 0; i < waypoints.count; i++) {
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:i]];
+              [waypoints addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
+      
+          ref.waypoints = waypoints;
           methodResult(@"success");
       },
       
@@ -10825,10 +11053,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * originId = (NSString *) args[@"originId"];
+          NSString* originId = (NSString*) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -10839,10 +11067,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationId = (NSString *) args[@"destinationId"];
+          NSString* destinationId = (NSString*) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -10853,10 +11081,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * origintype = (NSString *) args[@"origintype"];
+          NSString* origintype = (NSString*) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -10867,10 +11095,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationtype = (NSString *) args[@"destinationtype"];
+          NSString* destinationtype = (NSString*) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -10881,10 +11109,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * plateProvince = (NSString *) args[@"plateProvince"];
+          NSString* plateProvince = (NSString*) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -10895,10 +11123,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * plateNumber = (NSString *) args[@"plateNumber"];
+          NSString* plateNumber = (NSString*) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -10912,7 +11140,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapTruckSizeType size = (AMapTruckSizeType) [args[@"size"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.size = size;
           methodResult(@"success");
@@ -10926,7 +11154,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat height = [args[@"height"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.height = height;
           methodResult(@"success");
@@ -10940,7 +11168,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat width = [args[@"width"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.width = width;
           methodResult(@"success");
@@ -10954,7 +11182,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat load = [args[@"load"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.load = load;
           methodResult(@"success");
@@ -10968,7 +11196,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat weight = [args[@"weight"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.weight = weight;
           methodResult(@"success");
@@ -10982,9 +11210,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger axis = [args[@"axis"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest * ref = (AMapTruckRouteSearchRequest *) HEAP[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.axis = axis;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistanceSearchRequest::set_origins": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistanceSearchRequest::set_origins");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* originsRefArray = (NSArray<NSNumber*> *) args[@"origins"];
+          NSMutableArray<AMapGeoPoint*>* origins = [NSMutableArray arrayWithCapacity:originsRefArray.count];
+          for (int i = 0; i < origins.count; i++) {
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[originsRefArray objectAtIndex:i]];
+              [origins addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
+      
+          ref.origins = origins;
           methodResult(@"success");
       },
       
@@ -10993,10 +11240,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -11010,9 +11257,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest * ref = (AMapDistanceSearchRequest *) HEAP[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistanceSearchResponse::set_results": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistanceSearchResponse::set_results");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* resultsRefArray = (NSArray<NSNumber*> *) args[@"results"];
+          NSMutableArray<AMapDistanceResult*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
+          for (int i = 0; i < results.count; i++) {
+              AMapDistanceResult* item = (AMapDistanceResult*) HEAP[[resultsRefArray objectAtIndex:i]];
+              [results addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP[@(refId)];
+      
+          ref.results = results;
           methodResult(@"success");
       },
       
@@ -11021,10 +11287,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -11038,9 +11304,47 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapWeatherType type = (AMapWeatherType) [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest * ref = (AMapWeatherSearchRequest *) HEAP[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
+          methodResult(@"success");
+      },
+      
+      @"AMapWeatherSearchResponse::set_lives": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapWeatherSearchResponse::set_lives");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* livesRefArray = (NSArray<NSNumber*> *) args[@"lives"];
+          NSMutableArray<AMapLocalWeatherLive*>* lives = [NSMutableArray arrayWithCapacity:livesRefArray.count];
+          for (int i = 0; i < lives.count; i++) {
+              AMapLocalWeatherLive* item = (AMapLocalWeatherLive*) HEAP[[livesRefArray objectAtIndex:i]];
+              [lives addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
+      
+          ref.lives = lives;
+          methodResult(@"success");
+      },
+      
+      @"AMapWeatherSearchResponse::set_forecasts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapWeatherSearchResponse::set_forecasts");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* forecastsRefArray = (NSArray<NSNumber*> *) args[@"forecasts"];
+          NSMutableArray<AMapLocalWeatherForecast*>* forecasts = [NSMutableArray arrayWithCapacity:forecastsRefArray.count];
+          for (int i = 0; i < forecasts.count; i++) {
+              AMapLocalWeatherForecast* item = (AMapLocalWeatherForecast*) HEAP[[forecastsRefArray objectAtIndex:i]];
+              [forecasts addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
+      
+          ref.forecasts = forecasts;
           methodResult(@"success");
       },
       
@@ -11052,7 +11356,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger level = [args[@"level"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -11066,7 +11370,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest * ref = (AMapRoadTrafficSearchBaseRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -11077,10 +11381,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * roadName = (NSString *) args[@"roadName"];
+          NSString* roadName = (NSString*) args[@"roadName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           ref.roadName = roadName;
           methodResult(@"success");
@@ -11091,10 +11395,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest * ref = (AMapRoadTrafficSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11105,10 +11409,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11122,7 +11426,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest * ref = (AMapRoadTrafficCircleSearchRequest *) HEAP[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -11133,10 +11437,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapTrafficInfo * trafficInfo = (AMapTrafficInfo *) HEAP[@([args[@"trafficInfo"] integerValue])];
+          AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) HEAP[@([args[@"trafficInfo"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchResponse * ref = (AMapRoadTrafficSearchResponse *) HEAP[@(refId)];
+          AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP[@(refId)];
       
           ref.trafficInfo = trafficInfo;
           methodResult(@"success");
@@ -11147,10 +11451,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * center = (AMapGeoPoint *) HEAP[@([args[@"center"] integerValue])];
+          AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -11164,7 +11468,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -11178,7 +11482,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapNearbySearchType searchType = (AMapNearbySearchType) [args[@"searchType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.searchType = searchType;
           methodResult(@"success");
@@ -11192,7 +11496,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger timeRange = [args[@"timeRange"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.timeRange = timeRange;
           methodResult(@"success");
@@ -11206,7 +11510,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger limit = [args[@"limit"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest * ref = (AMapNearbySearchRequest *) HEAP[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.limit = limit;
           methodResult(@"success");
@@ -11220,9 +11524,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse * ref = (AMapNearbySearchResponse *) HEAP[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
+          methodResult(@"success");
+      },
+      
+      @"AMapNearbySearchResponse::set_infos": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapNearbySearchResponse::set_infos");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* infosRefArray = (NSArray<NSNumber*> *) args[@"infos"];
+          NSMutableArray<AMapNearbyUserInfo*>* infos = [NSMutableArray arrayWithCapacity:infosRefArray.count];
+          for (int i = 0; i < infos.count; i++) {
+              AMapNearbyUserInfo* item = (AMapNearbyUserInfo*) HEAP[[infosRefArray objectAtIndex:i]];
+              [infos addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
+      
+          ref.infos = infos;
           methodResult(@"success");
       },
       
@@ -11231,12 +11554,26 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * tableID = (NSString *) args[@"tableID"];
+          NSString* tableID = (NSString*) args[@"tableID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.tableID = tableID;
+          methodResult(@"success");
+      },
+      
+      @"AMapCloudSearchBaseRequest::set_filter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCloudSearchBaseRequest::set_filter");
+      
+          // 参数
+          // jsonable参数
+          NSString* filter = (NSString*) args[@"filter"];
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
+      
+          ref.filter = filter;
           methodResult(@"success");
       },
       
@@ -11245,10 +11582,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * sortFields = (NSString *) args[@"sortFields"];
+          NSString* sortFields = (NSString*) args[@"sortFields"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.sortFields = sortFields;
           methodResult(@"success");
@@ -11262,7 +11599,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapCloudSortType sortType = (AMapCloudSortType) [args[@"sortType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.sortType = sortType;
           methodResult(@"success");
@@ -11276,7 +11613,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -11290,7 +11627,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest * ref = (AMapCloudSearchBaseRequest *) HEAP[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -11301,10 +11638,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * center = (AMapGeoPoint *) HEAP[@([args[@"center"] integerValue])];
+          AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -11318,7 +11655,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -11329,10 +11666,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest * ref = (AMapCloudPOIAroundSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -11343,10 +11680,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPolygon * polygon = (AMapGeoPolygon *) HEAP[@([args[@"polygon"] integerValue])];
+          AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[@([args[@"polygon"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.polygon = polygon;
           methodResult(@"success");
@@ -11357,10 +11694,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest * ref = (AMapCloudPOIPolygonSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -11374,7 +11711,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger uid = [args[@"uid"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIIDSearchRequest * ref = (AMapCloudPOIIDSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11385,10 +11722,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * keywords = (NSString *) args[@"keywords"];
+          NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -11399,10 +11736,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest * ref = (AMapCloudPOILocalSearchRequest *) HEAP[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -11416,9 +11753,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse * ref = (AMapCloudPOISearchResponse *) HEAP[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
+          methodResult(@"success");
+      },
+      
+      @"AMapCloudPOISearchResponse::set_POIs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCloudPOISearchResponse::set_POIs");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* POIsRefArray = (NSArray<NSNumber*> *) args[@"POIs"];
+          NSMutableArray<AMapCloudPOI*>* POIs = [NSMutableArray arrayWithCapacity:POIsRefArray.count];
+          for (int i = 0; i < POIs.count; i++) {
+              AMapCloudPOI* item = (AMapCloudPOI*) HEAP[[POIsRefArray objectAtIndex:i]];
+              [POIs addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
+      
+          ref.POIs = POIs;
           methodResult(@"success");
       },
       
@@ -11427,10 +11783,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11441,10 +11797,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest * ref = (AMapLocationShareSearchRequest *) HEAP[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11455,10 +11811,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11469,10 +11825,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11483,10 +11839,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11497,10 +11853,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * address = (NSString *) args[@"address"];
+          NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest * ref = (AMapPOIShareSearchRequest *) HEAP[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -11514,7 +11870,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -11528,7 +11884,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -11539,10 +11895,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * startCoordinate = (AMapGeoPoint *) HEAP[@([args[@"startCoordinate"] integerValue])];
+          AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[@([args[@"startCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -11553,10 +11909,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destinationCoordinate = (AMapGeoPoint *) HEAP[@([args[@"destinationCoordinate"] integerValue])];
+          AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -11567,10 +11923,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * startName = (NSString *) args[@"startName"];
+          NSString* startName = (NSString*) args[@"startName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.startName = startName;
           methodResult(@"success");
@@ -11581,10 +11937,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationName = (NSString *) args[@"destinationName"];
+          NSString* destinationName = (NSString*) args[@"destinationName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest * ref = (AMapRouteShareSearchRequest *) HEAP[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.destinationName = destinationName;
           methodResult(@"success");
@@ -11598,7 +11954,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -11609,10 +11965,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * startCoordinate = (AMapGeoPoint *) HEAP[@([args[@"startCoordinate"] integerValue])];
+          AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[@([args[@"startCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -11623,10 +11979,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destinationCoordinate = (AMapGeoPoint *) HEAP[@([args[@"destinationCoordinate"] integerValue])];
+          AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest * ref = (AMapNavigationShareSearchRequest *) HEAP[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -11637,10 +11993,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * shareURL = (NSString *) args[@"shareURL"];
+          NSString* shareURL = (NSString*) args[@"shareURL"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapShareSearchResponse * ref = (AMapShareSearchResponse *) HEAP[@(refId)];
+          AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP[@(refId)];
       
           ref.shareURL = shareURL;
           methodResult(@"success");
@@ -11651,10 +12007,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * beginTime = (NSString *) args[@"beginTime"];
+          NSString* beginTime = (NSString*) args[@"beginTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.beginTime = beginTime;
           methodResult(@"success");
@@ -11668,7 +12024,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger interval = [args[@"interval"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.interval = interval;
           methodResult(@"success");
@@ -11682,7 +12038,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger timeCount = [args[@"timeCount"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.timeCount = timeCount;
           methodResult(@"success");
@@ -11696,7 +12052,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -11707,10 +12063,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * originId = (NSString *) args[@"originId"];
+          NSString* originId = (NSString*) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -11721,10 +12077,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationId = (NSString *) args[@"destinationId"];
+          NSString* destinationId = (NSString*) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -11735,10 +12091,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * origintype = (NSString *) args[@"origintype"];
+          NSString* origintype = (NSString*) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -11749,10 +12105,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * destinationtype = (NSString *) args[@"destinationtype"];
+          NSString* destinationtype = (NSString*) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -11763,10 +12119,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * parentId = (NSString *) args[@"parentId"];
+          NSString* parentId = (NSString*) args[@"parentId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.parentId = parentId;
           methodResult(@"success");
@@ -11777,10 +12133,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * plateProvince = (NSString *) args[@"plateProvince"];
+          NSString* plateProvince = (NSString*) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -11791,10 +12147,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * plateNumber = (NSString *) args[@"plateNumber"];
+          NSString* plateNumber = (NSString*) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -11808,9 +12164,47 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger cartype = [args[@"cartype"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest * ref = (AMapFutureRouteSearchRequest *) HEAP[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.cartype = cartype;
+          methodResult(@"success");
+      },
+      
+      @"AMapFutureRouteSearchResponse::set_paths": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureRouteSearchResponse::set_paths");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
+          NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
+          for (int i = 0; i < paths.count; i++) {
+              AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
+              [paths addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
+      
+          ref.paths = paths;
+          methodResult(@"success");
+      },
+      
+      @"AMapFutureRouteSearchResponse::set_timeInfos": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureRouteSearchResponse::set_timeInfos");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* timeInfosRefArray = (NSArray<NSNumber*> *) args[@"timeInfos"];
+          NSMutableArray<AMapFutureTimeInfo*>* timeInfos = [NSMutableArray arrayWithCapacity:timeInfosRefArray.count];
+          for (int i = 0; i < timeInfos.count; i++) {
+              AMapFutureTimeInfo* item = (AMapFutureTimeInfo*) HEAP[[timeInfosRefArray objectAtIndex:i]];
+              [timeInfos addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
+      
+          ref.timeInfos = timeInfos;
           methodResult(@"success");
       },
       
@@ -11822,7 +12216,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat latitude = [args[@"latitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           ref.latitude = latitude;
           methodResult(@"success");
@@ -11836,9 +12230,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat longitude = [args[@"longitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint * ref = (AMapGeoPoint *) HEAP[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           ref.longitude = longitude;
+          methodResult(@"success");
+      },
+      
+      @"AMapGeoPolygon::set_points": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapGeoPolygon::set_points");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
+          NSMutableArray<AMapGeoPoint*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
+          for (int i = 0; i < points.count; i++) {
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[pointsRefArray objectAtIndex:i]];
+              [points addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP[@(refId)];
+      
+          ref.points = points;
           methodResult(@"success");
       },
       
@@ -11847,10 +12260,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -11861,10 +12274,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -11875,10 +12288,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11892,9 +12305,61 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger num = [args[@"num"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity * ref = (AMapCity *) HEAP[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.num = num;
+          methodResult(@"success");
+      },
+      
+      @"AMapCity::set_districts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCity::set_districts");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
+          NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
+          for (int i = 0; i < districts.count; i++) {
+              AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
+              [districts addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
+      
+          ref.districts = districts;
+          methodResult(@"success");
+      },
+      
+      @"AMapSuggestion::set_keywords": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapSuggestion::set_keywords");
+      
+          // 参数
+          // jsonable参数
+          NSString* keywords = (NSString*) args[@"keywords"];
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
+      
+          ref.keywords = keywords;
+          methodResult(@"success");
+      },
+      
+      @"AMapSuggestion::set_cities": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapSuggestion::set_cities");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
+          NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
+          for (int i = 0; i < cities.count; i++) {
+              AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
+              [cities addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
+      
+          ref.cities = cities;
           methodResult(@"success");
       },
       
@@ -11903,10 +12368,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11917,10 +12382,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11931,10 +12396,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11945,10 +12410,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * district = (NSString *) args[@"district"];
+          NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -11959,10 +12424,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * address = (NSString *) args[@"address"];
+          NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -11973,10 +12438,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11987,10 +12452,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * typecode = (NSString *) args[@"typecode"];
+          NSString* typecode = (NSString*) args[@"typecode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip * ref = (AMapTip *) HEAP[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.typecode = typecode;
           methodResult(@"success");
@@ -12001,10 +12466,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * title = (NSString *) args[@"title"];
+          NSString* title = (NSString*) args[@"title"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           ref.title = title;
           methodResult(@"success");
@@ -12015,10 +12480,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * url = (NSString *) args[@"url"];
+          NSString* url = (NSString*) args[@"url"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage * ref = (AMapImage *) HEAP[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           ref.url = url;
           methodResult(@"success");
@@ -12032,7 +12497,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat rating = [args[@"rating"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           ref.rating = rating;
           methodResult(@"success");
@@ -12046,7 +12511,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -12057,10 +12522,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * openTime = (NSString *) args[@"openTime"];
+          NSString* openTime = (NSString*) args[@"openTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension * ref = (AMapPOIExtension *) HEAP[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           ref.openTime = openTime;
           methodResult(@"success");
@@ -12074,7 +12539,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger floor = [args[@"floor"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           ref.floor = floor;
           methodResult(@"success");
@@ -12085,10 +12550,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * floorName = (NSString *) args[@"floorName"];
+          NSString* floorName = (NSString*) args[@"floorName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           ref.floorName = floorName;
           methodResult(@"success");
@@ -12099,10 +12564,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * pid = (NSString *) args[@"pid"];
+          NSString* pid = (NSString*) args[@"pid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData * ref = (AMapIndoorData *) HEAP[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           ref.pid = pid;
           methodResult(@"success");
@@ -12113,10 +12578,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12127,10 +12592,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12141,10 +12606,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * sname = (NSString *) args[@"sname"];
+          NSString* sname = (NSString*) args[@"sname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.sname = sname;
           methodResult(@"success");
@@ -12155,10 +12620,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12169,10 +12634,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * address = (NSString *) args[@"address"];
+          NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -12186,7 +12651,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12197,10 +12662,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * subtype = (NSString *) args[@"subtype"];
+          NSString* subtype = (NSString*) args[@"subtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI * ref = (AMapSubPOI *) HEAP[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.subtype = subtype;
           methodResult(@"success");
@@ -12211,10 +12676,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12225,10 +12690,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12239,10 +12704,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12256,7 +12721,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12270,7 +12735,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI * ref = (AMapRoutePOI *) HEAP[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -12281,10 +12746,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12295,10 +12760,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12309,10 +12774,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * type = (NSString *) args[@"type"];
+          NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -12323,10 +12788,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * typecode = (NSString *) args[@"typecode"];
+          NSString* typecode = (NSString*) args[@"typecode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.typecode = typecode;
           methodResult(@"success");
@@ -12337,10 +12802,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12351,10 +12816,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * address = (NSString *) args[@"address"];
+          NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -12365,10 +12830,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * tel = (NSString *) args[@"tel"];
+          NSString* tel = (NSString*) args[@"tel"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.tel = tel;
           methodResult(@"success");
@@ -12382,7 +12847,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12393,10 +12858,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * parkingType = (NSString *) args[@"parkingType"];
+          NSString* parkingType = (NSString*) args[@"parkingType"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.parkingType = parkingType;
           methodResult(@"success");
@@ -12407,10 +12872,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * shopID = (NSString *) args[@"shopID"];
+          NSString* shopID = (NSString*) args[@"shopID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.shopID = shopID;
           methodResult(@"success");
@@ -12421,10 +12886,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * postcode = (NSString *) args[@"postcode"];
+          NSString* postcode = (NSString*) args[@"postcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.postcode = postcode;
           methodResult(@"success");
@@ -12435,10 +12900,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * website = (NSString *) args[@"website"];
+          NSString* website = (NSString*) args[@"website"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.website = website;
           methodResult(@"success");
@@ -12449,10 +12914,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * email = (NSString *) args[@"email"];
+          NSString* email = (NSString*) args[@"email"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.email = email;
           methodResult(@"success");
@@ -12463,10 +12928,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * province = (NSString *) args[@"province"];
+          NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -12477,10 +12942,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * pcode = (NSString *) args[@"pcode"];
+          NSString* pcode = (NSString*) args[@"pcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.pcode = pcode;
           methodResult(@"success");
@@ -12491,10 +12956,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -12505,10 +12970,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -12519,10 +12984,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * district = (NSString *) args[@"district"];
+          NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -12533,10 +12998,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12547,10 +13012,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * gridcode = (NSString *) args[@"gridcode"];
+          NSString* gridcode = (NSString*) args[@"gridcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.gridcode = gridcode;
           methodResult(@"success");
@@ -12561,10 +13026,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * enterLocation = (AMapGeoPoint *) HEAP[@([args[@"enterLocation"] integerValue])];
+          AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP[@([args[@"enterLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.enterLocation = enterLocation;
           methodResult(@"success");
@@ -12575,10 +13040,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * exitLocation = (AMapGeoPoint *) HEAP[@([args[@"exitLocation"] integerValue])];
+          AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP[@([args[@"exitLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.exitLocation = exitLocation;
           methodResult(@"success");
@@ -12589,10 +13054,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * direction = (NSString *) args[@"direction"];
+          NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -12606,7 +13071,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL hasIndoorMap = [args[@"hasIndoorMap"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.hasIndoorMap = hasIndoorMap;
           methodResult(@"success");
@@ -12617,10 +13082,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * businessArea = (NSString *) args[@"businessArea"];
+          NSString* businessArea = (NSString*) args[@"businessArea"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.businessArea = businessArea;
           methodResult(@"success");
@@ -12631,12 +13096,50 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapIndoorData * indoorData = (AMapIndoorData *) HEAP[@([args[@"indoorData"] integerValue])];
+          AMapIndoorData* indoorData = (AMapIndoorData*) HEAP[@([args[@"indoorData"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.indoorData = indoorData;
+          methodResult(@"success");
+      },
+      
+      @"AMapPOI::set_subPOIs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPOI::set_subPOIs");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* subPOIsRefArray = (NSArray<NSNumber*> *) args[@"subPOIs"];
+          NSMutableArray<AMapSubPOI*>* subPOIs = [NSMutableArray arrayWithCapacity:subPOIsRefArray.count];
+          for (int i = 0; i < subPOIs.count; i++) {
+              AMapSubPOI* item = (AMapSubPOI*) HEAP[[subPOIsRefArray objectAtIndex:i]];
+              [subPOIs addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
+      
+          ref.subPOIs = subPOIs;
+          methodResult(@"success");
+      },
+      
+      @"AMapPOI::set_images": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPOI::set_images");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
+          NSMutableArray<AMapImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
+          for (int i = 0; i < images.count; i++) {
+              AMapImage* item = (AMapImage*) HEAP[[imagesRefArray objectAtIndex:i]];
+              [images addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
+      
+          ref.images = images;
           methodResult(@"success");
       },
       
@@ -12645,10 +13148,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapPOIExtension * extensionInfo = (AMapPOIExtension *) HEAP[@([args[@"extensionInfo"] integerValue])];
+          AMapPOIExtension* extensionInfo = (AMapPOIExtension*) HEAP[@([args[@"extensionInfo"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI * ref = (AMapPOI *) HEAP[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.extensionInfo = extensionInfo;
           methodResult(@"success");
@@ -12659,10 +13162,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12673,10 +13176,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12687,10 +13190,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12701,10 +13204,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12718,7 +13221,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat area = [args[@"area"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI * ref = (AMapAOI *) HEAP[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.area = area;
           methodResult(@"success");
@@ -12729,10 +13232,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12743,10 +13246,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12760,7 +13263,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12771,10 +13274,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * direction = (NSString *) args[@"direction"];
+          NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -12785,10 +13288,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad * ref = (AMapRoad *) HEAP[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12802,7 +13305,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12813,10 +13316,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * direction = (NSString *) args[@"direction"];
+          NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -12827,10 +13330,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12841,10 +13344,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * firstId = (NSString *) args[@"firstId"];
+          NSString* firstId = (NSString*) args[@"firstId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.firstId = firstId;
           methodResult(@"success");
@@ -12855,10 +13358,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * firstName = (NSString *) args[@"firstName"];
+          NSString* firstName = (NSString*) args[@"firstName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.firstName = firstName;
           methodResult(@"success");
@@ -12869,10 +13372,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * secondId = (NSString *) args[@"secondId"];
+          NSString* secondId = (NSString*) args[@"secondId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.secondId = secondId;
           methodResult(@"success");
@@ -12883,10 +13386,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * secondName = (NSString *) args[@"secondName"];
+          NSString* secondName = (NSString*) args[@"secondName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter * ref = (AMapRoadInter *) HEAP[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.secondName = secondName;
           methodResult(@"success");
@@ -12897,10 +13400,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * street = (NSString *) args[@"street"];
+          NSString* street = (NSString*) args[@"street"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.street = street;
           methodResult(@"success");
@@ -12911,10 +13414,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * number = (NSString *) args[@"number"];
+          NSString* number = (NSString*) args[@"number"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.number = number;
           methodResult(@"success");
@@ -12925,10 +13428,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12942,7 +13445,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12953,10 +13456,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * direction = (NSString *) args[@"direction"];
+          NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber * ref = (AMapStreetNumber *) HEAP[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -12967,10 +13470,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12981,10 +13484,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea * ref = (AMapBusinessArea *) HEAP[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12995,10 +13498,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * country = (NSString *) args[@"country"];
+          NSString* country = (NSString*) args[@"country"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.country = country;
           methodResult(@"success");
@@ -13009,10 +13512,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * province = (NSString *) args[@"province"];
+          NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -13023,10 +13526,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -13037,10 +13540,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -13051,10 +13554,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * district = (NSString *) args[@"district"];
+          NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -13065,10 +13568,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -13079,10 +13582,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * township = (NSString *) args[@"township"];
+          NSString* township = (NSString*) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.township = township;
           methodResult(@"success");
@@ -13093,10 +13596,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * towncode = (NSString *) args[@"towncode"];
+          NSString* towncode = (NSString*) args[@"towncode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.towncode = towncode;
           methodResult(@"success");
@@ -13107,10 +13610,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * neighborhood = (NSString *) args[@"neighborhood"];
+          NSString* neighborhood = (NSString*) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.neighborhood = neighborhood;
           methodResult(@"success");
@@ -13121,10 +13624,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * building = (NSString *) args[@"building"];
+          NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -13135,12 +13638,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapStreetNumber * streetNumber = (AMapStreetNumber *) HEAP[@([args[@"streetNumber"] integerValue])];
+          AMapStreetNumber* streetNumber = (AMapStreetNumber*) HEAP[@([args[@"streetNumber"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent * ref = (AMapAddressComponent *) HEAP[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.streetNumber = streetNumber;
+          methodResult(@"success");
+      },
+      
+      @"AMapAddressComponent::set_businessAreas": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapAddressComponent::set_businessAreas");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* businessAreasRefArray = (NSArray<NSNumber*> *) args[@"businessAreas"];
+          NSMutableArray<AMapBusinessArea*>* businessAreas = [NSMutableArray arrayWithCapacity:businessAreasRefArray.count];
+          for (int i = 0; i < businessAreas.count; i++) {
+              AMapBusinessArea* item = (AMapBusinessArea*) HEAP[[businessAreasRefArray objectAtIndex:i]];
+              [businessAreas addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
+      
+          ref.businessAreas = businessAreas;
           methodResult(@"success");
       },
       
@@ -13149,10 +13671,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * formattedAddress = (NSString *) args[@"formattedAddress"];
+          NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.formattedAddress = formattedAddress;
           methodResult(@"success");
@@ -13163,12 +13685,88 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapAddressComponent * addressComponent = (AMapAddressComponent *) HEAP[@([args[@"addressComponent"] integerValue])];
+          AMapAddressComponent* addressComponent = (AMapAddressComponent*) HEAP[@([args[@"addressComponent"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode * ref = (AMapReGeocode *) HEAP[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.addressComponent = addressComponent;
+          methodResult(@"success");
+      },
+      
+      @"AMapReGeocode::set_roads": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::set_roads");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
+          NSMutableArray<AMapRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
+          for (int i = 0; i < roads.count; i++) {
+              AMapRoad* item = (AMapRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
+              [roads addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
+      
+          ref.roads = roads;
+          methodResult(@"success");
+      },
+      
+      @"AMapReGeocode::set_roadinters": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::set_roadinters");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* roadintersRefArray = (NSArray<NSNumber*> *) args[@"roadinters"];
+          NSMutableArray<AMapRoadInter*>* roadinters = [NSMutableArray arrayWithCapacity:roadintersRefArray.count];
+          for (int i = 0; i < roadinters.count; i++) {
+              AMapRoadInter* item = (AMapRoadInter*) HEAP[[roadintersRefArray objectAtIndex:i]];
+              [roadinters addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
+      
+          ref.roadinters = roadinters;
+          methodResult(@"success");
+      },
+      
+      @"AMapReGeocode::set_pois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::set_pois");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
+          NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
+          for (int i = 0; i < pois.count; i++) {
+              AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
+              [pois addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
+      
+          ref.pois = pois;
+          methodResult(@"success");
+      },
+      
+      @"AMapReGeocode::set_aois": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapReGeocode::set_aois");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* aoisRefArray = (NSArray<NSNumber*> *) args[@"aois"];
+          NSMutableArray<AMapAOI*>* aois = [NSMutableArray arrayWithCapacity:aoisRefArray.count];
+          for (int i = 0; i < aois.count; i++) {
+              AMapAOI* item = (AMapAOI*) HEAP[[aoisRefArray objectAtIndex:i]];
+              [aois addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
+      
+          ref.aois = aois;
           methodResult(@"success");
       },
       
@@ -13177,10 +13775,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * formattedAddress = (NSString *) args[@"formattedAddress"];
+          NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.formattedAddress = formattedAddress;
           methodResult(@"success");
@@ -13191,10 +13789,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * province = (NSString *) args[@"province"];
+          NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -13205,10 +13803,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -13219,10 +13817,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -13233,10 +13831,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * district = (NSString *) args[@"district"];
+          NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -13247,10 +13845,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -13261,10 +13859,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * township = (NSString *) args[@"township"];
+          NSString* township = (NSString*) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.township = township;
           methodResult(@"success");
@@ -13275,10 +13873,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * neighborhood = (NSString *) args[@"neighborhood"];
+          NSString* neighborhood = (NSString*) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.neighborhood = neighborhood;
           methodResult(@"success");
@@ -13289,10 +13887,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * building = (NSString *) args[@"building"];
+          NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -13303,10 +13901,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -13317,10 +13915,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * level = (NSString *) args[@"level"];
+          NSString* level = (NSString*) args[@"level"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode * ref = (AMapGeocode *) HEAP[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -13331,10 +13929,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -13345,10 +13943,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -13359,10 +13957,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -13373,10 +13971,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -13387,12 +13985,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.location = location;
+          methodResult(@"success");
+      },
+      
+      @"AMapBusStop::set_buslines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusStop::set_buslines");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
+          NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
+          for (int i = 0; i < buslines.count; i++) {
+              AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
+              [buslines addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
+      
+          ref.buslines = buslines;
           methodResult(@"success");
       },
       
@@ -13401,10 +14018,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * sequence = (NSString *) args[@"sequence"];
+          NSString* sequence = (NSString*) args[@"sequence"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop * ref = (AMapBusStop *) HEAP[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.sequence = sequence;
           methodResult(@"success");
@@ -13415,10 +14032,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -13429,10 +14046,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * type = (NSString *) args[@"type"];
+          NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -13443,10 +14060,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -13457,10 +14074,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * polyline = (NSString *) args[@"polyline"];
+          NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -13471,10 +14088,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -13485,10 +14102,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * startStop = (NSString *) args[@"startStop"];
+          NSString* startStop = (NSString*) args[@"startStop"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.startStop = startStop;
           methodResult(@"success");
@@ -13499,10 +14116,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * endStop = (NSString *) args[@"endStop"];
+          NSString* endStop = (NSString*) args[@"endStop"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.endStop = endStop;
           methodResult(@"success");
@@ -13513,10 +14130,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -13527,10 +14144,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * startTime = (NSString *) args[@"startTime"];
+          NSString* startTime = (NSString*) args[@"startTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.startTime = startTime;
           methodResult(@"success");
@@ -13541,10 +14158,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * endTime = (NSString *) args[@"endTime"];
+          NSString* endTime = (NSString*) args[@"endTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.endTime = endTime;
           methodResult(@"success");
@@ -13555,10 +14172,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * company = (NSString *) args[@"company"];
+          NSString* company = (NSString*) args[@"company"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.company = company;
           methodResult(@"success");
@@ -13572,7 +14189,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat distance = [args[@"distance"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13586,7 +14203,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat basicPrice = [args[@"basicPrice"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.basicPrice = basicPrice;
           methodResult(@"success");
@@ -13600,7 +14217,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat totalPrice = [args[@"totalPrice"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.totalPrice = totalPrice;
           methodResult(@"success");
@@ -13611,12 +14228,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPolygon * bounds = (AMapGeoPolygon *) HEAP[@([args[@"bounds"] integerValue])];
+          AMapGeoPolygon* bounds = (AMapGeoPolygon*) HEAP[@([args[@"bounds"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.bounds = bounds;
+          methodResult(@"success");
+      },
+      
+      @"AMapBusLine::set_busStops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusLine::set_busStops");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* busStopsRefArray = (NSArray<NSNumber*> *) args[@"busStops"];
+          NSMutableArray<AMapBusStop*>* busStops = [NSMutableArray arrayWithCapacity:busStopsRefArray.count];
+          for (int i = 0; i < busStops.count; i++) {
+              AMapBusStop* item = (AMapBusStop*) HEAP[[busStopsRefArray objectAtIndex:i]];
+              [busStops addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
+      
+          ref.busStops = busStops;
           methodResult(@"success");
       },
       
@@ -13625,10 +14261,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapBusStop * departureStop = (AMapBusStop *) HEAP[@([args[@"departureStop"] integerValue])];
+          AMapBusStop* departureStop = (AMapBusStop*) HEAP[@([args[@"departureStop"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.departureStop = departureStop;
           methodResult(@"success");
@@ -13639,12 +14275,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapBusStop * arrivalStop = (AMapBusStop *) HEAP[@([args[@"arrivalStop"] integerValue])];
+          AMapBusStop* arrivalStop = (AMapBusStop*) HEAP[@([args[@"arrivalStop"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.arrivalStop = arrivalStop;
+          methodResult(@"success");
+      },
+      
+      @"AMapBusLine::set_viaBusStops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapBusLine::set_viaBusStops");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* viaBusStopsRefArray = (NSArray<NSNumber*> *) args[@"viaBusStops"];
+          NSMutableArray<AMapBusStop*>* viaBusStops = [NSMutableArray arrayWithCapacity:viaBusStopsRefArray.count];
+          for (int i = 0; i < viaBusStops.count; i++) {
+              AMapBusStop* item = (AMapBusStop*) HEAP[[viaBusStopsRefArray objectAtIndex:i]];
+              [viaBusStops addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
+      
+          ref.viaBusStops = viaBusStops;
           methodResult(@"success");
       },
       
@@ -13656,7 +14311,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine * ref = (AMapBusLine *) HEAP[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13667,10 +14322,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -13681,10 +14336,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * citycode = (NSString *) args[@"citycode"];
+          NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -13695,10 +14350,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -13709,10 +14364,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * level = (NSString *) args[@"level"];
+          NSString* level = (NSString*) args[@"level"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -13723,12 +14378,45 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * center = (AMapGeoPoint *) HEAP[@([args[@"center"] integerValue])];
+          AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict * ref = (AMapDistrict *) HEAP[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.center = center;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistrict::set_districts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrict::set_districts");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
+          NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
+          for (int i = 0; i < districts.count; i++) {
+              AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
+              [districts addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
+      
+          ref.districts = districts;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistrict::set_polylines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrict::set_polylines");
+      
+          // 参数
+          // jsonable参数
+          NSString* polylines = (NSString*) args[@"polylines"];
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
+      
+          ref.polylines = polylines;
           methodResult(@"success");
       },
       
@@ -13740,7 +14428,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13751,10 +14439,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * status = (NSString *) args[@"status"];
+          NSString* status = (NSString*) args[@"status"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -13765,10 +14453,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * polyline = (NSString *) args[@"polyline"];
+          NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC * ref = (AMapTMC *) HEAP[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -13779,10 +14467,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * instruction = (NSString *) args[@"instruction"];
+          NSString* instruction = (NSString*) args[@"instruction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.instruction = instruction;
           methodResult(@"success");
@@ -13793,10 +14481,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * orientation = (NSString *) args[@"orientation"];
+          NSString* orientation = (NSString*) args[@"orientation"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.orientation = orientation;
           methodResult(@"success");
@@ -13807,10 +14495,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * road = (NSString *) args[@"road"];
+          NSString* road = (NSString*) args[@"road"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.road = road;
           methodResult(@"success");
@@ -13824,7 +14512,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13838,7 +14526,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13849,10 +14537,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * polyline = (NSString *) args[@"polyline"];
+          NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -13863,10 +14551,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * action = (NSString *) args[@"action"];
+          NSString* action = (NSString*) args[@"action"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.action = action;
           methodResult(@"success");
@@ -13877,10 +14565,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * assistantAction = (NSString *) args[@"assistantAction"];
+          NSString* assistantAction = (NSString*) args[@"assistantAction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.assistantAction = assistantAction;
           methodResult(@"success");
@@ -13894,7 +14582,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat tolls = [args[@"tolls"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tolls = tolls;
           methodResult(@"success");
@@ -13908,7 +14596,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger tollDistance = [args[@"tollDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tollDistance = tollDistance;
           methodResult(@"success");
@@ -13919,12 +14607,50 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * tollRoad = (NSString *) args[@"tollRoad"];
+          NSString* tollRoad = (NSString*) args[@"tollRoad"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep * ref = (AMapStep *) HEAP[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tollRoad = tollRoad;
+          methodResult(@"success");
+      },
+      
+      @"AMapStep::set_cities": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapStep::set_cities");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
+          NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
+          for (int i = 0; i < cities.count; i++) {
+              AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
+              [cities addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
+      
+          ref.cities = cities;
+          methodResult(@"success");
+      },
+      
+      @"AMapStep::set_tmcs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapStep::set_tmcs");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
+          NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
+          for (int i = 0; i < tmcs.count; i++) {
+              AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
+              [tmcs addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
+      
+          ref.tmcs = tmcs;
           methodResult(@"success");
       },
       
@@ -13936,7 +14662,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13950,7 +14676,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13961,12 +14687,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * strategy = (NSString *) args[@"strategy"];
+          NSString* strategy = (NSString*) args[@"strategy"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.strategy = strategy;
+          methodResult(@"success");
+      },
+      
+      @"AMapPath::set_steps": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapPath::set_steps");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
+          NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
+          for (int i = 0; i < steps.count; i++) {
+              AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
+              [steps addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
+      
+          ref.steps = steps;
           methodResult(@"success");
       },
       
@@ -13978,7 +14723,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat tolls = [args[@"tolls"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.tolls = tolls;
           methodResult(@"success");
@@ -13992,7 +14737,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger tollDistance = [args[@"tollDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.tollDistance = tollDistance;
           methodResult(@"success");
@@ -14006,7 +14751,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger totalTrafficLights = [args[@"totalTrafficLights"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.totalTrafficLights = totalTrafficLights;
           methodResult(@"success");
@@ -14020,7 +14765,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger restriction = [args[@"restriction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath * ref = (AMapPath *) HEAP[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.restriction = restriction;
           methodResult(@"success");
@@ -14034,7 +14779,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -14048,7 +14793,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger pathindex = [args[@"pathindex"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.pathindex = pathindex;
           methodResult(@"success");
@@ -14062,9 +14807,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger restriction = [args[@"restriction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement * ref = (AMapFutureTimeInfoElement *) HEAP[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.restriction = restriction;
+          methodResult(@"success");
+      },
+      
+      @"AMapFutureTimeInfoElement::set_tmcs": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureTimeInfoElement::set_tmcs");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
+          NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
+          for (int i = 0; i < tmcs.count; i++) {
+              AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
+              [tmcs addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
+      
+          ref.tmcs = tmcs;
           methodResult(@"success");
       },
       
@@ -14073,12 +14837,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * startTime = (NSString *) args[@"startTime"];
+          NSString* startTime = (NSString*) args[@"startTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo * ref = (AMapFutureTimeInfo *) HEAP[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           ref.startTime = startTime;
+          methodResult(@"success");
+      },
+      
+      @"AMapFutureTimeInfo::set_elements": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapFutureTimeInfo::set_elements");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* elementsRefArray = (NSArray<NSNumber*> *) args[@"elements"];
+          NSMutableArray<AMapFutureTimeInfoElement*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
+          for (int i = 0; i < elements.count; i++) {
+              AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:i]];
+              [elements addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
+      
+          ref.elements = elements;
           methodResult(@"success");
       },
       
@@ -14087,10 +14870,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -14101,10 +14884,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -14118,7 +14901,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14132,9 +14915,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking * ref = (AMapWalking *) HEAP[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.duration = duration;
+          methodResult(@"success");
+      },
+      
+      @"AMapWalking::set_steps": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapWalking::set_steps");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
+          NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
+          for (int i = 0; i < steps.count; i++) {
+              AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
+              [steps addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
+      
+          ref.steps = steps;
           methodResult(@"success");
       },
       
@@ -14143,10 +14945,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -14157,10 +14959,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -14174,7 +14976,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14188,7 +14990,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -14199,10 +15001,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * sname = (NSString *) args[@"sname"];
+          NSString* sname = (NSString*) args[@"sname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.sname = sname;
           methodResult(@"success");
@@ -14213,10 +15015,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * tname = (NSString *) args[@"tname"];
+          NSString* tname = (NSString*) args[@"tname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi * ref = (AMapTaxi *) HEAP[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.tname = tname;
           methodResult(@"success");
@@ -14227,10 +15029,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -14241,10 +15043,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -14255,10 +15057,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -14269,10 +15071,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -14283,10 +15085,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * time = (NSString *) args[@"time"];
+          NSString* time = (NSString*) args[@"time"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.time = time;
           methodResult(@"success");
@@ -14300,7 +15102,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger wait = [args[@"wait"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.wait = wait;
           methodResult(@"success");
@@ -14314,7 +15116,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL isStart = [args[@"isStart"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.isStart = isStart;
           methodResult(@"success");
@@ -14328,7 +15130,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL isEnd = [args[@"isEnd"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation * ref = (AMapRailwayStation *) HEAP[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.isEnd = isEnd;
           methodResult(@"success");
@@ -14339,10 +15141,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * code = (NSString *) args[@"code"];
+          NSString* code = (NSString*) args[@"code"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           ref.code = code;
           methodResult(@"success");
@@ -14356,7 +15158,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace * ref = (AMapRailwaySpace *) HEAP[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -14367,10 +15169,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -14381,10 +15183,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -14395,10 +15197,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * trip = (NSString *) args[@"trip"];
+          NSString* trip = (NSString*) args[@"trip"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.trip = trip;
           methodResult(@"success");
@@ -14409,10 +15211,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * type = (NSString *) args[@"type"];
+          NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -14426,7 +15228,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14440,7 +15242,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger time = [args[@"time"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.time = time;
           methodResult(@"success");
@@ -14451,10 +15253,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapRailwayStation * departureStation = (AMapRailwayStation *) HEAP[@([args[@"departureStation"] integerValue])];
+          AMapRailwayStation* departureStation = (AMapRailwayStation*) HEAP[@([args[@"departureStation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.departureStation = departureStation;
           methodResult(@"success");
@@ -14465,12 +15267,69 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapRailwayStation * arrivalStation = (AMapRailwayStation *) HEAP[@([args[@"arrivalStation"] integerValue])];
+          AMapRailwayStation* arrivalStation = (AMapRailwayStation*) HEAP[@([args[@"arrivalStation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway * ref = (AMapRailway *) HEAP[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.arrivalStation = arrivalStation;
+          methodResult(@"success");
+      },
+      
+      @"AMapRailway::set_spaces": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRailway::set_spaces");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* spacesRefArray = (NSArray<NSNumber*> *) args[@"spaces"];
+          NSMutableArray<AMapRailwaySpace*>* spaces = [NSMutableArray arrayWithCapacity:spacesRefArray.count];
+          for (int i = 0; i < spaces.count; i++) {
+              AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP[[spacesRefArray objectAtIndex:i]];
+              [spaces addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
+      
+          ref.spaces = spaces;
+          methodResult(@"success");
+      },
+      
+      @"AMapRailway::set_viaStops": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRailway::set_viaStops");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* viaStopsRefArray = (NSArray<NSNumber*> *) args[@"viaStops"];
+          NSMutableArray<AMapRailwayStation*>* viaStops = [NSMutableArray arrayWithCapacity:viaStopsRefArray.count];
+          for (int i = 0; i < viaStops.count; i++) {
+              AMapRailwayStation* item = (AMapRailwayStation*) HEAP[[viaStopsRefArray objectAtIndex:i]];
+              [viaStops addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
+      
+          ref.viaStops = viaStops;
+          methodResult(@"success");
+      },
+      
+      @"AMapRailway::set_alters": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRailway::set_alters");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* altersRefArray = (NSArray<NSNumber*> *) args[@"alters"];
+          NSMutableArray<AMapRailway*>* alters = [NSMutableArray arrayWithCapacity:altersRefArray.count];
+          for (int i = 0; i < alters.count; i++) {
+              AMapRailway* item = (AMapRailway*) HEAP[[altersRefArray objectAtIndex:i]];
+              [alters addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
+      
+          ref.alters = alters;
           methodResult(@"success");
       },
       
@@ -14479,12 +15338,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapWalking * walking = (AMapWalking *) HEAP[@([args[@"walking"] integerValue])];
+          AMapWalking* walking = (AMapWalking*) HEAP[@([args[@"walking"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.walking = walking;
+          methodResult(@"success");
+      },
+      
+      @"AMapSegment::set_buslines": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapSegment::set_buslines");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
+          NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
+          for (int i = 0; i < buslines.count; i++) {
+              AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
+              [buslines addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
+      
+          ref.buslines = buslines;
           methodResult(@"success");
       },
       
@@ -14493,10 +15371,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapTaxi * taxi = (AMapTaxi *) HEAP[@([args[@"taxi"] integerValue])];
+          AMapTaxi* taxi = (AMapTaxi*) HEAP[@([args[@"taxi"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.taxi = taxi;
           methodResult(@"success");
@@ -14507,10 +15385,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapRailway * railway = (AMapRailway *) HEAP[@([args[@"railway"] integerValue])];
+          AMapRailway* railway = (AMapRailway*) HEAP[@([args[@"railway"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.railway = railway;
           methodResult(@"success");
@@ -14521,10 +15399,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * enterName = (NSString *) args[@"enterName"];
+          NSString* enterName = (NSString*) args[@"enterName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.enterName = enterName;
           methodResult(@"success");
@@ -14535,10 +15413,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * enterLocation = (AMapGeoPoint *) HEAP[@([args[@"enterLocation"] integerValue])];
+          AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP[@([args[@"enterLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.enterLocation = enterLocation;
           methodResult(@"success");
@@ -14549,10 +15427,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * exitName = (NSString *) args[@"exitName"];
+          NSString* exitName = (NSString*) args[@"exitName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.exitName = exitName;
           methodResult(@"success");
@@ -14563,10 +15441,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * exitLocation = (AMapGeoPoint *) HEAP[@([args[@"exitLocation"] integerValue])];
+          AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP[@([args[@"exitLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment * ref = (AMapSegment *) HEAP[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.exitLocation = exitLocation;
           methodResult(@"success");
@@ -14580,7 +15458,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -14594,7 +15472,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -14608,7 +15486,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           BOOL nightflag = [args[@"nightflag"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.nightflag = nightflag;
           methodResult(@"success");
@@ -14622,9 +15500,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger walkingDistance = [args[@"walkingDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.walkingDistance = walkingDistance;
+          methodResult(@"success");
+      },
+      
+      @"AMapTransit::set_segments": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapTransit::set_segments");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* segmentsRefArray = (NSArray<NSNumber*> *) args[@"segments"];
+          NSMutableArray<AMapSegment*>* segments = [NSMutableArray arrayWithCapacity:segmentsRefArray.count];
+          for (int i = 0; i < segments.count; i++) {
+              AMapSegment* item = (AMapSegment*) HEAP[[segmentsRefArray objectAtIndex:i]];
+              [segments addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
+      
+          ref.segments = segments;
           methodResult(@"success");
       },
       
@@ -14636,7 +15533,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit * ref = (AMapTransit *) HEAP[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14647,10 +15544,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * origin = (AMapGeoPoint *) HEAP[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -14661,10 +15558,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * destination = (AMapGeoPoint *) HEAP[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -14678,9 +15575,47 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat taxiCost = [args[@"taxiCost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute * ref = (AMapRoute *) HEAP[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.taxiCost = taxiCost;
+          methodResult(@"success");
+      },
+      
+      @"AMapRoute::set_paths": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoute::set_paths");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
+          NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
+          for (int i = 0; i < paths.count; i++) {
+              AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
+              [paths addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
+      
+          ref.paths = paths;
+          methodResult(@"success");
+      },
+      
+      @"AMapRoute::set_transits": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapRoute::set_transits");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* transitsRefArray = (NSArray<NSNumber*> *) args[@"transits"];
+          NSMutableArray<AMapTransit*>* transits = [NSMutableArray arrayWithCapacity:transitsRefArray.count];
+          for (int i = 0; i < transits.count; i++) {
+              AMapTransit* item = (AMapTransit*) HEAP[[transitsRefArray objectAtIndex:i]];
+              [transits addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
+      
+          ref.transits = transits;
           methodResult(@"success");
       },
       
@@ -14692,7 +15627,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger originID = [args[@"originID"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.originID = originID;
           methodResult(@"success");
@@ -14706,7 +15641,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger destID = [args[@"destID"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.destID = destID;
           methodResult(@"success");
@@ -14720,7 +15655,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14734,7 +15669,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -14745,10 +15680,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * info = (NSString *) args[@"info"];
+          NSString* info = (NSString*) args[@"info"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.info = info;
           methodResult(@"success");
@@ -14762,7 +15697,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger code = [args[@"code"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult * ref = (AMapDistanceResult *) HEAP[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.code = code;
           methodResult(@"success");
@@ -14773,10 +15708,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -14787,10 +15722,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * province = (NSString *) args[@"province"];
+          NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -14801,10 +15736,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -14815,10 +15750,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * weather = (NSString *) args[@"weather"];
+          NSString* weather = (NSString*) args[@"weather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.weather = weather;
           methodResult(@"success");
@@ -14829,10 +15764,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * temperature = (NSString *) args[@"temperature"];
+          NSString* temperature = (NSString*) args[@"temperature"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.temperature = temperature;
           methodResult(@"success");
@@ -14843,10 +15778,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * windDirection = (NSString *) args[@"windDirection"];
+          NSString* windDirection = (NSString*) args[@"windDirection"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.windDirection = windDirection;
           methodResult(@"success");
@@ -14857,10 +15792,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * windPower = (NSString *) args[@"windPower"];
+          NSString* windPower = (NSString*) args[@"windPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.windPower = windPower;
           methodResult(@"success");
@@ -14871,10 +15806,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * humidity = (NSString *) args[@"humidity"];
+          NSString* humidity = (NSString*) args[@"humidity"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.humidity = humidity;
           methodResult(@"success");
@@ -14885,10 +15820,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * reportTime = (NSString *) args[@"reportTime"];
+          NSString* reportTime = (NSString*) args[@"reportTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive * ref = (AMapLocalWeatherLive *) HEAP[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.reportTime = reportTime;
           methodResult(@"success");
@@ -14899,10 +15834,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * date = (NSString *) args[@"date"];
+          NSString* date = (NSString*) args[@"date"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.date = date;
           methodResult(@"success");
@@ -14913,10 +15848,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * week = (NSString *) args[@"week"];
+          NSString* week = (NSString*) args[@"week"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.week = week;
           methodResult(@"success");
@@ -14927,10 +15862,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * dayWeather = (NSString *) args[@"dayWeather"];
+          NSString* dayWeather = (NSString*) args[@"dayWeather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayWeather = dayWeather;
           methodResult(@"success");
@@ -14941,10 +15876,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * nightWeather = (NSString *) args[@"nightWeather"];
+          NSString* nightWeather = (NSString*) args[@"nightWeather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightWeather = nightWeather;
           methodResult(@"success");
@@ -14955,10 +15890,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * dayTemp = (NSString *) args[@"dayTemp"];
+          NSString* dayTemp = (NSString*) args[@"dayTemp"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayTemp = dayTemp;
           methodResult(@"success");
@@ -14969,10 +15904,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * nightTemp = (NSString *) args[@"nightTemp"];
+          NSString* nightTemp = (NSString*) args[@"nightTemp"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightTemp = nightTemp;
           methodResult(@"success");
@@ -14983,10 +15918,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * dayWind = (NSString *) args[@"dayWind"];
+          NSString* dayWind = (NSString*) args[@"dayWind"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayWind = dayWind;
           methodResult(@"success");
@@ -14997,10 +15932,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * nightWind = (NSString *) args[@"nightWind"];
+          NSString* nightWind = (NSString*) args[@"nightWind"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightWind = nightWind;
           methodResult(@"success");
@@ -15011,10 +15946,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * dayPower = (NSString *) args[@"dayPower"];
+          NSString* dayPower = (NSString*) args[@"dayPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayPower = dayPower;
           methodResult(@"success");
@@ -15025,10 +15960,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * nightPower = (NSString *) args[@"nightPower"];
+          NSString* nightPower = (NSString*) args[@"nightPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast * ref = (AMapLocalDayWeatherForecast *) HEAP[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightPower = nightPower;
           methodResult(@"success");
@@ -15039,10 +15974,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * adcode = (NSString *) args[@"adcode"];
+          NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -15053,10 +15988,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * province = (NSString *) args[@"province"];
+          NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -15067,10 +16002,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * city = (NSString *) args[@"city"];
+          NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -15081,12 +16016,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * reportTime = (NSString *) args[@"reportTime"];
+          NSString* reportTime = (NSString*) args[@"reportTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast * ref = (AMapLocalWeatherForecast *) HEAP[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.reportTime = reportTime;
+          methodResult(@"success");
+      },
+      
+      @"AMapLocalWeatherForecast::set_casts": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapLocalWeatherForecast::set_casts");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* castsRefArray = (NSArray<NSNumber*> *) args[@"casts"];
+          NSMutableArray<AMapLocalDayWeatherForecast*>* casts = [NSMutableArray arrayWithCapacity:castsRefArray.count];
+          for (int i = 0; i < casts.count; i++) {
+              AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP[[castsRefArray objectAtIndex:i]];
+              [casts addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
+      
+          ref.casts = casts;
           methodResult(@"success");
       },
       
@@ -15095,10 +16049,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * userID = (NSString *) args[@"userID"];
+          NSString* userID = (NSString*) args[@"userID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           ref.userID = userID;
           methodResult(@"success");
@@ -15109,10 +16063,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -15126,7 +16080,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           CGFloat distance = [args[@"distance"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo * ref = (AMapNearbyUserInfo *) HEAP[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -15137,10 +16091,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * evaluationDescription = (NSString *) args[@"evaluationDescription"];
+          NSString* evaluationDescription = (NSString*) args[@"evaluationDescription"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.evaluationDescription = evaluationDescription;
           methodResult(@"success");
@@ -15154,7 +16108,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger status = [args[@"status"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -15165,10 +16119,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * expedite = (NSString *) args[@"expedite"];
+          NSString* expedite = (NSString*) args[@"expedite"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.expedite = expedite;
           methodResult(@"success");
@@ -15179,10 +16133,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * congested = (NSString *) args[@"congested"];
+          NSString* congested = (NSString*) args[@"congested"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.congested = congested;
           methodResult(@"success");
@@ -15193,10 +16147,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * blocked = (NSString *) args[@"blocked"];
+          NSString* blocked = (NSString*) args[@"blocked"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.blocked = blocked;
           methodResult(@"success");
@@ -15207,10 +16161,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * unknown = (NSString *) args[@"unknown"];
+          NSString* unknown = (NSString*) args[@"unknown"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation * ref = (AMapTrafficEvaluation *) HEAP[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.unknown = unknown;
           methodResult(@"success");
@@ -15221,10 +16175,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -15238,7 +16192,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger status = [args[@"status"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -15249,10 +16203,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * direction = (NSString *) args[@"direction"];
+          NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -15266,7 +16220,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           float angle = [args[@"angle"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.angle = angle;
           methodResult(@"success");
@@ -15280,7 +16234,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           float speed = [args[@"speed"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.speed = speed;
           methodResult(@"success");
@@ -15291,10 +16245,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * polyline = (NSString *) args[@"polyline"];
+          NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad * ref = (AMapTrafficRoad *) HEAP[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -15305,10 +16259,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * statusDescription = (NSString *) args[@"statusDescription"];
+          NSString* statusDescription = (NSString*) args[@"statusDescription"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           ref.statusDescription = statusDescription;
           methodResult(@"success");
@@ -15319,12 +16273,31 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapTrafficEvaluation * evaluation = (AMapTrafficEvaluation *) HEAP[@([args[@"evaluation"] integerValue])];
+          AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) HEAP[@([args[@"evaluation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo * ref = (AMapTrafficInfo *) HEAP[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           ref.evaluation = evaluation;
+          methodResult(@"success");
+      },
+      
+      @"AMapTrafficInfo::set_roads": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapTrafficInfo::set_roads");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
+          NSMutableArray<AMapTrafficRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
+          for (int i = 0; i < roads.count; i++) {
+              AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
+              [roads addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
+      
+          ref.roads = roads;
           methodResult(@"success");
       },
       
@@ -15333,10 +16306,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * uid = (NSString *) args[@"uid"];
+          NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -15347,10 +16320,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * preurl = (NSString *) args[@"preurl"];
+          NSString* preurl = (NSString*) args[@"preurl"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           ref.preurl = preurl;
           methodResult(@"success");
@@ -15361,10 +16334,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * url = (NSString *) args[@"url"];
+          NSString* url = (NSString*) args[@"url"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage * ref = (AMapCloudImage *) HEAP[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           ref.url = url;
           methodResult(@"success");
@@ -15378,7 +16351,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger uid = [args[@"uid"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -15389,10 +16362,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * name = (NSString *) args[@"name"];
+          NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -15403,10 +16376,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // 引用参数
-          AMapGeoPoint * location = (AMapGeoPoint *) HEAP[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -15417,10 +16390,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * address = (NSString *) args[@"address"];
+          NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -15431,10 +16404,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * createTime = (NSString *) args[@"createTime"];
+          NSString* createTime = (NSString*) args[@"createTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.createTime = createTime;
           methodResult(@"success");
@@ -15445,10 +16418,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * updateTime = (NSString *) args[@"updateTime"];
+          NSString* updateTime = (NSString*) args[@"updateTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.updateTime = updateTime;
           methodResult(@"success");
@@ -15462,9 +16435,28 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI * ref = (AMapCloudPOI *) HEAP[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.distance = distance;
+          methodResult(@"success");
+      },
+      
+      @"AMapCloudPOI::set_images": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapCloudPOI::set_images");
+      
+          // 参数
+          // 列表参数
+          NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
+          NSMutableArray<AMapCloudImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
+          for (int i = 0; i < images.count; i++) {
+              AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:i]];
+              [images addObject:item];
+          }
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
+      
+          ref.images = images;
           methodResult(@"success");
       },
       
@@ -15473,10 +16465,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 参数
           // jsonable参数
-          NSString * userID = (NSString *) args[@"userID"];
+          NSString* userID = (NSString*) args[@"userID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           ref.userID = userID;
           methodResult(@"success");
@@ -15490,7 +16482,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapSearchCoordinateType coordinateType = (AMapSearchCoordinateType) [args[@"coordinateType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           ref.coordinateType = coordinateType;
           methodResult(@"success");
@@ -15506,7 +16498,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           [coordinateValue getValue:&coordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo * ref = (AMapNearbyUploadInfo *) HEAP[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           ref.coordinate = coordinate;
           methodResult(@"success");
@@ -15519,7 +16511,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -15533,7 +16525,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           NSInteger timeout = [args[@"timeout"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           ref.timeout = timeout;
           methodResult(@"success");
@@ -15547,7 +16539,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapSearchLanguage language = (AMapSearchLanguage) [args[@"language"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI * ref = (AMapSearchAPI *) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           ref.language = language;
           methodResult(@"success");

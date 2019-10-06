@@ -69,6 +69,12 @@ class AMapPath extends AMapSearchObject  {
   
   }
   
+  Future<void> set_steps(List<AMapStep> steps) async {
+    await _channel.invokeMethod('AMapPath::set_steps', {'refId': refId, "steps": steps.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_tolls(double tolls) async {
     await _channel.invokeMethod('AMapPath::set_tolls', {'refId': refId, "tolls": tolls});
   

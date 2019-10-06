@@ -21,6 +21,17 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject  {
   
 
   // 生成setters
+  Future<void> set_paths(List<AMapPath> paths) async {
+    await _channel.invokeMethod('AMapFutureRouteSearchResponse::set_paths', {'refId': refId, "paths": paths.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_timeInfos(List<AMapFutureTimeInfo> timeInfos) async {
+    await _channel.invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos', {'refId': refId, "timeInfos": timeInfos.map((it) => it.refId).toList()});
+  
+  
+  }
   
 
   // 生成方法们

@@ -137,6 +137,12 @@ class AMapAddressComponent extends AMapSearchObject  {
   
   }
   
+  Future<void> set_businessAreas(List<AMapBusinessArea> businessAreas) async {
+    await _channel.invokeMethod('AMapAddressComponent::set_businessAreas', {'refId': refId, "businessAreas": businessAreas.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

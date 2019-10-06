@@ -201,6 +201,12 @@ class AMapBusLine extends AMapSearchObject  {
   
   }
   
+  Future<void> set_busStops(List<AMapBusStop> busStops) async {
+    await _channel.invokeMethod('AMapBusLine::set_busStops', {'refId': refId, "busStops": busStops.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_departureStop(AMapBusStop departureStop) async {
     await _channel.invokeMethod('AMapBusLine::set_departureStop', {'refId': refId, "departureStop": departureStop.refId});
   
@@ -209,6 +215,12 @@ class AMapBusLine extends AMapSearchObject  {
   
   Future<void> set_arrivalStop(AMapBusStop arrivalStop) async {
     await _channel.invokeMethod('AMapBusLine::set_arrivalStop', {'refId': refId, "arrivalStop": arrivalStop.refId});
+  
+  
+  }
+  
+  Future<void> set_viaBusStops(List<AMapBusStop> viaBusStops) async {
+    await _channel.invokeMethod('AMapBusLine::set_viaBusStops', {'refId': refId, "viaBusStops": viaBusStops.map((it) => it.refId).toList()});
   
   
   }

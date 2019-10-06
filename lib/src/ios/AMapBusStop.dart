@@ -76,6 +76,12 @@ class AMapBusStop extends AMapSearchObject  {
   
   }
   
+  Future<void> set_buslines(List<AMapBusLine> buslines) async {
+    await _channel.invokeMethod('AMapBusStop::set_buslines', {'refId': refId, "buslines": buslines.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_sequence(String sequence) async {
     await _channel.invokeMethod('AMapBusStop::set_sequence', {'refId': refId, "sequence": sequence});
   

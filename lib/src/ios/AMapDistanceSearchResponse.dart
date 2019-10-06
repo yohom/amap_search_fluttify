@@ -16,6 +16,11 @@ class AMapDistanceSearchResponse extends AMapSearchObject  {
   
 
   // 生成setters
+  Future<void> set_results(List<AMapDistanceResult> results) async {
+    await _channel.invokeMethod('AMapDistanceSearchResponse::set_results', {'refId': refId, "results": results.map((it) => it.refId).toList()});
+  
+  
+  }
   
 
   // 生成方法们

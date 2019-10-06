@@ -21,6 +21,17 @@ class AMapWeatherSearchResponse extends AMapSearchObject  {
   
 
   // 生成setters
+  Future<void> set_lives(List<AMapLocalWeatherLive> lives) async {
+    await _channel.invokeMethod('AMapWeatherSearchResponse::set_lives', {'refId': refId, "lives": lives.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_forecasts(List<AMapLocalWeatherForecast> forecasts) async {
+    await _channel.invokeMethod('AMapWeatherSearchResponse::set_forecasts', {'refId': refId, "forecasts": forecasts.map((it) => it.refId).toList()});
+  
+  
+  }
   
 
   // 生成方法们

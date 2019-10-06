@@ -76,6 +76,18 @@ class AMapDistrict extends AMapSearchObject  {
   
   }
   
+  Future<void> set_districts(List<AMapDistrict> districts) async {
+    await _channel.invokeMethod('AMapDistrict::set_districts', {'refId': refId, "districts": districts.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_polylines(List<String> polylines) async {
+    await _channel.invokeMethod('AMapDistrict::set_polylines', {'refId': refId, "polylines": polylines});
+  
+  
+  }
+  
 
   // 生成方法们
   

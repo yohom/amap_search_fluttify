@@ -26,6 +26,12 @@ class AMapDistanceSearchRequest extends AMapSearchObject  {
   
 
   // 生成setters
+  Future<void> set_origins(List<AMapGeoPoint> origins) async {
+    await _channel.invokeMethod('AMapDistanceSearchRequest::set_origins', {'refId': refId, "origins": origins.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_destination(AMapGeoPoint destination) async {
     await _channel.invokeMethod('AMapDistanceSearchRequest::set_destination', {'refId': refId, "destination": destination.refId});
   

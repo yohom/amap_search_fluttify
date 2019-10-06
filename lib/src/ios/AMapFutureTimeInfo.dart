@@ -27,6 +27,12 @@ class AMapFutureTimeInfo extends AMapSearchObject  {
   
   }
   
+  Future<void> set_elements(List<AMapFutureTimeInfoElement> elements) async {
+    await _channel.invokeMethod('AMapFutureTimeInfo::set_elements', {'refId': refId, "elements": elements.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

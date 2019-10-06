@@ -47,6 +47,12 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject  {
   
   }
   
+  Future<void> set_filter(List<String> filter) async {
+    await _channel.invokeMethod('AMapCloudSearchBaseRequest::set_filter', {'refId': refId, "filter": filter});
+  
+  
+  }
+  
   Future<void> set_sortFields(String sortFields) async {
     await _channel.invokeMethod('AMapCloudSearchBaseRequest::set_sortFields', {'refId': refId, "sortFields": sortFields});
   

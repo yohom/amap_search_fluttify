@@ -670,6 +670,25 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.location.CoordUtil::convertToGcj" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var0 = args["var0"] as DoubleArray
+            // jsonable参数
+            val var1 = args["var1"] as DoubleArray
+        
+            // 调用对象引用
+        
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.location.CoordUtil::convertToGcj([\"var0\":$var0, \"var1\":$var1])")
+        
+            // 开始调用
+            val result = com.amap.api.location.CoordUtil.convertToGcj(var0, var1)
+        
+            // 调用结果
+            methodResult.success(result)
+        },
         "com.amap.api.location.CoordUtil::isLoadedSo" to { registrar, args, methodResult ->
             // 参数
         

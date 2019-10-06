@@ -65,6 +65,12 @@ class AMapTransit extends AMapSearchObject  {
   
   }
   
+  Future<void> set_segments(List<AMapSegment> segments) async {
+    await _channel.invokeMethod('AMapTransit::set_segments', {'refId': refId, "segments": segments.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_distance(int distance) async {
     await _channel.invokeMethod('AMapTransit::set_distance', {'refId': refId, "distance": distance});
   

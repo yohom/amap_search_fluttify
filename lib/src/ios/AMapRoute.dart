@@ -54,6 +54,18 @@ class AMapRoute extends AMapSearchObject  {
   
   }
   
+  Future<void> set_paths(List<AMapPath> paths) async {
+    await _channel.invokeMethod('AMapRoute::set_paths', {'refId': refId, "paths": paths.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_transits(List<AMapTransit> transits) async {
+    await _channel.invokeMethod('AMapRoute::set_transits', {'refId': refId, "transits": transits.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

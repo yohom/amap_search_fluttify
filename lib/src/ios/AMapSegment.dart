@@ -57,6 +57,12 @@ class AMapSegment extends AMapSearchObject  {
   
   }
   
+  Future<void> set_buslines(List<AMapBusLine> buslines) async {
+    await _channel.invokeMethod('AMapSegment::set_buslines', {'refId': refId, "buslines": buslines.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_taxi(AMapTaxi taxi) async {
     await _channel.invokeMethod('AMapSegment::set_taxi', {'refId': refId, "taxi": taxi.refId});
   

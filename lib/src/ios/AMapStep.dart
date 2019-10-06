@@ -142,6 +142,18 @@ class AMapStep extends AMapSearchObject  {
   
   }
   
+  Future<void> set_cities(List<AMapCity> cities) async {
+    await _channel.invokeMethod('AMapStep::set_cities', {'refId': refId, "cities": cities.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_tmcs(List<AMapTMC> tmcs) async {
+    await _channel.invokeMethod('AMapStep::set_tmcs', {'refId': refId, "tmcs": tmcs.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

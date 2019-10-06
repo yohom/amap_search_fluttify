@@ -16,6 +16,11 @@ class AMapGeoPolygon extends AMapSearchObject  {
   
 
   // 生成setters
+  Future<void> set_points(List<AMapGeoPoint> points) async {
+    await _channel.invokeMethod('AMapGeoPolygon::set_points', {'refId': refId, "points": points.map((it) => it.refId).toList()});
+  
+  
+  }
   
 
   // 生成方法们
