@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:amap_search_fluttify/src/android/android.export.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.dart';
+import 'package:flutter/cupertino.dart';
 
 import 'models.dart';
 import 'utils.dart';
@@ -325,19 +326,56 @@ class AmapSearch {
   /// 逆地理编码（坐标转地址）
   ///
   /// 输入关键字[keyword], 并且限制所在城市[city]
-  static Future<ReGeocode> searchDriveRoute(
-    LatLng latLng, {
+  static Future<DriveRouteResult> searchDriveRoute({
+    @required LatLng from,
+    @required LatLng to,
+    List<LatLng> passedByPoints = const [],
+    String avoidRoad = '',
     double radius = 200.0,
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<ReGeocode>();
+    final _controller = StreamController<DriveRouteResult>();
 
     platform(
       android: () async {
+        // 起点
+        final fromLatLng = await ObjectFactory_Android
+            .createcom_amap_api_services_core_LatLonPoint__double__double(
+          from.latitude,
+          from.longitude,
+        );
+        // 终点
+        final toLatLng = await ObjectFactory_Android
+            .createcom_amap_api_services_core_LatLonPoint__double__double(
+          to.latitude,
+          to.longitude,
+        );
+
+        // 起终点
+        final fromAndTo = await ObjectFactory_Android
+            .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+                fromLatLng, toLatLng);
+
+        // 途经点
+        final List<com_amap_api_services_core_LatLonPoint> passby = [];
+        for (var item in passedByPoints) {
+          passby.add(await ObjectFactory_Android
+              .createcom_amap_api_services_core_LatLonPoint__double__double(
+            item.latitude,
+            item.longitude,
+          ));
+        }
+
         // 创建请求对象
         final query = await ObjectFactory_Android
-            .createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__();
+            .createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String(
+          fromAndTo,
+          0,
+          passby,
+          [], // 暂不支持多维数组
+          avoidRoad,
+        );
 
         // 获取android上下文
         final context = await ObjectFactory_Android.getandroid_app_Activity();
@@ -359,8 +397,8 @@ class AmapSearch {
 
         // 创建中心点
         final amapLocation = await ObjectFactory_iOS.createAMapGeoPoint();
-        await amapLocation.set_latitude(latLng.latitude);
-        await amapLocation.set_longitude(latLng.longitude);
+        await amapLocation.set_latitude(from.latitude);
+        await amapLocation.set_longitude(from.longitude);
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -398,17 +436,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     final poiList = [
-      for (final item in (await var1.getPois()))
-        Poi(
-          title: await item.getTitle(),
-          cityName: await item.getCityName(),
-          cityCode: await item.getCityCode(),
-          provinceName: await item.getProvinceName(),
-          provinceCode: await item.getProvinceCode(),
-          tel: await item.getTel(),
-          poiId: await item.getPoiId(),
-          distance: await item.getDistance(),
-        )
+      for (final item in (await var1.getPois())) Poi.android(item)
     ];
     _streamController?.add(poiList);
     _streamController?.close();
@@ -417,15 +445,7 @@ class _AndroidSearchListener extends java_lang_Object
   @override
   Future<void> onGetInputtips(
       List<com_amap_api_services_help_Tip> var1, int var2) async {
-    final inputTipList = [
-      for (final item in var1)
-        InputTip(
-          name: await item.getName(),
-          poiId: await item.getPoiID(),
-          address: await item.getAddress(),
-          district: await item.getDistrict(),
-        )
-    ];
+    final inputTipList = [for (final item in var1) InputTip.android(item)];
     _streamController?.add(inputTipList);
     _streamController?.close();
   }
@@ -435,12 +455,7 @@ class _AndroidSearchListener extends java_lang_Object
       com_amap_api_services_geocoder_GeocodeResult var1, int var2) async {
     final geocode = [
       for (final item in (await var1.getGeocodeAddressList()))
-        Geocode(
-          latLng: LatLng(
-            await (await item.getLatLonPoint()).getLatitude(),
-            await (await item.getLatLonPoint()).getLongitude(),
-          ),
-        )
+        Geocode.android(item)
     ];
     _streamController?.add(geocode);
     _streamController?.close();
@@ -450,16 +465,16 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onRegeocodeSearched(
       com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {
     final result = await var1.getRegeocodeAddress();
-    final reGeocode = ReGeocode(
-      provinceName: await result.getProvince(),
-      cityName: await result.getCity(),
-      cityCode: await result.getCityCode(),
-      districtName: await result.getDistrict(),
-      building: await result.getBuilding(),
-      country: await result.getCountry(),
-      formatAddress: await result.getFormatAddress(),
-    );
-    _streamController?.add(reGeocode);
+    _streamController?.add(ReGeocode.android(result));
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onDriveRouteSearched(
+    com_amap_api_services_route_DriveRouteResult var1,
+    int var2,
+  ) async {
+    _streamController?.add(DriveRouteResult.android(var1));
     _streamController?.close();
   }
 }
@@ -476,17 +491,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapPOISearchResponse response,
   ) async {
     final poiList = [
-      for (final item in (await response.get_pois()))
-        Poi(
-          title: await item.get_name(),
-          cityName: await item.get_city(),
-          cityCode: await item.get_citycode(),
-          provinceName: await item.get_province(),
-          provinceCode: await item.get_pcode(),
-          tel: await item.get_tel(),
-          poiId: await item.get_uid(),
-          distance: await item.get_distance(),
-        )
+      for (final item in (await response.get_pois())) Poi.ios(item)
     ];
     _streamController?.add(poiList);
     _streamController?.close();
@@ -498,13 +503,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapInputTipsSearchResponse response,
   ) async {
     final inputTipList = [
-      for (final item in (await response.get_tips()))
-        InputTip(
-          name: await item.get_name(),
-          poiId: await item.get_uid(),
-          address: await item.get_address(),
-          district: await item.get_district(),
-        )
+      for (final item in (await response.get_tips())) InputTip.ios(item)
     ];
     _streamController?.add(inputTipList);
     _streamController?.close();
@@ -516,13 +515,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapGeocodeSearchResponse response,
   ) async {
     final geocode = [
-      for (final item in (await response.get_geocodes()))
-        Geocode(
-          latLng: LatLng(
-            await (await item.get_location()).get_latitude(),
-            await (await item.get_location()).get_longitude(),
-          ),
-        )
+      for (final item in (await response.get_geocodes())) Geocode.ios(item)
     ];
     _streamController?.add(geocode);
     _streamController?.close();
@@ -533,17 +526,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapReGeocodeSearchRequest request,
     AMapReGeocodeSearchResponse response,
   ) async {
-    final result = await response.get_regeocode();
-    final address = await result.get_addressComponent();
-    final reGeocode = ReGeocode(
-      provinceName: await address.get_province(),
-      cityName: await address.get_city(),
-      cityCode: await address.get_citycode(),
-      districtName: await address.get_district(),
-      building: await address.get_building(),
-      country: await address.get_country(),
-      formatAddress: await result.get_formattedAddress(),
-    );
+    final reGeocode = ReGeocode.ios(await response.get_regeocode());
     _streamController?.add(reGeocode);
     _streamController?.close();
   }

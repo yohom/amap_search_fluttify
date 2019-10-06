@@ -1,11 +1,16 @@
 import 'dart:io';
 
-typedef Future FutureCallback();
+typedef Future<T> FutureCallback<T>();
 
-Future platform({FutureCallback android, FutureCallback ios}) async {
-  if (Platform.isAndroid) {
-    if (android != null && Platform.isAndroid) return await android();
-  } else if (Platform.isIOS) {
-    if (ios != null && Platform.isIOS) return await ios();
+Future<T> platform<T>({
+  FutureCallback<T> android,
+  FutureCallback<T> ios,
+}) async {
+  if (Platform.isAndroid && android != null) {
+    return await android();
+  } else if (Platform.isIOS && ios != null) {
+    return await ios();
+  } else {
+    return Future<T>.value();
   }
 }
