@@ -3726,6 +3726,44 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.fence.GeoFence::getPointList" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::getPointList([])")
+        
+            // 开始调用
+            val result = ref.getPointList()
+        
+            // 调用结果
+            for (item in result) {
+                HEAP[item.hashCode()] = item
+            }
+        
+            methodResult.success(result.map { it.hashCode() })
+        },
+        "com.amap.api.fence.GeoFence::setPointList" to { registrar, args, methodResult ->
+            // 参数
+            val var1 = listOf<List<com.amap.api.location.DPoint>>()
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.fence.GeoFence
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.fence.GeoFence@$refId::setPointList([])")
+        
+            // 开始调用
+            ref.setPointList(ArrayList(var1))
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.fence.GeoFence::getRadius" to { registrar, args, methodResult ->
             // 参数
         
@@ -12417,6 +12455,27 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 开始调用
             val result = ref.getPassedByPoints()
+        
+            // 调用结果
+            for (item in result) {
+                HEAP[item.hashCode()] = item
+            }
+        
+            methodResult.success(result.map { it.hashCode() })
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygons" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])")
+        
+            // 开始调用
+            val result = ref.getAvoidpolygons()
         
             // 调用结果
             for (item in result) {
@@ -29432,6 +29491,25 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 创建对象
             val obj = com.amap.api.services.route.RouteSearch.RideRouteQuery()
+            HEAP[obj.hashCode()] = obj
+        
+            methodResult.success(obj.hashCode())
+        }
+        ,
+        "ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.route.RouteSearch.FromAndTo
+            // jsonable参数
+            val var2 = args["var2"] as Int
+            // 列表参数
+            val var3 = (args["var3"] as List<Int>).map { HEAP[it] as com.amap.api.services.core.LatLonPoint }
+            val var4 = listOf<List<com.amap.api.services.core.LatLonPoint>>()
+            // jsonable参数
+            val var5 = args["var5"] as String
+        
+            // 创建对象
+            val obj = com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, ArrayList(var3), ArrayList(var4), var5)
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
