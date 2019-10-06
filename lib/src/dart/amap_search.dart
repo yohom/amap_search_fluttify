@@ -11,6 +11,7 @@ class AmapSearch {
   static com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
   static com_amap_api_services_help_Inputtips _androidInputTip;
   static com_amap_api_services_geocoder_GeocodeSearch _androidGeocodeSearch;
+  static com_amap_api_services_route_RouteSearch _androidRouteSearch;
 
   /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
   static Future init(String iosKey) async {
@@ -320,6 +321,64 @@ class AmapSearch {
     );
     return _controller.stream.first;
   }
+
+  /// 逆地理编码（坐标转地址）
+  ///
+  /// 输入关键字[keyword], 并且限制所在城市[city]
+  static Future<ReGeocode> searchDriveRoute(
+    LatLng latLng, {
+    double radius = 200.0,
+  }) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<ReGeocode>();
+
+    platform(
+      android: () async {
+        // 创建请求对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__();
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidRouteSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+                context);
+
+        // 设置回调
+        await _androidRouteSearch
+            .setRouteSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidRouteSearch.calculateDriveRouteAsyn(query);
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 创建中心点
+        final amapLocation = await ObjectFactory_iOS.createAMapGeoPoint();
+        await amapLocation.set_latitude(latLng.latitude);
+        await amapLocation.set_longitude(latLng.longitude);
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapReGeocodeSearchRequest();
+        // 设置中心点
+        await request.set_location(amapLocation);
+        // 设置半径
+        await request.set_radius(radius.toInt());
+
+        // 开始搜索
+        await _iosSearch.AMapReGoecodeSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
 }
 
 /// android: 搜索监听
@@ -327,7 +386,8 @@ class _AndroidSearchListener extends java_lang_Object
     with
         com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener,
         com_amap_api_services_help_Inputtips_InputtipsListener,
-        com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener {
+        com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener,
+        com_amap_api_services_route_RouteSearch_OnRouteSearchListener {
   _AndroidSearchListener(this._streamController);
 
   final StreamController _streamController;
