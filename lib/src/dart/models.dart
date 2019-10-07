@@ -320,6 +320,35 @@ class WalkRouteResult with ToFutureString {
   }
 }
 
+class RideRouteResult with ToFutureString {
+  RideRouteResult.android(this._androidModel);
+
+  RideRouteResult.ios(this._iosModel);
+
+  com_amap_api_services_route_RideRouteResult _androidModel;
+  AMapRoute _iosModel;
+
+  Future<List<RidePath>> get ridePathList {
+    return platform(
+      android: () async {
+        return (await _androidModel.getPaths())
+            .map((it) => RidePath.android(it))
+            .toList();
+      },
+      ios: () async {
+        return (await _iosModel.get_paths())
+            .map((it) => RidePath.ios(it))
+            .toList();
+      },
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkRouteResult{walkPathList: ${await _expandToString(ridePathList)}';
+  }
+}
+
 class BusRouteResult with ToFutureString {
   BusRouteResult.android(this._androidModel);
 
@@ -391,6 +420,32 @@ class WalkPath with ToFutureString {
     }, ios: () async {
       return (await _iosModel.get_steps())
           .map((it) => WalkStep.ios(it))
+          .toList();
+    });
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkPath{walkStepList: ${await _expandToString(walkStepList)}}';
+  }
+}
+
+class RidePath with ToFutureString {
+  RidePath.android(this._androidModel);
+
+  RidePath.ios(this._iosModel);
+
+  com_amap_api_services_route_RidePath _androidModel;
+  AMapPath _iosModel;
+
+  Future<List<RideStep>> get walkStepList {
+    return platform(android: () async {
+      return (await _androidModel.getSteps())
+          .map((it) => RideStep.android(it))
+          .toList();
+    }, ios: () async {
+      return (await _iosModel.get_steps())
+          .map((it) => RideStep.ios(it))
           .toList();
     });
   }
@@ -542,6 +597,85 @@ class WalkStep with ToFutureString {
   WalkStep.ios(this._iosModel);
 
   com_amap_api_services_route_WalkStep _androidModel;
+  AMapStep _iosModel;
+
+  Future<String> get instruction {
+    return platform(
+      android: () => _androidModel.getInstruction(),
+      ios: () => _iosModel.get_instruction(),
+    );
+  }
+
+  Future<String> get orientation {
+    return platform(
+      android: () => _androidModel.getOrientation(),
+      ios: () => _iosModel.get_orientation(),
+    );
+  }
+
+  Future<String> get road {
+    return platform(
+      android: () => _androidModel.getRoad(),
+      ios: () => _iosModel.get_road(),
+    );
+  }
+
+  Future<double> get distance {
+    return platform(
+      android: () => _androidModel.getDistance(),
+      ios: () => _iosModel.get_distance().then((it) => it.toDouble()),
+    );
+  }
+
+  Future<double> get duration {
+    return platform(
+      android: () => _androidModel.getDuration(),
+      ios: () => _iosModel.get_duration().then((it) => it.toDouble()),
+    );
+  }
+
+  Future<List<LatLng>> get polyline {
+    return platform(
+      android: () async => (await _androidModel.getPolyline())
+          .map((it) => LatLng.android(it))
+          .toList(),
+      ios: () async {
+        final latLngString = await _iosModel.get_polyline();
+        return latLngString
+            .split(';')
+            .map((latLngPair) => latLngPair.split(','))
+            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .toList();
+      },
+    );
+  }
+
+  Future<String> get action {
+    return platform(
+      android: () => _androidModel.getAction(),
+      ios: () => _iosModel.get_action(),
+    );
+  }
+
+  Future<String> get assistantAction {
+    return platform(
+      android: () => _androidModel.getAssistantAction(),
+      ios: () => _iosModel.get_assistantAction(),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, duration: ${await duration}, polyline: ${await _expandToString(polyline)}, action: ${await action}, assistantAction: ${await assistantAction}';
+  }
+}
+
+class RideStep with ToFutureString {
+  RideStep.android(this._androidModel);
+
+  RideStep.ios(this._iosModel);
+
+  com_amap_api_services_route_RideStep _androidModel;
   AMapStep _iosModel;
 
   Future<String> get instruction {

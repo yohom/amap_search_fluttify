@@ -8,6 +8,7 @@ import 'get_map_data/get_poi.screen.dart';
 import 'get_map_data/get_weather_info.screen.dart';
 import 'route_plan/route_bus.screen.dart';
 import 'route_plan/route_drive.screen.dart';
+import 'route_plan/route_ride.screen.dart';
 import 'route_plan/route_walk.screen.dart';
 import 'widgets/function_group.widget.dart';
 import 'widgets/function_item.widget.dart';
@@ -102,8 +103,8 @@ class Home extends StatelessWidget {
               ),
               FunctionItem(
                 label: '骑行出行路线规划',
-                sublabel: 'TODO',
-                target: TodoScreen(),
+                sublabel: 'RouteRideScreen',
+                target: RouteRideScreen(),
               ),
               FunctionItem(
                 label: '货车出行路线规划',
