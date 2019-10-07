@@ -13,6 +13,8 @@ class AmapSearch {
   static com_amap_api_services_help_Inputtips _androidInputTip;
   static com_amap_api_services_geocoder_GeocodeSearch _androidGeocodeSearch;
   static com_amap_api_services_route_RouteSearch _androidRouteSearch;
+  static com_amap_api_services_busline_BusStationSearch
+      _androidBusStationSearch;
 
   /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
   static Future init(String iosKey) async {
@@ -527,6 +529,7 @@ class AmapSearch {
     return _controller.stream.first;
   }
 
+  /// 步行路线规划
   ///
   /// 指定起点[from]和终点[to]进行计算, 还可以指定计算路径的模式[mode]. SDK提供两种模式：RouteSearch.WALK_DEFAULT 和 RouteSearch.WALK_MULTI_PATH
   static Future<WalkRouteResult> searchWalkRoute({
@@ -609,6 +612,62 @@ class AmapSearch {
     );
     return _controller.stream.first;
   }
+
+  /// 获取公交信息
+  static Future<BusStation> searchBusStation({
+    @required String stationName,
+    @required String city,
+  }) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<BusStation>(sync: true);
+
+    platform(
+      android: () async {
+        // 创建请求对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_busline_BusStationQuery__String__String(
+          stationName,
+          city,
+        );
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidBusStationSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery(
+          context,
+          query,
+        );
+
+        // 设置回调
+        await _androidBusStationSearch
+            .setOnBusStationSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidBusStationSearch.searchBusStationAsyn();
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapBusStopSearchRequest();
+        // 设置站点名称
+        await request.set_keywords(stationName);
+        // 设置所在城市
+        await request.set_city(city);
+
+        // 开始搜索
+        await _iosSearch.AMapBusStopSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
 }
 
 /// android: 搜索监听
@@ -617,7 +676,8 @@ class _AndroidSearchListener extends java_lang_Object
         com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener,
         com_amap_api_services_help_Inputtips_InputtipsListener,
         com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener,
-        com_amap_api_services_route_RouteSearch_OnRouteSearchListener {
+        com_amap_api_services_route_RouteSearch_OnRouteSearchListener,
+        com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener {
   _AndroidSearchListener(this._streamController);
 
   final StreamController _streamController;
@@ -674,7 +734,9 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onRideRouteSearched(
     com_amap_api_services_route_RideRouteResult var1,
     int var2,
-  ) async {}
+  ) async {
+    // todo
+  }
 
   @override
   Future<void> onWalkRouteSearched(
@@ -691,6 +753,13 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     _streamController?.add(BusRouteResult.android(var1));
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onBusStationSearched(
+      com_amap_api_services_busline_BusStationResult var1, int var2) async {
+    _streamController?.add(BusStation.android(var1));
     _streamController?.close();
   }
 }
@@ -761,6 +830,15 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
       route = BusRouteResult.ios(await response.get_route());
     }
     _streamController?.add(route);
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onBusStopSearchDoneResponse(
+    AMapBusStopSearchRequest request,
+    AMapBusStopSearchResponse response,
+  ) async {
+    _streamController?.add(BusStation.ios(response));
     _streamController?.close();
   }
 }
