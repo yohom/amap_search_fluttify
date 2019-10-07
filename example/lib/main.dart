@@ -5,6 +5,7 @@ import 'get_map_data/get_address_desc.screen.dart';
 import 'get_map_data/get_bus_info.screen.dart';
 import 'get_map_data/get_district_info.screen.dart';
 import 'get_map_data/get_poi.screen.dart';
+import 'get_map_data/get_weather_info.screen.dart';
 import 'route_plan/route_bus.screen.dart';
 import 'route_plan/route_drive.screen.dart';
 import 'route_plan/route_walk.screen.dart';
@@ -66,8 +67,8 @@ class Home extends StatelessWidget {
               ),
               FunctionItem(
                 label: '后获取天气数据',
-                sublabel: 'TODO',
-                target: TodoScreen(),
+                sublabel: 'GetWeatherInfoScreen',
+                target: GetWeatherInfoScreen(),
               ),
               FunctionItem(
                 label: '获取业务数据(云图功能)',

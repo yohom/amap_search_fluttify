@@ -1050,6 +1050,21 @@ class DistrictItem with ToFutureString {
   }
 }
 
+// todo
+class Weather with ToFutureString {
+  Weather.android(this._androidModel);
+
+  Weather.ios(this._iosModel);
+
+  com_amap_api_services_weather_LocalWeatherForecastResult _androidModel;
+  AMapLocalWeatherForecast _iosModel;
+
+  @override
+  Future<String> toFutureString() async {
+    return 'Weather{}';
+  }
+}
+
 Future<List<String>> _expandToString(Future<List<ToFutureString>> source) {
   return source
       .asStream()
