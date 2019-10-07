@@ -906,6 +906,150 @@ class TMC with ToFutureString {
   }
 }
 
+class BusStation with ToFutureString {
+  BusStation.android(this._androidModel);
+
+  BusStation.ios(this._iosModel);
+
+  com_amap_api_services_busline_BusStationResult _androidModel;
+  AMapBusStopSearchResponse _iosModel;
+
+  Future<List<BusStationItem>> get busStationList {
+    return platform(
+      android: () async {
+        return _androidModel
+            .getBusStations()
+            .asStream()
+            .asyncExpand((it) => Stream.fromIterable(it))
+            .map((it) => BusStationItem.android(it))
+            .toList();
+      },
+      ios: () async {
+        return _iosModel
+            .get_busstops()
+            .asStream()
+            .asyncExpand((it) => Stream.fromIterable(it))
+            .map((it) => BusStationItem.ios(it))
+            .toList();
+      },
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusStation{busStationList: ${await _expandToString(busStationList)}';
+  }
+}
+
+class BusStationItem with ToFutureString {
+  BusStationItem.android(this._androidModel);
+
+  BusStationItem.ios(this._iosModel);
+
+  com_amap_api_services_busline_BusStationItem _androidModel;
+  AMapBusStop _iosModel;
+
+  Future<String> get name {
+    return platform(
+      android: () => _androidModel.getBusStationName(),
+      ios: () => _iosModel.get_name(),
+    );
+  }
+
+  Future<String> get id {
+    return platform(
+      android: () => _androidModel.getBusStationId(),
+      ios: () => _iosModel.get_uid(),
+    );
+  }
+
+  Future<LatLng> get location {
+    return platform(
+      android: () =>
+          _androidModel.getLatLonPoint().then((it) => LatLng.android(it)),
+      ios: () => _iosModel.get_location().then((it) => LatLng.ios(it)),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusStationItem{name: ${await name}, id: ${await id}, location: ${await _toFutureString(location)}}';
+  }
+}
+
+class District with ToFutureString {
+  District.android(this._androidModel);
+
+  District.ios(this._iosModel);
+
+  com_amap_api_services_district_DistrictResult _androidModel;
+  AMapDistrictSearchResponse _iosModel;
+
+  Future<List<DistrictItem>> get districtList {
+    return platform(
+      android: () => _androidModel
+          .getDistrict()
+          .asStream()
+          .asyncExpand((it) => Stream.fromIterable(it))
+          .map((it) => DistrictItem.android(it))
+          .toList(),
+      ios: () => _iosModel
+          .get_districts()
+          .asStream()
+          .asyncExpand((it) => Stream.fromIterable(it))
+          .map((it) => DistrictItem.ios(it))
+          .toList(),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'District{districtList: ${await _expandToString(districtList)}}';
+  }
+}
+
+class DistrictItem with ToFutureString {
+  DistrictItem.android(this._androidModel);
+
+  DistrictItem.ios(this._iosModel);
+
+  com_amap_api_services_district_DistrictItem _androidModel;
+  AMapDistrict _iosModel;
+
+  Future<String> get name {
+    return platform(
+      android: () => _androidModel.getName(),
+      ios: () => _iosModel.get_name(),
+    );
+  }
+
+  Future<String> get cityCode {
+    return platform(
+      android: () => _androidModel.getCitycode(),
+      ios: () => _iosModel.get_citycode(),
+    );
+  }
+
+  Future<String> get adCode {
+    return platform(
+      android: () => _androidModel.getAdcode(),
+      ios: () => _iosModel.get_adcode(),
+    );
+  }
+
+  Future<LatLng> get center {
+    return platform(
+      android: () => _androidModel.getCenter().then((it) => LatLng.android(it)),
+      ios: () => _iosModel.get_center().then((it) => LatLng.ios(it)),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'DistrictItem{name: ${await name}, cityCode: ${await cityCode}, adCode: ${await adCode}, center: ${await _toFutureString(center)}}';
+  }
+}
+
 Future<List<String>> _expandToString(Future<List<ToFutureString>> source) {
   return source
       .asStream()
