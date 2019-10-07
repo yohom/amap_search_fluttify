@@ -15,7 +15,7 @@ class com_amap_api_services_poisearch_Photo extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getTitle() async {
+  Future<String> getTitle() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getTitle([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_poisearch_Photo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTitle(String var1) async {
+  Future<void> setTitle(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_poisearch_Photo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getUrl() async {
+  Future<String> getUrl() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getUrl([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_poisearch_Photo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setUrl(String var1) async {
+  Future<void> setUrl(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_poisearch_Photo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

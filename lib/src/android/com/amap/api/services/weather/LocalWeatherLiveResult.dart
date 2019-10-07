@@ -27,10 +27,14 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends Ref_Android  
   
   
     // 返回值
-    return com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_weather_WeatherSearchQuery> getWeatherLiveQuery() async {
+  Future<com_amap_api_services_weather_WeatherSearchQuery> getWeatherLiveQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getWeatherLiveQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends Ref_Android  
   
   
     // 返回值
-    return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_weather_LocalWeatherLive> getLiveResult() async {
+  Future<com_amap_api_services_weather_LocalWeatherLive> getLiveResult() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getLiveResult([])');
   
@@ -57,7 +65,11 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends Ref_Android  
   
   
     // 返回值
-    return com_amap_api_services_weather_LocalWeatherLive()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_weather_LocalWeatherLive()..refId = result;
+    }
   }
   
 }

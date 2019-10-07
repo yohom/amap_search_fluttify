@@ -15,7 +15,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends Ref_Android
   
 
   // 生成方法们
-   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getFromAndTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getFromAndTo([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends Ref_Android
   
   
     // 返回值
-    return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result;
+    }
   }
   
-   Future<int> getNaviMode() async {
+  Future<int> getNaviMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getNaviMode([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends Ref_Android
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

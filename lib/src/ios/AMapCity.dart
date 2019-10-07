@@ -60,6 +60,12 @@ class AMapCity extends AMapSearchObject  {
   
   }
   
+  Future<void> set_districts(List<AMapDistrict> districts) async {
+    await _channel.invokeMethod('AMapCity::set_districts', {'refId': refId, "districts": districts.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
 
   // 生成方法们
-   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getFromAndTo([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    }
   }
   
-   Future<int> getMode() async {
+  Future<int> getMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getMode([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getCarType() async {
+  Future<int> getCarType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getCarType([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getPassedByPoints() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getPassedByPoints() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getAvoidpolygons() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getAvoidpolygons() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<String> getAvoidRoad() async {
+  Future<String> getAvoidRoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPassedPointStr() async {
+  Future<String> getPassedPointStr() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedPointStr([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> hasPassPoint() async {
+  Future<bool> hasPassPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasPassPoint([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAvoidpolygonsStr() async {
+  Future<String> getAvoidpolygonsStr() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygonsStr([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> hasAvoidpolygons() async {
+  Future<bool> hasAvoidpolygons() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidpolygons([])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> hasAvoidRoad() async {
+  Future<bool> hasAvoidRoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidRoad([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isUseFerry() async {
+  Future<bool> isUseFerry() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::isUseFerry([])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setUseFerry(bool var1) async {
+  Future<void> setUseFerry(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setUseFerry([\'var1\':$var1])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCarType(int var1) async {
+  Future<void> setCarType(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setCarType([\'var1\':$var1])');
   
@@ -222,7 +274,11 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

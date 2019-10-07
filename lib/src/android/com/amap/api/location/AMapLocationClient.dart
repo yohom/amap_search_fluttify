@@ -15,7 +15,7 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) async {
+  Future<void> setLocationOption(com_amap_api_location_AMapLocationClientOption var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::setLocationOption([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) async {
+  Future<void> setLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::setLocationListener([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> startLocation() async {
+  Future<void> startLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::startLocation([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> stopLocation() async {
+  Future<void> stopLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::stopLocation([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_location_AMapLocation> getLastKnownLocation() async {
+  Future<com_amap_api_location_AMapLocation> getLastKnownLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::getLastKnownLocation([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_location_AMapLocation()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_AMapLocation()..refId = result;
+    }
   }
   
-   Future<void> startAssistantLocation() async {
+  Future<void> startAssistantLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::startAssistantLocation([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> stopAssistantLocation() async {
+  Future<void> stopAssistantLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::stopAssistantLocation([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getVersion() async {
+  Future<String> getVersion() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::getVersion([])');
   
@@ -132,7 +160,11 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<void> setApiKey(String var0) async {
@@ -147,10 +179,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isStarted() async {
+  Future<bool> isStarted() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::isStarted([])');
   
@@ -162,10 +198,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) async {
+  Future<void> unRegisterLocationListener(com_amap_api_location_AMapLocationListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::unRegisterLocationListener([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> onDestroy() async {
+  Future<void> onDestroy() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::onDestroy([])');
   
@@ -192,10 +236,14 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> disableBackgroundLocation(bool var1) async {
+  Future<void> disableBackgroundLocation(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocationClient@$refId::disableBackgroundLocation([\'var1\':$var1])');
   
@@ -207,7 +255,11 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<String> getDeviceId(android_content_Context var0) async {
@@ -222,7 +274,11 @@ class com_amap_api_location_AMapLocationClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

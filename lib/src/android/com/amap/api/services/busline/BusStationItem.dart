@@ -15,7 +15,7 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getBusStationId() async {
+  Future<String> getBusStationId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationId([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setBusStationId(String var1) async {
+  Future<void> setBusStationId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationId([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getBusStationName() async {
+  Future<String> getBusStationName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationName([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setBusStationName(String var1) async {
+  Future<void> setBusStationName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationName([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getLatLonPoint([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setLatLonPoint([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCityCode() async {
+  Future<String> getCityCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getCityCode([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setCityCode([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdCode() async {
+  Future<String> getAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getAdCode([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setAdCode([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_busline_BusLineItem>> getBusLineItems() async {
+  Future<List<com_amap_api_services_busline_BusLineItem>> getBusLineItems() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusLineItems([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it).toList();
+    }
   }
   
-   Future<void> setBusLineItems(List<com_amap_api_services_busline_BusLineItem> var1) async {
+  Future<void> setBusLineItems(List<com_amap_api_services_busline_BusLineItem> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusLineItems([])');
   
@@ -192,7 +236,11 @@ class com_amap_api_services_busline_BusStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

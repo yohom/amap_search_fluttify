@@ -15,7 +15,7 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getId() async {
+  Future<String> getId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getId([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setId(String var1) async {
+  Future<void> setId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setId([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPreurl() async {
+  Future<String> getPreurl() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getPreurl([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPreurl(String var1) async {
+  Future<void> setPreurl(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getUrl() async {
+  Future<String> getUrl() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getUrl([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setUrl(String var1) async {
+  Future<void> setUrl(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\'var1\':$var1])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_cloud_CloudImage extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

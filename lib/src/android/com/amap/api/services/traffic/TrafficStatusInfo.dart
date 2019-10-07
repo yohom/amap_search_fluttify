@@ -15,7 +15,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getName() async {
+  Future<String> getName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getName([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getStatus() async {
+  Future<String> getStatus() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getStatus([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStatus(String var1) async {
+  Future<void> setStatus(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setStatus([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDirection() async {
+  Future<String> getDirection() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getDirection([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDirection(String var1) async {
+  Future<void> setDirection(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setDirection([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getAngle() async {
+  Future<int> getAngle() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getAngle([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAngle(int var1) async {
+  Future<void> setAngle(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setAngle([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getSpeed() async {
+  Future<double> getSpeed() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getSpeed([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSpeed(double var1) async {
+  Future<void> setSpeed(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setSpeed([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getLcodes() async {
+  Future<String> getLcodes() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getLcodes([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLcodes(String var1) async {
+  Future<void> setLcodes(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setLcodes([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getCoordinates() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getCoordinates() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<void> setCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates([])');
   
@@ -222,7 +274,11 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

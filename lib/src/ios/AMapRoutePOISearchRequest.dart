@@ -82,6 +82,12 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   
   }
   
+  Future<void> set_polyline(List<AMapGeoPoint> polyline) async {
+    await _channel.invokeMethod('AMapRoutePOISearchRequest::set_polyline', {'refId': refId, "polyline": polyline.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

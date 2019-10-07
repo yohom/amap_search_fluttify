@@ -15,7 +15,7 @@ class com_amap_api_services_route_RailwaySpace extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getCode() async {
+  Future<String> getCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwaySpace@$refId::getCode([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RailwaySpace extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getCost() async {
+  Future<double> getCost() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwaySpace@$refId::getCost([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_route_RailwaySpace extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

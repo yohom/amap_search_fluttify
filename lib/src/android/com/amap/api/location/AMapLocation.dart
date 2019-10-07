@@ -15,7 +15,7 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
 
   // 生成方法们
-   Future<int> getGpsAccuracyStatus() async {
+  Future<int> getGpsAccuracyStatus() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getGpsAccuracyStatus([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setGpsAccuracyStatus(int var1) async {
+  Future<void> setGpsAccuracyStatus(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setGpsAccuracyStatus([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getLocationType() async {
+  Future<int> getLocationType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationType([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLocationType(int var1) async {
+  Future<void> setLocationType(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationType([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getLocationDetail() async {
+  Future<String> getLocationDetail() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationDetail([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLocationDetail(String var1) async {
+  Future<void> setLocationDetail(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationDetail([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getErrorCode() async {
+  Future<int> getErrorCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getErrorCode([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setErrorCode(int var1) async {
+  Future<void> setErrorCode(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setErrorCode([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getErrorInfo() async {
+  Future<String> getErrorInfo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getErrorInfo([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setErrorInfo(String var1) async {
+  Future<void> setErrorInfo(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setErrorInfo([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCountry() async {
+  Future<String> getCountry() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCountry([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCountry(String var1) async {
+  Future<void> setCountry(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCountry([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getRoad() async {
+  Future<String> getRoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getRoad([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setRoad(String var1) async {
+  Future<void> setRoad(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setRoad([\'var1\':$var1])');
   
@@ -222,10 +274,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAddress() async {
+  Future<String> getAddress() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAddress([])');
   
@@ -237,10 +293,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAddress(String var1) async {
+  Future<void> setAddress(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setAddress([\'var1\':$var1])');
   
@@ -252,10 +312,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getProvince() async {
+  Future<String> getProvince() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getProvince([])');
   
@@ -267,10 +331,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setProvince([\'var1\':$var1])');
   
@@ -282,10 +350,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCity([])');
   
@@ -297,10 +369,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCity(String var1) async {
+  Future<void> setCity(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCity([\'var1\':$var1])');
   
@@ -312,10 +388,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDistrict() async {
+  Future<String> getDistrict() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getDistrict([])');
   
@@ -327,10 +407,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistrict(String var1) async {
+  Future<void> setDistrict(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setDistrict([\'var1\':$var1])');
   
@@ -342,10 +426,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCityCode() async {
+  Future<String> getCityCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCityCode([])');
   
@@ -357,10 +445,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCityCode([\'var1\':$var1])');
   
@@ -372,10 +464,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdCode() async {
+  Future<String> getAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAdCode([])');
   
@@ -387,10 +483,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setAdCode([\'var1\':$var1])');
   
@@ -402,10 +502,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPoiName() async {
+  Future<String> getPoiName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getPoiName([])');
   
@@ -417,10 +521,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPoiName(String var1) async {
+  Future<void> setPoiName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setPoiName([\'var1\':$var1])');
   
@@ -432,10 +540,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getLatitude() async {
+  Future<double> getLatitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLatitude([])');
   
@@ -447,10 +559,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLatitude(double var1) async {
+  Future<void> setLatitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLatitude([\'var1\':$var1])');
   
@@ -462,10 +578,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getLongitude() async {
+  Future<double> getLongitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLongitude([])');
   
@@ -477,10 +597,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLongitude(double var1) async {
+  Future<void> setLongitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLongitude([\'var1\':$var1])');
   
@@ -492,10 +616,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getSatellites() async {
+  Future<int> getSatellites() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getSatellites([])');
   
@@ -507,10 +635,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSatellites(int var1) async {
+  Future<void> setSatellites(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setSatellites([\'var1\':$var1])');
   
@@ -522,10 +654,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getStreet() async {
+  Future<String> getStreet() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getStreet([])');
   
@@ -537,10 +673,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStreet(String var1) async {
+  Future<void> setStreet(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setStreet([\'var1\':$var1])');
   
@@ -552,10 +692,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getStreetNum() async {
+  Future<String> getStreetNum() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getStreetNum([])');
   
@@ -567,10 +711,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setNumber(String var1) async {
+  Future<void> setNumber(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setNumber([\'var1\':$var1])');
   
@@ -582,10 +730,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOffset(bool var1) async {
+  Future<void> setOffset(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setOffset([\'var1\':$var1])');
   
@@ -597,10 +749,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isOffset() async {
+  Future<bool> isOffset() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::isOffset([])');
   
@@ -612,10 +768,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAoiName() async {
+  Future<String> getAoiName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAoiName([])');
   
@@ -627,10 +787,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAoiName(String var1) async {
+  Future<void> setAoiName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setAoiName([\'var1\':$var1])');
   
@@ -642,10 +806,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getBuildingId() async {
+  Future<String> getBuildingId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getBuildingId([])');
   
@@ -657,10 +825,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setBuildingId(String var1) async {
+  Future<void> setBuildingId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setBuildingId([\'var1\':$var1])');
   
@@ -672,10 +844,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getFloor() async {
+  Future<String> getFloor() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getFloor([])');
   
@@ -687,10 +863,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isFixLastLocation() async {
+  Future<bool> isFixLastLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::isFixLastLocation([])');
   
@@ -702,10 +882,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFixLastLocation(bool var1) async {
+  Future<void> setFixLastLocation(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setFixLastLocation([\'var1\':$var1])');
   
@@ -717,10 +901,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFloor(String var1) async {
+  Future<void> setFloor(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setFloor([\'var1\':$var1])');
   
@@ -732,10 +920,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isMock() async {
+  Future<bool> isMock() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::isMock([])');
   
@@ -747,10 +939,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setMock(bool var1) async {
+  Future<void> setMock(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setMock([\'var1\':$var1])');
   
@@ -762,10 +958,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDescription() async {
+  Future<String> getDescription() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getDescription([])');
   
@@ -777,10 +977,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDescription(String var1) async {
+  Future<void> setDescription(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setDescription([\'var1\':$var1])');
   
@@ -792,10 +996,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> toStr() async {
+  Future<String> toStr() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::toStr([])');
   
@@ -807,10 +1015,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getAccuracy() async {
+  Future<double> getAccuracy() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAccuracy([])');
   
@@ -822,10 +1034,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getBearing() async {
+  Future<double> getBearing() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getBearing([])');
   
@@ -837,10 +1053,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getAltitude() async {
+  Future<double> getAltitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getAltitude([])');
   
@@ -852,10 +1072,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getSpeed() async {
+  Future<double> getSpeed() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getSpeed([])');
   
@@ -867,10 +1091,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getProvider() async {
+  Future<String> getProvider() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getProvider([])');
   
@@ -882,10 +1110,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_location_AMapLocation> clone() async {
+  Future<com_amap_api_location_AMapLocation> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::clone([])');
   
@@ -897,10 +1129,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return com_amap_api_location_AMapLocation()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_AMapLocation()..refId = result;
+    }
   }
   
-   Future<com_amap_api_location_AMapLocationQualityReport> getLocationQualityReport() async {
+  Future<com_amap_api_location_AMapLocationQualityReport> getLocationQualityReport() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getLocationQualityReport([])');
   
@@ -912,10 +1148,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return com_amap_api_location_AMapLocationQualityReport()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_AMapLocationQualityReport()..refId = result;
+    }
   }
   
-   Future<void> setLocationQualityReport(com_amap_api_location_AMapLocationQualityReport var1) async {
+  Future<void> setLocationQualityReport(com_amap_api_location_AMapLocationQualityReport var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setLocationQualityReport([])');
   
@@ -927,10 +1167,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCoordType() async {
+  Future<String> getCoordType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getCoordType([])');
   
@@ -942,10 +1186,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCoordType(String var1) async {
+  Future<void> setCoordType(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setCoordType([\'var1\':$var1])');
   
@@ -957,10 +1205,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTrustedLevel(int var1) async {
+  Future<void> setTrustedLevel(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setTrustedLevel([\'var1\':$var1])');
   
@@ -972,10 +1224,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getTrustedLevel() async {
+  Future<int> getTrustedLevel() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getTrustedLevel([])');
   
@@ -987,10 +1243,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getConScenario() async {
+  Future<int> getConScenario() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::getConScenario([])');
   
@@ -1002,10 +1262,14 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setConScenario(int var1) async {
+  Future<void> setConScenario(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.AMapLocation@$refId::setConScenario([\'var1\':$var1])');
   
@@ -1017,7 +1281,11 @@ class com_amap_api_location_AMapLocation extends android_location_Location  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

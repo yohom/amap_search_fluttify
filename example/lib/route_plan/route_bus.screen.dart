@@ -2,13 +2,13 @@ import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
-/// 驾车路线规划
-class RouteDriveScreen extends StatefulWidget {
+/// 公交路线规划
+class RouteBusScreen extends StatefulWidget {
   @override
-  _RouteDriveScreenState createState() => _RouteDriveScreenState();
+  _RouteBusScreenState createState() => _RouteBusScreenState();
 }
 
-class _RouteDriveScreenState extends State<RouteDriveScreen> {
+class _RouteBusScreenState extends State<RouteBusScreen> {
   final _fromLatController = TextEditingController(text: '30.219933');
   final _fromLngController = TextEditingController(text: '120.023728');
 
@@ -21,7 +21,7 @@ class _RouteDriveScreenState extends State<RouteDriveScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      appBar: AppBar(title: Text('驾车路线规划')),
+      appBar: AppBar(title: Text('步行路线规划')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
         children: <Widget>[
@@ -67,7 +67,7 @@ class _RouteDriveScreenState extends State<RouteDriveScreen> {
           ),
           RaisedButton(
             onPressed: () async {
-              final routeResult = await AmapSearch.searchDriveRoute(
+              final routeResult = await AmapSearch.searchBusRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
@@ -76,6 +76,7 @@ class _RouteDriveScreenState extends State<RouteDriveScreen> {
                   double.parse(_toLatController.text),
                   double.parse(_toLngController.text),
                 ),
+                city: '杭州',
               );
               routeResult
                   .toFutureString()

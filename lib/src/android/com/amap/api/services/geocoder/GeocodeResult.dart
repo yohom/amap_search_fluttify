@@ -15,7 +15,7 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_geocoder_GeocodeQuery> getGeocodeQuery() async {
+  Future<com_amap_api_services_geocoder_GeocodeQuery> getGeocodeQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_geocoder_GeocodeQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_geocoder_GeocodeQuery()..refId = result;
+    }
   }
   
-   Future<void> setGeocodeQuery(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+  Future<void> setGeocodeQuery(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getGeocodeAddressList() async {
+  Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getGeocodeAddressList() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeAddressList([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
+    }
   }
   
-   Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress> var1) async {
+  Future<void> setGeocodeAddressList(List<com_amap_api_services_geocoder_GeocodeAddress> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_geocoder_GeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

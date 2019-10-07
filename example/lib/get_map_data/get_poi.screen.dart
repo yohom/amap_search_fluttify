@@ -2,6 +2,7 @@ import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:rxdart/rxdart.dart';
 
 class GetPoiScreen extends StatelessWidget {
   @override
@@ -42,7 +43,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 
-  List<Poi> _poiList = [];
+  List<String> _poiTitleList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -66,13 +67,15 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
                 _keywordController.text,
                 city: _cityController.text,
               );
-              setState(() {
-                _poiList = poiList;
-              });
+
+              Observable.fromIterable(poiList)
+                  .asyncMap((it) => it.title)
+                  .toList()
+                  .then((it) => setState(() => _poiTitleList = it));
             },
             child: Text('搜索'),
           ),
-          Text(_poiList.map((it) => it.title).join("\n")),
+          Text(_poiTitleList.join("\n")),
         ],
       ),
     );
@@ -90,7 +93,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
   final _latController = TextEditingController(text: '29.08');
   final _lngController = TextEditingController(text: '119.65');
 
-  List<Poi> _poiList = [];
+  List<String> _poiTitleList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -130,13 +133,15 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
                 ),
                 keyword: _keywordController.text,
               );
-              setState(() {
-                _poiList = poiList;
-              });
+
+              Observable.fromIterable(poiList)
+                  .asyncMap((it) => it.title)
+                  .toList()
+                  .then((it) => setState(() => _poiTitleList = it));
             },
             child: Text('搜索'),
           ),
-          Text(_poiList.map((it) => it.title).join("\n")),
+          Text(_poiTitleList.join("\n")),
         ],
       ),
     );
@@ -153,7 +158,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 
-  List<InputTip> _inputTipList = [];
+  List<String> _inputTipList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -177,13 +182,15 @@ class _InputTipScreenState extends State<InputTipScreen> {
                 _keywordController.text,
                 city: _cityController.text,
               );
-              setState(() {
-                _inputTipList = inputTipList;
-              });
+
+              Observable.fromIterable(inputTipList)
+                  .asyncMap((it) => it.toFutureString())
+                  .toList()
+                  .then((it) => setState(() => _inputTipList = it));
             },
             child: Text('搜索'),
           ),
-          Text(_inputTipList.map((it) => it.toString()).join("\n")),
+          Text(_inputTipList.join("\n")),
         ],
       ),
     );

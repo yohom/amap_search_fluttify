@@ -27,6 +27,12 @@ class AMapCloudPOISearchResponse extends AMapSearchObject  {
   
   }
   
+  Future<void> set_POIs(List<AMapCloudPOI> POIs) async {
+    await _channel.invokeMethod('AMapCloudPOISearchResponse::set_POIs', {'refId': refId, "POIs": POIs.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

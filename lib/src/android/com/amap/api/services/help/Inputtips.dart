@@ -15,7 +15,7 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
+  Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::getQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_help_InputtipsQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_help_InputtipsQuery()..refId = result;
+    }
   }
   
-   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
+  Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])');
   
@@ -74,10 +82,14 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> requestInputtipsAsyn() async {
+  Future<void> requestInputtipsAsyn() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtipsAsyn([])');
   
@@ -89,10 +101,14 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
+  Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([])');
   
@@ -104,7 +120,11 @@ class com_amap_api_services_help_Inputtips extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it).toList();
+    }
   }
   
 }

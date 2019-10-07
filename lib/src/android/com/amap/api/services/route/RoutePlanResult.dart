@@ -15,7 +15,7 @@ class com_amap_api_services_route_RoutePlanResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
+  Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::getStartPos([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RoutePlanResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::setStartPos([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RoutePlanResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
+  Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::getTargetPos([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RoutePlanResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RoutePlanResult@$refId::setTargetPos([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_RoutePlanResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

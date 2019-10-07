@@ -15,7 +15,7 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<double> getLatitude() async {
+  Future<double> getLatitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getLatitude([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLatitude(double var1) async {
+  Future<void> setLatitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setLatitude([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getLongitude() async {
+  Future<double> getLongitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getLongitude([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLongitude(double var1) async {
+  Future<void> setLongitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setLongitude([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPoiId() async {
+  Future<String> getPoiId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiId([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPoiId(String var1) async {
+  Future<void> setPoiId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiId([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPoiType() async {
+  Future<String> getPoiType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiType([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPoiType(String var1) async {
+  Future<void> setPoiType(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiType([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTypeCode() async {
+  Future<String> getTypeCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getTypeCode([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTypeCode(String var1) async {
+  Future<void> setTypeCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAddress() async {
+  Future<String> getAddress() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getAddress([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAddress(String var1) async {
+  Future<void> setAddress(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setAddress([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTel() async {
+  Future<String> getTel() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getTel([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTel(String var1) async {
+  Future<void> setTel(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setTel([\'var1\':$var1])');
   
@@ -222,10 +274,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getProvince() async {
+  Future<String> getProvince() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getProvince([])');
   
@@ -237,10 +293,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setProvince([\'var1\':$var1])');
   
@@ -252,10 +312,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getCity([])');
   
@@ -267,10 +331,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCity(String var1) async {
+  Future<void> setCity(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setCity([\'var1\':$var1])');
   
@@ -282,10 +350,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdname() async {
+  Future<String> getAdname() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getAdname([])');
   
@@ -297,10 +369,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPoiName() async {
+  Future<String> getPoiName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::getPoiName([])');
   
@@ -312,10 +388,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPoiName(String var1) async {
+  Future<void> setPoiName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setPoiName([\'var1\':$var1])');
   
@@ -327,10 +407,14 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdname(String var1) async {
+  Future<void> setAdname(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.PoiItem@$refId::setAdname([\'var1\':$var1])');
   
@@ -342,7 +426,11 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<com_amap_api_fence_PoiItem> getCreator() async {
@@ -357,7 +445,11 @@ class com_amap_api_fence_PoiItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_fence_PoiItem()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_fence_PoiItem()..refId = result;
+    }
   }
   
 }

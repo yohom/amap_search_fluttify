@@ -15,7 +15,7 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
 
   // 生成方法们
-   Future<int> getDistance() async {
+  Future<int> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getDistance([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getStatus() async {
+  Future<String> getStatus() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getStatus([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setDistance([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStatus(String var1) async {
+  Future<void> setStatus(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setStatus([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getPolyline([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setPolyline([])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_route_TMC extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

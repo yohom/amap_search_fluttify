@@ -15,7 +15,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<List<com_amap_api_services_nearby_NearbyInfo>> getNearbyInfoList() async {
+  Future<List<com_amap_api_services_nearby_NearbyInfo>> getNearbyInfoList() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::getNearbyInfoList([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_nearby_NearbySearchResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_nearby_NearbyInfo()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_nearby_NearbyInfo()..refId = it).toList();
+    }
   }
   
-   Future<int> getTotalNum() async {
+  Future<int> getTotalNum() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::getTotalNum([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_nearby_NearbySearchResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo> var1) async {
+  Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::setNearbyInfoList([])');
   
@@ -57,7 +65,11 @@ class com_amap_api_services_nearby_NearbySearchResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

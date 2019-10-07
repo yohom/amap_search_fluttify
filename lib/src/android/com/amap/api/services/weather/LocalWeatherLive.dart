@@ -15,7 +15,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getProvince() async {
+  Future<String> getProvince() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getProvince([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getCity([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdCode() async {
+  Future<String> getAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getAdCode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getWeather() async {
+  Future<String> getWeather() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWeather([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTemperature() async {
+  Future<String> getTemperature() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getTemperature([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getWindDirection() async {
+  Future<String> getWindDirection() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindDirection([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getWindPower() async {
+  Future<String> getWindPower() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindPower([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getHumidity() async {
+  Future<String> getHumidity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getHumidity([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getReportTime() async {
+  Future<String> getReportTime() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getReportTime([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setProvince([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCity(String var1) async {
+  Future<void> setCity(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setCity([\'var1\':$var1])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setAdCode([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setWeather(String var1) async {
+  Future<void> setWeather(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWeather([\'var1\':$var1])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTemperature(String var1) async {
+  Future<void> setTemperature(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setTemperature([\'var1\':$var1])');
   
@@ -222,10 +274,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setWindDirection(String var1) async {
+  Future<void> setWindDirection(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindDirection([\'var1\':$var1])');
   
@@ -237,10 +293,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setWindPower(String var1) async {
+  Future<void> setWindPower(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindPower([\'var1\':$var1])');
   
@@ -252,10 +312,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setHumidity(String var1) async {
+  Future<void> setHumidity(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setHumidity([\'var1\':$var1])');
   
@@ -267,10 +331,14 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setReportTime(String var1) async {
+  Future<void> setReportTime(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setReportTime([\'var1\':$var1])');
   
@@ -282,7 +350,11 @@ class com_amap_api_services_weather_LocalWeatherLive extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

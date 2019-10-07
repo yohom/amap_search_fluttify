@@ -27,10 +27,14 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_cloud_CloudResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_cloud_CloudResult()..refId = result;
+    }
   }
   
-   Future<int> getPageCount() async {
+  Future<int> getPageCount() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getPageCount([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_cloud_CloudSearch_Query> getQuery() async {
+  Future<com_amap_api_services_cloud_CloudSearch_Query> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getQuery([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_cloud_CloudSearch_Query()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_cloud_CloudSearch_Query()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
+  Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getBound([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result;
+    }
   }
   
-   Future<List<com_amap_api_services_cloud_CloudItem>> getClouds() async {
+  Future<List<com_amap_api_services_cloud_CloudItem>> getClouds() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getClouds([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudItem()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudItem()..refId = it).toList();
+    }
   }
   
-   Future<int> getTotalCount() async {
+  Future<int> getTotalCount() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount([])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_cloud_CloudResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

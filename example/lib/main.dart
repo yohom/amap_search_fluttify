@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'get_map_data/get_address_desc.screen.dart';
 import 'get_map_data/get_poi.screen.dart';
+import 'route_plan/route_bus.screen.dart';
+import 'route_plan/route_drive.screen.dart';
+import 'route_plan/route_walk.screen.dart';
 import 'widgets/function_group.widget.dart';
 import 'widgets/function_item.widget.dart';
 import 'widgets/todo.screen.dart';
@@ -71,6 +74,41 @@ class Home extends StatelessWidget {
               ),
               FunctionItem(
                 label: '获取交通态势信息',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+            ],
+          ),
+          FunctionGroup(
+            headLabel: '出行路线规划',
+            children: <Widget>[
+              FunctionItem(
+                label: '驾车出行路线规划',
+                sublabel: 'RouteDriveScreen',
+                target: RouteDriveScreen(),
+              ),
+              FunctionItem(
+                label: '步行出行路线规划',
+                sublabel: 'RouteWalkScreen',
+                target: RouteWalkScreen(),
+              ),
+              FunctionItem(
+                label: '公交出行路线规划',
+                sublabel: 'RouteBusScreen',
+                target: RouteBusScreen(),
+              ),
+              FunctionItem(
+                label: '骑行出行路线规划',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+              FunctionItem(
+                label: '货车出行路线规划',
+                sublabel: 'TODO',
+                target: TodoScreen(),
+              ),
+              FunctionItem(
+                label: '未来出行路线规划',
                 sublabel: 'TODO',
                 target: TodoScreen(),
               ),

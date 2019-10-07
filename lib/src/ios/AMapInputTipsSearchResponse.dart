@@ -27,6 +27,12 @@ class AMapInputTipsSearchResponse extends AMapSearchObject  {
   
   }
   
+  Future<void> set_tips(List<AMapTip> tips) async {
+    await _channel.invokeMethod('AMapInputTipsSearchResponse::set_tips', {'refId': refId, "tips": tips.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

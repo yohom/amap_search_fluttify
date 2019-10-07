@@ -15,7 +15,7 @@ class com_amap_api_services_weather_WeatherSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() async {
+  Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::getQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_weather_WeatherSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+    }
   }
   
-   Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_weather_WeatherSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchWeatherAsyn() async {
+  Future<void> searchWeatherAsyn() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::searchWeatherAsyn([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_weather_WeatherSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
+  Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])');
   
@@ -96,7 +108,11 @@ class com_amap_api_services_weather_WeatherSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -15,7 +15,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends Ref_Andr
   
 
   // 生成方法们
-   Future<List<com_amap_api_services_routepoisearch_RoutePOIItem>> getRoutePois() async {
+  Future<List<com_amap_api_services_routepoisearch_RoutePOIItem>> getRoutePois() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends Ref_Andr
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it).toList();
+    }
   }
   
-   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends Ref_Andr
   
   
     // 返回值
-    return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
+    }
   }
   
 }

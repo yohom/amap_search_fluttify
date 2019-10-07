@@ -15,7 +15,7 @@ class com_amap_api_services_geocoder_RegeocodeResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_geocoder_RegeocodeQuery> getRegeocodeQuery() async {
+  Future<com_amap_api_services_geocoder_RegeocodeQuery> getRegeocodeQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_geocoder_RegeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_geocoder_RegeocodeQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_geocoder_RegeocodeQuery()..refId = result;
+    }
   }
   
-   Future<void> setRegeocodeQuery(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
+  Future<void> setRegeocodeQuery(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_geocoder_RegeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_geocoder_RegeocodeAddress> getRegeocodeAddress() async {
+  Future<com_amap_api_services_geocoder_RegeocodeAddress> getRegeocodeAddress() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeAddress([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_geocoder_RegeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_geocoder_RegeocodeAddress()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_geocoder_RegeocodeAddress()..refId = result;
+    }
   }
   
-   Future<void> setRegeocodeAddress(com_amap_api_services_geocoder_RegeocodeAddress var1) async {
+  Future<void> setRegeocodeAddress(com_amap_api_services_geocoder_RegeocodeAddress var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeAddress([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_geocoder_RegeocodeResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

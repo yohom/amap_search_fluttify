@@ -15,7 +15,7 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
 
   // 生成方法们
-   Future<int> getPathindex() async {
+  Future<int> getPathindex() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getPathindex([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPathindex(int var1) async {
+  Future<void> setPathindex(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setPathindex([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDuration() async {
+  Future<double> getDuration() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getDuration([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setDuration([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTolls() async {
+  Future<double> getTolls() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getTolls([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTolls(double var1) async {
+  Future<void> setTolls(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTolls([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getRestriction() async {
+  Future<int> getRestriction() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getRestriction([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setRestriction(int var1) async {
+  Future<void> setRestriction(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setRestriction([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
+  Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::setTMCs([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
+  Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfosElement@$refId::getTMCs([])');
   
@@ -162,7 +198,11 @@ class com_amap_api_services_route_TimeInfosElement extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
+    }
   }
   
 }

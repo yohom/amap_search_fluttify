@@ -15,7 +15,7 @@ class com_amap_api_services_route_Railway extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getID() async {
+  Future<String> getID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Railway@$refId::getID([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_Railway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getName() async {
+  Future<String> getName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Railway@$refId::getName([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_Railway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setID(String var1) async {
+  Future<void> setID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Railway@$refId::setID([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_Railway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Railway@$refId::setName([\'var1\':$var1])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_Railway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

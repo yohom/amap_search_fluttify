@@ -27,7 +27,11 @@ class com_amap_api_location_UmidtokenInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<void> setLocAble(bool var0) async {
@@ -42,7 +46,11 @@ class com_amap_api_location_UmidtokenInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<void> setUmidtoken(android_content_Context var0, String var1) async {
@@ -57,7 +65,11 @@ class com_amap_api_location_UmidtokenInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -49,6 +49,12 @@ class AMapFutureTimeInfoElement extends AMapSearchObject  {
   
   }
   
+  Future<void> set_tmcs(List<AMapTMC> tmcs) async {
+    await _channel.invokeMethod('AMapFutureTimeInfoElement::set_tmcs', {'refId': refId, "tmcs": tmcs.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

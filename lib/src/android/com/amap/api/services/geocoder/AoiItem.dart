@@ -15,7 +15,7 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getAoiId() async {
+  Future<String> getAoiId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAoiName() async {
+  Future<String> getAoiName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdCode() async {
+  Future<String> getAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getAoiCenterPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getAoiCenterPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<double> getAoiArea() async {
+  Future<double> getAoiArea() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setId(String var1) async {
+  Future<void> setId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setId([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setName([\'var1\':$var1])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setArea(double var1) async {
+  Future<void> setArea(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\'var1\':$var1])');
   
@@ -162,7 +198,11 @@ class com_amap_api_services_geocoder_AoiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

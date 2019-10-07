@@ -15,7 +15,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getRadius() async {
+  Future<int> getRadius() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setRadius(int var1) async {
+  Future<void> setRadius(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_traffic_CircleTrafficQuery> clone() async {
+  Future<com_amap_api_services_traffic_CircleTrafficQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])');
   
@@ -87,7 +103,11 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_traffic_CircleTrafficQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_traffic_CircleTrafficQuery()..refId = result;
+    }
   }
   
 }

@@ -38,6 +38,12 @@ class AMapBusStopSearchResponse extends AMapSearchObject  {
   
   }
   
+  Future<void> set_busstops(List<AMapBusStop> busstops) async {
+    await _channel.invokeMethod('AMapBusStopSearchResponse::set_busstops', {'refId': refId, "busstops": busstops.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

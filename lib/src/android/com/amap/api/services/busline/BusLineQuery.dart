@@ -15,7 +15,7 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_busline_BusLineQuery_SearchType> getCategory() async {
+  Future<com_amap_api_services_busline_BusLineQuery_SearchType> getCategory() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCategory([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_busline_BusLineQuery_SearchType.values[result];
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_busline_BusLineQuery_SearchType.values[result];
+    }
   }
   
-   Future<String> getQueryString() async {
+  Future<String> getQueryString() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getQueryString([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setQueryString(String var1) async {
+  Future<void> setQueryString(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCity([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCity(String var1) async {
+  Future<void> setCity(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCity([\'var1\':$var1])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getPageSize() async {
+  Future<int> getPageSize() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageSize([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPageSize(int var1) async {
+  Future<void> setPageSize(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize([\'var1\':$var1])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getPageNumber() async {
+  Future<int> getPageNumber() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageNumber([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPageNumber(int var1) async {
+  Future<void> setPageNumber(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber([\'var1\':$var1])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCategory(com_amap_api_services_busline_BusLineQuery_SearchType var1) async {
+  Future<void> setCategory(com_amap_api_services_busline_BusLineQuery_SearchType var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCategory([])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_busline_BusLineQuery> clone() async {
+  Future<com_amap_api_services_busline_BusLineQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::clone([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_busline_BusLineQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_busline_BusLineQuery()..refId = result;
+    }
   }
   
-   Future<bool> weakEquals(com_amap_api_services_busline_BusLineQuery var1) async {
+  Future<bool> weakEquals(com_amap_api_services_busline_BusLineQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals([])');
   
@@ -192,7 +236,11 @@ class com_amap_api_services_busline_BusLineQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

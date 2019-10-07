@@ -87,6 +87,12 @@ class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   
   }
   
+  Future<void> set_waypoints(List<AMapGeoPoint> waypoints) async {
+    await _channel.invokeMethod('AMapTruckRouteSearchRequest::set_waypoints', {'refId': refId, "waypoints": waypoints.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_originId(String originId) async {
     await _channel.invokeMethod('AMapTruckRouteSearchRequest::set_originId', {'refId': refId, "originId": originId});
   

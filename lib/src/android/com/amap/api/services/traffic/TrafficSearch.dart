@@ -15,7 +15,7 @@ class com_amap_api_services_traffic_TrafficSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
+  Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::setTrafficSearchListener([])');
   
@@ -44,10 +44,14 @@ class com_amap_api_services_traffic_TrafficSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByRoad(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
+  Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByRoad(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoad([])');
   
@@ -59,10 +63,14 @@ class com_amap_api_services_traffic_TrafficSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_traffic_TrafficStatusResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_traffic_TrafficStatusResult()..refId = result;
+    }
   }
   
-   Future<void> loadTrafficByRoadAsyn(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
+  Future<void> loadTrafficByRoadAsyn(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoadAsyn([])');
   
@@ -74,10 +82,14 @@ class com_amap_api_services_traffic_TrafficSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByCircle(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
+  Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByCircle(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircle([])');
   
@@ -89,10 +101,14 @@ class com_amap_api_services_traffic_TrafficSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_traffic_TrafficStatusResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_traffic_TrafficStatusResult()..refId = result;
+    }
   }
   
-   Future<void> loadTrafficByCircleAsyn(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
+  Future<void> loadTrafficByCircleAsyn(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircleAsyn([])');
   
@@ -104,7 +120,11 @@ class com_amap_api_services_traffic_TrafficSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

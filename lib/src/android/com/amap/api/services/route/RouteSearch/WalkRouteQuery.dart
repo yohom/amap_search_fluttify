@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends Ref_Android
   
 
   // 生成方法们
-   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getFromAndTo([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends Ref_Android
   
   
     // 返回值
-    return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    }
   }
   
-   Future<int> getMode() async {
+  Future<int> getMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getMode([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends Ref_Android
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

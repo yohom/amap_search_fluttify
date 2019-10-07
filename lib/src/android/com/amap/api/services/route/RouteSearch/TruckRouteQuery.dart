@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
 
   // 生成方法们
-   Future<void> setMode(int var1) async {
+  Future<void> setMode(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setMode([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTruckSize(int var1) async {
+  Future<void> setTruckSize(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckSize([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTruckHeight(double var1) async {
+  Future<void> setTruckHeight(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckHeight([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTruckWidth(double var1) async {
+  Future<void> setTruckWidth(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWidth([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTruckLoad(double var1) async {
+  Future<void> setTruckLoad(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckLoad([\'var1\':$var1])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTruckWeight(double var1) async {
+  Future<void> setTruckWeight(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWeight([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTruckAxis(double var1) async {
+  Future<void> setTruckAxis(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckAxis([\'var1\':$var1])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getFromAndTo([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    }
   }
   
-   Future<int> getMode() async {
+  Future<int> getMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getMode([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> hasPassPoint() async {
+  Future<bool> hasPassPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::hasPassPoint([])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPassedPointStr() async {
+  Future<String> getPassedPointStr() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getPassedPointStr([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getTruckSize() async {
+  Future<int> getTruckSize() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckSize([])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTruckHeight() async {
+  Future<double> getTruckHeight() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckHeight([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTruckWidth() async {
+  Future<double> getTruckWidth() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWidth([])');
   
@@ -222,10 +274,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTruckLoad() async {
+  Future<double> getTruckLoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckLoad([])');
   
@@ -237,10 +293,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTruckWeight() async {
+  Future<double> getTruckWeight() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWeight([])');
   
@@ -252,10 +312,14 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTruckAxis() async {
+  Future<double> getTruckAxis() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckAxis([])');
   
@@ -267,7 +331,11 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends Ref_Androi
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -22,7 +22,7 @@ class AMapSearchAPI extends NSObject  {
 
   // 生成setters
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
-    await _channel.invokeMethod('AMapSearchAPI::set_delegate', {'refId': refId, "delegate": ""});
+    await _channel.invokeMethod('AMapSearchAPI::set_delegate', {'refId': refId, "delegate": delegate.refId});
   
     MethodChannel('AMapSearchDelegate::Callback')
       .setMethodCallHandler((methodCall) async {
@@ -163,7 +163,7 @@ class AMapSearchAPI extends NSObject  {
   
 
   // 生成方法们
-   Future<AMapSearchAPI> init() async {
+  Future<AMapSearchAPI> init() async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::init([])');
   
@@ -178,7 +178,7 @@ class AMapSearchAPI extends NSObject  {
     return AMapSearchAPI()..refId = result;
   }
   
-   Future<void> cancelAllRequests() async {
+  Future<void> cancelAllRequests() async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::cancelAllRequests([])');
   
@@ -193,7 +193,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest request) async {
+  Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIIDSearch([])');
   
@@ -208,7 +208,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest request) async {
+  Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIKeywordsSearch([])');
   
@@ -223,7 +223,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest request) async {
+  Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIAroundSearch([])');
   
@@ -238,7 +238,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest request) async {
+  Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIPolygonSearch([])');
   
@@ -253,7 +253,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest request) async {
+  Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapRoutePOISearch([])');
   
@@ -268,7 +268,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest request) async {
+  Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapGeocodeSearch([])');
   
@@ -283,7 +283,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest request) async {
+  Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapReGoecodeSearch([])');
   
@@ -298,7 +298,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest request) async {
+  Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapInputTipsSearch([])');
   
@@ -313,7 +313,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapBusStopSearch(AMapBusStopSearchRequest request) async {
+  Future<void> AMapBusStopSearch(AMapBusStopSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapBusStopSearch([])');
   
@@ -328,7 +328,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest request) async {
+  Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineIDSearch([])');
   
@@ -343,7 +343,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest request) async {
+  Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapBusLineNameSearch([])');
   
@@ -358,7 +358,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapDistrictSearch(AMapDistrictSearchRequest request) async {
+  Future<void> AMapDistrictSearch(AMapDistrictSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapDistrictSearch([])');
   
@@ -373,7 +373,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
+  Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapDrivingRouteSearch([])');
   
@@ -388,7 +388,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest request) async {
+  Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapWalkingRouteSearch([])');
   
@@ -403,7 +403,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest request) async {
+  Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapTransitRouteSearch([])');
   
@@ -418,7 +418,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest request) async {
+  Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapRidingRouteSearch([])');
   
@@ -433,7 +433,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest request) async {
+  Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapTruckRouteSearch([])');
   
@@ -448,7 +448,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest request) async {
+  Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapFutureRouteSearch([])');
   
@@ -463,7 +463,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapWeatherSearch(AMapWeatherSearchRequest request) async {
+  Future<void> AMapWeatherSearch(AMapWeatherSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapWeatherSearch([])');
   
@@ -478,7 +478,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapRoadTrafficSearch(AMapRoadTrafficSearchRequest request) async {
+  Future<void> AMapRoadTrafficSearch(AMapRoadTrafficSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapRoadTrafficSearch([])');
   
@@ -493,7 +493,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapRoadTrafficCircleSearch(AMapRoadTrafficCircleSearchRequest request) async {
+  Future<void> AMapRoadTrafficCircleSearch(AMapRoadTrafficCircleSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapRoadTrafficCircleSearch([])');
   
@@ -508,7 +508,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapDistanceSearch(AMapDistanceSearchRequest request) async {
+  Future<void> AMapDistanceSearch(AMapDistanceSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapDistanceSearch([])');
   
@@ -523,7 +523,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
+  Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapNearbySearch([])');
   
@@ -538,7 +538,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest request) async {
+  Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIAroundSearch([])');
   
@@ -553,7 +553,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest request) async {
+  Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIPolygonSearch([])');
   
@@ -568,7 +568,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest request) async {
+  Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOIIDSearch([])');
   
@@ -583,7 +583,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest request) async {
+  Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapCloudPOILocalSearch([])');
   
@@ -598,7 +598,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest request) async {
+  Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapLocationShareSearch([])');
   
@@ -613,7 +613,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest request) async {
+  Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapPOIShareSearch([])');
   
@@ -628,7 +628,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest request) async {
+  Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapRouteShareSearch([])');
   
@@ -643,7 +643,7 @@ class AMapSearchAPI extends NSObject  {
     return result;
   }
   
-   Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest request) async {
+  Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest request) async {
     // 日志打印
     print('fluttify-dart: AMapSearchAPI@$refId::AMapNavigationShareSearch([])');
   

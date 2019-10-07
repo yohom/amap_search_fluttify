@@ -15,7 +15,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getUpperRight() async {
+  Future<com_amap_api_services_core_LatLonPoint> getUpperRight() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
+  Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<int> getRange() async {
+  Future<int> getRange() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getShape() async {
+  Future<String> getShape() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isDistanceSort() async {
+  Future<bool> isDistanceSort() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])');
   
@@ -117,7 +141,11 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends Ref_Android 
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
 }

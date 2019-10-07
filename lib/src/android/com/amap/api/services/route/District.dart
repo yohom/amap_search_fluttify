@@ -15,7 +15,7 @@ class com_amap_api_services_route_District extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getDistrictName() async {
+  Future<String> getDistrictName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.District@$refId::getDistrictName([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_District extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistrictName(String var1) async {
+  Future<void> setDistrictName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_District extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDistrictAdcode() async {
+  Future<String> getDistrictAdcode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.District@$refId::getDistrictAdcode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_District extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistrictAdcode(String var1) async {
+  Future<void> setDistrictAdcode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictAdcode([\'var1\':$var1])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_District extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

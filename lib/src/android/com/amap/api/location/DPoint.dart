@@ -15,7 +15,7 @@ class com_amap_api_location_DPoint extends Ref_Android  {
   
 
   // 生成方法们
-   Future<double> getLongitude() async {
+  Future<double> getLongitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.DPoint@$refId::getLongitude([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_location_DPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLongitude(double var1) async {
+  Future<void> setLongitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.DPoint@$refId::setLongitude([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_location_DPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getLatitude() async {
+  Future<double> getLatitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.DPoint@$refId::getLatitude([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_location_DPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLatitude(double var1) async {
+  Future<void> setLatitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.DPoint@$refId::setLatitude([\'var1\':$var1])');
   
@@ -72,7 +84,11 @@ class com_amap_api_location_DPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -15,7 +15,7 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setPoint([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::getPoint([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setUserID(String var1) async {
+  Future<void> setUserID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setUserID([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getUserID() async {
+  Future<String> getUserID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::getUserID([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getCoordType() async {
+  Future<int> getCoordType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::getCoordType([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCoordType(int var1) async {
+  Future<void> setCoordType(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.UploadInfo@$refId::setCoordType([\'var1\':$var1])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_nearby_UploadInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

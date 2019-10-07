@@ -93,6 +93,12 @@ class AMapCloudPOI extends AMapSearchObject  {
   
   }
   
+  Future<void> set_images(List<AMapCloudImage> images) async {
+    await _channel.invokeMethod('AMapCloudPOI::set_images', {'refId': refId, "images": images.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

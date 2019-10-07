@@ -53,6 +53,30 @@ class AMapReGeocode extends AMapSearchObject  {
   
   }
   
+  Future<void> set_roads(List<AMapRoad> roads) async {
+    await _channel.invokeMethod('AMapReGeocode::set_roads', {'refId': refId, "roads": roads.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_roadinters(List<AMapRoadInter> roadinters) async {
+    await _channel.invokeMethod('AMapReGeocode::set_roadinters', {'refId': refId, "roadinters": roadinters.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_pois(List<AMapPOI> pois) async {
+    await _channel.invokeMethod('AMapReGeocode::set_pois', {'refId': refId, "pois": pois.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_aois(List<AMapAOI> aois) async {
+    await _channel.invokeMethod('AMapReGeocode::set_aois', {'refId': refId, "aois": aois.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

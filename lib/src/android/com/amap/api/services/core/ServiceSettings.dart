@@ -15,7 +15,7 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
 
   // 生成方法们
-   Future<int> getConnectionTimeOut() async {
+  Future<int> getConnectionTimeOut() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getConnectionTimeOut([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getSoTimeOut() async {
+  Future<int> getSoTimeOut() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getSoTimeOut([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setConnectionTimeOut(int var1) async {
+  Future<void> setConnectionTimeOut(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSoTimeOut(int var1) async {
+  Future<void> setSoTimeOut(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\'var1\':$var1])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<com_amap_api_services_core_ServiceSettings> getInstance() async {
@@ -87,10 +103,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_ServiceSettings()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_ServiceSettings()..refId = result;
+    }
   }
   
-   Future<void> setLanguage(String var1) async {
+  Future<void> setLanguage(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setProtocol(int var1) async {
+  Future<void> setProtocol(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\'var1\':$var1])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getLanguage() async {
+  Future<String> getLanguage() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getLanguage([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getProtocol() async {
+  Future<int> getProtocol() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getProtocol([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setApiKey(String var1) async {
+  Future<void> setApiKey(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> destroyInnerAsynThreadPool() async {
+  Future<void> destroyInnerAsynThreadPool() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::destroyInnerAsynThreadPool([])');
   
@@ -177,7 +217,11 @@ class com_amap_api_services_core_ServiceSettings extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

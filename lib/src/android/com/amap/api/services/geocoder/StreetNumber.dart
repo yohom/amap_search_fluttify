@@ -15,7 +15,7 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getStreet() async {
+  Future<String> getStreet() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStreet(String var1) async {
+  Future<void> setStreet(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getNumber() async {
+  Future<String> getNumber() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setNumber(String var1) async {
+  Future<void> setNumber(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDirection() async {
+  Future<String> getDirection() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDirection(String var1) async {
+  Future<void> setDirection(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance([\'var1\':$var1])');
   
@@ -162,7 +198,11 @@ class com_amap_api_services_geocoder_StreetNumber extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

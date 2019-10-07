@@ -15,7 +15,7 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setUserID(String var1) async {
+  Future<void> setUserID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setUserID([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getUserID() async {
+  Future<String> getUserID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getUserID([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getPoint([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setPoint([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTimeStamp(int var1) async {
+  Future<void> setTimeStamp(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setTimeStamp([\'var1\':$var1])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getTimeStamp() async {
+  Future<int> getTimeStamp() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getTimeStamp([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setDistance([\'var1\':$var1])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getDistance() async {
+  Future<int> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getDistance([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDrivingDistance(int var1) async {
+  Future<void> setDrivingDistance(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::setDrivingDistance([\'var1\':$var1])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getDrivingDistance() async {
+  Future<int> getDrivingDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.nearby.NearbyInfo@$refId::getDrivingDistance([])');
   
@@ -162,7 +198,11 @@ class com_amap_api_services_nearby_NearbyInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

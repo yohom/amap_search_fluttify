@@ -15,7 +15,7 @@ class com_amap_api_services_route_DistanceResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setDistanceQuery(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
+  Future<void> setDistanceQuery(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_DistanceResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> getDistanceQuery() async {
+  Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> getDistanceQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_DistanceResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result;
+    }
   }
   
-   Future<List<com_amap_api_services_route_DistanceItem>> getDistanceResults() async {
+  Future<List<com_amap_api_services_route_DistanceItem>> getDistanceResults() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_DistanceResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_DistanceItem()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_DistanceItem()..refId = it).toList();
+    }
   }
   
-   Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem> var1) async {
+  Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_DistanceResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

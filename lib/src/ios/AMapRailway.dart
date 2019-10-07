@@ -114,6 +114,24 @@ class AMapRailway extends AMapSearchObject  {
   
   }
   
+  Future<void> set_spaces(List<AMapRailwaySpace> spaces) async {
+    await _channel.invokeMethod('AMapRailway::set_spaces', {'refId': refId, "spaces": spaces.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_viaStops(List<AMapRailwayStation> viaStops) async {
+    await _channel.invokeMethod('AMapRailway::set_viaStops', {'refId': refId, "viaStops": viaStops.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_alters(List<AMapRailway> alters) async {
+    await _channel.invokeMethod('AMapRailway::set_alters', {'refId': refId, "alters": alters.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

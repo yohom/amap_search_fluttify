@@ -15,7 +15,7 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getPoiId() async {
+  Future<String> getPoiId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPoiId(String var1) async {
+  Future<void> setPoiId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getFloor() async {
+  Future<int> getFloor() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloor([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFloor(int var1) async {
+  Future<void> setFloor(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getFloorName() async {
+  Future<String> getFloorName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFloorName(String var1) async {
+  Future<void> setFloorName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\'var1\':$var1])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_poisearch_IndoorData extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

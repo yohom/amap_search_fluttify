@@ -15,7 +15,7 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
+  Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getOrigin([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
+  Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDestination([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDistance([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDuration() async {
+  Future<double> getDuration() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDuration([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getmSname() async {
+  Future<String> getmSname() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmSname([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getmTname() async {
+  Future<String> getmTname() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmTname([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDestination([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDistance([\'var1\':$var1])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDuration([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSname(String var1) async {
+  Future<void> setSname(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setSname([\'var1\':$var1])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTname(String var1) async {
+  Future<void> setTname(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setTname([\'var1\':$var1])');
   
@@ -192,7 +236,11 @@ class com_amap_api_services_route_TaxiItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

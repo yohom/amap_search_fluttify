@@ -15,7 +15,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
 
   // 生成方法们
-   Future<void> setFromName(String var1) async {
+  Future<void> setFromName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setToName(String var1) async {
+  Future<void> setToName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
+  Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFrom([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
+  Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getTo([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<String> getFromName() async {
+  Future<String> getFromName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFromName([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getToName() async {
+  Future<String> getToName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getToName([])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends Ref_Android
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

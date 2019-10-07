@@ -29,7 +29,7 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<int> getOriginId() async {
+  Future<int> getOriginId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getOriginId([])');
   
@@ -41,10 +41,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getDestId() async {
+  Future<int> getDestId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDestId([])');
   
@@ -56,10 +60,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDistance([])');
   
@@ -71,10 +79,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDuration() async {
+  Future<double> getDuration() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getDuration([])');
   
@@ -86,10 +98,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getErrorInfo() async {
+  Future<String> getErrorInfo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorInfo([])');
   
@@ -101,10 +117,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getErrorCode() async {
+  Future<int> getErrorCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::getErrorCode([])');
   
@@ -116,10 +136,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOriginId(int var1) async {
+  Future<void> setOriginId(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setOriginId([\'var1\':$var1])');
   
@@ -131,10 +155,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDestId(int var1) async {
+  Future<void> setDestId(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDestId([\'var1\':$var1])');
   
@@ -146,10 +174,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDistance([\'var1\':$var1])');
   
@@ -161,10 +193,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setDuration([\'var1\':$var1])');
   
@@ -176,10 +212,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setErrorInfo(String var1) async {
+  Future<void> setErrorInfo(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setErrorInfo([\'var1\':$var1])');
   
@@ -191,10 +231,14 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setErrorCode(int var1) async {
+  Future<void> setErrorCode(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceItem@$refId::setErrorCode([\'var1\':$var1])');
   
@@ -206,7 +250,11 @@ class com_amap_api_services_route_DistanceItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

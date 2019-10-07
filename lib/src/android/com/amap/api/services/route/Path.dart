@@ -15,7 +15,7 @@ class com_amap_api_services_route_Path extends Ref_Android  {
   
 
   // 生成方法们
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Path@$refId::getDistance([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_Path extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Path@$refId::setDistance([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_Path extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getDuration() async {
+  Future<int> getDuration() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Path@$refId::getDuration([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_Path extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDuration(int var1) async {
+  Future<void> setDuration(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Path@$refId::setDuration([\'var1\':$var1])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_Path extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

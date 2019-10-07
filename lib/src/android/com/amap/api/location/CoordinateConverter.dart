@@ -15,7 +15,7 @@ class com_amap_api_location_CoordinateConverter extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_location_CoordinateConverter> from(com_amap_api_location_CoordinateConverter_CoordType var1) async {
+  Future<com_amap_api_location_CoordinateConverter> from(com_amap_api_location_CoordinateConverter_CoordType var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::from([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_location_CoordinateConverter extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_location_CoordinateConverter()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_CoordinateConverter()..refId = result;
+    }
   }
   
-   Future<com_amap_api_location_CoordinateConverter> coord(com_amap_api_location_DPoint var1) async {
+  Future<com_amap_api_location_CoordinateConverter> coord(com_amap_api_location_DPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::coord([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_location_CoordinateConverter extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_location_CoordinateConverter()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_CoordinateConverter()..refId = result;
+    }
   }
   
-   Future<com_amap_api_location_DPoint> convert() async {
+  Future<com_amap_api_location_DPoint> convert() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.location.CoordinateConverter@$refId::convert([])');
   
@@ -57,7 +65,11 @@ class com_amap_api_location_CoordinateConverter extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_location_DPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_location_DPoint()..refId = result;
+    }
   }
   
   static Future<bool> isAMapDataAvailable(double var0, double var2) async {
@@ -72,7 +84,11 @@ class com_amap_api_location_CoordinateConverter extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<double> calculateLineDistance(com_amap_api_location_DPoint var0, com_amap_api_location_DPoint var1) async {
@@ -87,7 +103,11 @@ class com_amap_api_location_CoordinateConverter extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

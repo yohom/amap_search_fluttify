@@ -15,7 +15,7 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getDescription() async {
+  Future<String> getDescription() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getDescription([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDescription(String var1) async {
+  Future<void> setDescription(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setDescription([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_traffic_TrafficStatusEvaluation> getEvaluation() async {
+  Future<com_amap_api_services_traffic_TrafficStatusEvaluation> getEvaluation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getEvaluation([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result;
+    }
   }
   
-   Future<void> setEvaluation(com_amap_api_services_traffic_TrafficStatusEvaluation var1) async {
+  Future<void> setEvaluation(com_amap_api_services_traffic_TrafficStatusEvaluation var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setEvaluation([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_traffic_TrafficStatusInfo>> getRoads() async {
+  Future<List<com_amap_api_services_traffic_TrafficStatusInfo>> getRoads() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::getRoads([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_traffic_TrafficStatusInfo()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_traffic_TrafficStatusInfo()..refId = it).toList();
+    }
   }
   
-   Future<void> setRoads(List<com_amap_api_services_traffic_TrafficStatusInfo> var1) async {
+  Future<void> setRoads(List<com_amap_api_services_traffic_TrafficStatusInfo> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusResult@$refId::setRoads([])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_traffic_TrafficStatusResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

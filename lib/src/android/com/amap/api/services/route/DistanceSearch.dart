@@ -15,7 +15,7 @@ class com_amap_api_services_route_DistanceSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) async {
+  Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::setDistanceSearchListener([])');
   
@@ -44,10 +44,14 @@ class com_amap_api_services_route_DistanceSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
+  Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistance([])');
   
@@ -59,10 +63,14 @@ class com_amap_api_services_route_DistanceSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_DistanceResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_DistanceResult()..refId = result;
+    }
   }
   
-   Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
+  Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistanceAsyn([])');
   
@@ -74,7 +82,11 @@ class com_amap_api_services_route_DistanceSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

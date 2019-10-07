@@ -312,6 +312,18 @@ class AMapPOI extends AMapSearchObject  {
   
   }
   
+  Future<void> set_subPOIs(List<AMapSubPOI> subPOIs) async {
+    await _channel.invokeMethod('AMapPOI::set_subPOIs', {'refId': refId, "subPOIs": subPOIs.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+  Future<void> set_images(List<AMapImage> images) async {
+    await _channel.invokeMethod('AMapPOI::set_images', {'refId': refId, "images": images.map((it) => it.refId).toList()});
+  
+  
+  }
+  
   Future<void> set_extensionInfo(AMapPOIExtension extensionInfo) async {
     await _channel.invokeMethod('AMapPOI::set_extensionInfo', {'refId': refId, "extensionInfo": extensionInfo.refId});
   

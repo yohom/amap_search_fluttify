@@ -38,6 +38,12 @@ class AMapTrafficInfo extends AMapSearchObject  {
   
   }
   
+  Future<void> set_roads(List<AMapTrafficRoad> roads) async {
+    await _channel.invokeMethod('AMapTrafficInfo::set_roads', {'refId': refId, "roads": roads.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

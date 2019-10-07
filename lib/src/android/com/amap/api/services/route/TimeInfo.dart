@@ -15,7 +15,7 @@ class com_amap_api_services_route_TimeInfo extends Ref_Android  {
   
 
   // 生成方法们
-   Future<int> getStartTime() async {
+  Future<int> getStartTime() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getStartTime([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_TimeInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStartTime(int var1) async {
+  Future<void> setStartTime(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setStartTime([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_TimeInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_route_TimeInfosElement>> getElements() async {
+  Future<List<com_amap_api_services_route_TimeInfosElement>> getElements() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getElements([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_TimeInfo extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TimeInfosElement()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TimeInfosElement()..refId = it).toList();
+    }
   }
   
-   Future<void> setElements(List<com_amap_api_services_route_TimeInfosElement> var1) async {
+  Future<void> setElements(List<com_amap_api_services_route_TimeInfosElement> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setElements([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_TimeInfo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

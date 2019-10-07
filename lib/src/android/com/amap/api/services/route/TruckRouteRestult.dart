@@ -15,7 +15,7 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setTruckQuery(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
+  Future<void> setTruckQuery(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setTruckQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPaths(List<com_amap_api_services_route_TruckPath> var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_TruckPath> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setPaths([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setStartPos([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setTargetPos([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> getTruckQuery() async {
+  Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> getTruckQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getTruckQuery([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RouteSearch_TruckRouteQuery()..refId = result;
+    }
   }
   
-   Future<List<com_amap_api_services_route_TruckPath>> getPaths() async {
+  Future<List<com_amap_api_services_route_TruckPath>> getPaths() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getPaths([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TruckPath()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TruckPath()..refId = it).toList();
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
+  Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getStartPos([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
+  Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getTargetPos([])');
   
@@ -132,7 +160,11 @@ class com_amap_api_services_route_TruckRouteRestult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
 }

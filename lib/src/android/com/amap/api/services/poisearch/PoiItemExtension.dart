@@ -15,7 +15,7 @@ class com_amap_api_services_poisearch_PoiItemExtension extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getOpentime() async {
+  Future<String> getOpentime() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_poisearch_PoiItemExtension extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getmRating() async {
+  Future<String> getmRating() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_poisearch_PoiItemExtension extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

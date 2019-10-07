@@ -27,6 +27,12 @@ class AMapGeocodeSearchResponse extends AMapSearchObject  {
   
   }
   
+  Future<void> set_geocodes(List<AMapGeocode> geocodes) async {
+    await _channel.invokeMethod('AMapGeocodeSearchResponse::set_geocodes', {'refId': refId, "geocodes": geocodes.map((it) => it.refId).toList()});
+  
+  
+  }
+  
 
   // 生成方法们
   

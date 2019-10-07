@@ -21,6 +21,17 @@ class AMapSuggestion extends AMapSearchObject  {
   
 
   // 生成setters
+  Future<void> set_keywords(List<String> keywords) async {
+    await _channel.invokeMethod('AMapSuggestion::set_keywords', {'refId': refId, "keywords": keywords});
+  
+  
+  }
+  
+  Future<void> set_cities(List<AMapCity> cities) async {
+    await _channel.invokeMethod('AMapSuggestion::set_cities', {'refId': refId, "cities": cities.map((it) => it.refId).toList()});
+  
+  
+  }
   
 
   // 生成方法们

@@ -27,10 +27,14 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_poisearch_PoiResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_poisearch_PoiResult()..refId = result;
+    }
   }
   
-   Future<int> getPageCount() async {
+  Future<int> getPageCount() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPageCount([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
+  Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getQuery([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
+  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getBound([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
+  Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPois([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
+    }
   }
   
-   Future<List<String>> getSearchSuggestionKeywords() async {
+  Future<List<String>> getSearchSuggestionKeywords() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionKeywords([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<String>();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<String>();
+    }
   }
   
-   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCitys() async {
+  Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCitys() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionCitys([])');
   
@@ -117,7 +141,11 @@ class com_amap_api_services_poisearch_PoiResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList();
+    }
   }
   
 }

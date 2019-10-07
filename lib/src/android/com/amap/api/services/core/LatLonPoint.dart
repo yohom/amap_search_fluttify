@@ -15,7 +15,7 @@ class com_amap_api_services_core_LatLonPoint extends Ref_Android  {
   
 
   // 生成方法们
-   Future<double> getLongitude() async {
+  Future<double> getLongitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_core_LatLonPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLongitude(double var1) async {
+  Future<void> setLongitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_core_LatLonPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getLatitude() async {
+  Future<double> getLatitude() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_core_LatLonPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLatitude(double var1) async {
+  Future<void> setLatitude(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_core_LatLonPoint extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> copy() async {
+  Future<com_amap_api_services_core_LatLonPoint> copy() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::copy([])');
   
@@ -87,7 +103,11 @@ class com_amap_api_services_core_LatLonPoint extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
 }

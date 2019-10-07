@@ -15,7 +15,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_weather_WeatherSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getType() async {
+  Future<int> getType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_weather_WeatherSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_weather_WeatherSearchQuery> clone() async {
+  Future<com_amap_api_services_weather_WeatherSearchQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])');
   
@@ -57,7 +65,11 @@ class com_amap_api_services_weather_WeatherSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+    }
   }
   
 }
