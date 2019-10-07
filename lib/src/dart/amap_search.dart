@@ -15,6 +15,7 @@ class AmapSearch {
   static com_amap_api_services_route_RouteSearch _androidRouteSearch;
   static com_amap_api_services_busline_BusStationSearch
       _androidBusStationSearch;
+  static com_amap_api_services_district_DistrictSearch _androidDistrictSearch;
 
   /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
   static Future init(String iosKey) async {
@@ -668,6 +669,56 @@ class AmapSearch {
     );
     return _controller.stream.first;
   }
+
+  /// 获取行政区划数据
+  static Future<District> searchDistrict(String district) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<District>(sync: true);
+
+    platform(
+      android: () async {
+        // 创建请求对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_district_DistrictSearchQuery__();
+        await query.setKeywords(district);
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidDistrictSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_district_DistrictSearch__android_content_Context(
+                context);
+
+        // 设置请求
+        await _androidDistrictSearch.setQuery(query);
+
+        // 设置回调
+        await _androidDistrictSearch
+            .setOnDistrictSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidDistrictSearch.searchDistrictAsyn();
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapDistrictSearchRequest();
+        // 设置站点名称
+        await request.set_keywords(district);
+
+        // 开始搜索
+        await _iosSearch.AMapDistrictSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
 }
 
 /// android: 搜索监听
@@ -677,7 +728,8 @@ class _AndroidSearchListener extends java_lang_Object
         com_amap_api_services_help_Inputtips_InputtipsListener,
         com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener,
         com_amap_api_services_route_RouteSearch_OnRouteSearchListener,
-        com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener {
+        com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener,
+        com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener {
   _AndroidSearchListener(this._streamController);
 
   final StreamController _streamController;
@@ -762,6 +814,13 @@ class _AndroidSearchListener extends java_lang_Object
     _streamController?.add(BusStation.android(var1));
     _streamController?.close();
   }
+
+  @override
+  Future<void> onDistrictSearched(
+      com_amap_api_services_district_DistrictResult var1) async {
+    _streamController?.add(District.android(var1));
+    _streamController?.close();
+  }
 }
 
 /// ios: 搜索监听
@@ -839,6 +898,15 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapBusStopSearchResponse response,
   ) async {
     _streamController?.add(BusStation.ios(response));
+    _streamController?.close();
+  }
+
+  @override
+  Future<void> onDistrictSearchDoneResponse(
+    AMapDistrictSearchRequest request,
+    AMapDistrictSearchResponse response,
+  ) async {
+    _streamController?.add(District.ios(response));
     _streamController?.close();
   }
 }

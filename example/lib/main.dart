@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'get_map_data/get_address_desc.screen.dart';
 import 'get_map_data/get_bus_info.screen.dart';
+import 'get_map_data/get_district_info.screen.dart';
 import 'get_map_data/get_poi.screen.dart';
 import 'route_plan/route_bus.screen.dart';
 import 'route_plan/route_drive.screen.dart';
@@ -55,13 +56,13 @@ class Home extends StatelessWidget {
               ),
               FunctionItem(
                 label: '获取行政区划数据',
-                sublabel: 'TODO',
-                target: TodoScreen(),
+                sublabel: 'GetDistrictInfoScreen',
+                target: GetDistrictInfoScreen(),
               ),
               FunctionItem(
                 label: '获取公交数据',
                 sublabel: 'GetBusInfoScreenScreen',
-                target: GetBusInfoScreenScreen(),
+                target: GetBusInfoScreen(),
               ),
               FunctionItem(
                 label: '后获取天气数据',

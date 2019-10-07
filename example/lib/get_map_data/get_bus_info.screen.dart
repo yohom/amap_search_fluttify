@@ -3,12 +3,12 @@ import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
 /// 获取公交数据
-class GetBusInfoScreenScreen extends StatefulWidget {
+class GetBusInfoScreen extends StatefulWidget {
   @override
-  _GetBusInfoScreenScreenState createState() => _GetBusInfoScreenScreenState();
+  _GetBusInfoScreenState createState() => _GetBusInfoScreenState();
 }
 
-class _GetBusInfoScreenScreenState extends State<GetBusInfoScreenScreen> {
+class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
   final _keywordController = TextEditingController(text: '武林广场');
   final _cityController = TextEditingController(text: '杭州');
 
