@@ -15,7 +15,7 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
 
   // 生成方法们
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDirection() async {
+  Future<String> getDirection() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDirection(String var1) async {
+  Future<void> setDirection(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getFirstRoadId() async {
+  Future<String> getFirstRoadId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFirstRoadId(String var1) async {
+  Future<void> setFirstRoadId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getFirstRoadName() async {
+  Future<String> getFirstRoadName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFirstRoadName(String var1) async {
+  Future<void> setFirstRoadName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getSecondRoadId() async {
+  Future<String> getSecondRoadId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSecondRoadId(String var1) async {
+  Future<void> setSecondRoadId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getSecondRoadName() async {
+  Future<String> getSecondRoadName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSecondRoadName(String var1) async {
+  Future<void> setSecondRoadName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');
   
@@ -192,7 +236,11 @@ class com_amap_api_services_road_Crossroad extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

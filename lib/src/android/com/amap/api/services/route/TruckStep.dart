@@ -15,7 +15,7 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setInstruction(String var1) async {
+  Future<void> setInstruction(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setInstruction([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOrientation(String var1) async {
+  Future<void> setOrientation(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setOrientation([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setRoad(String var1) async {
+  Future<void> setRoad(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setRoad([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTolls(double var1) async {
+  Future<void> setTolls(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setTolls([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setDistance([\'var1\':$var1])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTollDistance(double var1) async {
+  Future<void> setTollDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setTollDistance([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTollRoad(String var1) async {
+  Future<void> setTollRoad(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setTollRoad([\'var1\':$var1])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setDuration([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setPolyline([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAction(String var1) async {
+  Future<void> setAction(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setAction([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAssistantAction(String var1) async {
+  Future<void> setAssistantAction(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setAssistantAction([\'var1\':$var1])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity> var1) async {
+  Future<void> setRouteSearchCityList(List<com_amap_api_services_route_RouteSearchCity> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setRouteSearchCityList([])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
+  Future<void> setTMCs(List<com_amap_api_services_route_TMC> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::setTMCs([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getInstruction() async {
+  Future<String> getInstruction() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getInstruction([])');
   
@@ -222,10 +274,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getOrientation() async {
+  Future<String> getOrientation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getOrientation([])');
   
@@ -237,10 +293,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getRoad() async {
+  Future<String> getRoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getRoad([])');
   
@@ -252,10 +312,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTolls() async {
+  Future<double> getTolls() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getTolls([])');
   
@@ -267,10 +331,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getDistance([])');
   
@@ -282,10 +350,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getTollDistance() async {
+  Future<double> getTollDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getTollDistance([])');
   
@@ -297,10 +369,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTollRoad() async {
+  Future<String> getTollRoad() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getTollRoad([])');
   
@@ -312,10 +388,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDuration() async {
+  Future<double> getDuration() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getDuration([])');
   
@@ -327,10 +407,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getPolyline([])');
   
@@ -342,10 +426,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<String> getAction() async {
+  Future<String> getAction() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getAction([])');
   
@@ -357,10 +445,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAssistantAction() async {
+  Future<String> getAssistantAction() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getAssistantAction([])');
   
@@ -372,10 +464,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_route_RouteSearchCity>> getRouteSearchCityList() async {
+  Future<List<com_amap_api_services_route_RouteSearchCity>> getRouteSearchCityList() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getRouteSearchCityList([])');
   
@@ -387,10 +483,14 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_RouteSearchCity()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_RouteSearchCity()..refId = it).toList();
+    }
   }
   
-   Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
+  Future<List<com_amap_api_services_route_TMC>> getTMCs() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.TruckStep@$refId::getTMCs([])');
   
@@ -402,7 +502,11 @@ class com_amap_api_services_route_TruckStep extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
+    }
   }
   
 }

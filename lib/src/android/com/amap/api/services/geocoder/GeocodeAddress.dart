@@ -15,7 +15,7 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getFormatAddress() async {
+  Future<String> getFormatAddress() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getFormatAddress([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setFormatAddress(String var1) async {
+  Future<void> setFormatAddress(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getProvince() async {
+  Future<String> getProvince() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getProvince([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setProvince(String var1) async {
+  Future<void> setProvince(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCity([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCity(String var1) async {
+  Future<void> setCity(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDistrict() async {
+  Future<String> getDistrict() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getDistrict([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistrict(String var1) async {
+  Future<void> setDistrict(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTownship() async {
+  Future<String> getTownship() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getTownship([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTownship(String var1) async {
+  Future<void> setTownship(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getNeighborhood() async {
+  Future<String> getNeighborhood() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getNeighborhood([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setNeighborhood(String var1) async {
+  Future<void> setNeighborhood(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getBuilding() async {
+  Future<String> getBuilding() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getBuilding([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setBuilding(String var1) async {
+  Future<void> setBuilding(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding([\'var1\':$var1])');
   
@@ -222,10 +274,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdcode() async {
+  Future<String> getAdcode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getAdcode([])');
   
@@ -237,10 +293,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode([\'var1\':$var1])');
   
@@ -252,10 +312,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLatLonPoint([])');
   
@@ -267,10 +331,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint([])');
   
@@ -282,10 +350,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getLevel() async {
+  Future<String> getLevel() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLevel([])');
   
@@ -297,10 +369,14 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLevel(String var1) async {
+  Future<void> setLevel(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel([\'var1\':$var1])');
   
@@ -312,7 +388,11 @@ class com_amap_api_services_geocoder_GeocodeAddress extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

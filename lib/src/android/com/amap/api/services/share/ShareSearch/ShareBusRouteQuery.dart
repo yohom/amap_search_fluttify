@@ -15,7 +15,7 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends Ref_And
   
 
   // 生成方法们
-   Future<int> getBusMode() async {
+  Future<int> getBusMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends Ref_And
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
+  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_share_ShareSearch_ShareBusRouteQuery extends Ref_And
   
   
     // 返回值
-    return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result;
+    }
   }
   
 }

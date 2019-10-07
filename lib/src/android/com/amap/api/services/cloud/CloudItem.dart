@@ -15,7 +15,7 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getID() async {
+  Future<String> getID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getID([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getDistance() async {
+  Future<int> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getDistance([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(int var1) async {
+  Future<void> setDistance(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\'var1\':$var1])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTitle() async {
+  Future<String> getTitle() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getTitle([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getSnippet() async {
+  Future<String> getSnippet() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getSnippet([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getLatLonPoint([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<String> getCreatetime() async {
+  Future<String> getCreatetime() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCreatetime([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCreatetime(String var1) async {
+  Future<void> setCreatetime(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getUpdatetime() async {
+  Future<String> getUpdatetime() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getUpdatetime([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setUpdatetime(String var1) async {
+  Future<void> setUpdatetime(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_cloud_CloudImage>> getCloudImage() async {
+  Future<List<com_amap_api_services_cloud_CloudImage>> getCloudImage() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudImage()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudImage()..refId = it).toList();
+    }
   }
   
-   Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
+  Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');
   
@@ -192,7 +236,11 @@ class com_amap_api_services_cloud_CloudItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

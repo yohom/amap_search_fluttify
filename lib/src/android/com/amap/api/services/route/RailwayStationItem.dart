@@ -15,7 +15,7 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getID() async {
+  Future<String> getID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getID([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getName() async {
+  Future<String> getName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getName([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getLocation([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<String> getAdcode() async {
+  Future<String> getAdcode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTime() async {
+  Future<String> getTime() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getTime([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isStart() async {
+  Future<bool> isStart() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isStart([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isEnd() async {
+  Future<bool> isEnd() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isEnd([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getWait() async {
+  Future<double> getWait() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getWait([])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setID(String var1) async {
+  Future<void> setID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setID([\'var1\':$var1])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setName([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setLocation([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdcode(String var1) async {
+  Future<void> setAdcode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTime(String var1) async {
+  Future<void> setTime(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setTime([\'var1\':$var1])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setisStart(bool var1) async {
+  Future<void> setisStart(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisStart([\'var1\':$var1])');
   
@@ -222,10 +274,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setisEnd(bool var1) async {
+  Future<void> setisEnd(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd([\'var1\':$var1])');
   
@@ -237,10 +293,14 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setWait(double var1) async {
+  Future<void> setWait(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setWait([\'var1\':$var1])');
   
@@ -252,7 +312,11 @@ class com_amap_api_services_route_RailwayStationItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

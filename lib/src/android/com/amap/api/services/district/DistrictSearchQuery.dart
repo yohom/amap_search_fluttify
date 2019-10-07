@@ -15,7 +15,7 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setShowBoundary(bool var1) async {
+  Future<void> setShowBoundary(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isShowBoundary() async {
+  Future<bool> isShowBoundary() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getPageNum() async {
+  Future<int> getPageNum() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPageNum(int var1) async {
+  Future<void> setPageNum(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getPageSize() async {
+  Future<int> getPageSize() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPageSize(int var1) async {
+  Future<void> setPageSize(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getKeywords() async {
+  Future<String> getKeywords() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setKeywords(String var1) async {
+  Future<void> setKeywords(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getKeywordsLevel() async {
+  Future<String> getKeywordsLevel() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setKeywordsLevel(String var1) async {
+  Future<void> setKeywordsLevel(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isShowChild() async {
+  Future<bool> isShowChild() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setShowChild(bool var1) async {
+  Future<void> setShowChild(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isShowBusinessArea() async {
+  Future<bool> isShowBusinessArea() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setShowBusinessArea(bool var1) async {
+  Future<void> setShowBusinessArea(bool var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\'var1\':$var1])');
   
@@ -222,10 +274,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> checkLevels() async {
+  Future<bool> checkLevels() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels([])');
   
@@ -237,10 +293,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> checkKeyWords() async {
+  Future<bool> checkKeyWords() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords([])');
   
@@ -252,10 +312,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> weakEquals(com_amap_api_services_district_DistrictSearchQuery var1) async {
+  Future<bool> weakEquals(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])');
   
@@ -267,10 +331,14 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_district_DistrictSearchQuery> clone() async {
+  Future<com_amap_api_services_district_DistrictSearchQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::clone([])');
   
@@ -282,7 +350,11 @@ class com_amap_api_services_district_DistrictSearchQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+    }
   }
   
 }

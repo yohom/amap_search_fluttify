@@ -15,7 +15,7 @@ class com_amap_api_services_route_WalkPath extends Ref_Android  {
   
 
   // 生成方法们
-   Future<List<com_amap_api_services_route_WalkStep>> getSteps() async {
+  Future<List<com_amap_api_services_route_WalkStep>> getSteps() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::getSteps([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_WalkPath extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_WalkStep()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_WalkStep()..refId = it).toList();
+    }
   }
   
-   Future<void> setSteps(List<com_amap_api_services_route_WalkStep> var1) async {
+  Future<void> setSteps(List<com_amap_api_services_route_WalkStep> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::setSteps([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_route_WalkPath extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

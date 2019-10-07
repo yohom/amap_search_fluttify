@@ -15,7 +15,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
+  Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_geocoder_RegeocodeAddress()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_geocoder_RegeocodeAddress()..refId = result;
+    }
   }
   
-   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+  Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
+    }
   }
   
-   Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
+  Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])');
   
@@ -81,10 +89,14 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
+  Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn([])');
   
@@ -96,10 +108,14 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {
+  Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn([])');
   
@@ -111,7 +127,11 @@ class com_amap_api_services_geocoder_GeocodeSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

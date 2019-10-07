@@ -320,6 +320,35 @@ class WalkRouteResult with ToFutureString {
   }
 }
 
+class BusRouteResult with ToFutureString {
+  BusRouteResult.android(this._androidModel);
+
+  BusRouteResult.ios(this._iosModel);
+
+  com_amap_api_services_route_BusRouteResult _androidModel;
+  AMapRoute _iosModel;
+
+  Future<List<BusPath>> get walkPathList {
+    return platform(
+      android: () async {
+        return (await _androidModel.getPaths())
+            .map((it) => BusPath.android(it))
+            .toList();
+      },
+      ios: () async {
+        return (await _iosModel.get_transits())
+            .map((it) => BusPath.ios(it))
+            .toList();
+      },
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkRouteResult{walkPathList: ${await _expandToString(walkPathList)}';
+  }
+}
+
 class DrivePath with ToFutureString {
   DrivePath.android(this._androidModel);
 
@@ -369,6 +398,32 @@ class WalkPath with ToFutureString {
   @override
   Future<String> toFutureString() async {
     return 'WalkPath{walkStepList: ${await _expandToString(walkStepList)}}';
+  }
+}
+
+class BusPath with ToFutureString {
+  BusPath.android(this._androidModel);
+
+  BusPath.ios(this._iosModel);
+
+  com_amap_api_services_route_BusPath _androidModel;
+  AMapTransit _iosModel;
+
+  Future<List<BusStep>> get busStepList {
+    return platform(android: () async {
+      return (await _androidModel.getSteps())
+          .map((it) => BusStep.android(it))
+          .toList();
+    }, ios: () async {
+      return (await _iosModel.get_segments())
+          .map((it) => BusStep.ios(it))
+          .toList();
+    });
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusPath{busStepList: ${await _expandToString(busStepList)}}';
   }
 }
 
@@ -560,6 +615,253 @@ class WalkStep with ToFutureString {
   }
 }
 
+class BusStep with ToFutureString {
+  BusStep.android(this._androidModel);
+
+  BusStep.ios(this._iosModel);
+
+  com_amap_api_services_route_BusStep _androidModel;
+  AMapSegment _iosModel;
+
+  Future<BusWalk> get walk {
+    return platform(
+      android: () async => BusWalk.android(await _androidModel.getWalk()),
+      ios: () async => BusWalk.ios(await _iosModel.get_walking()),
+    );
+  }
+
+  Future<List<BusLine>> get lines {
+    return platform(
+      android: () => _androidModel
+          .getBusLines()
+          .asStream()
+          .asyncExpand((it) => Stream.fromIterable(it))
+          .map((it) => BusLine.android(it))
+          .toList(),
+      ios: () => _iosModel
+          .get_buslines()
+          .asStream()
+          .asyncExpand((it) => Stream.fromIterable(it))
+          .map((it) => BusLine.ios(it))
+          .toList(),
+    );
+  }
+
+  Future<BusEntrance> get entrance {
+    return platform(
+      android: () async =>
+          BusEntrance.android(await _androidModel.getEntrance()),
+      ios: () async => BusEntrance.ios(
+        await _iosModel.get_enterLocation(),
+        await _iosModel.get_enterName(),
+      ),
+    );
+  }
+
+  Future<BusExit> get exit {
+    return platform(
+      android: () async => BusExit.android(await _androidModel.getExit()),
+      ios: () async => BusExit.ios(
+        await _iosModel.get_enterLocation(),
+        await _iosModel.get_enterName(),
+      ),
+    );
+  }
+
+  Future<BusRailway> get railway {
+    return platform(
+      android: () async => BusRailway.android(await _androidModel.getRailway()),
+      ios: () async => BusRailway.ios(await _iosModel.get_railway()),
+    );
+  }
+
+  Future<BusTaxi> get taxi {
+    return platform(
+      android: () async => BusTaxi.android(await _androidModel.getTaxi()),
+      ios: () async => BusTaxi.ios(await _iosModel.get_taxi()),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusStep{walk: ${await _toFutureString(walk)}}, lines: ${await _expandToString(lines)}, entrance: ${await _toFutureString(entrance)}, exit: ${await _toFutureString(exit)}, railway: ${await _toFutureString(railway)}, taxi: ${await _toFutureString(taxi)}';
+  }
+}
+
+class BusWalk with ToFutureString {
+  BusWalk.android(this._androidModel);
+
+  BusWalk.ios(this._iosModel);
+
+  com_amap_api_services_route_RouteBusWalkItem _androidModel;
+  AMapWalking _iosModel;
+
+  Future<LatLng> get from {
+    return platform(
+      android: () async => LatLng.android(await _androidModel.getOrigin()),
+      ios: () async => LatLng.ios(await _iosModel.get_origin()),
+    );
+  }
+
+  Future<LatLng> get to {
+    return platform(
+      android: () async => LatLng.android(await _androidModel.getDestination()),
+      ios: () async => LatLng.ios(await _iosModel.get_destination()),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusWalk{from: ${await _toFutureString(from)}}, to: ${await _toFutureString(to)}';
+  }
+}
+
+class BusLine with ToFutureString {
+  BusLine.android(this._androidModel);
+
+  BusLine.ios(this._iosModel);
+
+  com_amap_api_services_route_RouteBusLineItem _androidModel;
+  AMapBusLine _iosModel;
+
+  Future<double> get distance {
+    return platform(
+      android: () => _androidModel.getDistance(),
+      ios: () => _iosModel.get_distance(),
+    );
+  }
+
+  Future<String> get busLineName {
+    return platform(
+      android: () => _androidModel.getBusLineName(),
+      ios: () => _iosModel.get_name(),
+    );
+  }
+
+  Future<String> get busLineType {
+    return platform(
+      android: () => _androidModel.getBusLineType(),
+      ios: () => _iosModel.get_type(),
+    );
+  }
+
+  Future<String> get cityCode {
+    return platform(
+      android: () => _androidModel.getCityCode(),
+      ios: () => _iosModel.get_citycode(),
+    );
+  }
+
+  Future<double> get totalPrice {
+    return platform(
+      android: () => _androidModel.getTotalPrice(),
+      ios: () => _iosModel.get_totalPrice(),
+    );
+  }
+
+  Future<double> get basicPrice {
+    return platform(
+      android: () => _androidModel.getBasicPrice(),
+      ios: () => _iosModel.get_basicPrice(),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusLine{distance: ${await distance}, busLineName: ${await busLineName}, busLineType: ${await busLineType}, cityCode: ${await cityCode}, totalPrice: ${await totalPrice}, basicPrice: ${await basicPrice}';
+  }
+}
+
+class BusEntrance with ToFutureString {
+  BusEntrance.android(this._androidModel);
+
+  BusEntrance.ios(this._iosModelLocation, this._iosModelName);
+
+  com_amap_api_services_route_Doorway _androidModel;
+  AMapGeoPoint _iosModelLocation;
+  String _iosModelName;
+
+  Future<String> get name {
+    return platform(
+      android: () async => _androidModel?.getName(),
+      ios: () async => _iosModelName,
+    );
+  }
+
+  Future<LatLng> get location {
+    return platform(
+      android: () async =>
+          LatLng.android(await _androidModel?.getLatLonPoint()),
+      ios: () async => LatLng.ios(_iosModelLocation),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusEntrance{name: ${await name}, location: ${await location}';
+  }
+}
+
+class BusExit with ToFutureString {
+  BusExit.android(this._androidModel);
+
+  BusExit.ios(this._iosModelLocation, this._iosModelName);
+
+  com_amap_api_services_route_Doorway _androidModel;
+  AMapGeoPoint _iosModelLocation;
+  String _iosModelName;
+
+  Future<String> get name {
+    return platform(
+      android: () => _androidModel?.getName(),
+      ios: () async => _iosModelName,
+    );
+  }
+
+  Future<LatLng> get location {
+    return platform(
+      android: () async =>
+          LatLng.android(await _androidModel?.getLatLonPoint()),
+      ios: () async => LatLng.ios(_iosModelLocation),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'BusEntrance{name: ${await name}, location: ${await location}';
+  }
+}
+
+// todo
+class BusRailway with ToFutureString {
+  BusRailway.android(this._androidModel);
+
+  BusRailway.ios(this._iosModel);
+
+  com_amap_api_services_route_RouteRailwayItem _androidModel;
+  AMapRailway _iosModel;
+
+  @override
+  Future<String> toFutureString() async {
+    return '';
+  }
+}
+
+// todo
+class BusTaxi with ToFutureString {
+  BusTaxi.android(this._androidModel);
+
+  BusTaxi.ios(this._iosModel);
+
+  com_amap_api_services_route_TaxiItem _androidModel;
+  AMapTaxi _iosModel;
+
+  @override
+  Future<String> toFutureString() async {
+    return '';
+  }
+}
+
 class TMC with ToFutureString {
   TMC.android(this._androidModel) : _iosModel = null;
 
@@ -604,9 +906,14 @@ class TMC with ToFutureString {
   }
 }
 
-Future<List<String>> _expandToString(Future<List<ToFutureString>> source) =>
-    source
-        .asStream()
-        .asyncExpand((it) => Stream.fromIterable(it))
-        .asyncMap((it) => it.toFutureString())
-        .toList();
+Future<List<String>> _expandToString(Future<List<ToFutureString>> source) {
+  return source
+      .asStream()
+      .asyncExpand((it) => Stream.fromIterable(it))
+      .asyncMap((it) => it?.toFutureString() ?? Future.value(''))
+      .toList();
+}
+
+Future<String> _toFutureString(Future<ToFutureString> source) async {
+  return (await source)?.toFutureString() ?? '';
+}

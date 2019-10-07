@@ -15,7 +15,7 @@ class com_amap_api_services_cloud_CloudSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
+  Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
   
@@ -51,10 +51,14 @@ class com_amap_api_services_cloud_CloudSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
+  Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
   
@@ -66,10 +70,14 @@ class com_amap_api_services_cloud_CloudSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchCloudDetailAsyn(String var1, String var2) async {
+  Future<void> searchCloudDetailAsyn(String var1, String var2) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
   
@@ -81,7 +89,11 @@ class com_amap_api_services_cloud_CloudSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

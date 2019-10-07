@@ -15,7 +15,7 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setId(String var1) async {
+  Future<void> setId(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::setId([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::setName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCityCode() async {
+  Future<String> getCityCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::getCityCode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::setCityCode([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getRoadWidth() async {
+  Future<double> getRoadWidth() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::getRoadWidth([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setRoadWidth(double var1) async {
+  Future<void> setRoadWidth(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::setRoadWidth([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getType() async {
+  Future<String> getType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::getType([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setType(String var1) async {
+  Future<void> setType(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::setType([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::getCenterPoint([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::setCenterPoint([])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getId() async {
+  Future<String> getId() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::getId([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getName() async {
+  Future<String> getName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.road.Road@$refId::getName([])');
   
@@ -192,7 +236,11 @@ class com_amap_api_services_road_Road extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

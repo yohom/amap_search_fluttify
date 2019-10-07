@@ -2,13 +2,13 @@ import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
-/// 步行路线规划
-class RouteWalkScreen extends StatefulWidget {
+/// 公交路线规划
+class RouteBusScreen extends StatefulWidget {
   @override
-  _RouteWalkScreenState createState() => _RouteWalkScreenState();
+  _RouteBusScreenState createState() => _RouteBusScreenState();
 }
 
-class _RouteWalkScreenState extends State<RouteWalkScreen> {
+class _RouteBusScreenState extends State<RouteBusScreen> {
   final _fromLatController = TextEditingController(text: '30.219933');
   final _fromLngController = TextEditingController(text: '120.023728');
 
@@ -67,7 +67,7 @@ class _RouteWalkScreenState extends State<RouteWalkScreen> {
           ),
           RaisedButton(
             onPressed: () async {
-              final routeResult = await AmapSearch.searchWalkRoute(
+              final routeResult = await AmapSearch.searchBusRoute(
                 from: LatLng(
                   double.parse(_fromLatController.text),
                   double.parse(_fromLngController.text),
@@ -76,6 +76,7 @@ class _RouteWalkScreenState extends State<RouteWalkScreen> {
                   double.parse(_toLatController.text),
                   double.parse(_toLngController.text),
                 ),
+                city: '杭州',
               );
               routeResult
                   .toFutureString()

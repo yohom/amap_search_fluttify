@@ -15,7 +15,7 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getSearchCityName() async {
+  Future<String> getSearchCityName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityName([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSearchCityName(String var1) async {
+  Future<void> setSearchCityName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getSearchCitycode() async {
+  Future<String> getSearchCitycode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSearchCitycode(String var1) async {
+  Future<void> setSearchCitycode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCitycode([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getSearchCityAdCode() async {
+  Future<String> getSearchCityAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSearchCityhAdCode(String var1) async {
+  Future<void> setSearchCityhAdCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityhAdCode([\'var1\':$var1])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_route_SearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

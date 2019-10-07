@@ -15,7 +15,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
+  Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getFrom([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
+  Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getTo([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<int> getMode() async {
+  Future<int> getMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getMode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> getSearchType() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> getSearchType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getSearchType([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[result];
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[result];
+    }
   }
   
-   Future<int> getRange() async {
+  Future<int> getRange() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getRange([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getPolylines() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getPolylines() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getPolylines([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> clone() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::clone([])');
   
@@ -117,7 +141,11 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends Ref_Andro
   
   
     // 返回值
-    return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
+    }
   }
   
 }

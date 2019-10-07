@@ -15,7 +15,7 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getName() async {
+  Future<String> getName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getName([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdCode() async {
+  Future<String> getAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getAdCode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setAdCode([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_traffic_RoadTrafficQuery> clone() async {
+  Future<com_amap_api_services_traffic_RoadTrafficQuery> clone() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.traffic.RoadTrafficQuery@$refId::clone([])');
   
@@ -87,7 +103,11 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_traffic_RoadTrafficQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_traffic_RoadTrafficQuery()..refId = result;
+    }
   }
   
 }

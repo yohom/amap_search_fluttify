@@ -15,7 +15,7 @@ class com_amap_api_services_core_AMapException extends Ref_Android  {
   
 
   // 生成方法们
-   Future<int> getErrorLevel() async {
+  Future<int> getErrorLevel() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorLevel([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_core_AMapException extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getErrorType() async {
+  Future<String> getErrorType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorType([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_core_AMapException extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getErrorMessage() async {
+  Future<String> getErrorMessage() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorMessage([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_core_AMapException extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getErrorCode() async {
+  Future<int> getErrorCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorCode([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_core_AMapException extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

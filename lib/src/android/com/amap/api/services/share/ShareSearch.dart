@@ -15,7 +15,7 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) async {
+  Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::setOnShareSearchListener([])');
   
@@ -79,10 +79,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) async {
+  Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrlAsyn([])');
   
@@ -94,10 +98,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
+  Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrlAsyn([])');
   
@@ -109,10 +117,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
+  Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrlAsyn([])');
   
@@ -124,10 +136,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
+  Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrlAsyn([])');
   
@@ -139,10 +155,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
+  Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrlAsyn([])');
   
@@ -154,10 +174,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) async {
+  Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrlAsyn([])');
   
@@ -169,10 +193,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) async {
+  Future<String> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrl([])');
   
@@ -184,10 +212,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
+  Future<String> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrl([])');
   
@@ -199,10 +231,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) async {
+  Future<String> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrl([])');
   
@@ -214,10 +250,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
+  Future<String> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrl([])');
   
@@ -229,10 +269,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
+  Future<String> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrl([])');
   
@@ -244,10 +288,14 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
+  Future<String> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrl([])');
   
@@ -259,7 +307,11 @@ class com_amap_api_services_share_ShareSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

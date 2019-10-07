@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
+  Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getFrom([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
+  Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getTo([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<String> getStartPoiID() async {
+  Future<String> getStartPoiID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getStartPoiID([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setStartPoiID(String var1) async {
+  Future<void> setStartPoiID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDestinationPoiID() async {
+  Future<String> getDestinationPoiID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationPoiID([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDestinationPoiID(String var1) async {
+  Future<void> setDestinationPoiID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getOriginType() async {
+  Future<String> getOriginType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getOriginType([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOriginType(String var1) async {
+  Future<void> setOriginType(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getDestinationType() async {
+  Future<String> getDestinationType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationType([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDestinationType(String var1) async {
+  Future<void> setDestinationType(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType([\'var1\':$var1])');
   
@@ -162,10 +198,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPlateProvince() async {
+  Future<String> getPlateProvince() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateProvince([])');
   
@@ -177,10 +217,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPlateProvince(String var1) async {
+  Future<void> setPlateProvince(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince([\'var1\':$var1])');
   
@@ -192,10 +236,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getPlateNumber() async {
+  Future<String> getPlateNumber() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateNumber([])');
   
@@ -207,10 +255,14 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPlateNumber(String var1) async {
+  Future<void> setPlateNumber(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber([\'var1\':$var1])');
   
@@ -222,7 +274,11 @@ class com_amap_api_services_route_RouteSearch_FromAndTo extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

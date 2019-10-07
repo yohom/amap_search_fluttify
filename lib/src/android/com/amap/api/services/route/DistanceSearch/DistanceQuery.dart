@@ -15,7 +15,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
 
   // 生成方法们
-   Future<int> getType() async {
+  Future<int> getType() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getType([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_services_core_LatLonPoint>> getOrigins() async {
+  Future<List<com_amap_api_services_core_LatLonPoint>> getOrigins() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getOrigins([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
+  Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getDestination([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setType(int var1) async {
+  Future<void> setType(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setType([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOrigins(List<com_amap_api_services_core_LatLonPoint> var1) async {
+  Future<void> setOrigins(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setOrigins([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> addOrigins(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> addOrigins(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::addOrigins([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setDestination([])');
   
@@ -117,7 +141,11 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends Ref_Andro
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

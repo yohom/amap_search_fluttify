@@ -15,7 +15,7 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<List<com_amap_api_services_route_WalkPath>> getPaths() async {
+  Future<List<com_amap_api_services_route_WalkPath>> getPaths() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getPaths([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_WalkPath()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_WalkPath()..refId = it).toList();
+    }
   }
   
-   Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {
+  Future<void> setPaths(List<com_amap_api_services_route_WalkPath> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setPaths([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_RouteSearch_WalkRouteQuery> getWalkQuery() async {
+  Future<com_amap_api_services_route_RouteSearch_WalkRouteQuery> getWalkQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::getWalkQuery([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = result;
+    }
   }
   
-   Future<void> setWalkQuery(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
+  Future<void> setWalkQuery(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.WalkRouteResult@$refId::setWalkQuery([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_WalkRouteResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -15,7 +15,7 @@ class com_amap_api_services_route_Doorway extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getName() async {
+  Future<String> getName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getName([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_Doorway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setName(String var1) async {
+  Future<void> setName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_Doorway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getLatLonPoint([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_Doorway extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setLatLonPoint([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_Doorway extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

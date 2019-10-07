@@ -15,7 +15,7 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setActivateAction(int var1) async {
+  Future<void> setActivateAction(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setActivateAction([\'var1\':$var1])');
   
@@ -27,10 +27,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) async {
+  Future<void> setGeoFenceListener(com_amap_api_fence_GeoFenceListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceListener([])');
   
@@ -59,10 +63,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> addGeoFence(com_amap_api_location_DPoint var1, double var2, String var3) async {
+  Future<void> addGeoFence(com_amap_api_location_DPoint var1, double var2, String var3) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::addGeoFence([\'var2\':$var2, \'var3\':$var3])');
   
@@ -74,10 +82,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> removeGeoFence() async {
+  Future<void> removeGeoFence() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::removeGeoFence([])');
   
@@ -89,10 +101,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() async {
+  Future<List<com_amap_api_fence_GeoFence>> getAllGeoFence() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::getAllGeoFence([])');
   
@@ -104,10 +120,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_fence_GeoFence()..refId = it).toList();
+    }
   }
   
-   Future<void> setGeoFenceAble(String var1, bool var2) async {
+  Future<void> setGeoFenceAble(String var1, bool var2) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::setGeoFenceAble([\'var1\':$var1, \'var2\':$var2])');
   
@@ -119,10 +139,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> pauseGeoFence() async {
+  Future<void> pauseGeoFence() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::pauseGeoFence([])');
   
@@ -134,10 +158,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> resumeGeoFence() async {
+  Future<void> resumeGeoFence() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::resumeGeoFence([])');
   
@@ -149,10 +177,14 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<bool> isPause() async {
+  Future<bool> isPause() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.fence.GeoFenceClient@$refId::isPause([])');
   
@@ -164,7 +196,11 @@ class com_amap_api_fence_GeoFenceClient extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

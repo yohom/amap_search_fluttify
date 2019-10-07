@@ -15,7 +15,7 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getCityName() async {
+  Future<String> getCityName() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCityName(String var1) async {
+  Future<void> setCityName(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCityCode() async {
+  Future<String> getCityCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCityCode(String var1) async {
+  Future<void> setCityCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getAdCode() async {
+  Future<String> getAdCode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setAdCode(String var1) async {
+  Future<void> setAdCode(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getSuggestionNum() async {
+  Future<int> getSuggestionNum() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setSuggestionNum(int var1) async {
+  Future<void> setSuggestionNum(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\'var1\':$var1])');
   
@@ -132,7 +160,11 @@ class com_amap_api_services_core_SuggestionCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -15,7 +15,7 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
 
   // 生成方法们
-   Future<List<com_amap_api_services_district_DistrictItem>> getDistrict() async {
+  Future<List<com_amap_api_services_district_DistrictItem>> getDistrict() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getDistrict([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it).toList();
+    }
   }
   
-   Future<void> setDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
+  Future<void> setDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setDistrict([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
+  Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getQuery([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+    }
   }
   
-   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setQuery([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getPageCount() async {
+  Future<int> getPageCount() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getPageCount([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setPageCount(int var1) async {
+  Future<void> setPageCount(int var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setPageCount([\'var1\':$var1])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_AMapException> getAMapException() async {
+  Future<com_amap_api_services_core_AMapException> getAMapException() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getAMapException([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_AMapException()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_AMapException()..refId = result;
+    }
   }
   
-   Future<void> setAMapException(com_amap_api_services_core_AMapException var1) async {
+  Future<void> setAMapException(com_amap_api_services_core_AMapException var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setAMapException([])');
   
@@ -132,7 +160,11 @@ class com_amap_api_services_district_DistrictResult extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

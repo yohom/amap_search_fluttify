@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
+  Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setRouteSearchListener([])');
   
@@ -65,10 +65,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) async {
+  Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnTruckRouteSearchListener([])');
   
@@ -97,10 +101,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) async {
+  Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnRoutePlanSearchListener([])');
   
@@ -129,10 +137,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
+  Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRoute([])');
   
@@ -144,10 +156,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_WalkRouteResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_WalkRouteResult()..refId = result;
+    }
   }
   
-   Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
+  Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRouteAsyn([])');
   
@@ -159,10 +175,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
+  Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRoute([])');
   
@@ -174,10 +194,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_BusRouteResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_BusRouteResult()..refId = result;
+    }
   }
   
-   Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
+  Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRouteAsyn([])');
   
@@ -189,10 +213,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
+  Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRoute([])');
   
@@ -204,10 +232,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_DriveRouteResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_DriveRouteResult()..refId = result;
+    }
   }
   
-   Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
+  Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRouteAsyn([])');
   
@@ -219,10 +251,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
+  Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRouteAsyn([])');
   
@@ -234,10 +270,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
+  Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRoute([])');
   
@@ -249,10 +289,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_RideRouteResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RideRouteResult()..refId = result;
+    }
   }
   
-   Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
+  Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRoute([])');
   
@@ -264,10 +308,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_TruckRouteRestult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_TruckRouteRestult()..refId = result;
+    }
   }
   
-   Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
+  Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRouteAsyn([])');
   
@@ -279,10 +327,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
+  Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlan([])');
   
@@ -294,10 +346,14 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_route_DriveRoutePlanResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_DriveRoutePlanResult()..refId = result;
+    }
   }
   
-   Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
+  Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlanAsyn([])');
   
@@ -309,7 +365,11 @@ class com_amap_api_services_route_RouteSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

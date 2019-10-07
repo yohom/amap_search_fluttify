@@ -15,7 +15,7 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<String> getID() async {
+  Future<String> getID() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getID([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setID(String var1) async {
+  Future<void> setID(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setID([\'var1\':$var1])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getTitle() async {
+  Future<String> getTitle() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getTitle([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setTitle(String var1) async {
+  Future<void> setTitle(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setTitle([\'var1\':$var1])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
+  Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getPoint([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setPoint([])');
   
@@ -102,10 +122,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDistance() async {
+  Future<double> getDistance() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDistance([])');
   
@@ -117,10 +141,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDistance(double var1) async {
+  Future<void> setDistance(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDistance([\'var1\':$var1])');
   
@@ -132,10 +160,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<double> getDuration() async {
+  Future<double> getDuration() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDuration([])');
   
@@ -147,10 +179,14 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setDuration(double var1) async {
+  Future<void> setDuration(double var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDuration([\'var1\':$var1])');
   
@@ -162,7 +198,11 @@ class com_amap_api_services_routepoisearch_RoutePOIItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

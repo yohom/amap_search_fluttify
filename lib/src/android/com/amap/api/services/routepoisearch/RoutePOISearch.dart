@@ -15,7 +15,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<void> setPoiSearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) async {
+  Future<void> setPoiSearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setPoiSearchListener([])');
   
@@ -44,10 +44,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setQuery([])');
   
@@ -59,10 +63,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchRoutePOIAsyn() async {
+  Future<void> searchRoutePOIAsyn() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOIAsyn([])');
   
@@ -74,10 +82,14 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() async {
+  Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOI([])');
   
@@ -89,7 +101,11 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result;
+    }
   }
   
 }

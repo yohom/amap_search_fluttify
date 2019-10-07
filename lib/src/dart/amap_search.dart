@@ -34,7 +34,7 @@ class AmapSearch {
   static Future<List<Poi>> searchKeyword(String keyword, {String city = ''}) {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<Poi>>();
+    final _controller = StreamController<List<Poi>>(sync: true);
 
     platform(
       android: () async {
@@ -89,7 +89,7 @@ class AmapSearch {
   }) {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<Poi>>();
+    final _controller = StreamController<List<Poi>>(sync: true);
 
     platform(
       android: () async {
@@ -158,7 +158,7 @@ class AmapSearch {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<List<InputTip>>();
+    final _controller = StreamController<List<InputTip>>(sync: true);
 
     platform(
       android: () async {
@@ -268,7 +268,7 @@ class AmapSearch {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<ReGeocode>();
+    final _controller = StreamController<ReGeocode>(sync: true);
 
     platform(
       android: () async {
@@ -334,7 +334,7 @@ class AmapSearch {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<DriveRouteResult>();
+    final _controller = StreamController<DriveRouteResult>(sync: true);
 
     platform(
       android: () async {
@@ -437,6 +437,96 @@ class AmapSearch {
   }
 
   /// 步行出行路线规划
+
+  /// 公交出行路线规划
+  ///
+  /// 指定起点[from]和终点[to]进行计算, 还可以指定计算路径的模式[mode], 默认为最快捷. [city]指定所在城市
+  /// [nightflag]是否计算夜班车，默认为不计算，0：不计算，1：计算
+  static Future<BusRouteResult> searchBusRoute({
+    @required LatLng from,
+    @required LatLng to,
+    @required String city,
+    int mode = 0,
+    int nightflag = 0,
+  }) async {
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<BusRouteResult>(sync: true);
+
+    platform(
+      android: () async {
+        // 起点
+        final fromLatLng = await ObjectFactory_Android
+            .createcom_amap_api_services_core_LatLonPoint__double__double(
+          from.latitude,
+          from.longitude,
+        );
+        // 终点
+        final toLatLng = await ObjectFactory_Android
+            .createcom_amap_api_services_core_LatLonPoint__double__double(
+          to.latitude,
+          to.longitude,
+        );
+
+        // 起终点
+        final fromAndTo = await ObjectFactory_Android
+            .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+                fromLatLng, toLatLng);
+
+        // 创建请求对象
+        final query = await ObjectFactory_Android
+            .createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int(
+          fromAndTo,
+          mode,
+          city,
+          nightflag,
+        );
+
+        // 获取android上下文
+        final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+        // 创建搜索对象
+        _androidRouteSearch = await ObjectFactory_Android
+            .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+                context);
+
+        // 设置回调
+        await _androidRouteSearch
+            .setRouteSearchListener(_AndroidSearchListener(_controller));
+
+        // 开始搜索
+        await _androidRouteSearch.calculateBusRouteAsyn(query);
+      },
+      ios: () async {
+        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+
+        // 创建起点
+        final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
+        await fromLatLng.set_latitude(from.latitude);
+        await fromLatLng.set_longitude(from.longitude);
+        // 创建终点
+        final toLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
+        await toLatLng.set_latitude(to.latitude);
+        await toLatLng.set_longitude(to.longitude);
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request =
+            await ObjectFactory_iOS.createAMapWalkingRouteSearchRequest();
+        // 设置起点
+        await request.set_origin(fromLatLng);
+        // 设置终点
+        await request.set_destination(toLatLng);
+
+        // 开始搜索
+        await _iosSearch.AMapWalkingRouteSearch(request);
+      },
+    );
+    return _controller.stream.first;
+  }
+
   ///
   /// 指定起点[from]和终点[to]进行计算, 还可以指定计算路径的模式[mode]. SDK提供两种模式：RouteSearch.WALK_DEFAULT 和 RouteSearch.WALK_MULTI_PATH
   static Future<WalkRouteResult> searchWalkRoute({
@@ -446,7 +536,7 @@ class AmapSearch {
   }) async {
     // 会在listener中关闭
     // ignore: close_sinks
-    final _controller = StreamController<WalkRouteResult>();
+    final _controller = StreamController<WalkRouteResult>(sync: true);
 
     platform(
       android: () async {
@@ -599,7 +689,10 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onBusRouteSearched(
     com_amap_api_services_route_BusRouteResult var1,
     int var2,
-  ) async {}
+  ) async {
+    _streamController?.add(BusRouteResult.android(var1));
+    _streamController?.close();
+  }
 }
 
 /// ios: 搜索监听
@@ -664,6 +757,8 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
       route = DriveRouteResult.ios(await response.get_route());
     } else if (await request.isKindOfAMapWalkingRouteSearchRequest()) {
       route = WalkRouteResult.ios(await response.get_route());
+    } else if (await request.isKindOfAMapBusLineBaseSearchRequest()) {
+      route = BusRouteResult.ios(await response.get_route());
     }
     _streamController?.add(route);
     _streamController?.close();

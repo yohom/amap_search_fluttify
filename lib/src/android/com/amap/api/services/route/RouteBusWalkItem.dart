@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
+  Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteBusWalkItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RouteBusWalkItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
+  Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RouteBusWalkItem extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_core_LatLonPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_core_LatLonPoint()..refId = result;
+    }
   }
   
-   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
+  Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');
   
@@ -72,7 +84,11 @@ class com_amap_api_services_route_RouteBusWalkItem extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearchCity extends Ref_Android  {
   
 
   // 生成方法们
-   Future<List<com_amap_api_services_route_District>> getDistricts() async {
+  Future<List<com_amap_api_services_route_District>> getDistricts() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteSearchCity extends Ref_Android  {
   
   
     // 返回值
-    return (result as List).cast<int>().map((it) => com_amap_api_services_route_District()..refId = it).toList();
+    if (result == null) {
+      return null;
+    } else {
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_District()..refId = it).toList();
+    }
   }
   
-   Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
+  Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');
   
@@ -42,7 +46,11 @@ class com_amap_api_services_route_RouteSearchCity extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

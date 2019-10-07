@@ -15,7 +15,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
 
   // 生成方法们
-   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
+  Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
   
     // 返回值
-    return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+    }
   }
   
-   Future<int> getMode() async {
+  Future<int> getMode() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCity() async {
+  Future<String> getCity() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<int> getNightFlag() async {
+  Future<int> getNightFlag() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<String> getCityd() async {
+  Future<String> getCityd() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setCityd(String var1) async {
+  Future<void> setCityd(String var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\'var1\':$var1])');
   
@@ -102,7 +122,11 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends Ref_Android 
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

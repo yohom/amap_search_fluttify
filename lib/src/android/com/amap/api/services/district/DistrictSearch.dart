@@ -15,7 +15,7 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
   
 
   // 生成方法们
-   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
+  Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
   
@@ -27,10 +27,14 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+    }
   }
   
-   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
+  Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
   
@@ -42,10 +46,14 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
+  Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
   
@@ -57,10 +65,14 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
   
   
     // 返回值
-    return com_amap_api_services_district_DistrictResult()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_district_DistrictResult()..refId = result;
+    }
   }
   
-   Future<void> searchDistrictAsyn() async {
+  Future<void> searchDistrictAsyn() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])');
   
@@ -72,10 +84,14 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> searchDistrictAnsy() async {
+  Future<void> searchDistrictAnsy() async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])');
   
@@ -87,10 +103,14 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
-   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
+  Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
     // 日志打印
     print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');
   
@@ -119,7 +139,11 @@ class com_amap_api_services_district_DistrictSearch extends Ref_Android  {
         });
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }
