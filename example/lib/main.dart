@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'get_map_data/get_address_desc.screen.dart';
 import 'get_map_data/get_poi.screen.dart';
 import 'route_plan/route_drive.screen.dart';
+import 'route_plan/route_walk.screen.dart';
 import 'widgets/function_group.widget.dart';
 import 'widgets/function_item.widget.dart';
 import 'widgets/todo.screen.dart';
@@ -87,8 +88,8 @@ class Home extends StatelessWidget {
               ),
               FunctionItem(
                 label: '步行出行路线规划',
-                sublabel: 'TODO',
-                target: TodoScreen(),
+                sublabel: 'RouteWalkScreen',
+                target: RouteWalkScreen(),
               ),
               FunctionItem(
                 label: '公交出行路线规划',

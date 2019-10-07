@@ -291,6 +291,35 @@ class DriveRouteResult with ToFutureString {
   }
 }
 
+class WalkRouteResult with ToFutureString {
+  WalkRouteResult.android(this._androidModel);
+
+  WalkRouteResult.ios(this._iosModel);
+
+  com_amap_api_services_route_WalkRouteResult _androidModel;
+  AMapRoute _iosModel;
+
+  Future<List<WalkPath>> get walkPathList {
+    return platform(
+      android: () async {
+        return (await _androidModel.getPaths())
+            .map((it) => WalkPath.android(it))
+            .toList();
+      },
+      ios: () async {
+        return (await _iosModel.get_paths())
+            .map((it) => WalkPath.ios(it))
+            .toList();
+      },
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkRouteResult{walkPathList: ${await _expandToString(walkPathList)}';
+  }
+}
+
 class DrivePath with ToFutureString {
   DrivePath.android(this._androidModel);
 
@@ -314,6 +343,32 @@ class DrivePath with ToFutureString {
   @override
   Future<String> toFutureString() async {
     return 'DrivePath{driveStepList: ${await _expandToString(driveStepList)}}';
+  }
+}
+
+class WalkPath with ToFutureString {
+  WalkPath.android(this._androidModel);
+
+  WalkPath.ios(this._iosModel);
+
+  com_amap_api_services_route_WalkPath _androidModel;
+  AMapPath _iosModel;
+
+  Future<List<WalkStep>> get walkStepList {
+    return platform(android: () async {
+      return (await _androidModel.getSteps())
+          .map((it) => WalkStep.android(it))
+          .toList();
+    }, ios: () async {
+      return (await _iosModel.get_steps())
+          .map((it) => WalkStep.ios(it))
+          .toList();
+    });
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkPath{walkStepList: ${await _expandToString(walkStepList)}}';
   }
 }
 
@@ -423,6 +478,85 @@ class DriveStep with ToFutureString {
   @override
   Future<String> toFutureString() async {
     return 'DriveStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, tolls: ${await tolls}, tollDistance: ${await tollDistance}, tollRoad: ${await tollRoad}, duration: ${await duration}, polyline: ${await _expandToString(polyline)}, action: ${await action}, assistantAction: ${await assistantAction}, tmsList: ${await _expandToString(tmsList)}';
+  }
+}
+
+class WalkStep with ToFutureString {
+  WalkStep.android(this._androidModel);
+
+  WalkStep.ios(this._iosModel);
+
+  com_amap_api_services_route_WalkStep _androidModel;
+  AMapStep _iosModel;
+
+  Future<String> get instruction {
+    return platform(
+      android: () => _androidModel.getInstruction(),
+      ios: () => _iosModel.get_instruction(),
+    );
+  }
+
+  Future<String> get orientation {
+    return platform(
+      android: () => _androidModel.getOrientation(),
+      ios: () => _iosModel.get_orientation(),
+    );
+  }
+
+  Future<String> get road {
+    return platform(
+      android: () => _androidModel.getRoad(),
+      ios: () => _iosModel.get_road(),
+    );
+  }
+
+  Future<double> get distance {
+    return platform(
+      android: () => _androidModel.getDistance(),
+      ios: () => _iosModel.get_distance().then((it) => it.toDouble()),
+    );
+  }
+
+  Future<double> get duration {
+    return platform(
+      android: () => _androidModel.getDuration(),
+      ios: () => _iosModel.get_duration().then((it) => it.toDouble()),
+    );
+  }
+
+  Future<List<LatLng>> get polyline {
+    return platform(
+      android: () async => (await _androidModel.getPolyline())
+          .map((it) => LatLng.android(it))
+          .toList(),
+      ios: () async {
+        final latLngString = await _iosModel.get_polyline();
+        return latLngString
+            .split(';')
+            .map((latLngPair) => latLngPair.split(','))
+            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .toList();
+      },
+    );
+  }
+
+  Future<String> get action {
+    return platform(
+      android: () => _androidModel.getAction(),
+      ios: () => _iosModel.get_action(),
+    );
+  }
+
+  Future<String> get assistantAction {
+    return platform(
+      android: () => _androidModel.getAssistantAction(),
+      ios: () => _iosModel.get_assistantAction(),
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'WalkStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, duration: ${await duration}, polyline: ${await _expandToString(polyline)}, action: ${await action}, assistantAction: ${await assistantAction}';
   }
 }
 
