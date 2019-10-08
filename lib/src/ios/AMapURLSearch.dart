@@ -27,7 +27,11 @@ class AMapURLSearch extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<bool> openAMapNavigation(AMapNaviConfig config) async {
@@ -42,7 +46,11 @@ class AMapURLSearch extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<bool> openAMapRouteSearch(AMapRouteConfig config) async {
@@ -57,7 +65,11 @@ class AMapURLSearch extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   static Future<bool> openAMapPOISearch(AMapPOIConfig config) async {
@@ -72,7 +84,11 @@ class AMapURLSearch extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }

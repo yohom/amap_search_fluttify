@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 import 'package:amap_search_fluttify/src/android/android.export.dart';
 
-// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class ObjectFactory_Android {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
@@ -24,12 +24,12 @@ class ObjectFactory_Android {
     return android_os_Bundle()..refId = refId;
   }
 
-  static Future<String> release(int refId) async {
-    return await _channel.invokeMethod('ObjectFactory::release', {'refId': refId});
+  static Future<void> release(Ref_Android ref) async {
+    await _channel.invokeMethod('ObjectFactory::release', {'refId': ref.refId});
   }
 
-  static Future<android_app_Activity> clearRefMap() async {
-    return await _channel.invokeMethod('ObjectFactory::clearRefMap');
+  static Future<void> clearRefMap() async {
+    await _channel.invokeMethod('ObjectFactory::clearRefMap');
   }
 
   static Future<com_amap_api_location_AMapLocationClient> createcom_amap_api_location_AMapLocationClient__android_content_Context(android_content_Context var1) async {

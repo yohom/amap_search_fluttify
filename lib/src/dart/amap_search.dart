@@ -61,6 +61,9 @@ class AmapSearch {
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -78,6 +81,9 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapPOIKeywordsSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -126,6 +132,11 @@ class AmapSearch {
 
         // 开始搜索
         await _androidPoiSearch.searchPOIAsyn();
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
+        ObjectFactory_Android.release(centerLatLng);
+        ObjectFactory_Android.release(bound);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -148,6 +159,10 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapPOIAroundSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
+        ObjectFactory_iOS.release(location);
       },
     );
     return _controller.stream.first;
@@ -187,6 +202,9 @@ class AmapSearch {
 
         // 开始搜索
         await _androidInputTip.requestInputtipsAsyn();
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -204,6 +222,9 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapInputTipsSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -241,6 +262,9 @@ class AmapSearch {
 
         // 开始搜索
         await _androidGeocodeSearch.getFromLocationNameAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -258,6 +282,9 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapGeocodeSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -300,6 +327,10 @@ class AmapSearch {
 
         // 开始搜索
         await _androidGeocodeSearch.getFromLocationAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(latLngPoint);
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -322,6 +353,10 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapReGoecodeSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(amapLocation);
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -384,7 +419,7 @@ class AmapSearch {
         final context = await ObjectFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch = await ObjectFactory_Android
+        _androidRouteSearch ??= await ObjectFactory_Android
             .createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
@@ -394,6 +429,13 @@ class AmapSearch {
 
         // 开始搜索
         await _androidRouteSearch.calculateDriveRouteAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(fromLatLng);
+        ObjectFactory_Android.release(toLatLng);
+        ObjectFactory_Android.release(fromAndTo);
+        passby.forEach((it) => ObjectFactory_Android.release(it));
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -435,6 +477,12 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapDrivingRouteSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(fromLatLng);
+        ObjectFactory_iOS.release(toLatLng);
+        passby.forEach((it) => ObjectFactory_iOS.release(it));
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -498,6 +546,12 @@ class AmapSearch {
 
         // 开始搜索
         await _androidRouteSearch.calculateBusRouteAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(fromLatLng);
+        ObjectFactory_Android.release(toLatLng);
+        ObjectFactory_Android.release(fromAndTo);
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -524,6 +578,11 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapWalkingRouteSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(fromLatLng);
+        ObjectFactory_iOS.release(toLatLng);
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -582,6 +641,12 @@ class AmapSearch {
 
         // 开始搜索
         await _androidRouteSearch.calculateWalkRouteAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(fromLatLng);
+        ObjectFactory_Android.release(toLatLng);
+        ObjectFactory_Android.release(fromAndTo);
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -608,6 +673,11 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapWalkingRouteSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(fromLatLng);
+        ObjectFactory_iOS.release(toLatLng);
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -654,7 +724,7 @@ class AmapSearch {
         final context = await ObjectFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch = await ObjectFactory_Android
+        _androidRouteSearch ??= await ObjectFactory_Android
             .createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
@@ -664,6 +734,12 @@ class AmapSearch {
 
         // 开始搜索
         await _androidRouteSearch.calculateRideRouteAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(fromLatLng);
+        ObjectFactory_Android.release(toLatLng);
+        ObjectFactory_Android.release(fromAndTo);
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -692,6 +768,11 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapRidingRouteSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(fromLatLng);
+        ObjectFactory_iOS.release(toLatLng);
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -731,6 +812,9 @@ class AmapSearch {
 
         // 开始搜索
         await _androidBusStationSearch.searchBusStationAsyn();
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -748,6 +832,9 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapBusStopSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -783,6 +870,9 @@ class AmapSearch {
 
         // 开始搜索
         await _androidDistrictSearch.searchDistrictAsyn();
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -798,6 +888,9 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapDistrictSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;
@@ -835,6 +928,9 @@ class AmapSearch {
 
         // 开始搜索
         await _androidDistrictSearch.searchDistrictAsyn();
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_Android.release(query);
       },
       ios: () async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
@@ -851,6 +947,9 @@ class AmapSearch {
 
         // 开始搜索
         await _iosSearch.AMapWeatherSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        ObjectFactory_iOS.release(request);
       },
     );
     return _controller.stream.first;

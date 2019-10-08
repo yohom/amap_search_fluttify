@@ -47,7 +47,11 @@ class AMapGeoPoint extends AMapSearchObject  {
   
   
     // 返回值
-    return AMapGeoPoint()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return AMapGeoPoint()..refId = result;
+    }
   }
   
 }

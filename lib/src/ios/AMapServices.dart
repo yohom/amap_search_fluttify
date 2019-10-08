@@ -63,7 +63,11 @@ class AMapServices extends NSObject  {
   
   
     // 返回值
-    return AMapServices()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return AMapServices()..refId = result;
+    }
   }
   
 }

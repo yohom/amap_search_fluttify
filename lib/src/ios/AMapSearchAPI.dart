@@ -175,7 +175,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return AMapSearchAPI()..refId = result;
+    if (result == null) {
+      return null;
+    } else {
+      return AMapSearchAPI()..refId = result;
+    }
   }
   
   Future<void> cancelAllRequests() async {
@@ -190,7 +194,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapPOIIDSearch(AMapPOIIDSearchRequest request) async {
@@ -205,7 +213,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapPOIKeywordsSearch(AMapPOIKeywordsSearchRequest request) async {
@@ -220,7 +232,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapPOIAroundSearch(AMapPOIAroundSearchRequest request) async {
@@ -235,7 +251,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapPOIPolygonSearch(AMapPOIPolygonSearchRequest request) async {
@@ -250,7 +270,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapRoutePOISearch(AMapRoutePOISearchRequest request) async {
@@ -265,7 +289,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapGeocodeSearch(AMapGeocodeSearchRequest request) async {
@@ -280,7 +308,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapReGoecodeSearch(AMapReGeocodeSearchRequest request) async {
@@ -295,7 +327,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapInputTipsSearch(AMapInputTipsSearchRequest request) async {
@@ -310,7 +346,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapBusStopSearch(AMapBusStopSearchRequest request) async {
@@ -325,7 +365,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapBusLineIDSearch(AMapBusLineIDSearchRequest request) async {
@@ -340,7 +384,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapBusLineNameSearch(AMapBusLineNameSearchRequest request) async {
@@ -355,7 +403,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapDistrictSearch(AMapDistrictSearchRequest request) async {
@@ -370,7 +422,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapDrivingRouteSearch(AMapDrivingRouteSearchRequest request) async {
@@ -385,7 +441,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapWalkingRouteSearch(AMapWalkingRouteSearchRequest request) async {
@@ -400,7 +460,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapTransitRouteSearch(AMapTransitRouteSearchRequest request) async {
@@ -415,7 +479,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapRidingRouteSearch(AMapRidingRouteSearchRequest request) async {
@@ -430,7 +498,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapTruckRouteSearch(AMapTruckRouteSearchRequest request) async {
@@ -445,7 +517,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapFutureRouteSearch(AMapFutureRouteSearchRequest request) async {
@@ -460,7 +536,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapWeatherSearch(AMapWeatherSearchRequest request) async {
@@ -475,7 +555,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapRoadTrafficSearch(AMapRoadTrafficSearchRequest request) async {
@@ -490,7 +574,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapRoadTrafficCircleSearch(AMapRoadTrafficCircleSearchRequest request) async {
@@ -505,7 +593,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapDistanceSearch(AMapDistanceSearchRequest request) async {
@@ -520,7 +612,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapNearbySearch(AMapNearbySearchRequest request) async {
@@ -535,7 +631,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapCloudPOIAroundSearch(AMapCloudPOIAroundSearchRequest request) async {
@@ -550,7 +650,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapCloudPOIPolygonSearch(AMapCloudPOIPolygonSearchRequest request) async {
@@ -565,7 +669,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapCloudPOIIDSearch(AMapCloudPOIIDSearchRequest request) async {
@@ -580,7 +688,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapCloudPOILocalSearch(AMapCloudPOILocalSearchRequest request) async {
@@ -595,7 +707,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapLocationShareSearch(AMapLocationShareSearchRequest request) async {
@@ -610,7 +726,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapPOIShareSearch(AMapPOIShareSearchRequest request) async {
@@ -625,7 +745,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapRouteShareSearch(AMapRouteShareSearchRequest request) async {
@@ -640,7 +764,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
   Future<void> AMapNavigationShareSearch(AMapNavigationShareSearchRequest request) async {
@@ -655,7 +783,11 @@ class AMapSearchAPI extends NSObject  {
   
   
     // 返回值
-    return result;
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
   }
   
 }
