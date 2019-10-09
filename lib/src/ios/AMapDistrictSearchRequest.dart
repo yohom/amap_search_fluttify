@@ -14,10 +14,32 @@ class AMapDistrictSearchRequest extends AMapSearchObject  {
     return result;
   }
   
+  Future<bool> get_requireExtension() async {
+    final result = await _channel.invokeMethod("AMapDistrictSearchRequest::get_requireExtension", {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> get_showBusinessArea() async {
+    final result = await _channel.invokeMethod("AMapDistrictSearchRequest::get_showBusinessArea", {'refId': refId});
+    return result;
+  }
+  
 
   // 生成setters
   Future<void> set_keywords(String keywords) async {
     await _channel.invokeMethod('AMapDistrictSearchRequest::set_keywords', {'refId': refId, "keywords": keywords});
+  
+  
+  }
+  
+  Future<void> set_requireExtension(bool requireExtension) async {
+    await _channel.invokeMethod('AMapDistrictSearchRequest::set_requireExtension', {'refId': refId, "requireExtension": requireExtension});
+  
+  
+  }
+  
+  Future<void> set_showBusinessArea(bool showBusinessArea) async {
+    await _channel.invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea', {'refId': refId, "showBusinessArea": showBusinessArea});
   
   
   }

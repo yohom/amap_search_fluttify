@@ -143,25 +143,6 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
-      @"AMapGeoPolygon::polygonWithPoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          // 参数
-          // jsonable参数
-          NSArray* points = (NSArray*) args[@"points"];
-      
-          // 调用对象引用
-      
-      
-          // 日志打印
-          NSLog(@"fluttify-objc: AMapGeoPolygon::polygonWithPoints(暂未实现参数打印)");
-      
-          // 开始调用
-          AMapGeoPolygon* result = [AMapGeoPolygon polygonWithPoints: points];
-      
-          // 调用结果
-          // 返回值: 引用
-          HEAP[@(result.hash)] = result;
-          methodResult(@(result.hash));
-      },
       @"AMapNearbySearchManagerDelegate::nearbyInfoForUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
           // 引用参数
@@ -219,6 +200,98 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           // 调用结果
           // 无返回值
           methodResult(@"success");
+      },
+      @"AMapNearbySearchManager::sharedInstance": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+      
+      
+          // 调用对象引用
+      
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapNearbySearchManager::sharedInstance(暂未实现参数打印)");
+      
+          // 开始调用
+          AMapNearbySearchManager* result = [AMapNearbySearchManager sharedInstance];
+      
+          // 调用结果
+          // 返回值: 引用
+          HEAP[@(result.hash)] = result;
+          methodResult(@(result.hash));
+      },
+      @"AMapNearbySearchManager::startAutoUploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+      
+      
+          // 调用对象引用
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::startAutoUploadNearbyInfo(暂未实现参数打印)", @(refId));
+      
+          // 开始调用
+          [ref startAutoUploadNearbyInfo ];
+      
+          // 调用结果
+          // 无返回值
+          methodResult(@"success");
+      },
+      @"AMapNearbySearchManager::stopAutoUploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+      
+      
+          // 调用对象引用
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::stopAutoUploadNearbyInfo(暂未实现参数打印)", @(refId));
+      
+          // 开始调用
+          [ref stopAutoUploadNearbyInfo ];
+      
+          // 调用结果
+          // 无返回值
+          methodResult(@"success");
+      },
+      @"AMapNearbySearchManager::uploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+          // 引用参数
+          AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[@([args[@"info"] integerValue])];
+      
+          // 调用对象引用
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::uploadNearbyInfo(暂未实现参数打印)", @(refId));
+      
+          // 开始调用
+          BOOL result = [ref uploadNearbyInfo: info];
+      
+          // 调用结果
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      @"AMapNearbySearchManager::clearUserInfoWithID": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // 参数
+          // jsonable参数
+          NSString* userID = (NSString*) args[@"userID"];
+      
+          // 调用对象引用
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+      
+          // 日志打印
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::clearUserInfoWithID(暂未实现参数打印)", @(refId));
+      
+          // 开始调用
+          BOOL result = [ref clearUserInfoWithID: userID];
+      
+          // 调用结果
+          // 返回值: Value
+          methodResult(@(result));
       },
       @"AMapSearchAPI::init": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 参数
@@ -2592,6 +2665,38 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
       
           // 返回值: jsonable
           methodResult(result);
+      },
+      
+      @"AMapDistrictSearchRequest::get_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrictSearchRequest::get_requireExtension");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
+      
+          // 开始调用
+          BOOL result = ref.requireExtension;
+      
+      
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
+      @"AMapDistrictSearchRequest::get_showBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrictSearchRequest::get_showBusinessArea");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
+      
+          // 开始调用
+          BOOL result = ref.showBusinessArea;
+      
+      
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapDistrictSearchResponse::get_count": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -9411,6 +9516,22 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           methodResult(nil/* 结构体getter暂时不支持 */);
       },
       
+      @"AMapNearbySearchManager::get_isAutoUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapNearbySearchManager::get_isAutoUploading");
+      
+          // 引用对象
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+      
+          // 开始调用
+          BOOL result = ref.isAutoUploading;
+      
+      
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
       @"AMapSearchAPI::get_timeout": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapSearchAPI::get_timeout");
       
@@ -10633,6 +10754,34 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistrictSearchRequest::set_requireExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrictSearchRequest::set_requireExtension");
+      
+          // 参数
+          // jsonable参数
+          BOOL requireExtension = [args[@"requireExtension"] boolValue];
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
+      
+          ref.requireExtension = requireExtension;
+          methodResult(@"success");
+      },
+      
+      @"AMapDistrictSearchRequest::set_showBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapDistrictSearchRequest::set_showBusinessArea");
+      
+          // 参数
+          // jsonable参数
+          BOOL showBusinessArea = [args[@"showBusinessArea"] boolValue];
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
+      
+          ref.showBusinessArea = showBusinessArea;
           methodResult(@"success");
       },
       
@@ -16504,6 +16653,19 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           methodResult(@"success");
       },
       
+      @"AMapNearbySearchManager::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          NSLog(@"AMapNearbySearchManager::set_delegate");
+      
+          // 参数
+      
+      
+          NSInteger refId = [args[@"refId"] integerValue];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+      
+          ref.delegate = self;
+          methodResult(@"success");
+      },
+      
       @"AMapSearchAPI::set_delegate": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"AMapSearchAPI::set_delegate");
       
@@ -19875,15 +20037,6 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
           methodResult(@(ref.hash));
       },
       
-      @"ObjectFactory::createAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
-          NSLog(@"ObjectFactory::createAMapNearbySearchManager");
-      
-          AMapNearbySearchManager* ref = [AMapNearbySearchManager alloc];
-          HEAP[@(ref.hash)] = ref;
-      
-          methodResult(@(ref.hash));
-      },
-      
       @"ObjectFactory::createAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapSearchAPI");
       
@@ -19952,6 +20105,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapNearbySearchManagerDelegate::nearbyInfoForUploading");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argmanager = @(manager.hash);
   HEAP[argmanager] = manager;
 
@@ -19973,6 +20127,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   // 由于flutter无法同步调用method channel, 所以暂不支持有返回值的回调方法
   // 相关issue https://github.com/flutter/flutter/issues/28310
   NSLog(@"暂不支持有返回值的回调方法");
+  
   return nil;
 }
 
@@ -19985,6 +20140,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
@@ -20001,6 +20157,7 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
@@ -20017,8 +20174,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::AMapSearchRequestDidFailWithError");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(((NSObject*) request).hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
@@ -20035,8 +20194,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onPOISearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20053,8 +20214,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onRoutePOISearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20071,8 +20234,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onGeocodeSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20089,8 +20254,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onReGeocodeSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20107,8 +20274,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onInputTipsSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20125,8 +20294,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onBusStopSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20143,8 +20314,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onBusLineSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20161,8 +20334,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onDistrictSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20179,8 +20354,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onRouteSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20197,8 +20374,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onFutureRouteSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20215,8 +20394,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onDistanceSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20233,8 +20414,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onWeatherSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20251,8 +20434,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20269,8 +20454,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onNearbySearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20287,8 +20474,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onCloudSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
@@ -20305,8 +20494,10 @@ NSMutableDictionary<NSNumber *, NSObject *> *HEAP;
   NSLog(@"AMapSearchDelegate::onShareSearchDoneResponse");
 
   // 构造可以直接传输的参数
+  // 引用回调参数
   NSNumber* argrequest = @(request.hash);
   HEAP[argrequest] = request;
+  // 引用回调参数
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 

@@ -24,23 +24,5 @@ class AMapGeoPolygon extends AMapSearchObject  {
   
 
   // 生成方法们
-  static Future<AMapGeoPolygon> polygonWithPoints(List points) async {
-    // 日志打印
-    print('fluttify-dart: AMapGeoPolygon::polygonWithPoints([\'points\':$points])');
-  
-    // 调用原生方法
-    final result = await _channel.invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points});
-  
-  
-    // 接受原生回调
-  
-  
-    // 返回值
-    if (result == null) {
-      return null;
-    } else {
-      return AMapGeoPolygon()..refId = result;
-    }
-  }
   
 }

@@ -822,3 +822,13 @@ class android_location_Location extends java_lang_Object {}
 class android_view_MotionEvent extends java_lang_Object {}
 
 class android_graphics_drawable_Drawable extends java_lang_Object {}
+
+class android_widget_ImageView extends android_view_View {}
+
+class android_widget_TextView extends android_view_View {}
+
+class android_widget_LinearLayout extends android_view_ViewGroup {}
+
+class android_widget_RelativeLayout extends android_view_ViewGroup {}
+
+class android_os_Parcelable extends java_lang_Object {}

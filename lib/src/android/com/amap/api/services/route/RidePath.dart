@@ -5,7 +5,7 @@ import 'package:amap_search_fluttify/src/android/android.export.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_route_RidePath extends Ref_Android  {
+class com_amap_api_services_route_RidePath extends java_lang_Object  {
   static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
 
   // 生成getters

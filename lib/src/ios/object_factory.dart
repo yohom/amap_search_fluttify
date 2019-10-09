@@ -549,11 +549,6 @@ class ObjectFactory_iOS {
     return AMapNearbyUploadInfo()..refId = refId;
   }
   
-  static Future<AMapNearbySearchManager> createAMapNearbySearchManager() async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNearbySearchManager');
-    return AMapNearbySearchManager()..refId = refId;
-  }
-  
   static Future<AMapSearchAPI> createAMapSearchAPI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapSearchAPI');
     return AMapSearchAPI()..refId = refId;
@@ -572,18 +567,20 @@ class CGRect extends Ref_iOS {}
 
 class CGPoint extends Ref_iOS {}
 
+class UIEdgeInsets extends Ref_iOS {}
+
 // 类
-class CLLocationManager extends Ref_iOS {}
+class CLLocationManager extends NSObject {}
 
-class NSError extends Ref_iOS {}
+class NSError extends NSObject {}
 
-mixin NSCoding on Ref_iOS {}
+mixin NSCoding on NSObject {}
 
-mixin NSCopying on Ref_iOS {}
+mixin NSCopying on NSObject {}
 
-class UIView extends Ref_iOS {}
+class UIView extends NSObject {}
 
-class UIControl extends UIView {}
+class UIControl extends NSObject {}
 
 class AMapNearbySearchManagerDelegate_Ref = NSObject with AMapNearbySearchManagerDelegate;
 class AMapSearchDelegate_Ref = NSObject with AMapSearchDelegate;
