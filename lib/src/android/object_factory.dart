@@ -831,4 +831,4 @@ class android_widget_LinearLayout extends android_view_ViewGroup {}
 
 class android_widget_RelativeLayout extends android_view_ViewGroup {}
 
-class android_os_Parcelable extends java_lang_Object {}
+mixin android_os_Parcelable on java_lang_Object {}
