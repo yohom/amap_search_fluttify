@@ -15,5 +15,42 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   
 
   // 生成方法们
+  Future<int> getDrivingMode() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getDrivingMode([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return result;
+    }
+  }
+  
+  Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
+    // 日志打印
+    print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getShareFromAndTo([])');
+  
+    // 调用原生方法
+    final result = await _channel.invokeMethod('com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo', {"refId": refId});
+  
+  
+    // 接受原生回调
+  
+  
+    // 返回值
+    if (result == null) {
+      return null;
+    } else {
+      return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result;
+    }
+  }
   
 }

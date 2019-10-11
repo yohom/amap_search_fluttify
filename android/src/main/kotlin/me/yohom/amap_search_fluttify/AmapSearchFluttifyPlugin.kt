@@ -9527,6 +9527,153 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::getLowerLeft" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft([])")
+        
+            // 开始调用
+            val result = ref.getLowerLeft()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::getUpperRight" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight([])")
+        
+            // 开始调用
+            val result = ref.getUpperRight()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::getCenter" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter([])")
+        
+            // 开始调用
+            val result = ref.getCenter()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::getRange" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange([])")
+        
+            // 开始调用
+            val result = ref.getRange()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::getShape" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape([])")
+        
+            // 开始调用
+            val result = ref.getShape()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::isDistanceSort" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort([])")
+        
+            // 开始调用
+            val result = ref.isDistanceSort()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.SearchBound::getPolyGonList" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])")
+        
+            // 开始调用
+            val result = ref.getPolyGonList()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.services.poisearch.PoiResult::createPagedResult" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -9959,6 +10106,345 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             } else {
                 methodResult.success(null)
             }
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getBuilding" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding([])")
+        
+            // 开始调用
+            val result = ref.getBuilding()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setBuilding" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setBuilding(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getQueryString" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString([])")
+        
+            // 开始调用
+            val result = ref.getQueryString()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setQueryLanguage(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getCategory" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory([])")
+        
+            // 开始调用
+            val result = ref.getCategory()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getCity" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity([])")
+        
+            // 开始调用
+            val result = ref.getCity()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getPageNum" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum([])")
+        
+            // 开始调用
+            val result = ref.getPageNum()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setPageNum" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setPageNum(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setPageSize" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setPageSize(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getPageSize" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize([])")
+        
+            // 开始调用
+            val result = ref.getPageSize()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setCityLimit(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit([])")
+        
+            // 开始调用
+            val result = ref.getCityLimit()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.requireSubPois(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois([])")
+        
+            // 开始调用
+            val result = ref.isRequireSubPois()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort([])")
+        
+            // 开始调用
+            val result = ref.isDistanceSort()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setDistanceSort(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::getLocation" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation([])")
+        
+            // 开始调用
+            val result = ref.getLocation()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::setLocation" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.core.LatLonPoint
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation([])")
+        
+            // 开始调用
+            ref.setLocation(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.poisearch.PoiSearch.Query::queryEquals" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals([])")
+        
+            // 开始调用
+            val result = ref.queryEquals(var1)
+        
+            // 调用结果
+            methodResult.success(result)
         },
         "com.amap.api.services.poisearch.IndoorData::getPoiId" to { registrar, args, methodResult ->
             // 参数
@@ -10418,6 +10904,309 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setMode" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setMode([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setMode(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckSize" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckSize([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTruckSize(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckHeight" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Double
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckHeight([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTruckHeight(var1.toFloat())
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckWidth" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Double
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWidth([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTruckWidth(var1.toFloat())
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckLoad" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Double
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckLoad([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTruckLoad(var1.toFloat())
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckWeight" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Double
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWeight([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTruckWeight(var1.toFloat())
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckAxis" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Double
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckAxis([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTruckAxis(var1.toFloat())
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getMode([])")
+        
+            // 开始调用
+            val result = ref.getMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::hasPassPoint" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::hasPassPoint([])")
+        
+            // 开始调用
+            val result = ref.hasPassPoint()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getPassedPointStr" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getPassedPointStr([])")
+        
+            // 开始调用
+            val result = ref.getPassedPointStr()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckSize" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckSize([])")
+        
+            // 开始调用
+            val result = ref.getTruckSize()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckHeight" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckHeight([])")
+        
+            // 开始调用
+            val result = ref.getTruckHeight()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckWidth" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWidth([])")
+        
+            // 开始调用
+            val result = ref.getTruckWidth()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckLoad" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckLoad([])")
+        
+            // 开始调用
+            val result = ref.getTruckLoad()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckWeight" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWeight([])")
+        
+            // 开始调用
+            val result = ref.getTruckWeight()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckAxis" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckAxis([])")
+        
+            // 开始调用
+            val result = ref.getTruckAxis()
+        
+            // 调用结果
+            methodResult.success(result)
         },
         "com.amap.api.services.route.TMC::getDistance" to { registrar, args, methodResult ->
             // 参数
@@ -12050,6 +12839,308 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                 methodResult.success(null)
             }
         },
+        "com.amap.api.services.route.RouteSearch.RideRouteQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.RideRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.RideRouteQuery::getMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.RideRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::getMode([])")
+        
+            // 开始调用
+            val result = ref.getMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getMode([])")
+        
+            // 开始调用
+            val result = ref.getMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getCarType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getCarType([])")
+        
+            // 开始调用
+            val result = ref.getCarType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedByPoints" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints([])")
+        
+            // 开始调用
+            val result = ref.getPassedByPoints()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygons" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])")
+        
+            // 开始调用
+            val result = ref.getAvoidpolygons()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidRoad" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad([])")
+        
+            // 开始调用
+            val result = ref.getAvoidRoad()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedPointStr" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedPointStr([])")
+        
+            // 开始调用
+            val result = ref.getPassedPointStr()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasPassPoint" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasPassPoint([])")
+        
+            // 开始调用
+            val result = ref.hasPassPoint()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygonsStr" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygonsStr([])")
+        
+            // 开始调用
+            val result = ref.getAvoidpolygonsStr()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasAvoidpolygons" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidpolygons([])")
+        
+            // 开始调用
+            val result = ref.hasAvoidpolygons()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasAvoidRoad" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidRoad([])")
+        
+            // 开始调用
+            val result = ref.hasAvoidRoad()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::isUseFerry" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::isUseFerry([])")
+        
+            // 开始调用
+            val result = ref.isUseFerry()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::setUseFerry" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Boolean
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setUseFerry([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setUseFerry(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.DriveRouteQuery::setCarType" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setCarType([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setCarType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.services.route.RouteRailwayItem::getTime" to { registrar, args, methodResult ->
             // 参数
         
@@ -13058,6 +14149,264 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getFrom" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getFrom([])")
+        
+            // 开始调用
+            val result = ref.getFrom()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getTo([])")
+        
+            // 开始调用
+            val result = ref.getTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getStartPoiID([])")
+        
+            // 开始调用
+            val result = ref.getStartPoiID()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setStartPoiID(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationPoiID([])")
+        
+            // 开始调用
+            val result = ref.getDestinationPoiID()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setDestinationPoiID(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getOriginType([])")
+        
+            // 开始调用
+            val result = ref.getOriginType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setOriginType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationType([])")
+        
+            // 开始调用
+            val result = ref.getDestinationType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setDestinationType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateProvince([])")
+        
+            // 开始调用
+            val result = ref.getPlateProvince()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setPlateProvince(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateNumber([])")
+        
+            // 开始调用
+            val result = ref.getPlateNumber()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setPlateNumber(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
         "com.amap.api.services.route.RidePath::getSteps" to { registrar, args, methodResult ->
             // 参数
         
@@ -13096,6 +14445,116 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 开始调用
             ref.setSteps(ArrayList(var1))
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.BusRouteQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.BusRouteQuery::getMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])")
+        
+            // 开始调用
+            val result = ref.getMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.BusRouteQuery::getCity" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])")
+        
+            // 开始调用
+            val result = ref.getCity()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.BusRouteQuery::getNightFlag" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])")
+        
+            // 开始调用
+            val result = ref.getNightFlag()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.BusRouteQuery::getCityd" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])")
+        
+            // 开始调用
+            val result = ref.getCityd()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.BusRouteQuery::setCityd" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setCityd(var1)
         
             // 调用结果
             methodResult.success("success")
@@ -13593,6 +15052,47 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.services.route.RouteSearch.WalkRouteQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.WalkRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.WalkRouteQuery::getMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.WalkRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getMode([])")
+        
+            // 开始调用
+            val result = ref.getMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
         "com.amap.api.services.route.District::getDistrictName" to { registrar, args, methodResult ->
             // 参数
         
@@ -13743,6 +15243,143 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 开始调用
             ref.setWalkQuery(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::getType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getType([])")
+        
+            // 开始调用
+            val result = ref.getType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getOrigins([])")
+        
+            // 开始调用
+            val result = ref.getOrigins()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getDestination([])")
+        
+            // 开始调用
+            val result = ref.getDestination()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::setType" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setType([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins" to { registrar, args, methodResult ->
+            // 参数
+            // 列表参数
+            val var1 = (args["var1"] as List<Int>).map { HEAP[it] as com.amap.api.services.core.LatLonPoint }
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setOrigins([])")
+        
+            // 开始调用
+            ref.setOrigins(ArrayList(var1))
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.core.LatLonPoint
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::addOrigins([])")
+        
+            // 开始调用
+            ref.addOrigins(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.core.LatLonPoint
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setDestination([])")
+        
+            // 开始调用
+            ref.setDestination(var1)
         
             // 调用结果
             methodResult.success("success")
@@ -14234,6 +15871,186 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 开始调用
             ref.setDuration(var1.toFloat())
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getDestParentPoiID([])")
+        
+            // 开始调用
+            val result = ref.getDestParentPoiID()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getMode([])")
+        
+            // 开始调用
+            val result = ref.getMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCarType([])")
+        
+            // 开始调用
+            val result = ref.getCarType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFirstTime([])")
+        
+            // 开始调用
+            val result = ref.getFirstTime()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getInterval([])")
+        
+            // 开始调用
+            val result = ref.getInterval()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCount([])")
+        
+            // 开始调用
+            val result = ref.getCount()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setDestParentPoiID([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setDestParentPoiID(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setMode([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setMode(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setCarType([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setCarType(var1)
         
             // 调用结果
             methodResult.success("success")
@@ -17960,6 +19777,188 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.core.LatLonPoint
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint([])")
+        
+            // 开始调用
+            ref.setCenterPoint(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCenterPoint([])")
+        
+            // 开始调用
+            val result = ref.getCenterPoint()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getRadius([])")
+        
+            // 开始调用
+            val result = ref.getRadius()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setRadius(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType" to { registrar, args, methodResult ->
+            // 参数
+            // 枚举参数
+            val var1 = com.amap.api.services.nearby.NearbySearchFunctionType.values()[args["var1"] as Int]
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType([])")
+        
+            // 开始调用
+            ref.setType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getType([])")
+        
+            // 开始调用
+            val result = ref.getType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setCoordType(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCoordType([])")
+        
+            // 开始调用
+            val result = ref.getCoordType()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTimeRange(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getTimeRange([])")
+        
+            // 开始调用
+            val result = ref.getTimeRange()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
         "com.amap.api.services.routepoisearch.RoutePOIItem::getID" to { registrar, args, methodResult ->
             // 参数
         
@@ -18688,6 +20687,306 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success("success")
         },
+        "com.amap.api.services.cloud.CloudSearch.Query::getQueryString" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getQueryString([])")
+        
+            // 开始调用
+            val result = ref.getQueryString()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::setTableID" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setTableID([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setTableID(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getTableID" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getTableID([])")
+        
+            // 开始调用
+            val result = ref.getTableID()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getPageNum" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageNum([])")
+        
+            // 开始调用
+            val result = ref.getPageNum()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::setPageNum" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageNum([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setPageNum(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::setPageSize" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as Int
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageSize([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setPageSize(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getPageSize" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageSize([])")
+        
+            // 开始调用
+            val result = ref.getPageSize()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::setBound" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setBound([])")
+        
+            // 开始调用
+            ref.setBound(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getBound" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getBound([])")
+        
+            // 开始调用
+            val result = ref.getBound()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::addFilterString" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+            // jsonable参数
+            val var2 = args["var2"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterString([\"var1\":$var1, \"var2\":$var2])")
+        
+            // 开始调用
+            ref.addFilterString(var1, var2)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getFilterString" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterString([])")
+        
+            // 开始调用
+            val result = ref.getFilterString()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::addFilterNum" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+            // jsonable参数
+            val var2 = args["var2"] as String
+            // jsonable参数
+            val var3 = args["var3"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterNum([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
+        
+            // 开始调用
+            ref.addFilterNum(var1, var2, var3)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getFilterNumString" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterNumString([])")
+        
+            // 开始调用
+            val result = ref.getFilterNumString()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::setSortingrules" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.cloud.CloudSearch.Sortingrules
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setSortingrules([])")
+        
+            // 开始调用
+            ref.setSortingrules(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::getSortingrules" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getSortingrules([])")
+        
+            // 开始调用
+            val result = ref.getSortingrules()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.cloud.CloudSearch.Query::queryEquals" to { registrar, args, methodResult ->
+            // 参数
+            // 引用参数
+            val var1 = HEAP[args["var1"] as Int] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals([])")
+        
+            // 开始调用
+            val result = ref.queryEquals(var1)
+        
+            // 调用结果
+            methodResult.success(result)
+        },
         "com.amap.api.services.cloud.CloudResult::createPagedResult" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -18927,6 +21226,153 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             // 调用结果
             methodResult.success("success")
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getLowerLeft" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getLowerLeft([])")
+        
+            // 开始调用
+            val result = ref.getLowerLeft()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getUpperRight" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getUpperRight([])")
+        
+            // 开始调用
+            val result = ref.getUpperRight()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getCenter" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCenter([])")
+        
+            // 开始调用
+            val result = ref.getCenter()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getRange" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getRange([])")
+        
+            // 开始调用
+            val result = ref.getRange()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getShape" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getShape([])")
+        
+            // 开始调用
+            val result = ref.getShape()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getCity" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCity([])")
+        
+            // 开始调用
+            val result = ref.getCity()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.cloud.CloudSearch.SearchBound::getPolyGonList" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getPolyGonList([])")
+        
+            // 开始调用
+            val result = ref.getPolyGonList()
+        
+            // 调用结果
+            if (result != null) {
+                for (item in result) {
+                    HEAP[item.hashCode()] = item
+                }
+                methodResult.success(result.map { it.hashCode() })
+            } else {
+                methodResult.success(null)
+            }
         },
         "com.amap.api.services.cloud.CloudImage::getId" to { registrar, args, methodResult ->
             // 参数
@@ -26540,6 +28986,88 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
                 methodResult.success(null)
             }
         },
+        "com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareNaviQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareNaviQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getNaviMode([])")
+        
+            // 开始调用
+            val result = ref.getNaviMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getBusMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareBusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode([])")
+        
+            // 开始调用
+            val result = ref.getBusMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getShareFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareBusRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getShareFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.services.share.ShareSearch::setOnShareSearchListener" to { registrar, args, methodResult ->
             // 参数
         
@@ -26904,6 +29432,206 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             // 调用结果
             methodResult.success(result)
         },
+        "com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setFromName(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName" to { registrar, args, methodResult ->
+            // 参数
+            // jsonable参数
+            val var1 = args["var1"] as String
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName([\"var1\":$var1])")
+        
+            // 开始调用
+            ref.setToName(var1)
+        
+            // 调用结果
+            methodResult.success("success")
+        },
+        "com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFrom([])")
+        
+            // 开始调用
+            val result = ref.getFrom()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getTo([])")
+        
+            // 开始调用
+            val result = ref.getTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFromName" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFromName([])")
+        
+            // 开始调用
+            val result = ref.getFromName()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.share.ShareSearch.ShareFromAndTo::getToName" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getToName([])")
+        
+            // 开始调用
+            val result = ref.getToName()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode([])")
+        
+            // 开始调用
+            val result = ref.getWalkMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getShareFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
+        "com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getDrivingMode([])")
+        
+            // 开始调用
+            val result = ref.getDrivingMode()
+        
+            // 调用结果
+            methodResult.success(result)
+        },
+        "com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo" to { registrar, args, methodResult ->
+            // 参数
+        
+        
+            // 调用对象引用
+            val refId = args["refId"] as Int
+            val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery
+        
+            // 日志打印
+            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getShareFromAndTo([])")
+        
+            // 开始调用
+            val result = ref.getShareFromAndTo()
+        
+            // 调用结果
+            if (result != null) {
+                val returnRefId = result.hashCode()
+                HEAP[returnRefId] = result
+        
+                methodResult.success(returnRefId)
+            } else {
+                methodResult.success(null)
+            }
+        },
         "com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27034,8 +29762,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_DPoint__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27045,8 +29772,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_DPoint__double__double" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27059,8 +29785,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_CoordinateConverter__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27071,8 +29796,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_CoordUtil__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27082,8 +29806,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_UmidtokenInfo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27093,8 +29816,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_AMapLocation__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27105,8 +29827,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_AMapLocation__android_location_Location" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27117,8 +29838,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_AMapLocationClientOption__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27128,8 +29848,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_location_AMapLocationQualityReport__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27139,8 +29858,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_fence_DistrictItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27150,8 +29868,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_fence_GeoFenceClient__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27162,8 +29879,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_fence_GeoFence__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27173,8 +29889,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_fence_PoiItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27184,8 +29899,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusInfo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27195,8 +29909,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27206,8 +29919,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27218,8 +29930,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27234,8 +29945,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27250,8 +29960,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27261,8 +29970,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_busline_BusLineItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27272,8 +29980,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27286,8 +29993,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_busline_BusStationItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27297,8 +30003,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27311,8 +30016,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_AMapException__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27323,8 +30027,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27339,8 +30042,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_AMapException__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27350,8 +30052,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_SearchUtils__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27361,8 +30062,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27377,8 +30077,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27391,8 +30090,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27409,8 +30107,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27427,8 +30124,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_Photo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27438,8 +30134,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27452,8 +30147,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27470,8 +30164,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27484,8 +30177,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27498,8 +30190,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27514,8 +30205,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27528,8 +30218,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint" to { registrar, args, methodResult ->
             // 参数
             // 列表参数
@@ -27540,8 +30229,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27554,8 +30242,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27568,8 +30255,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27584,8 +30270,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27600,8 +30285,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_Railway__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27611,8 +30295,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_BusPath__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27622,8 +30305,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27633,8 +30315,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27651,8 +30332,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TMC__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27662,8 +30342,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27673,8 +30352,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27684,8 +30362,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27696,8 +30373,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_BusStep__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27707,8 +30383,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TaxiItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27718,8 +30393,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_BusRouteResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27729,8 +30403,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27740,8 +30413,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -27754,8 +30426,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27765,8 +30436,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27779,8 +30449,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27791,8 +30460,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27802,8 +30470,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27821,8 +30488,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27832,8 +30498,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27843,8 +30508,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_WalkStep__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27854,8 +30518,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27865,8 +30528,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RideRouteResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27876,8 +30538,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27890,8 +30551,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27901,8 +30561,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RidePath__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27912,8 +30571,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27930,8 +30588,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27941,8 +30598,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RideStep__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27952,8 +30608,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27963,8 +30618,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DistanceResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -27974,8 +30628,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -27988,8 +30641,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28000,8 +30652,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28011,8 +30662,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_District__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28022,8 +30672,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_WalkRouteResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28033,8 +30682,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28044,8 +30692,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_SearchCity__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28055,8 +30702,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28067,8 +30713,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_WalkPath__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28078,8 +30723,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteBusLineItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28089,8 +30733,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28107,8 +30750,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28118,8 +30760,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DrivePlanStep__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28129,8 +30770,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TimeInfo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28140,8 +30780,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DriveStep__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28151,8 +30790,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TruckStep__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28162,8 +30800,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DriveRouteResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28173,8 +30810,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DrivePath__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28184,8 +30820,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TruckPath__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28195,8 +30830,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_Doorway__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28206,8 +30840,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DrivePlanPath__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28217,8 +30850,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_TimeInfosElement__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28228,8 +30860,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_DistanceItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28239,8 +30870,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_route_Path__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28250,8 +30880,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_road_Road__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28261,8 +30890,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_road_Road__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28275,8 +30903,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_road_Crossroad__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28286,8 +30913,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_nearby_NearbyInfo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28297,8 +30923,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28308,8 +30933,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28319,8 +30943,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_nearby_NearbySearch_NearbyQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28330,8 +30953,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOIItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28341,8 +30963,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28359,8 +30980,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28375,8 +30995,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28387,8 +31006,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28401,8 +31019,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28415,8 +31032,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint" to { registrar, args, methodResult ->
             // 参数
             // 列表参数
@@ -28427,8 +31043,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28439,8 +31054,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28455,8 +31069,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28469,8 +31082,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28481,8 +31093,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28499,8 +31110,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28510,8 +31120,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__String__int" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28524,8 +31133,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28535,8 +31143,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28546,8 +31153,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28558,8 +31164,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_weather_LocalWeatherLive__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28569,8 +31174,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_BusinessArea__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28580,8 +31184,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_GeocodeQuery__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28594,8 +31197,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28606,8 +31208,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28620,8 +31221,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28634,8 +31234,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28645,8 +31244,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28656,8 +31254,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_GeocodeAddress__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28667,8 +31264,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28683,8 +31279,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_StreetNumber__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28694,8 +31289,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28705,8 +31299,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28716,8 +31309,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28732,8 +31324,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28752,8 +31343,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28764,8 +31354,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__com_amap_api_services_district_DistrictItem" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28778,8 +31367,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictResult__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28789,8 +31377,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictItem__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28800,8 +31387,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28820,8 +31406,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_help_Tip__" to { registrar, args, methodResult ->
             // 参数
         
@@ -28831,8 +31416,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_help_InputtipsQuery__String__String" to { registrar, args, methodResult ->
             // 参数
             // jsonable参数
@@ -28845,8 +31429,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28859,8 +31442,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28873,8 +31455,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28887,8 +31468,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_share_ShareSearch__android_content_Context" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28899,8 +31479,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28913,8 +31492,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28927,8 +31505,7 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             methodResult.success(obj.hashCode())
-        }
-        ,
+        },
         "ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int" to { registrar, args, methodResult ->
             // 参数
             // 引用参数
@@ -28942,7 +31519,6 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
             methodResult.success(obj.hashCode())
         }
-        
     )
 
     override fun onMethodCall(methodCall: MethodCall, methodResult: MethodChannel.Result) {
