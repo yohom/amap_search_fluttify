@@ -1,0 +1,103 @@
+import 'dart:typed_data';
+
+import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
+import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/services.dart';
+
+// ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
+class AMapCloudPOI extends AMapSearchObject  {
+  // 生成getters
+  Future<int> get_uid() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_uid", {'refId': refId});
+    return result;
+  }
+  
+  Future<String> get_name() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_name", {'refId': refId});
+    return result;
+  }
+  
+  Future<AMapGeoPoint> get_location() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_location", {'refId': refId});
+    return AMapGeoPoint()..refId = result;
+  }
+  
+  Future<String> get_address() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_address", {'refId': refId});
+    return result;
+  }
+  
+  Future<String> get_createTime() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_createTime", {'refId': refId});
+    return result;
+  }
+  
+  Future<String> get_updateTime() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_updateTime", {'refId': refId});
+    return result;
+  }
+  
+  Future<int> get_distance() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_distance", {'refId': refId});
+    return result;
+  }
+  
+  Future<List<AMapCloudImage>> get_images() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_images", {'refId': refId});
+    return (result as List).cast<int>().map((it) => AMapCloudImage()..refId = it).toList();
+  }
+  
+
+  // 生成setters
+  Future<void> set_uid(int uid) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_uid', {'refId': refId, "uid": uid});
+  
+  
+  }
+  
+  Future<void> set_name(String name) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_name', {'refId': refId, "name": name});
+  
+  
+  }
+  
+  Future<void> set_location(AMapGeoPoint location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_location', {'refId': refId, "location": location.refId});
+  
+  
+  }
+  
+  Future<void> set_address(String address) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_address', {'refId': refId, "address": address});
+  
+  
+  }
+  
+  Future<void> set_createTime(String createTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_createTime', {'refId': refId, "createTime": createTime});
+  
+  
+  }
+  
+  Future<void> set_updateTime(String updateTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_updateTime', {'refId': refId, "updateTime": updateTime});
+  
+  
+  }
+  
+  Future<void> set_distance(int distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_distance', {'refId': refId, "distance": distance});
+  
+  
+  }
+  
+  Future<void> set_images(List<AMapCloudImage> images) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_images', {'refId': refId, "images": images.map((it) => it.refId).toList()});
+  
+  
+  }
+  
+
+  // 生成方法们
+  
+}

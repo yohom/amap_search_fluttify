@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:amap_search_fluttify/src/android/android.export.dart';
-import 'package:amap_search_fluttify/src/ios/ios.export.dart';
+import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../utils.g.dart';
 import 'models.dart';
-import 'utils.dart';
 
 class AmapSearch {
   static AMapSearchAPI _iosSearch;
@@ -21,10 +21,10 @@ class AmapSearch {
   /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
   static Future init(String iosKey) async {
     return platform(
-      android: () async {
+      android: (pool) async {
         print('android端需要在Manifest里面设置');
       },
-      ios: () async {
+      ios: (pool) async {
         final service = await AMapServices.sharedServices();
         await service.set_apiKey(iosKey);
         await service.set_enableHTTPS(true);
@@ -41,7 +41,7 @@ class AmapSearch {
     final _controller = StreamController<List<Poi>>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建查询对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
@@ -65,7 +65,7 @@ class AmapSearch {
         // 局部变量从HEAP中解除引用
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -102,7 +102,7 @@ class AmapSearch {
     final _controller = StreamController<List<Poi>>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建查询对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
@@ -138,7 +138,7 @@ class AmapSearch {
         ObjectFactory_Android.release(centerLatLng);
         ObjectFactory_Android.release(bound);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -180,7 +180,7 @@ class AmapSearch {
     final _controller = StreamController<List<InputTip>>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建查询对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_help_InputtipsQuery__String__String(
@@ -206,7 +206,7 @@ class AmapSearch {
         // 局部变量从HEAP中解除引用
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -242,7 +242,7 @@ class AmapSearch {
     final _controller = StreamController<List<Geocode>>();
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建查询对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_geocoder_GeocodeQuery__String__String(
@@ -266,7 +266,7 @@ class AmapSearch {
         // 局部变量从HEAP中解除引用
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -302,7 +302,7 @@ class AmapSearch {
     final _controller = StreamController<ReGeocode>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建中心点
         final latLngPoint = await ObjectFactory_Android
             .createcom_amap_api_services_core_LatLonPoint__double__double(
@@ -332,7 +332,7 @@ class AmapSearch {
         ObjectFactory_Android.release(latLngPoint);
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建中心点
@@ -376,7 +376,7 @@ class AmapSearch {
     final _controller = StreamController<DriveRouteResult>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 起点
         final fromLatLng = await ObjectFactory_Android
             .createcom_amap_api_services_core_LatLonPoint__double__double(
@@ -437,7 +437,7 @@ class AmapSearch {
         passby.forEach((it) => ObjectFactory_Android.release(it));
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
@@ -504,7 +504,7 @@ class AmapSearch {
     final _controller = StreamController<BusRouteResult>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 起点
         final fromLatLng = await ObjectFactory_Android
             .createcom_amap_api_services_core_LatLonPoint__double__double(
@@ -553,7 +553,7 @@ class AmapSearch {
         ObjectFactory_Android.release(fromAndTo);
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
@@ -601,7 +601,7 @@ class AmapSearch {
     final _controller = StreamController<WalkRouteResult>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 起点
         final fromLatLng = await ObjectFactory_Android
             .createcom_amap_api_services_core_LatLonPoint__double__double(
@@ -648,7 +648,7 @@ class AmapSearch {
         ObjectFactory_Android.release(fromAndTo);
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
@@ -694,7 +694,7 @@ class AmapSearch {
     final _controller = StreamController<RideRouteResult>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 起点
         final fromLatLng = await ObjectFactory_Android
             .createcom_amap_api_services_core_LatLonPoint__double__double(
@@ -741,7 +741,7 @@ class AmapSearch {
         ObjectFactory_Android.release(fromAndTo);
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
@@ -788,7 +788,7 @@ class AmapSearch {
     final _controller = StreamController<BusStation>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建请求对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_busline_BusStationQuery__String__String(
@@ -816,7 +816,7 @@ class AmapSearch {
         // 局部变量从HEAP中解除引用
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -847,7 +847,7 @@ class AmapSearch {
     final _controller = StreamController<District>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建请求对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_district_DistrictSearchQuery__();
@@ -874,7 +874,7 @@ class AmapSearch {
         // 局部变量从HEAP中解除引用
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -903,7 +903,7 @@ class AmapSearch {
     final _controller = StreamController<Weather>(sync: true);
 
     platform(
-      android: () async {
+      android: (pool) async {
         // 创建请求对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_weather_WeatherSearchQuery__String__int(
@@ -932,7 +932,7 @@ class AmapSearch {
         // 局部变量从HEAP中解除引用
         ObjectFactory_Android.release(query);
       },
-      ios: () async {
+      ios: (pool) async {
         _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
@@ -975,6 +975,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_poisearch_PoiResult var1,
     int var2,
   ) async {
+    super.onPoiSearched(var1, var2);
     final poiList = [
       for (final item in (await var1.getPois())) Poi.android(item)
     ];
@@ -985,6 +986,7 @@ class _AndroidSearchListener extends java_lang_Object
   @override
   Future<void> onGetInputtips(
       List<com_amap_api_services_help_Tip> var1, int var2) async {
+    super.onGetInputtips(var1, var2);
     final inputTipList = [for (final item in var1) InputTip.android(item)];
     _streamController?.add(inputTipList);
     _streamController?.close();
@@ -993,6 +995,7 @@ class _AndroidSearchListener extends java_lang_Object
   @override
   Future<void> onGeocodeSearched(
       com_amap_api_services_geocoder_GeocodeResult var1, int var2) async {
+    super.onGeocodeSearched(var1, var2);
     final geocode = [
       for (final item in (await var1.getGeocodeAddressList()))
         Geocode.android(item)
@@ -1004,6 +1007,7 @@ class _AndroidSearchListener extends java_lang_Object
   @override
   Future<void> onRegeocodeSearched(
       com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {
+    super.onRegeocodeSearched(var1, var2);
     final result = await var1.getRegeocodeAddress();
     _streamController?.add(ReGeocode.android(result));
     _streamController?.close();
@@ -1014,6 +1018,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_route_DriveRouteResult var1,
     int var2,
   ) async {
+    super.onDriveRouteSearched(var1, var2);
     _streamController?.add(DriveRouteResult.android(var1));
     _streamController?.close();
   }
@@ -1023,6 +1028,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_route_RideRouteResult var1,
     int var2,
   ) async {
+    super.onRideRouteSearched(var1, var2);
     _streamController?.add(RideRouteResult.android(var1));
     _streamController?.close();
   }
@@ -1032,6 +1038,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_route_WalkRouteResult var1,
     int var2,
   ) async {
+    super.onWalkRouteSearched(var1, var2);
     _streamController?.add(WalkRouteResult.android(var1));
     _streamController?.close();
   }
@@ -1041,6 +1048,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_route_BusRouteResult var1,
     int var2,
   ) async {
+    super.onBusRouteSearched(var1, var2);
     _streamController?.add(BusRouteResult.android(var1));
     _streamController?.close();
   }
@@ -1048,6 +1056,7 @@ class _AndroidSearchListener extends java_lang_Object
   @override
   Future<void> onBusStationSearched(
       com_amap_api_services_busline_BusStationResult var1, int var2) async {
+    super.onBusStationSearched(var1, var2);
     _streamController?.add(BusStation.android(var1));
     _streamController?.close();
   }
@@ -1055,6 +1064,7 @@ class _AndroidSearchListener extends java_lang_Object
   @override
   Future<void> onDistrictSearched(
       com_amap_api_services_district_DistrictResult var1) async {
+    super.onDistrictSearched(var1);
     _streamController?.add(District.android(var1));
     _streamController?.close();
   }
@@ -1064,6 +1074,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_weather_LocalWeatherLiveResult var1,
     int var2,
   ) async {
+    super.onWeatherLiveSearched(var1, var2);
     // todo
   }
 
@@ -1072,6 +1083,7 @@ class _AndroidSearchListener extends java_lang_Object
     com_amap_api_services_weather_LocalWeatherForecastResult var1,
     int var2,
   ) async {
+    super.onWeatherForecastSearched(var1, var2);
     _streamController?.add(Weather.android(var1));
     _streamController?.close();
   }
@@ -1088,6 +1100,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapPOISearchBaseRequest request,
     AMapPOISearchResponse response,
   ) async {
+    super.onPOISearchDoneResponse(request, response);
     final poiList = [
       for (final item in (await response.get_pois())) Poi.ios(item)
     ];
@@ -1100,6 +1113,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapInputTipsSearchRequest request,
     AMapInputTipsSearchResponse response,
   ) async {
+    super.onInputTipsSearchDoneResponse(request, response);
     final inputTipList = [
       for (final item in (await response.get_tips())) InputTip.ios(item)
     ];
@@ -1112,6 +1126,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapGeocodeSearchRequest request,
     AMapGeocodeSearchResponse response,
   ) async {
+    super.onGeocodeSearchDoneResponse(request, response);
     final geocode = [
       for (final item in (await response.get_geocodes())) Geocode.ios(item)
     ];
@@ -1124,6 +1139,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapReGeocodeSearchRequest request,
     AMapReGeocodeSearchResponse response,
   ) async {
+    super.onReGeocodeSearchDoneResponse(request, response);
     final reGeocode = ReGeocode.ios(await response.get_regeocode());
     _streamController?.add(reGeocode);
     _streamController?.close();
@@ -1134,6 +1150,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapRouteSearchBaseRequest request,
     AMapRouteSearchResponse response,
   ) async {
+    super.onRouteSearchDoneResponse(request, response);
     dynamic route;
     if (await request.isKindOfAMapDrivingRouteSearchRequest()) {
       route = DriveRouteResult.ios(await response.get_route());
@@ -1153,6 +1170,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapBusStopSearchRequest request,
     AMapBusStopSearchResponse response,
   ) async {
+    super.onBusStopSearchDoneResponse(request, response);
     _streamController?.add(BusStation.ios(response));
     _streamController?.close();
   }
@@ -1162,6 +1180,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapDistrictSearchRequest request,
     AMapDistrictSearchResponse response,
   ) async {
+    super.onDistrictSearchDoneResponse(request, response);
     _streamController?.add(District.ios(response));
     _streamController?.close();
   }
