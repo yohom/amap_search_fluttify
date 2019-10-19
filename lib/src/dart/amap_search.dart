@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import '../utils.g.dart';
 import 'models.dart';
 
+/// 释放资源mixin
 mixin AmapSearchDisposeMixin<T extends StatefulWidget> on State<T> {
   @override
   void dispose() {
@@ -15,7 +16,10 @@ mixin AmapSearchDisposeMixin<T extends StatefulWidget> on State<T> {
   }
 }
 
+/// 高德地图 搜索组件主类
 class AmapSearch {
+  AmapSearch._();
+
   static AMapSearchAPI _iosSearch;
   static com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
   static com_amap_api_services_help_Inputtips _androidInputTip;
@@ -946,6 +950,7 @@ class AmapSearch {
     return _controller.stream.first;
   }
 
+  /// 释放原生端对应的资源, 除了[AMapServices]
   static void dispose() {
     kNativeObjectPool
         .where((it) => it.runtimeType != AMapServices) // AMapServices类不释放
