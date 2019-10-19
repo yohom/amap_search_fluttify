@@ -1,5 +1,6 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
+import 'package:amap_search_fluttify_example/widgets/future.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -35,8 +36,8 @@ class AddressEncodeScreen extends StatefulWidget {
 
 class _AddressEncodeScreenState extends State<AddressEncodeScreen>
     with AmapSearchDisposeMixin {
-  final _keywordController = TextEditingController();
-  final _cityController = TextEditingController();
+  final _keywordController = TextEditingController(text: '阿里巴巴');
+  final _cityController = TextEditingController(text: '杭州');
 
   List<Geocode> _geocodeList = [];
 
@@ -68,7 +69,8 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen>
             },
             child: Text('搜索'),
           ),
-          Text(_geocodeList.map((it) => it.toString()).join("\n")),
+          if (_geocodeList.isNotEmpty)
+            FutureText(_geocodeList[0].toFutureString()),
         ],
       ),
     );
