@@ -42,6 +42,11 @@ class Ref {
 
   @override
   int get hashCode => refId.hashCode;
+
+  @override
+  String toString() {
+    return '$runtimeType{refId: $refId}';
+  }
 }
 
 /// 原生对象的释放池
