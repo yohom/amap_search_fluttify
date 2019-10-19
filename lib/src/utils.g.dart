@@ -33,7 +33,11 @@ Future release(Ref ref) {
 }
 
 class Ref {
+  /// 对应原生对象的唯一id(目前为hashCode)
   int refId;
+
+  /// 自定义的标识
+  String tag;
 
   @override
   bool operator ==(Object other) =>
