@@ -28,6 +28,7 @@ class com_amap_api_services_route_RouteSearchCity extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_District()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_route_District()..refId = it).toList();
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_route_RouteSearchCity extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

@@ -9,21 +9,25 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<bool> get_requireExtension() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocodeSearchRequest::get_requireExtension", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocodeSearchRequest::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_radius() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocodeSearchRequest::get_radius", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_poitype() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocodeSearchRequest::get_poitype", {'refId': refId});
+  
     return result;
   }
   

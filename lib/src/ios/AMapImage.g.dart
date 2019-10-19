@@ -9,11 +9,13 @@ class AMapImage extends AMapSearchObject  {
   // 生成getters
   Future<String> get_title() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_title", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_url() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_url", {'refId': refId});
+  
     return result;
   }
   

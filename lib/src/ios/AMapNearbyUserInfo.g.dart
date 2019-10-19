@@ -9,16 +9,19 @@ class AMapNearbyUserInfo extends AMapSearchObject  {
   // 生成getters
   Future<String> get_userID() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUserInfo::get_userID", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUserInfo::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<double> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUserInfo::get_distance", {'refId': refId});
+  
     return result;
   }
   

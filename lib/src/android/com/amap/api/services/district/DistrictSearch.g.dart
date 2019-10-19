@@ -28,6 +28,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = result);
       return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_district_DistrictResult()..refId = result);
       return com_amap_api_services_district_DistrictResult()..refId = result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -140,6 +145,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

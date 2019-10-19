@@ -9,31 +9,37 @@ class AMapDistanceResult extends AMapSearchObject  {
   // 生成getters
   Future<int> get_originID() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_originID", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_destID() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_destID", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_duration() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_duration", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_info() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_info", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_code() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_code", {'refId': refId});
+  
     return result;
   }
   

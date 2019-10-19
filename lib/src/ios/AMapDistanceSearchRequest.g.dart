@@ -9,16 +9,19 @@ class AMapDistanceSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<List<AMapGeoPoint>> get_origins() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchRequest::get_origins", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchRequest::get_destination", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_type() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchRequest::get_type", {'refId': refId});
+  
     return result;
   }
   

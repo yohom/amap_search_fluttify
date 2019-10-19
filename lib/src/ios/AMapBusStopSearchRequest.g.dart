@@ -9,21 +9,25 @@ class AMapBusStopSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_keywords", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_offset() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_offset", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_page() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_page", {'refId': refId});
+  
     return result;
   }
   

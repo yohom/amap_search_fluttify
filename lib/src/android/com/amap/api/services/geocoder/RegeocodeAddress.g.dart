@@ -28,6 +28,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -123,6 +128,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -142,6 +148,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -161,6 +168,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -180,6 +188,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -199,6 +208,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -218,6 +228,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -237,6 +248,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -256,6 +268,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -275,6 +288,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -294,6 +308,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -313,6 +328,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -332,6 +348,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -351,6 +368,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -370,6 +388,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_geocoder_StreetNumber()..refId = result);
       return com_amap_api_services_geocoder_StreetNumber()..refId = result;
     }
   }
@@ -389,6 +408,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -408,6 +428,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it).toList();
     }
   }
@@ -427,6 +448,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -446,6 +468,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
     }
   }
@@ -465,6 +488,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -484,6 +508,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it).toList();
     }
   }
@@ -503,6 +528,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -522,6 +548,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it).toList();
     }
   }
@@ -541,6 +568,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -560,6 +588,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it).toList();
     }
   }
@@ -579,6 +608,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -598,6 +628,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -617,6 +648,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -636,6 +668,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -655,6 +688,7 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

@@ -9,61 +9,73 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   // 生成getters
   Future<String> get_beginTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_beginTime", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_interval() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_interval", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_timeCount() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_timeCount", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_strategy", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_originId() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_originId", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_destinationId() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationId", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_origintype() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_origintype", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_destinationtype() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_parentId() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_parentId", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_plateProvince() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_plateNumber() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_cartype() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_cartype", {'refId': refId});
+  
     return result;
   }
   

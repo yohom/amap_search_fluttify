@@ -9,101 +9,121 @@ class AMapBusLine extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_type() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_type", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_polyline() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_polyline", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_startStop() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_startStop", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_endStop() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_endStop", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_startTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_startTime", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_endTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_endTime", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_company() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_company", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_basicPrice() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_basicPrice", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_totalPrice() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_totalPrice", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPolygon> get_bounds() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_bounds", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPolygon()..refId = result);
     return AMapGeoPolygon()..refId = result;
   }
   
   Future<List<AMapBusStop>> get_busStops() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_busStops", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList();
   }
   
   Future<AMapBusStop> get_departureStop() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_departureStop", {'refId': refId});
+    kNativeObjectPool.add(AMapBusStop()..refId = result);
     return AMapBusStop()..refId = result;
   }
   
   Future<AMapBusStop> get_arrivalStop() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_arrivalStop", {'refId': refId});
+    kNativeObjectPool.add(AMapBusStop()..refId = result);
     return AMapBusStop()..refId = result;
   }
   
   Future<List<AMapBusStop>> get_viaBusStops() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_viaBusStops", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList();
   }
   
   Future<int> get_duration() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLine::get_duration", {'refId': refId});
+  
     return result;
   }
   

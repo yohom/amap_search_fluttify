@@ -9,36 +9,43 @@ class AMapRoadInter extends AMapSearchObject  {
   // 生成getters
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_direction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_direction", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_firstId() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstId", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_firstName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstName", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_secondId() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondId", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_secondName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondName", {'refId': refId});
+  
     return result;
   }
   

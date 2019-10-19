@@ -9,21 +9,25 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest  {
   // 生成getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_keywords", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_cityLimit() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_cityLimit", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   

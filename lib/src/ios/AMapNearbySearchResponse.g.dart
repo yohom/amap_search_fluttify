@@ -9,11 +9,13 @@ class AMapNearbySearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_count", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapNearbyUserInfo>> get_infos() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_infos", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it).toList();
   }
   

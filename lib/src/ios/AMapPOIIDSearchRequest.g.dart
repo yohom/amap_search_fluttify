@@ -9,6 +9,7 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIIDSearchRequest::get_uid", {'refId': refId});
+  
     return result;
   }
   

@@ -9,26 +9,31 @@ class AMapTransitRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   // 生成getters
   Future<int> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTransitRouteSearchRequest::get_strategy", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTransitRouteSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_destinationCity() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTransitRouteSearchRequest::get_destinationCity", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_nightflag() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTransitRouteSearchRequest::get_nightflag", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_requireExtension() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTransitRouteSearchRequest::get_requireExtension", {'refId': refId});
+  
     return result;
   }
   

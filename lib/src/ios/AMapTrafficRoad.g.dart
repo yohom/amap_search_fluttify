@@ -9,31 +9,37 @@ class AMapTrafficRoad extends AMapSearchObject  {
   // 生成getters
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_status() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_status", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_direction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_direction", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_angle() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_angle", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_speed() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_speed", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_polyline() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_polyline", {'refId': refId});
+  
     return result;
   }
   

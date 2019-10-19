@@ -9,36 +9,43 @@ class AMapSubPOI extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_sname() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_sname", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_address() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_address", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_subtype() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSubPOI::get_subtype", {'refId': refId});
+  
     return result;
   }
   

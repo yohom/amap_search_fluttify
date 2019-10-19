@@ -9,31 +9,37 @@ class AMapReGeocode extends AMapSearchObject  {
   // 生成getters
   Future<String> get_formattedAddress() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_formattedAddress", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapAddressComponent> get_addressComponent() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_addressComponent", {'refId': refId});
+    kNativeObjectPool.add(AMapAddressComponent()..refId = result);
     return AMapAddressComponent()..refId = result;
   }
   
   Future<List<AMapRoad>> get_roads() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_roads", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoad()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapRoad()..refId = it).toList();
   }
   
   Future<List<AMapRoadInter>> get_roadinters() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_roadinters", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoadInter()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapRoadInter()..refId = it).toList();
   }
   
   Future<List<AMapPOI>> get_pois() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_pois", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList();
   }
   
   Future<List<AMapAOI>> get_aois() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_aois", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapAOI()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapAOI()..refId = it).toList();
   }
   

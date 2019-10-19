@@ -9,26 +9,31 @@ class AMapLocalWeatherForecast extends AMapSearchObject  {
   // 生成getters
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_reportTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_reportTime", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapLocalDayWeatherForecast>> get_casts() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_casts", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it).toList();
   }
   

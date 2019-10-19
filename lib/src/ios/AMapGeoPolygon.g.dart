@@ -9,6 +9,7 @@ class AMapGeoPolygon extends AMapSearchObject  {
   // 生成getters
   Future<List<AMapGeoPoint>> get_points() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPolygon::get_points", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
   }
   
@@ -37,6 +38,7 @@ class AMapGeoPolygon extends AMapSearchObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapGeoPolygon()..refId = result);
       return AMapGeoPolygon()..refId = result;
     }
   }

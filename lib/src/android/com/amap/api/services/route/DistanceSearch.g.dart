@@ -45,6 +45,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -64,6 +65,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_route_DistanceResult()..refId = result);
       return com_amap_api_services_route_DistanceResult()..refId = result;
     }
   }
@@ -83,6 +85,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

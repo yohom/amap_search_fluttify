@@ -28,6 +28,7 @@ class com_amap_api_services_route_WalkRouteResult extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_WalkPath()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_route_WalkPath()..refId = it).toList();
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_route_WalkRouteResult extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_route_WalkRouteResult extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = result);
       return com_amap_api_services_route_RouteSearch_WalkRouteQuery()..refId = result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_route_WalkRouteResult extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

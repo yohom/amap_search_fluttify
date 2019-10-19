@@ -28,6 +28,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_busline_BusLineResult()..refId = result);
       return com_amap_api_services_busline_BusLineResult()..refId = result;
     }
   }
@@ -64,6 +65,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -83,6 +85,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -102,6 +105,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -121,6 +125,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_busline_BusLineQuery()..refId = result);
       return com_amap_api_services_busline_BusLineQuery()..refId = result;
     }
   }

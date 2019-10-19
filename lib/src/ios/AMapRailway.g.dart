@@ -9,56 +9,67 @@ class AMapRailway extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_trip() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_trip", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_type() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_type", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_time() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_time", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapRailwayStation> get_departureStation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_departureStation", {'refId': refId});
+    kNativeObjectPool.add(AMapRailwayStation()..refId = result);
     return AMapRailwayStation()..refId = result;
   }
   
   Future<AMapRailwayStation> get_arrivalStation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_arrivalStation", {'refId': refId});
+    kNativeObjectPool.add(AMapRailwayStation()..refId = result);
     return AMapRailwayStation()..refId = result;
   }
   
   Future<List<AMapRailwaySpace>> get_spaces() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_spaces", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it).toList();
   }
   
   Future<List<AMapRailwayStation>> get_viaStops() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_viaStops", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it).toList();
   }
   
   Future<List<AMapRailway>> get_alters() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_alters", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailway()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapRailway()..refId = it).toList();
   }
   

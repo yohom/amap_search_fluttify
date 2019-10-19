@@ -13,7 +13,7 @@ mixin com_amap_api_services_help_Inputtips_InputtipsListener on java_lang_Object
 
   @mustCallSuper
   Future<void> onGetInputtips(List<com_amap_api_services_help_Tip> var1, int var2) {
-    kNativeObjectPool.addAll(Map.fromIterable(var1, key: (it) => it.refId, value: (it) => it));
+    kNativeObjectPool.addAll(var1);
     debugPrint('onGetInputtips::kNativeObjectPool: $kNativeObjectPool');
   }
   

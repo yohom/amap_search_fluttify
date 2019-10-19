@@ -28,6 +28,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

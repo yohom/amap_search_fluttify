@@ -28,6 +28,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it).toList();
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = result);
       return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -123,6 +128,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -142,6 +148,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_core_AMapException()..refId = result);
       return com_amap_api_services_core_AMapException()..refId = result;
     }
   }
@@ -161,6 +168,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

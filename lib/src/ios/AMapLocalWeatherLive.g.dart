@@ -9,46 +9,55 @@ class AMapLocalWeatherLive extends AMapSearchObject  {
   // 生成getters
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_weather() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_weather", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_temperature() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_temperature", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_windDirection() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_windDirection", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_windPower() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_windPower", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_humidity() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_humidity", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_reportTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_reportTime", {'refId': refId});
+  
     return result;
   }
   

@@ -9,16 +9,19 @@ class AMapPOIExtension extends AMapSearchObject  {
   // 生成getters
   Future<double> get_rating() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_rating", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_cost() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_cost", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_openTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_openTime", {'refId': refId});
+  
     return result;
   }
   

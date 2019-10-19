@@ -9,41 +9,49 @@ class AMapSegment extends AMapSearchObject  {
   // 生成getters
   Future<AMapWalking> get_walking() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_walking", {'refId': refId});
+    kNativeObjectPool.add(AMapWalking()..refId = result);
     return AMapWalking()..refId = result;
   }
   
   Future<List<AMapBusLine>> get_buslines() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_buslines", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusLine()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapBusLine()..refId = it).toList();
   }
   
   Future<AMapTaxi> get_taxi() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_taxi", {'refId': refId});
+    kNativeObjectPool.add(AMapTaxi()..refId = result);
     return AMapTaxi()..refId = result;
   }
   
   Future<AMapRailway> get_railway() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_railway", {'refId': refId});
+    kNativeObjectPool.add(AMapRailway()..refId = result);
     return AMapRailway()..refId = result;
   }
   
   Future<String> get_enterName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_enterName", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_enterLocation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_enterLocation", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_exitName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_exitName", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_exitLocation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_exitLocation", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   

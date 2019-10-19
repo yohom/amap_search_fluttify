@@ -9,31 +9,37 @@ class AMapTrafficEvaluation extends AMapSearchObject  {
   // 生成getters
   Future<String> get_evaluationDescription() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_evaluationDescription", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_status() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_status", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_expedite() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_expedite", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_congested() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_congested", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_blocked() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_blocked", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_unknown() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_unknown", {'refId': refId});
+  
     return result;
   }
   

@@ -9,16 +9,19 @@ class AMapIndoorData extends AMapSearchObject  {
   // 生成getters
   Future<int> get_floor() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floor", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_floorName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floorName", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_pid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_pid", {'refId': refId});
+  
     return result;
   }
   

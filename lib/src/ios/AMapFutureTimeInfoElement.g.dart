@@ -9,21 +9,25 @@ class AMapFutureTimeInfoElement extends AMapSearchObject  {
   // 生成getters
   Future<int> get_duration() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_duration", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_pathindex() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_pathindex", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_restriction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_restriction", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapTMC>> get_tmcs() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_tmcs", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTMC()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapTMC()..refId = it).toList();
   }
   

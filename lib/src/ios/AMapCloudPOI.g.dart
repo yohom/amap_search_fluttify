@@ -9,41 +9,49 @@ class AMapCloudPOI extends AMapSearchObject  {
   // 生成getters
   Future<int> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_address() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_address", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_createTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_createTime", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_updateTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_updateTime", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapCloudImage>> get_images() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_images", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapCloudImage()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapCloudImage()..refId = it).toList();
   }
   

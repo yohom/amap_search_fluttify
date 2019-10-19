@@ -28,6 +28,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -123,6 +128,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -142,6 +148,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -161,6 +168,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -180,6 +188,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_BusStep()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_route_BusStep()..refId = it).toList();
     }
   }
@@ -199,6 +208,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

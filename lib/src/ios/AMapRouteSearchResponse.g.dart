@@ -9,11 +9,13 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchResponse::get_count", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapRoute> get_route() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchResponse::get_route", {'refId': refId});
+    kNativeObjectPool.add(AMapRoute()..refId = result);
     return AMapRoute()..refId = result;
   }
   

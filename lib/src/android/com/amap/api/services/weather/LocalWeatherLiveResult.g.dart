@@ -28,6 +28,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result);
       return com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = result);
       return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherLive()..refId = result);
       return com_amap_api_services_weather_LocalWeatherLive()..refId = result;
     }
   }

@@ -9,31 +9,37 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_tableID() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_tableID", {'refId': refId});
+  
     return result;
   }
   
   Future<List<String>> get_filter() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_sortFields() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortFields", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapCloudSortType> get_sortType() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'refId': refId});
+  
     return AMapCloudSortType.values[result];
   }
   
   Future<int> get_offset() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_offset", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_page() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_page", {'refId': refId});
+  
     return result;
   }
   

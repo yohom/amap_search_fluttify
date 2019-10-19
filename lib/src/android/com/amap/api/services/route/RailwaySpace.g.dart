@@ -28,6 +28,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

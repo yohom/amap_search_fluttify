@@ -28,6 +28,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_busline_BusLineResult()..refId = result);
       return com_amap_api_services_busline_BusLineResult()..refId = result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_busline_BusLineQuery()..refId = result);
       return com_amap_api_services_busline_BusLineQuery()..refId = result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return (result as List).cast<String>();
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList();
     }
   }
@@ -123,6 +128,7 @@ class com_amap_api_services_busline_BusLineResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it).toList();
     }
   }

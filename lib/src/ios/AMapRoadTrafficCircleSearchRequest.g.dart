@@ -9,11 +9,13 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
   // 生成getters
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficCircleSearchRequest::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_radius() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficCircleSearchRequest::get_radius", {'refId': refId});
+  
     return result;
   }
   

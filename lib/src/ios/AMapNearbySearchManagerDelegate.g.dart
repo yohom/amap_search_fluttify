@@ -13,19 +13,19 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   @mustCallSuper
   Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {
-    kNativeObjectPool[manager.refId] = manager;
+    kNativeObjectPool.add(manager);
     debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onNearbyInfoUploadedWithError(NSError error) {
-    kNativeObjectPool[error.refId] = error;
+    kNativeObjectPool.add(error);
     debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onUserInfoClearedWithError(NSError error) {
-    kNativeObjectPool[error.refId] = error;
+    kNativeObjectPool.add(error);
     debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
   }
   

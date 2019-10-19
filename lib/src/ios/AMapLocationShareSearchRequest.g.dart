@@ -9,11 +9,13 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest  {
   // 生成getters
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocationShareSearchRequest::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocationShareSearchRequest::get_name", {'refId': refId});
+  
     return result;
   }
   

@@ -9,26 +9,31 @@ class AMapCity extends AMapSearchObject  {
   // 生成getters
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCity::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCity::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCity::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_num() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCity::get_num", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapDistrict>> get_districts() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCity::get_districts", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList();
   }
   

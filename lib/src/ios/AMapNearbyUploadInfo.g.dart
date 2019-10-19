@@ -9,16 +9,19 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   // 生成getters
   Future<String> get_userID() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_userID", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapSearchCoordinateType> get_coordinateType() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinateType", {'refId': refId});
+  
     return AMapSearchCoordinateType.values[result];
   }
   
   Future<CLLocationCoordinate2D> get_coordinate() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinate", {'refId': refId});
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
     return CLLocationCoordinate2D()..refId = result;
   }
   

@@ -34,7 +34,15 @@ Future release(Ref ref) {
 
 class Ref {
   int refId;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Ref && runtimeType == other.runtimeType && refId == other.refId;
+
+  @override
+  int get hashCode => refId.hashCode;
 }
 
 /// 原生对象的释放池
-final kNativeObjectPool = <int, Ref>{};
+final kNativeObjectPool = <Ref>{};

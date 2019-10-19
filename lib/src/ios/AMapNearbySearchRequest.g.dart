@@ -9,26 +9,31 @@ class AMapNearbySearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_center() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_center", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_radius() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_radius", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapNearbySearchType> get_searchType() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_searchType", {'refId': refId});
+  
     return AMapNearbySearchType.values[result];
   }
   
   Future<int> get_timeRange() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_timeRange", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_limit() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchRequest::get_limit", {'refId': refId});
+  
     return result;
   }
   

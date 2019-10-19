@@ -9,56 +9,67 @@ class AMapGeocode extends AMapSearchObject  {
   // 生成getters
   Future<String> get_formattedAddress() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_formattedAddress", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_district() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_district", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_township() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_township", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_neighborhood() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_neighborhood", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_building() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_building", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_level() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocode::get_level", {'refId': refId});
+  
     return result;
   }
   

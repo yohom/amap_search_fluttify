@@ -9,6 +9,7 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   // 生成getters
   Future<int> get_type() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRidingRouteSearchRequest::get_type", {'refId': refId});
+  
     return result;
   }
   

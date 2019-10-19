@@ -9,41 +9,49 @@ class AMapPath extends AMapSearchObject  {
   // 生成getters
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_duration() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_duration", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_strategy", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapStep>> get_steps() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_steps", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapStep()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapStep()..refId = it).toList();
   }
   
   Future<double> get_tolls() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tolls", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_tollDistance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tollDistance", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_totalTrafficLights() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_totalTrafficLights", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_restriction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_restriction", {'refId': refId});
+  
     return result;
   }
   

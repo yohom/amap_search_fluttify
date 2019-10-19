@@ -28,6 +28,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_routepoisearch_RoutePOIItem()..refId = it).toList();
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result);
       return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
     }
   }

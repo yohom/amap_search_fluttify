@@ -9,11 +9,13 @@ class AMapRailwaySpace extends AMapSearchObject  {
   // 生成getters
   Future<String> get_code() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwaySpace::get_code", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_cost() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwaySpace::get_cost", {'refId': refId});
+  
     return result;
   }
   

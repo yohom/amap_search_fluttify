@@ -9,11 +9,13 @@ class AMapSearchAPI extends NSObject  {
   // 生成getters
   Future<int> get_timeout() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapSearchLanguage> get_language() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language", {'refId': refId});
+  
     return AMapSearchLanguage.values[result];
   }
   
@@ -176,6 +178,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapSearchAPI()..refId = result);
       return AMapSearchAPI()..refId = result;
     }
   }
@@ -195,6 +198,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -214,6 +218,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -233,6 +238,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -252,6 +258,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -271,6 +278,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -290,6 +298,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -309,6 +318,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -328,6 +338,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -347,6 +358,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -366,6 +378,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -385,6 +398,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -404,6 +418,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -423,6 +438,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -442,6 +458,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -461,6 +478,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -480,6 +498,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -499,6 +518,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -518,6 +538,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -537,6 +558,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -556,6 +578,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -575,6 +598,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -594,6 +618,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -613,6 +638,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -632,6 +658,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -651,6 +678,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -670,6 +698,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -689,6 +718,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -708,6 +738,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -727,6 +758,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -746,6 +778,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -765,6 +798,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -784,6 +818,7 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

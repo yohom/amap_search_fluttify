@@ -9,26 +9,31 @@ class AMapAOI extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAOI::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAOI::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAOI::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAOI::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<double> get_area() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAOI::get_area", {'refId': refId});
+  
     return result;
   }
   

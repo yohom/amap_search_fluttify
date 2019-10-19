@@ -9,6 +9,7 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   // 生成getters
   Future<int> get_multipath() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalkingRouteSearchRequest::get_multipath", {'refId': refId});
+  
     return result;
   }
   

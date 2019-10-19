@@ -9,21 +9,25 @@ class AMapBusLineBaseSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineBaseSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_requireExtension() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineBaseSearchRequest::get_requireExtension", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_offset() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineBaseSearchRequest::get_offset", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_page() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineBaseSearchRequest::get_page", {'refId': refId});
+  
     return result;
   }
   

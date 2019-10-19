@@ -28,6 +28,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result);
       return com_amap_api_services_core_LatLonPoint()..refId = result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result);
       return com_amap_api_services_core_LatLonPoint()..refId = result;
     }
   }
@@ -66,6 +68,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -85,6 +88,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+    
       return com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[result];
     }
   }
@@ -104,6 +108,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -123,6 +128,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
     }
   }
@@ -142,6 +148,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result);
       return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result;
     }
   }

@@ -9,6 +9,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest  {
   // 生成getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineNameSearchRequest::get_keywords", {'refId': refId});
+  
     return result;
   }
   

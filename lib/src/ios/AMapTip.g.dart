@@ -9,36 +9,43 @@ class AMapTip extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_district() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_district", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_address() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_address", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_typecode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTip::get_typecode", {'refId': refId});
+  
     return result;
   }
   

@@ -9,11 +9,13 @@ class AMapGeocodeSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_count", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapGeocode>> get_geocodes() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeocode()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapGeocode()..refId = it).toList();
   }
   

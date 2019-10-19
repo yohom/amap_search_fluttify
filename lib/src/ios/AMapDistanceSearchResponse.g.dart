@@ -9,6 +9,7 @@ class AMapDistanceSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<List<AMapDistanceResult>> get_results() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchResponse::get_results", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapDistanceResult()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapDistanceResult()..refId = it).toList();
   }
   

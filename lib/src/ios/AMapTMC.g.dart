@@ -9,16 +9,19 @@ class AMapTMC extends AMapSearchObject  {
   // 生成getters
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTMC::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_status() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTMC::get_status", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_polyline() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTMC::get_polyline", {'refId': refId});
+  
     return result;
   }
   

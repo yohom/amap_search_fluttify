@@ -28,6 +28,7 @@ class com_amap_api_services_route_RidePath extends java_lang_Object with android
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_RideStep()..refId = it).toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_route_RideStep()..refId = it).toList();
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_route_RidePath extends java_lang_Object with android
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

@@ -9,36 +9,43 @@ class AMapDistrict extends AMapSearchObject  {
   // 生成getters
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_level() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_level", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_center() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_center", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<List<AMapDistrict>> get_districts() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_districts", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList();
   }
   
   Future<List<String>> get_polylines() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_polylines", {'refId': refId});
+  
     return result;
   }
   

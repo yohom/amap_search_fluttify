@@ -28,6 +28,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearch()..refId = result);
       return com_amap_api_services_nearby_NearbySearch()..refId = result;
     }
   }
@@ -78,6 +79,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -128,6 +130,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -147,6 +150,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -166,6 +170,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -202,6 +207,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -221,6 +227,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -240,6 +247,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -259,6 +267,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -278,6 +287,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearchResult()..refId = result);
       return com_amap_api_services_nearby_NearbySearchResult()..refId = result;
     }
   }
@@ -297,6 +307,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

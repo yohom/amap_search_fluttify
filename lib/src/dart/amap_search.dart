@@ -74,7 +74,7 @@ class AmapSearch {
         pool..add(query)..add(context);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -145,7 +145,7 @@ class AmapSearch {
         pool..add(query)..add(centerLatLng)..add(bound);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -212,7 +212,7 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -272,7 +272,7 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -337,7 +337,7 @@ class AmapSearch {
         pool..add(latLngPoint)..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建中心点
         final amapLocation = await ObjectFactory_iOS.createAMapGeoPoint();
@@ -422,7 +422,7 @@ class AmapSearch {
         final context = await ObjectFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch ??= await ObjectFactory_Android
+        _androidRouteSearch = await ObjectFactory_Android
             .createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
@@ -442,7 +442,7 @@ class AmapSearch {
           ..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
         final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
@@ -556,7 +556,7 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
         final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
@@ -646,7 +646,7 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
         final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
@@ -719,7 +719,7 @@ class AmapSearch {
         final context = await ObjectFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch ??= await ObjectFactory_Android
+        _androidRouteSearch = await ObjectFactory_Android
             .createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
@@ -734,7 +734,7 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 创建起点
         final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
@@ -807,7 +807,7 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -865,7 +865,7 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -924,7 +924,7 @@ class AmapSearch {
         ObjectFactory_Android.release(query);
       },
       ios: (pool) async {
-        _iosSearch ??= await ObjectFactory_iOS.createAMapSearchAPI();
+        _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
@@ -947,7 +947,9 @@ class AmapSearch {
   }
 
   static void dispose() {
-    kNativeObjectPool.forEach((it, ref) => release(ref));
+    kNativeObjectPool
+        .where((it) => it.runtimeType != AMapServices) // AMapServices类不释放
+        .forEach(release);
     if (_iosSearch != null) release(_iosSearch);
     if (_androidPoiSearch != null) release(_androidPoiSearch);
     if (_androidInputTip != null) release(_androidInputTip);

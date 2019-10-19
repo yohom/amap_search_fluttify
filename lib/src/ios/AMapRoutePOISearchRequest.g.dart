@@ -9,36 +9,43 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_origin", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_destination", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapRoutePOISearchType> get_searchType() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_searchType", {'refId': refId});
+  
     return AMapRoutePOISearchType.values[result];
   }
   
   Future<int> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_strategy", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_range() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_range", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_polylineStr() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_polylineStr", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapGeoPoint>> get_polyline() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_polyline", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
   }
   

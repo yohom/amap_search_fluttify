@@ -9,16 +9,19 @@ class AMapPOISearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchResponse::get_count", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapSuggestion> get_suggestion() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchResponse::get_suggestion", {'refId': refId});
+    kNativeObjectPool.add(AMapSuggestion()..refId = result);
     return AMapSuggestion()..refId = result;
   }
   
   Future<List<AMapPOI>> get_pois() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchResponse::get_pois", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList();
   }
   

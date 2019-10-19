@@ -9,16 +9,19 @@ class AMapBusStopSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchResponse::get_count", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapSuggestion> get_suggestion() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchResponse::get_suggestion", {'refId': refId});
+    kNativeObjectPool.add(AMapSuggestion()..refId = result);
     return AMapSuggestion()..refId = result;
   }
   
   Future<List<AMapBusStop>> get_busstops() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchResponse::get_busstops", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList();
   }
   

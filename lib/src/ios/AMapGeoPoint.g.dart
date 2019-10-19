@@ -9,11 +9,13 @@ class AMapGeoPoint extends AMapSearchObject  {
   // 生成getters
   Future<double> get_latitude() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPoint::get_latitude", {'refId': refId});
+  
     return result;
   }
   
   Future<double> get_longitude() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPoint::get_longitude", {'refId': refId});
+  
     return result;
   }
   
@@ -48,6 +50,7 @@ class AMapGeoPoint extends AMapSearchObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapGeoPoint()..refId = result);
       return AMapGeoPoint()..refId = result;
     }
   }

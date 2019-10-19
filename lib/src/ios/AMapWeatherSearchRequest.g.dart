@@ -9,11 +9,13 @@ class AMapWeatherSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapWeatherType> get_type() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type", {'refId': refId});
+  
     return AMapWeatherType.values[result];
   }
   

@@ -45,6 +45,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -64,6 +65,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -83,6 +85,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -102,6 +105,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result);
       return com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result;
     }
   }

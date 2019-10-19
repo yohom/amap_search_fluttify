@@ -9,61 +9,73 @@ class AMapAddressComponent extends AMapSearchObject  {
   // 生成getters
   Future<String> get_country() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_country", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_district() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_district", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_township() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_township", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_towncode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_towncode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_neighborhood() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_neighborhood", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_building() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_building", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapStreetNumber> get_streetNumber() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_streetNumber", {'refId': refId});
+    kNativeObjectPool.add(AMapStreetNumber()..refId = result);
     return AMapStreetNumber()..refId = result;
   }
   
   Future<List<AMapBusinessArea>> get_businessAreas() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_businessAreas", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it).toList();
   }
   

@@ -9,11 +9,13 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest  {
   // 生成getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   

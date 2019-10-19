@@ -9,6 +9,7 @@ class AMapNearbySearchManager extends NSObject  {
   // 生成getters
   Future<bool> get_isAutoUploading() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'refId': refId});
+  
     return result;
   }
   
@@ -68,6 +69,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(AMapNearbySearchManager()..refId = result);
       return AMapNearbySearchManager()..refId = result;
     }
   }
@@ -87,6 +89,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -106,6 +109,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -125,6 +129,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -144,6 +149,7 @@ class AMapNearbySearchManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

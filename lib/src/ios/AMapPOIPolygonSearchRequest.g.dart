@@ -9,11 +9,13 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest  {
   // 生成getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIPolygonSearchRequest::get_keywords", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPolygon> get_polygon() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIPolygonSearchRequest::get_polygon", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPolygon()..refId = result);
     return AMapGeoPolygon()..refId = result;
   }
   

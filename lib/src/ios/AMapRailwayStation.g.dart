@@ -9,41 +9,49 @@ class AMapRailwayStation extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_time() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_time", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_wait() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_wait", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_isStart() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_isStart", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_isEnd() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwayStation::get_isEnd", {'refId': refId});
+  
     return result;
   }
   

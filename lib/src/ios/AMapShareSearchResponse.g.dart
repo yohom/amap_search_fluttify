@@ -9,6 +9,7 @@ class AMapShareSearchResponse extends AMapSearchObject  {
   // 生成getters
   Future<String> get_shareURL() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL", {'refId': refId});
+  
     return result;
   }
   

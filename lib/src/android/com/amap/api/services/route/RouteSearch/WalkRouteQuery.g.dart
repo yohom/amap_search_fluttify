@@ -28,6 +28,7 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends java_lang_O
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result);
       return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_route_RouteSearch_WalkRouteQuery extends java_lang_O
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

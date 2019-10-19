@@ -9,16 +9,19 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
   // 生成getters
   Future<int> get_ERROR_CODE_NO_DRIVE() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_ERROR_CODE_TOO_FAR() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_ERROR_CODE_NOT_IN_CHINA() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA", {'refId': refId});
+  
     return result;
   }
   
@@ -42,6 +45,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -61,6 +65,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -80,6 +85,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -99,6 +105,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -118,6 +125,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -137,6 +145,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -156,6 +165,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -175,6 +185,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -194,6 +205,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -213,6 +225,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -232,6 +245,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -251,6 +265,7 @@ class com_amap_api_services_route_DistanceItem extends java_lang_Object with and
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }

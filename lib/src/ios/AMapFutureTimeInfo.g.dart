@@ -9,11 +9,13 @@ class AMapFutureTimeInfo extends AMapSearchObject  {
   // 生成getters
   Future<String> get_startTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfo::get_startTime", {'refId': refId});
+  
     return result;
   }
   
   Future<List<AMapFutureTimeInfoElement>> get_elements() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfo::get_elements", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it).toList();
   }
   

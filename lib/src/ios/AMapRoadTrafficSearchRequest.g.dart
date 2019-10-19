@@ -9,11 +9,13 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest  {
   // 生成getters
   Future<String> get_roadName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchRequest::get_roadName", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchRequest::get_adcode", {'refId': refId});
+  
     return result;
   }
   

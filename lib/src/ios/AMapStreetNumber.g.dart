@@ -9,26 +9,31 @@ class AMapStreetNumber extends AMapSearchObject  {
   // 生成getters
   Future<String> get_street() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_street", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_number() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_number", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_direction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_direction", {'refId': refId});
+  
     return result;
   }
   

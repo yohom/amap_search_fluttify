@@ -9,11 +9,13 @@ class AMapRoadTrafficSearchBaseRequest extends AMapSearchObject  {
   // 生成getters
   Future<int> get_level() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchBaseRequest::get_level", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_requireExtension() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchBaseRequest::get_requireExtension", {'refId': refId});
+  
     return result;
   }
   

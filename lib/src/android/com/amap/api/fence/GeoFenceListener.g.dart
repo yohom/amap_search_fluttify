@@ -13,7 +13,7 @@ mixin com_amap_api_fence_GeoFenceListener on java_lang_Object {
 
   @mustCallSuper
   Future<void> onGeoFenceCreateFinished(List<com_amap_api_fence_GeoFence> var1, int var2, String var3) {
-    kNativeObjectPool.addAll(Map.fromIterable(var1, key: (it) => it.refId, value: (it) => it));
+    kNativeObjectPool.addAll(var1);
     debugPrint('onGeoFenceCreateFinished::kNativeObjectPool: $kNativeObjectPool');
   }
   

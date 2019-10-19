@@ -9,11 +9,13 @@ class AMapGeocodeSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_address() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchRequest::get_address", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   

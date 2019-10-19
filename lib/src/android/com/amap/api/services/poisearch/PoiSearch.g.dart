@@ -52,6 +52,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -71,6 +72,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -90,6 +92,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -109,6 +112,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = result);
       return com_amap_api_services_poisearch_PoiResult()..refId = result;
     }
   }
@@ -128,6 +132,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -147,6 +152,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_core_PoiItem()..refId = result);
       return com_amap_api_services_core_PoiItem()..refId = result;
     }
   }
@@ -166,6 +172,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -185,6 +192,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -204,6 +212,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -223,6 +232,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = result);
       return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result;
     }
   }
@@ -242,6 +252,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result);
       return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
     }
   }

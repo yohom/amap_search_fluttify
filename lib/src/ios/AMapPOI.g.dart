@@ -9,146 +9,175 @@ class AMapPOI extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_name", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_type() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_type", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_typecode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_typecode", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_address() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_address", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_tel() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_tel", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_distance() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_distance", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_parkingType() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_parkingType", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_shopID() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_shopID", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_postcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_postcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_website() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_website", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_email() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_email", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_province() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_province", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_pcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_pcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_citycode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_citycode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_district() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_district", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_adcode", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_gridcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_gridcode", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapGeoPoint> get_enterLocation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_enterLocation", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<AMapGeoPoint> get_exitLocation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_exitLocation", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
     return AMapGeoPoint()..refId = result;
   }
   
   Future<String> get_direction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_direction", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_hasIndoorMap() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_hasIndoorMap", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_businessArea() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_businessArea", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapIndoorData> get_indoorData() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_indoorData", {'refId': refId});
+    kNativeObjectPool.add(AMapIndoorData()..refId = result);
     return AMapIndoorData()..refId = result;
   }
   
   Future<List<AMapSubPOI>> get_subPOIs() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_subPOIs", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapSubPOI()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapSubPOI()..refId = it).toList();
   }
   
   Future<List<AMapImage>> get_images() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_images", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapImage()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapImage()..refId = it).toList();
   }
   
   Future<AMapPOIExtension> get_extensionInfo() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_extensionInfo", {'refId': refId});
+    kNativeObjectPool.add(AMapPOIExtension()..refId = result);
     return AMapPOIExtension()..refId = result;
   }
   

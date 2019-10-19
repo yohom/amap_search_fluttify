@@ -9,16 +9,19 @@ class AMapTrafficInfo extends AMapSearchObject  {
   // 生成getters
   Future<String> get_statusDescription() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficInfo::get_statusDescription", {'refId': refId});
+  
     return result;
   }
   
   Future<AMapTrafficEvaluation> get_evaluation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficInfo::get_evaluation", {'refId': refId});
+    kNativeObjectPool.add(AMapTrafficEvaluation()..refId = result);
     return AMapTrafficEvaluation()..refId = result;
   }
   
   Future<List<AMapTrafficRoad>> get_roads() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficInfo::get_roads", {'refId': refId});
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it).toList());
     return (result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it).toList();
   }
   

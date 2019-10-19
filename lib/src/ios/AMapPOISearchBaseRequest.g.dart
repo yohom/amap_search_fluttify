@@ -9,36 +9,43 @@ class AMapPOISearchBaseRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_types() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_types", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_sortrule() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_sortrule", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_offset() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_offset", {'refId': refId});
+  
     return result;
   }
   
   Future<int> get_page() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_page", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_building() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_building", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_requireExtension() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_requireExtension", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_requireSubPOIs() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_requireSubPOIs", {'refId': refId});
+  
     return result;
   }
   

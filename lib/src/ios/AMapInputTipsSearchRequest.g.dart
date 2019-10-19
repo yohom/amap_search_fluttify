@@ -9,26 +9,31 @@ class AMapInputTipsSearchRequest extends AMapSearchObject  {
   // 生成getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapInputTipsSearchRequest::get_keywords", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapInputTipsSearchRequest::get_city", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_types() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapInputTipsSearchRequest::get_types", {'refId': refId});
+  
     return result;
   }
   
   Future<bool> get_cityLimit() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapInputTipsSearchRequest::get_cityLimit", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapInputTipsSearchRequest::get_location", {'refId': refId});
+  
     return result;
   }
   

@@ -9,16 +9,19 @@ class AMapCloudImage extends AMapSearchObject  {
   // 生成getters
   Future<String> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudImage::get_uid", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_preurl() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudImage::get_preurl", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_url() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudImage::get_url", {'refId': refId});
+  
     return result;
   }
   

@@ -9,51 +9,61 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject  {
   // 生成getters
   Future<String> get_date() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_date", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_week() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_week", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_dayWeather() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_dayWeather", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_nightWeather() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_nightWeather", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_dayTemp() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_dayTemp", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_nightTemp() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_nightTemp", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_dayWind() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_dayWind", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_nightWind() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_nightWind", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_dayPower() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_dayPower", {'refId': refId});
+  
     return result;
   }
   
   Future<String> get_nightPower() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_nightPower", {'refId': refId});
+  
     return result;
   }
   

@@ -28,6 +28,7 @@ class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
@@ -47,6 +48,7 @@ class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with 
     if (result == null) {
       return null;
     } else {
+    
       return result;
     }
   }
