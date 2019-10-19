@@ -1,5 +1,8 @@
 # amap_search_fluttify
 
+[![pub package](https://img.shields.io/pub/v/amap_search_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_search_fluttify)
+[![Codemagic build status](https://api.codemagic.io/apps/5daae84a813e331c1ca0999e/5daae84a813e331c1ca0999d/status_badge.svg)](https://codemagic.io/apps/5daae84a813e331c1ca0999e/5daae84a813e331c1ca0999d/latest_build)
+
 高德地图`搜索`组件. Dart接口基于[fluttify](https://github.com/yohom/fluttify-core-example)引擎生成.
 
 主接口类`AmapSearch`:
