@@ -39,7 +39,8 @@ class KeywordPoiScreen extends StatefulWidget {
   _KeywordPoiScreenState createState() => _KeywordPoiScreenState();
 }
 
-class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
+class _KeywordPoiScreenState extends State<KeywordPoiScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 
@@ -88,7 +89,8 @@ class AroundPoiScreen extends StatefulWidget {
   _AroundPoiScreenState createState() => _AroundPoiScreenState();
 }
 
-class _AroundPoiScreenState extends State<AroundPoiScreen> {
+class _AroundPoiScreenState extends State<AroundPoiScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController();
   final _latController = TextEditingController(text: '29.08');
   final _lngController = TextEditingController(text: '119.65');
@@ -154,7 +156,8 @@ class InputTipScreen extends StatefulWidget {
   _InputTipScreenState createState() => _InputTipScreenState();
 }
 
-class _InputTipScreenState extends State<InputTipScreen> {
+class _InputTipScreenState extends State<InputTipScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 

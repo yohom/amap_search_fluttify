@@ -33,7 +33,8 @@ class AddressEncodeScreen extends StatefulWidget {
   _AddressEncodeScreenState createState() => _AddressEncodeScreenState();
 }
 
-class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
+class _AddressEncodeScreenState extends State<AddressEncodeScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController();
   final _cityController = TextEditingController();
 
@@ -80,7 +81,8 @@ class AddressDecodeScreen extends StatefulWidget {
   _AddressDecodeScreenState createState() => _AddressDecodeScreenState();
 }
 
-class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
+class _AddressDecodeScreenState extends State<AddressDecodeScreen>
+    with AmapSearchDisposeMixin {
   final _latController = TextEditingController(text: '39.9824');
   final _lngController = TextEditingController(text: '116.3053');
   final _radiusController = TextEditingController(text: '200.0');

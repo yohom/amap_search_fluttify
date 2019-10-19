@@ -7,6 +7,14 @@ import 'package:flutter/cupertino.dart';
 import '../utils.g.dart';
 import 'models.dart';
 
+mixin AmapSearchDisposeMixin<T extends StatefulWidget> on State<T> {
+  @override
+  void dispose() {
+    AmapSearch.dispose();
+    super.dispose();
+  }
+}
+
 class AmapSearch {
   static AMapSearchAPI _iosSearch;
   static com_amap_api_services_poisearch_PoiSearch _androidPoiSearch;
