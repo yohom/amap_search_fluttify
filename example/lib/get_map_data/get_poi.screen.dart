@@ -1,5 +1,6 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
+import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -41,8 +42,8 @@ class KeywordPoiScreen extends StatefulWidget {
 
 class _KeywordPoiScreenState extends State<KeywordPoiScreen>
     with AmapSearchDisposeMixin {
-  final _keywordController = TextEditingController();
-  final _cityController = TextEditingController();
+  final _keywordController = TextEditingController(text: '肯德基');
+  final _cityController = TextEditingController(text: '杭州');
 
   List<String> _poiTitleList = [];
 
@@ -83,7 +84,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
   }
 }
 
-/// 关键字检索POI
+/// 附近检索POI
 class AroundPoiScreen extends StatefulWidget {
   @override
   _AroundPoiScreenState createState() => _AroundPoiScreenState();
@@ -158,8 +159,8 @@ class InputTipScreen extends StatefulWidget {
 
 class _InputTipScreenState extends State<InputTipScreen>
     with AmapSearchDisposeMixin {
-  final _keywordController = TextEditingController();
-  final _cityController = TextEditingController();
+  final _keywordController = TextEditingController(text: '肯德基');
+  final _cityController = TextEditingController(text: '杭州');
 
   List<String> _inputTipList = [];
 
@@ -193,7 +194,7 @@ class _InputTipScreenState extends State<InputTipScreen>
             },
             child: Text('搜索'),
           ),
-          Text(_inputTipList.join("\n")),
+          Expanded(child: ScrollableText(_inputTipList.join("\n"))),
         ],
       ),
     );
