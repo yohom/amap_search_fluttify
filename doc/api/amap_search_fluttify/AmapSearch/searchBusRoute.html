@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the searchBusRoute method from the AmapSearch class, for the Dart programming language.">
+  <title>searchBusRoute method - AmapSearch class - amap_search_fluttify library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">amap_search_fluttify</a></li>
+    <li><a href="amap_search_fluttify/amap_search_fluttify-library.html">amap_search_fluttify</a></li>
+    <li><a href="amap_search_fluttify/AmapSearch-class.html">AmapSearch</a></li>
+    <li class="self-crumb">searchBusRoute method</li>
+  </ol>
+  <div class="self-name">searchBusRoute</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">amap_search_fluttify</a></li>
+      <li><a href="amap_search_fluttify/amap_search_fluttify-library.html">amap_search_fluttify</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch-class.html">AmapSearch</a></li>
+      <li class="self-crumb">searchBusRoute method</li>
+    </ol>
+    
+    <h5>AmapSearch class</h5>
+    <ol>
+    
+      <li class="section-title inherited">
+        <a href="amap_search_fluttify/AmapSearch-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="amap_search_fluttify/AmapSearch-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+    
+      <li class="section-title inherited"><a href="amap_search_fluttify/AmapSearch-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+    
+    
+      <li class="section-title"><a href="amap_search_fluttify/AmapSearch-class.html#static-methods">Static methods</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/dispose.html">dispose</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/fetchInputTips.html">fetchInputTips</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/init.html">init</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchAround.html">searchAround</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchBusRoute.html">searchBusRoute</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchBusStation.html">searchBusStation</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchDistrict.html">searchDistrict</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchDriveRoute.html">searchDriveRoute</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchGeocode.html">searchGeocode</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchKeyword.html">searchKeyword</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchReGeocode.html">searchReGeocode</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchRideRoute.html">searchRideRoute</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchWalkRoute.html">searchWalkRoute</a></li>
+      <li><a href="amap_search_fluttify/AmapSearch/searchWeather.html">searchWeather</a></li>
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-method">searchBusRoute</span> method</h1></div>
+
+    <section class="multi-line-signature">
+      <span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="amap_search_fluttify/BusRouteResult-class.html">BusRouteResult</a></span>&gt;</span></span>
+            <span class="name ">searchBusRoute</span>
+(<wbr>{<span class="parameter" id="searchBusRoute-param-from"><span>@required</span> <span class="type-annotation"><a href="amap_search_fluttify/LatLng-class.html">LatLng</a></span> <span class="parameter-name">from</span>, </span> <span class="parameter" id="searchBusRoute-param-to"><span>@required</span> <span class="type-annotation"><a href="amap_search_fluttify/LatLng-class.html">LatLng</a></span> <span class="parameter-name">to</span>, </span> <span class="parameter" id="searchBusRoute-param-city"><span>@required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">city</span>, </span> <span class="parameter" id="searchBusRoute-param-mode"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">mode</span>: <span class="default-value">0</span>, </span> <span class="parameter" id="searchBusRoute-param-nightflag"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">nightflag</span>: <span class="default-value">0</span></span> })
+      
+    </section>
+    <section class="desc markdown">
+      <p>公交出行路线规划</p>
+<p>指定起点<code>from</code>和终点<code>to</code>进行计算, 还可以指定计算路径的模式<code>mode</code>, 默认为最快捷. <code>city</code>指定所在城市
+<code>nightflag</code>是否计算夜班车，默认为不计算，0：不计算，1：计算</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">static Future&lt;BusRouteResult&gt; searchBusRoute({
+  @required LatLng from,
+  @required LatLng to,
+  @required String city,
+  int mode = 0,
+  int nightflag = 0,
+}) async {
+  &#47;&#47; 会在listener中关闭
+  &#47;&#47; ignore: close_sinks
+  final _controller = StreamController&lt;BusRouteResult&gt;(sync: true);
+
+  platform(
+    android: (pool) async {
+      &#47;&#47; 起点
+      final fromLatLng = await ObjectFactory_Android
+          .createcom_amap_api_services_core_LatLonPoint__double__double(
+        from.latitude,
+        from.longitude,
+      );
+      &#47;&#47; 终点
+      final toLatLng = await ObjectFactory_Android
+          .createcom_amap_api_services_core_LatLonPoint__double__double(
+        to.latitude,
+        to.longitude,
+      );
+
+      &#47;&#47; 起终点
+      final fromAndTo = await ObjectFactory_Android
+          .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+              fromLatLng, toLatLng);
+
+      &#47;&#47; 创建请求对象
+      final query = await ObjectFactory_Android
+          .createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int(
+        fromAndTo,
+        mode,
+        city,
+        nightflag,
+      );
+
+      &#47;&#47; 获取android上下文
+      final context = await ObjectFactory_Android.getandroid_app_Activity();
+
+      &#47;&#47; 创建搜索对象
+      _androidRouteSearch = await ObjectFactory_Android
+          .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+              context);
+
+      &#47;&#47; 设置回调
+      await _androidRouteSearch
+          .setRouteSearchListener(_AndroidSearchListener(_controller));
+
+      &#47;&#47; 开始搜索
+      await _androidRouteSearch.calculateBusRouteAsyn(query);
+
+      &#47;&#47; 局部变量从HEAP中解除引用
+      pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
+    },
+    ios: (pool) async {
+      _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
+
+      &#47;&#47; 创建起点
+      final fromLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
+      await fromLatLng.set_latitude(from.latitude);
+      await fromLatLng.set_longitude(from.longitude);
+      &#47;&#47; 创建终点
+      final toLatLng = await ObjectFactory_iOS.createAMapGeoPoint();
+      await toLatLng.set_latitude(to.latitude);
+      await toLatLng.set_longitude(to.longitude);
+
+      &#47;&#47; 设置回调
+      await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+      &#47;&#47; 创建搜索请求
+      final request =
+          await ObjectFactory_iOS.createAMapWalkingRouteSearchRequest();
+      &#47;&#47; 设置起点
+      await request.set_origin(fromLatLng);
+      &#47;&#47; 设置终点
+      await request.set_destination(toLatLng);
+
+      &#47;&#47; 开始搜索
+      await _iosSearch.AMapWalkingRouteSearch(request);
+
+      &#47;&#47; 局部变量从HEAP中解除引用
+      pool..add(fromLatLng)..add(toLatLng)..add(request);
+    },
+  );
+  return _controller.stream.first;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    amap_search_fluttify 0.1.1
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>
