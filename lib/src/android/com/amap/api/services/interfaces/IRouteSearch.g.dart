@@ -14,91 +14,91 @@ mixin com_amap_api_services_interfaces_IRouteSearch on java_lang_Object {
   @mustCallSuper
   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) {
   
-    debugPrint('setRouteSearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setRouteSearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) {
   
-    debugPrint('setOnTruckRouteSearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setOnTruckRouteSearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) {
   
-    debugPrint('setOnRoutePlanSearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setOnRoutePlanSearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) {
   
-    debugPrint('calculateWalkRoute::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateWalkRoute::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) {
   
-    debugPrint('calculateWalkRouteAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateWalkRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) {
   
-    debugPrint('calculateBusRoute::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateBusRoute::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) {
   
-    debugPrint('calculateBusRouteAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateBusRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) {
   
-    debugPrint('calculateDriveRoute::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateDriveRoute::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) {
   
-    debugPrint('calculateDriveRouteAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateDriveRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) {
   
-    debugPrint('calculateRideRoute::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateRideRoute::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) {
   
-    debugPrint('calculateRideRouteAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateRideRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) {
   
-    debugPrint('calculateTruckRoute::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateTruckRoute::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) {
   
-    debugPrint('calculateTruckRouteAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateTruckRouteAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) {
   
-    debugPrint('calculateDrivePlan::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateDrivePlan::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) {
   
-    debugPrint('calculateDrivePlanAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('calculateDrivePlanAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

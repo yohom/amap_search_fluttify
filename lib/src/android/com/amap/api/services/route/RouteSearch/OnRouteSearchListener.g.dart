@@ -13,26 +13,26 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
 
   @mustCallSuper
   Future<void> onBusRouteSearched(com_amap_api_services_route_BusRouteResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onBusRouteSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onBusRouteSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onDriveRouteSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onDriveRouteSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onWalkRouteSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onWalkRouteSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onRideRouteSearched(com_amap_api_services_route_RideRouteResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onRideRouteSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onRideRouteSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

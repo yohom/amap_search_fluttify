@@ -36,5 +36,5 @@ class Ref {
   int refId;
 }
 
-/// 回调参数的释放池
-final kCallbackPool = <int, Ref>{};
+/// 原生对象的释放池
+final kNativeObjectPool = <int, Ref>{};

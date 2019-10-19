@@ -13,8 +13,8 @@ mixin com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener on java
 
   @mustCallSuper
   Future<void> onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onTruckRouteSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onTruckRouteSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

@@ -14,31 +14,31 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() {
   
-    debugPrint('getQuery::kCallbackPool: $kCallbackPool');
+    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {
   
-    debugPrint('setQuery::kCallbackPool: $kCallbackPool');
+    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {
   
-    debugPrint('setInputtipsListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setInputtipsListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> requestInputtipsAsyn() {
   
-    debugPrint('requestInputtipsAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('requestInputtipsAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() {
   
-    debugPrint('requestInputtips::kCallbackPool: $kCallbackPool');
+    debugPrint('requestInputtips::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

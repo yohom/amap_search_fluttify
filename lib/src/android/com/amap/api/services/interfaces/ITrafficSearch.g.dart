@@ -14,31 +14,31 @@ mixin com_amap_api_services_interfaces_ITrafficSearch on java_lang_Object {
   @mustCallSuper
   Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) {
   
-    debugPrint('setTrafficSearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setTrafficSearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByRoad(com_amap_api_services_traffic_RoadTrafficQuery var1) {
   
-    debugPrint('loadTrafficByRoad::kCallbackPool: $kCallbackPool');
+    debugPrint('loadTrafficByRoad::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> loadTrafficByRoadAsyn(com_amap_api_services_traffic_RoadTrafficQuery var1) {
   
-    debugPrint('loadTrafficByRoadAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('loadTrafficByRoadAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByCircle(com_amap_api_services_traffic_CircleTrafficQuery var1) {
   
-    debugPrint('loadTrafficByCircle::kCallbackPool: $kCallbackPool');
+    debugPrint('loadTrafficByCircle::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> loadTrafficByCircleAsyn(com_amap_api_services_traffic_CircleTrafficQuery var1) {
   
-    debugPrint('loadTrafficByCircleAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('loadTrafficByCircleAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

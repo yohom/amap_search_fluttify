@@ -13,8 +13,8 @@ mixin com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener 
 
   @mustCallSuper
   Future<void> onBusStationSearched(com_amap_api_services_busline_BusStationResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onBusStationSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onBusStationSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

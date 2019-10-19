@@ -13,14 +13,14 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
 
   @mustCallSuper
   Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onCloudSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onCloudSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onCloudItemDetailSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onCloudItemDetailSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

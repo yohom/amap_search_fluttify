@@ -13,8 +13,8 @@ mixin com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener on 
 
   @mustCallSuper
   Future<void> onDistrictSearched(com_amap_api_services_district_DistrictResult var1) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onDistrictSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onDistrictSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

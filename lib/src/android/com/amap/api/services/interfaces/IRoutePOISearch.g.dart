@@ -14,31 +14,31 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
   @mustCallSuper
   Future<void> setRoutePOISearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) {
   
-    debugPrint('setRoutePOISearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setRoutePOISearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> searchRoutePOIAsyn() {
   
-    debugPrint('searchRoutePOIAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('searchRoutePOIAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() {
   
-    debugPrint('searchRoutePOI::kCallbackPool: $kCallbackPool');
+    debugPrint('searchRoutePOI::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery var1) {
   
-    debugPrint('setQuery::kCallbackPool: $kCallbackPool');
+    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() {
   
-    debugPrint('getQuery::kCallbackPool: $kCallbackPool');
+    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

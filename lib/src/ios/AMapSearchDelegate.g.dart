@@ -13,114 +13,114 @@ mixin AMapSearchDelegate on NSObject {
 
   @mustCallSuper
   Future<void> onPOISearchDoneResponse(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onPOISearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onPOISearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onRoutePOISearchDoneResponse(AMapRoutePOISearchRequest request, AMapRoutePOISearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onRoutePOISearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onRoutePOISearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onGeocodeSearchDoneResponse(AMapGeocodeSearchRequest request, AMapGeocodeSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onGeocodeSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onGeocodeSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onReGeocodeSearchDoneResponse(AMapReGeocodeSearchRequest request, AMapReGeocodeSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onReGeocodeSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onReGeocodeSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onInputTipsSearchDoneResponse(AMapInputTipsSearchRequest request, AMapInputTipsSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onInputTipsSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onInputTipsSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onBusStopSearchDoneResponse(AMapBusStopSearchRequest request, AMapBusStopSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onBusStopSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onBusStopSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onBusLineSearchDoneResponse(AMapBusLineBaseSearchRequest request, AMapBusLineSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onBusLineSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onBusLineSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onDistrictSearchDoneResponse(AMapDistrictSearchRequest request, AMapDistrictSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onDistrictSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onDistrictSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onRouteSearchDoneResponse(AMapRouteSearchBaseRequest request, AMapRouteSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onRouteSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onRouteSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onFutureRouteSearchDoneResponse(AMapRouteSearchBaseRequest request, AMapFutureRouteSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onFutureRouteSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onFutureRouteSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onDistanceSearchDoneResponse(AMapDistanceSearchRequest request, AMapDistanceSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onDistanceSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onDistanceSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onWeatherSearchDoneResponse(AMapWeatherSearchRequest request, AMapWeatherSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onWeatherSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onWeatherSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onRoadTrafficSearchDoneResponse(AMapRoadTrafficSearchBaseRequest request, AMapRoadTrafficSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onRoadTrafficSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onRoadTrafficSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onNearbySearchDoneResponse(AMapNearbySearchRequest request, AMapNearbySearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onNearbySearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onNearbySearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onCloudSearchDoneResponse(AMapCloudSearchBaseRequest request, AMapCloudPOISearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onCloudSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onCloudSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onShareSearchDoneResponse(AMapShareSearchBaseRequest request, AMapShareSearchResponse response) {
-    kCallbackPool[request.refId] = request;
-    kCallbackPool[response.refId] = response;
-    debugPrint('onShareSearchDoneResponse::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[request.refId] = request;
+    kNativeObjectPool[response.refId] = response;
+    debugPrint('onShareSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

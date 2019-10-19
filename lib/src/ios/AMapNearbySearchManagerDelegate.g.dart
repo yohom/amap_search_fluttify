@@ -13,20 +13,20 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   @mustCallSuper
   Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {
-    kCallbackPool[manager.refId] = manager;
-    debugPrint('nearbyInfoForUploading::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[manager.refId] = manager;
+    debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onNearbyInfoUploadedWithError(NSError error) {
-    kCallbackPool[error.refId] = error;
-    debugPrint('onNearbyInfoUploadedWithError::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[error.refId] = error;
+    debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onUserInfoClearedWithError(NSError error) {
-    kCallbackPool[error.refId] = error;
-    debugPrint('onUserInfoClearedWithError::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[error.refId] = error;
+    debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

@@ -939,7 +939,7 @@ class AmapSearch {
   }
 
   static void dispose() {
-    kCallbackPool.forEach((it, ref) => release(ref));
+    kNativeObjectPool.forEach((it, ref) => release(ref));
     if (_iosSearch != null) release(_iosSearch);
     if (_androidPoiSearch != null) release(_androidPoiSearch);
     if (_androidInputTip != null) release(_androidInputTip);

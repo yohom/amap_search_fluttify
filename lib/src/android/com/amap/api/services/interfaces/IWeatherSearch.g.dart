@@ -14,25 +14,25 @@ mixin com_amap_api_services_interfaces_IWeatherSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() {
   
-    debugPrint('getQuery::kCallbackPool: $kCallbackPool');
+    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) {
   
-    debugPrint('setQuery::kCallbackPool: $kCallbackPool');
+    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> searchWeatherAsyn() {
   
-    debugPrint('searchWeatherAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('searchWeatherAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) {
   
-    debugPrint('setOnWeatherSearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setOnWeatherSearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

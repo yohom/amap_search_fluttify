@@ -13,14 +13,14 @@ mixin com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener on jav
 
   @mustCallSuper
   Future<void> onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onWeatherLiveSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onWeatherLiveSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onWeatherForecastSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onWeatherForecastSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

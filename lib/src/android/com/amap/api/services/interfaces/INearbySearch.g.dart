@@ -14,61 +14,61 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   @mustCallSuper
   Future<void> addNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {
   
-    debugPrint('addNearbyListener::kCallbackPool: $kCallbackPool');
+    debugPrint('addNearbyListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> removeNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {
   
-    debugPrint('removeNearbyListener::kCallbackPool: $kCallbackPool');
+    debugPrint('removeNearbyListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> clearUserInfoAsyn() {
   
-    debugPrint('clearUserInfoAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('clearUserInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> setUserID(String var1) {
   
-    debugPrint('setUserID::kCallbackPool: $kCallbackPool');
+    debugPrint('setUserID::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> startUploadNearbyInfoAuto(com_amap_api_services_nearby_UploadInfoCallback var1, int var2) {
   
-    debugPrint('startUploadNearbyInfoAuto::kCallbackPool: $kCallbackPool');
+    debugPrint('startUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> stopUploadNearbyInfoAuto() {
   
-    debugPrint('stopUploadNearbyInfoAuto::kCallbackPool: $kCallbackPool');
+    debugPrint('stopUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> uploadNearbyInfoAsyn(com_amap_api_services_nearby_UploadInfo var1) {
   
-    debugPrint('uploadNearbyInfoAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('uploadNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> searchNearbyInfoAsyn(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {
   
-    debugPrint('searchNearbyInfoAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('searchNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<com_amap_api_services_nearby_NearbySearchResult> searchNearbyInfo(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {
   
-    debugPrint('searchNearbyInfo::kCallbackPool: $kCallbackPool');
+    debugPrint('searchNearbyInfo::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> destroy() {
   
-    debugPrint('destroy::kCallbackPool: $kCallbackPool');
+    debugPrint('destroy::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

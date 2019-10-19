@@ -14,19 +14,19 @@ mixin com_amap_api_services_interfaces_ICloudSearch on java_lang_Object {
   @mustCallSuper
   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) {
   
-    debugPrint('setOnCloudSearchListener::kCallbackPool: $kCallbackPool');
+    debugPrint('setOnCloudSearchListener::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) {
   
-    debugPrint('searchCloudAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('searchCloudAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> searchCloudDetailAsyn(String var1, String var2) {
   
-    debugPrint('searchCloudDetailAsyn::kCallbackPool: $kCallbackPool');
+    debugPrint('searchCloudDetailAsyn::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }

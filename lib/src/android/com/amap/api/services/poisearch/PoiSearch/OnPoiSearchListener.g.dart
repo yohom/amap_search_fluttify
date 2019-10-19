@@ -13,14 +13,14 @@ mixin com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener on java_lang
 
   @mustCallSuper
   Future<void> onPoiSearched(com_amap_api_services_poisearch_PoiResult var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onPoiSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onPoiSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
   @mustCallSuper
   Future<void> onPoiItemSearched(com_amap_api_services_core_PoiItem var1, int var2) {
-    kCallbackPool[var1.refId] = var1;
-    debugPrint('onPoiItemSearched::kCallbackPool: $kCallbackPool');
+    kNativeObjectPool[var1.refId] = var1;
+    debugPrint('onPoiItemSearched::kNativeObjectPool: $kNativeObjectPool');
   }
   
 }
