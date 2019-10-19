@@ -1,7 +1,6 @@
-import 'package:amap_search_fluttify/src/android/android.export.dart';
-import 'package:amap_search_fluttify/src/dart/utils.dart';
-import 'package:amap_search_fluttify/src/ios/AMapGeoPoint.dart';
-import 'package:amap_search_fluttify/src/ios/ios.export.dart';
+import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
+import 'package:amap_search_fluttify/src/utils.g.dart';
 
 mixin ToFutureString {
   Future<String> toFutureString();
@@ -17,57 +16,57 @@ class Poi with ToFutureString {
 
   Future<String> get title {
     return platform(
-      android: () => _androidModel.getTitle(),
-      ios: () => _iosModel.get_name(),
+      android: (pool) => _androidModel.getTitle(),
+      ios: (pool) => _iosModel.get_name(),
     );
   }
 
   Future<String> get cityName {
     return platform(
-      android: () => _androidModel.getCityName(),
-      ios: () => _iosModel.get_city(),
+      android: (pool) => _androidModel.getCityName(),
+      ios: (pool) => _iosModel.get_city(),
     );
   }
 
   Future<String> get cityCode {
     return platform(
-      android: () => _androidModel.getCityCode(),
-      ios: () => _iosModel.get_citycode(),
+      android: (pool) => _androidModel.getCityCode(),
+      ios: (pool) => _iosModel.get_citycode(),
     );
   }
 
   Future<String> get provinceName {
     return platform(
-      android: () => _androidModel.getProvinceName(),
-      ios: () => _iosModel.get_province(),
+      android: (pool) => _androidModel.getProvinceName(),
+      ios: (pool) => _iosModel.get_province(),
     );
   }
 
   Future<String> get provinceCode {
     return platform(
-      android: () => _androidModel.getProvinceCode(),
-      ios: () => _iosModel.get_pcode(),
+      android: (pool) => _androidModel.getProvinceCode(),
+      ios: (pool) => _iosModel.get_pcode(),
     );
   }
 
   Future<String> get tel {
     return platform(
-      android: () => _androidModel.getTel(),
-      ios: () => _iosModel.get_tel(),
+      android: (pool) => _androidModel.getTel(),
+      ios: (pool) => _iosModel.get_tel(),
     );
   }
 
   Future<String> get poiId {
     return platform(
-      android: () => _androidModel.getPoiId(),
-      ios: () => _iosModel.get_uid(),
+      android: (pool) => _androidModel.getPoiId(),
+      ios: (pool) => _iosModel.get_uid(),
     );
   }
 
   Future<int> get distance {
     return platform(
-      android: () => _androidModel.getDistance(),
-      ios: () => _iosModel.get_distance(),
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance(),
     );
   }
 
@@ -100,15 +99,15 @@ class LatLng with ToFutureString {
 
   Future<double> get futureLat {
     return platform(
-      android: () => _androidModel.getLatitude(),
-      ios: () async => latitude ?? _iosModel.get_latitude(),
+      android: (pool) => _androidModel.getLatitude(),
+      ios: (pool) async => latitude ?? _iosModel.get_latitude(),
     );
   }
 
   Future<double> get futureLng {
     return platform(
-      android: () => _androidModel.getLongitude(),
-      ios: () async => longitude ?? _iosModel.get_longitude(),
+      android: (pool) => _androidModel.getLongitude(),
+      ios: (pool) async => longitude ?? _iosModel.get_longitude(),
     );
   }
 
@@ -133,29 +132,29 @@ class InputTip with ToFutureString {
 
   Future<String> get name {
     return platform(
-      android: () => _androidModel.getName(),
-      ios: () => _iosModel.get_name(),
+      android: (pool) => _androidModel.getName(),
+      ios: (pool) => _iosModel.get_name(),
     );
   }
 
   Future<String> get poiId {
     return platform(
-      android: () => _androidModel.getPoiID(),
-      ios: () => _iosModel.get_uid(),
+      android: (pool) => _androidModel.getPoiID(),
+      ios: (pool) => _iosModel.get_uid(),
     );
   }
 
   Future<String> get address {
     return platform(
-      android: () => _androidModel.getAddress(),
-      ios: () => _iosModel.get_address(),
+      android: (pool) => _androidModel.getAddress(),
+      ios: (pool) => _iosModel.get_address(),
     );
   }
 
   Future<String> get district {
     return platform(
-      android: () => _androidModel.getDistrict(),
-      ios: () => _iosModel.get_district(),
+      android: (pool) => _androidModel.getDistrict(),
+      ios: (pool) => _iosModel.get_district(),
     );
   }
 
@@ -175,15 +174,15 @@ class Geocode with ToFutureString {
 
   Future<LatLng> get latLng {
     return platform(
-      android: () =>
+      android: (pool) =>
           _androidModel.getLatLonPoint().then((it) => LatLng.android(it)),
-      ios: () => _iosModel.get_location().then((it) => LatLng.ios(it)),
+      ios: (pool) => _iosModel.get_location().then((it) => LatLng.ios(it)),
     );
   }
 
   @override
   Future<String> toFutureString() async {
-    return 'Geocode{latLng: ${(await latLng).toFutureString()}}';
+    return 'Geocode{latLng: ${await (await latLng).toFutureString()}}';
   }
 }
 
@@ -197,55 +196,56 @@ class ReGeocode with ToFutureString {
 
   Future<String> get provinceName {
     return platform(
-      android: () => _androidModel.getProvince(),
-      ios: () =>
+      android: (pool) => _androidModel.getProvince(),
+      ios: (pool) =>
           _iosModel.get_addressComponent().then((it) => it.get_province()),
     );
   }
 
   Future<String> get cityName {
     return platform(
-      android: () => _androidModel.getCity(),
-      ios: () => _iosModel.get_addressComponent().then((it) => it.get_city()),
+      android: (pool) => _androidModel.getCity(),
+      ios: (pool) =>
+          _iosModel.get_addressComponent().then((it) => it.get_city()),
     );
   }
 
   Future<String> get cityCode {
     return platform(
-      android: () => _androidModel.getCityCode(),
-      ios: () =>
+      android: (pool) => _androidModel.getCityCode(),
+      ios: (pool) =>
           _iosModel.get_addressComponent().then((it) => it.get_citycode()),
     );
   }
 
   Future<String> get districtName {
     return platform(
-      android: () => _androidModel.getDistrict(),
-      ios: () =>
+      android: (pool) => _androidModel.getDistrict(),
+      ios: (pool) =>
           _iosModel.get_addressComponent().then((it) => it.get_district()),
     );
   }
 
   Future<String> get building {
     return platform(
-      android: () => _androidModel.getBuilding(),
-      ios: () =>
+      android: (pool) => _androidModel.getBuilding(),
+      ios: (pool) =>
           _iosModel.get_addressComponent().then((it) => it.get_building()),
     );
   }
 
   Future<String> get country {
     return platform(
-      android: () => _androidModel.getCountry(),
-      ios: () =>
+      android: (pool) => _androidModel.getCountry(),
+      ios: (pool) =>
           _iosModel.get_addressComponent().then((it) => it.get_country()),
     );
   }
 
   Future<String> get formatAddress {
     return platform(
-      android: () => _androidModel.getFormatAddress(),
-      ios: () => _iosModel.get_formattedAddress(),
+      android: (pool) => _androidModel.getFormatAddress(),
+      ios: (pool) => _iosModel.get_formattedAddress(),
     );
   }
 
@@ -265,19 +265,19 @@ class DriveRouteResult with ToFutureString {
 
   Future<double> get taxiCost async {
     return platform(
-      android: () => _androidModel.getTaxiCost(),
-      ios: () => _iosModel.get_taxiCost(),
+      android: (pool) => _androidModel.getTaxiCost(),
+      ios: (pool) => _iosModel.get_taxiCost(),
     );
   }
 
   Future<List<DrivePath>> get drivePathList {
     return platform(
-      android: () async {
+      android: (pool) async {
         return (await _androidModel.getPaths())
             .map((it) => DrivePath.android(it))
             .toList();
       },
-      ios: () async {
+      ios: (pool) async {
         return (await _iosModel.get_paths())
             .map((it) => DrivePath.ios(it))
             .toList();
@@ -301,12 +301,12 @@ class WalkRouteResult with ToFutureString {
 
   Future<List<WalkPath>> get walkPathList {
     return platform(
-      android: () async {
+      android: (pool) async {
         return (await _androidModel.getPaths())
             .map((it) => WalkPath.android(it))
             .toList();
       },
-      ios: () async {
+      ios: (pool) async {
         return (await _iosModel.get_paths())
             .map((it) => WalkPath.ios(it))
             .toList();
@@ -330,12 +330,12 @@ class RideRouteResult with ToFutureString {
 
   Future<List<RidePath>> get ridePathList {
     return platform(
-      android: () async {
+      android: (pool) async {
         return (await _androidModel.getPaths())
             .map((it) => RidePath.android(it))
             .toList();
       },
-      ios: () async {
+      ios: (pool) async {
         return (await _iosModel.get_paths())
             .map((it) => RidePath.ios(it))
             .toList();
@@ -359,12 +359,12 @@ class BusRouteResult with ToFutureString {
 
   Future<List<BusPath>> get walkPathList {
     return platform(
-      android: () async {
+      android: (pool) async {
         return (await _androidModel.getPaths())
             .map((it) => BusPath.android(it))
             .toList();
       },
-      ios: () async {
+      ios: (pool) async {
         return (await _iosModel.get_transits())
             .map((it) => BusPath.ios(it))
             .toList();
@@ -387,11 +387,11 @@ class DrivePath with ToFutureString {
   AMapPath _iosModel;
 
   Future<List<DriveStep>> get driveStepList {
-    return platform(android: () async {
+    return platform(android: (pool) async {
       return (await _androidModel.getSteps())
           .map((it) => DriveStep.android(it))
           .toList();
-    }, ios: () async {
+    }, ios: (pool) async {
       return (await _iosModel.get_steps())
           .map((it) => DriveStep.ios(it))
           .toList();
@@ -413,11 +413,11 @@ class WalkPath with ToFutureString {
   AMapPath _iosModel;
 
   Future<List<WalkStep>> get walkStepList {
-    return platform(android: () async {
+    return platform(android: (pool) async {
       return (await _androidModel.getSteps())
           .map((it) => WalkStep.android(it))
           .toList();
-    }, ios: () async {
+    }, ios: (pool) async {
       return (await _iosModel.get_steps())
           .map((it) => WalkStep.ios(it))
           .toList();
@@ -439,11 +439,11 @@ class RidePath with ToFutureString {
   AMapPath _iosModel;
 
   Future<List<RideStep>> get walkStepList {
-    return platform(android: () async {
+    return platform(android: (pool) async {
       return (await _androidModel.getSteps())
           .map((it) => RideStep.android(it))
           .toList();
-    }, ios: () async {
+    }, ios: (pool) async {
       return (await _iosModel.get_steps())
           .map((it) => RideStep.ios(it))
           .toList();
@@ -465,11 +465,11 @@ class BusPath with ToFutureString {
   AMapTransit _iosModel;
 
   Future<List<BusStep>> get busStepList {
-    return platform(android: () async {
+    return platform(android: (pool) async {
       return (await _androidModel.getSteps())
           .map((it) => BusStep.android(it))
           .toList();
-    }, ios: () async {
+    }, ios: (pool) async {
       return (await _iosModel.get_segments())
           .map((it) => BusStep.ios(it))
           .toList();
@@ -492,66 +492,66 @@ class DriveStep with ToFutureString {
 
   Future<String> get instruction {
     return platform(
-      android: () => _androidModel.getInstruction(),
-      ios: () => _iosModel.get_instruction(),
+      android: (pool) => _androidModel.getInstruction(),
+      ios: (pool) => _iosModel.get_instruction(),
     );
   }
 
   Future<String> get orientation {
     return platform(
-      android: () => _androidModel.getOrientation(),
-      ios: () => _iosModel.get_orientation(),
+      android: (pool) => _androidModel.getOrientation(),
+      ios: (pool) => _iosModel.get_orientation(),
     );
   }
 
   Future<String> get road {
     return platform(
-      android: () => _androidModel.getRoad(),
-      ios: () => _iosModel.get_road(),
+      android: (pool) => _androidModel.getRoad(),
+      ios: (pool) => _iosModel.get_road(),
     );
   }
 
   Future<double> get distance {
     return platform(
-      android: () => _androidModel.getDistance(),
-      ios: () => _iosModel.get_distance().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance().then((it) => it.toDouble()),
     );
   }
 
   Future<double> get tolls {
     return platform(
-      android: () => _androidModel.getTolls(),
-      ios: () => _iosModel.get_tolls(),
+      android: (pool) => _androidModel.getTolls(),
+      ios: (pool) => _iosModel.get_tolls(),
     );
   }
 
   Future<double> get tollDistance {
     return platform(
-      android: () => _androidModel.getTollDistance(),
-      ios: () => _iosModel.get_tollDistance().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getTollDistance(),
+      ios: (pool) => _iosModel.get_tollDistance().then((it) => it.toDouble()),
     );
   }
 
   Future<String> get tollRoad {
     return platform(
-      android: () => _androidModel.getTollRoad(),
-      ios: () => _iosModel.get_tollRoad(),
+      android: (pool) => _androidModel.getTollRoad(),
+      ios: (pool) => _iosModel.get_tollRoad(),
     );
   }
 
   Future<double> get duration {
     return platform(
-      android: () => _androidModel.getDuration(),
-      ios: () => _iosModel.get_duration().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getDuration(),
+      ios: (pool) => _iosModel.get_duration().then((it) => it.toDouble()),
     );
   }
 
   Future<List<LatLng>> get polyline {
     return platform(
-      android: () async => (await _androidModel.getPolyline())
+      android: (pool) async => (await _androidModel.getPolyline())
           .map((it) => LatLng.android(it))
           .toList(),
-      ios: () async {
+      ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
             .split(';')
@@ -564,23 +564,23 @@ class DriveStep with ToFutureString {
 
   Future<String> get action {
     return platform(
-      android: () => _androidModel.getAction(),
-      ios: () => _iosModel.get_action(),
+      android: (pool) => _androidModel.getAction(),
+      ios: (pool) => _iosModel.get_action(),
     );
   }
 
   Future<String> get assistantAction {
     return platform(
-      android: () => _androidModel.getAssistantAction(),
-      ios: () => _iosModel.get_assistantAction(),
+      android: (pool) => _androidModel.getAssistantAction(),
+      ios: (pool) => _iosModel.get_assistantAction(),
     );
   }
 
   Future<List<TMC>> get tmsList {
     return platform(
-      android: () async =>
+      android: (pool) async =>
           (await _androidModel.getTMCs()).map((it) => TMC.android(it)).toList(),
-      ios: () async =>
+      ios: (pool) async =>
           (await _iosModel.get_tmcs()).map((it) => TMC.ios(it)).toList(),
     );
   }
@@ -601,45 +601,45 @@ class WalkStep with ToFutureString {
 
   Future<String> get instruction {
     return platform(
-      android: () => _androidModel.getInstruction(),
-      ios: () => _iosModel.get_instruction(),
+      android: (pool) => _androidModel.getInstruction(),
+      ios: (pool) => _iosModel.get_instruction(),
     );
   }
 
   Future<String> get orientation {
     return platform(
-      android: () => _androidModel.getOrientation(),
-      ios: () => _iosModel.get_orientation(),
+      android: (pool) => _androidModel.getOrientation(),
+      ios: (pool) => _iosModel.get_orientation(),
     );
   }
 
   Future<String> get road {
     return platform(
-      android: () => _androidModel.getRoad(),
-      ios: () => _iosModel.get_road(),
+      android: (pool) => _androidModel.getRoad(),
+      ios: (pool) => _iosModel.get_road(),
     );
   }
 
   Future<double> get distance {
     return platform(
-      android: () => _androidModel.getDistance(),
-      ios: () => _iosModel.get_distance().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance().then((it) => it.toDouble()),
     );
   }
 
   Future<double> get duration {
     return platform(
-      android: () => _androidModel.getDuration(),
-      ios: () => _iosModel.get_duration().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getDuration(),
+      ios: (pool) => _iosModel.get_duration().then((it) => it.toDouble()),
     );
   }
 
   Future<List<LatLng>> get polyline {
     return platform(
-      android: () async => (await _androidModel.getPolyline())
+      android: (pool) async => (await _androidModel.getPolyline())
           .map((it) => LatLng.android(it))
           .toList(),
-      ios: () async {
+      ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
             .split(';')
@@ -652,15 +652,15 @@ class WalkStep with ToFutureString {
 
   Future<String> get action {
     return platform(
-      android: () => _androidModel.getAction(),
-      ios: () => _iosModel.get_action(),
+      android: (pool) => _androidModel.getAction(),
+      ios: (pool) => _iosModel.get_action(),
     );
   }
 
   Future<String> get assistantAction {
     return platform(
-      android: () => _androidModel.getAssistantAction(),
-      ios: () => _iosModel.get_assistantAction(),
+      android: (pool) => _androidModel.getAssistantAction(),
+      ios: (pool) => _iosModel.get_assistantAction(),
     );
   }
 
@@ -680,45 +680,45 @@ class RideStep with ToFutureString {
 
   Future<String> get instruction {
     return platform(
-      android: () => _androidModel.getInstruction(),
-      ios: () => _iosModel.get_instruction(),
+      android: (pool) => _androidModel.getInstruction(),
+      ios: (pool) => _iosModel.get_instruction(),
     );
   }
 
   Future<String> get orientation {
     return platform(
-      android: () => _androidModel.getOrientation(),
-      ios: () => _iosModel.get_orientation(),
+      android: (pool) => _androidModel.getOrientation(),
+      ios: (pool) => _iosModel.get_orientation(),
     );
   }
 
   Future<String> get road {
     return platform(
-      android: () => _androidModel.getRoad(),
-      ios: () => _iosModel.get_road(),
+      android: (pool) => _androidModel.getRoad(),
+      ios: (pool) => _iosModel.get_road(),
     );
   }
 
   Future<double> get distance {
     return platform(
-      android: () => _androidModel.getDistance(),
-      ios: () => _iosModel.get_distance().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance().then((it) => it.toDouble()),
     );
   }
 
   Future<double> get duration {
     return platform(
-      android: () => _androidModel.getDuration(),
-      ios: () => _iosModel.get_duration().then((it) => it.toDouble()),
+      android: (pool) => _androidModel.getDuration(),
+      ios: (pool) => _iosModel.get_duration().then((it) => it.toDouble()),
     );
   }
 
   Future<List<LatLng>> get polyline {
     return platform(
-      android: () async => (await _androidModel.getPolyline())
+      android: (pool) async => (await _androidModel.getPolyline())
           .map((it) => LatLng.android(it))
           .toList(),
-      ios: () async {
+      ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
             .split(';')
@@ -731,15 +731,15 @@ class RideStep with ToFutureString {
 
   Future<String> get action {
     return platform(
-      android: () => _androidModel.getAction(),
-      ios: () => _iosModel.get_action(),
+      android: (pool) => _androidModel.getAction(),
+      ios: (pool) => _iosModel.get_action(),
     );
   }
 
   Future<String> get assistantAction {
     return platform(
-      android: () => _androidModel.getAssistantAction(),
-      ios: () => _iosModel.get_assistantAction(),
+      android: (pool) => _androidModel.getAssistantAction(),
+      ios: (pool) => _iosModel.get_assistantAction(),
     );
   }
 
@@ -759,20 +759,20 @@ class BusStep with ToFutureString {
 
   Future<BusWalk> get walk {
     return platform(
-      android: () async => BusWalk.android(await _androidModel.getWalk()),
-      ios: () async => BusWalk.ios(await _iosModel.get_walking()),
+      android: (pool) async => BusWalk.android(await _androidModel.getWalk()),
+      ios: (pool) async => BusWalk.ios(await _iosModel.get_walking()),
     );
   }
 
   Future<List<BusLine>> get lines {
     return platform(
-      android: () => _androidModel
+      android: (pool) => _androidModel
           .getBusLines()
           .asStream()
           .asyncExpand((it) => Stream.fromIterable(it))
           .map((it) => BusLine.android(it))
           .toList(),
-      ios: () => _iosModel
+      ios: (pool) => _iosModel
           .get_buslines()
           .asStream()
           .asyncExpand((it) => Stream.fromIterable(it))
@@ -783,9 +783,9 @@ class BusStep with ToFutureString {
 
   Future<BusEntrance> get entrance {
     return platform(
-      android: () async =>
+      android: (pool) async =>
           BusEntrance.android(await _androidModel.getEntrance()),
-      ios: () async => BusEntrance.ios(
+      ios: (pool) async => BusEntrance.ios(
         await _iosModel.get_enterLocation(),
         await _iosModel.get_enterName(),
       ),
@@ -794,8 +794,8 @@ class BusStep with ToFutureString {
 
   Future<BusExit> get exit {
     return platform(
-      android: () async => BusExit.android(await _androidModel.getExit()),
-      ios: () async => BusExit.ios(
+      android: (pool) async => BusExit.android(await _androidModel.getExit()),
+      ios: (pool) async => BusExit.ios(
         await _iosModel.get_enterLocation(),
         await _iosModel.get_enterName(),
       ),
@@ -804,15 +804,16 @@ class BusStep with ToFutureString {
 
   Future<BusRailway> get railway {
     return platform(
-      android: () async => BusRailway.android(await _androidModel.getRailway()),
-      ios: () async => BusRailway.ios(await _iosModel.get_railway()),
+      android: (pool) async =>
+          BusRailway.android(await _androidModel.getRailway()),
+      ios: (pool) async => BusRailway.ios(await _iosModel.get_railway()),
     );
   }
 
   Future<BusTaxi> get taxi {
     return platform(
-      android: () async => BusTaxi.android(await _androidModel.getTaxi()),
-      ios: () async => BusTaxi.ios(await _iosModel.get_taxi()),
+      android: (pool) async => BusTaxi.android(await _androidModel.getTaxi()),
+      ios: (pool) async => BusTaxi.ios(await _iosModel.get_taxi()),
     );
   }
 
@@ -832,15 +833,16 @@ class BusWalk with ToFutureString {
 
   Future<LatLng> get from {
     return platform(
-      android: () async => LatLng.android(await _androidModel.getOrigin()),
-      ios: () async => LatLng.ios(await _iosModel.get_origin()),
+      android: (pool) async => LatLng.android(await _androidModel.getOrigin()),
+      ios: (pool) async => LatLng.ios(await _iosModel.get_origin()),
     );
   }
 
   Future<LatLng> get to {
     return platform(
-      android: () async => LatLng.android(await _androidModel.getDestination()),
-      ios: () async => LatLng.ios(await _iosModel.get_destination()),
+      android: (pool) async =>
+          LatLng.android(await _androidModel.getDestination()),
+      ios: (pool) async => LatLng.ios(await _iosModel.get_destination()),
     );
   }
 
@@ -860,43 +862,43 @@ class BusLine with ToFutureString {
 
   Future<double> get distance {
     return platform(
-      android: () => _androidModel.getDistance(),
-      ios: () => _iosModel.get_distance(),
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance(),
     );
   }
 
   Future<String> get busLineName {
     return platform(
-      android: () => _androidModel.getBusLineName(),
-      ios: () => _iosModel.get_name(),
+      android: (pool) => _androidModel.getBusLineName(),
+      ios: (pool) => _iosModel.get_name(),
     );
   }
 
   Future<String> get busLineType {
     return platform(
-      android: () => _androidModel.getBusLineType(),
-      ios: () => _iosModel.get_type(),
+      android: (pool) => _androidModel.getBusLineType(),
+      ios: (pool) => _iosModel.get_type(),
     );
   }
 
   Future<String> get cityCode {
     return platform(
-      android: () => _androidModel.getCityCode(),
-      ios: () => _iosModel.get_citycode(),
+      android: (pool) => _androidModel.getCityCode(),
+      ios: (pool) => _iosModel.get_citycode(),
     );
   }
 
   Future<double> get totalPrice {
     return platform(
-      android: () => _androidModel.getTotalPrice(),
-      ios: () => _iosModel.get_totalPrice(),
+      android: (pool) => _androidModel.getTotalPrice(),
+      ios: (pool) => _iosModel.get_totalPrice(),
     );
   }
 
   Future<double> get basicPrice {
     return platform(
-      android: () => _androidModel.getBasicPrice(),
-      ios: () => _iosModel.get_basicPrice(),
+      android: (pool) => _androidModel.getBasicPrice(),
+      ios: (pool) => _iosModel.get_basicPrice(),
     );
   }
 
@@ -917,16 +919,16 @@ class BusEntrance with ToFutureString {
 
   Future<String> get name {
     return platform(
-      android: () async => _androidModel?.getName(),
-      ios: () async => _iosModelName,
+      android: (pool) async => _androidModel?.getName(),
+      ios: (pool) async => _iosModelName,
     );
   }
 
   Future<LatLng> get location {
     return platform(
-      android: () async =>
+      android: (pool) async =>
           LatLng.android(await _androidModel?.getLatLonPoint()),
-      ios: () async => LatLng.ios(_iosModelLocation),
+      ios: (pool) async => LatLng.ios(_iosModelLocation),
     );
   }
 
@@ -947,16 +949,16 @@ class BusExit with ToFutureString {
 
   Future<String> get name {
     return platform(
-      android: () => _androidModel?.getName(),
-      ios: () async => _iosModelName,
+      android: (pool) => _androidModel?.getName(),
+      ios: (pool) async => _iosModelName,
     );
   }
 
   Future<LatLng> get location {
     return platform(
-      android: () async =>
+      android: (pool) async =>
           LatLng.android(await _androidModel?.getLatLonPoint()),
-      ios: () async => LatLng.ios(_iosModelLocation),
+      ios: (pool) async => LatLng.ios(_iosModelLocation),
     );
   }
 
@@ -1006,24 +1008,24 @@ class TMC with ToFutureString {
 
   Future<int> get distance async {
     return platform(
-      android: () => _androidModel.getDistance(),
-      ios: () => _iosModel.get_distance(),
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance(),
     );
   }
 
   Future<String> get status {
     return platform(
-      android: () => _androidModel.getStatus(),
-      ios: () => _iosModel.get_status(),
+      android: (pool) => _androidModel.getStatus(),
+      ios: (pool) => _iosModel.get_status(),
     );
   }
 
   Future<List<LatLng>> get polyline {
     return platform(
-      android: () async => (await _androidModel.getPolyline())
+      android: (pool) async => (await _androidModel.getPolyline())
           .map((it) => LatLng.android(it))
           .toList(),
-      ios: () async {
+      ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
             .split(';')
@@ -1050,7 +1052,7 @@ class BusStation with ToFutureString {
 
   Future<List<BusStationItem>> get busStationList {
     return platform(
-      android: () async {
+      android: (pool) async {
         return _androidModel
             .getBusStations()
             .asStream()
@@ -1058,7 +1060,7 @@ class BusStation with ToFutureString {
             .map((it) => BusStationItem.android(it))
             .toList();
       },
-      ios: () async {
+      ios: (pool) async {
         return _iosModel
             .get_busstops()
             .asStream()
@@ -1085,23 +1087,23 @@ class BusStationItem with ToFutureString {
 
   Future<String> get name {
     return platform(
-      android: () => _androidModel.getBusStationName(),
-      ios: () => _iosModel.get_name(),
+      android: (pool) => _androidModel.getBusStationName(),
+      ios: (pool) => _iosModel.get_name(),
     );
   }
 
   Future<String> get id {
     return platform(
-      android: () => _androidModel.getBusStationId(),
-      ios: () => _iosModel.get_uid(),
+      android: (pool) => _androidModel.getBusStationId(),
+      ios: (pool) => _iosModel.get_uid(),
     );
   }
 
   Future<LatLng> get location {
     return platform(
-      android: () =>
+      android: (pool) =>
           _androidModel.getLatLonPoint().then((it) => LatLng.android(it)),
-      ios: () => _iosModel.get_location().then((it) => LatLng.ios(it)),
+      ios: (pool) => _iosModel.get_location().then((it) => LatLng.ios(it)),
     );
   }
 
@@ -1121,13 +1123,13 @@ class District with ToFutureString {
 
   Future<List<DistrictItem>> get districtList {
     return platform(
-      android: () => _androidModel
+      android: (pool) => _androidModel
           .getDistrict()
           .asStream()
           .asyncExpand((it) => Stream.fromIterable(it))
           .map((it) => DistrictItem.android(it))
           .toList(),
-      ios: () => _iosModel
+      ios: (pool) => _iosModel
           .get_districts()
           .asStream()
           .asyncExpand((it) => Stream.fromIterable(it))
@@ -1152,29 +1154,30 @@ class DistrictItem with ToFutureString {
 
   Future<String> get name {
     return platform(
-      android: () => _androidModel.getName(),
-      ios: () => _iosModel.get_name(),
+      android: (pool) => _androidModel.getName(),
+      ios: (pool) => _iosModel.get_name(),
     );
   }
 
   Future<String> get cityCode {
     return platform(
-      android: () => _androidModel.getCitycode(),
-      ios: () => _iosModel.get_citycode(),
+      android: (pool) => _androidModel.getCitycode(),
+      ios: (pool) => _iosModel.get_citycode(),
     );
   }
 
   Future<String> get adCode {
     return platform(
-      android: () => _androidModel.getAdcode(),
-      ios: () => _iosModel.get_adcode(),
+      android: (pool) => _androidModel.getAdcode(),
+      ios: (pool) => _iosModel.get_adcode(),
     );
   }
 
   Future<LatLng> get center {
     return platform(
-      android: () => _androidModel.getCenter().then((it) => LatLng.android(it)),
-      ios: () => _iosModel.get_center().then((it) => LatLng.ios(it)),
+      android: (pool) =>
+          _androidModel.getCenter().then((it) => LatLng.android(it)),
+      ios: (pool) => _iosModel.get_center().then((it) => LatLng.ios(it)),
     );
   }
 

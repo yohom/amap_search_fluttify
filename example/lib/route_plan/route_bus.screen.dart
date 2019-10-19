@@ -8,7 +8,8 @@ class RouteBusScreen extends StatefulWidget {
   _RouteBusScreenState createState() => _RouteBusScreenState();
 }
 
-class _RouteBusScreenState extends State<RouteBusScreen> {
+class _RouteBusScreenState extends State<RouteBusScreen>
+    with AmapSearchDisposeMixin {
   final _fromLatController = TextEditingController(text: '30.219933');
   final _fromLngController = TextEditingController(text: '120.023728');
 

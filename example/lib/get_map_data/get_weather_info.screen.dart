@@ -8,7 +8,8 @@ class GetWeatherInfoScreen extends StatefulWidget {
   _GetWeatherInfoScreenState createState() => _GetWeatherInfoScreenState();
 }
 
-class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen> {
+class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController(text: '杭州');
 
   String _district = '';

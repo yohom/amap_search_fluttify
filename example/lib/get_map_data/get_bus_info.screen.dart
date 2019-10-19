@@ -1,4 +1,5 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,8 @@ class GetBusInfoScreen extends StatefulWidget {
   _GetBusInfoScreenState createState() => _GetBusInfoScreenState();
 }
 
-class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
+class _GetBusInfoScreenState extends State<GetBusInfoScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController(text: '武林广场');
   final _cityController = TextEditingController(text: '杭州');
 
@@ -41,7 +43,7 @@ class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
             },
             child: Text('搜索'),
           ),
-          Expanded(child: SingleChildScrollView(child: Text(_busStation))),
+          Expanded(child: ScrollableText(_busStation)),
         ],
       ),
     );

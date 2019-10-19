@@ -1,5 +1,6 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
+import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -39,9 +40,10 @@ class KeywordPoiScreen extends StatefulWidget {
   _KeywordPoiScreenState createState() => _KeywordPoiScreenState();
 }
 
-class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
-  final _keywordController = TextEditingController();
-  final _cityController = TextEditingController();
+class _KeywordPoiScreenState extends State<KeywordPoiScreen>
+    with AmapSearchDisposeMixin {
+  final _keywordController = TextEditingController(text: '肯德基');
+  final _cityController = TextEditingController(text: '杭州');
 
   List<String> _poiTitleList = [];
 
@@ -82,13 +84,14 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
   }
 }
 
-/// 关键字检索POI
+/// 附近检索POI
 class AroundPoiScreen extends StatefulWidget {
   @override
   _AroundPoiScreenState createState() => _AroundPoiScreenState();
 }
 
-class _AroundPoiScreenState extends State<AroundPoiScreen> {
+class _AroundPoiScreenState extends State<AroundPoiScreen>
+    with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController();
   final _latController = TextEditingController(text: '29.08');
   final _lngController = TextEditingController(text: '119.65');
@@ -154,9 +157,10 @@ class InputTipScreen extends StatefulWidget {
   _InputTipScreenState createState() => _InputTipScreenState();
 }
 
-class _InputTipScreenState extends State<InputTipScreen> {
-  final _keywordController = TextEditingController();
-  final _cityController = TextEditingController();
+class _InputTipScreenState extends State<InputTipScreen>
+    with AmapSearchDisposeMixin {
+  final _keywordController = TextEditingController(text: '肯德基');
+  final _cityController = TextEditingController(text: '杭州');
 
   List<String> _inputTipList = [];
 
@@ -190,7 +194,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
             },
             child: Text('搜索'),
           ),
-          Text(_inputTipList.join("\n")),
+          Expanded(child: ScrollableText(_inputTipList.join("\n"))),
         ],
       ),
     );
