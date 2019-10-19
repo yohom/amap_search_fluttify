@@ -1,13 +1,11 @@
 import 'dart:typed_data';
 
-import 'package:amap_search_fluttify/src/ios/ios.export.dart';
-import 'package:amap_search_fluttify/src/android/android.export.dart';
+import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
+import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Object with android_os_Parcelable {
-  static final _channel = MethodChannel('me.yohom/amap_search_fluttify');
-
   // 生成getters
   
 
@@ -20,7 +18,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])');
   
     // 调用原生方法
-    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getFromAndTo', {"refId": refId});
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getFromAndTo', {"refId": refId});
   
   
     // 接受原生回调
@@ -39,7 +37,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])');
   
     // 调用原生方法
-    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getMode', {"refId": refId});
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getMode', {"refId": refId});
   
   
     // 接受原生回调
@@ -58,7 +56,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])');
   
     // 调用原生方法
-    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getCity', {"refId": refId});
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getCity', {"refId": refId});
   
   
     // 接受原生回调
@@ -77,7 +75,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])');
   
     // 调用原生方法
-    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getNightFlag', {"refId": refId});
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getNightFlag', {"refId": refId});
   
   
     // 接受原生回调
@@ -96,7 +94,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])');
   
     // 调用原生方法
-    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getCityd', {"refId": refId});
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getCityd', {"refId": refId});
   
   
     // 接受原生回调
@@ -115,7 +113,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\'var1\':$var1])');
   
     // 调用原生方法
-    final result = await _channel.invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::setCityd', {"var1": var1, "refId": refId});
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::setCityd', {"var1": var1, "refId": refId});
   
   
     // 接受原生回调
