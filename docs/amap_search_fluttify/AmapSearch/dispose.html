@@ -71,7 +71,6 @@
       <li class="section-title"><a href="amap_search_fluttify/AmapSearch-class.html#static-methods">Static methods</a></li>
       <li><a href="amap_search_fluttify/AmapSearch/dispose.html">dispose</a></li>
       <li><a href="amap_search_fluttify/AmapSearch/fetchInputTips.html">fetchInputTips</a></li>
-      <li><a href="amap_search_fluttify/AmapSearch/init.html">init</a></li>
       <li><a href="amap_search_fluttify/AmapSearch/searchAround.html">searchAround</a></li>
       <li><a href="amap_search_fluttify/AmapSearch/searchBusRoute.html">searchBusRoute</a></li>
       <li><a href="amap_search_fluttify/AmapSearch/searchBusStation.html">searchBusStation</a></li>
@@ -104,7 +103,7 @@
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">static void dispose() {
   kNativeObjectPool
-      .where((it) =&gt; it.runtimeType != AMapServices) &#47;&#47; AMapServices类不释放
+&#47;&#47;        .where((it) =&gt; it.runtimeType != AMapServices) &#47;&#47; AMapServices类不释放
       .forEach(release);
   if (_iosSearch != null) release(_iosSearch);
   if (_androidPoiSearch != null) release(_androidPoiSearch);
@@ -126,7 +125,7 @@
 
 <footer>
   <span class="no-break">
-    amap_search_fluttify 0.1.1+1
+    amap_search_fluttify 0.2.0
   </span>
 
   
