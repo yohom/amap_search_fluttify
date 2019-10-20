@@ -4,19 +4,17 @@ packages:
   amap_core_fluttify:
     dependency: transitive
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "5fe8dcfd4d27bc5d7f8163cf77b4abcc901b5487"
-      url: "https://github.com/fluttify-project/amap_core_fluttify.git"
-    source: git
-    version: "0.0.1"
+      name: amap_core_fluttify
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   amap_search_fluttify:
     dependency: "direct dev"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.1.1+1"
+    version: "0.2.0"
   args:
     dependency: transitive
     description:
