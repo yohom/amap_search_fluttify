@@ -1,6 +1,6 @@
 name: amap_search_fluttify
 description: A `Amap` search component, based on `fluttify` engine.
-version: 0.1.1+1
+version: 0.2.0
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_search_fluttify
 
@@ -11,9 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   permission_handler: ^3.2.2
-  amap_core_fluttify:
-    git:
-      url: https://github.com/fluttify-project/amap_core_fluttify.git
+  amap_core_fluttify: ^0.0.2
 
 dev_dependencies:
   flutter_test:
