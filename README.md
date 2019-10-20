@@ -20,6 +20,9 @@ import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 
 使用:
 ```dart
+/// !重要: 通过AmapSearchDisposeMixin释放native端的对象, 否则native端会内存泄漏!
+class _KeywordPoiScreenState extends State<KeywordPoiScreen> with AmapSearchDisposeMixin {}
+
 /// 搜索关键字poi
 final poiList = await AmapSearch.searchKeyword(
                 _keywordController.text,
