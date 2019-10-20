@@ -1,11 +1,24 @@
-# amap_search_fluttify
+# 高德地图 `搜索`组件
 
 [![pub package](https://img.shields.io/pub/v/amap_search_fluttify.svg)](https://pub.Flutter-io.cn/packages/amap_search_fluttify)
 [![Codemagic build status](https://api.codemagic.io/apps/5daae84a813e331c1ca0999e/5daae84a813e331c1ca0999d/status_badge.svg)](https://codemagic.io/apps/5daae84a813e331c1ca0999e/5daae84a813e331c1ca0999d/latest_build)
 
-高德地图`搜索`组件. Dart接口基于[fluttify](https://github.com/yohom/fluttify-core-example)引擎生成. dartdoc[接口文档](https://fluttify-project.github.io/amap_search_fluttify/).
+高德地图`搜索`组件. Dart接口基于[Fluttify](https://github.com/yohom/fluttify-core-example)引擎生成. [接口文档](https://fluttify-project.github.io/amap_search_fluttify/).
 
-主接口类`AmapSearch`:
+安装: 
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  amap_search_fluttify: ^x.x.x
+```
+
+导入:
+```dart
+import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+```
+
+使用:
 ```dart
 /// 搜索关键字poi
 final poiList = await AmapSearch.searchKeyword(
@@ -103,7 +116,7 @@ final routeResult = await AmapSearch.searchWalkRoute(
 <img src="./other/1557492318.jpg" height="300">  <img src="./other/WechatIMG111.jpeg" height="300">
 
 ## LICENSE
-> Copyright 2018 yohom
+> Copyright 2019 yohom
 >   
 > Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
