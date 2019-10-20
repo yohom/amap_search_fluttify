@@ -939,8 +939,8 @@ class AmapSearch {
   /// 释放原生端对应的资源, 除了[AMapServices]
   static void dispose() {
     kNativeObjectPool
-//        .where((it) => it.runtimeType != AMapServices) // AMapServices类不释放
-        .forEach(release);
+      ..forEach(release)
+      ..clear();
     if (_iosSearch != null) release(_iosSearch);
     if (_androidPoiSearch != null) release(_androidPoiSearch);
     if (_androidInputTip != null) release(_androidInputTip);
