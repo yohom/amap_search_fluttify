@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
   permission_handler: ^3.2.2
+  amap_core_fluttify:
+    git:
+      url: https://github.com/fluttify-project/amap_core_fluttify.git
 
 dev_dependencies:
   flutter_test:

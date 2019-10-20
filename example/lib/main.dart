@@ -15,7 +15,7 @@ import 'widgets/function_item.widget.dart';
 import 'widgets/todo.screen.dart';
 
 void main() async {
-  await AmapSearch.init('f583e0d5b70400167993615c3adc3ced');
+  await AmapCore.init('f583e0d5b70400167993615c3adc3ced');
 
   runApp(MyApp());
 }
