@@ -2,11 +2,12 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/utils.g.dart';
 
-mixin ToFutureString {
+mixin _ToFutureString {
   Future<String> toFutureString();
 }
 
-class Poi with ToFutureString {
+/// 兴趣点 model
+class Poi with _ToFutureString {
   Poi.android(this._androidModel) : _iosModel = null;
 
   Poi.ios(this._iosModel) : _androidModel = null;
@@ -76,7 +77,8 @@ class Poi with ToFutureString {
   }
 }
 
-class LatLng with ToFutureString {
+/// 经纬度 model
+class LatLng with _ToFutureString {
   LatLng(this.latitude, this.longitude)
       : _androidModel = null,
         _iosModel = null;
@@ -122,7 +124,8 @@ class LatLng with ToFutureString {
   }
 }
 
-class InputTip with ToFutureString {
+/// 输入提示 model
+class InputTip with _ToFutureString {
   InputTip.android(this._androidModel) : _iosModel = null;
 
   InputTip.ios(this._iosModel) : _androidModel = null;
@@ -164,7 +167,8 @@ class InputTip with ToFutureString {
   }
 }
 
-class Geocode with ToFutureString {
+/// 地理编码 model
+class Geocode with _ToFutureString {
   Geocode.android(this._androidModel) : _iosModel = null;
 
   Geocode.ios(this._iosModel) : _androidModel = null;
@@ -186,7 +190,8 @@ class Geocode with ToFutureString {
   }
 }
 
-class ReGeocode with ToFutureString {
+/// 逆地理编码 model
+class ReGeocode with _ToFutureString {
   ReGeocode.android(this._androidModel) : _iosModel = null;
 
   ReGeocode.ios(this._iosModel) : _androidModel = null;
@@ -255,7 +260,8 @@ class ReGeocode with ToFutureString {
   }
 }
 
-class DriveRouteResult with ToFutureString {
+/// 驾车路径规划 model
+class DriveRouteResult with _ToFutureString {
   DriveRouteResult.android(this._androidModel);
 
   DriveRouteResult.ios(this._iosModel);
@@ -291,7 +297,8 @@ class DriveRouteResult with ToFutureString {
   }
 }
 
-class WalkRouteResult with ToFutureString {
+/// 行走路径规划 model
+class WalkRouteResult with _ToFutureString {
   WalkRouteResult.android(this._androidModel);
 
   WalkRouteResult.ios(this._iosModel);
@@ -320,7 +327,8 @@ class WalkRouteResult with ToFutureString {
   }
 }
 
-class RideRouteResult with ToFutureString {
+/// 骑行路径规划 model
+class RideRouteResult with _ToFutureString {
   RideRouteResult.android(this._androidModel);
 
   RideRouteResult.ios(this._iosModel);
@@ -349,7 +357,8 @@ class RideRouteResult with ToFutureString {
   }
 }
 
-class BusRouteResult with ToFutureString {
+/// 公交路径规划 model
+class BusRouteResult with _ToFutureString {
   BusRouteResult.android(this._androidModel);
 
   BusRouteResult.ios(this._iosModel);
@@ -378,7 +387,8 @@ class BusRouteResult with ToFutureString {
   }
 }
 
-class DrivePath with ToFutureString {
+/// 驾车路径 model
+class DrivePath with _ToFutureString {
   DrivePath.android(this._androidModel);
 
   DrivePath.ios(this._iosModel);
@@ -404,7 +414,8 @@ class DrivePath with ToFutureString {
   }
 }
 
-class WalkPath with ToFutureString {
+/// 行走路径 model
+class WalkPath with _ToFutureString {
   WalkPath.android(this._androidModel);
 
   WalkPath.ios(this._iosModel);
@@ -430,7 +441,8 @@ class WalkPath with ToFutureString {
   }
 }
 
-class RidePath with ToFutureString {
+/// 骑行路径 model
+class RidePath with _ToFutureString {
   RidePath.android(this._androidModel);
 
   RidePath.ios(this._iosModel);
@@ -456,7 +468,8 @@ class RidePath with ToFutureString {
   }
 }
 
-class BusPath with ToFutureString {
+/// 公交路径 model
+class BusPath with _ToFutureString {
   BusPath.android(this._androidModel);
 
   BusPath.ios(this._iosModel);
@@ -482,7 +495,8 @@ class BusPath with ToFutureString {
   }
 }
 
-class DriveStep with ToFutureString {
+/// 驾车步骤 model
+class DriveStep with _ToFutureString {
   DriveStep.android(this._androidModel);
 
   DriveStep.ios(this._iosModel);
@@ -591,7 +605,8 @@ class DriveStep with ToFutureString {
   }
 }
 
-class WalkStep with ToFutureString {
+/// 行走步骤 model
+class WalkStep with _ToFutureString {
   WalkStep.android(this._androidModel);
 
   WalkStep.ios(this._iosModel);
@@ -670,7 +685,8 @@ class WalkStep with ToFutureString {
   }
 }
 
-class RideStep with ToFutureString {
+/// 骑行步骤 model
+class RideStep with _ToFutureString {
   RideStep.android(this._androidModel);
 
   RideStep.ios(this._iosModel);
@@ -749,7 +765,8 @@ class RideStep with ToFutureString {
   }
 }
 
-class BusStep with ToFutureString {
+/// 公交步骤 model
+class BusStep with _ToFutureString {
   BusStep.android(this._androidModel);
 
   BusStep.ios(this._iosModel);
@@ -823,7 +840,8 @@ class BusStep with ToFutureString {
   }
 }
 
-class BusWalk with ToFutureString {
+/// 驾车步行 model
+class BusWalk with _ToFutureString {
   BusWalk.android(this._androidModel);
 
   BusWalk.ios(this._iosModel);
@@ -852,7 +870,8 @@ class BusWalk with ToFutureString {
   }
 }
 
-class BusLine with ToFutureString {
+/// 公交路线 model
+class BusLine with _ToFutureString {
   BusLine.android(this._androidModel);
 
   BusLine.ios(this._iosModel);
@@ -908,7 +927,8 @@ class BusLine with ToFutureString {
   }
 }
 
-class BusEntrance with ToFutureString {
+/// 公交入口 model
+class BusEntrance with _ToFutureString {
   BusEntrance.android(this._androidModel);
 
   BusEntrance.ios(this._iosModelLocation, this._iosModelName);
@@ -938,7 +958,8 @@ class BusEntrance with ToFutureString {
   }
 }
 
-class BusExit with ToFutureString {
+/// 公交出口 model
+class BusExit with _ToFutureString {
   BusExit.android(this._androidModel);
 
   BusExit.ios(this._iosModelLocation, this._iosModelName);
@@ -968,8 +989,8 @@ class BusExit with ToFutureString {
   }
 }
 
-// todo
-class BusRailway with ToFutureString {
+/// todo 公交地铁 model
+class BusRailway with _ToFutureString {
   BusRailway.android(this._androidModel);
 
   BusRailway.ios(this._iosModel);
@@ -983,8 +1004,8 @@ class BusRailway with ToFutureString {
   }
 }
 
-// todo
-class BusTaxi with ToFutureString {
+/// todo 公交出租车 model
+class BusTaxi with _ToFutureString {
   BusTaxi.android(this._androidModel);
 
   BusTaxi.ios(this._iosModel);
@@ -998,7 +1019,8 @@ class BusTaxi with ToFutureString {
   }
 }
 
-class TMC with ToFutureString {
+/// 路况 model
+class TMC with _ToFutureString {
   TMC.android(this._androidModel) : _iosModel = null;
 
   TMC.ios(this._iosModel) : _androidModel = null;
@@ -1042,7 +1064,8 @@ class TMC with ToFutureString {
   }
 }
 
-class BusStation with ToFutureString {
+/// 公交站列表 model
+class BusStation with _ToFutureString {
   BusStation.android(this._androidModel);
 
   BusStation.ios(this._iosModel);
@@ -1077,7 +1100,8 @@ class BusStation with ToFutureString {
   }
 }
 
-class BusStationItem with ToFutureString {
+/// 公交站 model
+class BusStationItem with _ToFutureString {
   BusStationItem.android(this._androidModel);
 
   BusStationItem.ios(this._iosModel);
@@ -1113,7 +1137,8 @@ class BusStationItem with ToFutureString {
   }
 }
 
-class District with ToFutureString {
+/// 地区列表 model
+class District with _ToFutureString {
   District.android(this._androidModel);
 
   District.ios(this._iosModel);
@@ -1144,7 +1169,8 @@ class District with ToFutureString {
   }
 }
 
-class DistrictItem with ToFutureString {
+/// 地区 model
+class DistrictItem with _ToFutureString {
   DistrictItem.android(this._androidModel);
 
   DistrictItem.ios(this._iosModel);
@@ -1187,8 +1213,8 @@ class DistrictItem with ToFutureString {
   }
 }
 
-// todo
-class Weather with ToFutureString {
+/// todo 天气 model
+class Weather with _ToFutureString {
   Weather.android(this._androidModel);
 
   Weather.ios(this._iosModel);
@@ -1202,7 +1228,7 @@ class Weather with ToFutureString {
   }
 }
 
-Future<List<String>> _expandToString(Future<List<ToFutureString>> source) {
+Future<List<String>> _expandToString(Future<List<_ToFutureString>> source) {
   return source
       .asStream()
       .asyncExpand((it) => Stream.fromIterable(it))
@@ -1210,6 +1236,6 @@ Future<List<String>> _expandToString(Future<List<ToFutureString>> source) {
       .toList();
 }
 
-Future<String> _toFutureString(Future<ToFutureString> source) async {
+Future<String> _toFutureString(Future<_ToFutureString> source) async {
   return (await source)?.toFutureString() ?? '';
 }
