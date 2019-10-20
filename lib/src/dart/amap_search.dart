@@ -30,20 +30,6 @@ class AmapSearch {
   static com_amap_api_services_district_DistrictSearch _androidDistrictSearch;
   static com_amap_api_services_weather_WeatherSearch _androidWeatherSearch;
 
-  /// 设置ios端的key, android端需要在manifest里面设置, 无法通过代码设置
-  static Future init(String iosKey) async {
-    return platform(
-      android: (pool) async {
-        print('android端需要在Manifest里面设置');
-      },
-      ios: (pool) async {
-        final service = await AMapServices.sharedServices();
-        await service.set_apiKey(iosKey);
-        await service.set_enableHTTPS(true);
-      },
-    );
-  }
-
   /// 关键字搜索poi
   ///
   /// 在城市[city]搜索关键字[keyword]的poi
@@ -953,7 +939,7 @@ class AmapSearch {
   /// 释放原生端对应的资源, 除了[AMapServices]
   static void dispose() {
     kNativeObjectPool
-        .where((it) => it.runtimeType != AMapServices) // AMapServices类不释放
+//        .where((it) => it.runtimeType != AMapServices) // AMapServices类不释放
         .forEach(release);
     if (_iosSearch != null) release(_iosSearch);
     if (_androidPoiSearch != null) release(_androidPoiSearch);
