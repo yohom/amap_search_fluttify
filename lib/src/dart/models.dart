@@ -22,6 +22,14 @@ class Poi with _ToFutureString {
     );
   }
 
+  Future<LatLng> get latLng {
+    return platform(
+      android: (pool) async =>
+          LatLng.android(await _androidModel.getLatLonPoint()),
+      ios: (pool) async => LatLng.ios(await _iosModel.get_location()),
+    );
+  }
+
   Future<String> get cityName {
     return platform(
       android: (pool) => _androidModel.getCityName(),
@@ -73,7 +81,7 @@ class Poi with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'Poi{title: ${await title}}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, distance: ${await distance}';
+    return 'Poi{title: ${await title}, latLng: ${await latLng}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, distance: ${await distance}';
   }
 }
 
