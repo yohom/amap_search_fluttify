@@ -71,13 +71,15 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
               );
 
               Observable.fromIterable(poiList)
-                  .asyncMap((it) => it.title)
+                  .asyncMap((it) async =>
+                      (await it.title) +
+                      await ((await it.latLng).toFutureString()))
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
             },
             child: Text('搜索'),
           ),
-          Text(_poiTitleList.join("\n")),
+          Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
         ],
       ),
     );
