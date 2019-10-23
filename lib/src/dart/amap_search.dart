@@ -95,6 +95,7 @@ class AmapSearch {
     String keyword = '',
     String city = '',
     String type = '',
+    int radius = 1000,
   }) {
     // 会在listener中关闭
     // ignore: close_sinks
@@ -122,7 +123,7 @@ class AmapSearch {
         // 创建边界
         final bound = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int(
-                centerLatLng, 1000);
+                centerLatLng, radius);
         await _androidPoiSearch.setBound(bound);
         // 设置搜索类型
 
@@ -156,6 +157,8 @@ class AmapSearch {
         await location.set_latitude(center.latitude);
         await location.set_longitude(center.longitude);
         await request.set_location(location);
+        // 设置半径
+        await request.set_radius(radius);
 
         // 开始搜索
         await _iosSearch.AMapPOIAroundSearch(request);
