@@ -95,6 +95,7 @@ class AroundPoiScreen extends StatefulWidget {
 class _AroundPoiScreenState extends State<AroundPoiScreen>
     with AmapSearchDisposeMixin {
   final _keywordController = TextEditingController();
+  final _typeController = TextEditingController();
   final _latController = TextEditingController(text: '29.08');
   final _lngController = TextEditingController(text: '119.65');
 
@@ -111,6 +112,10 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
           TextFormField(
             controller: _keywordController,
             decoration: InputDecoration(hintText: '输入关键字'),
+          ),
+          TextFormField(
+            controller: _typeController,
+            decoration: InputDecoration(hintText: '输入类别'),
           ),
           DecoratedRow(
             children: <Widget>[
@@ -137,16 +142,19 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
                   double.tryParse(_lngController.text) ?? 119.65,
                 ),
                 keyword: _keywordController.text,
+                type: _typeController.text,
               );
 
               Observable.fromIterable(poiList)
-                  .asyncMap((it) => it.title)
+                  .asyncMap((it) async =>
+                      (await it.title) +
+                      await ((await it.latLng).toFutureString()))
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
             },
             child: Text('搜索'),
           ),
-          Text(_poiTitleList.join("\n")),
+          Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
         ],
       ),
     );
