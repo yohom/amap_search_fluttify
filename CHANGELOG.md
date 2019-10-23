@@ -1,3 +1,6 @@
+## 0.2.5
+- enhancement: searchAround增加radius参数
+
 ## 0.2.4
 - enhancement: searchAround增加type参数
 
