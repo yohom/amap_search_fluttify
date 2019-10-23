@@ -15,6 +15,7 @@ class Poi with _ToFutureString {
   final com_amap_api_services_core_PoiItem _androidModel;
   final AMapPOI _iosModel;
 
+  /// 地址
   Future<String> get address {
     return platform(
       android: (pool) => _androidModel.getSnippet(),
@@ -22,6 +23,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  ///标题
   Future<String> get title {
     return platform(
       android: (pool) => _androidModel.getTitle(),
@@ -29,6 +31,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 经纬度
   Future<LatLng> get latLng {
     return platform(
       android: (pool) async =>
@@ -37,6 +40,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 城市名
   Future<String> get cityName {
     return platform(
       android: (pool) => _androidModel.getCityName(),
@@ -44,6 +48,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 城市编码
   Future<String> get cityCode {
     return platform(
       android: (pool) => _androidModel.getCityCode(),
@@ -51,6 +56,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 省份名称
   Future<String> get provinceName {
     return platform(
       android: (pool) => _androidModel.getProvinceName(),
@@ -58,6 +64,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 省份编码
   Future<String> get provinceCode {
     return platform(
       android: (pool) => _androidModel.getProvinceCode(),
@@ -65,6 +72,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 电话
   Future<String> get tel {
     return platform(
       android: (pool) => _androidModel.getTel(),
@@ -72,6 +80,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 兴趣点id
   Future<String> get poiId {
     return platform(
       android: (pool) => _androidModel.getPoiId(),
@@ -79,6 +88,7 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 距离
   Future<int> get distance {
     return platform(
       android: (pool) => _androidModel.getDistance(),
@@ -111,9 +121,13 @@ class LatLng with _ToFutureString {
   final com_amap_api_services_core_LatLonPoint _androidModel;
   final AMapGeoPoint _iosModel;
 
+  /// 同步纬度
   final double latitude;
+
+  /// 同步经度
   final double longitude;
 
+  /// 异步纬度
   Future<double> get futureLat {
     return platform(
       android: (pool) => _androidModel.getLatitude(),
@@ -121,6 +135,7 @@ class LatLng with _ToFutureString {
     );
   }
 
+  /// 异步经度
   Future<double> get futureLng {
     return platform(
       android: (pool) => _androidModel.getLongitude(),
@@ -148,6 +163,7 @@ class InputTip with _ToFutureString {
   final com_amap_api_services_help_Tip _androidModel;
   final AMapTip _iosModel;
 
+  /// 提示名称
   Future<String> get name {
     return platform(
       android: (pool) => _androidModel.getName(),
@@ -155,6 +171,7 @@ class InputTip with _ToFutureString {
     );
   }
 
+  /// 兴趣点id
   Future<String> get poiId {
     return platform(
       android: (pool) => _androidModel.getPoiID(),
@@ -162,6 +179,7 @@ class InputTip with _ToFutureString {
     );
   }
 
+  /// 地址
   Future<String> get address {
     return platform(
       android: (pool) => _androidModel.getAddress(),
@@ -169,6 +187,7 @@ class InputTip with _ToFutureString {
     );
   }
 
+  /// 区域
   Future<String> get district {
     return platform(
       android: (pool) => _androidModel.getDistrict(),
@@ -191,6 +210,7 @@ class Geocode with _ToFutureString {
   final com_amap_api_services_geocoder_GeocodeAddress _androidModel;
   final AMapGeocode _iosModel;
 
+  /// 经纬度
   Future<LatLng> get latLng {
     return platform(
       android: (pool) =>
@@ -214,6 +234,7 @@ class ReGeocode with _ToFutureString {
   final com_amap_api_services_geocoder_RegeocodeAddress _androidModel;
   final AMapReGeocode _iosModel;
 
+  /// 省份名称
   Future<String> get provinceName {
     return platform(
       android: (pool) => _androidModel.getProvince(),
@@ -222,6 +243,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 城市名称
   Future<String> get cityName {
     return platform(
       android: (pool) => _androidModel.getCity(),
@@ -230,6 +252,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 城市代码
   Future<String> get cityCode {
     return platform(
       android: (pool) => _androidModel.getCityCode(),
@@ -238,6 +261,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 区域名称
   Future<String> get districtName {
     return platform(
       android: (pool) => _androidModel.getDistrict(),
@@ -246,6 +270,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 建筑物
   Future<String> get building {
     return platform(
       android: (pool) => _androidModel.getBuilding(),
@@ -254,6 +279,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 国家
   Future<String> get country {
     return platform(
       android: (pool) => _androidModel.getCountry(),
@@ -262,6 +288,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 地址全称
   Future<String> get formatAddress {
     return platform(
       android: (pool) => _androidModel.getFormatAddress(),
@@ -284,6 +311,7 @@ class DriveRouteResult with _ToFutureString {
   com_amap_api_services_route_DriveRouteResult _androidModel;
   AMapRoute _iosModel;
 
+  /// 打的费用
   Future<double> get taxiCost async {
     return platform(
       android: (pool) => _androidModel.getTaxiCost(),
@@ -291,6 +319,7 @@ class DriveRouteResult with _ToFutureString {
     );
   }
 
+  /// 驾驶路径列表
   Future<List<DrivePath>> get drivePathList {
     return platform(
       android: (pool) async {
@@ -321,6 +350,7 @@ class WalkRouteResult with _ToFutureString {
   com_amap_api_services_route_WalkRouteResult _androidModel;
   AMapRoute _iosModel;
 
+  /// 步行路径列表
   Future<List<WalkPath>> get walkPathList {
     return platform(
       android: (pool) async {
@@ -351,6 +381,7 @@ class RideRouteResult with _ToFutureString {
   com_amap_api_services_route_RideRouteResult _androidModel;
   AMapRoute _iosModel;
 
+  /// 骑行路径列表
   Future<List<RidePath>> get ridePathList {
     return platform(
       android: (pool) async {
@@ -381,7 +412,8 @@ class BusRouteResult with _ToFutureString {
   com_amap_api_services_route_BusRouteResult _androidModel;
   AMapRoute _iosModel;
 
-  Future<List<BusPath>> get walkPathList {
+  /// 公交路径列表
+  Future<List<BusPath>> get busPathList {
     return platform(
       android: (pool) async {
         return (await _androidModel.getPaths())
@@ -398,7 +430,7 @@ class BusRouteResult with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'WalkRouteResult{walkPathList: ${await _expandToString(walkPathList)}';
+    return 'WalkRouteResult{walkPathList: ${await _expandToString(busPathList)}';
   }
 }
 
@@ -411,6 +443,7 @@ class DrivePath with _ToFutureString {
   com_amap_api_services_route_DrivePath _androidModel;
   AMapPath _iosModel;
 
+  /// 驾驶步骤列表
   Future<List<DriveStep>> get driveStepList {
     return platform(android: (pool) async {
       return (await _androidModel.getSteps())
@@ -438,6 +471,7 @@ class WalkPath with _ToFutureString {
   com_amap_api_services_route_WalkPath _androidModel;
   AMapPath _iosModel;
 
+  /// 步行步骤列表
   Future<List<WalkStep>> get walkStepList {
     return platform(android: (pool) async {
       return (await _androidModel.getSteps())
@@ -465,7 +499,8 @@ class RidePath with _ToFutureString {
   com_amap_api_services_route_RidePath _androidModel;
   AMapPath _iosModel;
 
-  Future<List<RideStep>> get walkStepList {
+  /// 骑行步骤列表
+  Future<List<RideStep>> get rideStepList {
     return platform(android: (pool) async {
       return (await _androidModel.getSteps())
           .map((it) => RideStep.android(it))
@@ -479,7 +514,7 @@ class RidePath with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'WalkPath{walkStepList: ${await _expandToString(walkStepList)}}';
+    return 'WalkPath{walkStepList: ${await _expandToString(rideStepList)}}';
   }
 }
 
@@ -492,6 +527,7 @@ class BusPath with _ToFutureString {
   com_amap_api_services_route_BusPath _androidModel;
   AMapTransit _iosModel;
 
+  /// 公交步骤列表
   Future<List<BusStep>> get busStepList {
     return platform(android: (pool) async {
       return (await _androidModel.getSteps())
@@ -519,6 +555,7 @@ class DriveStep with _ToFutureString {
   com_amap_api_services_route_DriveStep _androidModel;
   AMapStep _iosModel;
 
+  /// 指令
   Future<String> get instruction {
     return platform(
       android: (pool) => _androidModel.getInstruction(),
@@ -526,6 +563,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 方向
   Future<String> get orientation {
     return platform(
       android: (pool) => _androidModel.getOrientation(),
@@ -533,6 +571,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 道路
   Future<String> get road {
     return platform(
       android: (pool) => _androidModel.getRoad(),
@@ -540,6 +579,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 距离
   Future<double> get distance {
     return platform(
       android: (pool) => _androidModel.getDistance(),
@@ -547,6 +587,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 通行费
   Future<double> get tolls {
     return platform(
       android: (pool) => _androidModel.getTolls(),
@@ -554,6 +595,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 通行距离
   Future<double> get tollDistance {
     return platform(
       android: (pool) => _androidModel.getTollDistance(),
@@ -561,6 +603,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 通行道路
   Future<String> get tollRoad {
     return platform(
       android: (pool) => _androidModel.getTollRoad(),
@@ -568,6 +611,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 时间
   Future<double> get duration {
     return platform(
       android: (pool) => _androidModel.getDuration(),
@@ -575,6 +619,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 多边形
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async => (await _androidModel.getPolyline())
@@ -591,6 +636,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 动作
   Future<String> get action {
     return platform(
       android: (pool) => _androidModel.getAction(),
@@ -598,6 +644,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 辅助动作
   Future<String> get assistantAction {
     return platform(
       android: (pool) => _androidModel.getAssistantAction(),
@@ -605,6 +652,7 @@ class DriveStep with _ToFutureString {
     );
   }
 
+  /// 交通状况列表
   Future<List<TMC>> get tmsList {
     return platform(
       android: (pool) async =>
@@ -629,6 +677,7 @@ class WalkStep with _ToFutureString {
   com_amap_api_services_route_WalkStep _androidModel;
   AMapStep _iosModel;
 
+  /// 指令
   Future<String> get instruction {
     return platform(
       android: (pool) => _androidModel.getInstruction(),
@@ -636,6 +685,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 方向
   Future<String> get orientation {
     return platform(
       android: (pool) => _androidModel.getOrientation(),
@@ -643,6 +693,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 道路
   Future<String> get road {
     return platform(
       android: (pool) => _androidModel.getRoad(),
@@ -650,6 +701,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 距离
   Future<double> get distance {
     return platform(
       android: (pool) => _androidModel.getDistance(),
@@ -657,6 +709,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 时间
   Future<double> get duration {
     return platform(
       android: (pool) => _androidModel.getDuration(),
@@ -664,6 +717,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 路线
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async => (await _androidModel.getPolyline())
@@ -680,6 +734,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 动作
   Future<String> get action {
     return platform(
       android: (pool) => _androidModel.getAction(),
@@ -687,6 +742,7 @@ class WalkStep with _ToFutureString {
     );
   }
 
+  /// 辅助动作
   Future<String> get assistantAction {
     return platform(
       android: (pool) => _androidModel.getAssistantAction(),
@@ -709,6 +765,7 @@ class RideStep with _ToFutureString {
   com_amap_api_services_route_RideStep _androidModel;
   AMapStep _iosModel;
 
+  /// 指令
   Future<String> get instruction {
     return platform(
       android: (pool) => _androidModel.getInstruction(),
@@ -716,6 +773,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 方向
   Future<String> get orientation {
     return platform(
       android: (pool) => _androidModel.getOrientation(),
@@ -723,6 +781,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 道路
   Future<String> get road {
     return platform(
       android: (pool) => _androidModel.getRoad(),
@@ -730,6 +789,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 距离
   Future<double> get distance {
     return platform(
       android: (pool) => _androidModel.getDistance(),
@@ -737,6 +797,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 时间
   Future<double> get duration {
     return platform(
       android: (pool) => _androidModel.getDuration(),
@@ -744,6 +805,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 路线
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async => (await _androidModel.getPolyline())
@@ -760,6 +822,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 动作
   Future<String> get action {
     return platform(
       android: (pool) => _androidModel.getAction(),
@@ -767,6 +830,7 @@ class RideStep with _ToFutureString {
     );
   }
 
+  /// 辅助动作
   Future<String> get assistantAction {
     return platform(
       android: (pool) => _androidModel.getAssistantAction(),
@@ -789,6 +853,7 @@ class BusStep with _ToFutureString {
   com_amap_api_services_route_BusStep _androidModel;
   AMapSegment _iosModel;
 
+  /// 步行
   Future<BusWalk> get walk {
     return platform(
       android: (pool) async => BusWalk.android(await _androidModel.getWalk()),
@@ -796,6 +861,7 @@ class BusStep with _ToFutureString {
     );
   }
 
+  /// 路线
   Future<List<BusLine>> get lines {
     return platform(
       android: (pool) => _androidModel
@@ -813,6 +879,7 @@ class BusStep with _ToFutureString {
     );
   }
 
+  /// 入口
   Future<BusEntrance> get entrance {
     return platform(
       android: (pool) async =>
@@ -824,6 +891,7 @@ class BusStep with _ToFutureString {
     );
   }
 
+  /// 出口
   Future<BusExit> get exit {
     return platform(
       android: (pool) async => BusExit.android(await _androidModel.getExit()),
@@ -834,6 +902,7 @@ class BusStep with _ToFutureString {
     );
   }
 
+  /// 地铁
   Future<BusRailway> get railway {
     return platform(
       android: (pool) async =>
@@ -842,6 +911,7 @@ class BusStep with _ToFutureString {
     );
   }
 
+  /// 打的
   Future<BusTaxi> get taxi {
     return platform(
       android: (pool) async => BusTaxi.android(await _androidModel.getTaxi()),
@@ -864,6 +934,7 @@ class BusWalk with _ToFutureString {
   com_amap_api_services_route_RouteBusWalkItem _androidModel;
   AMapWalking _iosModel;
 
+  /// 起点
   Future<LatLng> get from {
     return platform(
       android: (pool) async => LatLng.android(await _androidModel.getOrigin()),
@@ -871,6 +942,7 @@ class BusWalk with _ToFutureString {
     );
   }
 
+  /// 终点
   Future<LatLng> get to {
     return platform(
       android: (pool) async =>
@@ -894,6 +966,7 @@ class BusLine with _ToFutureString {
   com_amap_api_services_route_RouteBusLineItem _androidModel;
   AMapBusLine _iosModel;
 
+  /// 距离
   Future<double> get distance {
     return platform(
       android: (pool) => _androidModel.getDistance(),
@@ -901,6 +974,7 @@ class BusLine with _ToFutureString {
     );
   }
 
+  /// 路线名称
   Future<String> get busLineName {
     return platform(
       android: (pool) => _androidModel.getBusLineName(),
@@ -908,6 +982,7 @@ class BusLine with _ToFutureString {
     );
   }
 
+  /// 路线类型
   Future<String> get busLineType {
     return platform(
       android: (pool) => _androidModel.getBusLineType(),
@@ -915,6 +990,7 @@ class BusLine with _ToFutureString {
     );
   }
 
+  /// 城市编码
   Future<String> get cityCode {
     return platform(
       android: (pool) => _androidModel.getCityCode(),
@@ -922,6 +998,7 @@ class BusLine with _ToFutureString {
     );
   }
 
+  /// 总价
   Future<double> get totalPrice {
     return platform(
       android: (pool) => _androidModel.getTotalPrice(),
@@ -929,6 +1006,7 @@ class BusLine with _ToFutureString {
     );
   }
 
+  /// 起步价?
   Future<double> get basicPrice {
     return platform(
       android: (pool) => _androidModel.getBasicPrice(),
@@ -952,6 +1030,7 @@ class BusEntrance with _ToFutureString {
   AMapGeoPoint _iosModelLocation;
   String _iosModelName;
 
+  /// 名称
   Future<String> get name {
     return platform(
       android: (pool) async => _androidModel?.getName(),
@@ -959,6 +1038,7 @@ class BusEntrance with _ToFutureString {
     );
   }
 
+  /// 经纬度
   Future<LatLng> get location {
     return platform(
       android: (pool) async =>
@@ -983,6 +1063,7 @@ class BusExit with _ToFutureString {
   AMapGeoPoint _iosModelLocation;
   String _iosModelName;
 
+  /// 名称
   Future<String> get name {
     return platform(
       android: (pool) => _androidModel?.getName(),
@@ -990,6 +1071,7 @@ class BusExit with _ToFutureString {
     );
   }
 
+  /// 经纬度
   Future<LatLng> get location {
     return platform(
       android: (pool) async =>
@@ -1043,6 +1125,7 @@ class TMC with _ToFutureString {
   final com_amap_api_services_route_TMC _androidModel;
   final AMapTMC _iosModel;
 
+  /// 距离
   Future<int> get distance async {
     return platform(
       android: (pool) => _androidModel.getDistance(),
@@ -1050,6 +1133,7 @@ class TMC with _ToFutureString {
     );
   }
 
+  /// 状态
   Future<String> get status {
     return platform(
       android: (pool) => _androidModel.getStatus(),
@@ -1057,6 +1141,7 @@ class TMC with _ToFutureString {
     );
   }
 
+  /// 路线
   Future<List<LatLng>> get polyline {
     return platform(
       android: (pool) async => (await _androidModel.getPolyline())
@@ -1088,6 +1173,7 @@ class BusStation with _ToFutureString {
   com_amap_api_services_busline_BusStationResult _androidModel;
   AMapBusStopSearchResponse _iosModel;
 
+  /// 公交站列表
   Future<List<BusStationItem>> get busStationList {
     return platform(
       android: (pool) async {
@@ -1124,6 +1210,7 @@ class BusStationItem with _ToFutureString {
   com_amap_api_services_busline_BusStationItem _androidModel;
   AMapBusStop _iosModel;
 
+  /// 名称
   Future<String> get name {
     return platform(
       android: (pool) => _androidModel.getBusStationName(),
@@ -1131,6 +1218,7 @@ class BusStationItem with _ToFutureString {
     );
   }
 
+  /// 公交站id
   Future<String> get id {
     return platform(
       android: (pool) => _androidModel.getBusStationId(),
@@ -1138,6 +1226,7 @@ class BusStationItem with _ToFutureString {
     );
   }
 
+  /// 经纬度
   Future<LatLng> get location {
     return platform(
       android: (pool) =>
@@ -1161,6 +1250,7 @@ class District with _ToFutureString {
   com_amap_api_services_district_DistrictResult _androidModel;
   AMapDistrictSearchResponse _iosModel;
 
+  /// 区域列表
   Future<List<DistrictItem>> get districtList {
     return platform(
       android: (pool) => _androidModel
@@ -1193,6 +1283,7 @@ class DistrictItem with _ToFutureString {
   com_amap_api_services_district_DistrictItem _androidModel;
   AMapDistrict _iosModel;
 
+  /// 名称
   Future<String> get name {
     return platform(
       android: (pool) => _androidModel.getName(),
@@ -1200,6 +1291,7 @@ class DistrictItem with _ToFutureString {
     );
   }
 
+  /// 城市编码
   Future<String> get cityCode {
     return platform(
       android: (pool) => _androidModel.getCitycode(),
@@ -1207,6 +1299,7 @@ class DistrictItem with _ToFutureString {
     );
   }
 
+  /// 邮政编码
   Future<String> get adCode {
     return platform(
       android: (pool) => _androidModel.getAdcode(),
@@ -1214,6 +1307,7 @@ class DistrictItem with _ToFutureString {
     );
   }
 
+  /// 中心点
   Future<LatLng> get center {
     return platform(
       android: (pool) =>
