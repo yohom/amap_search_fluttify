@@ -1,3 +1,6 @@
+## 0.2.4
+- enhancement: searchAround增加type参数
+
 ## 0.2.2
 - Poi加入经纬度信息
 

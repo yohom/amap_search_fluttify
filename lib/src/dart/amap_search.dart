@@ -94,6 +94,7 @@ class AmapSearch {
     LatLng center, {
     String keyword = '',
     String city = '',
+    String type = '',
   }) {
     // 会在listener中关闭
     // ignore: close_sinks
@@ -104,7 +105,7 @@ class AmapSearch {
         // 创建查询对象
         final query = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
-                keyword, '', city);
+                keyword, type, city);
 
         // 获取android上下文
         final context = await ObjectFactory_Android.getandroid_app_Activity();
@@ -123,6 +124,7 @@ class AmapSearch {
             .createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int(
                 centerLatLng, 1000);
         await _androidPoiSearch.setBound(bound);
+        // 设置搜索类型
 
         // 设置回调
         await _androidPoiSearch
@@ -147,6 +149,8 @@ class AmapSearch {
         await request.set_keywords(keyword);
         // 设置城市
         await request.set_city(city);
+        // 设置搜索类别
+        await request.set_types(type);
         // 创建中心点
         final location = await ObjectFactory_iOS.createAMapGeoPoint();
         await location.set_latitude(center.latitude);
