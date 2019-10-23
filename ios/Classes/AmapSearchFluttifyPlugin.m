@@ -7,9 +7,9 @@
 typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, NSDictionary<NSString *, NSObject *> *, FlutterResult);
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
-NSMutableDictionary<NSString*, NSObject*>* STACK_AmapSearchFluttify;
+extern NSMutableDictionary<NSString*, NSObject*>* STACK;
 // Dart端随机存取对象的容器
-NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
+extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
 
 @implementation AmapSearchFluttifyPlugin {
   NSObject <FlutterPluginRegistrar> * _registrar;
@@ -28,7 +28,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchObject* ref = (AMapSearchObject*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchObject* ref = (AMapSearchObject*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription(暂未实现参数打印)", @(refId));
@@ -58,7 +58,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // result
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapGeoPolygon::polygonWithPoints": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -67,7 +67,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
           NSMutableArray<NSArray*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
           for (int i = 0; i < points.count; i++) {
-              NSArray* item = (NSArray*) HEAP_AmapSearchFluttify[[pointsRefArray objectAtIndex:i]];
+              NSArray* item = (NSArray*) HEAP[[pointsRefArray objectAtIndex:i]];
               [points addObject:item];
           }
       
@@ -82,17 +82,17 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // result
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapNearbySearchManagerDelegate::nearbyInfoForUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapNearbySearchManager* manager = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@([args[@"manager"] integerValue])];
+          AMapNearbySearchManager* manager = (AMapNearbySearchManager*) HEAP[@([args[@"manager"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::nearbyInfoForUploading(暂未实现参数打印)", @(refId));
@@ -102,17 +102,17 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // result
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          NSError* error = (NSError*) HEAP_AmapSearchFluttify[@([args[@"error"] integerValue])];
+          NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onNearbyInfoUploadedWithError(暂未实现参数打印)", @(refId));
@@ -127,11 +127,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapNearbySearchManagerDelegate::onUserInfoClearedWithError": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          NSError* error = (NSError*) HEAP_AmapSearchFluttify[@([args[@"error"] integerValue])];
+          NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onUserInfoClearedWithError(暂未实现参数打印)", @(refId));
@@ -158,7 +158,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // result
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapNearbySearchManager::startAutoUploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -167,7 +167,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::startAutoUploadNearbyInfo(暂未实现参数打印)", @(refId));
@@ -185,7 +185,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::stopAutoUploadNearbyInfo(暂未实现参数打印)", @(refId));
@@ -200,11 +200,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapNearbySearchManager::uploadNearbyInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@([args[@"info"] integerValue])];
+          AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[@([args[@"info"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::uploadNearbyInfo(暂未实现参数打印)", @(refId));
@@ -223,7 +223,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::clearUserInfoWithID(暂未实现参数打印)", @(refId));
@@ -241,7 +241,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::init(暂未实现参数打印)", @(refId));
@@ -251,7 +251,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // result
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       @"AMapSearchAPI::cancelAllRequests": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -260,7 +260,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests(暂未实现参数打印)", @(refId));
@@ -275,11 +275,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(暂未实现参数打印)", @(refId));
@@ -294,11 +294,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapPOIKeywordsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(暂未实现参数打印)", @(refId));
@@ -313,11 +313,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(暂未实现参数打印)", @(refId));
@@ -332,11 +332,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(暂未实现参数打印)", @(refId));
@@ -351,11 +351,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapRoutePOISearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(暂未实现参数打印)", @(refId));
@@ -370,11 +370,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapGeocodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(暂未实现参数打印)", @(refId));
@@ -389,11 +389,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapReGoecodeSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(暂未实现参数打印)", @(refId));
@@ -408,11 +408,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapInputTipsSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(暂未实现参数打印)", @(refId));
@@ -427,11 +427,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapBusStopSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(暂未实现参数打印)", @(refId));
@@ -446,11 +446,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapBusLineIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(暂未实现参数打印)", @(refId));
@@ -465,11 +465,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapBusLineNameSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(暂未实现参数打印)", @(refId));
@@ -484,11 +484,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapDistrictSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(暂未实现参数打印)", @(refId));
@@ -503,11 +503,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapDrivingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(暂未实现参数打印)", @(refId));
@@ -522,11 +522,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapWalkingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(暂未实现参数打印)", @(refId));
@@ -541,11 +541,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapTransitRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(暂未实现参数打印)", @(refId));
@@ -560,11 +560,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapRidingRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(暂未实现参数打印)", @(refId));
@@ -579,11 +579,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapTruckRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(暂未实现参数打印)", @(refId));
@@ -598,11 +598,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapFutureRouteSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(暂未实现参数打印)", @(refId));
@@ -617,11 +617,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapWeatherSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(暂未实现参数打印)", @(refId));
@@ -636,11 +636,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapRoadTrafficSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(暂未实现参数打印)", @(refId));
@@ -655,11 +655,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapRoadTrafficCircleSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(暂未实现参数打印)", @(refId));
@@ -674,11 +674,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapDistanceSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(暂未实现参数打印)", @(refId));
@@ -693,11 +693,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapNearbySearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(暂未实现参数打印)", @(refId));
@@ -712,11 +712,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapCloudPOIAroundSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(暂未实现参数打印)", @(refId));
@@ -731,11 +731,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapCloudPOIPolygonSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(暂未实现参数打印)", @(refId));
@@ -750,11 +750,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapCloudPOIIDSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(暂未实现参数打印)", @(refId));
@@ -769,11 +769,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapCloudPOILocalSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(暂未实现参数打印)", @(refId));
@@ -788,11 +788,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapLocationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(暂未实现参数打印)", @(refId));
@@ -807,11 +807,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapPOIShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(暂未实现参数打印)", @(refId));
@@ -826,11 +826,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapRouteShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(暂未实现参数打印)", @(refId));
@@ -845,11 +845,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchAPI::AMapNavigationShareSearch": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(暂未实现参数打印)", @(refId));
@@ -864,13 +864,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onPOISearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapPOISearchBaseRequest* request = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapPOISearchBaseRequest* request = (AMapPOISearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapPOISearchResponse* response = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapPOISearchResponse* response = (AMapPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onPOISearchDone(暂未实现参数打印)", @(refId));
@@ -885,13 +885,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onRoutePOISearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoutePOISearchDone(暂未实现参数打印)", @(refId));
@@ -906,13 +906,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onGeocodeSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onGeocodeSearchDone(暂未实现参数打印)", @(refId));
@@ -927,13 +927,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onReGeocodeSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onReGeocodeSearchDone(暂未实现参数打印)", @(refId));
@@ -948,13 +948,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onInputTipsSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onInputTipsSearchDone(暂未实现参数打印)", @(refId));
@@ -969,13 +969,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onBusStopSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusStopSearchDone(暂未实现参数打印)", @(refId));
@@ -990,13 +990,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onBusLineSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapBusLineBaseSearchRequest* request = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapBusLineBaseSearchRequest* request = (AMapBusLineBaseSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusLineSearchDone(暂未实现参数打印)", @(refId));
@@ -1011,13 +1011,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onDistrictSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistrictSearchDone(暂未实现参数打印)", @(refId));
@@ -1032,13 +1032,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onRouteSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRouteSearchDone(暂未实现参数打印)", @(refId));
@@ -1053,13 +1053,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onFutureRouteSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRouteSearchBaseRequest* request = (AMapRouteSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onFutureRouteSearchDone(暂未实现参数打印)", @(refId));
@@ -1074,13 +1074,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onDistanceSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistanceSearchDone(暂未实现参数打印)", @(refId));
@@ -1095,13 +1095,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onWeatherSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onWeatherSearchDone(暂未实现参数打印)", @(refId));
@@ -1116,13 +1116,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onRoadTrafficSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapRoadTrafficSearchBaseRequest* request = (AMapRoadTrafficSearchBaseRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapRoadTrafficSearchBaseRequest* request = (AMapRoadTrafficSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoadTrafficSearchDone(暂未实现参数打印)", @(refId));
@@ -1137,13 +1137,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onNearbySearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onNearbySearchDone(暂未实现参数打印)", @(refId));
@@ -1158,13 +1158,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onCloudSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapCloudSearchBaseRequest* request = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapCloudSearchBaseRequest* request = (AMapCloudSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onCloudSearchDone(暂未实现参数打印)", @(refId));
@@ -1179,13 +1179,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"AMapSearchDelegate::onShareSearchDoneResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // args
           // ref arg
-          AMapShareSearchBaseRequest* request = (AMapShareSearchBaseRequest*) HEAP_AmapSearchFluttify[@([args[@"request"] integerValue])];
+          AMapShareSearchBaseRequest* request = (AMapShareSearchBaseRequest*) HEAP[@([args[@"request"] integerValue])];
           // ref arg
-          AMapShareSearchResponse* response = (AMapShareSearchResponse*) HEAP_AmapSearchFluttify[@([args[@"response"] integerValue])];
+          AMapShareSearchResponse* response = (AMapShareSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
           NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP_AmapSearchFluttify[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
       
           // print log
           NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onShareSearchDone(暂未实现参数打印)", @(refId));
@@ -1202,7 +1202,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.types;
@@ -1216,7 +1216,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.sortrule;
@@ -1230,7 +1230,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.offset;
@@ -1244,7 +1244,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.page;
@@ -1258,7 +1258,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.building;
@@ -1272,7 +1272,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -1286,7 +1286,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireSubPOIs;
@@ -1300,7 +1300,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -1314,7 +1314,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -1328,7 +1328,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -1342,7 +1342,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.cityLimit;
@@ -1356,13 +1356,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1371,7 +1371,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -1385,13 +1385,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1400,7 +1400,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.radius;
@@ -1414,7 +1414,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -1428,7 +1428,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -1442,13 +1442,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPolygon* result = ref.polygon;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1457,7 +1457,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -1471,13 +1471,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           AMapSuggestion* result = ref.suggestion;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1486,7 +1486,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapPOI*>* result = ref.pois;
@@ -1496,7 +1496,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -1507,13 +1507,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.origin;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1522,13 +1522,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destination;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1537,7 +1537,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapRoutePOISearchType result = ref.searchType;
@@ -1551,7 +1551,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -1565,7 +1565,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.range;
@@ -1579,7 +1579,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.polylineStr;
@@ -1593,7 +1593,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeoPoint*>* result = ref.polyline;
@@ -1603,7 +1603,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -1614,7 +1614,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -1628,7 +1628,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapRoutePOI*>* result = ref.pois;
@@ -1638,7 +1638,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -1649,7 +1649,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -1663,7 +1663,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -1677,7 +1677,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.types;
@@ -1691,7 +1691,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.cityLimit;
@@ -1705,7 +1705,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.location;
@@ -1719,7 +1719,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -1733,7 +1733,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapTip*>* result = ref.tips;
@@ -1743,7 +1743,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -1754,7 +1754,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.address;
@@ -1768,7 +1768,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -1782,7 +1782,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -1796,7 +1796,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeocode*>* result = ref.geocodes;
@@ -1806,7 +1806,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -1817,7 +1817,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -1831,13 +1831,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1846,7 +1846,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.radius;
@@ -1860,7 +1860,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.poitype;
@@ -1874,13 +1874,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           AMapReGeocode* result = ref.regeocode;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1889,7 +1889,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -1903,7 +1903,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -1917,7 +1917,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.offset;
@@ -1931,7 +1931,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.page;
@@ -1945,7 +1945,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -1959,13 +1959,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           AMapSuggestion* result = ref.suggestion;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -1974,7 +1974,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusStop*>* result = ref.busstops;
@@ -1984,7 +1984,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -1995,7 +1995,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -2009,7 +2009,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -2023,7 +2023,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.offset;
@@ -2037,7 +2037,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.page;
@@ -2051,7 +2051,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -2065,7 +2065,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -2079,7 +2079,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -2093,13 +2093,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           AMapSuggestion* result = ref.suggestion;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -2108,7 +2108,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusLine*>* result = ref.buslines;
@@ -2118,7 +2118,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2129,7 +2129,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -2143,7 +2143,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -2157,7 +2157,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.showBusinessArea;
@@ -2171,7 +2171,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -2185,7 +2185,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapDistrict*>* result = ref.districts;
@@ -2195,7 +2195,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2206,13 +2206,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.origin;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -2221,13 +2221,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destination;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -2236,7 +2236,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -2250,7 +2250,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeoPoint*>* result = ref.waypoints;
@@ -2260,7 +2260,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2271,7 +2271,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeoPolygon*>* result = ref.avoidpolygons;
@@ -2281,7 +2281,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2292,7 +2292,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.avoidroad;
@@ -2306,7 +2306,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.originId;
@@ -2320,7 +2320,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationId;
@@ -2334,7 +2334,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.origintype;
@@ -2348,7 +2348,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationtype;
@@ -2362,7 +2362,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -2376,7 +2376,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.plateProvince;
@@ -2390,7 +2390,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.plateNumber;
@@ -2404,7 +2404,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.ferry;
@@ -2418,7 +2418,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.cartype;
@@ -2432,7 +2432,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.multipath;
@@ -2446,7 +2446,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -2460,7 +2460,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -2474,7 +2474,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationCity;
@@ -2488,7 +2488,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.nightflag;
@@ -2502,7 +2502,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -2516,7 +2516,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.type;
@@ -2530,7 +2530,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -2544,13 +2544,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           AMapRoute* result = ref.route;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -2559,7 +2559,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -2573,7 +2573,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeoPoint*>* result = ref.waypoints;
@@ -2583,7 +2583,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2594,7 +2594,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.originId;
@@ -2608,7 +2608,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationId;
@@ -2622,7 +2622,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.origintype;
@@ -2636,7 +2636,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationtype;
@@ -2650,7 +2650,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.plateProvince;
@@ -2664,7 +2664,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.plateNumber;
@@ -2678,7 +2678,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapTruckSizeType result = ref.size;
@@ -2692,7 +2692,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.height;
@@ -2706,7 +2706,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.width;
@@ -2720,7 +2720,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.load;
@@ -2734,7 +2734,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.weight;
@@ -2748,7 +2748,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.axis;
@@ -2762,7 +2762,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeoPoint*>* result = ref.origins;
@@ -2772,7 +2772,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2783,13 +2783,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destination;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -2798,7 +2798,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.type;
@@ -2812,7 +2812,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapDistanceResult*>* result = ref.results;
@@ -2822,7 +2822,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2833,7 +2833,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -2847,7 +2847,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapWeatherType result = ref.type;
@@ -2861,7 +2861,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapLocalWeatherLive*>* result = ref.lives;
@@ -2871,7 +2871,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2882,7 +2882,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
@@ -2892,7 +2892,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -2903,7 +2903,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.level;
@@ -2917,7 +2917,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.requireExtension;
@@ -2931,7 +2931,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.roadName;
@@ -2945,7 +2945,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -2959,13 +2959,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -2974,7 +2974,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.radius;
@@ -2988,13 +2988,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           AMapTrafficInfo* result = ref.trafficInfo;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3003,13 +3003,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.center;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3018,7 +3018,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.radius;
@@ -3032,7 +3032,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapNearbySearchType result = ref.searchType;
@@ -3046,7 +3046,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.timeRange;
@@ -3060,7 +3060,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.limit;
@@ -3074,7 +3074,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -3088,7 +3088,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapNearbyUserInfo*>* result = ref.infos;
@@ -3098,7 +3098,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3109,7 +3109,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.tableID;
@@ -3123,7 +3123,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<NSString*>* result = ref.filter;
@@ -3137,7 +3137,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.sortFields;
@@ -3151,7 +3151,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapCloudSortType result = ref.sortType;
@@ -3165,7 +3165,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.offset;
@@ -3179,7 +3179,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.page;
@@ -3193,13 +3193,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.center;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3208,7 +3208,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.radius;
@@ -3222,7 +3222,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -3236,13 +3236,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPolygon* result = ref.polygon;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3251,7 +3251,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -3265,7 +3265,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.uid;
@@ -3279,7 +3279,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.keywords;
@@ -3293,7 +3293,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -3307,7 +3307,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.count;
@@ -3321,7 +3321,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapCloudPOI*>* result = ref.POIs;
@@ -3331,7 +3331,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3342,13 +3342,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3357,7 +3357,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -3371,7 +3371,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -3385,13 +3385,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3400,7 +3400,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -3414,7 +3414,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.address;
@@ -3428,7 +3428,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -3442,7 +3442,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.type;
@@ -3456,13 +3456,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.startCoordinate;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3471,13 +3471,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destinationCoordinate;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3486,7 +3486,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.startName;
@@ -3500,7 +3500,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationName;
@@ -3514,7 +3514,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -3528,13 +3528,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.startCoordinate;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3543,13 +3543,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destinationCoordinate;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -3558,7 +3558,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.shareURL;
@@ -3572,7 +3572,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.beginTime;
@@ -3586,7 +3586,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.interval;
@@ -3600,7 +3600,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.timeCount;
@@ -3614,7 +3614,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.strategy;
@@ -3628,7 +3628,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.originId;
@@ -3642,7 +3642,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationId;
@@ -3656,7 +3656,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.origintype;
@@ -3670,7 +3670,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.destinationtype;
@@ -3684,7 +3684,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.parentId;
@@ -3698,7 +3698,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.plateProvince;
@@ -3712,7 +3712,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.plateNumber;
@@ -3726,7 +3726,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.cartype;
@@ -3740,7 +3740,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapPath*>* result = ref.paths;
@@ -3750,7 +3750,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3761,7 +3761,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapFutureTimeInfo*>* result = ref.timeInfos;
@@ -3771,7 +3771,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3782,7 +3782,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.latitude;
@@ -3796,7 +3796,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.longitude;
@@ -3810,7 +3810,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapGeoPoint*>* result = ref.points;
@@ -3820,7 +3820,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3831,7 +3831,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -3845,7 +3845,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -3859,7 +3859,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -3873,7 +3873,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.num;
@@ -3887,7 +3887,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapDistrict*>* result = ref.districts;
@@ -3897,7 +3897,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3908,7 +3908,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSuggestion* ref = (AMapSuggestion*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<NSString*>* result = ref.keywords;
@@ -3922,7 +3922,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSuggestion* ref = (AMapSuggestion*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapCity*>* result = ref.cities;
@@ -3932,7 +3932,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -3943,7 +3943,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -3957,7 +3957,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -3971,7 +3971,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -3985,7 +3985,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.district;
@@ -3999,7 +3999,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.address;
@@ -4013,13 +4013,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4028,7 +4028,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.typecode;
@@ -4042,7 +4042,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage* ref = (AMapImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.title;
@@ -4056,7 +4056,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage* ref = (AMapImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.url;
@@ -4070,7 +4070,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.rating;
@@ -4084,7 +4084,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.cost;
@@ -4098,7 +4098,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.openTime;
@@ -4112,7 +4112,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData* ref = (AMapIndoorData*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.floor;
@@ -4126,7 +4126,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData* ref = (AMapIndoorData*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.floorName;
@@ -4140,7 +4140,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData* ref = (AMapIndoorData*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.pid;
@@ -4154,7 +4154,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -4168,7 +4168,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -4182,7 +4182,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.sname;
@@ -4196,13 +4196,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4211,7 +4211,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.address;
@@ -4225,7 +4225,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -4239,7 +4239,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.subtype;
@@ -4253,7 +4253,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -4267,7 +4267,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -4281,13 +4281,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4296,7 +4296,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -4310,7 +4310,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -4324,7 +4324,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -4338,7 +4338,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -4352,7 +4352,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.type;
@@ -4366,7 +4366,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.typecode;
@@ -4380,13 +4380,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4395,7 +4395,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.address;
@@ -4409,7 +4409,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.tel;
@@ -4423,7 +4423,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -4437,7 +4437,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.parkingType;
@@ -4451,7 +4451,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.shopID;
@@ -4465,7 +4465,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.postcode;
@@ -4479,7 +4479,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.website;
@@ -4493,7 +4493,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.email;
@@ -4507,7 +4507,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.province;
@@ -4521,7 +4521,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.pcode;
@@ -4535,7 +4535,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -4549,7 +4549,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -4563,7 +4563,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.district;
@@ -4577,7 +4577,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -4591,7 +4591,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.gridcode;
@@ -4605,13 +4605,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.enterLocation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4620,13 +4620,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.exitLocation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4635,7 +4635,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.direction;
@@ -4649,7 +4649,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.hasIndoorMap;
@@ -4663,7 +4663,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.businessArea;
@@ -4677,13 +4677,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapIndoorData* result = ref.indoorData;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4692,7 +4692,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapSubPOI*>* result = ref.subPOIs;
@@ -4702,7 +4702,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -4713,7 +4713,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapImage*>* result = ref.images;
@@ -4723,7 +4723,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -4734,13 +4734,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapPOIExtension* result = ref.extensionInfo;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4749,7 +4749,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -4763,7 +4763,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -4777,7 +4777,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -4791,13 +4791,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4806,7 +4806,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.area;
@@ -4820,7 +4820,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -4834,7 +4834,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -4848,7 +4848,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -4862,7 +4862,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.direction;
@@ -4876,13 +4876,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4891,7 +4891,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -4905,7 +4905,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.direction;
@@ -4919,13 +4919,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -4934,7 +4934,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.firstId;
@@ -4948,7 +4948,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.firstName;
@@ -4962,7 +4962,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.secondId;
@@ -4976,7 +4976,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.secondName;
@@ -4990,7 +4990,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.street;
@@ -5004,7 +5004,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.number;
@@ -5018,13 +5018,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5033,7 +5033,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -5047,7 +5047,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.direction;
@@ -5061,7 +5061,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -5075,13 +5075,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5090,7 +5090,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.country;
@@ -5104,7 +5104,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.province;
@@ -5118,7 +5118,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -5132,7 +5132,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -5146,7 +5146,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.district;
@@ -5160,7 +5160,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -5174,7 +5174,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.township;
@@ -5188,7 +5188,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.towncode;
@@ -5202,7 +5202,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.neighborhood;
@@ -5216,7 +5216,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.building;
@@ -5230,13 +5230,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           AMapStreetNumber* result = ref.streetNumber;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5245,7 +5245,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusinessArea*>* result = ref.businessAreas;
@@ -5255,7 +5255,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5266,7 +5266,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.formattedAddress;
@@ -5280,13 +5280,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // invoke native method
           AMapAddressComponent* result = ref.addressComponent;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5295,7 +5295,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapRoad*>* result = ref.roads;
@@ -5305,7 +5305,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5316,7 +5316,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapRoadInter*>* result = ref.roadinters;
@@ -5326,7 +5326,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5337,7 +5337,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapPOI*>* result = ref.pois;
@@ -5347,7 +5347,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5358,7 +5358,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapAOI*>* result = ref.aois;
@@ -5368,7 +5368,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5379,7 +5379,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.formattedAddress;
@@ -5393,7 +5393,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.province;
@@ -5407,7 +5407,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -5421,7 +5421,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -5435,7 +5435,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.district;
@@ -5449,7 +5449,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -5463,7 +5463,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.township;
@@ -5477,7 +5477,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.neighborhood;
@@ -5491,7 +5491,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.building;
@@ -5505,13 +5505,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5520,7 +5520,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.level;
@@ -5534,7 +5534,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -5548,7 +5548,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -5562,7 +5562,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -5576,7 +5576,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -5590,13 +5590,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5605,7 +5605,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusLine*>* result = ref.buslines;
@@ -5615,7 +5615,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5626,7 +5626,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.sequence;
@@ -5640,7 +5640,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -5654,7 +5654,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.type;
@@ -5668,7 +5668,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -5682,7 +5682,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.polyline;
@@ -5696,7 +5696,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -5710,7 +5710,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.startStop;
@@ -5724,7 +5724,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.endStop;
@@ -5738,13 +5738,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5753,7 +5753,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.startTime;
@@ -5767,7 +5767,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.endTime;
@@ -5781,7 +5781,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.company;
@@ -5795,7 +5795,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.distance;
@@ -5809,7 +5809,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.basicPrice;
@@ -5823,7 +5823,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.totalPrice;
@@ -5837,13 +5837,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPolygon* result = ref.bounds;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5852,7 +5852,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusStop*>* result = ref.busStops;
@@ -5862,7 +5862,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5873,13 +5873,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           AMapBusStop* result = ref.departureStop;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5888,13 +5888,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           AMapBusStop* result = ref.arrivalStop;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -5903,7 +5903,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusStop*>* result = ref.viaBusStops;
@@ -5913,7 +5913,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -5924,7 +5924,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -5938,7 +5938,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -5952,7 +5952,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.citycode;
@@ -5966,7 +5966,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -5980,7 +5980,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.level;
@@ -5994,13 +5994,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.center;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6009,7 +6009,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapDistrict*>* result = ref.districts;
@@ -6019,7 +6019,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6030,7 +6030,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<NSString*>* result = ref.polylines;
@@ -6044,7 +6044,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC* ref = (AMapTMC*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -6058,7 +6058,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC* ref = (AMapTMC*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.status;
@@ -6072,7 +6072,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC* ref = (AMapTMC*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.polyline;
@@ -6086,7 +6086,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.instruction;
@@ -6100,7 +6100,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.orientation;
@@ -6114,7 +6114,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.road;
@@ -6128,7 +6128,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -6142,7 +6142,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -6156,7 +6156,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.polyline;
@@ -6170,7 +6170,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.action;
@@ -6184,7 +6184,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.assistantAction;
@@ -6198,7 +6198,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.tolls;
@@ -6212,7 +6212,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.tollDistance;
@@ -6226,7 +6226,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.tollRoad;
@@ -6240,7 +6240,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapCity*>* result = ref.cities;
@@ -6250,7 +6250,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6261,7 +6261,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapTMC*>* result = ref.tmcs;
@@ -6271,7 +6271,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6282,7 +6282,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -6296,7 +6296,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -6310,7 +6310,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.strategy;
@@ -6324,7 +6324,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapStep*>* result = ref.steps;
@@ -6334,7 +6334,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6345,7 +6345,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.tolls;
@@ -6359,7 +6359,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.tollDistance;
@@ -6373,7 +6373,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.totalTrafficLights;
@@ -6387,7 +6387,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.restriction;
@@ -6401,7 +6401,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -6415,7 +6415,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.pathindex;
@@ -6429,7 +6429,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.restriction;
@@ -6443,7 +6443,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapTMC*>* result = ref.tmcs;
@@ -6453,7 +6453,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6464,7 +6464,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.startTime;
@@ -6478,7 +6478,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapFutureTimeInfoElement*>* result = ref.elements;
@@ -6488,7 +6488,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6499,13 +6499,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.origin;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6514,13 +6514,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destination;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6529,7 +6529,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -6543,7 +6543,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -6557,7 +6557,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapStep*>* result = ref.steps;
@@ -6567,7 +6567,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6578,13 +6578,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.origin;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6593,13 +6593,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destination;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6608,7 +6608,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -6622,7 +6622,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -6636,7 +6636,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.sname;
@@ -6650,7 +6650,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.tname;
@@ -6664,7 +6664,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -6678,7 +6678,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -6692,13 +6692,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6707,7 +6707,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -6721,7 +6721,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.time;
@@ -6735,7 +6735,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.wait;
@@ -6749,7 +6749,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.isStart;
@@ -6763,7 +6763,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.isEnd;
@@ -6777,7 +6777,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.code;
@@ -6791,7 +6791,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.cost;
@@ -6805,7 +6805,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -6819,7 +6819,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -6833,7 +6833,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.trip;
@@ -6847,7 +6847,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.type;
@@ -6861,7 +6861,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -6875,7 +6875,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.time;
@@ -6889,13 +6889,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           AMapRailwayStation* result = ref.departureStation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6904,13 +6904,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           AMapRailwayStation* result = ref.arrivalStation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6919,7 +6919,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapRailwaySpace*>* result = ref.spaces;
@@ -6929,7 +6929,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6940,7 +6940,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapRailwayStation*>* result = ref.viaStops;
@@ -6950,7 +6950,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6961,7 +6961,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapRailway*>* result = ref.alters;
@@ -6971,7 +6971,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -6982,13 +6982,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           AMapWalking* result = ref.walking;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -6997,7 +6997,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapBusLine*>* result = ref.buslines;
@@ -7007,7 +7007,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -7018,13 +7018,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           AMapTaxi* result = ref.taxi;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7033,13 +7033,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           AMapRailway* result = ref.railway;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7048,7 +7048,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.enterName;
@@ -7062,13 +7062,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.enterLocation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7077,7 +7077,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.exitName;
@@ -7091,13 +7091,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.exitLocation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7106,7 +7106,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.cost;
@@ -7120,7 +7120,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -7134,7 +7134,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.nightflag;
@@ -7148,7 +7148,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.walkingDistance;
@@ -7162,7 +7162,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapSegment*>* result = ref.segments;
@@ -7172,7 +7172,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -7183,7 +7183,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -7197,13 +7197,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.origin;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7212,13 +7212,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.destination;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7227,7 +7227,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.taxiCost;
@@ -7241,7 +7241,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapPath*>* result = ref.paths;
@@ -7251,7 +7251,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -7262,7 +7262,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapTransit*>* result = ref.transits;
@@ -7272,7 +7272,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -7283,7 +7283,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.originID;
@@ -7297,7 +7297,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.destID;
@@ -7311,7 +7311,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -7325,7 +7325,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.duration;
@@ -7339,7 +7339,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.info;
@@ -7353,7 +7353,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.code;
@@ -7367,7 +7367,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -7381,7 +7381,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.province;
@@ -7395,7 +7395,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -7409,7 +7409,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.weather;
@@ -7423,7 +7423,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.temperature;
@@ -7437,7 +7437,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.windDirection;
@@ -7451,7 +7451,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.windPower;
@@ -7465,7 +7465,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.humidity;
@@ -7479,7 +7479,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.reportTime;
@@ -7493,7 +7493,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.date;
@@ -7507,7 +7507,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.week;
@@ -7521,7 +7521,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.dayWeather;
@@ -7535,7 +7535,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.nightWeather;
@@ -7549,7 +7549,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.dayTemp;
@@ -7563,7 +7563,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.nightTemp;
@@ -7577,7 +7577,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.dayWind;
@@ -7591,7 +7591,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.nightWind;
@@ -7605,7 +7605,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.dayPower;
@@ -7619,7 +7619,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.nightPower;
@@ -7633,7 +7633,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.adcode;
@@ -7647,7 +7647,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.province;
@@ -7661,7 +7661,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.city;
@@ -7675,7 +7675,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.reportTime;
@@ -7689,7 +7689,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapLocalDayWeatherForecast*>* result = ref.casts;
@@ -7699,7 +7699,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -7710,7 +7710,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.userID;
@@ -7724,13 +7724,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7739,7 +7739,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           // invoke native method
           CGFloat result = ref.distance;
@@ -7753,7 +7753,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.evaluationDescription;
@@ -7767,7 +7767,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.status;
@@ -7781,7 +7781,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.expedite;
@@ -7795,7 +7795,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.congested;
@@ -7809,7 +7809,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.blocked;
@@ -7823,7 +7823,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.unknown;
@@ -7837,7 +7837,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -7851,7 +7851,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.status;
@@ -7865,7 +7865,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.direction;
@@ -7879,7 +7879,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // invoke native method
           float result = ref.angle;
@@ -7893,7 +7893,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // invoke native method
           float result = ref.speed;
@@ -7907,7 +7907,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.polyline;
@@ -7921,7 +7921,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.statusDescription;
@@ -7935,13 +7935,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           // invoke native method
           AMapTrafficEvaluation* result = ref.evaluation;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -7950,7 +7950,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapTrafficRoad*>* result = ref.roads;
@@ -7960,7 +7960,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -7971,7 +7971,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage* ref = (AMapCloudImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.uid;
@@ -7985,7 +7985,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage* ref = (AMapCloudImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.preurl;
@@ -7999,7 +7999,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage* ref = (AMapCloudImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.url;
@@ -8013,7 +8013,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.uid;
@@ -8027,7 +8027,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.name;
@@ -8041,13 +8041,13 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           AMapGeoPoint* result = ref.location;
       
           // 返回值: 引用
-          HEAP_AmapSearchFluttify[@(result.hash)] = result;
+          HEAP[@(result.hash)] = result;
           methodResult(@(result.hash));
       },
       
@@ -8056,7 +8056,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.address;
@@ -8070,7 +8070,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.createTime;
@@ -8084,7 +8084,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.updateTime;
@@ -8098,7 +8098,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.distance;
@@ -8112,7 +8112,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           // invoke native method
           NSArray<AMapCloudImage*>* result = ref.images;
@@ -8122,7 +8122,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           for (int i = 0; i < result.count; i++) {
               NSObject* object = [result objectAtIndex:i];
               [refIdList addObject: @(object.hash)];
-              HEAP_AmapSearchFluttify[@([object hash])] = object;
+              HEAP[@([object hash])] = object;
           }
       
           methodResult(refIdList);
@@ -8133,7 +8133,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           // invoke native method
           NSString* result = ref.userID;
@@ -8147,7 +8147,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           // invoke native method
           AMapSearchCoordinateType result = ref.coordinateType;
@@ -8161,14 +8161,14 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           // invoke native method
           CLLocationCoordinate2D result = ref.coordinate;
       
           // 返回值: 结构体
           NSValue* resultValue = [NSValue value:&result withObjCType:@encode(CLLocationCoordinate2D)];
-          HEAP_AmapSearchFluttify[@(resultValue.hash)] = resultValue;
+          HEAP[@(resultValue.hash)] = resultValue;
       
           methodResult(@(resultValue.hash));
       },
@@ -8178,7 +8178,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
       
           // invoke native method
           BOOL result = ref.isAutoUploading;
@@ -8192,7 +8192,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // invoke native method
           NSInteger result = ref.timeout;
@@ -8206,7 +8206,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // ref object
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           // invoke native method
           AMapSearchLanguage result = ref.language;
@@ -8223,7 +8223,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* types = (NSString*) args[@"types"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.types = types;
           methodResult(@"success");
@@ -8237,7 +8237,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger sortrule = [args[@"sortrule"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.sortrule = sortrule;
           methodResult(@"success");
@@ -8251,7 +8251,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -8265,7 +8265,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -8279,7 +8279,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -8293,7 +8293,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -8307,7 +8307,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireSubPOIs = [args[@"requireSubPOIs"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[@(refId)];
       
           ref.requireSubPOIs = requireSubPOIs;
           methodResult(@"success");
@@ -8321,7 +8321,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIIDSearchRequest* ref = (AMapPOIIDSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -8335,7 +8335,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8349,7 +8349,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8363,7 +8363,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL cityLimit = [args[@"cityLimit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.cityLimit = cityLimit;
           methodResult(@"success");
@@ -8374,10 +8374,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIKeywordsSearchRequest* ref = (AMapPOIKeywordsSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8391,7 +8391,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8402,10 +8402,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8419,7 +8419,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -8433,7 +8433,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8447,7 +8447,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8458,10 +8458,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP_AmapSearchFluttify[@([args[@"polygon"] integerValue])];
+          AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[@([args[@"polygon"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIPolygonSearchRequest* ref = (AMapPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.polygon = polygon;
           methodResult(@"success");
@@ -8475,7 +8475,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8486,10 +8486,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP_AmapSearchFluttify[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
           methodResult(@"success");
@@ -8503,12 +8503,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
           NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
           for (int i = 0; i < pois.count; i++) {
-              AMapPOI* item = (AMapPOI*) HEAP_AmapSearchFluttify[[poisRefArray objectAtIndex:i]];
+              AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
               [pois addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[@(refId)];
       
           ref.pois = pois;
           methodResult(@"success");
@@ -8519,10 +8519,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -8533,10 +8533,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -8550,7 +8550,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapRoutePOISearchType searchType = (AMapRoutePOISearchType) [args[@"searchType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.searchType = searchType;
           methodResult(@"success");
@@ -8564,7 +8564,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -8578,7 +8578,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger range = [args[@"range"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.range = range;
           methodResult(@"success");
@@ -8592,7 +8592,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* polylineStr = (NSString*) args[@"polylineStr"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.polylineStr = polylineStr;
           methodResult(@"success");
@@ -8606,12 +8606,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* polylineRefArray = (NSArray<NSNumber*> *) args[@"polyline"];
           NSMutableArray<AMapGeoPoint*>* polyline = [NSMutableArray arrayWithCapacity:polylineRefArray.count];
           for (int i = 0; i < polyline.count; i++) {
-              AMapGeoPoint* item = (AMapGeoPoint*) HEAP_AmapSearchFluttify[[polylineRefArray objectAtIndex:i]];
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[polylineRefArray objectAtIndex:i]];
               [polyline addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -8625,7 +8625,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8639,12 +8639,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
           NSMutableArray<AMapRoutePOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
           for (int i = 0; i < pois.count; i++) {
-              AMapRoutePOI* item = (AMapRoutePOI*) HEAP_AmapSearchFluttify[[poisRefArray objectAtIndex:i]];
+              AMapRoutePOI* item = (AMapRoutePOI*) HEAP[[poisRefArray objectAtIndex:i]];
               [pois addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[@(refId)];
       
           ref.pois = pois;
           methodResult(@"success");
@@ -8658,7 +8658,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8672,7 +8672,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8686,7 +8686,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* types = (NSString*) args[@"types"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.types = types;
           methodResult(@"success");
@@ -8700,7 +8700,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL cityLimit = [args[@"cityLimit"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.cityLimit = cityLimit;
           methodResult(@"success");
@@ -8714,7 +8714,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* location = (NSString*) args[@"location"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchRequest* ref = (AMapInputTipsSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8728,7 +8728,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8742,12 +8742,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* tipsRefArray = (NSArray<NSNumber*> *) args[@"tips"];
           NSMutableArray<AMapTip*>* tips = [NSMutableArray arrayWithCapacity:tipsRefArray.count];
           for (int i = 0; i < tips.count; i++) {
-              AMapTip* item = (AMapTip*) HEAP_AmapSearchFluttify[[tipsRefArray objectAtIndex:i]];
+              AMapTip* item = (AMapTip*) HEAP[[tipsRefArray objectAtIndex:i]];
               [tips addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[@(refId)];
       
           ref.tips = tips;
           methodResult(@"success");
@@ -8761,7 +8761,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -8775,7 +8775,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchRequest* ref = (AMapGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8789,7 +8789,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8803,12 +8803,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* geocodesRefArray = (NSArray<NSNumber*> *) args[@"geocodes"];
           NSMutableArray<AMapGeocode*>* geocodes = [NSMutableArray arrayWithCapacity:geocodesRefArray.count];
           for (int i = 0; i < geocodes.count; i++) {
-              AMapGeocode* item = (AMapGeocode*) HEAP_AmapSearchFluttify[[geocodesRefArray objectAtIndex:i]];
+              AMapGeocode* item = (AMapGeocode*) HEAP[[geocodesRefArray objectAtIndex:i]];
               [geocodes addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[@(refId)];
       
           ref.geocodes = geocodes;
           methodResult(@"success");
@@ -8822,7 +8822,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -8833,10 +8833,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -8850,7 +8850,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -8864,7 +8864,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* poitype = (NSString*) args[@"poitype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[@(refId)];
       
           ref.poitype = poitype;
           methodResult(@"success");
@@ -8875,10 +8875,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapReGeocode* regeocode = (AMapReGeocode*) HEAP_AmapSearchFluttify[@([args[@"regeocode"] integerValue])];
+          AMapReGeocode* regeocode = (AMapReGeocode*) HEAP[@([args[@"regeocode"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocodeSearchResponse* ref = (AMapReGeocodeSearchResponse*) HEAP[@(refId)];
       
           ref.regeocode = regeocode;
           methodResult(@"success");
@@ -8892,7 +8892,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -8906,7 +8906,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -8920,7 +8920,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -8934,7 +8934,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -8948,7 +8948,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -8959,10 +8959,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP_AmapSearchFluttify[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
           methodResult(@"success");
@@ -8976,12 +8976,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* busstopsRefArray = (NSArray<NSNumber*> *) args[@"busstops"];
           NSMutableArray<AMapBusStop*>* busstops = [NSMutableArray arrayWithCapacity:busstopsRefArray.count];
           for (int i = 0; i < busstops.count; i++) {
-              AMapBusStop* item = (AMapBusStop*) HEAP_AmapSearchFluttify[[busstopsRefArray objectAtIndex:i]];
+              AMapBusStop* item = (AMapBusStop*) HEAP[[busstopsRefArray objectAtIndex:i]];
               [busstops addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[@(refId)];
       
           ref.busstops = busstops;
           methodResult(@"success");
@@ -8995,7 +8995,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9009,7 +9009,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -9023,7 +9023,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -9037,7 +9037,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -9051,7 +9051,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineNameSearchRequest* ref = (AMapBusLineNameSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -9065,7 +9065,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineIDSearchRequest* ref = (AMapBusLineIDSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -9079,7 +9079,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -9090,10 +9090,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP_AmapSearchFluttify[@([args[@"suggestion"] integerValue])];
+          AMapSuggestion* suggestion = (AMapSuggestion*) HEAP[@([args[@"suggestion"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           ref.suggestion = suggestion;
           methodResult(@"success");
@@ -9107,12 +9107,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
           NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
           for (int i = 0; i < buslines.count; i++) {
-              AMapBusLine* item = (AMapBusLine*) HEAP_AmapSearchFluttify[[buslinesRefArray objectAtIndex:i]];
+              AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
               [buslines addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLineSearchResponse* ref = (AMapBusLineSearchResponse*) HEAP[@(refId)];
       
           ref.buslines = buslines;
           methodResult(@"success");
@@ -9126,7 +9126,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -9140,7 +9140,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -9154,7 +9154,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL showBusinessArea = [args[@"showBusinessArea"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchRequest* ref = (AMapDistrictSearchRequest*) HEAP[@(refId)];
       
           ref.showBusinessArea = showBusinessArea;
           methodResult(@"success");
@@ -9168,7 +9168,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -9182,12 +9182,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
           NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
           for (int i = 0; i < districts.count; i++) {
-              AMapDistrict* item = (AMapDistrict*) HEAP_AmapSearchFluttify[[districtsRefArray objectAtIndex:i]];
+              AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
               [districts addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrictSearchResponse* ref = (AMapDistrictSearchResponse*) HEAP[@(refId)];
       
           ref.districts = districts;
           methodResult(@"success");
@@ -9198,10 +9198,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -9212,10 +9212,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchBaseRequest* ref = (AMapRouteSearchBaseRequest*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -9229,7 +9229,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -9243,12 +9243,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
           NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
           for (int i = 0; i < waypoints.count; i++) {
-              AMapGeoPoint* item = (AMapGeoPoint*) HEAP_AmapSearchFluttify[[waypointsRefArray objectAtIndex:i]];
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:i]];
               [waypoints addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.waypoints = waypoints;
           methodResult(@"success");
@@ -9262,12 +9262,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* avoidpolygonsRefArray = (NSArray<NSNumber*> *) args[@"avoidpolygons"];
           NSMutableArray<AMapGeoPolygon*>* avoidpolygons = [NSMutableArray arrayWithCapacity:avoidpolygonsRefArray.count];
           for (int i = 0; i < avoidpolygons.count; i++) {
-              AMapGeoPolygon* item = (AMapGeoPolygon*) HEAP_AmapSearchFluttify[[avoidpolygonsRefArray objectAtIndex:i]];
+              AMapGeoPolygon* item = (AMapGeoPolygon*) HEAP[[avoidpolygonsRefArray objectAtIndex:i]];
               [avoidpolygons addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.avoidpolygons = avoidpolygons;
           methodResult(@"success");
@@ -9281,7 +9281,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* avoidroad = (NSString*) args[@"avoidroad"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.avoidroad = avoidroad;
           methodResult(@"success");
@@ -9295,7 +9295,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* originId = (NSString*) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -9309,7 +9309,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationId = (NSString*) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -9323,7 +9323,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* origintype = (NSString*) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -9337,7 +9337,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationtype = (NSString*) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -9351,7 +9351,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -9365,7 +9365,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* plateProvince = (NSString*) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -9379,7 +9379,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* plateNumber = (NSString*) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -9393,7 +9393,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger ferry = [args[@"ferry"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.ferry = ferry;
           methodResult(@"success");
@@ -9407,7 +9407,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger cartype = [args[@"cartype"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.cartype = cartype;
           methodResult(@"success");
@@ -9421,7 +9421,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger multipath = [args[@"multipath"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.multipath = multipath;
           methodResult(@"success");
@@ -9435,7 +9435,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -9449,7 +9449,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9463,7 +9463,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationCity = (NSString*) args[@"destinationCity"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationCity = destinationCity;
           methodResult(@"success");
@@ -9477,7 +9477,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL nightflag = [args[@"nightflag"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.nightflag = nightflag;
           methodResult(@"success");
@@ -9491,7 +9491,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -9505,7 +9505,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -9519,7 +9519,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -9530,10 +9530,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapRoute* route = (AMapRoute*) HEAP_AmapSearchFluttify[@([args[@"route"] integerValue])];
+          AMapRoute* route = (AMapRoute*) HEAP[@([args[@"route"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[@(refId)];
       
           ref.route = route;
           methodResult(@"success");
@@ -9547,7 +9547,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -9561,12 +9561,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
           NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
           for (int i = 0; i < waypoints.count; i++) {
-              AMapGeoPoint* item = (AMapGeoPoint*) HEAP_AmapSearchFluttify[[waypointsRefArray objectAtIndex:i]];
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:i]];
               [waypoints addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.waypoints = waypoints;
           methodResult(@"success");
@@ -9580,7 +9580,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* originId = (NSString*) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -9594,7 +9594,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationId = (NSString*) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -9608,7 +9608,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* origintype = (NSString*) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -9622,7 +9622,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationtype = (NSString*) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -9636,7 +9636,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* plateProvince = (NSString*) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -9650,7 +9650,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* plateNumber = (NSString*) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -9664,7 +9664,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapTruckSizeType size = (AMapTruckSizeType) [args[@"size"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.size = size;
           methodResult(@"success");
@@ -9678,7 +9678,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat height = [args[@"height"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.height = height;
           methodResult(@"success");
@@ -9692,7 +9692,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat width = [args[@"width"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.width = width;
           methodResult(@"success");
@@ -9706,7 +9706,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat load = [args[@"load"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.load = load;
           methodResult(@"success");
@@ -9720,7 +9720,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat weight = [args[@"weight"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.weight = weight;
           methodResult(@"success");
@@ -9734,7 +9734,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger axis = [args[@"axis"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[@(refId)];
       
           ref.axis = axis;
           methodResult(@"success");
@@ -9748,12 +9748,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* originsRefArray = (NSArray<NSNumber*> *) args[@"origins"];
           NSMutableArray<AMapGeoPoint*>* origins = [NSMutableArray arrayWithCapacity:originsRefArray.count];
           for (int i = 0; i < origins.count; i++) {
-              AMapGeoPoint* item = (AMapGeoPoint*) HEAP_AmapSearchFluttify[[originsRefArray objectAtIndex:i]];
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[originsRefArray objectAtIndex:i]];
               [origins addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           ref.origins = origins;
           methodResult(@"success");
@@ -9764,10 +9764,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -9781,7 +9781,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -9795,12 +9795,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* resultsRefArray = (NSArray<NSNumber*> *) args[@"results"];
           NSMutableArray<AMapDistanceResult*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
           for (int i = 0; i < results.count; i++) {
-              AMapDistanceResult* item = (AMapDistanceResult*) HEAP_AmapSearchFluttify[[resultsRefArray objectAtIndex:i]];
+              AMapDistanceResult* item = (AMapDistanceResult*) HEAP[[resultsRefArray objectAtIndex:i]];
               [results addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP[@(refId)];
       
           ref.results = results;
           methodResult(@"success");
@@ -9814,7 +9814,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -9828,7 +9828,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapWeatherType type = (AMapWeatherType) [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -9842,12 +9842,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* livesRefArray = (NSArray<NSNumber*> *) args[@"lives"];
           NSMutableArray<AMapLocalWeatherLive*>* lives = [NSMutableArray arrayWithCapacity:livesRefArray.count];
           for (int i = 0; i < lives.count; i++) {
-              AMapLocalWeatherLive* item = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[[livesRefArray objectAtIndex:i]];
+              AMapLocalWeatherLive* item = (AMapLocalWeatherLive*) HEAP[[livesRefArray objectAtIndex:i]];
               [lives addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
       
           ref.lives = lives;
           methodResult(@"success");
@@ -9861,12 +9861,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* forecastsRefArray = (NSArray<NSNumber*> *) args[@"forecasts"];
           NSMutableArray<AMapLocalWeatherForecast*>* forecasts = [NSMutableArray arrayWithCapacity:forecastsRefArray.count];
           for (int i = 0; i < forecasts.count; i++) {
-              AMapLocalWeatherForecast* item = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[[forecastsRefArray objectAtIndex:i]];
+              AMapLocalWeatherForecast* item = (AMapLocalWeatherForecast*) HEAP[[forecastsRefArray objectAtIndex:i]];
               [forecasts addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[@(refId)];
       
           ref.forecasts = forecasts;
           methodResult(@"success");
@@ -9880,7 +9880,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger level = [args[@"level"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -9894,7 +9894,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL requireExtension = [args[@"requireExtension"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[@(refId)];
       
           ref.requireExtension = requireExtension;
           methodResult(@"success");
@@ -9908,7 +9908,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* roadName = (NSString*) args[@"roadName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           ref.roadName = roadName;
           methodResult(@"success");
@@ -9922,7 +9922,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -9933,10 +9933,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -9950,7 +9950,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -9961,10 +9961,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@([args[@"trafficInfo"] integerValue])];
+          AMapTrafficInfo* trafficInfo = (AMapTrafficInfo*) HEAP[@([args[@"trafficInfo"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP[@(refId)];
       
           ref.trafficInfo = trafficInfo;
           methodResult(@"success");
@@ -9975,10 +9975,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* center = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"center"] integerValue])];
+          AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -9992,7 +9992,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -10006,7 +10006,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapNearbySearchType searchType = (AMapNearbySearchType) [args[@"searchType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.searchType = searchType;
           methodResult(@"success");
@@ -10020,7 +10020,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger timeRange = [args[@"timeRange"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.timeRange = timeRange;
           methodResult(@"success");
@@ -10034,7 +10034,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger limit = [args[@"limit"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[@(refId)];
       
           ref.limit = limit;
           methodResult(@"success");
@@ -10048,7 +10048,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -10062,12 +10062,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* infosRefArray = (NSArray<NSNumber*> *) args[@"infos"];
           NSMutableArray<AMapNearbyUserInfo*>* infos = [NSMutableArray arrayWithCapacity:infosRefArray.count];
           for (int i = 0; i < infos.count; i++) {
-              AMapNearbyUserInfo* item = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[[infosRefArray objectAtIndex:i]];
+              AMapNearbyUserInfo* item = (AMapNearbyUserInfo*) HEAP[[infosRefArray objectAtIndex:i]];
               [infos addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[@(refId)];
       
           ref.infos = infos;
           methodResult(@"success");
@@ -10081,7 +10081,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* tableID = (NSString*) args[@"tableID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.tableID = tableID;
           methodResult(@"success");
@@ -10095,7 +10095,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* filter = (NSString*) args[@"filter"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.filter = filter;
           methodResult(@"success");
@@ -10109,7 +10109,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* sortFields = (NSString*) args[@"sortFields"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.sortFields = sortFields;
           methodResult(@"success");
@@ -10123,7 +10123,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapCloudSortType sortType = (AMapCloudSortType) [args[@"sortType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.sortType = sortType;
           methodResult(@"success");
@@ -10137,7 +10137,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger offset = [args[@"offset"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.offset = offset;
           methodResult(@"success");
@@ -10151,7 +10151,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger page = [args[@"page"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[@(refId)];
       
           ref.page = page;
           methodResult(@"success");
@@ -10162,10 +10162,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* center = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"center"] integerValue])];
+          AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -10179,7 +10179,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger radius = [args[@"radius"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.radius = radius;
           methodResult(@"success");
@@ -10193,7 +10193,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10204,10 +10204,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP_AmapSearchFluttify[@([args[@"polygon"] integerValue])];
+          AMapGeoPolygon* polygon = (AMapGeoPolygon*) HEAP[@([args[@"polygon"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.polygon = polygon;
           methodResult(@"success");
@@ -10221,7 +10221,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10235,7 +10235,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger uid = [args[@"uid"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -10249,7 +10249,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10263,7 +10263,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10277,7 +10277,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger count = [args[@"count"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           ref.count = count;
           methodResult(@"success");
@@ -10291,12 +10291,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* POIsRefArray = (NSArray<NSNumber*> *) args[@"POIs"];
           NSMutableArray<AMapCloudPOI*>* POIs = [NSMutableArray arrayWithCapacity:POIsRefArray.count];
           for (int i = 0; i < POIs.count; i++) {
-              AMapCloudPOI* item = (AMapCloudPOI*) HEAP_AmapSearchFluttify[[POIsRefArray objectAtIndex:i]];
+              AMapCloudPOI* item = (AMapCloudPOI*) HEAP[[POIsRefArray objectAtIndex:i]];
               [POIs addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[@(refId)];
       
           ref.POIs = POIs;
           methodResult(@"success");
@@ -10307,10 +10307,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10324,7 +10324,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -10338,7 +10338,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -10349,10 +10349,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10366,7 +10366,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -10380,7 +10380,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -10394,7 +10394,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -10408,7 +10408,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger type = [args[@"type"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -10419,10 +10419,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"startCoordinate"] integerValue])];
+          AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[@([args[@"startCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -10433,10 +10433,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destinationCoordinate"] integerValue])];
+          AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -10450,7 +10450,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* startName = (NSString*) args[@"startName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.startName = startName;
           methodResult(@"success");
@@ -10464,7 +10464,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationName = (NSString*) args[@"destinationName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[@(refId)];
       
           ref.destinationName = destinationName;
           methodResult(@"success");
@@ -10478,7 +10478,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -10489,10 +10489,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"startCoordinate"] integerValue])];
+          AMapGeoPoint* startCoordinate = (AMapGeoPoint*) HEAP[@([args[@"startCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           ref.startCoordinate = startCoordinate;
           methodResult(@"success");
@@ -10503,10 +10503,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destinationCoordinate"] integerValue])];
+          AMapGeoPoint* destinationCoordinate = (AMapGeoPoint*) HEAP[@([args[@"destinationCoordinate"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[@(refId)];
       
           ref.destinationCoordinate = destinationCoordinate;
           methodResult(@"success");
@@ -10520,7 +10520,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* shareURL = (NSString*) args[@"shareURL"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP[@(refId)];
       
           ref.shareURL = shareURL;
           methodResult(@"success");
@@ -10534,7 +10534,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* beginTime = (NSString*) args[@"beginTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.beginTime = beginTime;
           methodResult(@"success");
@@ -10548,7 +10548,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger interval = [args[@"interval"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.interval = interval;
           methodResult(@"success");
@@ -10562,7 +10562,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger timeCount = [args[@"timeCount"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.timeCount = timeCount;
           methodResult(@"success");
@@ -10576,7 +10576,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger strategy = [args[@"strategy"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -10590,7 +10590,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* originId = (NSString*) args[@"originId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.originId = originId;
           methodResult(@"success");
@@ -10604,7 +10604,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationId = (NSString*) args[@"destinationId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationId = destinationId;
           methodResult(@"success");
@@ -10618,7 +10618,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* origintype = (NSString*) args[@"origintype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.origintype = origintype;
           methodResult(@"success");
@@ -10632,7 +10632,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* destinationtype = (NSString*) args[@"destinationtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.destinationtype = destinationtype;
           methodResult(@"success");
@@ -10646,7 +10646,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* parentId = (NSString*) args[@"parentId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.parentId = parentId;
           methodResult(@"success");
@@ -10660,7 +10660,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* plateProvince = (NSString*) args[@"plateProvince"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateProvince = plateProvince;
           methodResult(@"success");
@@ -10674,7 +10674,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* plateNumber = (NSString*) args[@"plateNumber"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.plateNumber = plateNumber;
           methodResult(@"success");
@@ -10688,7 +10688,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger cartype = [args[@"cartype"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[@(refId)];
       
           ref.cartype = cartype;
           methodResult(@"success");
@@ -10702,12 +10702,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
           NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
           for (int i = 0; i < paths.count; i++) {
-              AMapPath* item = (AMapPath*) HEAP_AmapSearchFluttify[[pathsRefArray objectAtIndex:i]];
+              AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
               [paths addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
       
           ref.paths = paths;
           methodResult(@"success");
@@ -10721,12 +10721,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* timeInfosRefArray = (NSArray<NSNumber*> *) args[@"timeInfos"];
           NSMutableArray<AMapFutureTimeInfo*>* timeInfos = [NSMutableArray arrayWithCapacity:timeInfosRefArray.count];
           for (int i = 0; i < timeInfos.count; i++) {
-              AMapFutureTimeInfo* item = (AMapFutureTimeInfo*) HEAP_AmapSearchFluttify[[timeInfosRefArray objectAtIndex:i]];
+              AMapFutureTimeInfo* item = (AMapFutureTimeInfo*) HEAP[[timeInfosRefArray objectAtIndex:i]];
               [timeInfos addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[@(refId)];
       
           ref.timeInfos = timeInfos;
           methodResult(@"success");
@@ -10740,7 +10740,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat latitude = [args[@"latitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           ref.latitude = latitude;
           methodResult(@"success");
@@ -10754,7 +10754,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat longitude = [args[@"longitude"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[@(refId)];
       
           ref.longitude = longitude;
           methodResult(@"success");
@@ -10768,12 +10768,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
           NSMutableArray<AMapGeoPoint*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
           for (int i = 0; i < points.count; i++) {
-              AMapGeoPoint* item = (AMapGeoPoint*) HEAP_AmapSearchFluttify[[pointsRefArray objectAtIndex:i]];
+              AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[pointsRefArray objectAtIndex:i]];
               [points addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP[@(refId)];
       
           ref.points = points;
           methodResult(@"success");
@@ -10787,7 +10787,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -10801,7 +10801,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -10815,7 +10815,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -10829,7 +10829,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger num = [args[@"num"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.num = num;
           methodResult(@"success");
@@ -10843,12 +10843,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
           NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
           for (int i = 0; i < districts.count; i++) {
-              AMapDistrict* item = (AMapDistrict*) HEAP_AmapSearchFluttify[[districtsRefArray objectAtIndex:i]];
+              AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
               [districts addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCity* ref = (AMapCity*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCity* ref = (AMapCity*) HEAP[@(refId)];
       
           ref.districts = districts;
           methodResult(@"success");
@@ -10862,7 +10862,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* keywords = (NSString*) args[@"keywords"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSuggestion* ref = (AMapSuggestion*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
       
           ref.keywords = keywords;
           methodResult(@"success");
@@ -10876,12 +10876,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
           NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
           for (int i = 0; i < cities.count; i++) {
-              AMapCity* item = (AMapCity*) HEAP_AmapSearchFluttify[[citiesRefArray objectAtIndex:i]];
+              AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
               [cities addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSuggestion* ref = (AMapSuggestion*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSuggestion* ref = (AMapSuggestion*) HEAP[@(refId)];
       
           ref.cities = cities;
           methodResult(@"success");
@@ -10895,7 +10895,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -10909,7 +10909,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -10923,7 +10923,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -10937,7 +10937,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -10951,7 +10951,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -10962,10 +10962,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -10979,7 +10979,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* typecode = (NSString*) args[@"typecode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTip* ref = (AMapTip*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTip* ref = (AMapTip*) HEAP[@(refId)];
       
           ref.typecode = typecode;
           methodResult(@"success");
@@ -10993,7 +10993,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* title = (NSString*) args[@"title"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage* ref = (AMapImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           ref.title = title;
           methodResult(@"success");
@@ -11007,7 +11007,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* url = (NSString*) args[@"url"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapImage* ref = (AMapImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapImage* ref = (AMapImage*) HEAP[@(refId)];
       
           ref.url = url;
           methodResult(@"success");
@@ -11021,7 +11021,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat rating = [args[@"rating"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           ref.rating = rating;
           methodResult(@"success");
@@ -11035,7 +11035,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -11049,7 +11049,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* openTime = (NSString*) args[@"openTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[@(refId)];
       
           ref.openTime = openTime;
           methodResult(@"success");
@@ -11063,7 +11063,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger floor = [args[@"floor"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData* ref = (AMapIndoorData*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           ref.floor = floor;
           methodResult(@"success");
@@ -11077,7 +11077,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* floorName = (NSString*) args[@"floorName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData* ref = (AMapIndoorData*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           ref.floorName = floorName;
           methodResult(@"success");
@@ -11091,7 +11091,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* pid = (NSString*) args[@"pid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapIndoorData* ref = (AMapIndoorData*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapIndoorData* ref = (AMapIndoorData*) HEAP[@(refId)];
       
           ref.pid = pid;
           methodResult(@"success");
@@ -11105,7 +11105,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11119,7 +11119,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11133,7 +11133,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* sname = (NSString*) args[@"sname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.sname = sname;
           methodResult(@"success");
@@ -11144,10 +11144,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11161,7 +11161,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -11175,7 +11175,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11189,7 +11189,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* subtype = (NSString*) args[@"subtype"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSubPOI* ref = (AMapSubPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSubPOI* ref = (AMapSubPOI*) HEAP[@(refId)];
       
           ref.subtype = subtype;
           methodResult(@"success");
@@ -11203,7 +11203,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11217,7 +11217,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11228,10 +11228,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11245,7 +11245,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11259,7 +11259,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -11273,7 +11273,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11287,7 +11287,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11301,7 +11301,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -11315,7 +11315,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* typecode = (NSString*) args[@"typecode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.typecode = typecode;
           methodResult(@"success");
@@ -11326,10 +11326,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11343,7 +11343,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -11357,7 +11357,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* tel = (NSString*) args[@"tel"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.tel = tel;
           methodResult(@"success");
@@ -11371,7 +11371,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11385,7 +11385,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* parkingType = (NSString*) args[@"parkingType"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.parkingType = parkingType;
           methodResult(@"success");
@@ -11399,7 +11399,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* shopID = (NSString*) args[@"shopID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.shopID = shopID;
           methodResult(@"success");
@@ -11413,7 +11413,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* postcode = (NSString*) args[@"postcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.postcode = postcode;
           methodResult(@"success");
@@ -11427,7 +11427,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* website = (NSString*) args[@"website"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.website = website;
           methodResult(@"success");
@@ -11441,7 +11441,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* email = (NSString*) args[@"email"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.email = email;
           methodResult(@"success");
@@ -11455,7 +11455,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -11469,7 +11469,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* pcode = (NSString*) args[@"pcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.pcode = pcode;
           methodResult(@"success");
@@ -11483,7 +11483,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -11497,7 +11497,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -11511,7 +11511,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -11525,7 +11525,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11539,7 +11539,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* gridcode = (NSString*) args[@"gridcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.gridcode = gridcode;
           methodResult(@"success");
@@ -11550,10 +11550,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"enterLocation"] integerValue])];
+          AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP[@([args[@"enterLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.enterLocation = enterLocation;
           methodResult(@"success");
@@ -11564,10 +11564,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"exitLocation"] integerValue])];
+          AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP[@([args[@"exitLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.exitLocation = exitLocation;
           methodResult(@"success");
@@ -11581,7 +11581,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -11595,7 +11595,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL hasIndoorMap = [args[@"hasIndoorMap"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.hasIndoorMap = hasIndoorMap;
           methodResult(@"success");
@@ -11609,7 +11609,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* businessArea = (NSString*) args[@"businessArea"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.businessArea = businessArea;
           methodResult(@"success");
@@ -11620,10 +11620,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapIndoorData* indoorData = (AMapIndoorData*) HEAP_AmapSearchFluttify[@([args[@"indoorData"] integerValue])];
+          AMapIndoorData* indoorData = (AMapIndoorData*) HEAP[@([args[@"indoorData"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.indoorData = indoorData;
           methodResult(@"success");
@@ -11637,12 +11637,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* subPOIsRefArray = (NSArray<NSNumber*> *) args[@"subPOIs"];
           NSMutableArray<AMapSubPOI*>* subPOIs = [NSMutableArray arrayWithCapacity:subPOIsRefArray.count];
           for (int i = 0; i < subPOIs.count; i++) {
-              AMapSubPOI* item = (AMapSubPOI*) HEAP_AmapSearchFluttify[[subPOIsRefArray objectAtIndex:i]];
+              AMapSubPOI* item = (AMapSubPOI*) HEAP[[subPOIsRefArray objectAtIndex:i]];
               [subPOIs addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.subPOIs = subPOIs;
           methodResult(@"success");
@@ -11656,12 +11656,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
           NSMutableArray<AMapImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
           for (int i = 0; i < images.count; i++) {
-              AMapImage* item = (AMapImage*) HEAP_AmapSearchFluttify[[imagesRefArray objectAtIndex:i]];
+              AMapImage* item = (AMapImage*) HEAP[[imagesRefArray objectAtIndex:i]];
               [images addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.images = images;
           methodResult(@"success");
@@ -11672,10 +11672,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapPOIExtension* extensionInfo = (AMapPOIExtension*) HEAP_AmapSearchFluttify[@([args[@"extensionInfo"] integerValue])];
+          AMapPOIExtension* extensionInfo = (AMapPOIExtension*) HEAP[@([args[@"extensionInfo"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPOI* ref = (AMapPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPOI* ref = (AMapPOI*) HEAP[@(refId)];
       
           ref.extensionInfo = extensionInfo;
           methodResult(@"success");
@@ -11689,7 +11689,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11703,7 +11703,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11717,7 +11717,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -11728,10 +11728,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11745,7 +11745,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat area = [args[@"area"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAOI* ref = (AMapAOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAOI* ref = (AMapAOI*) HEAP[@(refId)];
       
           ref.area = area;
           methodResult(@"success");
@@ -11759,7 +11759,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -11773,7 +11773,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -11787,7 +11787,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11801,7 +11801,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -11812,10 +11812,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoad* ref = (AMapRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoad* ref = (AMapRoad*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11829,7 +11829,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11843,7 +11843,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -11854,10 +11854,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11871,7 +11871,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* firstId = (NSString*) args[@"firstId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.firstId = firstId;
           methodResult(@"success");
@@ -11885,7 +11885,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* firstName = (NSString*) args[@"firstName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.firstName = firstName;
           methodResult(@"success");
@@ -11899,7 +11899,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* secondId = (NSString*) args[@"secondId"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.secondId = secondId;
           methodResult(@"success");
@@ -11913,7 +11913,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* secondName = (NSString*) args[@"secondName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoadInter* ref = (AMapRoadInter*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoadInter* ref = (AMapRoadInter*) HEAP[@(refId)];
       
           ref.secondName = secondName;
           methodResult(@"success");
@@ -11927,7 +11927,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* street = (NSString*) args[@"street"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.street = street;
           methodResult(@"success");
@@ -11941,7 +11941,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* number = (NSString*) args[@"number"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.number = number;
           methodResult(@"success");
@@ -11952,10 +11952,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -11969,7 +11969,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -11983,7 +11983,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -11997,7 +11997,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12008,10 +12008,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12025,7 +12025,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* country = (NSString*) args[@"country"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.country = country;
           methodResult(@"success");
@@ -12039,7 +12039,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -12053,7 +12053,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -12067,7 +12067,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -12081,7 +12081,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -12095,7 +12095,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12109,7 +12109,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* township = (NSString*) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.township = township;
           methodResult(@"success");
@@ -12123,7 +12123,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* towncode = (NSString*) args[@"towncode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.towncode = towncode;
           methodResult(@"success");
@@ -12137,7 +12137,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* neighborhood = (NSString*) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.neighborhood = neighborhood;
           methodResult(@"success");
@@ -12151,7 +12151,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -12162,10 +12162,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapStreetNumber* streetNumber = (AMapStreetNumber*) HEAP_AmapSearchFluttify[@([args[@"streetNumber"] integerValue])];
+          AMapStreetNumber* streetNumber = (AMapStreetNumber*) HEAP[@([args[@"streetNumber"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.streetNumber = streetNumber;
           methodResult(@"success");
@@ -12179,12 +12179,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* businessAreasRefArray = (NSArray<NSNumber*> *) args[@"businessAreas"];
           NSMutableArray<AMapBusinessArea*>* businessAreas = [NSMutableArray arrayWithCapacity:businessAreasRefArray.count];
           for (int i = 0; i < businessAreas.count; i++) {
-              AMapBusinessArea* item = (AMapBusinessArea*) HEAP_AmapSearchFluttify[[businessAreasRefArray objectAtIndex:i]];
+              AMapBusinessArea* item = (AMapBusinessArea*) HEAP[[businessAreasRefArray objectAtIndex:i]];
               [businessAreas addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[@(refId)];
       
           ref.businessAreas = businessAreas;
           methodResult(@"success");
@@ -12198,7 +12198,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.formattedAddress = formattedAddress;
           methodResult(@"success");
@@ -12209,10 +12209,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapAddressComponent* addressComponent = (AMapAddressComponent*) HEAP_AmapSearchFluttify[@([args[@"addressComponent"] integerValue])];
+          AMapAddressComponent* addressComponent = (AMapAddressComponent*) HEAP[@([args[@"addressComponent"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.addressComponent = addressComponent;
           methodResult(@"success");
@@ -12226,12 +12226,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
           NSMutableArray<AMapRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
           for (int i = 0; i < roads.count; i++) {
-              AMapRoad* item = (AMapRoad*) HEAP_AmapSearchFluttify[[roadsRefArray objectAtIndex:i]];
+              AMapRoad* item = (AMapRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
               [roads addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.roads = roads;
           methodResult(@"success");
@@ -12245,12 +12245,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* roadintersRefArray = (NSArray<NSNumber*> *) args[@"roadinters"];
           NSMutableArray<AMapRoadInter*>* roadinters = [NSMutableArray arrayWithCapacity:roadintersRefArray.count];
           for (int i = 0; i < roadinters.count; i++) {
-              AMapRoadInter* item = (AMapRoadInter*) HEAP_AmapSearchFluttify[[roadintersRefArray objectAtIndex:i]];
+              AMapRoadInter* item = (AMapRoadInter*) HEAP[[roadintersRefArray objectAtIndex:i]];
               [roadinters addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.roadinters = roadinters;
           methodResult(@"success");
@@ -12264,12 +12264,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
           NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
           for (int i = 0; i < pois.count; i++) {
-              AMapPOI* item = (AMapPOI*) HEAP_AmapSearchFluttify[[poisRefArray objectAtIndex:i]];
+              AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
               [pois addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.pois = pois;
           methodResult(@"success");
@@ -12283,12 +12283,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* aoisRefArray = (NSArray<NSNumber*> *) args[@"aois"];
           NSMutableArray<AMapAOI*>* aois = [NSMutableArray arrayWithCapacity:aoisRefArray.count];
           for (int i = 0; i < aois.count; i++) {
-              AMapAOI* item = (AMapAOI*) HEAP_AmapSearchFluttify[[aoisRefArray objectAtIndex:i]];
+              AMapAOI* item = (AMapAOI*) HEAP[[aoisRefArray objectAtIndex:i]];
               [aois addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapReGeocode* ref = (AMapReGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapReGeocode* ref = (AMapReGeocode*) HEAP[@(refId)];
       
           ref.aois = aois;
           methodResult(@"success");
@@ -12302,7 +12302,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* formattedAddress = (NSString*) args[@"formattedAddress"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.formattedAddress = formattedAddress;
           methodResult(@"success");
@@ -12316,7 +12316,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -12330,7 +12330,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -12344,7 +12344,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -12358,7 +12358,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* district = (NSString*) args[@"district"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.district = district;
           methodResult(@"success");
@@ -12372,7 +12372,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12386,7 +12386,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* township = (NSString*) args[@"township"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.township = township;
           methodResult(@"success");
@@ -12400,7 +12400,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* neighborhood = (NSString*) args[@"neighborhood"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.neighborhood = neighborhood;
           methodResult(@"success");
@@ -12414,7 +12414,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* building = (NSString*) args[@"building"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.building = building;
           methodResult(@"success");
@@ -12425,10 +12425,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12442,7 +12442,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* level = (NSString*) args[@"level"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapGeocode* ref = (AMapGeocode*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapGeocode* ref = (AMapGeocode*) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -12456,7 +12456,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12470,7 +12470,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12484,7 +12484,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12498,7 +12498,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -12509,10 +12509,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12526,12 +12526,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
           NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
           for (int i = 0; i < buslines.count; i++) {
-              AMapBusLine* item = (AMapBusLine*) HEAP_AmapSearchFluttify[[buslinesRefArray objectAtIndex:i]];
+              AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
               [buslines addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.buslines = buslines;
           methodResult(@"success");
@@ -12545,7 +12545,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* sequence = (NSString*) args[@"sequence"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusStop* ref = (AMapBusStop*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusStop* ref = (AMapBusStop*) HEAP[@(refId)];
       
           ref.sequence = sequence;
           methodResult(@"success");
@@ -12559,7 +12559,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -12573,7 +12573,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -12587,7 +12587,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12601,7 +12601,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -12615,7 +12615,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -12629,7 +12629,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* startStop = (NSString*) args[@"startStop"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.startStop = startStop;
           methodResult(@"success");
@@ -12643,7 +12643,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* endStop = (NSString*) args[@"endStop"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.endStop = endStop;
           methodResult(@"success");
@@ -12654,10 +12654,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -12671,7 +12671,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* startTime = (NSString*) args[@"startTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.startTime = startTime;
           methodResult(@"success");
@@ -12685,7 +12685,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* endTime = (NSString*) args[@"endTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.endTime = endTime;
           methodResult(@"success");
@@ -12699,7 +12699,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* company = (NSString*) args[@"company"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.company = company;
           methodResult(@"success");
@@ -12713,7 +12713,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat distance = [args[@"distance"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12727,7 +12727,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat basicPrice = [args[@"basicPrice"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.basicPrice = basicPrice;
           methodResult(@"success");
@@ -12741,7 +12741,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat totalPrice = [args[@"totalPrice"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.totalPrice = totalPrice;
           methodResult(@"success");
@@ -12752,10 +12752,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPolygon* bounds = (AMapGeoPolygon*) HEAP_AmapSearchFluttify[@([args[@"bounds"] integerValue])];
+          AMapGeoPolygon* bounds = (AMapGeoPolygon*) HEAP[@([args[@"bounds"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.bounds = bounds;
           methodResult(@"success");
@@ -12769,12 +12769,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* busStopsRefArray = (NSArray<NSNumber*> *) args[@"busStops"];
           NSMutableArray<AMapBusStop*>* busStops = [NSMutableArray arrayWithCapacity:busStopsRefArray.count];
           for (int i = 0; i < busStops.count; i++) {
-              AMapBusStop* item = (AMapBusStop*) HEAP_AmapSearchFluttify[[busStopsRefArray objectAtIndex:i]];
+              AMapBusStop* item = (AMapBusStop*) HEAP[[busStopsRefArray objectAtIndex:i]];
               [busStops addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.busStops = busStops;
           methodResult(@"success");
@@ -12785,10 +12785,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapBusStop* departureStop = (AMapBusStop*) HEAP_AmapSearchFluttify[@([args[@"departureStop"] integerValue])];
+          AMapBusStop* departureStop = (AMapBusStop*) HEAP[@([args[@"departureStop"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.departureStop = departureStop;
           methodResult(@"success");
@@ -12799,10 +12799,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapBusStop* arrivalStop = (AMapBusStop*) HEAP_AmapSearchFluttify[@([args[@"arrivalStop"] integerValue])];
+          AMapBusStop* arrivalStop = (AMapBusStop*) HEAP[@([args[@"arrivalStop"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.arrivalStop = arrivalStop;
           methodResult(@"success");
@@ -12816,12 +12816,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* viaBusStopsRefArray = (NSArray<NSNumber*> *) args[@"viaBusStops"];
           NSMutableArray<AMapBusStop*>* viaBusStops = [NSMutableArray arrayWithCapacity:viaBusStopsRefArray.count];
           for (int i = 0; i < viaBusStops.count; i++) {
-              AMapBusStop* item = (AMapBusStop*) HEAP_AmapSearchFluttify[[viaBusStopsRefArray objectAtIndex:i]];
+              AMapBusStop* item = (AMapBusStop*) HEAP[[viaBusStopsRefArray objectAtIndex:i]];
               [viaBusStops addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.viaBusStops = viaBusStops;
           methodResult(@"success");
@@ -12835,7 +12835,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapBusLine* ref = (AMapBusLine*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapBusLine* ref = (AMapBusLine*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -12849,7 +12849,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -12863,7 +12863,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* citycode = (NSString*) args[@"citycode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.citycode = citycode;
           methodResult(@"success");
@@ -12877,7 +12877,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -12891,7 +12891,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* level = (NSString*) args[@"level"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.level = level;
           methodResult(@"success");
@@ -12902,10 +12902,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* center = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"center"] integerValue])];
+          AMapGeoPoint* center = (AMapGeoPoint*) HEAP[@([args[@"center"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.center = center;
           methodResult(@"success");
@@ -12919,12 +12919,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
           NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
           for (int i = 0; i < districts.count; i++) {
-              AMapDistrict* item = (AMapDistrict*) HEAP_AmapSearchFluttify[[districtsRefArray objectAtIndex:i]];
+              AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
               [districts addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.districts = districts;
           methodResult(@"success");
@@ -12938,7 +12938,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* polylines = (NSString*) args[@"polylines"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistrict* ref = (AMapDistrict*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistrict* ref = (AMapDistrict*) HEAP[@(refId)];
       
           ref.polylines = polylines;
           methodResult(@"success");
@@ -12952,7 +12952,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC* ref = (AMapTMC*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -12966,7 +12966,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* status = (NSString*) args[@"status"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC* ref = (AMapTMC*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -12980,7 +12980,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTMC* ref = (AMapTMC*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTMC* ref = (AMapTMC*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -12994,7 +12994,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* instruction = (NSString*) args[@"instruction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.instruction = instruction;
           methodResult(@"success");
@@ -13008,7 +13008,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* orientation = (NSString*) args[@"orientation"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.orientation = orientation;
           methodResult(@"success");
@@ -13022,7 +13022,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* road = (NSString*) args[@"road"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.road = road;
           methodResult(@"success");
@@ -13036,7 +13036,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13050,7 +13050,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13064,7 +13064,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -13078,7 +13078,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* action = (NSString*) args[@"action"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.action = action;
           methodResult(@"success");
@@ -13092,7 +13092,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* assistantAction = (NSString*) args[@"assistantAction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.assistantAction = assistantAction;
           methodResult(@"success");
@@ -13106,7 +13106,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat tolls = [args[@"tolls"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tolls = tolls;
           methodResult(@"success");
@@ -13120,7 +13120,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger tollDistance = [args[@"tollDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tollDistance = tollDistance;
           methodResult(@"success");
@@ -13134,7 +13134,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* tollRoad = (NSString*) args[@"tollRoad"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tollRoad = tollRoad;
           methodResult(@"success");
@@ -13148,12 +13148,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
           NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
           for (int i = 0; i < cities.count; i++) {
-              AMapCity* item = (AMapCity*) HEAP_AmapSearchFluttify[[citiesRefArray objectAtIndex:i]];
+              AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
               [cities addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.cities = cities;
           methodResult(@"success");
@@ -13167,12 +13167,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
           NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
           for (int i = 0; i < tmcs.count; i++) {
-              AMapTMC* item = (AMapTMC*) HEAP_AmapSearchFluttify[[tmcsRefArray objectAtIndex:i]];
+              AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
               [tmcs addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapStep* ref = (AMapStep*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapStep* ref = (AMapStep*) HEAP[@(refId)];
       
           ref.tmcs = tmcs;
           methodResult(@"success");
@@ -13186,7 +13186,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13200,7 +13200,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13214,7 +13214,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* strategy = (NSString*) args[@"strategy"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.strategy = strategy;
           methodResult(@"success");
@@ -13228,12 +13228,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
           NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
           for (int i = 0; i < steps.count; i++) {
-              AMapStep* item = (AMapStep*) HEAP_AmapSearchFluttify[[stepsRefArray objectAtIndex:i]];
+              AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
               [steps addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.steps = steps;
           methodResult(@"success");
@@ -13247,7 +13247,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat tolls = [args[@"tolls"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.tolls = tolls;
           methodResult(@"success");
@@ -13261,7 +13261,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger tollDistance = [args[@"tollDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.tollDistance = tollDistance;
           methodResult(@"success");
@@ -13275,7 +13275,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger totalTrafficLights = [args[@"totalTrafficLights"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.totalTrafficLights = totalTrafficLights;
           methodResult(@"success");
@@ -13289,7 +13289,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger restriction = [args[@"restriction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapPath* ref = (AMapPath*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapPath* ref = (AMapPath*) HEAP[@(refId)];
       
           ref.restriction = restriction;
           methodResult(@"success");
@@ -13303,7 +13303,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13317,7 +13317,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger pathindex = [args[@"pathindex"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.pathindex = pathindex;
           methodResult(@"success");
@@ -13331,7 +13331,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger restriction = [args[@"restriction"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.restriction = restriction;
           methodResult(@"success");
@@ -13345,12 +13345,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
           NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
           for (int i = 0; i < tmcs.count; i++) {
-              AMapTMC* item = (AMapTMC*) HEAP_AmapSearchFluttify[[tmcsRefArray objectAtIndex:i]];
+              AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
               [tmcs addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[@(refId)];
       
           ref.tmcs = tmcs;
           methodResult(@"success");
@@ -13364,7 +13364,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* startTime = (NSString*) args[@"startTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           ref.startTime = startTime;
           methodResult(@"success");
@@ -13378,12 +13378,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* elementsRefArray = (NSArray<NSNumber*> *) args[@"elements"];
           NSMutableArray<AMapFutureTimeInfoElement*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
           for (int i = 0; i < elements.count; i++) {
-              AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP_AmapSearchFluttify[[elementsRefArray objectAtIndex:i]];
+              AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:i]];
               [elements addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapFutureTimeInfo* ref = (AMapFutureTimeInfo*) HEAP[@(refId)];
       
           ref.elements = elements;
           methodResult(@"success");
@@ -13394,10 +13394,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -13408,10 +13408,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -13425,7 +13425,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13439,7 +13439,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13453,12 +13453,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
           NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
           for (int i = 0; i < steps.count; i++) {
-              AMapStep* item = (AMapStep*) HEAP_AmapSearchFluttify[[stepsRefArray objectAtIndex:i]];
+              AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
               [steps addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapWalking* ref = (AMapWalking*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapWalking* ref = (AMapWalking*) HEAP[@(refId)];
       
           ref.steps = steps;
           methodResult(@"success");
@@ -13469,10 +13469,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -13483,10 +13483,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -13500,7 +13500,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13514,7 +13514,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -13528,7 +13528,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* sname = (NSString*) args[@"sname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.sname = sname;
           methodResult(@"success");
@@ -13542,7 +13542,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* tname = (NSString*) args[@"tname"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTaxi* ref = (AMapTaxi*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTaxi* ref = (AMapTaxi*) HEAP[@(refId)];
       
           ref.tname = tname;
           methodResult(@"success");
@@ -13556,7 +13556,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -13570,7 +13570,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -13581,10 +13581,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -13598,7 +13598,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -13612,7 +13612,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* time = (NSString*) args[@"time"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.time = time;
           methodResult(@"success");
@@ -13626,7 +13626,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger wait = [args[@"wait"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.wait = wait;
           methodResult(@"success");
@@ -13640,7 +13640,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL isStart = [args[@"isStart"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.isStart = isStart;
           methodResult(@"success");
@@ -13654,7 +13654,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL isEnd = [args[@"isEnd"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[@(refId)];
       
           ref.isEnd = isEnd;
           methodResult(@"success");
@@ -13668,7 +13668,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* code = (NSString*) args[@"code"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           ref.code = code;
           methodResult(@"success");
@@ -13682,7 +13682,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailwaySpace* ref = (AMapRailwaySpace*) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -13696,7 +13696,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -13710,7 +13710,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -13724,7 +13724,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* trip = (NSString*) args[@"trip"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.trip = trip;
           methodResult(@"success");
@@ -13738,7 +13738,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* type = (NSString*) args[@"type"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.type = type;
           methodResult(@"success");
@@ -13752,7 +13752,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -13766,7 +13766,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger time = [args[@"time"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.time = time;
           methodResult(@"success");
@@ -13777,10 +13777,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapRailwayStation* departureStation = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@([args[@"departureStation"] integerValue])];
+          AMapRailwayStation* departureStation = (AMapRailwayStation*) HEAP[@([args[@"departureStation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.departureStation = departureStation;
           methodResult(@"success");
@@ -13791,10 +13791,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapRailwayStation* arrivalStation = (AMapRailwayStation*) HEAP_AmapSearchFluttify[@([args[@"arrivalStation"] integerValue])];
+          AMapRailwayStation* arrivalStation = (AMapRailwayStation*) HEAP[@([args[@"arrivalStation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.arrivalStation = arrivalStation;
           methodResult(@"success");
@@ -13808,12 +13808,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* spacesRefArray = (NSArray<NSNumber*> *) args[@"spaces"];
           NSMutableArray<AMapRailwaySpace*>* spaces = [NSMutableArray arrayWithCapacity:spacesRefArray.count];
           for (int i = 0; i < spaces.count; i++) {
-              AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP_AmapSearchFluttify[[spacesRefArray objectAtIndex:i]];
+              AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP[[spacesRefArray objectAtIndex:i]];
               [spaces addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.spaces = spaces;
           methodResult(@"success");
@@ -13827,12 +13827,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* viaStopsRefArray = (NSArray<NSNumber*> *) args[@"viaStops"];
           NSMutableArray<AMapRailwayStation*>* viaStops = [NSMutableArray arrayWithCapacity:viaStopsRefArray.count];
           for (int i = 0; i < viaStops.count; i++) {
-              AMapRailwayStation* item = (AMapRailwayStation*) HEAP_AmapSearchFluttify[[viaStopsRefArray objectAtIndex:i]];
+              AMapRailwayStation* item = (AMapRailwayStation*) HEAP[[viaStopsRefArray objectAtIndex:i]];
               [viaStops addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.viaStops = viaStops;
           methodResult(@"success");
@@ -13846,12 +13846,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* altersRefArray = (NSArray<NSNumber*> *) args[@"alters"];
           NSMutableArray<AMapRailway*>* alters = [NSMutableArray arrayWithCapacity:altersRefArray.count];
           for (int i = 0; i < alters.count; i++) {
-              AMapRailway* item = (AMapRailway*) HEAP_AmapSearchFluttify[[altersRefArray objectAtIndex:i]];
+              AMapRailway* item = (AMapRailway*) HEAP[[altersRefArray objectAtIndex:i]];
               [alters addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRailway* ref = (AMapRailway*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRailway* ref = (AMapRailway*) HEAP[@(refId)];
       
           ref.alters = alters;
           methodResult(@"success");
@@ -13862,10 +13862,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapWalking* walking = (AMapWalking*) HEAP_AmapSearchFluttify[@([args[@"walking"] integerValue])];
+          AMapWalking* walking = (AMapWalking*) HEAP[@([args[@"walking"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.walking = walking;
           methodResult(@"success");
@@ -13879,12 +13879,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
           NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
           for (int i = 0; i < buslines.count; i++) {
-              AMapBusLine* item = (AMapBusLine*) HEAP_AmapSearchFluttify[[buslinesRefArray objectAtIndex:i]];
+              AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
               [buslines addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.buslines = buslines;
           methodResult(@"success");
@@ -13895,10 +13895,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapTaxi* taxi = (AMapTaxi*) HEAP_AmapSearchFluttify[@([args[@"taxi"] integerValue])];
+          AMapTaxi* taxi = (AMapTaxi*) HEAP[@([args[@"taxi"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.taxi = taxi;
           methodResult(@"success");
@@ -13909,10 +13909,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapRailway* railway = (AMapRailway*) HEAP_AmapSearchFluttify[@([args[@"railway"] integerValue])];
+          AMapRailway* railway = (AMapRailway*) HEAP[@([args[@"railway"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.railway = railway;
           methodResult(@"success");
@@ -13926,7 +13926,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* enterName = (NSString*) args[@"enterName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.enterName = enterName;
           methodResult(@"success");
@@ -13937,10 +13937,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"enterLocation"] integerValue])];
+          AMapGeoPoint* enterLocation = (AMapGeoPoint*) HEAP[@([args[@"enterLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.enterLocation = enterLocation;
           methodResult(@"success");
@@ -13954,7 +13954,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* exitName = (NSString*) args[@"exitName"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.exitName = exitName;
           methodResult(@"success");
@@ -13965,10 +13965,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"exitLocation"] integerValue])];
+          AMapGeoPoint* exitLocation = (AMapGeoPoint*) HEAP[@([args[@"exitLocation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSegment* ref = (AMapSegment*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSegment* ref = (AMapSegment*) HEAP[@(refId)];
       
           ref.exitLocation = exitLocation;
           methodResult(@"success");
@@ -13982,7 +13982,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat cost = [args[@"cost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.cost = cost;
           methodResult(@"success");
@@ -13996,7 +13996,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -14010,7 +14010,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           BOOL nightflag = [args[@"nightflag"] boolValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.nightflag = nightflag;
           methodResult(@"success");
@@ -14024,7 +14024,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger walkingDistance = [args[@"walkingDistance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.walkingDistance = walkingDistance;
           methodResult(@"success");
@@ -14038,12 +14038,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* segmentsRefArray = (NSArray<NSNumber*> *) args[@"segments"];
           NSMutableArray<AMapSegment*>* segments = [NSMutableArray arrayWithCapacity:segmentsRefArray.count];
           for (int i = 0; i < segments.count; i++) {
-              AMapSegment* item = (AMapSegment*) HEAP_AmapSearchFluttify[[segmentsRefArray objectAtIndex:i]];
+              AMapSegment* item = (AMapSegment*) HEAP[[segmentsRefArray objectAtIndex:i]];
               [segments addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.segments = segments;
           methodResult(@"success");
@@ -14057,7 +14057,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTransit* ref = (AMapTransit*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTransit* ref = (AMapTransit*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14068,10 +14068,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"origin"] integerValue])];
+          AMapGeoPoint* origin = (AMapGeoPoint*) HEAP[@([args[@"origin"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.origin = origin;
           methodResult(@"success");
@@ -14082,10 +14082,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"destination"] integerValue])];
+          AMapGeoPoint* destination = (AMapGeoPoint*) HEAP[@([args[@"destination"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.destination = destination;
           methodResult(@"success");
@@ -14099,7 +14099,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat taxiCost = [args[@"taxiCost"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.taxiCost = taxiCost;
           methodResult(@"success");
@@ -14113,12 +14113,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
           NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
           for (int i = 0; i < paths.count; i++) {
-              AMapPath* item = (AMapPath*) HEAP_AmapSearchFluttify[[pathsRefArray objectAtIndex:i]];
+              AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
               [paths addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.paths = paths;
           methodResult(@"success");
@@ -14132,12 +14132,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* transitsRefArray = (NSArray<NSNumber*> *) args[@"transits"];
           NSMutableArray<AMapTransit*>* transits = [NSMutableArray arrayWithCapacity:transitsRefArray.count];
           for (int i = 0; i < transits.count; i++) {
-              AMapTransit* item = (AMapTransit*) HEAP_AmapSearchFluttify[[transitsRefArray objectAtIndex:i]];
+              AMapTransit* item = (AMapTransit*) HEAP[[transitsRefArray objectAtIndex:i]];
               [transits addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapRoute* ref = (AMapRoute*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapRoute* ref = (AMapRoute*) HEAP[@(refId)];
       
           ref.transits = transits;
           methodResult(@"success");
@@ -14151,7 +14151,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger originID = [args[@"originID"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.originID = originID;
           methodResult(@"success");
@@ -14165,7 +14165,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger destID = [args[@"destID"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.destID = destID;
           methodResult(@"success");
@@ -14179,7 +14179,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14193,7 +14193,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger duration = [args[@"duration"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.duration = duration;
           methodResult(@"success");
@@ -14207,7 +14207,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* info = (NSString*) args[@"info"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.info = info;
           methodResult(@"success");
@@ -14221,7 +14221,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger code = [args[@"code"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[@(refId)];
       
           ref.code = code;
           methodResult(@"success");
@@ -14235,7 +14235,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -14249,7 +14249,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -14263,7 +14263,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -14277,7 +14277,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* weather = (NSString*) args[@"weather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.weather = weather;
           methodResult(@"success");
@@ -14291,7 +14291,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* temperature = (NSString*) args[@"temperature"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.temperature = temperature;
           methodResult(@"success");
@@ -14305,7 +14305,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* windDirection = (NSString*) args[@"windDirection"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.windDirection = windDirection;
           methodResult(@"success");
@@ -14319,7 +14319,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* windPower = (NSString*) args[@"windPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.windPower = windPower;
           methodResult(@"success");
@@ -14333,7 +14333,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* humidity = (NSString*) args[@"humidity"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.humidity = humidity;
           methodResult(@"success");
@@ -14347,7 +14347,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* reportTime = (NSString*) args[@"reportTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherLive* ref = (AMapLocalWeatherLive*) HEAP[@(refId)];
       
           ref.reportTime = reportTime;
           methodResult(@"success");
@@ -14361,7 +14361,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* date = (NSString*) args[@"date"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.date = date;
           methodResult(@"success");
@@ -14375,7 +14375,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* week = (NSString*) args[@"week"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.week = week;
           methodResult(@"success");
@@ -14389,7 +14389,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* dayWeather = (NSString*) args[@"dayWeather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayWeather = dayWeather;
           methodResult(@"success");
@@ -14403,7 +14403,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* nightWeather = (NSString*) args[@"nightWeather"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightWeather = nightWeather;
           methodResult(@"success");
@@ -14417,7 +14417,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* dayTemp = (NSString*) args[@"dayTemp"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayTemp = dayTemp;
           methodResult(@"success");
@@ -14431,7 +14431,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* nightTemp = (NSString*) args[@"nightTemp"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightTemp = nightTemp;
           methodResult(@"success");
@@ -14445,7 +14445,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* dayWind = (NSString*) args[@"dayWind"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayWind = dayWind;
           methodResult(@"success");
@@ -14459,7 +14459,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* nightWind = (NSString*) args[@"nightWind"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightWind = nightWind;
           methodResult(@"success");
@@ -14473,7 +14473,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* dayPower = (NSString*) args[@"dayPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.dayPower = dayPower;
           methodResult(@"success");
@@ -14487,7 +14487,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* nightPower = (NSString*) args[@"nightPower"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalDayWeatherForecast* ref = (AMapLocalDayWeatherForecast*) HEAP[@(refId)];
       
           ref.nightPower = nightPower;
           methodResult(@"success");
@@ -14501,7 +14501,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* adcode = (NSString*) args[@"adcode"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.adcode = adcode;
           methodResult(@"success");
@@ -14515,7 +14515,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* province = (NSString*) args[@"province"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.province = province;
           methodResult(@"success");
@@ -14529,7 +14529,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* city = (NSString*) args[@"city"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.city = city;
           methodResult(@"success");
@@ -14543,7 +14543,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* reportTime = (NSString*) args[@"reportTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.reportTime = reportTime;
           methodResult(@"success");
@@ -14557,12 +14557,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* castsRefArray = (NSArray<NSNumber*> *) args[@"casts"];
           NSMutableArray<AMapLocalDayWeatherForecast*>* casts = [NSMutableArray arrayWithCapacity:castsRefArray.count];
           for (int i = 0; i < casts.count; i++) {
-              AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP_AmapSearchFluttify[[castsRefArray objectAtIndex:i]];
+              AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP[[castsRefArray objectAtIndex:i]];
               [casts addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapLocalWeatherForecast* ref = (AMapLocalWeatherForecast*) HEAP[@(refId)];
       
           ref.casts = casts;
           methodResult(@"success");
@@ -14576,7 +14576,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* userID = (NSString*) args[@"userID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           ref.userID = userID;
           methodResult(@"success");
@@ -14587,10 +14587,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -14604,7 +14604,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           CGFloat distance = [args[@"distance"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14618,7 +14618,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* evaluationDescription = (NSString*) args[@"evaluationDescription"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.evaluationDescription = evaluationDescription;
           methodResult(@"success");
@@ -14632,7 +14632,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger status = [args[@"status"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -14646,7 +14646,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* expedite = (NSString*) args[@"expedite"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.expedite = expedite;
           methodResult(@"success");
@@ -14660,7 +14660,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* congested = (NSString*) args[@"congested"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.congested = congested;
           methodResult(@"success");
@@ -14674,7 +14674,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* blocked = (NSString*) args[@"blocked"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.blocked = blocked;
           methodResult(@"success");
@@ -14688,7 +14688,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* unknown = (NSString*) args[@"unknown"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[@(refId)];
       
           ref.unknown = unknown;
           methodResult(@"success");
@@ -14702,7 +14702,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -14716,7 +14716,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger status = [args[@"status"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.status = status;
           methodResult(@"success");
@@ -14730,7 +14730,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* direction = (NSString*) args[@"direction"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.direction = direction;
           methodResult(@"success");
@@ -14744,7 +14744,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           float angle = [args[@"angle"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.angle = angle;
           methodResult(@"success");
@@ -14758,7 +14758,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           float speed = [args[@"speed"] floatValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.speed = speed;
           methodResult(@"success");
@@ -14772,7 +14772,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* polyline = (NSString*) args[@"polyline"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[@(refId)];
       
           ref.polyline = polyline;
           methodResult(@"success");
@@ -14786,7 +14786,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* statusDescription = (NSString*) args[@"statusDescription"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           ref.statusDescription = statusDescription;
           methodResult(@"success");
@@ -14797,10 +14797,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) HEAP_AmapSearchFluttify[@([args[@"evaluation"] integerValue])];
+          AMapTrafficEvaluation* evaluation = (AMapTrafficEvaluation*) HEAP[@([args[@"evaluation"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           ref.evaluation = evaluation;
           methodResult(@"success");
@@ -14814,12 +14814,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
           NSMutableArray<AMapTrafficRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
           for (int i = 0; i < roads.count; i++) {
-              AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP_AmapSearchFluttify[[roadsRefArray objectAtIndex:i]];
+              AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
               [roads addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapTrafficInfo* ref = (AMapTrafficInfo*) HEAP[@(refId)];
       
           ref.roads = roads;
           methodResult(@"success");
@@ -14833,7 +14833,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* uid = (NSString*) args[@"uid"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage* ref = (AMapCloudImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -14847,7 +14847,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* preurl = (NSString*) args[@"preurl"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage* ref = (AMapCloudImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           ref.preurl = preurl;
           methodResult(@"success");
@@ -14861,7 +14861,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* url = (NSString*) args[@"url"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudImage* ref = (AMapCloudImage*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudImage* ref = (AMapCloudImage*) HEAP[@(refId)];
       
           ref.url = url;
           methodResult(@"success");
@@ -14875,7 +14875,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger uid = [args[@"uid"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.uid = uid;
           methodResult(@"success");
@@ -14889,7 +14889,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* name = (NSString*) args[@"name"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.name = name;
           methodResult(@"success");
@@ -14900,10 +14900,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // ref arg
-          AMapGeoPoint* location = (AMapGeoPoint*) HEAP_AmapSearchFluttify[@([args[@"location"] integerValue])];
+          AMapGeoPoint* location = (AMapGeoPoint*) HEAP[@([args[@"location"] integerValue])];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.location = location;
           methodResult(@"success");
@@ -14917,7 +14917,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* address = (NSString*) args[@"address"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.address = address;
           methodResult(@"success");
@@ -14931,7 +14931,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* createTime = (NSString*) args[@"createTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.createTime = createTime;
           methodResult(@"success");
@@ -14945,7 +14945,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* updateTime = (NSString*) args[@"updateTime"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.updateTime = updateTime;
           methodResult(@"success");
@@ -14959,7 +14959,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger distance = [args[@"distance"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.distance = distance;
           methodResult(@"success");
@@ -14973,12 +14973,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
           NSMutableArray<AMapCloudImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
           for (int i = 0; i < images.count; i++) {
-              AMapCloudImage* item = (AMapCloudImage*) HEAP_AmapSearchFluttify[[imagesRefArray objectAtIndex:i]];
+              AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:i]];
               [images addObject:item];
           }
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[@(refId)];
       
           ref.images = images;
           methodResult(@"success");
@@ -14992,7 +14992,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSString* userID = (NSString*) args[@"userID"];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           ref.userID = userID;
           methodResult(@"success");
@@ -15006,7 +15006,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapSearchCoordinateType coordinateType = (AMapSearchCoordinateType) [args[@"coordinateType"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           ref.coordinateType = coordinateType;
           methodResult(@"success");
@@ -15017,12 +15017,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
           // args
           // struct arg
-          NSValue* coordinateValue = (NSValue*) HEAP_AmapSearchFluttify[@([args[@"coordinate"] integerValue])];
+          NSValue* coordinateValue = (NSValue*) HEAP[@([args[@"coordinate"] integerValue])];
           CLLocationCoordinate2D coordinate;
           [coordinateValue getValue:&coordinate];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[@(refId)];
       
           ref.coordinate = coordinate;
           methodResult(@"success");
@@ -15035,7 +15035,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -15048,7 +15048,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           ref.delegate = self;
           methodResult(@"success");
@@ -15062,7 +15062,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSInteger timeout = [args[@"timeout"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           ref.timeout = timeout;
           methodResult(@"success");
@@ -15076,7 +15076,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           AMapSearchLanguage language = (AMapSearchLanguage) [args[@"language"] integerValue];
       
           NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP_AmapSearchFluttify[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
       
           ref.language = language;
           methodResult(@"success");
@@ -15085,7 +15085,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -15094,7 +15094,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIIDSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15103,7 +15103,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIKeywordsSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15112,7 +15112,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIAroundSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15121,7 +15121,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIPolygonSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15130,7 +15130,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOISearchResponse class]];
           methodResult(@(isTargetType));
@@ -15139,7 +15139,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchRequest class]];
           methodResult(@(isTargetType));
@@ -15148,7 +15148,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOISearchResponse class]];
           methodResult(@(isTargetType));
@@ -15157,7 +15157,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15166,7 +15166,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapInputTipsSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15175,7 +15175,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15184,7 +15184,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeocodeSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15193,7 +15193,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15202,7 +15202,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapReGeocodeSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15211,7 +15211,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15220,7 +15220,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusStopSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15229,7 +15229,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineBaseSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15238,7 +15238,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineNameSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15247,7 +15247,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineIDSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15256,7 +15256,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLineSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15265,7 +15265,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistrictSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15274,7 +15274,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistrictSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15283,7 +15283,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -15292,7 +15292,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDrivingRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15301,7 +15301,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWalkingRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15310,7 +15310,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTransitRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15319,7 +15319,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRidingRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15328,7 +15328,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15337,7 +15337,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRidingRouteSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15346,7 +15346,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTruckRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15355,7 +15355,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistanceSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15364,7 +15364,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistanceSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15373,7 +15373,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWeatherSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15382,7 +15382,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWeatherSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15391,7 +15391,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -15400,7 +15400,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15409,7 +15409,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficCircleSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15418,7 +15418,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadTrafficSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15427,7 +15427,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchRequest class]];
           methodResult(@(isTargetType));
@@ -15436,7 +15436,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchResponse class]];
           methodResult(@(isTargetType));
@@ -15445,7 +15445,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -15454,7 +15454,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIAroundSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15463,7 +15463,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIPolygonSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15472,7 +15472,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOIIDSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15481,7 +15481,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOILocalSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15490,7 +15490,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOISearchResponse class]];
           methodResult(@(isTargetType));
@@ -15499,7 +15499,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapShareSearchBaseRequest class]];
           methodResult(@(isTargetType));
@@ -15508,7 +15508,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocationShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15517,7 +15517,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15526,7 +15526,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRouteShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15535,7 +15535,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNavigationShareSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15544,7 +15544,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapShareSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15553,7 +15553,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureRouteSearchRequest class]];
           methodResult(@(isTargetType));
@@ -15562,7 +15562,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureRouteSearchResponse class]];
           methodResult(@(isTargetType));
@@ -15571,7 +15571,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSearchObject class]];
           methodResult(@(isTargetType));
@@ -15580,7 +15580,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeoPoint class]];
           methodResult(@(isTargetType));
@@ -15589,7 +15589,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeoPolygon class]];
           methodResult(@(isTargetType));
@@ -15598,7 +15598,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCity class]];
           methodResult(@(isTargetType));
@@ -15607,7 +15607,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSuggestion class]];
           methodResult(@(isTargetType));
@@ -15616,7 +15616,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTip class]];
           methodResult(@(isTargetType));
@@ -15625,7 +15625,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapImage class]];
           methodResult(@(isTargetType));
@@ -15634,7 +15634,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOIExtension class]];
           methodResult(@(isTargetType));
@@ -15643,7 +15643,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapIndoorData class]];
           methodResult(@(isTargetType));
@@ -15652,7 +15652,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSubPOI class]];
           methodResult(@(isTargetType));
@@ -15661,7 +15661,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoutePOI class]];
           methodResult(@(isTargetType));
@@ -15670,7 +15670,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPOI class]];
           methodResult(@(isTargetType));
@@ -15679,7 +15679,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapAOI class]];
           methodResult(@(isTargetType));
@@ -15688,7 +15688,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoad class]];
           methodResult(@(isTargetType));
@@ -15697,7 +15697,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoadInter class]];
           methodResult(@(isTargetType));
@@ -15706,7 +15706,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapStreetNumber class]];
           methodResult(@(isTargetType));
@@ -15715,7 +15715,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusinessArea class]];
           methodResult(@(isTargetType));
@@ -15724,7 +15724,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapAddressComponent class]];
           methodResult(@(isTargetType));
@@ -15733,7 +15733,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapReGeocode class]];
           methodResult(@(isTargetType));
@@ -15742,7 +15742,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapGeocode class]];
           methodResult(@(isTargetType));
@@ -15751,7 +15751,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusStop class]];
           methodResult(@(isTargetType));
@@ -15760,7 +15760,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapBusLine class]];
           methodResult(@(isTargetType));
@@ -15769,7 +15769,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistrict class]];
           methodResult(@(isTargetType));
@@ -15778,7 +15778,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTMC class]];
           methodResult(@(isTargetType));
@@ -15787,7 +15787,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapStep class]];
           methodResult(@(isTargetType));
@@ -15796,7 +15796,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapPath class]];
           methodResult(@(isTargetType));
@@ -15805,7 +15805,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureTimeInfoElement class]];
           methodResult(@(isTargetType));
@@ -15814,7 +15814,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapFutureTimeInfo class]];
           methodResult(@(isTargetType));
@@ -15823,7 +15823,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapWalking class]];
           methodResult(@(isTargetType));
@@ -15832,7 +15832,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTaxi class]];
           methodResult(@(isTargetType));
@@ -15841,7 +15841,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRailwayStation class]];
           methodResult(@(isTargetType));
@@ -15850,7 +15850,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRailwaySpace class]];
           methodResult(@(isTargetType));
@@ -15859,7 +15859,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRailway class]];
           methodResult(@(isTargetType));
@@ -15868,7 +15868,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSegment class]];
           methodResult(@(isTargetType));
@@ -15877,7 +15877,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTransit class]];
           methodResult(@(isTargetType));
@@ -15886,7 +15886,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapRoute class]];
           methodResult(@(isTargetType));
@@ -15895,7 +15895,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapDistanceResult class]];
           methodResult(@(isTargetType));
@@ -15904,7 +15904,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocalWeatherLive class]];
           methodResult(@(isTargetType));
@@ -15913,7 +15913,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocalDayWeatherForecast class]];
           methodResult(@(isTargetType));
@@ -15922,7 +15922,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapLocalWeatherForecast class]];
           methodResult(@(isTargetType));
@@ -15931,7 +15931,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbyUserInfo class]];
           methodResult(@(isTargetType));
@@ -15940,7 +15940,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTrafficEvaluation class]];
           methodResult(@(isTargetType));
@@ -15949,7 +15949,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTrafficRoad class]];
           methodResult(@(isTargetType));
@@ -15958,7 +15958,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapTrafficInfo class]];
           methodResult(@(isTargetType));
@@ -15967,7 +15967,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudImage class]];
           methodResult(@(isTargetType));
@@ -15976,7 +15976,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapCloudPOI class]];
           methodResult(@(isTargetType));
@@ -15985,7 +15985,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbyUploadInfo class]];
           methodResult(@(isTargetType));
@@ -15994,7 +15994,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapNearbySearchManager class]];
           methodResult(@(isTargetType));
@@ -16003,7 +16003,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::isKindOfAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           BOOL isTargetType = [ref isKindOfClass:[AMapSearchAPI class]];
           methodResult(@(isTargetType));
@@ -16012,12 +16012,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOISearchBaseRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16025,12 +16025,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIIDSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16038,12 +16038,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIKeywordsSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16051,12 +16051,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIAroundSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16064,12 +16064,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIPolygonSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16077,12 +16077,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOISearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16090,12 +16090,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoutePOISearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16103,12 +16103,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoutePOISearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16116,12 +16116,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapInputTipsSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16129,12 +16129,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapInputTipsSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16142,12 +16142,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeocodeSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16155,12 +16155,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeocodeSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16168,12 +16168,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapReGeocodeSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16181,12 +16181,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapReGeocodeSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16194,12 +16194,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusStopSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16207,12 +16207,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusStopSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16220,12 +16220,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineBaseSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16233,12 +16233,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineNameSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16246,12 +16246,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineIDSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16259,12 +16259,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLineSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16272,12 +16272,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistrictSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16285,12 +16285,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistrictSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16298,12 +16298,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteSearchBaseRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16311,12 +16311,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDrivingRouteSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16324,12 +16324,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWalkingRouteSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16337,12 +16337,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTransitRouteSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16350,12 +16350,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRidingRouteSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16363,12 +16363,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16376,12 +16376,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRidingRouteSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16389,12 +16389,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTruckRouteSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16402,12 +16402,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistanceSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16415,12 +16415,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistanceSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16428,12 +16428,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWeatherSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16441,12 +16441,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWeatherSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16454,12 +16454,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficSearchBaseRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16467,12 +16467,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16480,12 +16480,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficCircleSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16493,12 +16493,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadTrafficSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16506,12 +16506,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbySearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16519,12 +16519,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbySearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16532,12 +16532,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudSearchBaseRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16545,12 +16545,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOIAroundSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16558,12 +16558,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOIPolygonSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16571,12 +16571,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOIIDSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16584,12 +16584,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOILocalSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16597,12 +16597,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOISearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16610,12 +16610,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapShareSearchBaseRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16623,12 +16623,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocationShareSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16636,12 +16636,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIShareSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16649,12 +16649,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRouteShareSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16662,12 +16662,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNavigationShareSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16675,12 +16675,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapShareSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16688,12 +16688,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureRouteSearchRequest *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16701,12 +16701,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureRouteSearchResponse *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16714,12 +16714,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSearchObject *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16727,12 +16727,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeoPoint *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16740,12 +16740,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeoPolygon *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16753,12 +16753,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCity *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16766,12 +16766,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSuggestion *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16779,12 +16779,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTip *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16792,12 +16792,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapImage *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16805,12 +16805,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOIExtension *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16818,12 +16818,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapIndoorData *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16831,12 +16831,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSubPOI *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16844,12 +16844,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoutePOI *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16857,12 +16857,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPOI *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16870,12 +16870,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapAOI *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16883,12 +16883,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoad *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16896,12 +16896,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoadInter *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16909,12 +16909,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapStreetNumber *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16922,12 +16922,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusinessArea *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16935,12 +16935,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapAddressComponent *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16948,12 +16948,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapReGeocode *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16961,12 +16961,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapGeocode *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16974,12 +16974,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusStop *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -16987,12 +16987,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapBusLine *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17000,12 +17000,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistrict *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17013,12 +17013,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTMC *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17026,12 +17026,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapStep *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17039,12 +17039,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapPath *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17052,12 +17052,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureTimeInfoElement *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17065,12 +17065,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapFutureTimeInfo *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17078,12 +17078,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapWalking *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17091,12 +17091,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTaxi *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17104,12 +17104,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRailwayStation *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17117,12 +17117,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRailwaySpace *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17130,12 +17130,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRailway *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17143,12 +17143,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSegment *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17156,12 +17156,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTransit *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17169,12 +17169,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapRoute *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17182,12 +17182,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapDistanceResult *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17195,12 +17195,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocalWeatherLive *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17208,12 +17208,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocalDayWeatherForecast *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17221,12 +17221,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapLocalWeatherForecast *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17234,12 +17234,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbyUserInfo *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17247,12 +17247,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTrafficEvaluation *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17260,12 +17260,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTrafficRoad *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17273,12 +17273,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapTrafficInfo *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17286,12 +17286,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudImage *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17299,12 +17299,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapCloudPOI *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17312,12 +17312,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbyUploadInfo *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17325,12 +17325,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapNearbySearchManager": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapNearbySearchManager *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17338,12 +17338,12 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
       @"RefClass::asAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // 引用对象
           NSInteger refId = [args[@"refId"] integerValue];
-          id ref = HEAP_AmapSearchFluttify[@(refId)];
+          id ref = HEAP[@(refId)];
       
           // 转型
           ref = (AMapSearchAPI *) ref;
-          // 放回HEAP_AmapSearchFluttify
-          HEAP_AmapSearchFluttify[@(refId)] = ref;
+          // 放回HEAP
+          HEAP[@(refId)] = ref;
       
           methodResult(@(refId));
       },
@@ -17352,1122 +17352,1122 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
           NSLog(@"ObjectFactory::createAMapPOISearchBaseRequest");
       
           AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOIIDSearchRequest");
       
           AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOIKeywordsSearchRequest");
       
           AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOIAroundSearchRequest");
       
           AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOIPolygonSearchRequest");
       
           AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOISearchResponse");
       
           AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoutePOISearchRequest");
       
           AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoutePOISearchResponse");
       
           AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapInputTipsSearchRequest");
       
           AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapInputTipsSearchResponse");
       
           AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapGeocodeSearchRequest");
       
           AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapGeocodeSearchResponse");
       
           AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapReGeocodeSearchRequest");
       
           AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapReGeocodeSearchResponse");
       
           AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusStopSearchRequest");
       
           AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusStopSearchResponse");
       
           AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusLineBaseSearchRequest");
       
           AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusLineNameSearchRequest");
       
           AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusLineIDSearchRequest");
       
           AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusLineSearchResponse");
       
           AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDistrictSearchRequest");
       
           AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDistrictSearchResponse");
       
           AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRouteSearchBaseRequest");
       
           AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDrivingRouteSearchRequest");
       
           AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapWalkingRouteSearchRequest");
       
           AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTransitRouteSearchRequest");
       
           AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRidingRouteSearchRequest");
       
           AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRouteSearchResponse");
       
           AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRidingRouteSearchResponse");
       
           AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTruckRouteSearchRequest");
       
           AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDistanceSearchRequest");
       
           AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDistanceSearchResponse");
       
           AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapWeatherSearchRequest");
       
           AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapWeatherSearchResponse");
       
           AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoadTrafficSearchBaseRequest");
       
           AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoadTrafficSearchRequest");
       
           AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoadTrafficCircleSearchRequest");
       
           AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoadTrafficSearchResponse");
       
           AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNearbySearchRequest");
       
           AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNearbySearchResponse");
       
           AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudSearchBaseRequest");
       
           AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudPOIAroundSearchRequest");
       
           AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudPOIPolygonSearchRequest");
       
           AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudPOIIDSearchRequest");
       
           AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudPOILocalSearchRequest");
       
           AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudPOISearchResponse");
       
           AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapShareSearchBaseRequest");
       
           AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapLocationShareSearchRequest");
       
           AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOIShareSearchRequest");
       
           AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRouteShareSearchRequest");
       
           AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNavigationShareSearchRequest");
       
           AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapShareSearchResponse");
       
           AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapFutureRouteSearchRequest");
       
           AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapFutureRouteSearchResponse");
       
           AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapSearchObject");
       
           AMapSearchObject* ref = [[AMapSearchObject alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapGeoPoint");
       
           AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapGeoPolygon");
       
           AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCity");
       
           AMapCity* ref = [[AMapCity alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapSuggestion");
       
           AMapSuggestion* ref = [[AMapSuggestion alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTip");
       
           AMapTip* ref = [[AMapTip alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapImage");
       
           AMapImage* ref = [[AMapImage alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOIExtension");
       
           AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapIndoorData");
       
           AMapIndoorData* ref = [[AMapIndoorData alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapSubPOI");
       
           AMapSubPOI* ref = [[AMapSubPOI alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoutePOI");
       
           AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPOI");
       
           AMapPOI* ref = [[AMapPOI alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapAOI");
       
           AMapAOI* ref = [[AMapAOI alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoad");
       
           AMapRoad* ref = [[AMapRoad alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoadInter");
       
           AMapRoadInter* ref = [[AMapRoadInter alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapStreetNumber");
       
           AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusinessArea");
       
           AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapAddressComponent");
       
           AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapReGeocode");
       
           AMapReGeocode* ref = [[AMapReGeocode alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapGeocode");
       
           AMapGeocode* ref = [[AMapGeocode alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusStop");
       
           AMapBusStop* ref = [[AMapBusStop alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapBusLine");
       
           AMapBusLine* ref = [[AMapBusLine alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDistrict");
       
           AMapDistrict* ref = [[AMapDistrict alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTMC");
       
           AMapTMC* ref = [[AMapTMC alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapStep");
       
           AMapStep* ref = [[AMapStep alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapPath");
       
           AMapPath* ref = [[AMapPath alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapFutureTimeInfoElement");
       
           AMapFutureTimeInfoElement* ref = [[AMapFutureTimeInfoElement alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapFutureTimeInfo");
       
           AMapFutureTimeInfo* ref = [[AMapFutureTimeInfo alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapWalking");
       
           AMapWalking* ref = [[AMapWalking alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTaxi");
       
           AMapTaxi* ref = [[AMapTaxi alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRailwayStation");
       
           AMapRailwayStation* ref = [[AMapRailwayStation alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRailwaySpace");
       
           AMapRailwaySpace* ref = [[AMapRailwaySpace alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRailway");
       
           AMapRailway* ref = [[AMapRailway alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapSegment");
       
           AMapSegment* ref = [[AMapSegment alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTransit");
       
           AMapTransit* ref = [[AMapTransit alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapRoute");
       
           AMapRoute* ref = [[AMapRoute alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapDistanceResult");
       
           AMapDistanceResult* ref = [[AMapDistanceResult alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapLocalWeatherLive");
       
           AMapLocalWeatherLive* ref = [[AMapLocalWeatherLive alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapLocalDayWeatherForecast");
       
           AMapLocalDayWeatherForecast* ref = [[AMapLocalDayWeatherForecast alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapLocalWeatherForecast");
       
           AMapLocalWeatherForecast* ref = [[AMapLocalWeatherForecast alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNearbyUserInfo");
       
           AMapNearbyUserInfo* ref = [[AMapNearbyUserInfo alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTrafficEvaluation");
       
           AMapTrafficEvaluation* ref = [[AMapTrafficEvaluation alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTrafficRoad");
       
           AMapTrafficRoad* ref = [[AMapTrafficRoad alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapTrafficInfo");
       
           AMapTrafficInfo* ref = [[AMapTrafficInfo alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudImage");
       
           AMapCloudImage* ref = [[AMapCloudImage alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapCloudPOI");
       
           AMapCloudPOI* ref = [[AMapCloudPOI alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapNearbyUploadInfo");
       
           AMapNearbyUploadInfo* ref = [[AMapNearbyUploadInfo alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
       @"ObjectFactory::createAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           NSLog(@"ObjectFactory::createAMapSearchAPI");
       
           AMapSearchAPI* ref = [[AMapSearchAPI alloc] init];
-          HEAP_AmapSearchFluttify[@(ref.hash)] = ref;
+          HEAP[@(ref.hash)] = ref;
       
           methodResult(@(ref.hash));
       
-          NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
+          NSLog(@"HEAP: %@", HEAP);
       },
       
     };
@@ -18477,11 +18477,6 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
 }
 
 + (void)registerWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar {
-  // 栈容器
-  STACK_AmapSearchFluttify = @{}.mutableCopy;
-  // 堆容器
-  HEAP_AmapSearchFluttify = @{}.mutableCopy;
-
   FlutterMethodChannel *channel = [FlutterMethodChannel
       methodChannelWithName:@"me.yohom/amap_search_fluttify"
             binaryMessenger:[registrar messenger]];
@@ -18496,184 +18491,11 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
 // Method Handlers
 - (void)handleMethodCall:(FlutterMethodCall *)methodCall result:(FlutterResult)methodResult {
   NSDictionary<NSString *, id> *args = (NSDictionary<NSString *, id> *) [methodCall arguments];
-  // 是否一个对象
-  if ([@"ObjectFactory::release" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber *) args[@"refId"];
 
-    NSLog(@"ObjectFactory::释放对象: %@@%@", NSStringFromClass([HEAP_AmapSearchFluttify[refId] class]), refId);
-
-    [HEAP_AmapSearchFluttify removeObjectForKey:refId];
-    methodResult(@"success");
-
-    NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
-  }
-  // 清空堆
-  else if ([@"ObjectFactory::clearHeap" isEqualToString:methodCall.method]) {
-    NSLog(@"ObjectFactory::清空堆");
-
-    [HEAP_AmapSearchFluttify removeAllObjects];
-    methodResult(@"success");
-
-    NSLog(@"HEAP_AmapSearchFluttify: %@", HEAP_AmapSearchFluttify);
-  }
-  // 压入栈
-  else if ([@"ObjectFactory::pushStack" isEqualToString:methodCall.method]) {
-    NSString* name = (NSString*) args[@"name"];
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    // todo release去掉日志
-    NSLog(@"ObjectFactory::压入栈 %@@%@", NSStringFromClass([HEAP_AmapSearchFluttify[refId] class]), refId);
-
-    STACK_AmapSearchFluttify[name] = HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@"success");
-
-    NSLog(@"STACK_AmapSearchFluttify: %@", STACK_AmapSearchFluttify);
-  }
-  // 压入栈 jsonable
-  else if ([@"ObjectFactory::pushStackJsonable" isEqualToString:methodCall.method]) {
-    NSString* name = (NSString*) args[@"name"];
-    NSObject* data = (NSObject*) args[@"data"];
-
-    // todo release去掉日志
-    NSLog(@"ObjectFactory::压入栈 %@", data);
-
-    STACK_AmapSearchFluttify[name] = data;
-
-    methodResult(@"success");
-
-    NSLog(@"STACK_AmapSearchFluttify: %@", STACK_AmapSearchFluttify);
-  }
-  // 清空栈
-  else if ([@"ObjectFactory::clearStack" isEqualToString:methodCall.method]) {
-    NSLog(@"ObjectFactory::清空栈");
-
-    [STACK_AmapSearchFluttify removeAllObjects];
-    methodResult(@"success");
-
-    NSLog(@"STACK_AmapSearchFluttify: %@", STACK_AmapSearchFluttify);
-  }
-  // 创建CLLocationCoordinate2D
-  else if ([@"ObjectFactory::createCLLocationCoordinate2D" isEqualToString:methodCall.method]) {
-    CLLocationDegrees latitude = [args[@"latitude"] doubleValue];
-    CLLocationDegrees longitude = [args[@"longitude"] doubleValue];
-
-    CLLocationCoordinate2D data = CLLocationCoordinate2DMake(latitude, longitude);
-
-    NSValue* dataValue = [NSValue value:&data withObjCType:@encode(CLLocationCoordinate2D)];
-    HEAP_AmapSearchFluttify[@(dataValue.hash)] = dataValue;
-
-    methodResult(@(dataValue.hash));
-  }
-  // CLLocationCoordinate2D获取latitude
-  else if ([@"CLLocationCoordinate2D::get_latitude" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    NSValue* dataValue = (NSValue*) HEAP_AmapSearchFluttify[refId];
-
-    CLLocationCoordinate2D _structValue;
-    [dataValue getValue:&_structValue];
-
-    methodResult(@(_structValue.latitude));
-  }
-  // CLLocationCoordinate2D获取longitude
-  else if ([@"CLLocationCoordinate2D::get_longitude" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    NSValue* dataValue = (NSValue*) HEAP_AmapSearchFluttify[refId];
-
-    CLLocationCoordinate2D _structValue;
-    [dataValue getValue:&_structValue];
-
-    methodResult(@(_structValue.longitude));
-  }
-  // CLLocation获取coordinate
-  else if ([@"CLLocation::get_coordinate" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-
-    CLLocationCoordinate2D data = location.coordinate;
-
-    NSValue* dataValue = [NSValue value:&data withObjCType:@encode(CLLocationCoordinate2D)];
-    HEAP_AmapSearchFluttify[@(dataValue.hash)] = dataValue;
-
-    methodResult(@(dataValue.hash));
-  }
-  // CLLocation获取altitude
-  else if ([@"CLLocation::get_altitude" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@(location.altitude));
-  }
-  // CLLocation获取horizontalAccuracy
-  else if ([@"CLLocation::get_horizontalAccuracy" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@(location.horizontalAccuracy));
-  }
-  // CLLocation获取verticalAccuracy
-  else if ([@"CLLocation::get_verticalAccuracy" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@(location.verticalAccuracy));
-  }
-  // CLLocation获取course
-  else if ([@"CLLocation::get_course" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@(location.course));
-  }
-  // CLLocation获取speed
-  else if ([@"CLLocation::get_speed" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@(location.speed));
-  }
-  // CLLocation获取floor
-  else if ([@"CLLocation::get_floor" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLLocation* location = (CLLocation*) HEAP_AmapSearchFluttify[refId];
-    CLFloor* floor = location.floor;
-
-    HEAP_AmapSearchFluttify[@(floor.hash)] = floor;
-
-    methodResult(@(floor.hash));
-  }
-  // CLFloor获取level
-  else if ([@"CLFloor::get_level" isEqualToString:methodCall.method]) {
-    NSNumber* refId = (NSNumber*) args[@"refId"];
-
-    CLFloor* floor = (CLFloor*) HEAP_AmapSearchFluttify[refId];
-
-    methodResult(@(floor.level));
-  }
-  // 创建UIImage
-  else if ([@"ObjectFactory::createUIImage" isEqualToString:methodCall.method]) {
-    FlutterStandardTypedData* bitmapBytes = (FlutterStandardTypedData*) args[@"bitmapBytes"];
-
-    UIImage* bitmap = [UIImage imageWithData:bitmapBytes.data];
-
-    HEAP_AmapSearchFluttify[@(bitmap.hash)] = bitmap;
-
-    methodResult(@(bitmap.hash));
+  if (_handlerMap[methodCall.method] != nil) {
+    _handlerMap[methodCall.method](_registrar, args, methodResult);
   } else {
-    if (_handlerMap[methodCall.method] != nil) {
-      _handlerMap[methodCall.method](_registrar, args, methodResult);
-    } else {
-      methodResult(FlutterMethodNotImplemented);
-    }
+    methodResult(FlutterMethodNotImplemented);
   }
 }
 
@@ -18726,7 +18548,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argerror = @(error.hash);
-  HEAP_AmapSearchFluttify[argerror] = error;
+  HEAP[argerror] = error;
 
   [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError" arguments:@{@"error": argerror}];
   
@@ -18743,7 +18565,7 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argerror = @(error.hash);
-  HEAP_AmapSearchFluttify[argerror] = error;
+  HEAP[argerror] = error;
 
   [channel invokeMethod:@"Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError" arguments:@{@"error": argerror}];
   
@@ -18760,10 +18582,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(((NSObject*) request).hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argerror = @(error.hash);
-  HEAP_AmapSearchFluttify[argerror] = error;
+  HEAP[argerror] = error;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError" arguments:@{@"request": argrequest, @"error": argerror}];
   
@@ -18780,10 +18602,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18800,10 +18622,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18820,10 +18642,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18840,10 +18662,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18860,10 +18682,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18880,10 +18702,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18900,10 +18722,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18920,10 +18742,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18940,10 +18762,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18960,10 +18782,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -18980,10 +18802,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -19000,10 +18822,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -19020,10 +18842,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -19040,10 +18862,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -19060,10 +18882,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   
@@ -19080,10 +18902,10 @@ NSMutableDictionary<NSNumber*, NSObject*>* HEAP_AmapSearchFluttify;
   // convert to jsonable arg
   // ref callback arg
   NSNumber* argrequest = @(request.hash);
-  HEAP_AmapSearchFluttify[argrequest] = request;
+  HEAP[argrequest] = request;
   // ref callback arg
   NSNumber* argresponse = @(response.hash);
-  HEAP_AmapSearchFluttify[argresponse] = response;
+  HEAP[argresponse] = response;
 
   [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
   

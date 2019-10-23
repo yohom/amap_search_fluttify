@@ -46,7 +46,7 @@ class AmapSearch {
                 keyword, '', city);
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidPoiSearch = await ObjectFactory_Android
@@ -95,6 +95,7 @@ class AmapSearch {
     String keyword = '',
     String city = '',
     String type = '',
+    int radius = 1000,
   }) {
     // 会在listener中关闭
     // ignore: close_sinks
@@ -108,7 +109,7 @@ class AmapSearch {
                 keyword, type, city);
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidPoiSearch = await ObjectFactory_Android
@@ -122,7 +123,7 @@ class AmapSearch {
         // 创建边界
         final bound = await ObjectFactory_Android
             .createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int(
-                centerLatLng, 1000);
+                centerLatLng, radius);
         await _androidPoiSearch.setBound(bound);
         // 设置搜索类型
 
@@ -156,6 +157,8 @@ class AmapSearch {
         await location.set_latitude(center.latitude);
         await location.set_longitude(center.longitude);
         await request.set_location(location);
+        // 设置半径
+        await request.set_radius(radius);
 
         // 开始搜索
         await _iosSearch.AMapPOIAroundSearch(request);
@@ -188,7 +191,7 @@ class AmapSearch {
         await query.setCityLimit(true);
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidInputTip = await ObjectFactory_Android
@@ -248,7 +251,7 @@ class AmapSearch {
                 keyword, city);
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidGeocodeSearch = await ObjectFactory_Android
@@ -313,7 +316,7 @@ class AmapSearch {
                 latLngPoint, radius, 'AMAP');
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidGeocodeSearch = await ObjectFactory_Android
@@ -413,7 +416,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await ObjectFactory_Android
@@ -532,7 +535,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await ObjectFactory_Android
@@ -622,7 +625,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await ObjectFactory_Android
@@ -710,7 +713,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await ObjectFactory_Android
@@ -781,7 +784,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidBusStationSearch = await ObjectFactory_Android
@@ -838,7 +841,7 @@ class AmapSearch {
         await query.setKeywords(district);
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidDistrictSearch = await ObjectFactory_Android
@@ -896,7 +899,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await ObjectFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactory_Android.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidWeatherSearch = await ObjectFactory_Android
@@ -915,7 +918,7 @@ class AmapSearch {
 
         // 局部变量从HEAP中解除引用
         pool..add(query);
-        ObjectFactory_Android.release(query);
+        release(query);
       },
       ios: (pool) async {
         _iosSearch = await ObjectFactory_iOS.createAMapSearchAPI();
@@ -1152,13 +1155,13 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     super.onRouteSearchDoneResponse(request, response);
     dynamic route;
-    if (await request.isKindOfAMapDrivingRouteSearchRequest()) {
+    if (await isKindOfAMapDrivingRouteSearchRequest(request)) {
       route = DriveRouteResult.ios(await response.get_route());
-    } else if (await request.isKindOfAMapWalkingRouteSearchRequest()) {
+    } else if (await isKindOfAMapWalkingRouteSearchRequest(request)) {
       route = WalkRouteResult.ios(await response.get_route());
-    } else if (await request.isKindOfAMapBusLineBaseSearchRequest()) {
+    } else if (await isKindOfAMapBusLineBaseSearchRequest(request)) {
       route = BusRouteResult.ios(await response.get_route());
-    } else if (await request.isKindOfAMapRidingRouteSearchRequest()) {
+    } else if (await isKindOfAMapRidingRouteSearchRequest(request)) {
       route = RideRouteResult.ios(await response.get_route());
     }
     _streamController?.add(route);
