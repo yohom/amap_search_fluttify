@@ -15,6 +15,13 @@ class Poi with _ToFutureString {
   final com_amap_api_services_core_PoiItem _androidModel;
   final AMapPOI _iosModel;
 
+  Future<String> get address {
+    return platform(
+      android: (pool) => _androidModel.getSnippet(),
+      ios: (pool) => _iosModel.get_address(),
+    );
+  }
+
   Future<String> get title {
     return platform(
       android: (pool) => _androidModel.getTitle(),

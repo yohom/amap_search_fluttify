@@ -73,6 +73,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
               Observable.fromIterable(poiList)
                   .asyncMap((it) async =>
                       (await it.title) +
+                      (await it.address) +
                       await ((await it.latLng).toFutureString()))
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
@@ -148,6 +149,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
               Observable.fromIterable(poiList)
                   .asyncMap((it) async =>
                       (await it.title) +
+                      (await it.address) +
                       await ((await it.latLng).toFutureString()))
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
