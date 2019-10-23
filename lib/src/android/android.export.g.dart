@@ -1,4 +1,4 @@
-export 'ref.g.dart';
+export 'type_op.g.dart';
 export 'object_factory.g.dart';
 export 'com/amap/api/location/AMapLocationClientOption/AMapLocationProtocol.g.dart';
 export 'com/amap/api/location/AMapLocationClientOption/AMapLocationPurpose.g.dart';
@@ -184,3 +184,4 @@ export 'com/amap/api/services/share/ShareSearch/ShareNaviQuery.g.dart';
 export 'com/amap/api/services/share/ShareSearch.g.dart';
 export 'com/amap/api/col/sl/Closeable.g.dart';
 export '../utils.g.dart';
+export 'package:foundation_fluttify/foundation_fluttify.dart';
