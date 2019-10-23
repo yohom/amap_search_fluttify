@@ -1,3 +1,6 @@
+## 0.2.6
+- enhancement: poi加入地址信息
+
 ## 0.2.5
 - enhancement: searchAround增加radius参数
 
