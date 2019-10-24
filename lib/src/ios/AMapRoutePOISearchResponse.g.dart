@@ -19,8 +19,8 @@ class AMapRoutePOISearchResponse extends AMapSearchObject  {
   
   Future<List<AMapRoutePOI>> get_pois() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchResponse::get_pois", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoutePOI()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapRoutePOI()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoutePOI()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapRoutePOI()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

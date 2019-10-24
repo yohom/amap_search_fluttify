@@ -172,8 +172,8 @@ class com_amap_api_services_route_RouteSearch_TruckRouteQuery extends java_lang_
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result);
-      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_RouteSearch_FromAndTo()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

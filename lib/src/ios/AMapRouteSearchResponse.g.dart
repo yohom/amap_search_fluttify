@@ -19,8 +19,8 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
   
   Future<AMapRoute> get_route() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchResponse::get_route", {'refId': refId});
-    kNativeObjectPool.add(AMapRoute()..refId = result);
-    return AMapRoute()..refId = result;
+    kNativeObjectPool.add(AMapRoute()..refId = result..tag = 'amap_search_fluttify');
+    return AMapRoute()..refId = result..tag = 'amap_search_fluttify';
   }
   
 

@@ -13,14 +13,14 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   // generate getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_origin", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_destination", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<AMapRoutePOISearchType> get_searchType() async {
@@ -49,8 +49,8 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   
   Future<List<AMapGeoPoint>> get_polyline() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoutePOISearchRequest::get_polyline", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

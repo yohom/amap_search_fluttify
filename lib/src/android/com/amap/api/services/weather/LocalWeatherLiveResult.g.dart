@@ -32,8 +32,8 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result);
-      return com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_weather_LocalWeatherLiveResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -52,8 +52,8 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = result);
-      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherLive()..refId = result);
-      return com_amap_api_services_weather_LocalWeatherLive()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_weather_LocalWeatherLive()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_weather_LocalWeatherLive()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

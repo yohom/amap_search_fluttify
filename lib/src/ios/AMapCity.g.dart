@@ -37,8 +37,8 @@ class AMapCity extends AMapSearchObject  {
   
   Future<List<AMapDistrict>> get_districts() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCity::get_districts", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapDistrict()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapDistrict()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapDistrict()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

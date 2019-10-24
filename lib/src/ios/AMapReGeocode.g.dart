@@ -19,32 +19,32 @@ class AMapReGeocode extends AMapSearchObject  {
   
   Future<AMapAddressComponent> get_addressComponent() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_addressComponent", {'refId': refId});
-    kNativeObjectPool.add(AMapAddressComponent()..refId = result);
-    return AMapAddressComponent()..refId = result;
+    kNativeObjectPool.add(AMapAddressComponent()..refId = result..tag = 'amap_search_fluttify');
+    return AMapAddressComponent()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<List<AMapRoad>> get_roads() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_roads", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoad()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapRoad()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoad()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapRoad()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapRoadInter>> get_roadinters() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_roadinters", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoadInter()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapRoadInter()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRoadInter()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapRoadInter()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapPOI>> get_pois() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_pois", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapPOI()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPOI()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapPOI()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapAOI>> get_aois() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_aois", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapAOI()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapAOI()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapAOI()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapAOI()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

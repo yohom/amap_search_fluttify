@@ -72,8 +72,8 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_DrivePath()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_DrivePath()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_DrivePath()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_DrivePath()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -112,8 +112,8 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result);
-      return com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

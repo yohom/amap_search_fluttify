@@ -372,8 +372,8 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = result);
-      return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_district_DistrictSearchQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

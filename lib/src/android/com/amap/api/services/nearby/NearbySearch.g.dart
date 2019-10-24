@@ -32,8 +32,8 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearch()..refId = result);
-      return com_amap_api_services_nearby_NearbySearch()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearch()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_nearby_NearbySearch()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -291,8 +291,8 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearchResult()..refId = result);
-      return com_amap_api_services_nearby_NearbySearchResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_nearby_NearbySearchResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_nearby_NearbySearchResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

@@ -32,8 +32,8 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_cloud_CloudResult()..refId = result);
-      return com_amap_api_services_cloud_CloudResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_cloud_CloudResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_cloud_CloudResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_Query()..refId = result);
-      return com_amap_api_services_cloud_CloudSearch_Query()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_Query()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_cloud_CloudSearch_Query()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -92,8 +92,8 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result);
-      return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -112,8 +112,8 @@ class com_amap_api_services_cloud_CloudResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_cloud_CloudItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

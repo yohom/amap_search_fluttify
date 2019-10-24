@@ -13,8 +13,8 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject  {
   // generate getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'refId': refId});
-    kNativeObjectPool.add(AMapTrafficInfo()..refId = result);
-    return AMapTrafficInfo()..refId = result;
+    kNativeObjectPool.add(AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify');
+    return AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify';
   }
   
 

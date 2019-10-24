@@ -32,8 +32,8 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = result);
-      return com_amap_api_services_poisearch_PoiResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = result);
-      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -92,8 +92,8 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result);
-      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -112,8 +112,8 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -152,8 +152,8 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

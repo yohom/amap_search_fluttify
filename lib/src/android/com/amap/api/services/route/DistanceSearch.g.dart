@@ -69,8 +69,8 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_DistanceResult()..refId = result);
-      return com_amap_api_services_route_DistanceResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_route_DistanceResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_DistanceResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

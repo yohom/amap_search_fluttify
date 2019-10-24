@@ -392,8 +392,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_geocoder_StreetNumber()..refId = result);
-      return com_amap_api_services_geocoder_StreetNumber()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_geocoder_StreetNumber()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_geocoder_StreetNumber()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -432,8 +432,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_RegeocodeRoad()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -472,8 +472,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -512,8 +512,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_road_Crossroad()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -552,8 +552,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_BusinessArea()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -592,8 +592,8 @@ class com_amap_api_services_geocoder_RegeocodeAddress extends java_lang_Object w
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_AoiItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

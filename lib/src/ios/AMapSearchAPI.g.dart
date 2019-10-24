@@ -182,8 +182,8 @@ class AMapSearchAPI extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapSearchAPI()..refId = result);
-      return AMapSearchAPI()..refId = result;
+      kNativeObjectPool.add(AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify');
+      return AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

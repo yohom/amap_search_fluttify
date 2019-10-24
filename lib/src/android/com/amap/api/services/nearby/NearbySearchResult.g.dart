@@ -32,8 +32,8 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_nearby_NearbyInfo()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_nearby_NearbyInfo()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_nearby_NearbyInfo()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_nearby_NearbyInfo()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

@@ -19,14 +19,14 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
   
   Future<AMapGeoPoint> get_startCoordinate() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNavigationShareSearchRequest::get_startCoordinate", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<AMapGeoPoint> get_destinationCoordinate() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNavigationShareSearchRequest::get_destinationCoordinate", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
 

@@ -112,8 +112,8 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_traffic_RoadTrafficQuery()..refId = result);
-      return com_amap_api_services_traffic_RoadTrafficQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_traffic_RoadTrafficQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_traffic_RoadTrafficQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

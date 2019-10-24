@@ -32,8 +32,8 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_geocoder_GeocodeQuery()..refId = result);
-      return com_amap_api_services_geocoder_GeocodeQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_geocoder_GeocodeQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_geocoder_GeocodeQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

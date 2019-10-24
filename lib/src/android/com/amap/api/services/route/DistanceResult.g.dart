@@ -52,8 +52,8 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result);
-      return com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_DistanceSearch_DistanceQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_DistanceItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_DistanceItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_DistanceItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_DistanceItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

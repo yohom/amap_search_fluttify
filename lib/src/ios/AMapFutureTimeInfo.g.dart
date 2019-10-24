@@ -19,8 +19,8 @@ class AMapFutureTimeInfo extends AMapSearchObject  {
   
   Future<List<AMapFutureTimeInfoElement>> get_elements() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfo::get_elements", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

@@ -13,8 +13,8 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject  {
   // generate getters
   Future<AMapReGeocode> get_regeocode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'refId': refId});
-    kNativeObjectPool.add(AMapReGeocode()..refId = result);
-    return AMapReGeocode()..refId = result;
+    kNativeObjectPool.add(AMapReGeocode()..refId = result..tag = 'amap_search_fluttify');
+    return AMapReGeocode()..refId = result..tag = 'amap_search_fluttify';
   }
   
 

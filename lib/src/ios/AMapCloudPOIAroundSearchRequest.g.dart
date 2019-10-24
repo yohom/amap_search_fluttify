@@ -13,8 +13,8 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
   // generate getters
   Future<AMapGeoPoint> get_center() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOIAroundSearchRequest::get_center", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<int> get_radius() async {
