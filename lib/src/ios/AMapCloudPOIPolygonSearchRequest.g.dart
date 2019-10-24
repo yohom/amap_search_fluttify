@@ -13,8 +13,8 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest  {
   // generate getters
   Future<AMapGeoPolygon> get_polygon() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOIPolygonSearchRequest::get_polygon", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPolygon()..refId = result);
-    return AMapGeoPolygon()..refId = result;
+    kNativeObjectPool.add(AMapGeoPolygon()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPolygon()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<String> get_keywords() async {

@@ -32,8 +32,8 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result);
-      return com_amap_api_services_core_LatLonPoint()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result);
-      return com_amap_api_services_core_LatLonPoint()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

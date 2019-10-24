@@ -54,8 +54,8 @@ class AMapGeoPoint extends AMapSearchObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-      return AMapGeoPoint()..refId = result;
+      kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+      return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

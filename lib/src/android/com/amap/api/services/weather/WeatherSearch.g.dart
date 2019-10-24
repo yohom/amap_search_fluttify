@@ -32,8 +32,8 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = result);
-      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_weather_WeatherSearchQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_weather_WeatherSearchQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

@@ -37,8 +37,8 @@ class AMapLocalWeatherForecast extends AMapSearchObject  {
   
   Future<List<AMapLocalDayWeatherForecast>> get_casts() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_casts", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

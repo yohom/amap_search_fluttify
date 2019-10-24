@@ -19,14 +19,14 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   
   Future<List<AMapGeoPoint>> get_waypoints() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDrivingRouteSearchRequest::get_waypoints", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapGeoPolygon>> get_avoidpolygons() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDrivingRouteSearchRequest::get_avoidpolygons", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPolygon()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapGeoPolygon()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPolygon()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapGeoPolygon()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<String> get_avoidroad() async {

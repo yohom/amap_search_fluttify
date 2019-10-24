@@ -37,8 +37,8 @@ class AMapTransit extends AMapSearchObject  {
   
   Future<List<AMapSegment>> get_segments() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTransit::get_segments", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapSegment()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapSegment()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapSegment()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapSegment()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<int> get_distance() async {

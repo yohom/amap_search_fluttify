@@ -13,14 +13,14 @@ class AMapWalking extends AMapSearchObject  {
   // generate getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_origin", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_destination", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<int> get_distance() async {
@@ -37,8 +37,8 @@ class AMapWalking extends AMapSearchObject  {
   
   Future<List<AMapStep>> get_steps() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_steps", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapStep()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapStep()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

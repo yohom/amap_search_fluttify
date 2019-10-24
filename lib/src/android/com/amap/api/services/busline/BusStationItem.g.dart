@@ -112,8 +112,8 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result);
-      return com_amap_api_services_core_LatLonPoint()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -232,8 +232,8 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusLineItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

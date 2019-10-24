@@ -32,8 +32,8 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_district_DistrictItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = result);
-      return com_amap_api_services_district_DistrictSearchQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_district_DistrictSearchQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_district_DistrictSearchQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -152,8 +152,8 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_AMapException()..refId = result);
-      return com_amap_api_services_core_AMapException()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_core_AMapException()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_core_AMapException()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

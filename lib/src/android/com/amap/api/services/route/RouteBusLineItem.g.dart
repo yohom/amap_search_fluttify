@@ -32,8 +32,8 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationItem()..refId = result);
-      return com_amap_api_services_busline_BusStationItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_busline_BusStationItem()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_busline_BusStationItem()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -72,8 +72,8 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationItem()..refId = result);
-      return com_amap_api_services_busline_BusStationItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_busline_BusStationItem()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_busline_BusStationItem()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -112,8 +112,8 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -192,8 +192,8 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_busline_BusStationItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

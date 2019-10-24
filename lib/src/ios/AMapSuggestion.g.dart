@@ -19,8 +19,8 @@ class AMapSuggestion extends AMapSearchObject  {
   
   Future<List<AMapCity>> get_cities() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_cities", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapCity()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapCity()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapCity()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapCity()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

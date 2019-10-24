@@ -31,8 +31,8 @@ class AMapPath extends AMapSearchObject  {
   
   Future<List<AMapStep>> get_steps() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_steps", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapStep()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapStep()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<double> get_tolls() async {

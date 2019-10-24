@@ -19,8 +19,8 @@ class AMapCloudPOISearchResponse extends AMapSearchObject  {
   
   Future<List<AMapCloudPOI>> get_POIs() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOISearchResponse::get_POIs", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapCloudPOI()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapCloudPOI()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapCloudPOI()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapCloudPOI()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

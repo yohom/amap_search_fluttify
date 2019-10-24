@@ -19,8 +19,8 @@ class AMapInputTipsSearchResponse extends AMapSearchObject  {
   
   Future<List<AMapTip>> get_tips() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapInputTipsSearchResponse::get_tips", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTip()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapTip()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTip()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapTip()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

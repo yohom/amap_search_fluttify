@@ -116,8 +116,8 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = result);
-      return com_amap_api_services_poisearch_PoiResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -156,8 +156,8 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_PoiItem()..refId = result);
-      return com_amap_api_services_core_PoiItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_core_PoiItem()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_core_PoiItem()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -236,8 +236,8 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = result);
-      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -256,8 +256,8 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result);
-      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

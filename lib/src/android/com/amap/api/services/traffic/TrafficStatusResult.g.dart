@@ -72,8 +72,8 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result);
-      return com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -112,8 +112,8 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_traffic_TrafficStatusInfo()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_traffic_TrafficStatusInfo()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_traffic_TrafficStatusInfo()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_traffic_TrafficStatusInfo()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

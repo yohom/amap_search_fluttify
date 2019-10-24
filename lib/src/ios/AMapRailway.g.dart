@@ -49,32 +49,32 @@ class AMapRailway extends AMapSearchObject  {
   
   Future<AMapRailwayStation> get_departureStation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_departureStation", {'refId': refId});
-    kNativeObjectPool.add(AMapRailwayStation()..refId = result);
-    return AMapRailwayStation()..refId = result;
+    kNativeObjectPool.add(AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify');
+    return AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<AMapRailwayStation> get_arrivalStation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_arrivalStation", {'refId': refId});
-    kNativeObjectPool.add(AMapRailwayStation()..refId = result);
-    return AMapRailwayStation()..refId = result;
+    kNativeObjectPool.add(AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify');
+    return AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<List<AMapRailwaySpace>> get_spaces() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_spaces", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapRailwayStation>> get_viaStops() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_viaStops", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapRailway>> get_alters() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_alters", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailway()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapRailway()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailway()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapRailway()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

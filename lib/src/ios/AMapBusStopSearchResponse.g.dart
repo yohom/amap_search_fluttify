@@ -19,14 +19,14 @@ class AMapBusStopSearchResponse extends AMapSearchObject  {
   
   Future<AMapSuggestion> get_suggestion() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchResponse::get_suggestion", {'refId': refId});
-    kNativeObjectPool.add(AMapSuggestion()..refId = result);
-    return AMapSuggestion()..refId = result;
+    kNativeObjectPool.add(AMapSuggestion()..refId = result..tag = 'amap_search_fluttify');
+    return AMapSuggestion()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<List<AMapBusStop>> get_busstops() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchResponse::get_busstops", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusStop()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapBusStop()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

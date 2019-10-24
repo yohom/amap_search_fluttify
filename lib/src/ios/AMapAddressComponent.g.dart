@@ -73,14 +73,14 @@ class AMapAddressComponent extends AMapSearchObject  {
   
   Future<AMapStreetNumber> get_streetNumber() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_streetNumber", {'refId': refId});
-    kNativeObjectPool.add(AMapStreetNumber()..refId = result);
-    return AMapStreetNumber()..refId = result;
+    kNativeObjectPool.add(AMapStreetNumber()..refId = result..tag = 'amap_search_fluttify');
+    return AMapStreetNumber()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<List<AMapBusinessArea>> get_businessAreas() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_businessAreas", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

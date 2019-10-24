@@ -13,14 +13,14 @@ class AMapRoute extends AMapSearchObject  {
   // generate getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_origin", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<AMapGeoPoint> get_destination() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_destination", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result);
-    return AMapGeoPoint()..refId = result;
+    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<double> get_taxiCost() async {
@@ -31,14 +31,14 @@ class AMapRoute extends AMapSearchObject  {
   
   Future<List<AMapPath>> get_paths() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_paths", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPath()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapPath()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPath()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapPath()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapTransit>> get_transits() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoute::get_transits", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTransit()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapTransit()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTransit()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapTransit()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

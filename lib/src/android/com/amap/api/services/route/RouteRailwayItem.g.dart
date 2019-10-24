@@ -112,8 +112,8 @@ class com_amap_api_services_route_RouteRailwayItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RailwayStationItem()..refId = result);
-      return com_amap_api_services_route_RailwayStationItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_route_RailwayStationItem()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_RailwayStationItem()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -132,8 +132,8 @@ class com_amap_api_services_route_RouteRailwayItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_route_RailwayStationItem()..refId = result);
-      return com_amap_api_services_route_RailwayStationItem()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_route_RailwayStationItem()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_RailwayStationItem()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -152,8 +152,8 @@ class com_amap_api_services_route_RouteRailwayItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_RailwayStationItem()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -172,8 +172,8 @@ class com_amap_api_services_route_RouteRailwayItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_Railway()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_Railway()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_Railway()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_Railway()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
@@ -192,8 +192,8 @@ class com_amap_api_services_route_RouteRailwayItem extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_RailwaySpace()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_RailwaySpace()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_RailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_RailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

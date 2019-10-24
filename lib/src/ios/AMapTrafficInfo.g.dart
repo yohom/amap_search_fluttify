@@ -19,14 +19,14 @@ class AMapTrafficInfo extends AMapSearchObject  {
   
   Future<AMapTrafficEvaluation> get_evaluation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficInfo::get_evaluation", {'refId': refId});
-    kNativeObjectPool.add(AMapTrafficEvaluation()..refId = result);
-    return AMapTrafficEvaluation()..refId = result;
+    kNativeObjectPool.add(AMapTrafficEvaluation()..refId = result..tag = 'amap_search_fluttify');
+    return AMapTrafficEvaluation()..refId = result..tag = 'amap_search_fluttify';
   }
   
   Future<List<AMapTrafficRoad>> get_roads() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficInfo::get_roads", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapTrafficRoad()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

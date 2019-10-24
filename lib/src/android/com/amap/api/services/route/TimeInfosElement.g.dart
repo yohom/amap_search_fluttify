@@ -212,8 +212,8 @@ class com_amap_api_services_route_TimeInfosElement extends java_lang_Object with
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TMC()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   

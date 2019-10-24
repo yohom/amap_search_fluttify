@@ -352,8 +352,8 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result);
-      return com_amap_api_services_core_LatLonPoint()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

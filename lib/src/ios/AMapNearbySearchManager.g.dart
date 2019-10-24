@@ -73,8 +73,8 @@ class AMapNearbySearchManager extends NSObject  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapNearbySearchManager()..refId = result);
-      return AMapNearbySearchManager()..refId = result;
+      kNativeObjectPool.add(AMapNearbySearchManager()..refId = result..tag = 'amap_search_fluttify');
+      return AMapNearbySearchManager()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

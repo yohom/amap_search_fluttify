@@ -109,8 +109,8 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result);
-      return com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

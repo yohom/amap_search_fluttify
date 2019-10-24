@@ -232,8 +232,8 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusLineQuery()..refId = result);
-      return com_amap_api_services_busline_BusLineQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_busline_BusLineQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_busline_BusLineQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

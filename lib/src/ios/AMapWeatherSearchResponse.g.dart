@@ -13,14 +13,14 @@ class AMapWeatherSearchResponse extends AMapSearchObject  {
   // generate getters
   Future<List<AMapLocalWeatherLive>> get_lives() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchResponse::get_lives", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalWeatherLive()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapLocalWeatherLive()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalWeatherLive()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapLocalWeatherLive()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapLocalWeatherForecast>> get_forecasts() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchResponse::get_forecasts", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalWeatherForecast()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapLocalWeatherForecast()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapLocalWeatherForecast()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapLocalWeatherForecast()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

@@ -25,8 +25,8 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   
   Future<CLLocationCoordinate2D> get_coordinate() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinate", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result);
-    return CLLocationCoordinate2D()..refId = result;
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_search_fluttify');
+    return CLLocationCoordinate2D()..refId = result..tag = 'amap_search_fluttify';
   }
   
 

@@ -14,7 +14,7 @@ class ObjectFactory_iOS {
 
   static Future<AMapPOISearchBaseRequest> createAMapPOISearchBaseRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOISearchBaseRequest');
-    final object = AMapPOISearchBaseRequest()..refId = refId;
+    final object = AMapPOISearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -22,7 +22,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOIIDSearchRequest> createAMapPOIIDSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIIDSearchRequest');
-    final object = AMapPOIIDSearchRequest()..refId = refId;
+    final object = AMapPOIIDSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,7 +30,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOIKeywordsSearchRequest> createAMapPOIKeywordsSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIKeywordsSearchRequest');
-    final object = AMapPOIKeywordsSearchRequest()..refId = refId;
+    final object = AMapPOIKeywordsSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -38,7 +38,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOIAroundSearchRequest> createAMapPOIAroundSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIAroundSearchRequest');
-    final object = AMapPOIAroundSearchRequest()..refId = refId;
+    final object = AMapPOIAroundSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -46,7 +46,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOIPolygonSearchRequest> createAMapPOIPolygonSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIPolygonSearchRequest');
-    final object = AMapPOIPolygonSearchRequest()..refId = refId;
+    final object = AMapPOIPolygonSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -54,7 +54,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOISearchResponse> createAMapPOISearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOISearchResponse');
-    final object = AMapPOISearchResponse()..refId = refId;
+    final object = AMapPOISearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -62,7 +62,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoutePOISearchRequest> createAMapRoutePOISearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoutePOISearchRequest');
-    final object = AMapRoutePOISearchRequest()..refId = refId;
+    final object = AMapRoutePOISearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -70,7 +70,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoutePOISearchResponse> createAMapRoutePOISearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoutePOISearchResponse');
-    final object = AMapRoutePOISearchResponse()..refId = refId;
+    final object = AMapRoutePOISearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -78,7 +78,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapInputTipsSearchRequest> createAMapInputTipsSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapInputTipsSearchRequest');
-    final object = AMapInputTipsSearchRequest()..refId = refId;
+    final object = AMapInputTipsSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -86,7 +86,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapInputTipsSearchResponse> createAMapInputTipsSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapInputTipsSearchResponse');
-    final object = AMapInputTipsSearchResponse()..refId = refId;
+    final object = AMapInputTipsSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -94,7 +94,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeocodeSearchRequest> createAMapGeocodeSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeocodeSearchRequest');
-    final object = AMapGeocodeSearchRequest()..refId = refId;
+    final object = AMapGeocodeSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -102,7 +102,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeocodeSearchResponse> createAMapGeocodeSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeocodeSearchResponse');
-    final object = AMapGeocodeSearchResponse()..refId = refId;
+    final object = AMapGeocodeSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -110,7 +110,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapReGeocodeSearchRequest> createAMapReGeocodeSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapReGeocodeSearchRequest');
-    final object = AMapReGeocodeSearchRequest()..refId = refId;
+    final object = AMapReGeocodeSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -118,7 +118,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapReGeocodeSearchResponse> createAMapReGeocodeSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapReGeocodeSearchResponse');
-    final object = AMapReGeocodeSearchResponse()..refId = refId;
+    final object = AMapReGeocodeSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -126,7 +126,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusStopSearchRequest> createAMapBusStopSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusStopSearchRequest');
-    final object = AMapBusStopSearchRequest()..refId = refId;
+    final object = AMapBusStopSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -134,7 +134,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusStopSearchResponse> createAMapBusStopSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusStopSearchResponse');
-    final object = AMapBusStopSearchResponse()..refId = refId;
+    final object = AMapBusStopSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -142,7 +142,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusLineBaseSearchRequest> createAMapBusLineBaseSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusLineBaseSearchRequest');
-    final object = AMapBusLineBaseSearchRequest()..refId = refId;
+    final object = AMapBusLineBaseSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -150,7 +150,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusLineNameSearchRequest> createAMapBusLineNameSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusLineNameSearchRequest');
-    final object = AMapBusLineNameSearchRequest()..refId = refId;
+    final object = AMapBusLineNameSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -158,7 +158,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusLineIDSearchRequest> createAMapBusLineIDSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusLineIDSearchRequest');
-    final object = AMapBusLineIDSearchRequest()..refId = refId;
+    final object = AMapBusLineIDSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -166,7 +166,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusLineSearchResponse> createAMapBusLineSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusLineSearchResponse');
-    final object = AMapBusLineSearchResponse()..refId = refId;
+    final object = AMapBusLineSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -174,7 +174,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDistrictSearchRequest> createAMapDistrictSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDistrictSearchRequest');
-    final object = AMapDistrictSearchRequest()..refId = refId;
+    final object = AMapDistrictSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -182,7 +182,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDistrictSearchResponse> createAMapDistrictSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDistrictSearchResponse');
-    final object = AMapDistrictSearchResponse()..refId = refId;
+    final object = AMapDistrictSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -190,7 +190,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRouteSearchBaseRequest> createAMapRouteSearchBaseRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRouteSearchBaseRequest');
-    final object = AMapRouteSearchBaseRequest()..refId = refId;
+    final object = AMapRouteSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -198,7 +198,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDrivingRouteSearchRequest> createAMapDrivingRouteSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDrivingRouteSearchRequest');
-    final object = AMapDrivingRouteSearchRequest()..refId = refId;
+    final object = AMapDrivingRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -206,7 +206,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapWalkingRouteSearchRequest> createAMapWalkingRouteSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapWalkingRouteSearchRequest');
-    final object = AMapWalkingRouteSearchRequest()..refId = refId;
+    final object = AMapWalkingRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -214,7 +214,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTransitRouteSearchRequest> createAMapTransitRouteSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTransitRouteSearchRequest');
-    final object = AMapTransitRouteSearchRequest()..refId = refId;
+    final object = AMapTransitRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -222,7 +222,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRidingRouteSearchRequest> createAMapRidingRouteSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRidingRouteSearchRequest');
-    final object = AMapRidingRouteSearchRequest()..refId = refId;
+    final object = AMapRidingRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -230,7 +230,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRouteSearchResponse> createAMapRouteSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRouteSearchResponse');
-    final object = AMapRouteSearchResponse()..refId = refId;
+    final object = AMapRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -238,7 +238,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRidingRouteSearchResponse> createAMapRidingRouteSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRidingRouteSearchResponse');
-    final object = AMapRidingRouteSearchResponse()..refId = refId;
+    final object = AMapRidingRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -246,7 +246,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTruckRouteSearchRequest> createAMapTruckRouteSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTruckRouteSearchRequest');
-    final object = AMapTruckRouteSearchRequest()..refId = refId;
+    final object = AMapTruckRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -254,7 +254,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDistanceSearchRequest> createAMapDistanceSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDistanceSearchRequest');
-    final object = AMapDistanceSearchRequest()..refId = refId;
+    final object = AMapDistanceSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -262,7 +262,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDistanceSearchResponse> createAMapDistanceSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDistanceSearchResponse');
-    final object = AMapDistanceSearchResponse()..refId = refId;
+    final object = AMapDistanceSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -270,7 +270,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapWeatherSearchRequest> createAMapWeatherSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapWeatherSearchRequest');
-    final object = AMapWeatherSearchRequest()..refId = refId;
+    final object = AMapWeatherSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -278,7 +278,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapWeatherSearchResponse> createAMapWeatherSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapWeatherSearchResponse');
-    final object = AMapWeatherSearchResponse()..refId = refId;
+    final object = AMapWeatherSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -286,7 +286,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoadTrafficSearchBaseRequest> createAMapRoadTrafficSearchBaseRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchBaseRequest');
-    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId;
+    final object = AMapRoadTrafficSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -294,7 +294,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoadTrafficSearchRequest> createAMapRoadTrafficSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchRequest');
-    final object = AMapRoadTrafficSearchRequest()..refId = refId;
+    final object = AMapRoadTrafficSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -302,7 +302,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoadTrafficCircleSearchRequest> createAMapRoadTrafficCircleSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoadTrafficCircleSearchRequest');
-    final object = AMapRoadTrafficCircleSearchRequest()..refId = refId;
+    final object = AMapRoadTrafficCircleSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -310,7 +310,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoadTrafficSearchResponse> createAMapRoadTrafficSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse');
-    final object = AMapRoadTrafficSearchResponse()..refId = refId;
+    final object = AMapRoadTrafficSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -318,7 +318,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapNearbySearchRequest> createAMapNearbySearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNearbySearchRequest');
-    final object = AMapNearbySearchRequest()..refId = refId;
+    final object = AMapNearbySearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -326,7 +326,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapNearbySearchResponse> createAMapNearbySearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNearbySearchResponse');
-    final object = AMapNearbySearchResponse()..refId = refId;
+    final object = AMapNearbySearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -334,7 +334,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudSearchBaseRequest> createAMapCloudSearchBaseRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudSearchBaseRequest');
-    final object = AMapCloudSearchBaseRequest()..refId = refId;
+    final object = AMapCloudSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -342,7 +342,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudPOIAroundSearchRequest> createAMapCloudPOIAroundSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudPOIAroundSearchRequest');
-    final object = AMapCloudPOIAroundSearchRequest()..refId = refId;
+    final object = AMapCloudPOIAroundSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -350,7 +350,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudPOIPolygonSearchRequest> createAMapCloudPOIPolygonSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudPOIPolygonSearchRequest');
-    final object = AMapCloudPOIPolygonSearchRequest()..refId = refId;
+    final object = AMapCloudPOIPolygonSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -358,7 +358,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudPOIIDSearchRequest> createAMapCloudPOIIDSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudPOIIDSearchRequest');
-    final object = AMapCloudPOIIDSearchRequest()..refId = refId;
+    final object = AMapCloudPOIIDSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -366,7 +366,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudPOILocalSearchRequest> createAMapCloudPOILocalSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudPOILocalSearchRequest');
-    final object = AMapCloudPOILocalSearchRequest()..refId = refId;
+    final object = AMapCloudPOILocalSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -374,7 +374,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudPOISearchResponse> createAMapCloudPOISearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudPOISearchResponse');
-    final object = AMapCloudPOISearchResponse()..refId = refId;
+    final object = AMapCloudPOISearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -382,7 +382,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapShareSearchBaseRequest> createAMapShareSearchBaseRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest');
-    final object = AMapShareSearchBaseRequest()..refId = refId;
+    final object = AMapShareSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -390,7 +390,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocationShareSearchRequest> createAMapLocationShareSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocationShareSearchRequest');
-    final object = AMapLocationShareSearchRequest()..refId = refId;
+    final object = AMapLocationShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -398,7 +398,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOIShareSearchRequest> createAMapPOIShareSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIShareSearchRequest');
-    final object = AMapPOIShareSearchRequest()..refId = refId;
+    final object = AMapPOIShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -406,7 +406,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRouteShareSearchRequest> createAMapRouteShareSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRouteShareSearchRequest');
-    final object = AMapRouteShareSearchRequest()..refId = refId;
+    final object = AMapRouteShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -414,7 +414,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapNavigationShareSearchRequest> createAMapNavigationShareSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNavigationShareSearchRequest');
-    final object = AMapNavigationShareSearchRequest()..refId = refId;
+    final object = AMapNavigationShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -422,7 +422,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapShareSearchResponse> createAMapShareSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapShareSearchResponse');
-    final object = AMapShareSearchResponse()..refId = refId;
+    final object = AMapShareSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -430,7 +430,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapFutureRouteSearchRequest> createAMapFutureRouteSearchRequest() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapFutureRouteSearchRequest');
-    final object = AMapFutureRouteSearchRequest()..refId = refId;
+    final object = AMapFutureRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -438,7 +438,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapFutureRouteSearchResponse> createAMapFutureRouteSearchResponse() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapFutureRouteSearchResponse');
-    final object = AMapFutureRouteSearchResponse()..refId = refId;
+    final object = AMapFutureRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -446,7 +446,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapSearchObject> createAMapSearchObject() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapSearchObject');
-    final object = AMapSearchObject()..refId = refId;
+    final object = AMapSearchObject()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -454,7 +454,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoPoint> createAMapGeoPoint() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoPoint');
-    final object = AMapGeoPoint()..refId = refId;
+    final object = AMapGeoPoint()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -462,7 +462,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeoPolygon> createAMapGeoPolygon() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeoPolygon');
-    final object = AMapGeoPolygon()..refId = refId;
+    final object = AMapGeoPolygon()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -470,7 +470,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCity> createAMapCity() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCity');
-    final object = AMapCity()..refId = refId;
+    final object = AMapCity()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -478,7 +478,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapSuggestion> createAMapSuggestion() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapSuggestion');
-    final object = AMapSuggestion()..refId = refId;
+    final object = AMapSuggestion()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -486,7 +486,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTip> createAMapTip() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTip');
-    final object = AMapTip()..refId = refId;
+    final object = AMapTip()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -494,7 +494,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapImage> createAMapImage() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapImage');
-    final object = AMapImage()..refId = refId;
+    final object = AMapImage()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -502,7 +502,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOIExtension> createAMapPOIExtension() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOIExtension');
-    final object = AMapPOIExtension()..refId = refId;
+    final object = AMapPOIExtension()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -510,7 +510,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapIndoorData> createAMapIndoorData() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapIndoorData');
-    final object = AMapIndoorData()..refId = refId;
+    final object = AMapIndoorData()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -518,7 +518,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapSubPOI> createAMapSubPOI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapSubPOI');
-    final object = AMapSubPOI()..refId = refId;
+    final object = AMapSubPOI()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -526,7 +526,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoutePOI> createAMapRoutePOI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoutePOI');
-    final object = AMapRoutePOI()..refId = refId;
+    final object = AMapRoutePOI()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -534,7 +534,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPOI> createAMapPOI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPOI');
-    final object = AMapPOI()..refId = refId;
+    final object = AMapPOI()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -542,7 +542,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapAOI> createAMapAOI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapAOI');
-    final object = AMapAOI()..refId = refId;
+    final object = AMapAOI()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -550,7 +550,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoad> createAMapRoad() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoad');
-    final object = AMapRoad()..refId = refId;
+    final object = AMapRoad()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -558,7 +558,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoadInter> createAMapRoadInter() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoadInter');
-    final object = AMapRoadInter()..refId = refId;
+    final object = AMapRoadInter()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -566,7 +566,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapStreetNumber> createAMapStreetNumber() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapStreetNumber');
-    final object = AMapStreetNumber()..refId = refId;
+    final object = AMapStreetNumber()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -574,7 +574,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusinessArea> createAMapBusinessArea() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusinessArea');
-    final object = AMapBusinessArea()..refId = refId;
+    final object = AMapBusinessArea()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -582,7 +582,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapAddressComponent> createAMapAddressComponent() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapAddressComponent');
-    final object = AMapAddressComponent()..refId = refId;
+    final object = AMapAddressComponent()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -590,7 +590,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapReGeocode> createAMapReGeocode() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapReGeocode');
-    final object = AMapReGeocode()..refId = refId;
+    final object = AMapReGeocode()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -598,7 +598,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapGeocode> createAMapGeocode() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapGeocode');
-    final object = AMapGeocode()..refId = refId;
+    final object = AMapGeocode()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -606,7 +606,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusStop> createAMapBusStop() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusStop');
-    final object = AMapBusStop()..refId = refId;
+    final object = AMapBusStop()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -614,7 +614,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapBusLine> createAMapBusLine() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapBusLine');
-    final object = AMapBusLine()..refId = refId;
+    final object = AMapBusLine()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -622,7 +622,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDistrict> createAMapDistrict() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDistrict');
-    final object = AMapDistrict()..refId = refId;
+    final object = AMapDistrict()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -630,7 +630,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTMC> createAMapTMC() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTMC');
-    final object = AMapTMC()..refId = refId;
+    final object = AMapTMC()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -638,7 +638,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapStep> createAMapStep() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapStep');
-    final object = AMapStep()..refId = refId;
+    final object = AMapStep()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -646,7 +646,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapPath> createAMapPath() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapPath');
-    final object = AMapPath()..refId = refId;
+    final object = AMapPath()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -654,7 +654,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapFutureTimeInfoElement> createAMapFutureTimeInfoElement() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapFutureTimeInfoElement');
-    final object = AMapFutureTimeInfoElement()..refId = refId;
+    final object = AMapFutureTimeInfoElement()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -662,7 +662,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapFutureTimeInfo> createAMapFutureTimeInfo() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapFutureTimeInfo');
-    final object = AMapFutureTimeInfo()..refId = refId;
+    final object = AMapFutureTimeInfo()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -670,7 +670,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapWalking> createAMapWalking() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapWalking');
-    final object = AMapWalking()..refId = refId;
+    final object = AMapWalking()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -678,7 +678,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTaxi> createAMapTaxi() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTaxi');
-    final object = AMapTaxi()..refId = refId;
+    final object = AMapTaxi()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -686,7 +686,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRailwayStation> createAMapRailwayStation() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRailwayStation');
-    final object = AMapRailwayStation()..refId = refId;
+    final object = AMapRailwayStation()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -694,7 +694,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRailwaySpace> createAMapRailwaySpace() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRailwaySpace');
-    final object = AMapRailwaySpace()..refId = refId;
+    final object = AMapRailwaySpace()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -702,7 +702,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRailway> createAMapRailway() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRailway');
-    final object = AMapRailway()..refId = refId;
+    final object = AMapRailway()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -710,7 +710,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapSegment> createAMapSegment() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapSegment');
-    final object = AMapSegment()..refId = refId;
+    final object = AMapSegment()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -718,7 +718,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTransit> createAMapTransit() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTransit');
-    final object = AMapTransit()..refId = refId;
+    final object = AMapTransit()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -726,7 +726,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapRoute> createAMapRoute() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapRoute');
-    final object = AMapRoute()..refId = refId;
+    final object = AMapRoute()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -734,7 +734,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapDistanceResult> createAMapDistanceResult() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapDistanceResult');
-    final object = AMapDistanceResult()..refId = refId;
+    final object = AMapDistanceResult()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -742,7 +742,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocalWeatherLive> createAMapLocalWeatherLive() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocalWeatherLive');
-    final object = AMapLocalWeatherLive()..refId = refId;
+    final object = AMapLocalWeatherLive()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -750,7 +750,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocalDayWeatherForecast> createAMapLocalDayWeatherForecast() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocalDayWeatherForecast');
-    final object = AMapLocalDayWeatherForecast()..refId = refId;
+    final object = AMapLocalDayWeatherForecast()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -758,7 +758,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapLocalWeatherForecast> createAMapLocalWeatherForecast() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapLocalWeatherForecast');
-    final object = AMapLocalWeatherForecast()..refId = refId;
+    final object = AMapLocalWeatherForecast()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -766,7 +766,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapNearbyUserInfo> createAMapNearbyUserInfo() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNearbyUserInfo');
-    final object = AMapNearbyUserInfo()..refId = refId;
+    final object = AMapNearbyUserInfo()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -774,7 +774,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTrafficEvaluation> createAMapTrafficEvaluation() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTrafficEvaluation');
-    final object = AMapTrafficEvaluation()..refId = refId;
+    final object = AMapTrafficEvaluation()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -782,7 +782,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTrafficRoad> createAMapTrafficRoad() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTrafficRoad');
-    final object = AMapTrafficRoad()..refId = refId;
+    final object = AMapTrafficRoad()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -790,7 +790,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapTrafficInfo> createAMapTrafficInfo() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapTrafficInfo');
-    final object = AMapTrafficInfo()..refId = refId;
+    final object = AMapTrafficInfo()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -798,7 +798,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudImage> createAMapCloudImage() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudImage');
-    final object = AMapCloudImage()..refId = refId;
+    final object = AMapCloudImage()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -806,7 +806,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapCloudPOI> createAMapCloudPOI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapCloudPOI');
-    final object = AMapCloudPOI()..refId = refId;
+    final object = AMapCloudPOI()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -814,7 +814,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapNearbyUploadInfo> createAMapNearbyUploadInfo() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapNearbyUploadInfo');
-    final object = AMapNearbyUploadInfo()..refId = refId;
+    final object = AMapNearbyUploadInfo()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -822,7 +822,7 @@ class ObjectFactory_iOS {
   
   static Future<AMapSearchAPI> createAMapSearchAPI() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createAMapSearchAPI');
-    final object = AMapSearchAPI()..refId = refId;
+    final object = AMapSearchAPI()..refId = refId..tag = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;

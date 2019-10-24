@@ -19,8 +19,8 @@ class AMapNearbySearchResponse extends AMapSearchObject  {
   
   Future<List<AMapNearbyUserInfo>> get_infos() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_infos", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it).toList());
-    return (result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it).toList();
+    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it..tag = 'amap_search_fluttify').toList());
+    return (result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
 

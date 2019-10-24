@@ -32,8 +32,8 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationResult()..refId = result);
-      return com_amap_api_services_busline_BusStationResult()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_busline_BusStationResult()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_busline_BusStationResult()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   
@@ -129,8 +129,8 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_busline_BusStationQuery()..refId = result);
-      return com_amap_api_services_busline_BusStationQuery()..refId = result;
+      kNativeObjectPool.add(com_amap_api_services_busline_BusStationQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_busline_BusStationQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

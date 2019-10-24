@@ -332,8 +332,8 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_TruckStep()..refId = it).toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TruckStep()..refId = it).toList();
+      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_route_TruckStep()..refId = it..tag = 'amap_search_fluttify').toList());
+      return (result as List).cast<int>().map((it) => com_amap_api_services_route_TruckStep()..refId = it..tag = 'amap_search_fluttify').toList();
     }
   }
   
