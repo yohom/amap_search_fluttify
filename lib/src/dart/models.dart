@@ -88,6 +88,14 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 商业区
+  Future<String> get businessArea {
+    return platform(
+      android: (pool) => _androidModel.getBusinessArea(),
+      ios: (pool) => _iosModel.get_businessArea(),
+    );
+  }
+
   /// 距离
   Future<int> get distance {
     return platform(
@@ -98,7 +106,7 @@ class Poi with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'Poi{title: ${await title}, latLng: ${await latLng}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, distance: ${await distance}';
+    return 'Poi{title: ${await title}, latLng: ${await latLng}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, businessArea: ${await businessArea}, distance: ${await distance}';
   }
 }
 
