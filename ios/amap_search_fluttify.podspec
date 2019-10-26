@@ -28,11 +28,11 @@ A new flutter plugin project.
   s.static_framework = true
   # 系统framework
   s.frameworks = [
-        "SystemConfiguration", "CoreTelephony", "Security"
+        "QuartzCore", "SystemConfiguration", "CoreTelephony", "Security", "OpenGLES", "CoreText", "CoreGraphics", "GLKit"
   ]
   # 系统library
   s.libraries = [
-        "z"
+        "z", "c++"
   ]
   # 需要添加的资源文件
   s.resources = [
