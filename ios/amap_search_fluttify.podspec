@@ -22,11 +22,13 @@ A new flutter plugin project.
   s.ios.deployment_target = '8.0'
   # 包含工程下的framework
   s.vendored_frameworks = '*.framework'
+  # 包含工程下的.a
+  s.vendored_libraries = '*.a'
   # 默认使用静态framework
   s.static_framework = true
   # 系统framework
   s.frameworks = [
-        "QuartzCore", "CoreLocation", "SystemConfiguration", "CoreTelephony", "Security", "OpenGLES", "CoreText", "CoreGraphics", "GLKit"
+        "QuartzCore", "SystemConfiguration", "CoreTelephony", "Security", "OpenGLES", "CoreText", "CoreGraphics", "GLKit"
   ]
   # 系统library
   s.libraries = [

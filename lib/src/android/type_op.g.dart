@@ -9,66 +9,6 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-Future<bool> isKindOfcom_amap_api_location_AMapLocationClient(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationClient', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_DPoint(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_DPoint', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_CoordinateConverter(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_CoordinateConverter', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_CoordUtil(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_CoordUtil', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_UmidtokenInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_UmidtokenInfo', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_AMapLocation(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocation', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_AMapLocationClientOption(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationClientOption', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_location_AMapLocationQualityReport(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_location_AMapLocationQualityReport', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_fence_DistrictItem(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_fence_DistrictItem', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_fence_GeoFenceClient(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_fence_GeoFenceClient', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_fence_GeoFence(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_fence_GeoFence', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfcom_amap_api_fence_PoiItem(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_fence_PoiItem', {'refId': ref.refId});
-  return result;
-}
-
 Future<bool> isKindOfcom_amap_api_services_traffic_TrafficStatusInfo(Ref ref) async {
   final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusInfo', {'refId': ref.refId});
   return result;
@@ -484,6 +424,11 @@ Future<bool> isKindOfcom_amap_api_services_nearby_NearbySearch_NearbyQuery(Ref r
   return result;
 }
 
+Future<bool> isKindOfcom_amap_api_services_a_(Ref ref) async {
+  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_a_', {'refId': ref.refId});
+  return result;
+}
+
 Future<bool> isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem(Ref ref) async {
   final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_routepoisearch_RoutePOIItem', {'refId': ref.refId});
   return result;
@@ -699,71 +644,6 @@ Future<bool> isKindOfcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQu
   return result;
 }
 
-Future<bool> isKindOfcom_amap_api_col_sl_Closeable(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_col_sl_Closeable', {'refId': ref.refId});
-  return result;
-}
-
-
-Future<com_amap_api_location_AMapLocationClient> ascom_amap_api_location_AMapLocationClient(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_AMapLocationClient', {'refId': ref.refId});
-  return com_amap_api_location_AMapLocationClient()..refId = result;
-}
-
-Future<com_amap_api_location_DPoint> ascom_amap_api_location_DPoint(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_DPoint', {'refId': ref.refId});
-  return com_amap_api_location_DPoint()..refId = result;
-}
-
-Future<com_amap_api_location_CoordinateConverter> ascom_amap_api_location_CoordinateConverter(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_CoordinateConverter', {'refId': ref.refId});
-  return com_amap_api_location_CoordinateConverter()..refId = result;
-}
-
-Future<com_amap_api_location_CoordUtil> ascom_amap_api_location_CoordUtil(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_CoordUtil', {'refId': ref.refId});
-  return com_amap_api_location_CoordUtil()..refId = result;
-}
-
-Future<com_amap_api_location_UmidtokenInfo> ascom_amap_api_location_UmidtokenInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_UmidtokenInfo', {'refId': ref.refId});
-  return com_amap_api_location_UmidtokenInfo()..refId = result;
-}
-
-Future<com_amap_api_location_AMapLocation> ascom_amap_api_location_AMapLocation(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_AMapLocation', {'refId': ref.refId});
-  return com_amap_api_location_AMapLocation()..refId = result;
-}
-
-Future<com_amap_api_location_AMapLocationClientOption> ascom_amap_api_location_AMapLocationClientOption(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_AMapLocationClientOption', {'refId': ref.refId});
-  return com_amap_api_location_AMapLocationClientOption()..refId = result;
-}
-
-Future<com_amap_api_location_AMapLocationQualityReport> ascom_amap_api_location_AMapLocationQualityReport(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_location_AMapLocationQualityReport', {'refId': ref.refId});
-  return com_amap_api_location_AMapLocationQualityReport()..refId = result;
-}
-
-Future<com_amap_api_fence_DistrictItem> ascom_amap_api_fence_DistrictItem(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_fence_DistrictItem', {'refId': ref.refId});
-  return com_amap_api_fence_DistrictItem()..refId = result;
-}
-
-Future<com_amap_api_fence_GeoFenceClient> ascom_amap_api_fence_GeoFenceClient(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_fence_GeoFenceClient', {'refId': ref.refId});
-  return com_amap_api_fence_GeoFenceClient()..refId = result;
-}
-
-Future<com_amap_api_fence_GeoFence> ascom_amap_api_fence_GeoFence(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_fence_GeoFence', {'refId': ref.refId});
-  return com_amap_api_fence_GeoFence()..refId = result;
-}
-
-Future<com_amap_api_fence_PoiItem> ascom_amap_api_fence_PoiItem(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_fence_PoiItem', {'refId': ref.refId});
-  return com_amap_api_fence_PoiItem()..refId = result;
-}
 
 Future<com_amap_api_services_traffic_TrafficStatusInfo> ascom_amap_api_services_traffic_TrafficStatusInfo(Ref ref) async {
   final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_TrafficStatusInfo', {'refId': ref.refId});
@@ -1180,6 +1060,11 @@ Future<com_amap_api_services_nearby_NearbySearch_NearbyQuery> ascom_amap_api_ser
   return com_amap_api_services_nearby_NearbySearch_NearbyQuery()..refId = result;
 }
 
+Future<com_amap_api_services_a_> ascom_amap_api_services_a_(Ref ref) async {
+  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_a_', {'refId': ref.refId});
+  return com_amap_api_services_a_()..refId = result;
+}
+
 Future<com_amap_api_services_routepoisearch_RoutePOIItem> ascom_amap_api_services_routepoisearch_RoutePOIItem(Ref ref) async {
   final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_routepoisearch_RoutePOIItem', {'refId': ref.refId});
   return com_amap_api_services_routepoisearch_RoutePOIItem()..refId = result;
@@ -1393,9 +1278,4 @@ Future<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> ascom_amap_a
 Future<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> ascom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery(Ref ref) async {
   final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery', {'refId': ref.refId});
   return com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery()..refId = result;
-}
-
-Future<com_amap_api_col_sl_Closeable> ascom_amap_api_col_sl_Closeable(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_col_sl_Closeable', {'refId': ref.refId});
-  return com_amap_api_col_sl_Closeable()..refId = result;
 }
