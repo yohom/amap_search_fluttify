@@ -114,5 +114,5 @@ export 'AMapBusLine.g.dart';
 export 'AMapRouteSearchResponse.g.dart';
 export 'AMapRoutePOISearchType.g.dart';
 export 'AMapSuggestion.g.dart';
-export '../utils.g.dart';
 export 'package:foundation_fluttify/foundation_fluttify.dart';
+export 'package:amap_core_fluttify/amap_core_fluttify.dart';

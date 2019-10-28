@@ -1,6 +1,5 @@
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
-import 'package:amap_search_fluttify/src/utils.g.dart';
 
 mixin _ToFutureString {
   Future<String> toFutureString();
