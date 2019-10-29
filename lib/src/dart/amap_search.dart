@@ -69,8 +69,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建请求对象
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapPOIKeywordsSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapPOIKeywordsSearchRequest();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -143,8 +143,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建周边搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapPOIAroundSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapPOIAroundSearchRequest();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -152,7 +152,8 @@ class AmapSearch {
         // 设置搜索类别
         await request.set_types(type);
         // 创建中心点
-        final location = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final location =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await location.set_latitude(center.latitude);
         await location.set_longitude(center.longitude);
         await request.set_location(location);
@@ -214,8 +215,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapInputTipsSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapInputTipsSearchRequest();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -336,7 +337,8 @@ class AmapSearch {
         _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
 
         // 创建中心点
-        final amapLocation = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final amapLocation =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await amapLocation.set_latitude(latLng.latitude);
         await amapLocation.set_longitude(latLng.longitude);
 
@@ -344,8 +346,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapReGeocodeSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapReGeocodeSearchRequest();
         // 设置中心点
         await request.set_location(amapLocation);
         // 设置半径
@@ -441,11 +443,13 @@ class AmapSearch {
         _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -453,8 +457,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapDrivingRouteSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapDrivingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -466,7 +470,8 @@ class AmapSearch {
         // 设置途经点
         final List<AMapGeoPoint> passby = [];
         for (var item in passedByPoints) {
-          final geoPoint = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+          final geoPoint =
+              await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
           await geoPoint.set_latitude(item.latitude);
           await geoPoint.set_longitude(item.longitude);
           passby.add(geoPoint);
@@ -555,11 +560,13 @@ class AmapSearch {
         _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -567,8 +574,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapWalkingRouteSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapWalkingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -645,11 +652,13 @@ class AmapSearch {
         _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -657,8 +666,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapWalkingRouteSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapWalkingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -733,11 +742,13 @@ class AmapSearch {
         _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng =
+            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -745,8 +756,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapRidingRouteSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapRidingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -867,8 +878,8 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapDistrictSearchRequest();
+        final request = await AmapSearchFluttifyFactoryIOS
+            .createAMapDistrictSearchRequest();
         // 设置站点名称
         await request.set_keywords(district);
 
