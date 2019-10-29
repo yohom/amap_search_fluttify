@@ -34,21 +34,21 @@ class AMapNearbySearchManager extends NSObject  {
             print('fluttify-dart-callback: nearbyInfoForUploading([])');
         
             // handle the native call
-            delegate?.nearbyInfoForUploading(AMapNearbySearchManager()..refId = (args['manager']));
+            delegate?.nearbyInfoForUploading(AMapNearbySearchManager()..refId = (args['manager'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
             print('fluttify-dart-callback: onNearbyInfoUploadedWithError([])');
         
             // handle the native call
-            delegate?.onNearbyInfoUploadedWithError(NSError()..refId = (args['error']));
+            delegate?.onNearbyInfoUploadedWithError(NSError()..refId = (args['error'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
             print('fluttify-dart-callback: onUserInfoClearedWithError([])');
         
             // handle the native call
-            delegate?.onUserInfoClearedWithError(NSError()..refId = (args['error']));
+            delegate?.onUserInfoClearedWithError(NSError()..refId = (args['error'])..tag = 'amap_search_fluttify');
             break;
           default:
             break;

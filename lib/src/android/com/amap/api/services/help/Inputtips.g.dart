@@ -78,7 +78,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
               print('fluttify-dart-callback: onGetInputtips([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onGetInputtips((args['var1'] as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it).toList(), args['var2']);
+              var1?.onGetInputtips((args['var1'] as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it..tag = 'amap_search_fluttify').toList(), args['var2']);
               break;
             default:
               break;

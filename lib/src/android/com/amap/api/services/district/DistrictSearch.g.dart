@@ -138,7 +138,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onDistrictSearched([])');
         
               // handle the native call
-              var1?.onDistrictSearched(com_amap_api_services_district_DistrictResult()..refId = (args['var1']));
+              var1?.onDistrictSearched(com_amap_api_services_district_DistrictResult()..refId = (args['var1'])..tag = 'amap_search_fluttify');
               break;
             default:
               break;

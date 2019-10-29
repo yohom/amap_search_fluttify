@@ -38,14 +38,14 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onPoiSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onPoiSearched(com_amap_api_services_poisearch_PoiResult()..refId = (args['var1']), args['var2']);
+              var1?.onPoiSearched(com_amap_api_services_poisearch_PoiResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
               // print log
               print('fluttify-dart-callback: onPoiItemSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onPoiItemSearched(com_amap_api_services_core_PoiItem()..refId = (args['var1']), args['var2']);
+              var1?.onPoiItemSearched(com_amap_api_services_core_PoiItem()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

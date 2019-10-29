@@ -38,7 +38,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
               print('fluttify-dart-callback: onRoutePoiSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = (args['var1']), args['var2']);
+              var1?.onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

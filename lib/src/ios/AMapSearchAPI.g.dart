@@ -40,112 +40,112 @@ class AMapSearchAPI extends NSObject  {
             print('fluttify-dart-callback: onPOISearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onPOISearchDoneResponse(AMapPOISearchBaseRequest()..refId = (args['request']), AMapPOISearchResponse()..refId = (args['response']));
+            delegate?.onPOISearchDoneResponse(AMapPOISearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapPOISearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onRoutePOISearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onRoutePOISearchDoneResponse(AMapRoutePOISearchRequest()..refId = (args['request']), AMapRoutePOISearchResponse()..refId = (args['response']));
+            delegate?.onRoutePOISearchDoneResponse(AMapRoutePOISearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapRoutePOISearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onGeocodeSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onGeocodeSearchDoneResponse(AMapGeocodeSearchRequest()..refId = (args['request']), AMapGeocodeSearchResponse()..refId = (args['response']));
+            delegate?.onGeocodeSearchDoneResponse(AMapGeocodeSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapGeocodeSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onReGeocodeSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onReGeocodeSearchDoneResponse(AMapReGeocodeSearchRequest()..refId = (args['request']), AMapReGeocodeSearchResponse()..refId = (args['response']));
+            delegate?.onReGeocodeSearchDoneResponse(AMapReGeocodeSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapReGeocodeSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onInputTipsSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onInputTipsSearchDoneResponse(AMapInputTipsSearchRequest()..refId = (args['request']), AMapInputTipsSearchResponse()..refId = (args['response']));
+            delegate?.onInputTipsSearchDoneResponse(AMapInputTipsSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapInputTipsSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onBusStopSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onBusStopSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onBusStopSearchDoneResponse(AMapBusStopSearchRequest()..refId = (args['request']), AMapBusStopSearchResponse()..refId = (args['response']));
+            delegate?.onBusStopSearchDoneResponse(AMapBusStopSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapBusStopSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onBusLineSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onBusLineSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onBusLineSearchDoneResponse(AMapBusLineBaseSearchRequest()..refId = (args['request']), AMapBusLineSearchResponse()..refId = (args['response']));
+            delegate?.onBusLineSearchDoneResponse(AMapBusLineBaseSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapBusLineSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onDistrictSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onDistrictSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onDistrictSearchDoneResponse(AMapDistrictSearchRequest()..refId = (args['request']), AMapDistrictSearchResponse()..refId = (args['response']));
+            delegate?.onDistrictSearchDoneResponse(AMapDistrictSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapDistrictSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onRouteSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onRouteSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onRouteSearchDoneResponse(AMapRouteSearchBaseRequest()..refId = (args['request']), AMapRouteSearchResponse()..refId = (args['response']));
+            delegate?.onRouteSearchDoneResponse(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapRouteSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onFutureRouteSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onFutureRouteSearchDoneResponse(AMapRouteSearchBaseRequest()..refId = (args['request']), AMapFutureRouteSearchResponse()..refId = (args['response']));
+            delegate?.onFutureRouteSearchDoneResponse(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapFutureRouteSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onDistanceSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onDistanceSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onDistanceSearchDoneResponse(AMapDistanceSearchRequest()..refId = (args['request']), AMapDistanceSearchResponse()..refId = (args['response']));
+            delegate?.onDistanceSearchDoneResponse(AMapDistanceSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapDistanceSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onWeatherSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onWeatherSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onWeatherSearchDoneResponse(AMapWeatherSearchRequest()..refId = (args['request']), AMapWeatherSearchResponse()..refId = (args['response']));
+            delegate?.onWeatherSearchDoneResponse(AMapWeatherSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapWeatherSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onRoadTrafficSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onRoadTrafficSearchDoneResponse(AMapRoadTrafficSearchBaseRequest()..refId = (args['request']), AMapRoadTrafficSearchResponse()..refId = (args['response']));
+            delegate?.onRoadTrafficSearchDoneResponse(AMapRoadTrafficSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapRoadTrafficSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onNearbySearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onNearbySearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onNearbySearchDoneResponse(AMapNearbySearchRequest()..refId = (args['request']), AMapNearbySearchResponse()..refId = (args['response']));
+            delegate?.onNearbySearchDoneResponse(AMapNearbySearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapNearbySearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onCloudSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onCloudSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onCloudSearchDoneResponse(AMapCloudSearchBaseRequest()..refId = (args['request']), AMapCloudPOISearchResponse()..refId = (args['response']));
+            delegate?.onCloudSearchDoneResponse(AMapCloudSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapCloudPOISearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           case 'Callback::AMapSearchDelegate::onShareSearchDoneResponse':
             // print log
             print('fluttify-dart-callback: onShareSearchDoneResponse([])');
         
             // handle the native call
-            delegate?.onShareSearchDoneResponse(AMapShareSearchBaseRequest()..refId = (args['request']), AMapShareSearchResponse()..refId = (args['response']));
+            delegate?.onShareSearchDoneResponse(AMapShareSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapShareSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
             break;
           default:
             break;

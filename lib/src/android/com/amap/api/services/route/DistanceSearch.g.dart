@@ -38,7 +38,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onDistanceSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onDistanceSearched(com_amap_api_services_route_DistanceResult()..refId = (args['var1']), args['var2']);
+              var1?.onDistanceSearched(com_amap_api_services_route_DistanceResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

@@ -78,14 +78,14 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onRegeocodeSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult()..refId = (args['var1']), args['var2']);
+              var1?.onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched':
               // print log
               print('fluttify-dart-callback: onGeocodeSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult()..refId = (args['var1']), args['var2']);
+              var1?.onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

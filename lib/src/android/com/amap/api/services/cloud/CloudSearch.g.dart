@@ -38,14 +38,14 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onCloudSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1']), args['var2']);
+              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
               print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1']), args['var2']);
+              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

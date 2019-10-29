@@ -58,7 +58,7 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onBusLineSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onBusLineSearched(com_amap_api_services_busline_BusLineResult()..refId = (args['var1']), args['var2']);
+              var1?.onBusLineSearched(com_amap_api_services_busline_BusLineResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

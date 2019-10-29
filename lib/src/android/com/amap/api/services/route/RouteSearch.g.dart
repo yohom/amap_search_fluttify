@@ -38,28 +38,28 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onBusRouteSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onBusRouteSearched(com_amap_api_services_route_BusRouteResult()..refId = (args['var1']), args['var2']);
+              var1?.onBusRouteSearched(com_amap_api_services_route_BusRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
               // print log
               print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult()..refId = (args['var1']), args['var2']);
+              var1?.onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
               // print log
               print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult()..refId = (args['var1']), args['var2']);
+              var1?.onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
               // print log
               print('fluttify-dart-callback: onRideRouteSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onRideRouteSearched(com_amap_api_services_route_RideRouteResult()..refId = (args['var1']), args['var2']);
+              var1?.onRideRouteSearched(com_amap_api_services_route_RideRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -96,7 +96,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1']), args['var2']);
+              var1?.onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -133,7 +133,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onDriveRoutePlanSearched(com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1']), args['var2']);
+              var1?.onDriveRoutePlanSearched(com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

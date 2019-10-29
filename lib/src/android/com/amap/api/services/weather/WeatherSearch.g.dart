@@ -98,14 +98,14 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
               print('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (args['var1']), args['var2']);
+              var1?.onWeatherLiveSearched(com_amap_api_services_weather_LocalWeatherLiveResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
               // print log
               print('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':$args[var2]])');
         
               // handle the native call
-              var1?.onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (args['var1']), args['var2']);
+              var1?.onWeatherForecastSearched(com_amap_api_services_weather_LocalWeatherForecastResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;

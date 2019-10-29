@@ -27,11 +27,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchObject* ref = (AMapSearchObject*) HEAP[@(refId)];
+          AMapSearchObject* ref = (AMapSearchObject*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchObject@%@::formattedDescription(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           NSString* result = [ref formattedDescription];
@@ -91,11 +90,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapNearbySearchManager* manager = (AMapNearbySearchManager*) HEAP[@([args[@"manager"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::nearbyInfoForUploading(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::nearbyInfoForUploading(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           AMapNearbyUploadInfo* result = [ref nearbyInfoForUploading: manager];
@@ -111,11 +109,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onNearbyInfoUploadedWithError(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onNearbyInfoUploadedWithError(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onNearbyInfoUploadedWithError : error];
@@ -130,11 +127,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSError* error = (NSError*) HEAP[@([args[@"error"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[@(refId)];
+          id<AMapNearbySearchManagerDelegate> ref = (id<AMapNearbySearchManagerDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onUserInfoClearedWithError(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManagerDelegate@%@::onUserInfoClearedWithError(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onUserInfoClearedWithError : error];
@@ -166,11 +162,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::startAutoUploadNearbyInfo(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::startAutoUploadNearbyInfo(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref startAutoUploadNearbyInfo ];
@@ -184,11 +179,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::stopAutoUploadNearbyInfo(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::stopAutoUploadNearbyInfo(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref stopAutoUploadNearbyInfo ];
@@ -203,11 +197,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapNearbyUploadInfo* info = (AMapNearbyUploadInfo*) HEAP[@([args[@"info"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::uploadNearbyInfo(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::uploadNearbyInfo(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref uploadNearbyInfo: info];
@@ -222,11 +215,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           NSString* userID = (NSString*) args[@"userID"];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[@(refId)];
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::clearUserInfoWithID(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapNearbySearchManager@%@::clearUserInfoWithID(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           BOOL result = [ref clearUserInfoWithID: userID];
@@ -240,11 +232,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::init(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::init(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           AMapSearchAPI* result = [ref init];
@@ -259,11 +250,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::cancelAllRequests(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref cancelAllRequests ];
@@ -278,11 +268,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapPOIIDSearchRequest* request = (AMapPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIIDSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapPOIIDSearch : request];
@@ -297,11 +286,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapPOIKeywordsSearchRequest* request = (AMapPOIKeywordsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIKeywordsSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapPOIKeywordsSearch : request];
@@ -316,11 +304,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapPOIAroundSearchRequest* request = (AMapPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIAroundSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapPOIAroundSearch : request];
@@ -335,11 +322,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapPOIPolygonSearchRequest* request = (AMapPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIPolygonSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapPOIPolygonSearch : request];
@@ -354,11 +340,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRoutePOISearchRequest* request = (AMapRoutePOISearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoutePOISearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapRoutePOISearch : request];
@@ -373,11 +358,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeocodeSearchRequest* request = (AMapGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapGeocodeSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapGeocodeSearch : request];
@@ -392,11 +376,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapReGeocodeSearchRequest* request = (AMapReGeocodeSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapReGoecodeSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapReGoecodeSearch : request];
@@ -411,11 +394,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapInputTipsSearchRequest* request = (AMapInputTipsSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapInputTipsSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapInputTipsSearch : request];
@@ -430,11 +412,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapBusStopSearchRequest* request = (AMapBusStopSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusStopSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapBusStopSearch : request];
@@ -449,11 +430,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapBusLineIDSearchRequest* request = (AMapBusLineIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineIDSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapBusLineIDSearch : request];
@@ -468,11 +448,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapBusLineNameSearchRequest* request = (AMapBusLineNameSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapBusLineNameSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapBusLineNameSearch : request];
@@ -487,11 +466,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapDistrictSearchRequest* request = (AMapDistrictSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistrictSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapDistrictSearch : request];
@@ -506,11 +484,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapDrivingRouteSearchRequest* request = (AMapDrivingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDrivingRouteSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapDrivingRouteSearch : request];
@@ -525,11 +502,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapWalkingRouteSearchRequest* request = (AMapWalkingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWalkingRouteSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapWalkingRouteSearch : request];
@@ -544,11 +520,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapTransitRouteSearchRequest* request = (AMapTransitRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTransitRouteSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapTransitRouteSearch : request];
@@ -563,11 +538,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRidingRouteSearchRequest* request = (AMapRidingRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRidingRouteSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapRidingRouteSearch : request];
@@ -582,11 +556,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapTruckRouteSearchRequest* request = (AMapTruckRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapTruckRouteSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapTruckRouteSearch : request];
@@ -601,11 +574,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapFutureRouteSearchRequest* request = (AMapFutureRouteSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapFutureRouteSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapFutureRouteSearch : request];
@@ -620,11 +592,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapWeatherSearchRequest* request = (AMapWeatherSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapWeatherSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapWeatherSearch : request];
@@ -639,11 +610,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRoadTrafficSearchRequest* request = (AMapRoadTrafficSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapRoadTrafficSearch : request];
@@ -658,11 +628,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRoadTrafficCircleSearchRequest* request = (AMapRoadTrafficCircleSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRoadTrafficCircleSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapRoadTrafficCircleSearch : request];
@@ -677,11 +646,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapDistanceSearchRequest* request = (AMapDistanceSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapDistanceSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapDistanceSearch : request];
@@ -696,11 +664,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapNearbySearchRequest* request = (AMapNearbySearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNearbySearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapNearbySearch : request];
@@ -715,11 +682,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapCloudPOIAroundSearchRequest* request = (AMapCloudPOIAroundSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIAroundSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapCloudPOIAroundSearch : request];
@@ -734,11 +700,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapCloudPOIPolygonSearchRequest* request = (AMapCloudPOIPolygonSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIPolygonSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapCloudPOIPolygonSearch : request];
@@ -753,11 +718,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapCloudPOIIDSearchRequest* request = (AMapCloudPOIIDSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOIIDSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapCloudPOIIDSearch : request];
@@ -772,11 +736,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapCloudPOILocalSearchRequest* request = (AMapCloudPOILocalSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapCloudPOILocalSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapCloudPOILocalSearch : request];
@@ -791,11 +754,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapLocationShareSearchRequest* request = (AMapLocationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapLocationShareSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapLocationShareSearch : request];
@@ -810,11 +772,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapPOIShareSearchRequest* request = (AMapPOIShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapPOIShareSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapPOIShareSearch : request];
@@ -829,11 +790,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRouteShareSearchRequest* request = (AMapRouteShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapRouteShareSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapRouteShareSearch : request];
@@ -848,11 +808,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapNavigationShareSearchRequest* request = (AMapNavigationShareSearchRequest*) HEAP[@([args[@"request"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[@(refId)];
+          AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchAPI@%@::AMapNavigationShareSearch(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref AMapNavigationShareSearch : request];
@@ -869,11 +828,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapPOISearchResponse* response = (AMapPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onPOISearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onPOISearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onPOISearchDone : request response: response];
@@ -890,11 +848,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRoutePOISearchResponse* response = (AMapRoutePOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoutePOISearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoutePOISearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onRoutePOISearchDone : request response: response];
@@ -911,11 +868,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapGeocodeSearchResponse* response = (AMapGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onGeocodeSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onGeocodeSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onGeocodeSearchDone : request response: response];
@@ -932,11 +888,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapReGeocodeSearchResponse* response = (AMapReGeocodeSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onReGeocodeSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onReGeocodeSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onReGeocodeSearchDone : request response: response];
@@ -953,11 +908,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapInputTipsSearchResponse* response = (AMapInputTipsSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onInputTipsSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onInputTipsSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onInputTipsSearchDone : request response: response];
@@ -974,11 +928,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapBusStopSearchResponse* response = (AMapBusStopSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusStopSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusStopSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onBusStopSearchDone : request response: response];
@@ -995,11 +948,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapBusLineSearchResponse* response = (AMapBusLineSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusLineSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onBusLineSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onBusLineSearchDone : request response: response];
@@ -1016,11 +968,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapDistrictSearchResponse* response = (AMapDistrictSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistrictSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistrictSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onDistrictSearchDone : request response: response];
@@ -1037,11 +988,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRouteSearchResponse* response = (AMapRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRouteSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRouteSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onRouteSearchDone : request response: response];
@@ -1058,11 +1008,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapFutureRouteSearchResponse* response = (AMapFutureRouteSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onFutureRouteSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onFutureRouteSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onFutureRouteSearchDone : request response: response];
@@ -1079,11 +1028,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapDistanceSearchResponse* response = (AMapDistanceSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistanceSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onDistanceSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onDistanceSearchDone : request response: response];
@@ -1100,11 +1048,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapWeatherSearchResponse* response = (AMapWeatherSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onWeatherSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onWeatherSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onWeatherSearchDone : request response: response];
@@ -1121,11 +1068,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapRoadTrafficSearchResponse* response = (AMapRoadTrafficSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoadTrafficSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onRoadTrafficSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onRoadTrafficSearchDone : request response: response];
@@ -1142,11 +1088,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapNearbySearchResponse* response = (AMapNearbySearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onNearbySearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onNearbySearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onNearbySearchDone : request response: response];
@@ -1163,11 +1108,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapCloudPOISearchResponse* response = (AMapCloudPOISearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onCloudSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onCloudSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onCloudSearchDone : request response: response];
@@ -1184,11 +1128,10 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           AMapShareSearchResponse* response = (AMapShareSearchResponse*) HEAP[@([args[@"response"] integerValue])];
       
           // ref
-          NSInteger refId = [args[@"refId"] integerValue];
-          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[@(refId)];
+          id<AMapSearchDelegate> ref = (id<AMapSearchDelegate>) HEAP[args[@"refId"]];
       
           // print log
-          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onShareSearchDone(暂未实现参数打印)", @(refId));
+          NSLog(@"fluttify-objc: AMapSearchDelegate@%@::onShareSearchDone(暂未实现参数打印)", args[@"refId"]);
       
           // invoke native method
           [ref onShareSearchDone : request response: response];
