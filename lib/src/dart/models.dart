@@ -1,3 +1,4 @@
+import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 
@@ -33,9 +34,20 @@ class Poi with _ToFutureString {
   /// 经纬度
   Future<LatLng> get latLng {
     return platform(
-      android: (pool) async =>
-          LatLng.android(await _androidModel.getLatLonPoint()),
-      ios: (pool) async => LatLng.ios(await _iosModel.get_location()),
+      android: (pool) async {
+        final location = await _androidModel.getLatLonPoint();
+        return LatLng(
+          await location.getLatitude(),
+          await location.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        final location = await _iosModel.get_location();
+        return LatLng(
+          await location.get_latitude(),
+          await location.get_longitude(),
+        );
+      },
     );
   }
 
@@ -109,58 +121,6 @@ class Poi with _ToFutureString {
   }
 }
 
-/// 经纬度 model
-class LatLng with _ToFutureString {
-  LatLng(this.latitude, this.longitude)
-      : _androidModel = null,
-        _iosModel = null;
-
-  LatLng.android(this._androidModel)
-      : latitude = null,
-        longitude = null,
-        _iosModel = null;
-
-  LatLng.ios(this._iosModel)
-      : latitude = null,
-        longitude = null,
-        _androidModel = null;
-
-  final com_amap_api_services_core_LatLonPoint _androidModel;
-  final AMapGeoPoint _iosModel;
-
-  /// 同步纬度
-  final double latitude;
-
-  /// 同步经度
-  final double longitude;
-
-  /// 异步纬度
-  Future<double> get futureLat {
-    return platform(
-      android: (pool) => _androidModel.getLatitude(),
-      ios: (pool) async => latitude ?? _iosModel.get_latitude(),
-    );
-  }
-
-  /// 异步经度
-  Future<double> get futureLng {
-    return platform(
-      android: (pool) => _androidModel.getLongitude(),
-      ios: (pool) async => longitude ?? _iosModel.get_longitude(),
-    );
-  }
-
-  @override
-  String toString() {
-    return 'LatLng{latitude: $latitude, longitude: $longitude}';
-  }
-
-  @override
-  Future<String> toFutureString() async {
-    return 'LatLng{futureLat: ${await futureLat}}, futureLng: ${await futureLng}';
-  }
-}
-
 /// 输入提示 model
 class InputTip with _ToFutureString {
   InputTip.android(this._androidModel) : _iosModel = null;
@@ -220,15 +180,26 @@ class Geocode with _ToFutureString {
   /// 经纬度
   Future<LatLng> get latLng {
     return platform(
-      android: (pool) =>
-          _androidModel.getLatLonPoint().then((it) => LatLng.android(it)),
-      ios: (pool) => _iosModel.get_location().then((it) => LatLng.ios(it)),
+      android: (pool) async {
+        final location = await _androidModel.getLatLonPoint();
+        return LatLng(
+          await location.getLatitude(),
+          await location.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        final location = await _iosModel.get_location();
+        return LatLng(
+          await location.get_latitude(),
+          await location.get_longitude(),
+        );
+      },
     );
   }
 
   @override
   Future<String> toFutureString() async {
-    return 'Geocode{latLng: ${await (await latLng).toFutureString()}}';
+    return 'Geocode{latLng: ${await latLng}}';
   }
 }
 
@@ -629,9 +600,13 @@ class DriveStep with _ToFutureString {
   /// 多边形
   Future<List<LatLng>> get polyline {
     return platform(
-      android: (pool) async => (await _androidModel.getPolyline())
-          .map((it) => LatLng.android(it))
-          .toList(),
+      android: (pool) async {
+        final polyline = await _androidModel.getPolyline();
+        return [
+          for (final item in polyline)
+            LatLng(await item.getLatitude(), await item.getLongitude()),
+        ];
+      },
       ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
@@ -671,7 +646,7 @@ class DriveStep with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'DriveStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, tolls: ${await tolls}, tollDistance: ${await tollDistance}, tollRoad: ${await tollRoad}, duration: ${await duration}, polyline: ${await _expandToString(polyline)}, action: ${await action}, assistantAction: ${await assistantAction}, tmsList: ${await _expandToString(tmsList)}';
+    return 'DriveStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, tolls: ${await tolls}, tollDistance: ${await tollDistance}, tollRoad: ${await tollRoad}, duration: ${await duration}, polyline: ${await polyline}, action: ${await action}, assistantAction: ${await assistantAction}, tmsList: ${await _expandToString(tmsList)}';
   }
 }
 
@@ -727,9 +702,13 @@ class WalkStep with _ToFutureString {
   /// 路线
   Future<List<LatLng>> get polyline {
     return platform(
-      android: (pool) async => (await _androidModel.getPolyline())
-          .map((it) => LatLng.android(it))
-          .toList(),
+      android: (pool) async {
+        final polyline = await _androidModel.getPolyline();
+        return [
+          for (final item in polyline)
+            LatLng(await item.getLatitude(), await item.getLongitude()),
+        ];
+      },
       ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
@@ -759,7 +738,7 @@ class WalkStep with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'WalkStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, duration: ${await duration}, polyline: ${await _expandToString(polyline)}, action: ${await action}, assistantAction: ${await assistantAction}';
+    return 'WalkStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, duration: ${await duration}, polyline: ${await polyline}, action: ${await action}, assistantAction: ${await assistantAction}';
   }
 }
 
@@ -815,9 +794,13 @@ class RideStep with _ToFutureString {
   /// 路线
   Future<List<LatLng>> get polyline {
     return platform(
-      android: (pool) async => (await _androidModel.getPolyline())
-          .map((it) => LatLng.android(it))
-          .toList(),
+      android: (pool) async {
+        final polyline = await _androidModel.getPolyline();
+        return [
+          for (final item in polyline)
+            LatLng(await item.getLatitude(), await item.getLongitude()),
+        ];
+      },
       ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
@@ -847,7 +830,7 @@ class RideStep with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'WalkStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, duration: ${await duration}, polyline: ${await _expandToString(polyline)}, action: ${await action}, assistantAction: ${await assistantAction}';
+    return 'WalkStep{instruction: ${await instruction}}, orientation: ${await orientation}, road: ${await road}, distance: ${await distance}, duration: ${await duration}, polyline: ${await polyline}, action: ${await action}, assistantAction: ${await assistantAction}';
   }
 }
 
@@ -944,23 +927,46 @@ class BusWalk with _ToFutureString {
   /// 起点
   Future<LatLng> get from {
     return platform(
-      android: (pool) async => LatLng.android(await _androidModel.getOrigin()),
-      ios: (pool) async => LatLng.ios(await _iosModel.get_origin()),
+      android: (pool) async {
+        final origin = await _androidModel.getOrigin();
+        return LatLng(
+          await origin.getLatitude(),
+          await origin.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        final origin = await _iosModel.get_origin();
+        return LatLng(
+          await origin.get_latitude(),
+          await origin.get_longitude(),
+        );
+      },
     );
   }
 
   /// 终点
   Future<LatLng> get to {
     return platform(
-      android: (pool) async =>
-          LatLng.android(await _androidModel.getDestination()),
-      ios: (pool) async => LatLng.ios(await _iosModel.get_destination()),
+      android: (pool) async {
+        final origin = await _androidModel.getDestination();
+        return LatLng(
+          await origin.getLatitude(),
+          await origin.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        final origin = await _iosModel.get_destination();
+        return LatLng(
+          await origin.get_latitude(),
+          await origin.get_longitude(),
+        );
+      },
     );
   }
 
   @override
   Future<String> toFutureString() async {
-    return 'BusWalk{from: ${await _toFutureString(from)}}, to: ${await _toFutureString(to)}';
+    return 'BusWalk{from: ${await from}}, to: ${await to}';
   }
 }
 
@@ -1048,9 +1054,19 @@ class BusEntrance with _ToFutureString {
   /// 经纬度
   Future<LatLng> get location {
     return platform(
-      android: (pool) async =>
-          LatLng.android(await _androidModel?.getLatLonPoint()),
-      ios: (pool) async => LatLng.ios(_iosModelLocation),
+      android: (pool) async {
+        final location = await _androidModel.getLatLonPoint();
+        return LatLng(
+          await location.getLatitude(),
+          await location.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        return LatLng(
+          await _iosModelLocation.get_latitude(),
+          await _iosModelLocation.get_longitude(),
+        );
+      },
     );
   }
 
@@ -1081,9 +1097,19 @@ class BusExit with _ToFutureString {
   /// 经纬度
   Future<LatLng> get location {
     return platform(
-      android: (pool) async =>
-          LatLng.android(await _androidModel?.getLatLonPoint()),
-      ios: (pool) async => LatLng.ios(_iosModelLocation),
+      android: (pool) async {
+        final location = await _androidModel.getLatLonPoint();
+        return LatLng(
+          await location.getLatitude(),
+          await location.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        return LatLng(
+          await _iosModelLocation.get_latitude(),
+          await _iosModelLocation.get_longitude(),
+        );
+      },
     );
   }
 
@@ -1151,9 +1177,13 @@ class TMC with _ToFutureString {
   /// 路线
   Future<List<LatLng>> get polyline {
     return platform(
-      android: (pool) async => (await _androidModel.getPolyline())
-          .map((it) => LatLng.android(it))
-          .toList(),
+      android: (pool) async {
+        final polyline = await _androidModel.getPolyline();
+        return [
+          for (final item in polyline)
+            LatLng(await item.getLatitude(), await item.getLongitude()),
+        ];
+      },
       ios: (pool) async {
         final latLngString = await _iosModel.get_polyline();
         return latLngString
@@ -1167,7 +1197,7 @@ class TMC with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'TMC{distance: ${await distance}}, status: ${await status}, polyline: ${await _expandToString(polyline)}';
+    return 'TMC{distance: ${await distance}}, status: ${await status}, polyline: ${await polyline}';
   }
 }
 
@@ -1236,15 +1266,26 @@ class BusStationItem with _ToFutureString {
   /// 经纬度
   Future<LatLng> get location {
     return platform(
-      android: (pool) =>
-          _androidModel.getLatLonPoint().then((it) => LatLng.android(it)),
-      ios: (pool) => _iosModel.get_location().then((it) => LatLng.ios(it)),
+      android: (pool) async {
+        final latLng = await _androidModel.getLatLonPoint();
+        return LatLng(
+          await latLng.getLatitude(),
+          await latLng.getLongitude(),
+        );
+      },
+      ios: (pool) async {
+        final location = await _iosModel.get_location();
+        return LatLng(
+          await location.get_latitude(),
+          await location.get_longitude(),
+        );
+      },
     );
   }
 
   @override
   Future<String> toFutureString() async {
-    return 'BusStationItem{name: ${await name}, id: ${await id}, location: ${await _toFutureString(location)}}';
+    return 'BusStationItem{name: ${await name}, id: ${await id}, location: ${await location}}';
   }
 }
 
@@ -1317,15 +1358,23 @@ class DistrictItem with _ToFutureString {
   /// 中心点
   Future<LatLng> get center {
     return platform(
-      android: (pool) =>
-          _androidModel.getCenter().then((it) => LatLng.android(it)),
-      ios: (pool) => _iosModel.get_center().then((it) => LatLng.ios(it)),
+      android: (pool) async {
+        final center = await _androidModel.getCenter();
+        return LatLng(await center.getLatitude(), await center.getLongitude());
+      },
+      ios: (pool) async {
+        final center = await _iosModel.get_center();
+        return LatLng(
+          await center.get_latitude(),
+          await center.get_longitude(),
+        );
+      },
     );
   }
 
   @override
   Future<String> toFutureString() async {
-    return 'DistrictItem{name: ${await name}, cityCode: ${await cityCode}, adCode: ${await adCode}, center: ${await _toFutureString(center)}}';
+    return 'DistrictItem{name: ${await name}, cityCode: ${await cityCode}, adCode: ${await adCode}, center: ${await center}}';
   }
 }
 

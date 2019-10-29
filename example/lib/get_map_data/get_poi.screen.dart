@@ -79,7 +79,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
                       ', businessArea: ' +
                       (await it.businessArea) +
                       ', ' +
-                      await ((await it.latLng).toFutureString()))
+                      (await it.latLng).toString())
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
             },
@@ -160,7 +160,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
                       ', businessArea: ' +
                       (await it.businessArea) +
                       ', ' +
-                      await ((await it.latLng).toFutureString()))
+                      (await it.latLng).toString())
                   .toList()
                   .then((it) => setState(() => _poiTitleList = it));
             },
