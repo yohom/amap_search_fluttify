@@ -248,6 +248,33 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 乡镇编码
+  Future<String> get townCode {
+    return platform(
+      android: (pool) => _androidModel.getTowncode(),
+      ios: (pool) =>
+          _iosModel.get_addressComponent().then((it) => it.get_towncode()),
+    );
+  }
+
+  /// 乡镇名称
+  Future<String> get township {
+    return platform(
+      android: (pool) => _androidModel.getTownship(),
+      ios: (pool) =>
+          _iosModel.get_addressComponent().then((it) => it.get_township()),
+    );
+  }
+
+  /// 社区名称
+  Future<String> get neighborhood {
+    return platform(
+      android: (pool) => _androidModel.getNeighborhood(),
+      ios: (pool) =>
+          _iosModel.get_addressComponent().then((it) => it.get_neighborhood()),
+    );
+  }
+
   /// 建筑物
   Future<String> get building {
     return platform(
@@ -274,9 +301,85 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 地址全称
+  Future<List<AoiItem>> get aoiList {
+    return platform(
+      android: (pool) async {
+        return (await _androidModel.getAois())
+            .map((it) => AoiItem.android(it))
+            .toList();
+      },
+      ios: (pool) async {
+        return (await _iosModel.get_aois())
+            .map((it) => AoiItem.ios(it))
+            .toList();
+      },
+    );
+  }
+
   @override
   Future<String> toFutureString() async {
-    return 'ReGeocode{provinceName: ${await provinceName}}, cityName: ${await cityName}, cityCode: ${await cityCode}, districtName: ${await districtName}, building: ${await building}, country: ${await country}, formatAddress: ${await formatAddress}';
+    return 'ReGeocode{provinceName: ${await provinceName}}, cityName: ${await cityName}, cityCode: ${await cityCode}, districtName: ${await districtName}, building: ${await building}, country: ${await country}, formatAddress: ${await formatAddress}, aoiList: ${await _expandToString(aoiList)}';
+  }
+}
+
+class AoiItem with _ToFutureString {
+  AoiItem.android(this._androidModel);
+
+  AoiItem.ios(this._iosModel);
+
+  com_amap_api_services_geocoder_AoiItem _androidModel;
+  AMapAOI _iosModel;
+
+  /// 邮政编码
+  Future<String> get adcode {
+    return platform(
+      android: (pool) => _androidModel.getAdCode(),
+      ios: (pool) => _iosModel.get_adcode(),
+    );
+  }
+
+  /// 覆盖面积 单位平方米
+  Future<double> get area {
+    return platform(
+      android: (pool) => _androidModel.getAoiArea(),
+      ios: (pool) => _iosModel.get_area(),
+    );
+  }
+
+  /// 唯一标识
+  Future<String> get id {
+    return platform(
+      android: (pool) => _androidModel.getAoiId(),
+      ios: (pool) => _iosModel.get_uid(),
+    );
+  }
+
+  /// 名称
+  Future<String> get name {
+    return platform(
+      android: (pool) => _androidModel.getAoiName(),
+      ios: (pool) => _iosModel.get_name(),
+    );
+  }
+
+  /// 中心点坐标
+  Future<LatLng> get centerPoint {
+    return platform(
+      android: (pool) async {
+        final point = await _androidModel.getAoiCenterPoint();
+        return LatLng(await point.getLatitude(), await point.getLongitude());
+      },
+      ios: (pool) async {
+        final point = await _iosModel.get_location();
+        return LatLng(await point.get_latitude(), await point.get_longitude());
+      },
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'AoiItem{adcode: ${await adcode}}, area: ${await area}, id: ${await id}, name: ${await name}, centerPoint: ${(await centerPoint).toString()}';
   }
 }
 

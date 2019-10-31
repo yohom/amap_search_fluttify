@@ -352,6 +352,9 @@ class AmapSearch {
         await request.set_location(amapLocation);
         // 设置半径
         await request.set_radius(radius.toInt());
+        // 获取扩展信息 如果不设置那么aoi就会为null, 但是android那边是没有这个选项一律获取aoi的
+        // 所以这里也一律获扩展信息
+        await request.set_requireExtension(true);
 
         // 开始搜索
         await _iosSearch.AMapReGoecodeSearch(request);
