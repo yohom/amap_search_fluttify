@@ -18,19 +18,28 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   @mustCallSuper
   Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {
     kNativeObjectPool.add(manager);
-    debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onNearbyInfoUploadedWithError(NSError error) {
     kNativeObjectPool.add(error);
-    debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onUserInfoClearedWithError(NSError error) {
     kNativeObjectPool.add(error);
-    debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

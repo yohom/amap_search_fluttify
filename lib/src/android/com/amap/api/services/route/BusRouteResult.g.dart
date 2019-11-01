@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   // generate methods
   Future<double> getTaxiCost() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusRouteResult::getTaxiCost', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<void> setTaxiCost(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusRouteResult::setTaxiCost', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<List<com_amap_api_services_route_BusPath>> getPaths() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusRouteResult::getPaths', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<void> setPaths(List<com_amap_api_services_route_BusPath> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusRouteResult::setPaths', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> getBusQuery() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusRouteResult::getBusQuery', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<void> setBusQuery(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusRouteResult::setBusQuery', {"var1": var1.refId, "refId": refId});

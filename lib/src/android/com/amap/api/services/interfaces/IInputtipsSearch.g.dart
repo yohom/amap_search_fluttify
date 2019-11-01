@@ -18,31 +18,46 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() {
   
-    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setInputtipsListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setInputtipsListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> requestInputtipsAsyn() {
   
-    debugPrint('requestInputtipsAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('requestInputtipsAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() {
   
-    debugPrint('requestInputtips::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('requestInputtips::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

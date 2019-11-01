@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   // generate methods
   Future<String> getAoiId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::getAoiId', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<String> getAoiName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::getAoiName', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<String> getAdCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::getAdCode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<com_amap_api_services_core_LatLonPoint> getAoiCenterPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::getAoiCenterPoint', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<double> getAoiArea() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::getAoiArea', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<void> setId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::setId', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::setName', {"var1": var1, "refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<void> setAdcode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::setAdcode', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::setLocation', {"var1": var1.refId, "refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_geocoder_AoiItem extends java_lang_Object with andro
   
   Future<void> setArea(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.AoiItem::setArea', {"var1": var1, "refId": refId});

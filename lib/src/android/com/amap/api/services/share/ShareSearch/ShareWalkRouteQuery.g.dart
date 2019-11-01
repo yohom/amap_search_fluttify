@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery extends java_l
   // generate methods
   Future<int> getWalkMode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery extends java_l
   
   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getShareFromAndTo() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo', {"refId": refId});

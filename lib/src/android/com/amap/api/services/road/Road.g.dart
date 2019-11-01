@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   // generate methods
   Future<void> setId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::setId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::setId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::setId', {"var1": var1, "refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::setName', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<String> getCityCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::getCityCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::getCityCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::getCityCode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<void> setCityCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::setCityCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::setCityCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::setCityCode', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<double> getRoadWidth() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::getRoadWidth([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::getRoadWidth([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::getRoadWidth', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<void> setRoadWidth(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::setRoadWidth([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::setRoadWidth([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::setRoadWidth', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<String> getType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::getType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::getType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::getType', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<void> setType(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::setType([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::setType([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::setType', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::getCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::getCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::getCenterPoint', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::setCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::setCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::setCenterPoint', {"var1": var1.refId, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<String> getId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::getId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::getId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::getId', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   
   Future<String> getName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Road@$refId::getName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Road@$refId::getName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Road::getName', {"refId": refId});

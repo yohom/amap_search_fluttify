@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   // generate methods
   Future<List<com_amap_api_services_route_DrivePlanPath>> getPaths() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getPaths', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::setPaths', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<List<com_amap_api_services_route_TimeInfo>> getTimeInfos() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::getTimeInfos', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setTimeInfos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setTimeInfos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::setTimeInfos', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<void> setDrivePlanQuery(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setDrivePlanQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setDrivePlanQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRoutePlanResult::setDrivePlanQuery', {"var1": var1.refId, "refId": refId});

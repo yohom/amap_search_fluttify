@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   // generate methods
   Future<String> getSearchCityName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.SearchCity::getSearchCityName', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<void> setSearchCityName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.SearchCity::setSearchCityName', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<String> getSearchCitycode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.SearchCity::getSearchCitycode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<void> setSearchCitycode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCitycode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCitycode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.SearchCity::setSearchCitycode', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<String> getSearchCityAdCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.SearchCity::getSearchCityAdCode', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<void> setSearchCityhAdCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityhAdCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityhAdCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.SearchCity::setSearchCityhAdCode', {"var1": var1, "refId": refId});

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   // generate methods
   Future<String> getProvince() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getProvince([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getProvince([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getProvince', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getCity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getCity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getCity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getCity', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getAdCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getAdCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getAdCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getAdCode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getWeather() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWeather([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWeather([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getWeather', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getTemperature() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getTemperature([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getTemperature([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getTemperature', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getWindDirection() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindDirection([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindDirection([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getWindDirection', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getWindPower() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindPower([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindPower([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getWindPower', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getHumidity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getHumidity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getHumidity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getHumidity', {"refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getReportTime() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getReportTime([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getReportTime([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getReportTime', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setProvince(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setProvince([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setProvince([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setProvince', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setCity(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setCity([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setCity([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setCity', {"var1": var1, "refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setAdCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setAdCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setAdCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setAdCode', {"var1": var1, "refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setWeather(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWeather([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWeather([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setWeather', {"var1": var1, "refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setTemperature(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setTemperature([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setTemperature([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setTemperature', {"var1": var1, "refId": refId});
@@ -299,7 +328,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setWindDirection(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindDirection([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindDirection([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setWindDirection', {"var1": var1, "refId": refId});
@@ -319,7 +350,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setWindPower(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindPower([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindPower([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setWindPower', {"var1": var1, "refId": refId});
@@ -339,7 +372,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setHumidity(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setHumidity([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setHumidity([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setHumidity', {"var1": var1, "refId": refId});
@@ -359,7 +394,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setReportTime(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setReportTime([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setReportTime([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setReportTime', {"var1": var1, "refId": refId});

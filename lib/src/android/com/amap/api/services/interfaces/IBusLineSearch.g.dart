@@ -18,31 +18,46 @@ mixin com_amap_api_services_interfaces_IBusLineSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_busline_BusLineResult> searchBusLine() {
   
-    debugPrint('searchBusLine::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchBusLine::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setOnBusLineSearchListener(com_amap_api_services_busline_BusLineSearch_OnBusLineSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setOnBusLineSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setOnBusLineSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchBusLineAsyn() {
   
-    debugPrint('searchBusLineAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchBusLineAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_busline_BusLineQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_busline_BusLineQuery> getQuery() {
   
-    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

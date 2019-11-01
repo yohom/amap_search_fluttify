@@ -18,61 +18,91 @@ mixin com_amap_api_services_interfaces_INearbySearch on java_lang_Object {
   @mustCallSuper
   Future<void> addNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('addNearbyListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('addNearbyListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> removeNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('removeNearbyListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('removeNearbyListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> clearUserInfoAsyn() {
   
-    debugPrint('clearUserInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('clearUserInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setUserID(String var1) {
   
-    debugPrint('setUserID::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setUserID::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> startUploadNearbyInfoAuto(com_amap_api_services_nearby_UploadInfoCallback var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('startUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('startUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> stopUploadNearbyInfoAuto() {
   
-    debugPrint('stopUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('stopUploadNearbyInfoAuto::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> uploadNearbyInfoAsyn(com_amap_api_services_nearby_UploadInfo var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('uploadNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('uploadNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchNearbyInfoAsyn(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('searchNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchNearbyInfoAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_nearby_NearbySearchResult> searchNearbyInfo(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('searchNearbyInfo::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchNearbyInfo::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> destroy() {
   
-    debugPrint('destroy::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('destroy::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getPoint', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<void> setPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setPoint', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<double> getRadius() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getRadius([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getRadius([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getRadius', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<void> setRadius(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setRadius([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setRadius([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setRadius', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<String> getLatLonType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getLatLonType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getLatLonType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getLatLonType', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<void> setLatLonType(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setLatLonType([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setLatLonType([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setLatLonType', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<String> getPoiType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoiType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoiType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::getPoiType', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_geocoder_RegeocodeQuery extends java_lang_Object  {
   
   Future<void> setPoiType(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoiType([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoiType([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeQuery::setPoiType', {"var1": var1, "refId": refId});

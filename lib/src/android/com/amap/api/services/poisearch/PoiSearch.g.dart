@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   // generate methods
   Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setOnPoiSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setOnPoiSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener', {"refId": refId});
@@ -35,17 +38,21 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched':
               // print log
-              print('fluttify-dart-callback: onPoiSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onPoiSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
-              var1?.onPoiSearched(com_amap_api_services_poisearch_PoiResult()..refId = (args['var1']), args['var2']);
+              var1?.onPoiSearched(com_amap_api_services_poisearch_PoiResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
               // print log
-              print('fluttify-dart-callback: onPoiItemSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onPoiItemSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
-              var1?.onPoiItemSearched(com_amap_api_services_core_PoiItem()..refId = (args['var1']), args['var2']);
+              var1?.onPoiItemSearched(com_amap_api_services_core_PoiItem()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -63,7 +70,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<void> setLanguage(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setLanguage([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setLanguage([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::setLanguage', {"var1": var1, "refId": refId});
@@ -83,7 +92,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<String> getLanguage() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getLanguage([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getLanguage([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::getLanguage', {"refId": refId});
@@ -103,7 +114,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_poisearch_PoiResult> searchPOI() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOI([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOI([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::searchPOI', {"refId": refId});
@@ -123,7 +136,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<void> searchPOIAsyn() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::searchPOIAsyn', {"refId": refId});
@@ -143,7 +158,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::searchPOIId', {"var1": var1, "refId": refId});
@@ -163,7 +180,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<void> searchPOIIdAsyn(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIIdAsyn([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIIdAsyn([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::searchPOIIdAsyn', {"var1": var1, "refId": refId});
@@ -183,7 +202,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::setQuery', {"var1": var1.refId, "refId": refId});
@@ -203,7 +224,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setBound([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::setBound([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::setBound', {"var1": var1.refId, "refId": refId});
@@ -223,7 +246,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::getQuery', {"refId": refId});
@@ -243,7 +268,9 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getBound([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch@$refId::getBound([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch::getBound', {"refId": refId});

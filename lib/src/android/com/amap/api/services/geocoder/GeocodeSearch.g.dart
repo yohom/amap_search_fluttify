@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocation', {"var1": var1.refId, "refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener', {"refId": refId});
@@ -75,17 +82,21 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched':
               // print log
-              print('fluttify-dart-callback: onRegeocodeSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onRegeocodeSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
-              var1?.onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult()..refId = (args['var1']), args['var2']);
+              var1?.onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched':
               // print log
-              print('fluttify-dart-callback: onGeocodeSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onGeocodeSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
-              var1?.onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult()..refId = (args['var1']), args['var2']);
+              var1?.onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -103,7 +114,9 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationAsyn', {"var1": var1.refId, "refId": refId});
@@ -123,7 +136,9 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeSearch::getFromLocationNameAsyn', {"var1": var1.refId, "refId": refId});

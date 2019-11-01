@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   // generate methods
   Future<com_amap_api_services_route_RouteBusWalkItem> getWalk() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getWalk([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getWalk([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::getWalk', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setWalk(com_amap_api_services_route_RouteBusWalkItem var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setWalk([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setWalk([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setWalk', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<List<com_amap_api_services_route_RouteBusLineItem>> getBusLines() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getBusLines([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getBusLines([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::getBusLines', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setBusLines(List<com_amap_api_services_route_RouteBusLineItem> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setBusLines([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setBusLines([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setBusLines', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_Doorway> getEntrance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getEntrance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getEntrance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::getEntrance', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setEntrance(com_amap_api_services_route_Doorway var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setEntrance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setEntrance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setEntrance', {"var1": var1.refId, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_Doorway> getExit() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getExit([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getExit([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::getExit', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setExit(com_amap_api_services_route_Doorway var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setExit([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setExit([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setExit', {"var1": var1.refId, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_RouteRailwayItem> getRailway() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getRailway([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getRailway([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::getRailway', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setRailway(com_amap_api_services_route_RouteRailwayItem var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setRailway([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setRailway([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setRailway', {"var1": var1.refId, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_TaxiItem> getTaxi() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getTaxi([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getTaxi([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::getTaxi', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setTaxi(com_amap_api_services_route_TaxiItem var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setTaxi([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setTaxi([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.BusStep::setTaxi', {"var1": var1.refId, "refId": refId});

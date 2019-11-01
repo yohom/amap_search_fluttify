@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   // generate methods
   Future<com_amap_api_services_busline_BusStationItem> getDepartureBusStation() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getDepartureBusStation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getDepartureBusStation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getDepartureBusStation', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setDepartureBusStation(com_amap_api_services_busline_BusStationItem var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDepartureBusStation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDepartureBusStation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setDepartureBusStation', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<com_amap_api_services_busline_BusStationItem> getArrivalBusStation() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getArrivalBusStation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getArrivalBusStation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getArrivalBusStation', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setArrivalBusStation(com_amap_api_services_busline_BusStationItem var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setArrivalBusStation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setArrivalBusStation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setArrivalBusStation', {"var1": var1.refId, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPolyline([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPolyline([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPolyline', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPolyline([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPolyline([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPolyline', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<int> getPassStationNum() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStationNum([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStationNum([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPassStationNum', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setPassStationNum(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStationNum([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStationNum([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPassStationNum', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<List<com_amap_api_services_busline_BusStationItem>> getPassStations() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStations([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStations([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPassStations', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setPassStations(List<com_amap_api_services_busline_BusStationItem> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStations([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStations([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPassStations', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<double> getDuration() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getDuration([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getDuration([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getDuration', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setDuration(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDuration([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDuration([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setDuration', {"var1": var1, "refId": refId});

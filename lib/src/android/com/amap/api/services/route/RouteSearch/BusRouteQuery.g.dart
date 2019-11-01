@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   // generate methods
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getFromAndTo', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<int> getMode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getMode', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<String> getCity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getCity', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<int> getNightFlag() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getNightFlag', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<String> getCityd() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::getCityd', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<void> setCityd(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::setCityd', {"var1": var1, "refId": refId});

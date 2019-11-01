@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   // generate methods
   Future<int> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TMC::getDistance', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   
   Future<String> getStatus() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getStatus([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getStatus([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TMC::getStatus', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   
   Future<void> setDistance(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TMC::setDistance', {"var1": var1, "refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   
   Future<void> setStatus(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setStatus([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setStatus([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TMC::setStatus', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getPolyline([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::getPolyline([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TMC::getPolyline', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setPolyline([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TMC@$refId::setPolyline([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TMC::setPolyline', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

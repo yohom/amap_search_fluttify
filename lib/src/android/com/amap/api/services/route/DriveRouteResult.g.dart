@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   // generate methods
   Future<double> getTaxiCost() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::getTaxiCost', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<void> setTaxiCost(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::setTaxiCost', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<List<com_amap_api_services_route_DrivePath>> getPaths() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::getPaths', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<void> setPaths(List<com_amap_api_services_route_DrivePath> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::setPaths', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> getDriveQuery() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::getDriveQuery', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<void> setDriveQuery(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::setDriveQuery', {"var1": var1.refId, "refId": refId});

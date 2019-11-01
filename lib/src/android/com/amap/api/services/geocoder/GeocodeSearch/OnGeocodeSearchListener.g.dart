@@ -18,13 +18,19 @@ mixin com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener on ja
   @mustCallSuper
   Future<void> onRegeocodeSearched(com_amap_api_services_geocoder_RegeocodeResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onRegeocodeSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onRegeocodeSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onGeocodeSearched(com_amap_api_services_geocoder_GeocodeResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onGeocodeSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onGeocodeSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

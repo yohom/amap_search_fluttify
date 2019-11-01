@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   // generate methods
   Future<double> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanPath::getDistance', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   
   Future<void> setDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanPath::setDistance', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   
   Future<double> getTrafficLights() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getTrafficLights([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getTrafficLights([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanPath::getTrafficLights', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   
   Future<void> setTrafficLights(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanPath::setTrafficLights', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   
   Future<List<com_amap_api_services_route_DrivePlanStep>> getSteps() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getSteps([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::getSteps([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanPath::getSteps', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_DrivePlanPath extends java_lang_Object with an
   
   Future<void> setSteps(List<com_amap_api_services_route_DrivePlanStep> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setSteps([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanPath@$refId::setSteps([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanPath::setSteps', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

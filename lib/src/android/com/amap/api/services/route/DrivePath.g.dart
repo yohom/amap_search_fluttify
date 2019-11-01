@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   // generate methods
   Future<String> getStrategy() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getStrategy([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getStrategy([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::getStrategy', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<void> setStrategy(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setStrategy([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setStrategy([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::setStrategy', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<double> getTolls() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTolls([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTolls([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::getTolls', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<void> setTolls(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTolls([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTolls([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::setTolls', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<double> getTollDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTollDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTollDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::getTollDistance', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<void> setTollDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTollDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTollDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::setTollDistance', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<int> getTotalTrafficlights() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::getTotalTrafficlights', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<void> setTotalTrafficlights(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::setTotalTrafficlights', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<List<com_amap_api_services_route_DriveStep>> getSteps() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getSteps([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getSteps([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::getSteps', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<void> setSteps(List<com_amap_api_services_route_DriveStep> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setSteps([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setSteps([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::setSteps', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<int> getRestriction() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getRestriction([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::getRestriction([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::getRestriction', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_route_DrivePath extends java_lang_Object with androi
   
   Future<void> setRestriction(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setRestriction([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePath@$refId::setRestriction([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePath::setRestriction', {"var1": var1, "refId": refId});

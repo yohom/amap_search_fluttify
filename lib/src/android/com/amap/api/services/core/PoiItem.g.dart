@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   // generate methods
   Future<String> getBusinessArea() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getBusinessArea([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getBusinessArea([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getBusinessArea', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setBusinessArea(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setBusinessArea([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setBusinessArea([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getAdName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdName', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setAdName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdName', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getCityName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityName', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setCityName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityName', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getProvinceName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceName', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setProvinceName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getTypeDes() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeDes([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeDes([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeDes', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setTypeDes(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeDes([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeDes([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getTel() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTel([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTel([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTel', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setTel(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTel([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTel([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTel', {"var1": var1, "refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getAdCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getAdCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdCode', {"refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setAdCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setAdCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdCode', {"var1": var1, "refId": refId});
@@ -299,7 +328,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getPoiId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiId', {"refId": refId});
@@ -319,7 +350,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<int> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDistance', {"refId": refId});
@@ -339,7 +372,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setDistance(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDistance', {"var1": var1, "refId": refId});
@@ -359,7 +394,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getTitle() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTitle([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTitle([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTitle', {"refId": refId});
@@ -379,7 +416,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getSnippet() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSnippet([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSnippet([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSnippet', {"refId": refId});
@@ -399,7 +438,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint', {"refId": refId});
@@ -419,7 +460,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getCityCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getCityCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityCode', {"refId": refId});
@@ -439,7 +482,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setCityCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setCityCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityCode', {"var1": var1, "refId": refId});
@@ -459,7 +504,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<com_amap_api_services_core_LatLonPoint> getEnter() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEnter([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEnter([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEnter', {"refId": refId});
@@ -479,7 +526,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setEnter(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEnter([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEnter([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEnter', {"var1": var1.refId, "refId": refId});
@@ -499,7 +548,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<com_amap_api_services_core_LatLonPoint> getExit() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getExit([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getExit([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getExit', {"refId": refId});
@@ -519,7 +570,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setExit(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setExit([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setExit([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setExit', {"var1": var1.refId, "refId": refId});
@@ -539,7 +592,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getWebsite() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getWebsite([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getWebsite([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getWebsite', {"refId": refId});
@@ -559,7 +614,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setWebsite(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setWebsite([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setWebsite([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setWebsite', {"var1": var1, "refId": refId});
@@ -579,7 +636,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getPostcode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPostcode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPostcode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPostcode', {"refId": refId});
@@ -599,7 +658,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setPostcode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPostcode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPostcode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPostcode', {"var1": var1, "refId": refId});
@@ -619,7 +680,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getEmail() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEmail([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getEmail([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEmail', {"refId": refId});
@@ -639,7 +702,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setEmail(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEmail([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setEmail([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEmail', {"var1": var1, "refId": refId});
@@ -659,7 +724,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getDirection() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDirection([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getDirection([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDirection', {"refId": refId});
@@ -679,7 +746,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setDirection(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDirection([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setDirection([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDirection', {"var1": var1, "refId": refId});
@@ -699,7 +768,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setIndoorMap(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorMap([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorMap([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap', {"var1": var1, "refId": refId});
@@ -719,7 +790,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<bool> isIndoorMap() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::isIndoorMap([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::isIndoorMap([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::isIndoorMap', {"refId": refId});
@@ -739,7 +812,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setProvinceCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setProvinceCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode', {"var1": var1, "refId": refId});
@@ -759,7 +834,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getProvinceCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getProvinceCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceCode', {"refId": refId});
@@ -779,7 +856,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setParkingType(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setParkingType([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setParkingType([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setParkingType', {"var1": var1, "refId": refId});
@@ -799,7 +878,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getParkingType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getParkingType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getParkingType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getParkingType', {"refId": refId});
@@ -819,7 +900,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setSubPois(List<com_amap_api_services_poisearch_SubPoiItem> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setSubPois([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setSubPois([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setSubPois', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -839,7 +922,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<List<com_amap_api_services_poisearch_SubPoiItem>> getSubPois() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSubPois([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getSubPois([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSubPois', {"refId": refId});
@@ -859,7 +944,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<com_amap_api_services_poisearch_IndoorData> getIndoorData() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getIndoorData([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getIndoorData([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData', {"refId": refId});
@@ -879,7 +966,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setIndoorDate(com_amap_api_services_poisearch_IndoorData var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorDate([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setIndoorDate([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate', {"var1": var1.refId, "refId": refId});
@@ -899,7 +988,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<List<com_amap_api_services_poisearch_Photo>> getPhotos() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPhotos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPhotos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPhotos', {"refId": refId});
@@ -919,7 +1010,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setPhotos(List<com_amap_api_services_poisearch_Photo> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPhotos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPhotos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPhotos', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -939,7 +1032,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<com_amap_api_services_poisearch_PoiItemExtension> getPoiExtension() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiExtension([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getPoiExtension([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension', {"refId": refId});
@@ -959,7 +1054,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setPoiExtension(com_amap_api_services_poisearch_PoiItemExtension var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPoiExtension([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setPoiExtension([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension', {"var1": var1.refId, "refId": refId});
@@ -979,7 +1076,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getTypeCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getTypeCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeCode', {"refId": refId});
@@ -999,7 +1098,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setTypeCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setTypeCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode', {"var1": var1, "refId": refId});
@@ -1019,7 +1120,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<String> getShopID() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getShopID([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::getShopID([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getShopID', {"refId": refId});
@@ -1039,7 +1142,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   
   Future<void> setShopID(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setShopID([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.PoiItem@$refId::setShopID([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setShopID', {"var1": var1, "refId": refId});

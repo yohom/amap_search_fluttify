@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   // generate methods
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint', {"var1": var1.refId, "refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<int> getRadius() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getRadius([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getRadius([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<void> setRadius(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<void> setType(com_amap_api_services_nearby_NearbySearchFunctionType var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType', {"var1": var1.index, "refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<int> getType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<void> setCoordType(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType', {"var1": var1, "refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<int> getCoordType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCoordType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCoordType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType', {"refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<void> setTimeRange(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange', {"var1": var1, "refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_nearby_NearbySearch_NearbyQuery extends java_lang_Ob
   
   Future<int> getTimeRange() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getTimeRange([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getTimeRange([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange', {"refId": refId});

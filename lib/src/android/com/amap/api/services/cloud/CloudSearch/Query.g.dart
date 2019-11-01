@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   // generate methods
   Future<String> getQueryString() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getQueryString([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getQueryString([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getQueryString', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> setTableID(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setTableID([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setTableID([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::setTableID', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<String> getTableID() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getTableID([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getTableID([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getTableID', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<int> getPageNum() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageNum([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageNum([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getPageNum', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> setPageNum(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageNum([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageNum([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::setPageNum', {"var1": var1, "refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> setPageSize(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageSize([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageSize([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::setPageSize', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<int> getPageSize() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageSize([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageSize([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getPageSize', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> setBound(com_amap_api_services_cloud_CloudSearch_SearchBound var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setBound([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setBound([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::setBound', {"var1": var1.refId, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<com_amap_api_services_cloud_CloudSearch_SearchBound> getBound() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getBound([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getBound([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getBound', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> addFilterString(String var1, String var2) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterString([\'var1\':$var1, \'var2\':$var2])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterString([\'var1\':$var1, \'var2\':$var2])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::addFilterString', {"var1": var1, "var2": var2, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<String> getFilterString() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterString([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterString([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getFilterString', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> addFilterNum(String var1, String var2, String var3) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterNum([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterNum([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::addFilterNum', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<String> getFilterNumString() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterNumString([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterNumString([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getFilterNumString', {"refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<void> setSortingrules(com_amap_api_services_cloud_CloudSearch_Sortingrules var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setSortingrules([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::setSortingrules([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::setSortingrules', {"var1": var1.refId, "refId": refId});
@@ -299,7 +328,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> getSortingrules() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getSortingrules([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::getSortingrules([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::getSortingrules', {"refId": refId});
@@ -319,7 +350,9 @@ class com_amap_api_services_cloud_CloudSearch_Query extends java_lang_Object  {
   
   Future<bool> queryEquals(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch.Query::queryEquals', {"var1": var1.refId, "refId": refId});

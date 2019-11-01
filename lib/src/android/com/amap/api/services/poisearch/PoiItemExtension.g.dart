@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   // generate methods
   Future<String> getOpentime() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiItemExtension::getOpentime', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_poisearch_PoiItemExtension extends java_lang_Object 
   
   Future<String> getmRating() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiItemExtension::getmRating', {"refId": refId});

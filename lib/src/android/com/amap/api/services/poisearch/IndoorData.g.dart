@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   // generate methods
   Future<String> getPoiId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.IndoorData::getPoiId', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   
   Future<void> setPoiId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.IndoorData::setPoiId', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   
   Future<int> getFloor() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloor([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloor([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.IndoorData::getFloor', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   
   Future<void> setFloor(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.IndoorData::setFloor', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   
   Future<String> getFloorName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.IndoorData::getFloorName', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_poisearch_IndoorData extends java_lang_Object with a
   
   Future<void> setFloorName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.IndoorData::setFloorName', {"var1": var1, "refId": refId});

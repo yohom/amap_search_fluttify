@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   // generate methods
   Future<String> getBuilding() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getBuilding', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setBuilding(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setBuilding', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<String> getQueryString() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getQueryString', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setQueryLanguage(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<String> getCategory() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCategory', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<String> getCity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCity', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<int> getPageNum() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageNum', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setPageNum(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageNum', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setPageSize(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setPageSize', {"var1": var1, "refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<int> getPageSize() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getPageSize', {"refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setCityLimit(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit', {"var1": var1, "refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> getCityLimit() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit', {"refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> requireSubPois(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois', {"var1": var1, "refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> isRequireSubPois() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois', {"refId": refId});
@@ -299,7 +328,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> isDistanceSort() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort', {"refId": refId});
@@ -319,7 +350,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setDistanceSort(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort', {"var1": var1, "refId": refId});
@@ -339,7 +372,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::getLocation', {"refId": refId});
@@ -359,7 +394,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::setLocation', {"var1": var1.refId, "refId": refId});
@@ -379,7 +416,9 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> queryEquals(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.Query::queryEquals', {"var1": var1.refId, "refId": refId});

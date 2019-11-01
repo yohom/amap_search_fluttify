@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   // generate methods
   Future<String> getRoad() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getRoad([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getRoad([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getRoad', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<void> setAdCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setAdCode', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<String> getAdCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getAdCode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<void> setRoad(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setRoad([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setRoad([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setRoad', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<double> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getDistance', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<void> setDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setDistance', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<bool> getToll() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getToll([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getToll([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getToll', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<void> setToll(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setToll([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setToll([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setToll', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getPolyline', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setPolyline', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<int> getRadius() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::getRadius', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<void> setRadius(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::setRadius', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<com_amap_api_services_traffic_CircleTrafficQuery> clone() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.CircleTrafficQuery::clone', {"refId": refId});

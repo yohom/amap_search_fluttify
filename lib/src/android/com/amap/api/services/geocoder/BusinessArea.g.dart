@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.BusinessArea::getCenterPoint', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.BusinessArea::setCenterPoint', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   
   Future<String> getName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.BusinessArea::getName', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.BusinessArea::setName', {"var1": var1, "refId": refId});

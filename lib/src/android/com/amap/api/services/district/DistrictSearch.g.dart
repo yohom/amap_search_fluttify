@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::getQuery', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::setQuery', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrict', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> searchDistrictAsyn() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAsyn', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> searchDistrictAnsy() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAnsy', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener', {"refId": refId});
@@ -135,10 +148,12 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched':
               // print log
-              print('fluttify-dart-callback: onDistrictSearched([])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onDistrictSearched([])');
+              }
         
               // handle the native call
-              var1?.onDistrictSearched(com_amap_api_services_district_DistrictResult()..refId = (args['var1']));
+              var1?.onDistrictSearched(com_amap_api_services_district_DistrictResult()..refId = (args['var1'])..tag = 'amap_search_fluttify');
               break;
             default:
               break;

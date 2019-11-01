@@ -18,67 +18,100 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   @mustCallSuper
   Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setOnPoiSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setOnPoiSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setLanguage(String var1) {
   
-    debugPrint('setLanguage::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setLanguage::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<String> getLanguage() {
   
-    debugPrint('getLanguage::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getLanguage::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_poisearch_PoiResult> searchPOI() {
   
-    debugPrint('searchPOI::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchPOI::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchPOIAsyn() {
   
-    debugPrint('searchPOIAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchPOIAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) {
   
-    debugPrint('searchPOIId::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchPOIId::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchPOIIdAsyn(String var1) {
   
-    debugPrint('searchPOIIdAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchPOIIdAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setBound::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setBound::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() {
   
-    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() {
   
-    debugPrint('getBound::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getBound::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   // generate methods
   Future<String> getStreet() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getStreet', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<void> setStreet(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setStreet', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<String> getNumber() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getNumber', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<void> setNumber(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setNumber', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getLatLonPoint', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setLatLonPoint', {"var1": var1.refId, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<String> getDirection() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getDirection', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<void> setDirection(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setDirection', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<double> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getDistance', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   
   Future<void> setDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setDistance', {"var1": var1, "refId": refId});

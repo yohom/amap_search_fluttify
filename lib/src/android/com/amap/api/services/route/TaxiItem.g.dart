@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getOrigin([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getOrigin([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::getOrigin', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDestination([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDestination([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::getDestination', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<double> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::getDistance', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<double> getDuration() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDuration([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDuration([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::getDuration', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<String> getmSname() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmSname([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmSname([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::getmSname', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<String> getmTname() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmTname([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmTname([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::getmTname', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::setOrigin', {"var1": var1.refId, "refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDestination([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDestination([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::setDestination', {"var1": var1.refId, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::setDistance', {"var1": var1, "refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setDuration(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDuration([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDuration([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::setDuration', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setSname(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setSname([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setSname([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::setSname', {"var1": var1, "refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setTname(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setTname([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setTname([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TaxiItem::setTname', {"var1": var1, "refId": refId});

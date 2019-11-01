@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   // generate methods
   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener', {"refId": refId});
@@ -35,17 +38,21 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched':
               // print log
-              print('fluttify-dart-callback: onCloudSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onCloudSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
-              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1']), args['var2']);
+              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
-              print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
-              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1']), args['var2']);
+              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -63,7 +70,9 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   
   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudAsyn', {"var1": var1.refId, "refId": refId});
@@ -83,7 +92,9 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   
   Future<void> searchCloudDetailAsyn(String var1, String var2) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn', {"var1": var1, "var2": var2, "refId": refId});

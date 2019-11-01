@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RouteSearchCity extends java_lang_Object with 
   // generate methods
   Future<List<com_amap_api_services_route_District>> getDistricts() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearchCity::getDistricts', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_RouteSearchCity extends java_lang_Object with 
   
   Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearchCity::setDistricts', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   // generate methods
   Future<int> getConnectionTimeOut() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getConnectionTimeOut([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getConnectionTimeOut([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getConnectionTimeOut', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<int> getSoTimeOut() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getSoTimeOut([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getSoTimeOut([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getSoTimeOut', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<void> setConnectionTimeOut(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setConnectionTimeOut', {"var1": var1, "refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<void> setSoTimeOut(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setSoTimeOut', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   static Future<com_amap_api_services_core_ServiceSettings> getInstance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings::getInstance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings::getInstance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance', );
@@ -119,7 +130,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<void> setLanguage(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setLanguage', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<void> setProtocol(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setProtocol', {"var1": var1, "refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<String> getLanguage() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getLanguage([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getLanguage([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getLanguage', {"refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<int> getProtocol() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getProtocol([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::getProtocol([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getProtocol', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<void> setApiKey(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setApiKey', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
   
   Future<void> destroyInnerAsynThreadPool() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::destroyInnerAsynThreadPool([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.ServiceSettings@$refId::destroyInnerAsynThreadPool([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::destroyInnerAsynThreadPool', {"refId": refId});
