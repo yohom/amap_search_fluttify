@@ -1,3 +1,7 @@
+## 0.2.10
+- feat: 逆地理编码增加aoi信息
+- fix: #4 add新值时，先判断stream是否已经关闭
+
 ## 0.2.8
 - enhancement: poi增加商圈信息字段
 
