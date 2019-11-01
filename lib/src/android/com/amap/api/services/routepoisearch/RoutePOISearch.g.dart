@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   // generate methods
   Future<void> setPoiSearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setPoiSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setPoiSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener', {"refId": refId});
@@ -35,7 +38,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::onRoutePoiSearched':
               // print log
-              print('fluttify-dart-callback: onRoutePoiSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onRoutePoiSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onRoutePoiSearched(com_amap_api_services_routepoisearch_RoutePOISearchResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
@@ -56,7 +61,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   
   Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::setQuery', {"var1": var1.refId, "refId": refId});
@@ -76,7 +83,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   
   Future<void> searchRoutePOIAsyn() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOIAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOIAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOIAsyn', {"refId": refId});
@@ -96,7 +105,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOI([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOI([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOI', {"refId": refId});

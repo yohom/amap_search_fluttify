@@ -56,7 +56,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -74,7 +76,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -91,7 +95,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getStatus([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getStatus()")
+            }
         
             // invoke native method
             val result = ref.getStatus()
@@ -109,7 +115,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setStatus([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setStatus(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStatus(var1)
@@ -126,7 +134,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getDirection()")
+            }
         
             // invoke native method
             val result = ref.getDirection()
@@ -144,7 +154,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDirection(var1)
@@ -161,7 +173,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getAngle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getAngle()")
+            }
         
             // invoke native method
             val result = ref.getAngle()
@@ -179,7 +193,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setAngle([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setAngle(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAngle(var1)
@@ -196,7 +212,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getSpeed([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getSpeed()")
+            }
         
             // invoke native method
             val result = ref.getSpeed()
@@ -214,7 +232,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setSpeed([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setSpeed(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSpeed(var1.toFloat())
@@ -231,7 +251,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getLcodes([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getLcodes()")
+            }
         
             // invoke native method
             val result = ref.getLcodes()
@@ -249,7 +271,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setLcodes([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setLcodes(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLcodes(var1)
@@ -266,7 +290,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates()")
+            }
         
             // invoke native method
             val result = ref.getCoordinates()
@@ -291,7 +317,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates()")
+            }
         
             // invoke native method
             ref.setCoordinates(ArrayList(var1))
@@ -308,7 +336,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::getDescription([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::getDescription()")
+            }
         
             // invoke native method
             val result = ref.getDescription()
@@ -326,7 +356,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::setDescription([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::setDescription(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDescription(var1)
@@ -343,7 +375,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::getEvaluation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::getEvaluation()")
+            }
         
             // invoke native method
             val result = ref.getEvaluation()
@@ -368,7 +402,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::setEvaluation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::setEvaluation()")
+            }
         
             // invoke native method
             ref.setEvaluation(var1)
@@ -385,7 +421,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::getRoads([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::getRoads()")
+            }
         
             // invoke native method
             val result = ref.getRoads()
@@ -410,7 +448,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::setRoads([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@$refId::setRoads()")
+            }
         
             // invoke native method
             ref.setRoads(ArrayList(var1))
@@ -427,7 +467,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::setTrafficSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::setTrafficSearchListener()")
+            }
         
             // invoke native method
             ref.setTrafficSearchListener(object : com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener {
@@ -471,7 +513,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoad()")
+            }
         
             // invoke native method
             val result = ref.loadTrafficByRoad(var1)
@@ -496,7 +540,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoadAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoadAsyn()")
+            }
         
             // invoke native method
             ref.loadTrafficByRoadAsyn(var1)
@@ -514,7 +560,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircle()")
+            }
         
             // invoke native method
             val result = ref.loadTrafficByCircle(var1)
@@ -539,7 +587,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircleAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircleAsyn()")
+            }
         
             // invoke native method
             ref.loadTrafficByCircleAsyn(var1)
@@ -559,7 +609,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener@$refId::onRoadTrafficSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener@$refId::onRoadTrafficSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onRoadTrafficSearched(var1, var2)
@@ -576,7 +628,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.RoadTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -594,7 +648,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.RoadTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -611,7 +667,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.RoadTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -629,7 +687,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.RoadTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -646,7 +706,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.RoadTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -670,7 +732,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.CircleTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint()")
+            }
         
             // invoke native method
             val result = ref.getCenterPoint()
@@ -695,7 +759,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.CircleTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint()")
+            }
         
             // invoke native method
             ref.setCenterPoint(var1)
@@ -712,7 +778,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.CircleTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius()")
+            }
         
             // invoke native method
             val result = ref.getRadius()
@@ -730,7 +798,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.CircleTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRadius(var1)
@@ -747,7 +817,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.CircleTrafficQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -771,7 +843,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getExpedite([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getExpedite()")
+            }
         
             // invoke native method
             val result = ref.getExpedite()
@@ -789,7 +863,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setExpedite([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setExpedite(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setExpedite(var1)
@@ -806,7 +882,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getCongested([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getCongested()")
+            }
         
             // invoke native method
             val result = ref.getCongested()
@@ -824,7 +902,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setCongested([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setCongested(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCongested(var1)
@@ -841,7 +921,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getBlocked([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getBlocked()")
+            }
         
             // invoke native method
             val result = ref.getBlocked()
@@ -859,7 +941,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setBlocked([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setBlocked(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBlocked(var1)
@@ -876,7 +960,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getUnknown([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getUnknown()")
+            }
         
             // invoke native method
             val result = ref.getUnknown()
@@ -894,7 +980,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setUnknown([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setUnknown(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUnknown(var1)
@@ -911,7 +999,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getStatus([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getStatus()")
+            }
         
             // invoke native method
             val result = ref.getStatus()
@@ -929,7 +1019,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setStatus([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setStatus(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStatus(var1)
@@ -946,7 +1038,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getDescription([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getDescription()")
+            }
         
             // invoke native method
             val result = ref.getDescription()
@@ -964,7 +1058,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.traffic.TrafficStatusEvaluation
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setDescription([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setDescription(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDescription(var1)
@@ -984,7 +1080,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener@$refId::onBusLineSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener@$refId::onBusLineSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onBusLineSearched(var1, var2)
@@ -1004,7 +1102,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener@$refId::onBusStationSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener@$refId::onBusStationSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onBusStationSearched(var1, var2)
@@ -1021,7 +1121,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -1039,7 +1141,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -1056,7 +1160,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusLineName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusLineName()")
+            }
         
             // invoke native method
             val result = ref.getBusLineName()
@@ -1074,7 +1180,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusLineName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusLineName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusLineName(var1)
@@ -1091,7 +1199,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusLineType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusLineType()")
+            }
         
             // invoke native method
             val result = ref.getBusLineType()
@@ -1109,7 +1219,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusLineType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusLineType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusLineType(var1)
@@ -1126,7 +1238,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getCityCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getCityCode()")
+            }
         
             // invoke native method
             val result = ref.getCityCode()
@@ -1144,7 +1258,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setCityCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setCityCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityCode(var1)
@@ -1161,7 +1277,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getDirectionsCoordinates([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getDirectionsCoordinates()")
+            }
         
             // invoke native method
             val result = ref.getDirectionsCoordinates()
@@ -1186,7 +1304,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setDirectionsCoordinates([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setDirectionsCoordinates()")
+            }
         
             // invoke native method
             ref.setDirectionsCoordinates(ArrayList(var1))
@@ -1203,7 +1323,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBounds([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBounds()")
+            }
         
             // invoke native method
             val result = ref.getBounds()
@@ -1228,7 +1350,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBounds([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBounds()")
+            }
         
             // invoke native method
             ref.setBounds(ArrayList(var1))
@@ -1245,7 +1369,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusLineId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusLineId()")
+            }
         
             // invoke native method
             val result = ref.getBusLineId()
@@ -1263,7 +1389,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusLineId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusLineId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusLineId(var1)
@@ -1280,7 +1408,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getOriginatingStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getOriginatingStation()")
+            }
         
             // invoke native method
             val result = ref.getOriginatingStation()
@@ -1298,7 +1428,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setOriginatingStation([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setOriginatingStation(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOriginatingStation(var1)
@@ -1315,7 +1447,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getTerminalStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getTerminalStation()")
+            }
         
             // invoke native method
             val result = ref.getTerminalStation()
@@ -1333,7 +1467,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setTerminalStation([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setTerminalStation(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTerminalStation(var1)
@@ -1350,7 +1486,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusCompany([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusCompany()")
+            }
         
             // invoke native method
             val result = ref.getBusCompany()
@@ -1368,7 +1506,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusCompany([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusCompany(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusCompany(var1)
@@ -1385,7 +1525,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBasicPrice([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBasicPrice()")
+            }
         
             // invoke native method
             val result = ref.getBasicPrice()
@@ -1403,7 +1545,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBasicPrice([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBasicPrice(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBasicPrice(var1.toFloat())
@@ -1420,7 +1564,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getTotalPrice([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getTotalPrice()")
+            }
         
             // invoke native method
             val result = ref.getTotalPrice()
@@ -1438,7 +1584,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setTotalPrice([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setTotalPrice(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTotalPrice(var1.toFloat())
@@ -1455,7 +1603,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusStations([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::getBusStations()")
+            }
         
             // invoke native method
             val result = ref.getBusStations()
@@ -1480,7 +1630,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusStations([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineItem@$refId::setBusStations()")
+            }
         
             // invoke native method
             ref.setBusStations(ArrayList(var1))
@@ -1505,7 +1657,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult::createPagedResult([\"var1\":$var1, \"var3\":$var3])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult::createPagedResult(\"var1\":$var1, \"var3\":$var3)")
+            }
         
             // invoke native method
             val result = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, ArrayList(var2), ArrayList(var3), ArrayList(var4))
@@ -1529,7 +1683,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getPageCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getPageCount()")
+            }
         
             // invoke native method
             val result = ref.getPageCount()
@@ -1546,7 +1702,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -1570,7 +1728,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getSearchSuggestionKeywords([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getSearchSuggestionKeywords()")
+            }
         
             // invoke native method
             val result = ref.getSearchSuggestionKeywords()
@@ -1587,7 +1747,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getSearchSuggestionCities([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getSearchSuggestionCities()")
+            }
         
             // invoke native method
             val result = ref.getSearchSuggestionCities()
@@ -1611,7 +1773,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getBusStations([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationResult@$refId::getBusStations()")
+            }
         
             // invoke native method
             val result = ref.getBusStations()
@@ -1635,7 +1799,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::searchBusStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::searchBusStation()")
+            }
         
             // invoke native method
             val result = ref.searchBusStation()
@@ -1659,7 +1825,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::setOnBusStationSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::setOnBusStationSearchListener()")
+            }
         
             // invoke native method
             ref.setOnBusStationSearchListener(object : com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener {
@@ -1702,7 +1870,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::searchBusStationAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::searchBusStationAsyn()")
+            }
         
             // invoke native method
             ref.searchBusStationAsyn()
@@ -1720,7 +1890,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -1737,7 +1909,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -1761,7 +1935,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLine([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLine()")
+            }
         
             // invoke native method
             val result = ref.searchBusLine()
@@ -1785,7 +1961,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::setOnBusLineSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::setOnBusLineSearchListener()")
+            }
         
             // invoke native method
             ref.setOnBusLineSearchListener(object : com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener {
@@ -1828,7 +2006,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLineAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::searchBusLineAsyn()")
+            }
         
             // invoke native method
             ref.searchBusLineAsyn()
@@ -1846,7 +2026,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -1863,7 +2045,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -1887,7 +2071,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getCategory([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getCategory()")
+            }
         
             // invoke native method
             val result = ref.getCategory()
@@ -1911,7 +2097,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getQueryString([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getQueryString()")
+            }
         
             // invoke native method
             val result = ref.getQueryString()
@@ -1929,7 +2117,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setQueryString(var1)
@@ -1946,7 +2136,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -1964,7 +2156,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -1981,7 +2175,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getPageSize([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getPageSize()")
+            }
         
             // invoke native method
             val result = ref.getPageSize()
@@ -1999,7 +2195,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageSize(var1)
@@ -2016,7 +2214,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getPageNumber([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::getPageNumber()")
+            }
         
             // invoke native method
             val result = ref.getPageNumber()
@@ -2034,7 +2234,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageNumber(var1)
@@ -2052,7 +2254,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setCategory([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::setCategory()")
+            }
         
             // invoke native method
             ref.setCategory(var1)
@@ -2069,7 +2273,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -2094,7 +2300,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals()")
+            }
         
             // invoke native method
             val result = ref.weakEquals(var1)
@@ -2119,7 +2327,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult::createPagedResult([\"var1\":$var1, \"var3\":$var3])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult::createPagedResult(\"var1\":$var1, \"var3\":$var3)")
+            }
         
             // invoke native method
             val result = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, ArrayList(var2), ArrayList(var3), ArrayList(var4))
@@ -2143,7 +2353,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getPageCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getPageCount()")
+            }
         
             // invoke native method
             val result = ref.getPageCount()
@@ -2160,7 +2372,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -2184,7 +2398,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionKeywords([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionKeywords()")
+            }
         
             // invoke native method
             val result = ref.getSearchSuggestionKeywords()
@@ -2201,7 +2417,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionCities([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getSearchSuggestionCities()")
+            }
         
             // invoke native method
             val result = ref.getSearchSuggestionCities()
@@ -2225,7 +2443,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusLineResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getBusLines([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusLineResult@$refId::getBusLines()")
+            }
         
             // invoke native method
             val result = ref.getBusLines()
@@ -2249,7 +2469,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getBusStationId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getBusStationId()")
+            }
         
             // invoke native method
             val result = ref.getBusStationId()
@@ -2267,7 +2489,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setBusStationId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setBusStationId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusStationId(var1)
@@ -2284,7 +2508,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getBusStationName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getBusStationName()")
+            }
         
             // invoke native method
             val result = ref.getBusStationName()
@@ -2302,7 +2528,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setBusStationName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setBusStationName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusStationName(var1)
@@ -2319,7 +2547,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -2344,7 +2574,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setLatLonPoint()")
+            }
         
             // invoke native method
             ref.setLatLonPoint(var1)
@@ -2361,7 +2593,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getCityCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getCityCode()")
+            }
         
             // invoke native method
             val result = ref.getCityCode()
@@ -2379,7 +2613,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setCityCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setCityCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityCode(var1)
@@ -2396,7 +2632,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -2414,7 +2652,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -2431,7 +2671,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getBusLineItems([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::getBusLineItems()")
+            }
         
             // invoke native method
             val result = ref.getBusLineItems()
@@ -2456,7 +2698,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setBusLineItems([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationItem@$refId::setBusLineItems()")
+            }
         
             // invoke native method
             ref.setBusLineItems(ArrayList(var1))
@@ -2473,7 +2717,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getQueryString([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getQueryString()")
+            }
         
             // invoke native method
             val result = ref.getQueryString()
@@ -2490,7 +2736,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -2507,7 +2755,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getPageSize([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getPageSize()")
+            }
         
             // invoke native method
             val result = ref.getPageSize()
@@ -2524,7 +2774,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getPageNumber([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::getPageNumber()")
+            }
         
             // invoke native method
             val result = ref.getPageNumber()
@@ -2542,7 +2794,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setQueryString([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setQueryString(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setQueryString(var1)
@@ -2560,7 +2814,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -2578,7 +2834,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setPageSize([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setPageSize(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageSize(var1)
@@ -2596,7 +2854,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setPageNumber([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::setPageNumber(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageNumber(var1)
@@ -2613,7 +2873,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -2638,7 +2900,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.busline.BusStationQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::weakEquals([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@$refId::weakEquals()")
+            }
         
             // invoke native method
             val result = ref.weakEquals(var1)
@@ -2655,7 +2919,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.AMapException
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorLevel([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorLevel()")
+            }
         
             // invoke native method
             val result = ref.getErrorLevel()
@@ -2672,7 +2938,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.AMapException
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorType()")
+            }
         
             // invoke native method
             val result = ref.getErrorType()
@@ -2689,7 +2957,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.AMapException
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorMessage([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorMessage()")
+            }
         
             // invoke native method
             val result = ref.getErrorMessage()
@@ -2706,7 +2976,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.AMapException
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.AMapException@$refId::getErrorCode()")
+            }
         
             // invoke native method
             val result = ref.getErrorCode()
@@ -2723,7 +2995,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getConnectionTimeOut([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getConnectionTimeOut()")
+            }
         
             // invoke native method
             val result = ref.getConnectionTimeOut()
@@ -2740,7 +3014,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getSoTimeOut([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getSoTimeOut()")
+            }
         
             // invoke native method
             val result = ref.getSoTimeOut()
@@ -2758,7 +3034,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setConnectionTimeOut(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setConnectionTimeOut(var1)
@@ -2776,7 +3054,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setSoTimeOut(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSoTimeOut(var1)
@@ -2792,7 +3072,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings::getInstance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings::getInstance()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.core.ServiceSettings.getInstance()
@@ -2817,7 +3099,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setLanguage([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setLanguage(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLanguage(var1)
@@ -2835,7 +3119,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setProtocol([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setProtocol(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProtocol(var1)
@@ -2852,7 +3138,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getLanguage([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getLanguage()")
+            }
         
             // invoke native method
             val result = ref.getLanguage()
@@ -2869,7 +3157,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getProtocol([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::getProtocol()")
+            }
         
             // invoke native method
             val result = ref.getProtocol()
@@ -2887,7 +3177,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setApiKey([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::setApiKey(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setApiKey(var1)
@@ -2904,7 +3196,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.ServiceSettings
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::destroyInnerAsynThreadPool([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.ServiceSettings@$refId::destroyInnerAsynThreadPool()")
+            }
         
             // invoke native method
             ref.destroyInnerAsynThreadPool()
@@ -2921,7 +3215,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SearchUtils::getSHA1([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SearchUtils::getSHA1()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.core.SearchUtils.getSHA1(var0)
@@ -2938,7 +3234,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SearchUtils::getPkgName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SearchUtils::getPkgName()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.core.SearchUtils.getPkgName(var0)
@@ -2954,7 +3252,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SearchUtils::getVersion([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SearchUtils::getVersion()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.core.SearchUtils.getVersion()
@@ -2971,7 +3271,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonSharePoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName()")
+            }
         
             // invoke native method
             val result = ref.getSharePointName()
@@ -2989,7 +3291,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonSharePoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSharePointName(var1)
@@ -3006,7 +3310,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonPoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::getLongitude()")
+            }
         
             // invoke native method
             val result = ref.getLongitude()
@@ -3024,7 +3330,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonPoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::setLongitude(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLongitude(var1)
@@ -3041,7 +3349,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonPoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::getLatitude()")
+            }
         
             // invoke native method
             val result = ref.getLatitude()
@@ -3059,7 +3369,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonPoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::setLatitude(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLatitude(var1)
@@ -3076,7 +3388,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.LatLonPoint
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::copy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.LatLonPoint@$refId::copy()")
+            }
         
             // invoke native method
             val result = ref.copy()
@@ -3100,7 +3414,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getBusinessArea([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getBusinessArea()")
+            }
         
             // invoke native method
             val result = ref.getBusinessArea()
@@ -3118,7 +3434,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setBusinessArea([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setBusinessArea(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusinessArea(var1)
@@ -3135,7 +3453,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getAdName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getAdName()")
+            }
         
             // invoke native method
             val result = ref.getAdName()
@@ -3153,7 +3473,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setAdName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setAdName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdName(var1)
@@ -3170,7 +3492,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getCityName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getCityName()")
+            }
         
             // invoke native method
             val result = ref.getCityName()
@@ -3188,7 +3512,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setCityName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setCityName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityName(var1)
@@ -3205,7 +3531,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getProvinceName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getProvinceName()")
+            }
         
             // invoke native method
             val result = ref.getProvinceName()
@@ -3223,7 +3551,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setProvinceName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setProvinceName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProvinceName(var1)
@@ -3240,7 +3570,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTypeDes([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTypeDes()")
+            }
         
             // invoke native method
             val result = ref.getTypeDes()
@@ -3258,7 +3590,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setTypeDes([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setTypeDes(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTypeDes(var1)
@@ -3275,7 +3609,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTel([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTel()")
+            }
         
             // invoke native method
             val result = ref.getTel()
@@ -3293,7 +3629,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setTel([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setTel(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTel(var1)
@@ -3310,7 +3648,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -3328,7 +3668,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -3345,7 +3687,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPoiId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPoiId()")
+            }
         
             // invoke native method
             val result = ref.getPoiId()
@@ -3362,7 +3706,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -3380,7 +3726,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1)
@@ -3397,7 +3745,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTitle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTitle()")
+            }
         
             // invoke native method
             val result = ref.getTitle()
@@ -3414,7 +3764,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getSnippet([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getSnippet()")
+            }
         
             // invoke native method
             val result = ref.getSnippet()
@@ -3431,7 +3783,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -3455,7 +3809,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getCityCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getCityCode()")
+            }
         
             // invoke native method
             val result = ref.getCityCode()
@@ -3473,7 +3829,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setCityCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setCityCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityCode(var1)
@@ -3490,7 +3848,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getEnter([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getEnter()")
+            }
         
             // invoke native method
             val result = ref.getEnter()
@@ -3515,7 +3875,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setEnter([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setEnter()")
+            }
         
             // invoke native method
             ref.setEnter(var1)
@@ -3532,7 +3894,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getExit([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getExit()")
+            }
         
             // invoke native method
             val result = ref.getExit()
@@ -3557,7 +3921,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setExit([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setExit()")
+            }
         
             // invoke native method
             ref.setExit(var1)
@@ -3574,7 +3940,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getWebsite([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getWebsite()")
+            }
         
             // invoke native method
             val result = ref.getWebsite()
@@ -3592,7 +3960,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setWebsite([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setWebsite(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWebsite(var1)
@@ -3609,7 +3979,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPostcode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPostcode()")
+            }
         
             // invoke native method
             val result = ref.getPostcode()
@@ -3627,7 +3999,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setPostcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setPostcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPostcode(var1)
@@ -3644,7 +4018,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getEmail([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getEmail()")
+            }
         
             // invoke native method
             val result = ref.getEmail()
@@ -3662,7 +4038,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setEmail([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setEmail(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setEmail(var1)
@@ -3679,7 +4057,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getDirection()")
+            }
         
             // invoke native method
             val result = ref.getDirection()
@@ -3697,7 +4077,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDirection(var1)
@@ -3715,7 +4097,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setIndoorMap([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setIndoorMap(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setIndoorMap(var1)
@@ -3732,7 +4116,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::isIndoorMap([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::isIndoorMap()")
+            }
         
             // invoke native method
             val result = ref.isIndoorMap()
@@ -3750,7 +4136,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setProvinceCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setProvinceCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProvinceCode(var1)
@@ -3767,7 +4155,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getProvinceCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getProvinceCode()")
+            }
         
             // invoke native method
             val result = ref.getProvinceCode()
@@ -3785,7 +4175,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setParkingType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setParkingType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setParkingType(var1)
@@ -3802,7 +4194,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getParkingType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getParkingType()")
+            }
         
             // invoke native method
             val result = ref.getParkingType()
@@ -3820,7 +4214,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setSubPois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setSubPois()")
+            }
         
             // invoke native method
             ref.setSubPois(ArrayList(var1))
@@ -3837,7 +4233,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getSubPois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getSubPois()")
+            }
         
             // invoke native method
             val result = ref.getSubPois()
@@ -3861,7 +4259,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getIndoorData([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getIndoorData()")
+            }
         
             // invoke native method
             val result = ref.getIndoorData()
@@ -3886,7 +4286,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setIndoorDate([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setIndoorDate()")
+            }
         
             // invoke native method
             ref.setIndoorDate(var1)
@@ -3903,7 +4305,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPhotos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPhotos()")
+            }
         
             // invoke native method
             val result = ref.getPhotos()
@@ -3928,7 +4332,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setPhotos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setPhotos()")
+            }
         
             // invoke native method
             ref.setPhotos(ArrayList(var1))
@@ -3945,7 +4351,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPoiExtension([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getPoiExtension()")
+            }
         
             // invoke native method
             val result = ref.getPoiExtension()
@@ -3970,7 +4378,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setPoiExtension([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setPoiExtension()")
+            }
         
             // invoke native method
             ref.setPoiExtension(var1)
@@ -3987,7 +4397,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTypeCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getTypeCode()")
+            }
         
             // invoke native method
             val result = ref.getTypeCode()
@@ -4005,7 +4417,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setTypeCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setTypeCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTypeCode(var1)
@@ -4022,7 +4436,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getShopID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::getShopID()")
+            }
         
             // invoke native method
             val result = ref.getShopID()
@@ -4040,7 +4456,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.PoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setShopID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.PoiItem@$refId::setShopID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setShopID(var1)
@@ -4057,7 +4475,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getCityName()")
+            }
         
             // invoke native method
             val result = ref.getCityName()
@@ -4075,7 +4495,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setCityName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityName(var1)
@@ -4092,7 +4514,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getCityCode()")
+            }
         
             // invoke native method
             val result = ref.getCityCode()
@@ -4110,7 +4534,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setCityCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityCode(var1)
@@ -4127,7 +4553,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -4145,7 +4573,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -4162,7 +4592,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum()")
+            }
         
             // invoke native method
             val result = ref.getSuggestionNum()
@@ -4180,7 +4612,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.core.SuggestionCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSuggestionNum(var1)
@@ -4197,7 +4631,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.Photo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::getTitle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::getTitle()")
+            }
         
             // invoke native method
             val result = ref.getTitle()
@@ -4215,7 +4651,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.Photo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::setTitle([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::setTitle(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTitle(var1)
@@ -4232,7 +4670,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.Photo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::getUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::getUrl()")
+            }
         
             // invoke native method
             val result = ref.getUrl()
@@ -4250,7 +4690,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.Photo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::setUrl([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.Photo@$refId::setUrl(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUrl(var1)
@@ -4267,7 +4709,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getPoiId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getPoiId()")
+            }
         
             // invoke native method
             val result = ref.getPoiId()
@@ -4285,7 +4729,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setPoiId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setPoiId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPoiId(var1)
@@ -4302,7 +4748,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getTitle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getTitle()")
+            }
         
             // invoke native method
             val result = ref.getTitle()
@@ -4320,7 +4768,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setTitle([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setTitle(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTitle(var1)
@@ -4337,7 +4787,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubName()")
+            }
         
             // invoke native method
             val result = ref.getSubName()
@@ -4355,7 +4807,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSubName(var1)
@@ -4372,7 +4826,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -4390,7 +4846,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1)
@@ -4407,7 +4865,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -4432,7 +4892,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setLatLonPoint()")
+            }
         
             // invoke native method
             ref.setLatLonPoint(var1)
@@ -4449,7 +4911,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getSnippet([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getSnippet()")
+            }
         
             // invoke native method
             val result = ref.getSnippet()
@@ -4467,7 +4931,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setSnippet([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setSnippet(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSnippet(var1)
@@ -4484,7 +4950,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubTypeDes([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::getSubTypeDes()")
+            }
         
             // invoke native method
             val result = ref.getSubTypeDes()
@@ -4502,7 +4970,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.SubPoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubTypeDes([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@$refId::setSubTypeDes(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSubTypeDes(var1)
@@ -4522,7 +4992,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@$refId::onPoiSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@$refId::onPoiSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onPoiSearched(var1, var2)
@@ -4542,7 +5014,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@$refId::onPoiItemSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@$refId::onPoiItemSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onPoiItemSearched(var1, var2)
@@ -4559,7 +5033,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiItemExtension
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiItemExtension@$refId::getOpentime()")
+            }
         
             // invoke native method
             val result = ref.getOpentime()
@@ -4576,7 +5052,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiItemExtension
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiItemExtension@$refId::getmRating()")
+            }
         
             // invoke native method
             val result = ref.getmRating()
@@ -4593,7 +5071,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft()")
+            }
         
             // invoke native method
             val result = ref.getLowerLeft()
@@ -4617,7 +5097,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight()")
+            }
         
             // invoke native method
             val result = ref.getUpperRight()
@@ -4641,7 +5123,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter()")
+            }
         
             // invoke native method
             val result = ref.getCenter()
@@ -4665,7 +5149,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange()")
+            }
         
             // invoke native method
             val result = ref.getRange()
@@ -4682,7 +5168,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape()")
+            }
         
             // invoke native method
             val result = ref.getShape()
@@ -4699,7 +5187,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort()")
+            }
         
             // invoke native method
             val result = ref.isDistanceSort()
@@ -4716,7 +5206,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList()")
+            }
         
             // invoke native method
             val result = ref.getPolyGonList()
@@ -4752,7 +5244,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult::createPagedResult([\"var2\":$var2, \"var4\":$var4, \"var5\":$var5])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult::createPagedResult(\"var2\":$var2, \"var4\":$var4, \"var5\":$var5)")
+            }
         
             // invoke native method
             val result = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, ArrayList(var2), ArrayList(var3), var4, var5, ArrayList(var6))
@@ -4776,7 +5270,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getPageCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getPageCount()")
+            }
         
             // invoke native method
             val result = ref.getPageCount()
@@ -4793,7 +5289,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -4817,7 +5315,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getBound()")
+            }
         
             // invoke native method
             val result = ref.getBound()
@@ -4841,7 +5341,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getPois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getPois()")
+            }
         
             // invoke native method
             val result = ref.getPois()
@@ -4865,7 +5367,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionKeywords([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionKeywords()")
+            }
         
             // invoke native method
             val result = ref.getSearchSuggestionKeywords()
@@ -4882,7 +5386,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionCitys([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionCitys()")
+            }
         
             // invoke native method
             val result = ref.getSearchSuggestionCitys()
@@ -4906,7 +5412,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setOnPoiSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setOnPoiSearchListener()")
+            }
         
             // invoke native method
             ref.setOnPoiSearchListener(object : com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener {
@@ -4971,7 +5479,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setLanguage([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setLanguage(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLanguage(var1)
@@ -4988,7 +5498,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::getLanguage([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::getLanguage()")
+            }
         
             // invoke native method
             val result = ref.getLanguage()
@@ -5005,7 +5517,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOI([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOI()")
+            }
         
             // invoke native method
             val result = ref.searchPOI()
@@ -5029,7 +5543,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIAsyn()")
+            }
         
             // invoke native method
             ref.searchPOIAsyn()
@@ -5047,7 +5563,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIId(\"var1\":$var1)")
+            }
         
             // invoke native method
             val result = ref.searchPOIId(var1)
@@ -5072,7 +5590,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIIdAsyn([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::searchPOIIdAsyn(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.searchPOIIdAsyn(var1)
@@ -5090,7 +5610,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -5108,7 +5630,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::setBound()")
+            }
         
             // invoke native method
             ref.setBound(var1)
@@ -5125,7 +5649,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -5149,7 +5675,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::getBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@$refId::getBound()")
+            }
         
             // invoke native method
             val result = ref.getBound()
@@ -5173,7 +5701,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding()")
+            }
         
             // invoke native method
             val result = ref.getBuilding()
@@ -5191,7 +5721,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBuilding(var1)
@@ -5208,7 +5740,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString()")
+            }
         
             // invoke native method
             val result = ref.getQueryString()
@@ -5226,7 +5760,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setQueryLanguage(var1)
@@ -5243,7 +5779,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory()")
+            }
         
             // invoke native method
             val result = ref.getCategory()
@@ -5260,7 +5798,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -5277,7 +5817,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum()")
+            }
         
             // invoke native method
             val result = ref.getPageNum()
@@ -5295,7 +5837,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageNum(var1)
@@ -5313,7 +5857,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageSize(var1)
@@ -5330,7 +5876,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize()")
+            }
         
             // invoke native method
             val result = ref.getPageSize()
@@ -5348,7 +5896,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityLimit(var1)
@@ -5365,7 +5915,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit()")
+            }
         
             // invoke native method
             val result = ref.getCityLimit()
@@ -5383,7 +5935,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.requireSubPois(var1)
@@ -5400,7 +5954,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois()")
+            }
         
             // invoke native method
             val result = ref.isRequireSubPois()
@@ -5417,7 +5973,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort()")
+            }
         
             // invoke native method
             val result = ref.isDistanceSort()
@@ -5435,7 +5993,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistanceSort(var1)
@@ -5452,7 +6012,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation()")
+            }
         
             // invoke native method
             val result = ref.getLocation()
@@ -5477,7 +6039,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation()")
+            }
         
             // invoke native method
             ref.setLocation(var1)
@@ -5495,7 +6059,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.PoiSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals()")
+            }
         
             // invoke native method
             val result = ref.queryEquals(var1)
@@ -5512,7 +6078,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.IndoorData
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::getPoiId()")
+            }
         
             // invoke native method
             val result = ref.getPoiId()
@@ -5530,7 +6098,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.IndoorData
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::setPoiId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPoiId(var1)
@@ -5547,7 +6117,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.IndoorData
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::getFloor([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::getFloor()")
+            }
         
             // invoke native method
             val result = ref.getFloor()
@@ -5565,7 +6137,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.IndoorData
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::setFloor([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::setFloor(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFloor(var1)
@@ -5582,7 +6156,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.IndoorData
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::getFloorName()")
+            }
         
             // invoke native method
             val result = ref.getFloorName()
@@ -5600,7 +6176,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.poisearch.IndoorData
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@$refId::setFloorName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFloorName(var1)
@@ -5617,7 +6195,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Railway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::getID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::getID()")
+            }
         
             // invoke native method
             val result = ref.getID()
@@ -5634,7 +6214,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Railway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -5652,7 +6234,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Railway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::setID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::setID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setID(var1)
@@ -5670,7 +6254,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Railway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Railway@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -5687,7 +6273,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getCost([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getCost()")
+            }
         
             // invoke native method
             val result = ref.getCost()
@@ -5705,7 +6293,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setCost([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setCost(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCost(var1.toFloat())
@@ -5722,7 +6312,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::isNightBus([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::isNightBus()")
+            }
         
             // invoke native method
             val result = ref.isNightBus()
@@ -5740,7 +6332,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setNightBus([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setNightBus(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNightBus(var1)
@@ -5757,7 +6351,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getWalkDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getWalkDistance()")
+            }
         
             // invoke native method
             val result = ref.getWalkDistance()
@@ -5775,7 +6371,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setWalkDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setWalkDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWalkDistance(var1.toFloat())
@@ -5792,7 +6390,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getBusDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getBusDistance()")
+            }
         
             // invoke native method
             val result = ref.getBusDistance()
@@ -5810,7 +6410,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setBusDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setBusDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBusDistance(var1.toFloat())
@@ -5827,7 +6429,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::getSteps()")
+            }
         
             // invoke native method
             val result = ref.getSteps()
@@ -5852,7 +6456,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusPath@$refId::setSteps()")
+            }
         
             // invoke native method
             ref.setSteps(ArrayList(var1))
@@ -5869,7 +6475,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths()")
+            }
         
             // invoke native method
             val result = ref.getPaths()
@@ -5894,7 +6502,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths()")
+            }
         
             // invoke native method
             ref.setPaths(ArrayList(var1))
@@ -5911,7 +6521,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos()")
+            }
         
             // invoke native method
             val result = ref.getTimeInfos()
@@ -5936,7 +6548,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::setTimeInfos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::setTimeInfos()")
+            }
         
             // invoke native method
             ref.setTimeInfos(ArrayList(var1))
@@ -5954,7 +6568,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::setDrivePlanQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@$refId::setDrivePlanQuery()")
+            }
         
             // invoke native method
             ref.setDrivePlanQuery(var1)
@@ -5972,7 +6588,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setMode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setMode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setMode(var1)
@@ -5990,7 +6608,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckSize([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckSize(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTruckSize(var1)
@@ -6008,7 +6628,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckHeight([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckHeight(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTruckHeight(var1.toFloat())
@@ -6026,7 +6648,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWidth([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWidth(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTruckWidth(var1.toFloat())
@@ -6044,7 +6668,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckLoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckLoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTruckLoad(var1.toFloat())
@@ -6062,7 +6688,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWeight([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckWeight(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTruckWeight(var1.toFloat())
@@ -6080,7 +6708,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckAxis([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::setTruckAxis(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTruckAxis(var1.toFloat())
@@ -6097,7 +6727,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -6121,7 +6753,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -6138,7 +6772,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::hasPassPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::hasPassPoint()")
+            }
         
             // invoke native method
             val result = ref.hasPassPoint()
@@ -6155,7 +6791,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getPassedPointStr([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getPassedPointStr()")
+            }
         
             // invoke native method
             val result = ref.getPassedPointStr()
@@ -6172,7 +6810,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckSize([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckSize()")
+            }
         
             // invoke native method
             val result = ref.getTruckSize()
@@ -6189,7 +6829,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckHeight([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckHeight()")
+            }
         
             // invoke native method
             val result = ref.getTruckHeight()
@@ -6206,7 +6848,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWidth([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWidth()")
+            }
         
             // invoke native method
             val result = ref.getTruckWidth()
@@ -6223,7 +6867,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckLoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckLoad()")
+            }
         
             // invoke native method
             val result = ref.getTruckLoad()
@@ -6240,7 +6886,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWeight([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckWeight()")
+            }
         
             // invoke native method
             val result = ref.getTruckWeight()
@@ -6257,7 +6905,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.TruckRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckAxis([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@$refId::getTruckAxis()")
+            }
         
             // invoke native method
             val result = ref.getTruckAxis()
@@ -6274,7 +6924,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TMC
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -6291,7 +6943,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TMC
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::getStatus([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::getStatus()")
+            }
         
             // invoke native method
             val result = ref.getStatus()
@@ -6309,7 +6963,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TMC
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1)
@@ -6327,7 +6983,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TMC
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::setStatus([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::setStatus(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStatus(var1)
@@ -6344,7 +7002,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TMC
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -6369,7 +7029,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TMC
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TMC@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -6386,7 +7048,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusWalkItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin()")
+            }
         
             // invoke native method
             val result = ref.getOrigin()
@@ -6411,7 +7075,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusWalkItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin()")
+            }
         
             // invoke native method
             ref.setOrigin(var1)
@@ -6428,7 +7094,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusWalkItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination()")
+            }
         
             // invoke native method
             val result = ref.getDestination()
@@ -6453,7 +7121,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusWalkItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination()")
+            }
         
             // invoke native method
             ref.setDestination(var1)
@@ -6470,7 +7140,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::getStartPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::getStartPos()")
+            }
         
             // invoke native method
             val result = ref.getStartPos()
@@ -6495,7 +7167,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::setStartPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::setStartPos()")
+            }
         
             // invoke native method
             ref.setStartPos(var1)
@@ -6512,7 +7186,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::getTargetPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::getTargetPos()")
+            }
         
             // invoke native method
             val result = ref.getTargetPos()
@@ -6537,7 +7213,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::setTargetPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteResult@$refId::setTargetPos()")
+            }
         
             // invoke native method
             ref.setTargetPos(var1)
@@ -6554,7 +7232,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::setRouteSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::setRouteSearchListener()")
+            }
         
             // invoke native method
             ref.setRouteSearchListener(object : com.amap.api.services.route.RouteSearch.OnRouteSearchListener {
@@ -6660,7 +7340,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::setOnTruckRouteSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::setOnTruckRouteSearchListener()")
+            }
         
             // invoke native method
             ref.setOnTruckRouteSearchListener(object : com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener {
@@ -6703,7 +7385,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::setOnRoutePlanSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::setOnRoutePlanSearchListener()")
+            }
         
             // invoke native method
             ref.setOnRoutePlanSearchListener(object : com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener {
@@ -6747,7 +7431,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateWalkRoute(var1)
@@ -6772,7 +7458,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateWalkRouteAsyn(var1)
@@ -6790,7 +7478,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateBusRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateBusRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateBusRoute(var1)
@@ -6815,7 +7505,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateBusRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateBusRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateBusRouteAsyn(var1)
@@ -6833,7 +7525,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateDriveRoute(var1)
@@ -6858,7 +7552,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateDriveRouteAsyn(var1)
@@ -6876,7 +7572,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateRideRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateRideRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateRideRouteAsyn(var1)
@@ -6894,7 +7592,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateRideRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateRideRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateRideRoute(var1)
@@ -6919,7 +7619,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateTruckRoute(var1)
@@ -6944,7 +7646,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateTruckRouteAsyn(var1)
@@ -6962,7 +7666,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlan([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlan()")
+            }
         
             // invoke native method
             val result = ref.calculateDrivePlan(var1)
@@ -6987,7 +7693,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlanAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlanAsyn()")
+            }
         
             // invoke native method
             ref.calculateDrivePlanAsyn(var1)
@@ -7004,7 +7712,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getWalk([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getWalk()")
+            }
         
             // invoke native method
             val result = ref.getWalk()
@@ -7029,7 +7739,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setWalk([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setWalk()")
+            }
         
             // invoke native method
             ref.setWalk(var1)
@@ -7046,7 +7758,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getBusLines([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getBusLines()")
+            }
         
             // invoke native method
             val result = ref.getBusLines()
@@ -7071,7 +7785,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setBusLines([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setBusLines()")
+            }
         
             // invoke native method
             ref.setBusLines(ArrayList(var1))
@@ -7088,7 +7804,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getEntrance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getEntrance()")
+            }
         
             // invoke native method
             val result = ref.getEntrance()
@@ -7113,7 +7831,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setEntrance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setEntrance()")
+            }
         
             // invoke native method
             ref.setEntrance(var1)
@@ -7130,7 +7850,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getExit([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getExit()")
+            }
         
             // invoke native method
             val result = ref.getExit()
@@ -7155,7 +7877,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setExit([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setExit()")
+            }
         
             // invoke native method
             ref.setExit(var1)
@@ -7172,7 +7896,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getRailway([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getRailway()")
+            }
         
             // invoke native method
             val result = ref.getRailway()
@@ -7197,7 +7923,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setRailway([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setRailway()")
+            }
         
             // invoke native method
             ref.setRailway(var1)
@@ -7214,7 +7942,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getTaxi([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::getTaxi()")
+            }
         
             // invoke native method
             val result = ref.getTaxi()
@@ -7239,7 +7969,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setTaxi([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusStep@$refId::setTaxi()")
+            }
         
             // invoke native method
             ref.setTaxi(var1)
@@ -7256,7 +7988,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getOrigin([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getOrigin()")
+            }
         
             // invoke native method
             val result = ref.getOrigin()
@@ -7280,7 +8014,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getDestination([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getDestination()")
+            }
         
             // invoke native method
             val result = ref.getDestination()
@@ -7304,7 +8040,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -7321,7 +8059,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -7338,7 +8078,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getmSname([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getmSname()")
+            }
         
             // invoke native method
             val result = ref.getmSname()
@@ -7355,7 +8097,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getmTname([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::getmTname()")
+            }
         
             // invoke native method
             val result = ref.getmTname()
@@ -7373,7 +8117,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setOrigin()")
+            }
         
             // invoke native method
             ref.setOrigin(var1)
@@ -7391,7 +8137,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setDestination([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setDestination()")
+            }
         
             // invoke native method
             ref.setDestination(var1)
@@ -7409,7 +8157,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -7427,7 +8177,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -7445,7 +8197,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setSname([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setSname(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSname(var1)
@@ -7463,7 +8217,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TaxiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setTname([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TaxiItem@$refId::setTname(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTname(var1)
@@ -7480,7 +8236,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost()")
+            }
         
             // invoke native method
             val result = ref.getTaxiCost()
@@ -7498,7 +8256,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTaxiCost(var1.toFloat())
@@ -7515,7 +8275,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::getPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::getPaths()")
+            }
         
             // invoke native method
             val result = ref.getPaths()
@@ -7540,7 +8302,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::setPaths()")
+            }
         
             // invoke native method
             ref.setPaths(ArrayList(var1))
@@ -7557,7 +8321,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery()")
+            }
         
             // invoke native method
             val result = ref.getBusQuery()
@@ -7582,7 +8348,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.BusRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery()")
+            }
         
             // invoke native method
             ref.setBusQuery(var1)
@@ -7599,7 +8367,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::getStartPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::getStartPos()")
+            }
         
             // invoke native method
             val result = ref.getStartPos()
@@ -7624,7 +8394,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::setStartPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::setStartPos()")
+            }
         
             // invoke native method
             ref.setStartPos(var1)
@@ -7641,7 +8413,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::getTargetPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::getTargetPos()")
+            }
         
             // invoke native method
             val result = ref.getTargetPos()
@@ -7666,7 +8440,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RoutePlanResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::setTargetPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@$refId::setTargetPos()")
+            }
         
             // invoke native method
             ref.setTargetPos(var1)
@@ -7686,7 +8462,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener@$refId::onDistanceSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener@$refId::onDistanceSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onDistanceSearched(var1, var2)
@@ -7703,7 +8481,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwaySpace
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwaySpace@$refId::getCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwaySpace@$refId::getCode()")
+            }
         
             // invoke native method
             val result = ref.getCode()
@@ -7720,7 +8500,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwaySpace
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwaySpace@$refId::getCost([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwaySpace@$refId::getCost()")
+            }
         
             // invoke native method
             val result = ref.getCost()
@@ -7738,7 +8520,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setTruckQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setTruckQuery()")
+            }
         
             // invoke native method
             ref.setTruckQuery(var1)
@@ -7756,7 +8540,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setPaths()")
+            }
         
             // invoke native method
             ref.setPaths(ArrayList(var1))
@@ -7774,7 +8560,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setStartPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setStartPos()")
+            }
         
             // invoke native method
             ref.setStartPos(var1)
@@ -7792,7 +8580,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setTargetPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::setTargetPos()")
+            }
         
             // invoke native method
             ref.setTargetPos(var1)
@@ -7809,7 +8599,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getTruckQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getTruckQuery()")
+            }
         
             // invoke native method
             val result = ref.getTruckQuery()
@@ -7833,7 +8625,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getPaths()")
+            }
         
             // invoke native method
             val result = ref.getPaths()
@@ -7857,7 +8651,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getStartPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getStartPos()")
+            }
         
             // invoke native method
             val result = ref.getStartPos()
@@ -7881,7 +8677,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckRouteRestult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getTargetPos([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@$refId::getTargetPos()")
+            }
         
             // invoke native method
             val result = ref.getTargetPos()
@@ -7905,7 +8703,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.RideRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -7929,7 +8729,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.RideRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -7946,7 +8748,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -7970,7 +8774,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -7987,7 +8793,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getCarType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getCarType()")
+            }
         
             // invoke native method
             val result = ref.getCarType()
@@ -8004,7 +8812,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints()")
+            }
         
             // invoke native method
             val result = ref.getPassedByPoints()
@@ -8028,7 +8838,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons()")
+            }
         
             // invoke native method
             val result = ref.getAvoidpolygons()
@@ -8052,7 +8864,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad()")
+            }
         
             // invoke native method
             val result = ref.getAvoidRoad()
@@ -8069,7 +8883,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedPointStr([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedPointStr()")
+            }
         
             // invoke native method
             val result = ref.getPassedPointStr()
@@ -8086,7 +8902,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasPassPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasPassPoint()")
+            }
         
             // invoke native method
             val result = ref.hasPassPoint()
@@ -8103,7 +8921,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygonsStr([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygonsStr()")
+            }
         
             // invoke native method
             val result = ref.getAvoidpolygonsStr()
@@ -8120,7 +8940,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidpolygons([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidpolygons()")
+            }
         
             // invoke native method
             val result = ref.hasAvoidpolygons()
@@ -8137,7 +8959,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidRoad()")
+            }
         
             // invoke native method
             val result = ref.hasAvoidRoad()
@@ -8154,7 +8978,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::isUseFerry([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::isUseFerry()")
+            }
         
             // invoke native method
             val result = ref.isUseFerry()
@@ -8172,7 +8998,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setUseFerry([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setUseFerry(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUseFerry(var1)
@@ -8190,7 +9018,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DriveRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setCarType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setCarType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCarType(var1)
@@ -8207,7 +9037,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getTime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getTime()")
+            }
         
             // invoke native method
             val result = ref.getTime()
@@ -8224,7 +9056,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getTrip([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getTrip()")
+            }
         
             // invoke native method
             val result = ref.getTrip()
@@ -8241,7 +9075,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -8258,7 +9094,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getType()")
+            }
         
             // invoke native method
             val result = ref.getType()
@@ -8275,7 +9113,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getDeparturestop([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getDeparturestop()")
+            }
         
             // invoke native method
             val result = ref.getDeparturestop()
@@ -8299,7 +9139,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getArrivalstop([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getArrivalstop()")
+            }
         
             // invoke native method
             val result = ref.getArrivalstop()
@@ -8323,7 +9165,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getViastops([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getViastops()")
+            }
         
             // invoke native method
             val result = ref.getViastops()
@@ -8347,7 +9191,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getAlters([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getAlters()")
+            }
         
             // invoke native method
             val result = ref.getAlters()
@@ -8371,7 +9217,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getSpaces([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::getSpaces()")
+            }
         
             // invoke native method
             val result = ref.getSpaces()
@@ -8396,7 +9244,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setTime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setTime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTime(var1)
@@ -8414,7 +9264,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setTrip([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setTrip(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTrip(var1)
@@ -8432,7 +9284,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -8450,7 +9304,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setType(var1)
@@ -8468,7 +9324,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setDeparturestop([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setDeparturestop()")
+            }
         
             // invoke native method
             ref.setDeparturestop(var1)
@@ -8486,7 +9344,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setArrivalstop([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setArrivalstop()")
+            }
         
             // invoke native method
             ref.setArrivalstop(var1)
@@ -8504,7 +9364,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setViastops([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setViastops()")
+            }
         
             // invoke native method
             ref.setViastops(ArrayList(var1))
@@ -8522,7 +9384,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setAlters([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setAlters()")
+            }
         
             // invoke native method
             ref.setAlters(ArrayList(var1))
@@ -8540,7 +9404,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteRailwayItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setSpaces([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@$refId::setSpaces()")
+            }
         
             // invoke native method
             ref.setSpaces(ArrayList(var1))
@@ -8557,7 +9423,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getInstruction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getInstruction()")
+            }
         
             // invoke native method
             val result = ref.getInstruction()
@@ -8575,7 +9443,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setInstruction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setInstruction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setInstruction(var1)
@@ -8592,7 +9462,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getOrientation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getOrientation()")
+            }
         
             // invoke native method
             val result = ref.getOrientation()
@@ -8610,7 +9482,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setOrientation([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setOrientation(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOrientation(var1)
@@ -8627,7 +9501,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getRoad()")
+            }
         
             // invoke native method
             val result = ref.getRoad()
@@ -8645,7 +9521,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRoad(var1)
@@ -8662,7 +9540,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -8680,7 +9560,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -8697,7 +9579,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -8715,7 +9599,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -8732,7 +9618,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -8757,7 +9645,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -8774,7 +9664,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getAction()")
+            }
         
             // invoke native method
             val result = ref.getAction()
@@ -8792,7 +9684,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAction(var1)
@@ -8809,7 +9703,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getAssistantAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::getAssistantAction()")
+            }
         
             // invoke native method
             val result = ref.getAssistantAction()
@@ -8827,7 +9723,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setAssistantAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkStep@$refId::setAssistantAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAssistantAction(var1)
@@ -8844,7 +9742,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getID()")
+            }
         
             // invoke native method
             val result = ref.getID()
@@ -8861,7 +9761,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -8878,7 +9780,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getLocation()")
+            }
         
             // invoke native method
             val result = ref.getLocation()
@@ -8902,7 +9806,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode()")
+            }
         
             // invoke native method
             val result = ref.getAdcode()
@@ -8919,7 +9825,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getTime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getTime()")
+            }
         
             // invoke native method
             val result = ref.getTime()
@@ -8936,7 +9844,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::isStart([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::isStart()")
+            }
         
             // invoke native method
             val result = ref.isStart()
@@ -8953,7 +9863,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::isEnd([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::isEnd()")
+            }
         
             // invoke native method
             val result = ref.isEnd()
@@ -8970,7 +9882,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getWait([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::getWait()")
+            }
         
             // invoke native method
             val result = ref.getWait()
@@ -8988,7 +9902,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setID(var1)
@@ -9006,7 +9922,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -9024,7 +9942,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setLocation()")
+            }
         
             // invoke native method
             ref.setLocation(var1)
@@ -9042,7 +9962,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdcode(var1)
@@ -9060,7 +9982,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setTime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setTime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTime(var1)
@@ -9078,7 +10002,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setisStart([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setisStart(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setisStart(var1)
@@ -9096,7 +10022,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setisEnd(var1)
@@ -9114,7 +10042,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RailwayStationItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setWait([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@$refId::setWait(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWait(var1.toFloat())
@@ -9131,7 +10061,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::getPaths()")
+            }
         
             // invoke native method
             val result = ref.getPaths()
@@ -9156,7 +10088,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::setPaths()")
+            }
         
             // invoke native method
             ref.setPaths(ArrayList(var1))
@@ -9173,7 +10107,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery()")
+            }
         
             // invoke native method
             val result = ref.getRideQuery()
@@ -9198,7 +10134,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery()")
+            }
         
             // invoke native method
             ref.setRideQuery(var1)
@@ -9215,7 +10153,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getFrom([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getFrom()")
+            }
         
             // invoke native method
             val result = ref.getFrom()
@@ -9239,7 +10179,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getTo()")
+            }
         
             // invoke native method
             val result = ref.getTo()
@@ -9263,7 +10205,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getStartPoiID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getStartPoiID()")
+            }
         
             // invoke native method
             val result = ref.getStartPoiID()
@@ -9281,7 +10225,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setStartPoiID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStartPoiID(var1)
@@ -9298,7 +10244,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationPoiID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationPoiID()")
+            }
         
             // invoke native method
             val result = ref.getDestinationPoiID()
@@ -9316,7 +10264,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationPoiID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDestinationPoiID(var1)
@@ -9333,7 +10283,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getOriginType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getOriginType()")
+            }
         
             // invoke native method
             val result = ref.getOriginType()
@@ -9351,7 +10303,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setOriginType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOriginType(var1)
@@ -9368,7 +10322,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getDestinationType()")
+            }
         
             // invoke native method
             val result = ref.getDestinationType()
@@ -9386,7 +10342,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setDestinationType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDestinationType(var1)
@@ -9403,7 +10361,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateProvince([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateProvince()")
+            }
         
             // invoke native method
             val result = ref.getPlateProvince()
@@ -9421,7 +10381,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateProvince(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPlateProvince(var1)
@@ -9438,7 +10400,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateNumber([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::getPlateNumber()")
+            }
         
             // invoke native method
             val result = ref.getPlateNumber()
@@ -9456,7 +10420,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.FromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@$refId::setPlateNumber(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPlateNumber(var1)
@@ -9473,7 +10439,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RidePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RidePath@$refId::getSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RidePath@$refId::getSteps()")
+            }
         
             // invoke native method
             val result = ref.getSteps()
@@ -9498,7 +10466,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RidePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RidePath@$refId::setSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RidePath@$refId::setSteps()")
+            }
         
             // invoke native method
             ref.setSteps(ArrayList(var1))
@@ -9515,7 +10485,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -9539,7 +10511,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -9556,7 +10530,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -9573,7 +10549,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag()")
+            }
         
             // invoke native method
             val result = ref.getNightFlag()
@@ -9590,7 +10568,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd()")
+            }
         
             // invoke native method
             val result = ref.getCityd()
@@ -9608,7 +10588,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.BusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityd(var1)
@@ -9625,7 +10607,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getInstruction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getInstruction()")
+            }
         
             // invoke native method
             val result = ref.getInstruction()
@@ -9643,7 +10627,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setInstruction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setInstruction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setInstruction(var1)
@@ -9660,7 +10646,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getOrientation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getOrientation()")
+            }
         
             // invoke native method
             val result = ref.getOrientation()
@@ -9678,7 +10666,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setOrientation([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setOrientation(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOrientation(var1)
@@ -9695,7 +10685,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getRoad()")
+            }
         
             // invoke native method
             val result = ref.getRoad()
@@ -9713,7 +10705,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRoad(var1)
@@ -9730,7 +10724,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -9748,7 +10744,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -9765,7 +10763,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -9783,7 +10783,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -9800,7 +10802,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -9825,7 +10829,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -9842,7 +10848,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getAction()")
+            }
         
             // invoke native method
             val result = ref.getAction()
@@ -9860,7 +10868,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAction(var1)
@@ -9877,7 +10887,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getAssistantAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::getAssistantAction()")
+            }
         
             // invoke native method
             val result = ref.getAssistantAction()
@@ -9895,7 +10907,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RideStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setAssistantAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RideStep@$refId::setAssistantAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAssistantAction(var1)
@@ -9912,7 +10926,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts()")
+            }
         
             // invoke native method
             val result = ref.getDistricts()
@@ -9937,7 +10953,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts()")
+            }
         
             // invoke native method
             ref.setDistricts(ArrayList(var1))
@@ -9957,7 +10975,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.OnRouteSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onBusRouteSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onBusRouteSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onBusRouteSearched(var1, var2)
@@ -9977,7 +10997,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.OnRouteSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onDriveRouteSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onDriveRouteSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onDriveRouteSearched(var1, var2)
@@ -9997,7 +11019,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.OnRouteSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onWalkRouteSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onWalkRouteSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onWalkRouteSearched(var1, var2)
@@ -10017,7 +11041,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.OnRouteSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onRideRouteSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@$refId::onRideRouteSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onRideRouteSearched(var1, var2)
@@ -10035,7 +11061,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery()")
+            }
         
             // invoke native method
             ref.setDistanceQuery(var1)
@@ -10052,7 +11080,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery()")
+            }
         
             // invoke native method
             val result = ref.getDistanceQuery()
@@ -10076,7 +11106,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults()")
+            }
         
             // invoke native method
             val result = ref.getDistanceResults()
@@ -10101,7 +11133,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults()")
+            }
         
             // invoke native method
             ref.setDistanceResults(ArrayList(var1))
@@ -10118,7 +11152,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.WalkRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -10142,7 +11178,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.WalkRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -10159,7 +11197,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.District
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.District@$refId::getDistrictName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.District@$refId::getDistrictName()")
+            }
         
             // invoke native method
             val result = ref.getDistrictName()
@@ -10177,7 +11217,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.District
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.District@$refId::setDistrictName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.District@$refId::setDistrictName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistrictName(var1)
@@ -10194,7 +11236,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.District
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.District@$refId::getDistrictAdcode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.District@$refId::getDistrictAdcode()")
+            }
         
             // invoke native method
             val result = ref.getDistrictAdcode()
@@ -10212,7 +11256,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.District
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.District@$refId::setDistrictAdcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.District@$refId::setDistrictAdcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistrictAdcode(var1)
@@ -10229,7 +11275,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::getPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::getPaths()")
+            }
         
             // invoke native method
             val result = ref.getPaths()
@@ -10254,7 +11302,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::setPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::setPaths()")
+            }
         
             // invoke native method
             ref.setPaths(ArrayList(var1))
@@ -10271,7 +11321,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::getWalkQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::getWalkQuery()")
+            }
         
             // invoke native method
             val result = ref.getWalkQuery()
@@ -10296,7 +11348,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::setWalkQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@$refId::setWalkQuery()")
+            }
         
             // invoke native method
             ref.setWalkQuery(var1)
@@ -10313,7 +11367,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getType()")
+            }
         
             // invoke native method
             val result = ref.getType()
@@ -10330,7 +11386,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getOrigins([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getOrigins()")
+            }
         
             // invoke native method
             val result = ref.getOrigins()
@@ -10354,7 +11412,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getDestination([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getDestination()")
+            }
         
             // invoke native method
             val result = ref.getDestination()
@@ -10379,7 +11439,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setType(var1)
@@ -10397,7 +11459,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setOrigins([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setOrigins()")
+            }
         
             // invoke native method
             ref.setOrigins(ArrayList(var1))
@@ -10415,7 +11479,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::addOrigins([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::addOrigins()")
+            }
         
             // invoke native method
             ref.addOrigins(var1)
@@ -10433,7 +11499,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch.DistanceQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setDestination([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setDestination()")
+            }
         
             // invoke native method
             ref.setDestination(var1)
@@ -10450,7 +11518,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.SearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::getSearchCityName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::getSearchCityName()")
+            }
         
             // invoke native method
             val result = ref.getSearchCityName()
@@ -10468,7 +11538,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.SearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::setSearchCityName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::setSearchCityName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSearchCityName(var1)
@@ -10485,7 +11557,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.SearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode()")
+            }
         
             // invoke native method
             val result = ref.getSearchCitycode()
@@ -10503,7 +11577,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.SearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::setSearchCitycode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::setSearchCitycode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSearchCitycode(var1)
@@ -10520,7 +11596,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.SearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode()")
+            }
         
             // invoke native method
             val result = ref.getSearchCityAdCode()
@@ -10538,7 +11616,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.SearchCity
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::setSearchCityhAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.SearchCity@$refId::setSearchCityhAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSearchCityhAdCode(var1)
@@ -10558,7 +11638,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener@$refId::onDriveRoutePlanSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener@$refId::onDriveRoutePlanSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onDriveRoutePlanSearched(var1, var2)
@@ -10575,7 +11657,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch@$refId::setDistanceSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch@$refId::setDistanceSearchListener()")
+            }
         
             // invoke native method
             ref.setDistanceSearchListener(object : com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener {
@@ -10619,7 +11703,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistance()")
+            }
         
             // invoke native method
             val result = ref.calculateRouteDistance(var1)
@@ -10644,7 +11730,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistanceAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceSearch@$refId::calculateRouteDistanceAsyn()")
+            }
         
             // invoke native method
             ref.calculateRouteDistanceAsyn(var1)
@@ -10661,7 +11749,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkPath@$refId::getSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkPath@$refId::getSteps()")
+            }
         
             // invoke native method
             val result = ref.getSteps()
@@ -10686,7 +11776,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.WalkPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.WalkPath@$refId::setSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.WalkPath@$refId::setSteps()")
+            }
         
             // invoke native method
             ref.setSteps(ArrayList(var1))
@@ -10703,7 +11795,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getDepartureBusStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getDepartureBusStation()")
+            }
         
             // invoke native method
             val result = ref.getDepartureBusStation()
@@ -10728,7 +11822,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setDepartureBusStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setDepartureBusStation()")
+            }
         
             // invoke native method
             ref.setDepartureBusStation(var1)
@@ -10745,7 +11841,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getArrivalBusStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getArrivalBusStation()")
+            }
         
             // invoke native method
             val result = ref.getArrivalBusStation()
@@ -10770,7 +11868,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setArrivalBusStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setArrivalBusStation()")
+            }
         
             // invoke native method
             ref.setArrivalBusStation(var1)
@@ -10787,7 +11887,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -10812,7 +11914,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -10829,7 +11933,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStationNum([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStationNum()")
+            }
         
             // invoke native method
             val result = ref.getPassStationNum()
@@ -10847,7 +11953,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStationNum([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStationNum(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPassStationNum(var1)
@@ -10864,7 +11972,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStations([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStations()")
+            }
         
             // invoke native method
             val result = ref.getPassStations()
@@ -10889,7 +11999,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStations([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStations()")
+            }
         
             // invoke native method
             ref.setPassStations(ArrayList(var1))
@@ -10906,7 +12018,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -10924,7 +12038,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteBusLineItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -10941,7 +12057,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -10965,7 +12083,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getDestParentPoiID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getDestParentPoiID()")
+            }
         
             // invoke native method
             val result = ref.getDestParentPoiID()
@@ -10982,7 +12102,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -10999,7 +12121,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCarType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCarType()")
+            }
         
             // invoke native method
             val result = ref.getCarType()
@@ -11016,7 +12140,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFirstTime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getFirstTime()")
+            }
         
             // invoke native method
             val result = ref.getFirstTime()
@@ -11033,7 +12159,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getInterval([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getInterval()")
+            }
         
             // invoke native method
             val result = ref.getInterval()
@@ -11050,7 +12178,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::getCount()")
+            }
         
             // invoke native method
             val result = ref.getCount()
@@ -11068,7 +12198,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setDestParentPoiID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setDestParentPoiID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDestParentPoiID(var1)
@@ -11086,7 +12218,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setMode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setMode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setMode(var1)
@@ -11104,7 +12238,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.DrivePlanQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setCarType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@$refId::setCarType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCarType(var1)
@@ -11121,7 +12257,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getRoad()")
+            }
         
             // invoke native method
             val result = ref.getRoad()
@@ -11139,7 +12277,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -11156,7 +12296,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -11174,7 +12316,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRoad(var1)
@@ -11191,7 +12335,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -11209,7 +12355,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -11226,7 +12374,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getToll([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getToll()")
+            }
         
             // invoke native method
             val result = ref.getToll()
@@ -11244,7 +12394,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setToll([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setToll(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setToll(var1)
@@ -11261,7 +12413,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -11286,7 +12440,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -11303,7 +12459,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::getStartTime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::getStartTime()")
+            }
         
             // invoke native method
             val result = ref.getStartTime()
@@ -11321,7 +12479,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::setStartTime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::setStartTime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStartTime(var1)
@@ -11338,7 +12498,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::getElements([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::getElements()")
+            }
         
             // invoke native method
             val result = ref.getElements()
@@ -11363,7 +12525,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::setElements([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfo@$refId::setElements()")
+            }
         
             // invoke native method
             ref.setElements(ArrayList(var1))
@@ -11380,7 +12544,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getInstruction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getInstruction()")
+            }
         
             // invoke native method
             val result = ref.getInstruction()
@@ -11398,7 +12564,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setInstruction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setInstruction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setInstruction(var1)
@@ -11415,7 +12583,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getOrientation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getOrientation()")
+            }
         
             // invoke native method
             val result = ref.getOrientation()
@@ -11433,7 +12603,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setOrientation([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setOrientation(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOrientation(var1)
@@ -11450,7 +12622,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getRoad()")
+            }
         
             // invoke native method
             val result = ref.getRoad()
@@ -11468,7 +12642,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRoad(var1)
@@ -11485,7 +12661,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -11503,7 +12681,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -11520,7 +12700,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTolls([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTolls()")
+            }
         
             // invoke native method
             val result = ref.getTolls()
@@ -11538,7 +12720,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTolls([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTolls(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTolls(var1.toFloat())
@@ -11555,7 +12739,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTollDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTollDistance()")
+            }
         
             // invoke native method
             val result = ref.getTollDistance()
@@ -11573,7 +12759,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTollDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTollDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTollDistance(var1.toFloat())
@@ -11590,7 +12778,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTollRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTollRoad()")
+            }
         
             // invoke native method
             val result = ref.getTollRoad()
@@ -11608,7 +12798,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTollRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTollRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTollRoad(var1)
@@ -11625,7 +12817,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -11643,7 +12837,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -11660,7 +12856,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -11685,7 +12883,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -11702,7 +12902,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getAction()")
+            }
         
             // invoke native method
             val result = ref.getAction()
@@ -11720,7 +12922,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAction(var1)
@@ -11737,7 +12941,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getAssistantAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getAssistantAction()")
+            }
         
             // invoke native method
             val result = ref.getAssistantAction()
@@ -11755,7 +12961,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setAssistantAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setAssistantAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAssistantAction(var1)
@@ -11772,7 +12980,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getRouteSearchCityList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getRouteSearchCityList()")
+            }
         
             // invoke native method
             val result = ref.getRouteSearchCityList()
@@ -11797,7 +13007,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setRouteSearchCityList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setRouteSearchCityList()")
+            }
         
             // invoke native method
             ref.setRouteSearchCityList(ArrayList(var1))
@@ -11814,7 +13026,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTMCs([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::getTMCs()")
+            }
         
             // invoke native method
             val result = ref.getTMCs()
@@ -11839,7 +13053,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTMCs([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveStep@$refId::setTMCs()")
+            }
         
             // invoke native method
             ref.setTMCs(ArrayList(var1))
@@ -11857,7 +13073,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setInstruction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setInstruction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setInstruction(var1)
@@ -11875,7 +13093,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setOrientation([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setOrientation(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOrientation(var1)
@@ -11893,7 +13113,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRoad(var1)
@@ -11911,7 +13133,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTolls([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTolls(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTolls(var1.toFloat())
@@ -11929,7 +13153,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -11947,7 +13173,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTollDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTollDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTollDistance(var1.toFloat())
@@ -11965,7 +13193,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTollRoad([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTollRoad(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTollRoad(var1)
@@ -11983,7 +13213,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -12001,7 +13233,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setPolyline()")
+            }
         
             // invoke native method
             ref.setPolyline(ArrayList(var1))
@@ -12019,7 +13253,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAction(var1)
@@ -12037,7 +13273,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setAssistantAction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setAssistantAction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAssistantAction(var1)
@@ -12055,7 +13293,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setRouteSearchCityList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setRouteSearchCityList()")
+            }
         
             // invoke native method
             ref.setRouteSearchCityList(ArrayList(var1))
@@ -12073,7 +13313,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTMCs([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::setTMCs()")
+            }
         
             // invoke native method
             ref.setTMCs(ArrayList(var1))
@@ -12090,7 +13332,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getInstruction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getInstruction()")
+            }
         
             // invoke native method
             val result = ref.getInstruction()
@@ -12107,7 +13351,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getOrientation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getOrientation()")
+            }
         
             // invoke native method
             val result = ref.getOrientation()
@@ -12124,7 +13370,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getRoad()")
+            }
         
             // invoke native method
             val result = ref.getRoad()
@@ -12141,7 +13389,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTolls([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTolls()")
+            }
         
             // invoke native method
             val result = ref.getTolls()
@@ -12158,7 +13408,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -12175,7 +13427,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTollDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTollDistance()")
+            }
         
             // invoke native method
             val result = ref.getTollDistance()
@@ -12192,7 +13446,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTollRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTollRoad()")
+            }
         
             // invoke native method
             val result = ref.getTollRoad()
@@ -12209,7 +13465,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -12226,7 +13484,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getPolyline([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getPolyline()")
+            }
         
             // invoke native method
             val result = ref.getPolyline()
@@ -12250,7 +13510,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getAction()")
+            }
         
             // invoke native method
             val result = ref.getAction()
@@ -12267,7 +13529,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getAssistantAction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getAssistantAction()")
+            }
         
             // invoke native method
             val result = ref.getAssistantAction()
@@ -12284,7 +13548,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getRouteSearchCityList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getRouteSearchCityList()")
+            }
         
             // invoke native method
             val result = ref.getRouteSearchCityList()
@@ -12308,7 +13574,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckStep
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTMCs([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckStep@$refId::getTMCs()")
+            }
         
             // invoke native method
             val result = ref.getTMCs()
@@ -12332,7 +13600,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost()")
+            }
         
             // invoke native method
             val result = ref.getTaxiCost()
@@ -12350,7 +13620,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTaxiCost(var1.toFloat())
@@ -12367,7 +13639,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::getPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::getPaths()")
+            }
         
             // invoke native method
             val result = ref.getPaths()
@@ -12392,7 +13666,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::setPaths([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::setPaths()")
+            }
         
             // invoke native method
             ref.setPaths(ArrayList(var1))
@@ -12409,7 +13685,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery()")
+            }
         
             // invoke native method
             val result = ref.getDriveQuery()
@@ -12434,7 +13712,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DriveRouteResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery()")
+            }
         
             // invoke native method
             ref.setDriveQuery(var1)
@@ -12451,7 +13731,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getStrategy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getStrategy()")
+            }
         
             // invoke native method
             val result = ref.getStrategy()
@@ -12469,7 +13751,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setStrategy([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setStrategy(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStrategy(var1)
@@ -12486,7 +13770,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getTolls([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getTolls()")
+            }
         
             // invoke native method
             val result = ref.getTolls()
@@ -12504,7 +13790,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setTolls([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setTolls(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTolls(var1.toFloat())
@@ -12521,7 +13809,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getTollDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getTollDistance()")
+            }
         
             // invoke native method
             val result = ref.getTollDistance()
@@ -12539,7 +13829,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setTollDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setTollDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTollDistance(var1.toFloat())
@@ -12556,7 +13848,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getTotalTrafficlights()")
+            }
         
             // invoke native method
             val result = ref.getTotalTrafficlights()
@@ -12574,7 +13868,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setTotalTrafficlights(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTotalTrafficlights(var1)
@@ -12591,7 +13887,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getSteps()")
+            }
         
             // invoke native method
             val result = ref.getSteps()
@@ -12616,7 +13914,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setSteps()")
+            }
         
             // invoke native method
             ref.setSteps(ArrayList(var1))
@@ -12633,7 +13933,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getRestriction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::getRestriction()")
+            }
         
             // invoke native method
             val result = ref.getRestriction()
@@ -12651,7 +13953,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setRestriction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePath@$refId::setRestriction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRestriction(var1)
@@ -12669,7 +13973,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -12687,7 +13993,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1)
@@ -12705,7 +14013,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setStrategy([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setStrategy(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStrategy(var1)
@@ -12723,7 +14033,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setTolls([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setTolls(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTolls(var1.toFloat())
@@ -12741,7 +14053,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setTollDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setTollDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTollDistance(var1.toFloat())
@@ -12759,7 +14073,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setTotalTrafficlights([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setTotalTrafficlights(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTotalTrafficlights(var1)
@@ -12777,7 +14093,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setRestriction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setRestriction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRestriction(var1)
@@ -12795,7 +14113,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::setSteps()")
+            }
         
             // invoke native method
             ref.setSteps(ArrayList(var1))
@@ -12812,7 +14132,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -12829,7 +14151,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -12846,7 +14170,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getStrategy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getStrategy()")
+            }
         
             // invoke native method
             val result = ref.getStrategy()
@@ -12863,7 +14189,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getTolls([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getTolls()")
+            }
         
             // invoke native method
             val result = ref.getTolls()
@@ -12880,7 +14208,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getTollDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getTollDistance()")
+            }
         
             // invoke native method
             val result = ref.getTollDistance()
@@ -12897,7 +14227,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getTotalTrafficlights([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getTotalTrafficlights()")
+            }
         
             // invoke native method
             val result = ref.getTotalTrafficlights()
@@ -12914,7 +14246,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getRestriction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getRestriction()")
+            }
         
             // invoke native method
             val result = ref.getRestriction()
@@ -12931,7 +14265,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TruckPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TruckPath@$refId::getSteps()")
+            }
         
             // invoke native method
             val result = ref.getSteps()
@@ -12955,7 +14291,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Doorway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -12973,7 +14311,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Doorway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -12990,7 +14330,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Doorway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -13015,7 +14357,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Doorway
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::setLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Doorway@$refId::setLatLonPoint()")
+            }
         
             // invoke native method
             ref.setLatLonPoint(var1)
@@ -13032,7 +14376,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -13050,7 +14396,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -13067,7 +14415,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::getTrafficLights([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::getTrafficLights()")
+            }
         
             // invoke native method
             val result = ref.getTrafficLights()
@@ -13085,7 +14435,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::setTrafficLights(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTrafficLights(var1)
@@ -13102,7 +14454,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::getSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::getSteps()")
+            }
         
             // invoke native method
             val result = ref.getSteps()
@@ -13127,7 +14481,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DrivePlanPath
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::setSteps([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@$refId::setSteps()")
+            }
         
             // invoke native method
             ref.setSteps(ArrayList(var1))
@@ -13144,7 +14500,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getPathindex([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getPathindex()")
+            }
         
             // invoke native method
             val result = ref.getPathindex()
@@ -13162,7 +14520,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setPathindex([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setPathindex(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPathindex(var1)
@@ -13179,7 +14539,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -13197,7 +14559,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -13214,7 +14578,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getTolls([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getTolls()")
+            }
         
             // invoke native method
             val result = ref.getTolls()
@@ -13232,7 +14598,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setTolls([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setTolls(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTolls(var1.toFloat())
@@ -13249,7 +14617,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getRestriction([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getRestriction()")
+            }
         
             // invoke native method
             val result = ref.getRestriction()
@@ -13267,7 +14637,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setRestriction([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setRestriction(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRestriction(var1)
@@ -13285,7 +14657,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setTMCs([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::setTMCs()")
+            }
         
             // invoke native method
             ref.setTMCs(ArrayList(var1))
@@ -13302,7 +14676,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.TimeInfosElement
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getTMCs([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@$refId::getTMCs()")
+            }
         
             // invoke native method
             val result = ref.getTMCs()
@@ -13329,7 +14705,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener@$refId::onTruckRouteSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener@$refId::onTruckRouteSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onTruckRouteSearched(var1, var2)
@@ -13346,7 +14724,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getOriginId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getOriginId()")
+            }
         
             // invoke native method
             val result = ref.getOriginId()
@@ -13363,7 +14743,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getDestId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getDestId()")
+            }
         
             // invoke native method
             val result = ref.getDestId()
@@ -13380,7 +14762,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -13397,7 +14781,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -13414,7 +14800,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getErrorInfo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getErrorInfo()")
+            }
         
             // invoke native method
             val result = ref.getErrorInfo()
@@ -13431,7 +14819,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getErrorCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::getErrorCode()")
+            }
         
             // invoke native method
             val result = ref.getErrorCode()
@@ -13449,7 +14839,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setOriginId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setOriginId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setOriginId(var1)
@@ -13467,7 +14859,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setDestId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setDestId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDestId(var1)
@@ -13485,7 +14879,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -13503,7 +14899,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -13521,7 +14919,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setErrorInfo([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setErrorInfo(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setErrorInfo(var1)
@@ -13539,7 +14939,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.DistanceItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setErrorCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.DistanceItem@$refId::setErrorCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setErrorCode(var1)
@@ -13556,7 +14958,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Path
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -13574,7 +14978,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Path
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -13591,7 +14997,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Path
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -13609,7 +15017,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.route.Path
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.route.Path@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1)
@@ -13627,7 +15037,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setId(var1)
@@ -13645,7 +15057,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -13662,7 +15076,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getCityCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getCityCode()")
+            }
         
             // invoke native method
             val result = ref.getCityCode()
@@ -13680,7 +15096,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setCityCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setCityCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityCode(var1)
@@ -13697,7 +15115,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getRoadWidth([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getRoadWidth()")
+            }
         
             // invoke native method
             val result = ref.getRoadWidth()
@@ -13715,7 +15135,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setRoadWidth([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setRoadWidth(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRoadWidth(var1.toFloat())
@@ -13732,7 +15154,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getType()")
+            }
         
             // invoke native method
             val result = ref.getType()
@@ -13750,7 +15174,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setType(var1)
@@ -13767,7 +15193,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getCenterPoint()")
+            }
         
             // invoke native method
             val result = ref.getCenterPoint()
@@ -13792,7 +15220,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::setCenterPoint()")
+            }
         
             // invoke native method
             ref.setCenterPoint(var1)
@@ -13809,7 +15239,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getId()")
+            }
         
             // invoke native method
             val result = ref.getId()
@@ -13826,7 +15258,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Road
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Road@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -13843,7 +15277,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -13861,7 +15297,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -13878,7 +15316,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getDirection()")
+            }
         
             // invoke native method
             val result = ref.getDirection()
@@ -13896,7 +15336,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDirection(var1)
@@ -13913,7 +15355,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId()")
+            }
         
             // invoke native method
             val result = ref.getFirstRoadId()
@@ -13931,7 +15375,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFirstRoadId(var1)
@@ -13948,7 +15394,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName()")
+            }
         
             // invoke native method
             val result = ref.getFirstRoadName()
@@ -13966,7 +15414,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFirstRoadName(var1)
@@ -13983,7 +15433,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId()")
+            }
         
             // invoke native method
             val result = ref.getSecondRoadId()
@@ -14001,7 +15453,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSecondRoadId(var1)
@@ -14018,7 +15472,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName()")
+            }
         
             // invoke native method
             val result = ref.getSecondRoadName()
@@ -14036,7 +15492,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.road.Crossroad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setSecondRoadName(var1)
@@ -14054,7 +15512,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@$refId::onUserInfoCleared([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@$refId::onUserInfoCleared(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.onUserInfoCleared(var1)
@@ -14074,7 +15534,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@$refId::onNearbyInfoSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@$refId::onNearbyInfoSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onNearbyInfoSearched(var1, var2)
@@ -14092,7 +15554,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@$refId::onNearbyInfoUploaded([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@$refId::onNearbyInfoUploaded(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.onNearbyInfoUploaded(var1)
@@ -14109,7 +15573,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfoCallback
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfoCallback@$refId::OnUploadInfoCallback([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfoCallback@$refId::OnUploadInfoCallback()")
+            }
         
             // invoke native method
             val result = ref.OnUploadInfoCallback()
@@ -14134,7 +15600,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setUserID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setUserID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUserID(var1)
@@ -14151,7 +15619,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getUserID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getUserID()")
+            }
         
             // invoke native method
             val result = ref.getUserID()
@@ -14168,7 +15638,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getPoint()")
+            }
         
             // invoke native method
             val result = ref.getPoint()
@@ -14193,7 +15665,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setPoint()")
+            }
         
             // invoke native method
             ref.setPoint(var1)
@@ -14211,7 +15685,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setTimeStamp([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setTimeStamp(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTimeStamp(var1)
@@ -14228,7 +15704,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getTimeStamp([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getTimeStamp()")
+            }
         
             // invoke native method
             val result = ref.getTimeStamp()
@@ -14246,7 +15724,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1)
@@ -14263,7 +15743,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -14281,7 +15763,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setDrivingDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::setDrivingDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDrivingDistance(var1)
@@ -14298,7 +15782,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbyInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getDrivingDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@$refId::getDrivingDistance()")
+            }
         
             // invoke native method
             val result = ref.getDrivingDistance()
@@ -14316,7 +15802,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::setPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::setPoint()")
+            }
         
             // invoke native method
             ref.setPoint(var1)
@@ -14333,7 +15821,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::getPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::getPoint()")
+            }
         
             // invoke native method
             val result = ref.getPoint()
@@ -14358,7 +15848,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::setUserID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::setUserID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUserID(var1)
@@ -14375,7 +15867,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::getUserID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::getUserID()")
+            }
         
             // invoke native method
             val result = ref.getUserID()
@@ -14392,7 +15886,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::getCoordType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::getCoordType()")
+            }
         
             // invoke native method
             val result = ref.getCoordType()
@@ -14410,7 +15906,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.UploadInfo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::setCoordType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@$refId::setCoordType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCoordType(var1)
@@ -14427,7 +15925,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch::getInstance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch::getInstance()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.nearby.NearbySearch.getInstance(var0)
@@ -14451,7 +15951,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::addNearbyListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::addNearbyListener()")
+            }
         
             // invoke native method
             ref.addNearbyListener(object : com.amap.api.services.nearby.NearbySearch.NearbyListener {
@@ -14532,7 +16034,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::removeNearbyListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::removeNearbyListener()")
+            }
         
             // invoke native method
             ref.removeNearbyListener(object : com.amap.api.services.nearby.NearbySearch.NearbyListener {
@@ -14613,7 +16117,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::clearUserInfoAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::clearUserInfoAsyn()")
+            }
         
             // invoke native method
             ref.clearUserInfoAsyn()
@@ -14631,7 +16137,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::setUserID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::setUserID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUserID(var1)
@@ -14649,7 +16157,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::startUploadNearbyInfoAuto([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::startUploadNearbyInfoAuto(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.startUploadNearbyInfoAuto(object : com.amap.api.services.nearby.UploadInfoCallback {
@@ -14690,7 +16200,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::stopUploadNearbyInfoAuto([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::stopUploadNearbyInfoAuto()")
+            }
         
             // invoke native method
             ref.stopUploadNearbyInfoAuto()
@@ -14708,7 +16220,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::uploadNearbyInfoAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::uploadNearbyInfoAsyn()")
+            }
         
             // invoke native method
             ref.uploadNearbyInfoAsyn(var1)
@@ -14726,7 +16240,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfoAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfoAsyn()")
+            }
         
             // invoke native method
             ref.searchNearbyInfoAsyn(var1)
@@ -14744,7 +16260,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfo()")
+            }
         
             // invoke native method
             val result = ref.searchNearbyInfo(var1)
@@ -14767,7 +16285,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch::destroy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch::destroy()")
+            }
         
             // invoke native method
             com.amap.api.services.nearby.NearbySearch.destroy()
@@ -14784,7 +16304,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearchResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@$refId::getNearbyInfoList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@$refId::getNearbyInfoList()")
+            }
         
             // invoke native method
             val result = ref.getNearbyInfoList()
@@ -14808,7 +16330,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearchResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@$refId::getTotalNum([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@$refId::getTotalNum()")
+            }
         
             // invoke native method
             val result = ref.getTotalNum()
@@ -14826,7 +16350,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearchResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@$refId::setNearbyInfoList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@$refId::setNearbyInfoList()")
+            }
         
             // invoke native method
             ref.setNearbyInfoList(ArrayList(var1))
@@ -14844,7 +16370,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCenterPoint()")
+            }
         
             // invoke native method
             ref.setCenterPoint(var1)
@@ -14861,7 +16389,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCenterPoint()")
+            }
         
             // invoke native method
             val result = ref.getCenterPoint()
@@ -14885,7 +16415,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getRadius([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getRadius()")
+            }
         
             // invoke native method
             val result = ref.getRadius()
@@ -14903,7 +16435,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setRadius(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRadius(var1)
@@ -14921,7 +16455,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setType()")
+            }
         
             // invoke native method
             ref.setType(var1)
@@ -14938,7 +16474,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getType()")
+            }
         
             // invoke native method
             val result = ref.getType()
@@ -14956,7 +16494,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setCoordType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCoordType(var1)
@@ -14973,7 +16513,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCoordType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getCoordType()")
+            }
         
             // invoke native method
             val result = ref.getCoordType()
@@ -14991,7 +16533,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::setTimeRange(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTimeRange(var1)
@@ -15008,7 +16552,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.nearby.NearbySearch.NearbyQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getTimeRange([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@$refId::getTimeRange()")
+            }
         
             // invoke native method
             val result = ref.getTimeRange()
@@ -15025,7 +16571,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getID()")
+            }
         
             // invoke native method
             val result = ref.getID()
@@ -15043,7 +16591,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setID(var1)
@@ -15060,7 +16610,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getTitle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getTitle()")
+            }
         
             // invoke native method
             val result = ref.getTitle()
@@ -15078,7 +16630,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setTitle([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setTitle(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTitle(var1)
@@ -15095,7 +16649,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getPoint()")
+            }
         
             // invoke native method
             val result = ref.getPoint()
@@ -15120,7 +16676,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setPoint()")
+            }
         
             // invoke native method
             ref.setPoint(var1)
@@ -15137,7 +16695,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -15155,7 +16715,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -15172,7 +16734,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDuration([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::getDuration()")
+            }
         
             // invoke native method
             val result = ref.getDuration()
@@ -15190,7 +16754,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOIItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDuration([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@$refId::setDuration(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDuration(var1.toFloat())
@@ -15207,7 +16773,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setPoiSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setPoiSearchListener()")
+            }
         
             // invoke native method
             ref.setPoiSearchListener(object : com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener {
@@ -15251,7 +16819,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -15268,7 +16838,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOIAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOIAsyn()")
+            }
         
             // invoke native method
             ref.searchRoutePOIAsyn()
@@ -15285,7 +16857,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOI([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@$refId::searchRoutePOI()")
+            }
         
             // invoke native method
             val result = ref.searchRoutePOI()
@@ -15309,7 +16883,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois()")
+            }
         
             // invoke native method
             val result = ref.getRoutePois()
@@ -15333,7 +16909,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -15360,7 +16938,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener@$refId::onRoutePoiSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener@$refId::onRoutePoiSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onRoutePoiSearched(var1, var2)
@@ -15377,7 +16957,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getFrom([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getFrom()")
+            }
         
             // invoke native method
             val result = ref.getFrom()
@@ -15401,7 +16983,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getTo()")
+            }
         
             // invoke native method
             val result = ref.getTo()
@@ -15425,7 +17009,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getMode()")
+            }
         
             // invoke native method
             val result = ref.getMode()
@@ -15442,7 +17028,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getSearchType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getSearchType()")
+            }
         
             // invoke native method
             val result = ref.getSearchType()
@@ -15466,7 +17054,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getRange([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getRange()")
+            }
         
             // invoke native method
             val result = ref.getRange()
@@ -15483,7 +17073,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getPolylines([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getPolylines()")
+            }
         
             // invoke native method
             val result = ref.getPolylines()
@@ -15507,7 +17099,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.routepoisearch.RoutePOISearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -15531,7 +17125,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getID()")
+            }
         
             // invoke native method
             val result = ref.getID()
@@ -15548,7 +17144,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -15566,7 +17164,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1)
@@ -15583,7 +17183,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getTitle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getTitle()")
+            }
         
             // invoke native method
             val result = ref.getTitle()
@@ -15600,7 +17202,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getSnippet([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getSnippet()")
+            }
         
             // invoke native method
             val result = ref.getSnippet()
@@ -15617,7 +17221,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -15641,7 +17247,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getCreatetime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getCreatetime()")
+            }
         
             // invoke native method
             val result = ref.getCreatetime()
@@ -15659,7 +17267,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCreatetime(var1)
@@ -15676,7 +17286,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getUpdatetime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getUpdatetime()")
+            }
         
             // invoke native method
             val result = ref.getUpdatetime()
@@ -15694,7 +17306,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUpdatetime(var1)
@@ -15711,7 +17325,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage()")
+            }
         
             // invoke native method
             val result = ref.getCloudImage()
@@ -15736,7 +17352,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage()")
+            }
         
             // invoke native method
             ref.setmCloudImage(ArrayList(var1))
@@ -15753,7 +17371,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getQueryString([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getQueryString()")
+            }
         
             // invoke native method
             val result = ref.getQueryString()
@@ -15771,7 +17391,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setTableID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setTableID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTableID(var1)
@@ -15788,7 +17410,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getTableID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getTableID()")
+            }
         
             // invoke native method
             val result = ref.getTableID()
@@ -15805,7 +17429,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageNum([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageNum()")
+            }
         
             // invoke native method
             val result = ref.getPageNum()
@@ -15823,7 +17449,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageNum([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageNum(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageNum(var1)
@@ -15841,7 +17469,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageSize([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setPageSize(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageSize(var1)
@@ -15858,7 +17488,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageSize([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getPageSize()")
+            }
         
             // invoke native method
             val result = ref.getPageSize()
@@ -15876,7 +17508,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setBound()")
+            }
         
             // invoke native method
             ref.setBound(var1)
@@ -15893,7 +17527,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getBound()")
+            }
         
             // invoke native method
             val result = ref.getBound()
@@ -15920,7 +17556,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterString([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterString(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.addFilterString(var1, var2)
@@ -15937,7 +17575,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterString([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterString()")
+            }
         
             // invoke native method
             val result = ref.getFilterString()
@@ -15959,7 +17599,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterNum([\"var1\":$var1, \"var2\":$var2, \"var3\":$var3])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::addFilterNum(\"var1\":$var1, \"var2\":$var2, \"var3\":$var3)")
+            }
         
             // invoke native method
             ref.addFilterNum(var1, var2, var3)
@@ -15976,7 +17618,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterNumString([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getFilterNumString()")
+            }
         
             // invoke native method
             val result = ref.getFilterNumString()
@@ -15994,7 +17638,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setSortingrules([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::setSortingrules()")
+            }
         
             // invoke native method
             ref.setSortingrules(var1)
@@ -16011,7 +17657,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getSortingrules([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::getSortingrules()")
+            }
         
             // invoke native method
             val result = ref.getSortingrules()
@@ -16036,7 +17684,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.Query
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@$refId::queryEquals()")
+            }
         
             // invoke native method
             val result = ref.queryEquals(var1)
@@ -16061,7 +17711,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult::createPagedResult([\"var1\":$var1, \"var3\":$var3])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult::createPagedResult(\"var1\":$var1, \"var3\":$var3)")
+            }
         
             // invoke native method
             val result = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, ArrayList(var4))
@@ -16085,7 +17737,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getPageCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getPageCount()")
+            }
         
             // invoke native method
             val result = ref.getPageCount()
@@ -16102,7 +17756,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -16126,7 +17782,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getBound()")
+            }
         
             // invoke native method
             val result = ref.getBound()
@@ -16150,7 +17808,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getClouds([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getClouds()")
+            }
         
             // invoke native method
             val result = ref.getClouds()
@@ -16174,7 +17834,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudResult@$refId::getTotalCount()")
+            }
         
             // invoke native method
             val result = ref.getTotalCount()
@@ -16191,7 +17853,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener()")
+            }
         
             // invoke native method
             ref.setOnCloudSearchListener(object : com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener {
@@ -16256,7 +17920,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn()")
+            }
         
             // invoke native method
             ref.searchCloudAsyn(var1)
@@ -16276,7 +17942,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.searchCloudDetailAsyn(var1, var2)
@@ -16293,7 +17961,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getLowerLeft([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getLowerLeft()")
+            }
         
             // invoke native method
             val result = ref.getLowerLeft()
@@ -16317,7 +17987,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getUpperRight([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getUpperRight()")
+            }
         
             // invoke native method
             val result = ref.getUpperRight()
@@ -16341,7 +18013,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCenter([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCenter()")
+            }
         
             // invoke native method
             val result = ref.getCenter()
@@ -16365,7 +18039,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getRange([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getRange()")
+            }
         
             // invoke native method
             val result = ref.getRange()
@@ -16382,7 +18058,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getShape([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getShape()")
+            }
         
             // invoke native method
             val result = ref.getShape()
@@ -16399,7 +18077,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -16416,7 +18096,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.SearchBound
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getPolyGonList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@$refId::getPolyGonList()")
+            }
         
             // invoke native method
             val result = ref.getPolyGonList()
@@ -16440,7 +18122,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudImage
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::getId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::getId()")
+            }
         
             // invoke native method
             val result = ref.getId()
@@ -16458,7 +18142,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudImage
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::setId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::setId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setId(var1)
@@ -16475,7 +18161,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudImage
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::getPreurl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::getPreurl()")
+            }
         
             // invoke native method
             val result = ref.getPreurl()
@@ -16493,7 +18181,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudImage
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::setPreurl(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPreurl(var1)
@@ -16510,7 +18200,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudImage
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::getUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::getUrl()")
+            }
         
             // invoke native method
             val result = ref.getUrl()
@@ -16528,7 +18220,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudImage
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudImage@$refId::setUrl(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUrl(var1)
@@ -16548,7 +18242,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@$refId::onCloudSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@$refId::onCloudSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onCloudSearched(var1, var2)
@@ -16568,7 +18264,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@$refId::onCloudItemDetailSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@$refId::onCloudItemDetailSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onCloudItemDetailSearched(var1, var2)
@@ -16585,7 +18283,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDate([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDate()")
+            }
         
             // invoke native method
             val result = ref.getDate()
@@ -16603,7 +18303,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDate([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDate(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDate(var1)
@@ -16620,7 +18322,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getWeek([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getWeek()")
+            }
         
             // invoke native method
             val result = ref.getWeek()
@@ -16638,7 +18342,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setWeek([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setWeek(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWeek(var1)
@@ -16655,7 +18361,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWeather([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWeather()")
+            }
         
             // invoke native method
             val result = ref.getDayWeather()
@@ -16673,7 +18381,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWeather([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWeather(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDayWeather(var1)
@@ -16690,7 +18400,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWeather([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWeather()")
+            }
         
             // invoke native method
             val result = ref.getNightWeather()
@@ -16708,7 +18420,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWeather([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWeather(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNightWeather(var1)
@@ -16725,7 +18439,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayTemp([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayTemp()")
+            }
         
             // invoke native method
             val result = ref.getDayTemp()
@@ -16743,7 +18459,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayTemp([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayTemp(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDayTemp(var1)
@@ -16760,7 +18478,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightTemp([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightTemp()")
+            }
         
             // invoke native method
             val result = ref.getNightTemp()
@@ -16778,7 +18498,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightTemp([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightTemp(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNightTemp(var1)
@@ -16795,7 +18517,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindDirection()")
+            }
         
             // invoke native method
             val result = ref.getDayWindDirection()
@@ -16813,7 +18537,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDayWindDirection(var1)
@@ -16830,7 +18556,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindDirection()")
+            }
         
             // invoke native method
             val result = ref.getNightWindDirection()
@@ -16848,7 +18576,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNightWindDirection(var1)
@@ -16865,7 +18595,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindPower([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getDayWindPower()")
+            }
         
             // invoke native method
             val result = ref.getDayWindPower()
@@ -16883,7 +18615,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindPower([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setDayWindPower(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDayWindPower(var1)
@@ -16900,7 +18634,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindPower([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::getNightWindPower()")
+            }
         
             // invoke native method
             val result = ref.getNightWindPower()
@@ -16918,7 +18654,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalDayWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindPower([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@$refId::setNightWindPower(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNightWindPower(var1)
@@ -16935,7 +18673,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -16952,7 +18692,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType()")
+            }
         
             // invoke native method
             val result = ref.getType()
@@ -16969,7 +18711,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -16996,7 +18740,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@$refId::onWeatherLiveSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@$refId::onWeatherLiveSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onWeatherLiveSearched(var1, var2)
@@ -17016,7 +18762,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@$refId::onWeatherForecastSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@$refId::onWeatherForecastSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onWeatherForecastSearched(var1, var2)
@@ -17035,7 +18783,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.weather.LocalWeatherForecastResult.createPagedResult(var0, var1)
@@ -17059,7 +18809,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecastResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult@$refId::getWeatherForecastQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult@$refId::getWeatherForecastQuery()")
+            }
         
             // invoke native method
             val result = ref.getWeatherForecastQuery()
@@ -17083,7 +18835,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecastResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult@$refId::getForecastResult([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult@$refId::getForecastResult()")
+            }
         
             // invoke native method
             val result = ref.getForecastResult()
@@ -17107,7 +18861,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getProvince([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getProvince()")
+            }
         
             // invoke native method
             val result = ref.getProvince()
@@ -17125,7 +18881,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setProvince([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setProvince(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProvince(var1)
@@ -17142,7 +18900,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -17160,7 +18920,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -17177,7 +18939,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -17195,7 +18959,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -17212,7 +18978,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getReportTime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getReportTime()")
+            }
         
             // invoke native method
             val result = ref.getReportTime()
@@ -17230,7 +18998,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setReportTime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setReportTime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setReportTime(var1)
@@ -17247,7 +19017,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getWeatherForecast([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::getWeatherForecast()")
+            }
         
             // invoke native method
             val result = ref.getWeatherForecast()
@@ -17272,7 +19044,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherForecast
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setWeatherForecast([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@$refId::setWeatherForecast()")
+            }
         
             // invoke native method
             ref.setWeatherForecast(ArrayList(var1))
@@ -17289,7 +19063,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -17314,7 +19090,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -17331,7 +19109,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::searchWeatherAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::searchWeatherAsyn()")
+            }
         
             // invoke native method
             ref.searchWeatherAsyn()
@@ -17348,7 +19128,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.WeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener()")
+            }
         
             // invoke native method
             ref.setOnWeatherSearchListener(object : com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener {
@@ -17412,7 +19194,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getProvince([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getProvince()")
+            }
         
             // invoke native method
             val result = ref.getProvince()
@@ -17429,7 +19213,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -17446,7 +19232,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -17463,7 +19251,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getWeather([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getWeather()")
+            }
         
             // invoke native method
             val result = ref.getWeather()
@@ -17480,7 +19270,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getTemperature([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getTemperature()")
+            }
         
             // invoke native method
             val result = ref.getTemperature()
@@ -17497,7 +19289,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindDirection()")
+            }
         
             // invoke native method
             val result = ref.getWindDirection()
@@ -17514,7 +19308,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindPower([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindPower()")
+            }
         
             // invoke native method
             val result = ref.getWindPower()
@@ -17531,7 +19327,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getHumidity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getHumidity()")
+            }
         
             // invoke native method
             val result = ref.getHumidity()
@@ -17548,7 +19346,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getReportTime([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::getReportTime()")
+            }
         
             // invoke native method
             val result = ref.getReportTime()
@@ -17566,7 +19366,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setProvince([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setProvince(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProvince(var1)
@@ -17584,7 +19386,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -17602,7 +19406,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -17620,7 +19426,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setWeather([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setWeather(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWeather(var1)
@@ -17638,7 +19446,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setTemperature([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setTemperature(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTemperature(var1)
@@ -17656,7 +19466,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWindDirection(var1)
@@ -17674,7 +19486,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindPower([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindPower(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setWindPower(var1)
@@ -17692,7 +19506,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setHumidity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setHumidity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setHumidity(var1)
@@ -17710,7 +19526,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLive
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setReportTime([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@$refId::setReportTime(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setReportTime(var1)
@@ -17729,7 +19547,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
         
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult()")
+            }
         
             // invoke native method
             val result = com.amap.api.services.weather.LocalWeatherLiveResult.createPagedResult(var0, var1)
@@ -17753,7 +19573,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLiveResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getWeatherLiveQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getWeatherLiveQuery()")
+            }
         
             // invoke native method
             val result = ref.getWeatherLiveQuery()
@@ -17777,7 +19599,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.weather.LocalWeatherLiveResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getLiveResult([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult@$refId::getLiveResult()")
+            }
         
             // invoke native method
             val result = ref.getLiveResult()
@@ -17801,7 +19625,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.BusinessArea
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::getCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::getCenterPoint()")
+            }
         
             // invoke native method
             val result = ref.getCenterPoint()
@@ -17826,7 +19652,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.BusinessArea
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint()")
+            }
         
             // invoke native method
             ref.setCenterPoint(var1)
@@ -17843,7 +19671,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.BusinessArea
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -17861,7 +19691,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.BusinessArea
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -17878,7 +19710,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::getLocationName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::getLocationName()")
+            }
         
             // invoke native method
             val result = ref.getLocationName()
@@ -17896,7 +19730,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::setLocationName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::setLocationName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLocationName(var1)
@@ -17913,7 +19749,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -17931,7 +19769,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -17949,7 +19789,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation()")
+            }
         
             // invoke native method
             val result = ref.getFromLocation(var1)
@@ -17974,7 +19816,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName()")
+            }
         
             // invoke native method
             val result = ref.getFromLocationName(var1)
@@ -17998,7 +19842,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener()")
+            }
         
             // invoke native method
             ref.setOnGeocodeSearchListener(object : com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener {
@@ -18063,7 +19909,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn()")
+            }
         
             // invoke native method
             ref.getFromLocationAsyn(var1)
@@ -18081,7 +19929,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn()")
+            }
         
             // invoke native method
             ref.getFromLocationNameAsyn(var1)
@@ -18098,7 +19948,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeQuery()")
+            }
         
             // invoke native method
             val result = ref.getRegeocodeQuery()
@@ -18123,7 +19975,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeQuery()")
+            }
         
             // invoke native method
             ref.setRegeocodeQuery(var1)
@@ -18140,7 +19994,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeAddress([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeAddress()")
+            }
         
             // invoke native method
             val result = ref.getRegeocodeAddress()
@@ -18165,7 +20021,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeAddress([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeAddress()")
+            }
         
             // invoke native method
             ref.setRegeocodeAddress(var1)
@@ -18182,7 +20040,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeQuery()")
+            }
         
             // invoke native method
             val result = ref.getGeocodeQuery()
@@ -18207,7 +20067,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeQuery()")
+            }
         
             // invoke native method
             ref.setGeocodeQuery(var1)
@@ -18224,7 +20086,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeAddressList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::getGeocodeAddressList()")
+            }
         
             // invoke native method
             val result = ref.getGeocodeAddressList()
@@ -18249,7 +20113,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@$refId::setGeocodeAddressList()")
+            }
         
             // invoke native method
             ref.setGeocodeAddressList(ArrayList(var1))
@@ -18266,7 +20132,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiId()")
+            }
         
             // invoke native method
             val result = ref.getAoiId()
@@ -18283,7 +20151,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiName()")
+            }
         
             // invoke native method
             val result = ref.getAoiName()
@@ -18300,7 +20170,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -18317,7 +20189,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiCenterPoint()")
+            }
         
             // invoke native method
             val result = ref.getAoiCenterPoint()
@@ -18341,7 +20215,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::getAoiArea()")
+            }
         
             // invoke native method
             val result = ref.getAoiArea()
@@ -18359,7 +20235,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setId(var1)
@@ -18377,7 +20255,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -18395,7 +20275,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setAdcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdcode(var1)
@@ -18413,7 +20295,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setLocation()")
+            }
         
             // invoke native method
             ref.setLocation(var1)
@@ -18431,7 +20315,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.AoiItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setArea([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@$refId::setArea(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setArea(var1.toFloat())
@@ -18451,7 +20337,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@$refId::onRegeocodeSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@$refId::onRegeocodeSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onRegeocodeSearched(var1, var2)
@@ -18471,7 +20359,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@$refId::onGeocodeSearched([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@$refId::onGeocodeSearched(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onGeocodeSearched(var1, var2)
@@ -18488,7 +20378,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getId([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getId()")
+            }
         
             // invoke native method
             val result = ref.getId()
@@ -18506,7 +20398,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setId(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setId(var1)
@@ -18523,7 +20417,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -18541,7 +20437,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -18558,7 +20456,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -18576,7 +20476,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -18593,7 +20495,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDirection()")
+            }
         
             // invoke native method
             val result = ref.getDirection()
@@ -18611,7 +20515,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDirection(var1)
@@ -18628,7 +20534,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getLatLngPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getLatLngPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLngPoint()
@@ -18653,7 +20561,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeRoad
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setLatLngPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setLatLngPoint()")
+            }
         
             // invoke native method
             ref.setLatLngPoint(var1)
@@ -18670,7 +20580,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getFormatAddress([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getFormatAddress()")
+            }
         
             // invoke native method
             val result = ref.getFormatAddress()
@@ -18688,7 +20600,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setFormatAddress(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFormatAddress(var1)
@@ -18705,7 +20619,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getProvince([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getProvince()")
+            }
         
             // invoke native method
             val result = ref.getProvince()
@@ -18723,7 +20639,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setProvince(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProvince(var1)
@@ -18740,7 +20658,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -18758,7 +20678,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -18775,7 +20697,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getDistrict()")
+            }
         
             // invoke native method
             val result = ref.getDistrict()
@@ -18793,7 +20717,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setDistrict(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistrict(var1)
@@ -18810,7 +20736,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getTownship([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getTownship()")
+            }
         
             // invoke native method
             val result = ref.getTownship()
@@ -18828,7 +20756,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setTownship(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTownship(var1)
@@ -18845,7 +20775,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getNeighborhood([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getNeighborhood()")
+            }
         
             // invoke native method
             val result = ref.getNeighborhood()
@@ -18863,7 +20795,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setNeighborhood(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNeighborhood(var1)
@@ -18880,7 +20814,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getBuilding([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getBuilding()")
+            }
         
             // invoke native method
             val result = ref.getBuilding()
@@ -18898,7 +20834,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setBuilding(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBuilding(var1)
@@ -18915,7 +20853,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getAdcode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getAdcode()")
+            }
         
             // invoke native method
             val result = ref.getAdcode()
@@ -18933,7 +20873,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setAdcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdcode(var1)
@@ -18950,7 +20892,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -18975,7 +20919,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLatLonPoint()")
+            }
         
             // invoke native method
             ref.setLatLonPoint(var1)
@@ -18992,7 +20938,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLevel([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::getLevel()")
+            }
         
             // invoke native method
             val result = ref.getLevel()
@@ -19010,7 +20958,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.GeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@$refId::setLevel(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLevel(var1)
@@ -19027,7 +20977,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoint()")
+            }
         
             // invoke native method
             val result = ref.getPoint()
@@ -19052,7 +21004,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoint()")
+            }
         
             // invoke native method
             ref.setPoint(var1)
@@ -19069,7 +21023,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getRadius([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getRadius()")
+            }
         
             // invoke native method
             val result = ref.getRadius()
@@ -19087,7 +21043,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setRadius([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setRadius(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setRadius(var1.toFloat())
@@ -19104,7 +21062,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getLatLonType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getLatLonType()")
+            }
         
             // invoke native method
             val result = ref.getLatLonType()
@@ -19122,7 +21082,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setLatLonType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setLatLonType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLatLonType(var1)
@@ -19139,7 +21101,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoiType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::getPoiType()")
+            }
         
             // invoke native method
             val result = ref.getPoiType()
@@ -19157,7 +21121,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoiType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@$refId::setPoiType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPoiType(var1)
@@ -19174,7 +21140,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getStreet()")
+            }
         
             // invoke native method
             val result = ref.getStreet()
@@ -19192,7 +21160,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setStreet(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setStreet(var1)
@@ -19209,7 +21179,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getNumber()")
+            }
         
             // invoke native method
             val result = ref.getNumber()
@@ -19227,7 +21199,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setNumber(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNumber(var1)
@@ -19244,7 +21218,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getLatLonPoint()")
+            }
         
             // invoke native method
             val result = ref.getLatLonPoint()
@@ -19269,7 +21245,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setLatLonPoint()")
+            }
         
             // invoke native method
             ref.setLatLonPoint(var1)
@@ -19286,7 +21264,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getDirection()")
+            }
         
             // invoke native method
             val result = ref.getDirection()
@@ -19304,7 +21284,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setDirection(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDirection(var1)
@@ -19321,7 +21303,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::getDistance()")
+            }
         
             // invoke native method
             val result = ref.getDistance()
@@ -19339,7 +21323,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.StreetNumber
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@$refId::setDistance(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistance(var1.toFloat())
@@ -19356,7 +21342,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getFormatAddress([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getFormatAddress()")
+            }
         
             // invoke native method
             val result = ref.getFormatAddress()
@@ -19374,7 +21362,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setFormatAddress([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setFormatAddress(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFormatAddress(var1)
@@ -19391,7 +21381,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getProvince([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getProvince()")
+            }
         
             // invoke native method
             val result = ref.getProvince()
@@ -19409,7 +21401,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setProvince([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setProvince(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setProvince(var1)
@@ -19426,7 +21420,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -19444,7 +21440,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCity([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCity(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCity(var1)
@@ -19461,7 +21459,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCityCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCityCode()")
+            }
         
             // invoke native method
             val result = ref.getCityCode()
@@ -19479,7 +21479,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCityCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCityCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityCode(var1)
@@ -19496,7 +21498,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAdCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAdCode()")
+            }
         
             // invoke native method
             val result = ref.getAdCode()
@@ -19514,7 +21518,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setAdCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setAdCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdCode(var1)
@@ -19531,7 +21537,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getDistrict()")
+            }
         
             // invoke native method
             val result = ref.getDistrict()
@@ -19549,7 +21557,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setDistrict([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setDistrict(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistrict(var1)
@@ -19566,7 +21576,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getTownship([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getTownship()")
+            }
         
             // invoke native method
             val result = ref.getTownship()
@@ -19584,7 +21596,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setTownship([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setTownship(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTownship(var1)
@@ -19601,7 +21615,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getNeighborhood([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getNeighborhood()")
+            }
         
             // invoke native method
             val result = ref.getNeighborhood()
@@ -19619,7 +21635,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setNeighborhood([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setNeighborhood(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setNeighborhood(var1)
@@ -19636,7 +21654,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBuilding([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBuilding()")
+            }
         
             // invoke native method
             val result = ref.getBuilding()
@@ -19654,7 +21674,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBuilding([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBuilding(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setBuilding(var1)
@@ -19671,7 +21693,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getStreetNumber([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getStreetNumber()")
+            }
         
             // invoke native method
             val result = ref.getStreetNumber()
@@ -19696,7 +21720,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setStreetNumber([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setStreetNumber()")
+            }
         
             // invoke native method
             ref.setStreetNumber(var1)
@@ -19713,7 +21739,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getRoads([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getRoads()")
+            }
         
             // invoke native method
             val result = ref.getRoads()
@@ -19738,7 +21766,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setRoads([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setRoads()")
+            }
         
             // invoke native method
             ref.setRoads(ArrayList(var1))
@@ -19755,7 +21785,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getPois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getPois()")
+            }
         
             // invoke native method
             val result = ref.getPois()
@@ -19780,7 +21812,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setPois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setPois()")
+            }
         
             // invoke native method
             ref.setPois(ArrayList(var1))
@@ -19797,7 +21831,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCrossroads([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCrossroads()")
+            }
         
             // invoke native method
             val result = ref.getCrossroads()
@@ -19822,7 +21858,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCrossroads([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCrossroads()")
+            }
         
             // invoke native method
             ref.setCrossroads(ArrayList(var1))
@@ -19839,7 +21877,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBusinessAreas([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getBusinessAreas()")
+            }
         
             // invoke native method
             val result = ref.getBusinessAreas()
@@ -19864,7 +21904,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBusinessAreas([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setBusinessAreas()")
+            }
         
             // invoke native method
             ref.setBusinessAreas(ArrayList(var1))
@@ -19881,7 +21923,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getAois()")
+            }
         
             // invoke native method
             val result = ref.getAois()
@@ -19906,7 +21950,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setAois([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setAois()")
+            }
         
             // invoke native method
             ref.setAois(ArrayList(var1))
@@ -19923,7 +21969,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getTowncode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getTowncode()")
+            }
         
             // invoke native method
             val result = ref.getTowncode()
@@ -19941,7 +21989,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setTowncode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setTowncode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTowncode(var1)
@@ -19959,7 +22009,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCountry([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::setCountry(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCountry(var1)
@@ -19976,7 +22028,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.geocoder.RegeocodeAddress
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCountry([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@$refId::getCountry()")
+            }
         
             // invoke native method
             val result = ref.getCountry()
@@ -19994,7 +22048,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setShowBoundary(var1)
@@ -20011,7 +22067,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary()")
+            }
         
             // invoke native method
             val result = ref.isShowBoundary()
@@ -20028,7 +22086,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum()")
+            }
         
             // invoke native method
             val result = ref.getPageNum()
@@ -20046,7 +22106,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageNum(var1)
@@ -20063,7 +22125,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize()")
+            }
         
             // invoke native method
             val result = ref.getPageSize()
@@ -20081,7 +22145,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageSize(var1)
@@ -20098,7 +22164,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords()")
+            }
         
             // invoke native method
             val result = ref.getKeywords()
@@ -20116,7 +22184,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setKeywords(var1)
@@ -20133,7 +22203,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel()")
+            }
         
             // invoke native method
             val result = ref.getKeywordsLevel()
@@ -20151,7 +22223,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setKeywordsLevel(var1)
@@ -20168,7 +22242,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild()")
+            }
         
             // invoke native method
             val result = ref.isShowChild()
@@ -20186,7 +22262,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setShowChild(var1)
@@ -20203,7 +22281,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea()")
+            }
         
             // invoke native method
             val result = ref.isShowBusinessArea()
@@ -20221,7 +22301,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setShowBusinessArea(var1)
@@ -20238,7 +22320,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels()")
+            }
         
             // invoke native method
             val result = ref.checkLevels()
@@ -20255,7 +22339,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords()")
+            }
         
             // invoke native method
             val result = ref.checkKeyWords()
@@ -20273,7 +22359,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals()")
+            }
         
             // invoke native method
             val result = ref.weakEquals(var1)
@@ -20290,7 +22378,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearchQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::clone([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@$refId::clone()")
+            }
         
             // invoke native method
             val result = ref.clone()
@@ -20314,7 +22404,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -20339,7 +22431,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -20356,7 +22450,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict()")
+            }
         
             // invoke native method
             val result = ref.searchDistrict()
@@ -20380,7 +22476,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn()")
+            }
         
             // invoke native method
             ref.searchDistrictAsyn()
@@ -20397,7 +22495,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy()")
+            }
         
             // invoke native method
             ref.searchDistrictAnsy()
@@ -20414,7 +22514,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener()")
+            }
         
             // invoke native method
             ref.setOnDistrictSearchListener(object : com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener {
@@ -20455,7 +22557,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getDistrict()")
+            }
         
             // invoke native method
             val result = ref.getDistrict()
@@ -20480,7 +22584,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setDistrict()")
+            }
         
             // invoke native method
             ref.setDistrict(ArrayList(var1))
@@ -20497,7 +22603,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -20522,7 +22630,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -20539,7 +22649,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getPageCount([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getPageCount()")
+            }
         
             // invoke native method
             val result = ref.getPageCount()
@@ -20557,7 +22669,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setPageCount([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setPageCount(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setPageCount(var1)
@@ -20574,7 +22688,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getAMapException([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::getAMapException()")
+            }
         
             // invoke native method
             val result = ref.getAMapException()
@@ -20599,7 +22715,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictResult
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setAMapException([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictResult@$refId::setAMapException()")
+            }
         
             // invoke native method
             ref.setAMapException(var1)
@@ -20616,7 +22734,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getCitycode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getCitycode()")
+            }
         
             // invoke native method
             val result = ref.getCitycode()
@@ -20634,7 +22754,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setCitycode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setCitycode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCitycode(var1)
@@ -20651,7 +22773,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getAdcode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getAdcode()")
+            }
         
             // invoke native method
             val result = ref.getAdcode()
@@ -20669,7 +22793,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setAdcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setAdcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdcode(var1)
@@ -20686,7 +22812,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -20704,7 +22832,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -20721,7 +22851,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getCenter([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getCenter()")
+            }
         
             // invoke native method
             val result = ref.getCenter()
@@ -20746,7 +22878,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setCenter([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setCenter()")
+            }
         
             // invoke native method
             ref.setCenter(var1)
@@ -20763,7 +22897,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getLevel([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getLevel()")
+            }
         
             // invoke native method
             val result = ref.getLevel()
@@ -20781,7 +22917,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setLevel([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setLevel(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLevel(var1)
@@ -20798,7 +22936,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getSubDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::getSubDistrict()")
+            }
         
             // invoke native method
             val result = ref.getSubDistrict()
@@ -20823,7 +22963,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictItem
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setSubDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictItem@$refId::setSubDistrict()")
+            }
         
             // invoke native method
             ref.setSubDistrict(ArrayList(var1))
@@ -20841,7 +22983,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener@$refId::onDistrictSearched([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener@$refId::onDistrictSearched()")
+            }
         
             // invoke native method
             ref.onDistrictSearched(var1)
@@ -20861,7 +23005,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Inputtips.InputtipsListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Inputtips.InputtipsListener@$refId::onGetInputtips([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Inputtips.InputtipsListener@$refId::onGetInputtips(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onGetInputtips(ArrayList(var1), var2)
@@ -20878,7 +23024,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getPoiID([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getPoiID()")
+            }
         
             // invoke native method
             val result = ref.getPoiID()
@@ -20896,7 +23044,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setID(var1)
@@ -20913,7 +23063,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getPoint([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getPoint()")
+            }
         
             // invoke native method
             val result = ref.getPoint()
@@ -20938,7 +23090,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setPostion([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setPostion()")
+            }
         
             // invoke native method
             ref.setPostion(var1)
@@ -20955,7 +23109,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getName()")
+            }
         
             // invoke native method
             val result = ref.getName()
@@ -20973,7 +23129,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setName(var1)
@@ -20990,7 +23148,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getDistrict()")
+            }
         
             // invoke native method
             val result = ref.getDistrict()
@@ -21008,7 +23168,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setDistrict([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setDistrict(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setDistrict(var1)
@@ -21025,7 +23187,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getAdcode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getAdcode()")
+            }
         
             // invoke native method
             val result = ref.getAdcode()
@@ -21043,7 +23207,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setAdcode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setAdcode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAdcode(var1)
@@ -21060,7 +23226,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getAddress([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getAddress()")
+            }
         
             // invoke native method
             val result = ref.getAddress()
@@ -21078,7 +23246,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setAddress([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setAddress(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setAddress(var1)
@@ -21096,7 +23266,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setTypeCode([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::setTypeCode(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setTypeCode(var1)
@@ -21113,7 +23285,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Tip
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getTypeCode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Tip@$refId::getTypeCode()")
+            }
         
             // invoke native method
             val result = ref.getTypeCode()
@@ -21130,7 +23304,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword()")
+            }
         
             // invoke native method
             val result = ref.getKeyword()
@@ -21147,7 +23323,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getCity()")
+            }
         
             // invoke native method
             val result = ref.getCity()
@@ -21165,7 +23343,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::setType([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::setType(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setType(var1)
@@ -21182,7 +23362,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getType([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getType()")
+            }
         
             // invoke native method
             val result = ref.getType()
@@ -21200,7 +23382,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setCityLimit(var1)
@@ -21217,7 +23401,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit()")
+            }
         
             // invoke native method
             val result = ref.getCityLimit()
@@ -21235,7 +23421,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::setLocation()")
+            }
         
             // invoke native method
             ref.setLocation(var1)
@@ -21252,7 +23440,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.InputtipsQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@$refId::getLocation()")
+            }
         
             // invoke native method
             val result = ref.getLocation()
@@ -21276,7 +23466,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Inputtips
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -21301,7 +23493,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Inputtips
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -21318,7 +23512,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Inputtips
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener()")
+            }
         
             // invoke native method
             ref.setInputtipsListener(object : com.amap.api.services.help.Inputtips.InputtipsListener {
@@ -21361,7 +23557,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Inputtips
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::requestInputtipsAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::requestInputtipsAsyn()")
+            }
         
             // invoke native method
             ref.requestInputtipsAsyn()
@@ -21378,7 +23576,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.help.Inputtips
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::requestInputtips([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.help.Inputtips@$refId::requestInputtips()")
+            }
         
             // invoke native method
             val result = ref.requestInputtips()
@@ -21402,7 +23602,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -21427,7 +23629,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -21444,7 +23648,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::searchDistrictAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::searchDistrictAsyn()")
+            }
         
             // invoke native method
             ref.searchDistrictAsyn()
@@ -21461,7 +23667,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::searchDistrictAnsy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::searchDistrictAnsy()")
+            }
         
             // invoke native method
             ref.searchDistrictAnsy()
@@ -21478,7 +23686,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::setOnDistrictSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::setOnDistrictSearchListener()")
+            }
         
             // invoke native method
             ref.setOnDistrictSearchListener(object : com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener {
@@ -21519,7 +23729,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistrictSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::searchDistrict([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@$refId::searchDistrict()")
+            }
         
             // invoke native method
             val result = ref.searchDistrict()
@@ -21543,7 +23755,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::searchBusStation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::searchBusStation()")
+            }
         
             // invoke native method
             val result = ref.searchBusStation()
@@ -21567,7 +23781,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::setOnBusStationSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::setOnBusStationSearchListener()")
+            }
         
             // invoke native method
             ref.setOnBusStationSearchListener(object : com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener {
@@ -21610,7 +23826,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::searchBusStationAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::searchBusStationAsyn()")
+            }
         
             // invoke native method
             ref.searchBusStationAsyn()
@@ -21628,7 +23846,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -21645,7 +23865,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusStationSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -21669,7 +23891,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::setRouteSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::setRouteSearchListener()")
+            }
         
             // invoke native method
             ref.setRouteSearchListener(object : com.amap.api.services.route.RouteSearch.OnRouteSearchListener {
@@ -21775,7 +23999,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::setOnTruckRouteSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::setOnTruckRouteSearchListener()")
+            }
         
             // invoke native method
             ref.setOnTruckRouteSearchListener(object : com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener {
@@ -21818,7 +24044,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::setOnRoutePlanSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::setOnRoutePlanSearchListener()")
+            }
         
             // invoke native method
             ref.setOnRoutePlanSearchListener(object : com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener {
@@ -21862,7 +24090,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateWalkRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateWalkRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateWalkRoute(var1)
@@ -21887,7 +24117,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateWalkRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateWalkRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateWalkRouteAsyn(var1)
@@ -21905,7 +24137,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateBusRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateBusRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateBusRoute(var1)
@@ -21930,7 +24164,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateBusRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateBusRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateBusRouteAsyn(var1)
@@ -21948,7 +24184,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDriveRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDriveRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateDriveRoute(var1)
@@ -21973,7 +24211,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDriveRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDriveRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateDriveRouteAsyn(var1)
@@ -21991,7 +24231,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateRideRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateRideRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateRideRoute(var1)
@@ -22016,7 +24258,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateRideRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateRideRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateRideRouteAsyn(var1)
@@ -22034,7 +24278,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateTruckRoute([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateTruckRoute()")
+            }
         
             // invoke native method
             val result = ref.calculateTruckRoute(var1)
@@ -22059,7 +24305,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateTruckRouteAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateTruckRouteAsyn()")
+            }
         
             // invoke native method
             ref.calculateTruckRouteAsyn(var1)
@@ -22077,7 +24325,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDrivePlan([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDrivePlan()")
+            }
         
             // invoke native method
             val result = ref.calculateDrivePlan(var1)
@@ -22102,7 +24352,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRouteSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDrivePlanAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@$refId::calculateDrivePlanAsyn()")
+            }
         
             // invoke native method
             ref.calculateDrivePlanAsyn(var1)
@@ -22119,7 +24371,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::setOnShareSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::setOnShareSearchListener()")
+            }
         
             // invoke native method
             ref.setOnShareSearchListener(object : com.amap.api.services.share.ShareSearch.OnShareSearchListener {
@@ -22268,7 +24522,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchPoiShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchPoiShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchPoiShareUrlAsyn(var1)
@@ -22286,7 +24542,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchBusRouteShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchBusRouteShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchBusRouteShareUrlAsyn(var1)
@@ -22304,7 +24562,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchWalkRouteShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchWalkRouteShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchWalkRouteShareUrlAsyn(var1)
@@ -22322,7 +24582,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchDrivingRouteShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchDrivingRouteShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchDrivingRouteShareUrlAsyn(var1)
@@ -22340,7 +24602,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchNaviShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchNaviShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchNaviShareUrlAsyn(var1)
@@ -22358,7 +24622,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchLocationShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchLocationShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchLocationShareUrlAsyn(var1)
@@ -22376,7 +24642,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchPoiShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchPoiShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchPoiShareUrl(var1)
@@ -22394,7 +24662,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchNaviShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchNaviShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchNaviShareUrl(var1)
@@ -22412,7 +24682,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchLocationShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchLocationShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchLocationShareUrl(var1)
@@ -22430,7 +24702,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchBusRouteShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchBusRouteShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchBusRouteShareUrl(var1)
@@ -22448,7 +24722,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchDrivingRouteShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchDrivingRouteShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchDrivingRouteShareUrl(var1)
@@ -22466,7 +24742,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchWalkRouteShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@$refId::searchWalkRouteShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchWalkRouteShareUrl(var1)
@@ -22483,7 +24761,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::setRoutePOISearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::setRoutePOISearchListener()")
+            }
         
             // invoke native method
             ref.setRoutePOISearchListener(object : com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener {
@@ -22526,7 +24806,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::searchRoutePOIAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::searchRoutePOIAsyn()")
+            }
         
             // invoke native method
             ref.searchRoutePOIAsyn()
@@ -22543,7 +24825,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::searchRoutePOI([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::searchRoutePOI()")
+            }
         
             // invoke native method
             val result = ref.searchRoutePOI()
@@ -22568,7 +24852,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -22585,7 +24871,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IRoutePOISearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -22609,7 +24897,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ITrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::setTrafficSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::setTrafficSearchListener()")
+            }
         
             // invoke native method
             ref.setTrafficSearchListener(object : com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener {
@@ -22653,7 +24943,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ITrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByRoad([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByRoad()")
+            }
         
             // invoke native method
             val result = ref.loadTrafficByRoad(var1)
@@ -22678,7 +24970,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ITrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByRoadAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByRoadAsyn()")
+            }
         
             // invoke native method
             ref.loadTrafficByRoadAsyn(var1)
@@ -22696,7 +24990,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ITrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByCircle([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByCircle()")
+            }
         
             // invoke native method
             val result = ref.loadTrafficByCircle(var1)
@@ -22721,7 +25017,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ITrafficSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByCircleAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@$refId::loadTrafficByCircleAsyn()")
+            }
         
             // invoke native method
             ref.loadTrafficByCircleAsyn(var1)
@@ -22738,7 +25036,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IInputtipsSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -22763,7 +25063,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IInputtipsSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -22780,7 +25082,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IInputtipsSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::setInputtipsListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::setInputtipsListener()")
+            }
         
             // invoke native method
             ref.setInputtipsListener(object : com.amap.api.services.help.Inputtips.InputtipsListener {
@@ -22823,7 +25127,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IInputtipsSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtipsAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtipsAsyn()")
+            }
         
             // invoke native method
             ref.requestInputtipsAsyn()
@@ -22840,7 +25146,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IInputtipsSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtips([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@$refId::requestInputtips()")
+            }
         
             // invoke native method
             val result = ref.requestInputtips()
@@ -22865,7 +25173,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IGeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocation([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocation()")
+            }
         
             // invoke native method
             val result = ref.getFromLocation(var1)
@@ -22890,7 +25200,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IGeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocationName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocationName()")
+            }
         
             // invoke native method
             val result = ref.getFromLocationName(var1)
@@ -22914,7 +25226,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IGeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::setOnGeocodeSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::setOnGeocodeSearchListener()")
+            }
         
             // invoke native method
             ref.setOnGeocodeSearchListener(object : com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener {
@@ -22979,7 +25293,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IGeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocationAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocationAsyn()")
+            }
         
             // invoke native method
             ref.getFromLocationAsyn(var1)
@@ -22997,7 +25313,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IGeocodeSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocationNameAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@$refId::getFromLocationNameAsyn()")
+            }
         
             // invoke native method
             ref.getFromLocationNameAsyn(var1)
@@ -23014,7 +25332,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ICloudSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@$refId::setOnCloudSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@$refId::setOnCloudSearchListener()")
+            }
         
             // invoke native method
             ref.setOnCloudSearchListener(object : com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener {
@@ -23079,7 +25399,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ICloudSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudAsyn()")
+            }
         
             // invoke native method
             ref.searchCloudAsyn(var1)
@@ -23099,7 +25421,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.ICloudSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudDetailAsyn([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@$refId::searchCloudDetailAsyn(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.searchCloudDetailAsyn(var1, var2)
@@ -23117,7 +25441,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistanceSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@$refId::calculateRouteDistance([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@$refId::calculateRouteDistance()")
+            }
         
             // invoke native method
             val result = ref.calculateRouteDistance(var1)
@@ -23142,7 +25468,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistanceSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@$refId::calculateRouteDistanceAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@$refId::calculateRouteDistanceAsyn()")
+            }
         
             // invoke native method
             ref.calculateRouteDistanceAsyn(var1)
@@ -23159,7 +25487,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IDistanceSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@$refId::setDistanceSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@$refId::setDistanceSearchListener()")
+            }
         
             // invoke native method
             ref.setDistanceSearchListener(object : com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener {
@@ -23202,7 +25532,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setOnPoiSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setOnPoiSearchListener()")
+            }
         
             // invoke native method
             ref.setOnPoiSearchListener(object : com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener {
@@ -23267,7 +25599,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setLanguage([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setLanguage(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setLanguage(var1)
@@ -23284,7 +25618,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::getLanguage([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::getLanguage()")
+            }
         
             // invoke native method
             val result = ref.getLanguage()
@@ -23301,7 +25637,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOI([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOI()")
+            }
         
             // invoke native method
             val result = ref.searchPOI()
@@ -23325,7 +25663,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIAsyn()")
+            }
         
             // invoke native method
             ref.searchPOIAsyn()
@@ -23343,7 +25683,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIId([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIId(\"var1\":$var1)")
+            }
         
             // invoke native method
             val result = ref.searchPOIId(var1)
@@ -23368,7 +25710,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIIdAsyn([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::searchPOIIdAsyn(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.searchPOIIdAsyn(var1)
@@ -23386,7 +25730,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -23404,7 +25750,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::setBound()")
+            }
         
             // invoke native method
             ref.setBound(var1)
@@ -23421,7 +25769,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -23445,7 +25795,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IPoiSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::getBound([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@$refId::getBound()")
+            }
         
             // invoke native method
             val result = ref.getBound()
@@ -23469,7 +25821,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IWeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -23494,7 +25848,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IWeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -23511,7 +25867,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IWeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::searchWeatherAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::searchWeatherAsyn()")
+            }
         
             // invoke native method
             ref.searchWeatherAsyn()
@@ -23528,7 +25886,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IWeatherSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::setOnWeatherSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@$refId::setOnWeatherSearchListener()")
+            }
         
             // invoke native method
             ref.setOnWeatherSearchListener(object : com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener {
@@ -23592,7 +25952,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::addNearbyListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::addNearbyListener()")
+            }
         
             // invoke native method
             ref.addNearbyListener(object : com.amap.api.services.nearby.NearbySearch.NearbyListener {
@@ -23673,7 +26035,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::removeNearbyListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::removeNearbyListener()")
+            }
         
             // invoke native method
             ref.removeNearbyListener(object : com.amap.api.services.nearby.NearbySearch.NearbyListener {
@@ -23754,7 +26118,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::clearUserInfoAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::clearUserInfoAsyn()")
+            }
         
             // invoke native method
             ref.clearUserInfoAsyn()
@@ -23772,7 +26138,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::setUserID([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::setUserID(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setUserID(var1)
@@ -23790,7 +26158,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::startUploadNearbyInfoAuto([\"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::startUploadNearbyInfoAuto(\"var2\":$var2)")
+            }
         
             // invoke native method
             ref.startUploadNearbyInfoAuto(object : com.amap.api.services.nearby.UploadInfoCallback {
@@ -23831,7 +26201,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::stopUploadNearbyInfoAuto([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::stopUploadNearbyInfoAuto()")
+            }
         
             // invoke native method
             ref.stopUploadNearbyInfoAuto()
@@ -23849,7 +26221,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::uploadNearbyInfoAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::uploadNearbyInfoAsyn()")
+            }
         
             // invoke native method
             ref.uploadNearbyInfoAsyn(var1)
@@ -23867,7 +26241,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::searchNearbyInfoAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::searchNearbyInfoAsyn()")
+            }
         
             // invoke native method
             ref.searchNearbyInfoAsyn(var1)
@@ -23885,7 +26261,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::searchNearbyInfo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::searchNearbyInfo()")
+            }
         
             // invoke native method
             val result = ref.searchNearbyInfo(var1)
@@ -23909,7 +26287,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.INearbySearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::destroy([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@$refId::destroy()")
+            }
         
             // invoke native method
             ref.destroy()
@@ -23926,7 +26306,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::searchBusLine([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::searchBusLine()")
+            }
         
             // invoke native method
             val result = ref.searchBusLine()
@@ -23950,7 +26332,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::setOnBusLineSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::setOnBusLineSearchListener()")
+            }
         
             // invoke native method
             ref.setOnBusLineSearchListener(object : com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener {
@@ -23993,7 +26377,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::searchBusLineAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::searchBusLineAsyn()")
+            }
         
             // invoke native method
             ref.searchBusLineAsyn()
@@ -24011,7 +26397,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::setQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::setQuery()")
+            }
         
             // invoke native method
             ref.setQuery(var1)
@@ -24028,7 +26416,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.interfaces.IBusLineSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::getQuery([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@$refId::getQuery()")
+            }
         
             // invoke native method
             val result = ref.getQuery()
@@ -24052,7 +26442,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareNaviQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getFromAndTo()
@@ -24076,7 +26468,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareNaviQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getNaviMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getNaviMode()")
+            }
         
             // invoke native method
             val result = ref.getNaviMode()
@@ -24093,7 +26487,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareBusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getBusMode()")
+            }
         
             // invoke native method
             val result = ref.getBusMode()
@@ -24110,7 +26506,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareBusRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@$refId::getShareFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getShareFromAndTo()
@@ -24134,7 +26532,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::setOnShareSearchListener([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::setOnShareSearchListener()")
+            }
         
             // invoke native method
             ref.setOnShareSearchListener(object : com.amap.api.services.share.ShareSearch.OnShareSearchListener {
@@ -24283,7 +26683,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchPoiShareUrlAsyn(var1)
@@ -24301,7 +26703,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchBusRouteShareUrlAsyn(var1)
@@ -24319,7 +26723,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchWalkRouteShareUrlAsyn(var1)
@@ -24337,7 +26743,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchDrivingRouteShareUrlAsyn(var1)
@@ -24355,7 +26763,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchNaviShareUrlAsyn(var1)
@@ -24373,7 +26783,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrlAsyn([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrlAsyn()")
+            }
         
             // invoke native method
             ref.searchLocationShareUrlAsyn(var1)
@@ -24391,7 +26803,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchPoiShareUrl(var1)
@@ -24409,7 +26823,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchNaviShareUrl(var1)
@@ -24427,7 +26843,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchLocationShareUrl(var1)
@@ -24445,7 +26863,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchBusRouteShareUrl(var1)
@@ -24463,7 +26883,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchDrivingRouteShareUrl(var1)
@@ -24481,7 +26903,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrl([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrl()")
+            }
         
             // invoke native method
             val result = ref.searchWalkRouteShareUrl(var1)
@@ -24499,7 +26923,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setFromName(var1)
@@ -24517,7 +26943,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName([\"var1\":$var1])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName(\"var1\":$var1)")
+            }
         
             // invoke native method
             ref.setToName(var1)
@@ -24534,7 +26962,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFrom([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFrom()")
+            }
         
             // invoke native method
             val result = ref.getFrom()
@@ -24558,7 +26988,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getTo()")
+            }
         
             // invoke native method
             val result = ref.getTo()
@@ -24582,7 +27014,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFromName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFromName()")
+            }
         
             // invoke native method
             val result = ref.getFromName()
@@ -24599,7 +27033,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareFromAndTo
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getToName([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getToName()")
+            }
         
             // invoke native method
             val result = ref.getToName()
@@ -24616,7 +27052,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getWalkMode()")
+            }
         
             // invoke native method
             val result = ref.getWalkMode()
@@ -24633,7 +27071,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@$refId::getShareFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getShareFromAndTo()
@@ -24657,7 +27097,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getDrivingMode([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getDrivingMode()")
+            }
         
             // invoke native method
             val result = ref.getDrivingMode()
@@ -24674,7 +27116,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getShareFromAndTo([])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@$refId::getShareFromAndTo()")
+            }
         
             // invoke native method
             val result = ref.getShareFromAndTo()
@@ -24701,7 +27145,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.OnShareSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onPoiShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onPoiShareUrlSearched(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onPoiShareUrlSearched(var1, var2)
@@ -24721,7 +27167,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.OnShareSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onLocationShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onLocationShareUrlSearched(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onLocationShareUrlSearched(var1, var2)
@@ -24741,7 +27189,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.OnShareSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onNaviShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onNaviShareUrlSearched(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onNaviShareUrlSearched(var1, var2)
@@ -24761,7 +27211,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.OnShareSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onBusRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onBusRouteShareUrlSearched(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onBusRouteShareUrlSearched(var1, var2)
@@ -24781,7 +27233,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.OnShareSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onWalkRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onWalkRouteShareUrlSearched(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onWalkRouteShareUrlSearched(var1, var2)
@@ -24801,7 +27255,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             val ref = HEAP[refId] as com.amap.api.services.share.ShareSearch.OnShareSearchListener
         
             // print log
-            println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onDrivingRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])")
+            if (BuildConfig.DEBUG) {
+                println("fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@$refId::onDrivingRouteShareUrlSearched(\"var1\":$var1, \"var2\":$var2)")
+            }
         
             // invoke native method
             ref.onDrivingRouteShareUrlSearched(var1, var2)
@@ -24820,7 +27276,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24835,7 +27293,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24851,7 +27311,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24871,7 +27333,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24891,7 +27355,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24906,7 +27372,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24921,7 +27389,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24939,7 +27409,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24954,7 +27426,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24972,7 +27446,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -24988,7 +27464,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25008,7 +27486,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25023,7 +27503,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25038,7 +27520,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25058,7 +27542,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25076,7 +27562,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25098,7 +27586,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25120,7 +27610,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25135,7 +27627,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25153,7 +27647,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25175,7 +27671,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25193,7 +27691,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25211,7 +27711,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25231,7 +27733,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25249,7 +27753,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25265,7 +27771,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25283,7 +27791,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25301,7 +27811,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25321,7 +27833,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25341,7 +27855,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25356,7 +27872,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25371,7 +27889,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25386,7 +27906,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25408,7 +27930,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25423,7 +27947,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25438,7 +27964,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25453,7 +27981,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25469,7 +27999,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25484,7 +28016,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25499,7 +28033,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25514,7 +28050,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25529,7 +28067,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25547,7 +28087,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25562,7 +28104,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25580,7 +28124,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25596,7 +28142,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25611,7 +28159,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25634,7 +28184,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25649,7 +28201,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25664,7 +28218,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25679,7 +28235,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25694,7 +28252,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25709,7 +28269,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25727,7 +28289,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25742,7 +28306,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25757,7 +28323,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25779,7 +28347,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25794,7 +28364,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25809,7 +28381,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25824,7 +28398,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25839,7 +28415,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25857,7 +28435,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25873,7 +28453,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25888,7 +28470,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25903,7 +28487,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25918,7 +28504,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25933,7 +28521,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25948,7 +28538,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25964,7 +28556,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25979,7 +28573,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -25994,7 +28590,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26016,7 +28614,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26031,7 +28631,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26046,7 +28648,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26061,7 +28665,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26076,7 +28682,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26091,7 +28699,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26106,7 +28716,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26121,7 +28733,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26136,7 +28750,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26151,7 +28767,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26166,7 +28784,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26181,7 +28801,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26196,7 +28818,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26211,7 +28835,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26226,7 +28852,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26244,7 +28872,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26259,7 +28889,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26274,7 +28906,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26289,7 +28923,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26304,7 +28940,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26319,7 +28957,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26334,7 +28974,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26356,7 +28998,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26376,7 +29020,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26392,7 +29038,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26410,7 +29058,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26428,7 +29078,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26444,7 +29096,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26460,7 +29114,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26480,7 +29136,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26498,7 +29156,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26514,7 +29174,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26536,7 +29198,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26551,7 +29215,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26569,7 +29235,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26584,7 +29252,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26599,7 +29269,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26615,7 +29287,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26630,7 +29304,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26645,7 +29321,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26663,7 +29341,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26679,7 +29359,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26697,7 +29379,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26715,7 +29399,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26730,7 +29416,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26745,7 +29433,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26760,7 +29450,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26780,7 +29472,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26795,7 +29489,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26810,7 +29506,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26825,7 +29523,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26845,7 +29545,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26869,7 +29571,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26885,7 +29589,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26903,7 +29609,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26918,7 +29626,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26933,7 +29643,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26957,7 +29669,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26972,7 +29686,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -26990,7 +29706,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27008,7 +29726,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27026,7 +29746,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27044,7 +29766,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27060,7 +29784,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27078,7 +29804,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27096,7 +29824,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         },
@@ -27114,7 +29844,9 @@ class AmapSearchFluttifyPlugin(private val registrar: Registrar): MethodChannel.
             HEAP[obj.hashCode()] = obj
         
             // print current HEAP
-            Log.d("ObjectFactory", "HEAP: $HEAP")
+            if (BuildConfig.DEBUG) {
+                Log.d("ObjectFactory", "HEAP: $HEAP")
+            }
         
             methodResult.success(obj.hashCode())
         }

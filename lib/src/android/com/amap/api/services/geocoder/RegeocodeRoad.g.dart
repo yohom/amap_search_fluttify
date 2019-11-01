@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   // generate methods
   Future<String> getId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::getId', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setId', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<String> getName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::getName', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setName', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<double> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::getDistance', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setDistance', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<String> getDirection() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDirection([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDirection([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::getDirection', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setDirection(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDirection([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDirection([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setDirection', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLngPoint() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getLatLngPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getLatLngPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::getLatLngPoint', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setLatLngPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setLatLngPoint([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setLatLngPoint([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeRoad::setLatLngPoint', {"var1": var1.refId, "refId": refId});

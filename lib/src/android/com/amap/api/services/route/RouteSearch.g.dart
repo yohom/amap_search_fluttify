@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   // generate methods
   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setRouteSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setRouteSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::setRouteSearchListener', {"refId": refId});
@@ -35,28 +38,36 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched':
               // print log
-              print('fluttify-dart-callback: onBusRouteSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onBusRouteSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onBusRouteSearched(com_amap_api_services_route_BusRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
               // print log
-              print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
               // print log
-              print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
               // print log
-              print('fluttify-dart-callback: onRideRouteSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onRideRouteSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onRideRouteSearched(com_amap_api_services_route_RideRouteResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
@@ -77,7 +88,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnTruckRouteSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnTruckRouteSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener', {"refId": refId});
@@ -93,7 +106,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched':
               // print log
-              print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
@@ -114,7 +129,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnRoutePlanSearchListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnRoutePlanSearchListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener', {"refId": refId});
@@ -130,7 +147,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched':
               // print log
-              print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onDriveRoutePlanSearched(com_amap_api_services_route_DriveRoutePlanResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
@@ -151,7 +170,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRoute([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRoute([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateWalkRoute', {"var1": var1.refId, "refId": refId});
@@ -171,7 +192,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRouteAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRouteAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateWalkRouteAsyn', {"var1": var1.refId, "refId": refId});
@@ -191,7 +214,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRoute([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRoute([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateBusRoute', {"var1": var1.refId, "refId": refId});
@@ -211,7 +236,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRouteAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRouteAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateBusRouteAsyn', {"var1": var1.refId, "refId": refId});
@@ -231,7 +258,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRoute([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRoute([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateDriveRoute', {"var1": var1.refId, "refId": refId});
@@ -251,7 +280,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRouteAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRouteAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateDriveRouteAsyn', {"var1": var1.refId, "refId": refId});
@@ -271,7 +302,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRouteAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRouteAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateRideRouteAsyn', {"var1": var1.refId, "refId": refId});
@@ -291,7 +324,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRoute([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRoute([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateRideRoute', {"var1": var1.refId, "refId": refId});
@@ -311,7 +346,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRoute([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRoute([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateTruckRoute', {"var1": var1.refId, "refId": refId});
@@ -331,7 +368,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRouteAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRouteAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateTruckRouteAsyn', {"var1": var1.refId, "refId": refId});
@@ -351,7 +390,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlan([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlan([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateDrivePlan', {"var1": var1.refId, "refId": refId});
@@ -371,7 +412,9 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlanAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlanAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch::calculateDrivePlanAsyn', {"var1": var1.refId, "refId": refId});

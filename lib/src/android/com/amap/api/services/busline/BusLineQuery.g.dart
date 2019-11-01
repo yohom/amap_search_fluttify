@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_busline_BusLineQuery_SearchType> getCategory() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCategory([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCategory([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::getCategory', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<String> getQueryString() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getQueryString([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getQueryString([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::getQueryString', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setQueryString(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setQueryString', {"var1": var1, "refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<String> getCity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::getCity', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setCity(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCity([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCity([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setCity', {"var1": var1, "refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<int> getPageSize() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageSize([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageSize([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::getPageSize', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setPageSize(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setPageSize', {"var1": var1, "refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<int> getPageNumber() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageNumber([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageNumber([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::getPageNumber', {"refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setPageNumber(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setPageNumber', {"var1": var1, "refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setCategory(com_amap_api_services_busline_BusLineQuery_SearchType var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCategory([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCategory([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::setCategory', {"var1": var1.index, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<com_amap_api_services_busline_BusLineQuery> clone() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::clone([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::clone([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::clone', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<bool> weakEquals(com_amap_api_services_busline_BusLineQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineQuery::weakEquals', {"var1": var1.refId, "refId": refId});

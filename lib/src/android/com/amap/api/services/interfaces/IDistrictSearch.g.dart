@@ -18,37 +18,55 @@ mixin com_amap_api_services_interfaces_IDistrictSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() {
   
-    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchDistrictAsyn() {
   
-    debugPrint('searchDistrictAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchDistrictAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchDistrictAnsy() {
   
-    debugPrint('searchDistrictAnsy::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchDistrictAnsy::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setOnDistrictSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setOnDistrictSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() {
   
-    debugPrint('searchDistrict::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchDistrict::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

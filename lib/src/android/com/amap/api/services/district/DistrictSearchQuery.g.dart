@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   // generate methods
   Future<void> setShowBoundary(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBoundary([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setShowBoundary', {"var1": var1, "refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<bool> isShowBoundary() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBoundary([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::isShowBoundary', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<int> getPageNum() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageNum([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::getPageNum', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<void> setPageNum(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageNum([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setPageNum', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<int> getPageSize() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getPageSize([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::getPageSize', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<void> setPageSize(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setPageSize([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setPageSize', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<String> getKeywords() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywords([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::getKeywords', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<void> setKeywords(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywords([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setKeywords', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<String> getKeywordsLevel() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::getKeywordsLevel([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::getKeywordsLevel', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<void> setKeywordsLevel(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setKeywordsLevel([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setKeywordsLevel', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<bool> isShowChild() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowChild([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::isShowChild', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<void> setShowChild(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowChild([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setShowChild', {"var1": var1, "refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<bool> isShowBusinessArea() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::isShowBusinessArea([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::isShowBusinessArea', {"refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<void> setShowBusinessArea(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::setShowBusinessArea([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::setShowBusinessArea', {"var1": var1, "refId": refId});
@@ -299,7 +328,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<bool> checkLevels() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkLevels([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::checkLevels', {"refId": refId});
@@ -319,7 +350,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<bool> checkKeyWords() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::checkKeyWords([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::checkKeyWords', {"refId": refId});
@@ -339,7 +372,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<bool> weakEquals(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::weakEquals([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::weakEquals', {"var1": var1.refId, "refId": refId});
@@ -359,7 +394,9 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
   
   Future<com_amap_api_services_district_DistrictSearchQuery> clone() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::clone([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictSearchQuery@$refId::clone([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearchQuery::clone', {"refId": refId});

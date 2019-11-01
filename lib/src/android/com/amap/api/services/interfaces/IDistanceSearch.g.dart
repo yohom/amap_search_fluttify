@@ -18,19 +18,28 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('calculateRouteDistance::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('calculateRouteDistance::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('calculateRouteDistanceAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('calculateRouteDistanceAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setDistanceSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setDistanceSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

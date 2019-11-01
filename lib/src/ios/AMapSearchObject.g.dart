@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   // generate methods
   Future<String> formattedDescription() async {
     // print log
-    print('fluttify-dart: AMapSearchObject@$refId::formattedDescription([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: AMapSearchObject@$refId::formattedDescription([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchObject::formattedDescription', {"refId": refId});

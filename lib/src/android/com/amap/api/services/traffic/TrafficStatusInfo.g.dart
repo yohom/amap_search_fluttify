@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   // generate methods
   Future<String> getName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getName', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setName', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<String> getStatus() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getStatus([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getStatus([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getStatus', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setStatus(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setStatus([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setStatus([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setStatus', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<String> getDirection() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getDirection([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getDirection([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getDirection', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setDirection(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setDirection([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setDirection([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setDirection', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<int> getAngle() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getAngle([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getAngle([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getAngle', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setAngle(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setAngle([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setAngle([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setAngle', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<double> getSpeed() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getSpeed([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getSpeed([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getSpeed', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setSpeed(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setSpeed([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setSpeed([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setSpeed', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<String> getLcodes() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getLcodes([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getLcodes([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getLcodes', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setLcodes(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setLcodes([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setLcodes([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setLcodes', {"var1": var1, "refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getCoordinates() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::getCoordinates', {"refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusInfo::setCoordinates', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

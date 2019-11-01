@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   // generate methods
   static Future<com_amap_api_services_nearby_NearbySearch> getInstance(android_content_Context var0) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch::getInstance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch::getInstance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::getInstance', {"var0": var0.refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> addNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::addNearbyListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::addNearbyListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::addNearbyListener', {"refId": refId});
@@ -55,21 +60,27 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
-              print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
+              }
         
               // handle the native call
               var1?.onUserInfoCleared(args['var1']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
-              print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
-              print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
+              }
         
               // handle the native call
               var1?.onNearbyInfoUploaded(args['var1']);
@@ -90,7 +101,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> removeNearbyListener(com_amap_api_services_nearby_NearbySearch_NearbyListener var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::removeNearbyListener([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::removeNearbyListener([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::removeNearbyListener', {"refId": refId});
@@ -106,21 +119,27 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
-              print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
+              }
         
               // handle the native call
               var1?.onUserInfoCleared(args['var1']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
-              print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
+              }
         
               // handle the native call
               var1?.onNearbyInfoSearched(com_amap_api_services_nearby_NearbySearchResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
-              print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
+              }
         
               // handle the native call
               var1?.onNearbyInfoUploaded(args['var1']);
@@ -141,7 +160,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> clearUserInfoAsyn() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::clearUserInfoAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::clearUserInfoAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::clearUserInfoAsyn', {"refId": refId});
@@ -161,7 +182,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> setUserID(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::setUserID([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::setUserID([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::setUserID', {"var1": var1, "refId": refId});
@@ -181,7 +204,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> startUploadNearbyInfoAuto(com_amap_api_services_nearby_UploadInfoCallback var1, int var2) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::startUploadNearbyInfoAuto([\'var2\':$var2])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::startUploadNearbyInfoAuto([\'var2\':$var2])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto', {"var2": var2, "refId": refId});
@@ -197,7 +222,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.UploadInfoCallback::OnUploadInfoCallback':
               // print log
-              print('fluttify-dart-callback: OnUploadInfoCallback([])');
+              if (!kReleaseMode) {
+                print('fluttify-dart-callback: OnUploadInfoCallback([])');
+              }
         
               // handle the native call
               var1?.OnUploadInfoCallback();
@@ -218,7 +245,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> stopUploadNearbyInfoAuto() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::stopUploadNearbyInfoAuto([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::stopUploadNearbyInfoAuto([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::stopUploadNearbyInfoAuto', {"refId": refId});
@@ -238,7 +267,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> uploadNearbyInfoAsyn(com_amap_api_services_nearby_UploadInfo var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::uploadNearbyInfoAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::uploadNearbyInfoAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::uploadNearbyInfoAsyn', {"var1": var1.refId, "refId": refId});
@@ -258,7 +289,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<void> searchNearbyInfoAsyn(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfoAsyn([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfoAsyn([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::searchNearbyInfoAsyn', {"var1": var1.refId, "refId": refId});
@@ -278,7 +311,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   Future<com_amap_api_services_nearby_NearbySearchResult> searchNearbyInfo(com_amap_api_services_nearby_NearbySearch_NearbyQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfo([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch@$refId::searchNearbyInfo([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::searchNearbyInfo', {"var1": var1.refId, "refId": refId});
@@ -298,7 +333,9 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
   
   static Future<void> destroy() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.nearby.NearbySearch::destroy([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.nearby.NearbySearch::destroy([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearch::destroy', );

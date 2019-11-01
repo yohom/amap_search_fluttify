@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   // generate methods
   Future<String> getCityName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::getCityName', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<void> setCityName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::setCityName', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<String> getCityCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getCityCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::getCityCode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<void> setCityCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setCityCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::setCityCode', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<String> getAdCode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getAdCode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::getAdCode', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<void> setAdCode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setAdCode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::setAdCode', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<int> getSuggestionNum() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::getSuggestionNum([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::getSuggestionNum', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_core_SuggestionCity extends java_lang_Object  {
   
   Future<void> setSuggestionNum(int var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.SuggestionCity@$refId::setSuggestionNum([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SuggestionCity::setSuggestionNum', {"var1": var1, "refId": refId});

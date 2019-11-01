@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   // generate methods
   Future<void> setDistanceQuery(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceResult::setDistanceQuery', {"var1": var1.refId, "refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   
   Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> getDistanceQuery() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceResult::getDistanceQuery', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   
   Future<List<com_amap_api_services_route_DistanceItem>> getDistanceResults() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceResult::getDistanceResults', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   
   Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DistanceResult::setDistanceResults', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

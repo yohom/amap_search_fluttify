@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getStartPos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getStartPos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteResult::getStartPos', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   
   Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setStartPos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setStartPos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteResult::setStartPos', {"var1": var1.refId, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   
   Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getTargetPos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::getTargetPos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteResult::getTargetPos', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   
   Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setTargetPos([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RouteResult@$refId::setTargetPos([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteResult::setTargetPos', {"var1": var1.refId, "refId": refId});

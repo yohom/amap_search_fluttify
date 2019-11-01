@@ -18,7 +18,10 @@ mixin com_amap_api_services_nearby_UploadInfoCallback on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_nearby_UploadInfo> OnUploadInfoCallback() {
   
-    debugPrint('OnUploadInfoCallback::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('OnUploadInfoCallback::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

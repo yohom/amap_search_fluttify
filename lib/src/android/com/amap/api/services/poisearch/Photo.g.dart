@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   // generate methods
   Future<String> getTitle() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getTitle([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getTitle([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.Photo::getTitle', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   
   Future<void> setTitle(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setTitle([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.Photo::setTitle', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   
   Future<String> getUrl() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getUrl([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::getUrl([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.Photo::getUrl', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_poisearch_Photo extends java_lang_Object with androi
   
   Future<void> setUrl(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.poisearch.Photo@$refId::setUrl([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.Photo::setUrl', {"var1": var1, "refId": refId});

@@ -18,25 +18,37 @@ mixin com_amap_api_services_interfaces_IWeatherSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() {
   
-    debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchWeatherAsyn() {
   
-    debugPrint('searchWeatherAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchWeatherAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setOnWeatherSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setOnWeatherSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

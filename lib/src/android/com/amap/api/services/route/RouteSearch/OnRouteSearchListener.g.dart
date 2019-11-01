@@ -18,25 +18,37 @@ mixin com_amap_api_services_route_RouteSearch_OnRouteSearchListener on java_lang
   @mustCallSuper
   Future<void> onBusRouteSearched(com_amap_api_services_route_BusRouteResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onBusRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onBusRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onDriveRouteSearched(com_amap_api_services_route_DriveRouteResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onDriveRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onDriveRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onWalkRouteSearched(com_amap_api_services_route_WalkRouteResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onWalkRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onWalkRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onRideRouteSearched(com_amap_api_services_route_RideRouteResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onRideRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onRideRouteSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

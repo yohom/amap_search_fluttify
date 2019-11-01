@@ -18,19 +18,28 @@ mixin com_amap_api_services_interfaces_ICloudSearch on java_lang_Object {
   @mustCallSuper
   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setOnCloudSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setOnCloudSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('searchCloudAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchCloudAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> searchCloudDetailAsyn(String var1, String var2) {
   
-    debugPrint('searchCloudDetailAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('searchCloudDetailAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

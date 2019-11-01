@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   // generate methods
   Future<String> getKeyword() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::getKeyword', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<String> getCity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::getCity', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<void> setType(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setType([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setType([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::setType', {"var1": var1, "refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<String> getType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::getType', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<void> setCityLimit(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::setCityLimit', {"var1": var1, "refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<bool> getCityLimit() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::getCityLimit', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::setLocation', {"var1": var1.refId, "refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.InputtipsQuery::getLocation', {"refId": refId});

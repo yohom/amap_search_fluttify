@@ -65,7 +65,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
           NSMutableArray<NSArray*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
-          for (int i = 0; i < points.count; i++) {
+          for (int i = 0; i < pointsRefArray.count; i++) {
               NSArray* item = (NSArray*) HEAP[[pointsRefArray objectAtIndex:i]];
               [points addObject:item];
           }
@@ -8445,7 +8445,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
           NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
-          for (int i = 0; i < pois.count; i++) {
+          for (int i = 0; i < poisRefArray.count; i++) {
               AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
               [pois addObject:item];
           }
@@ -8548,7 +8548,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* polylineRefArray = (NSArray<NSNumber*> *) args[@"polyline"];
           NSMutableArray<AMapGeoPoint*>* polyline = [NSMutableArray arrayWithCapacity:polylineRefArray.count];
-          for (int i = 0; i < polyline.count; i++) {
+          for (int i = 0; i < polylineRefArray.count; i++) {
               AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[polylineRefArray objectAtIndex:i]];
               [polyline addObject:item];
           }
@@ -8581,7 +8581,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
           NSMutableArray<AMapRoutePOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
-          for (int i = 0; i < pois.count; i++) {
+          for (int i = 0; i < poisRefArray.count; i++) {
               AMapRoutePOI* item = (AMapRoutePOI*) HEAP[[poisRefArray objectAtIndex:i]];
               [pois addObject:item];
           }
@@ -8684,7 +8684,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* tipsRefArray = (NSArray<NSNumber*> *) args[@"tips"];
           NSMutableArray<AMapTip*>* tips = [NSMutableArray arrayWithCapacity:tipsRefArray.count];
-          for (int i = 0; i < tips.count; i++) {
+          for (int i = 0; i < tipsRefArray.count; i++) {
               AMapTip* item = (AMapTip*) HEAP[[tipsRefArray objectAtIndex:i]];
               [tips addObject:item];
           }
@@ -8745,7 +8745,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* geocodesRefArray = (NSArray<NSNumber*> *) args[@"geocodes"];
           NSMutableArray<AMapGeocode*>* geocodes = [NSMutableArray arrayWithCapacity:geocodesRefArray.count];
-          for (int i = 0; i < geocodes.count; i++) {
+          for (int i = 0; i < geocodesRefArray.count; i++) {
               AMapGeocode* item = (AMapGeocode*) HEAP[[geocodesRefArray objectAtIndex:i]];
               [geocodes addObject:item];
           }
@@ -8918,7 +8918,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* busstopsRefArray = (NSArray<NSNumber*> *) args[@"busstops"];
           NSMutableArray<AMapBusStop*>* busstops = [NSMutableArray arrayWithCapacity:busstopsRefArray.count];
-          for (int i = 0; i < busstops.count; i++) {
+          for (int i = 0; i < busstopsRefArray.count; i++) {
               AMapBusStop* item = (AMapBusStop*) HEAP[[busstopsRefArray objectAtIndex:i]];
               [busstops addObject:item];
           }
@@ -9049,7 +9049,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
           NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
-          for (int i = 0; i < buslines.count; i++) {
+          for (int i = 0; i < buslinesRefArray.count; i++) {
               AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
               [buslines addObject:item];
           }
@@ -9124,7 +9124,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
           NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
-          for (int i = 0; i < districts.count; i++) {
+          for (int i = 0; i < districtsRefArray.count; i++) {
               AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
               [districts addObject:item];
           }
@@ -9185,7 +9185,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
           NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
-          for (int i = 0; i < waypoints.count; i++) {
+          for (int i = 0; i < waypointsRefArray.count; i++) {
               AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:i]];
               [waypoints addObject:item];
           }
@@ -9204,7 +9204,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* avoidpolygonsRefArray = (NSArray<NSNumber*> *) args[@"avoidpolygons"];
           NSMutableArray<AMapGeoPolygon*>* avoidpolygons = [NSMutableArray arrayWithCapacity:avoidpolygonsRefArray.count];
-          for (int i = 0; i < avoidpolygons.count; i++) {
+          for (int i = 0; i < avoidpolygonsRefArray.count; i++) {
               AMapGeoPolygon* item = (AMapGeoPolygon*) HEAP[[avoidpolygonsRefArray objectAtIndex:i]];
               [avoidpolygons addObject:item];
           }
@@ -9503,7 +9503,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* waypointsRefArray = (NSArray<NSNumber*> *) args[@"waypoints"];
           NSMutableArray<AMapGeoPoint*>* waypoints = [NSMutableArray arrayWithCapacity:waypointsRefArray.count];
-          for (int i = 0; i < waypoints.count; i++) {
+          for (int i = 0; i < waypointsRefArray.count; i++) {
               AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[waypointsRefArray objectAtIndex:i]];
               [waypoints addObject:item];
           }
@@ -9690,7 +9690,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* originsRefArray = (NSArray<NSNumber*> *) args[@"origins"];
           NSMutableArray<AMapGeoPoint*>* origins = [NSMutableArray arrayWithCapacity:originsRefArray.count];
-          for (int i = 0; i < origins.count; i++) {
+          for (int i = 0; i < originsRefArray.count; i++) {
               AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[originsRefArray objectAtIndex:i]];
               [origins addObject:item];
           }
@@ -9737,7 +9737,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* resultsRefArray = (NSArray<NSNumber*> *) args[@"results"];
           NSMutableArray<AMapDistanceResult*>* results = [NSMutableArray arrayWithCapacity:resultsRefArray.count];
-          for (int i = 0; i < results.count; i++) {
+          for (int i = 0; i < resultsRefArray.count; i++) {
               AMapDistanceResult* item = (AMapDistanceResult*) HEAP[[resultsRefArray objectAtIndex:i]];
               [results addObject:item];
           }
@@ -9784,7 +9784,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* livesRefArray = (NSArray<NSNumber*> *) args[@"lives"];
           NSMutableArray<AMapLocalWeatherLive*>* lives = [NSMutableArray arrayWithCapacity:livesRefArray.count];
-          for (int i = 0; i < lives.count; i++) {
+          for (int i = 0; i < livesRefArray.count; i++) {
               AMapLocalWeatherLive* item = (AMapLocalWeatherLive*) HEAP[[livesRefArray objectAtIndex:i]];
               [lives addObject:item];
           }
@@ -9803,7 +9803,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* forecastsRefArray = (NSArray<NSNumber*> *) args[@"forecasts"];
           NSMutableArray<AMapLocalWeatherForecast*>* forecasts = [NSMutableArray arrayWithCapacity:forecastsRefArray.count];
-          for (int i = 0; i < forecasts.count; i++) {
+          for (int i = 0; i < forecastsRefArray.count; i++) {
               AMapLocalWeatherForecast* item = (AMapLocalWeatherForecast*) HEAP[[forecastsRefArray objectAtIndex:i]];
               [forecasts addObject:item];
           }
@@ -10004,7 +10004,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* infosRefArray = (NSArray<NSNumber*> *) args[@"infos"];
           NSMutableArray<AMapNearbyUserInfo*>* infos = [NSMutableArray arrayWithCapacity:infosRefArray.count];
-          for (int i = 0; i < infos.count; i++) {
+          for (int i = 0; i < infosRefArray.count; i++) {
               AMapNearbyUserInfo* item = (AMapNearbyUserInfo*) HEAP[[infosRefArray objectAtIndex:i]];
               [infos addObject:item];
           }
@@ -10233,7 +10233,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* POIsRefArray = (NSArray<NSNumber*> *) args[@"POIs"];
           NSMutableArray<AMapCloudPOI*>* POIs = [NSMutableArray arrayWithCapacity:POIsRefArray.count];
-          for (int i = 0; i < POIs.count; i++) {
+          for (int i = 0; i < POIsRefArray.count; i++) {
               AMapCloudPOI* item = (AMapCloudPOI*) HEAP[[POIsRefArray objectAtIndex:i]];
               [POIs addObject:item];
           }
@@ -10644,7 +10644,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
           NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
-          for (int i = 0; i < paths.count; i++) {
+          for (int i = 0; i < pathsRefArray.count; i++) {
               AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
               [paths addObject:item];
           }
@@ -10663,7 +10663,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* timeInfosRefArray = (NSArray<NSNumber*> *) args[@"timeInfos"];
           NSMutableArray<AMapFutureTimeInfo*>* timeInfos = [NSMutableArray arrayWithCapacity:timeInfosRefArray.count];
-          for (int i = 0; i < timeInfos.count; i++) {
+          for (int i = 0; i < timeInfosRefArray.count; i++) {
               AMapFutureTimeInfo* item = (AMapFutureTimeInfo*) HEAP[[timeInfosRefArray objectAtIndex:i]];
               [timeInfos addObject:item];
           }
@@ -10710,7 +10710,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* pointsRefArray = (NSArray<NSNumber*> *) args[@"points"];
           NSMutableArray<AMapGeoPoint*>* points = [NSMutableArray arrayWithCapacity:pointsRefArray.count];
-          for (int i = 0; i < points.count; i++) {
+          for (int i = 0; i < pointsRefArray.count; i++) {
               AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[pointsRefArray objectAtIndex:i]];
               [points addObject:item];
           }
@@ -10785,7 +10785,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
           NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
-          for (int i = 0; i < districts.count; i++) {
+          for (int i = 0; i < districtsRefArray.count; i++) {
               AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
               [districts addObject:item];
           }
@@ -10818,7 +10818,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
           NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
-          for (int i = 0; i < cities.count; i++) {
+          for (int i = 0; i < citiesRefArray.count; i++) {
               AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
               [cities addObject:item];
           }
@@ -11579,7 +11579,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* subPOIsRefArray = (NSArray<NSNumber*> *) args[@"subPOIs"];
           NSMutableArray<AMapSubPOI*>* subPOIs = [NSMutableArray arrayWithCapacity:subPOIsRefArray.count];
-          for (int i = 0; i < subPOIs.count; i++) {
+          for (int i = 0; i < subPOIsRefArray.count; i++) {
               AMapSubPOI* item = (AMapSubPOI*) HEAP[[subPOIsRefArray objectAtIndex:i]];
               [subPOIs addObject:item];
           }
@@ -11598,7 +11598,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
           NSMutableArray<AMapImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
-          for (int i = 0; i < images.count; i++) {
+          for (int i = 0; i < imagesRefArray.count; i++) {
               AMapImage* item = (AMapImage*) HEAP[[imagesRefArray objectAtIndex:i]];
               [images addObject:item];
           }
@@ -12121,7 +12121,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* businessAreasRefArray = (NSArray<NSNumber*> *) args[@"businessAreas"];
           NSMutableArray<AMapBusinessArea*>* businessAreas = [NSMutableArray arrayWithCapacity:businessAreasRefArray.count];
-          for (int i = 0; i < businessAreas.count; i++) {
+          for (int i = 0; i < businessAreasRefArray.count; i++) {
               AMapBusinessArea* item = (AMapBusinessArea*) HEAP[[businessAreasRefArray objectAtIndex:i]];
               [businessAreas addObject:item];
           }
@@ -12168,7 +12168,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
           NSMutableArray<AMapRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
-          for (int i = 0; i < roads.count; i++) {
+          for (int i = 0; i < roadsRefArray.count; i++) {
               AMapRoad* item = (AMapRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
               [roads addObject:item];
           }
@@ -12187,7 +12187,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* roadintersRefArray = (NSArray<NSNumber*> *) args[@"roadinters"];
           NSMutableArray<AMapRoadInter*>* roadinters = [NSMutableArray arrayWithCapacity:roadintersRefArray.count];
-          for (int i = 0; i < roadinters.count; i++) {
+          for (int i = 0; i < roadintersRefArray.count; i++) {
               AMapRoadInter* item = (AMapRoadInter*) HEAP[[roadintersRefArray objectAtIndex:i]];
               [roadinters addObject:item];
           }
@@ -12206,7 +12206,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
           NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
-          for (int i = 0; i < pois.count; i++) {
+          for (int i = 0; i < poisRefArray.count; i++) {
               AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
               [pois addObject:item];
           }
@@ -12225,7 +12225,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* aoisRefArray = (NSArray<NSNumber*> *) args[@"aois"];
           NSMutableArray<AMapAOI*>* aois = [NSMutableArray arrayWithCapacity:aoisRefArray.count];
-          for (int i = 0; i < aois.count; i++) {
+          for (int i = 0; i < aoisRefArray.count; i++) {
               AMapAOI* item = (AMapAOI*) HEAP[[aoisRefArray objectAtIndex:i]];
               [aois addObject:item];
           }
@@ -12468,7 +12468,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
           NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
-          for (int i = 0; i < buslines.count; i++) {
+          for (int i = 0; i < buslinesRefArray.count; i++) {
               AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
               [buslines addObject:item];
           }
@@ -12711,7 +12711,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* busStopsRefArray = (NSArray<NSNumber*> *) args[@"busStops"];
           NSMutableArray<AMapBusStop*>* busStops = [NSMutableArray arrayWithCapacity:busStopsRefArray.count];
-          for (int i = 0; i < busStops.count; i++) {
+          for (int i = 0; i < busStopsRefArray.count; i++) {
               AMapBusStop* item = (AMapBusStop*) HEAP[[busStopsRefArray objectAtIndex:i]];
               [busStops addObject:item];
           }
@@ -12758,7 +12758,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* viaBusStopsRefArray = (NSArray<NSNumber*> *) args[@"viaBusStops"];
           NSMutableArray<AMapBusStop*>* viaBusStops = [NSMutableArray arrayWithCapacity:viaBusStopsRefArray.count];
-          for (int i = 0; i < viaBusStops.count; i++) {
+          for (int i = 0; i < viaBusStopsRefArray.count; i++) {
               AMapBusStop* item = (AMapBusStop*) HEAP[[viaBusStopsRefArray objectAtIndex:i]];
               [viaBusStops addObject:item];
           }
@@ -12861,7 +12861,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* districtsRefArray = (NSArray<NSNumber*> *) args[@"districts"];
           NSMutableArray<AMapDistrict*>* districts = [NSMutableArray arrayWithCapacity:districtsRefArray.count];
-          for (int i = 0; i < districts.count; i++) {
+          for (int i = 0; i < districtsRefArray.count; i++) {
               AMapDistrict* item = (AMapDistrict*) HEAP[[districtsRefArray objectAtIndex:i]];
               [districts addObject:item];
           }
@@ -13090,7 +13090,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
           NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
-          for (int i = 0; i < cities.count; i++) {
+          for (int i = 0; i < citiesRefArray.count; i++) {
               AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
               [cities addObject:item];
           }
@@ -13109,7 +13109,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
           NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
-          for (int i = 0; i < tmcs.count; i++) {
+          for (int i = 0; i < tmcsRefArray.count; i++) {
               AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
               [tmcs addObject:item];
           }
@@ -13170,7 +13170,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
           NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
-          for (int i = 0; i < steps.count; i++) {
+          for (int i = 0; i < stepsRefArray.count; i++) {
               AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
               [steps addObject:item];
           }
@@ -13287,7 +13287,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
           NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
-          for (int i = 0; i < tmcs.count; i++) {
+          for (int i = 0; i < tmcsRefArray.count; i++) {
               AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
               [tmcs addObject:item];
           }
@@ -13320,7 +13320,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* elementsRefArray = (NSArray<NSNumber*> *) args[@"elements"];
           NSMutableArray<AMapFutureTimeInfoElement*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
-          for (int i = 0; i < elements.count; i++) {
+          for (int i = 0; i < elementsRefArray.count; i++) {
               AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:i]];
               [elements addObject:item];
           }
@@ -13395,7 +13395,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
           NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
-          for (int i = 0; i < steps.count; i++) {
+          for (int i = 0; i < stepsRefArray.count; i++) {
               AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
               [steps addObject:item];
           }
@@ -13750,7 +13750,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* spacesRefArray = (NSArray<NSNumber*> *) args[@"spaces"];
           NSMutableArray<AMapRailwaySpace*>* spaces = [NSMutableArray arrayWithCapacity:spacesRefArray.count];
-          for (int i = 0; i < spaces.count; i++) {
+          for (int i = 0; i < spacesRefArray.count; i++) {
               AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP[[spacesRefArray objectAtIndex:i]];
               [spaces addObject:item];
           }
@@ -13769,7 +13769,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* viaStopsRefArray = (NSArray<NSNumber*> *) args[@"viaStops"];
           NSMutableArray<AMapRailwayStation*>* viaStops = [NSMutableArray arrayWithCapacity:viaStopsRefArray.count];
-          for (int i = 0; i < viaStops.count; i++) {
+          for (int i = 0; i < viaStopsRefArray.count; i++) {
               AMapRailwayStation* item = (AMapRailwayStation*) HEAP[[viaStopsRefArray objectAtIndex:i]];
               [viaStops addObject:item];
           }
@@ -13788,7 +13788,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* altersRefArray = (NSArray<NSNumber*> *) args[@"alters"];
           NSMutableArray<AMapRailway*>* alters = [NSMutableArray arrayWithCapacity:altersRefArray.count];
-          for (int i = 0; i < alters.count; i++) {
+          for (int i = 0; i < altersRefArray.count; i++) {
               AMapRailway* item = (AMapRailway*) HEAP[[altersRefArray objectAtIndex:i]];
               [alters addObject:item];
           }
@@ -13821,7 +13821,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
           NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
-          for (int i = 0; i < buslines.count; i++) {
+          for (int i = 0; i < buslinesRefArray.count; i++) {
               AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
               [buslines addObject:item];
           }
@@ -13980,7 +13980,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* segmentsRefArray = (NSArray<NSNumber*> *) args[@"segments"];
           NSMutableArray<AMapSegment*>* segments = [NSMutableArray arrayWithCapacity:segmentsRefArray.count];
-          for (int i = 0; i < segments.count; i++) {
+          for (int i = 0; i < segmentsRefArray.count; i++) {
               AMapSegment* item = (AMapSegment*) HEAP[[segmentsRefArray objectAtIndex:i]];
               [segments addObject:item];
           }
@@ -14055,7 +14055,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
           NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
-          for (int i = 0; i < paths.count; i++) {
+          for (int i = 0; i < pathsRefArray.count; i++) {
               AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
               [paths addObject:item];
           }
@@ -14074,7 +14074,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* transitsRefArray = (NSArray<NSNumber*> *) args[@"transits"];
           NSMutableArray<AMapTransit*>* transits = [NSMutableArray arrayWithCapacity:transitsRefArray.count];
-          for (int i = 0; i < transits.count; i++) {
+          for (int i = 0; i < transitsRefArray.count; i++) {
               AMapTransit* item = (AMapTransit*) HEAP[[transitsRefArray objectAtIndex:i]];
               [transits addObject:item];
           }
@@ -14499,7 +14499,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* castsRefArray = (NSArray<NSNumber*> *) args[@"casts"];
           NSMutableArray<AMapLocalDayWeatherForecast*>* casts = [NSMutableArray arrayWithCapacity:castsRefArray.count];
-          for (int i = 0; i < casts.count; i++) {
+          for (int i = 0; i < castsRefArray.count; i++) {
               AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP[[castsRefArray objectAtIndex:i]];
               [casts addObject:item];
           }
@@ -14756,7 +14756,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
           NSMutableArray<AMapTrafficRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
-          for (int i = 0; i < roads.count; i++) {
+          for (int i = 0; i < roadsRefArray.count; i++) {
               AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
               [roads addObject:item];
           }
@@ -14915,7 +14915,7 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
           // list arg
           NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
           NSMutableArray<AMapCloudImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
-          for (int i = 0; i < images.count; i++) {
+          for (int i = 0; i < imagesRefArray.count; i++) {
               AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:i]];
               [images addObject:item];
           }
@@ -17299,7 +17299,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17310,7 +17312,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17321,7 +17325,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17332,7 +17338,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17343,7 +17351,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17354,7 +17364,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17365,7 +17377,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17376,7 +17390,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17387,7 +17403,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17398,7 +17416,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17409,7 +17429,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17420,7 +17442,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17431,7 +17455,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17442,7 +17468,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17453,7 +17481,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17464,7 +17494,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17475,7 +17507,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17486,7 +17520,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17497,7 +17533,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17508,7 +17546,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17519,7 +17559,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17530,7 +17572,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17541,7 +17585,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17552,7 +17598,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17563,7 +17611,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17574,7 +17624,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17585,7 +17637,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17596,7 +17650,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17607,7 +17663,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17618,7 +17676,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17629,7 +17689,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17640,7 +17702,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17651,7 +17715,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17662,7 +17728,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17673,7 +17741,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17684,7 +17754,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17695,7 +17767,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17706,7 +17780,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17717,7 +17793,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17728,7 +17806,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17739,7 +17819,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17750,7 +17832,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17761,7 +17845,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17772,7 +17858,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17783,7 +17871,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17794,7 +17884,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17805,7 +17897,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17816,7 +17910,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17827,7 +17923,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17838,7 +17936,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17849,7 +17949,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17860,7 +17962,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17871,7 +17975,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17882,7 +17988,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17893,7 +18001,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17904,7 +18014,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17915,7 +18027,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17926,7 +18040,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17937,7 +18053,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17948,7 +18066,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17959,7 +18079,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17970,7 +18092,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17981,7 +18105,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -17992,7 +18118,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18003,7 +18131,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18014,7 +18144,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18025,7 +18157,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18036,7 +18170,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18047,7 +18183,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18058,7 +18196,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18069,7 +18209,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18080,7 +18222,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18091,7 +18235,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18102,7 +18248,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusStop": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18113,7 +18261,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapBusLine": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18124,7 +18274,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDistrict": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18135,7 +18287,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTMC": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18146,7 +18300,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapStep": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18157,7 +18313,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapPath": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18168,7 +18326,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapFutureTimeInfoElement": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18179,7 +18339,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapFutureTimeInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18190,7 +18352,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapWalking": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18201,7 +18365,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTaxi": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18212,7 +18378,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRailwayStation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18223,7 +18391,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRailwaySpace": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18234,7 +18404,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRailway": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18245,7 +18417,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapSegment": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18256,7 +18430,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTransit": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18267,7 +18443,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapRoute": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18278,7 +18456,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapDistanceResult": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18289,7 +18469,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocalWeatherLive": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18300,7 +18482,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocalDayWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18311,7 +18495,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapLocalWeatherForecast": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18322,7 +18508,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapNearbyUserInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18333,7 +18521,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTrafficEvaluation": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18344,7 +18534,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTrafficRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18355,7 +18547,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapTrafficInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18366,7 +18560,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudImage": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18377,7 +18573,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapCloudPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18388,7 +18586,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapNearbyUploadInfo": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18399,7 +18599,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
       @"ObjectFactory::createAMapSearchAPI": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -18410,7 +18612,9 @@ extern NSMutableDictionary<NSNumber*, NSObject*>* HEAP;
       
           methodResult(@(ref.hash));
       
+      #ifdef DEBUG
           NSLog(@"HEAP: %@", HEAP);
+      #endif
       },
       
     };

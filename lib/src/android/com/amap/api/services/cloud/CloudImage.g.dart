@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   // generate methods
   Future<String> getId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudImage::getId', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<void> setId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudImage::setId', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<String> getPreurl() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getPreurl([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getPreurl([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudImage::getPreurl', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<void> setPreurl(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudImage::setPreurl', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<String> getUrl() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getUrl([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getUrl([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudImage::getUrl', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<void> setUrl(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudImage::setUrl', {"var1": var1, "refId": refId});

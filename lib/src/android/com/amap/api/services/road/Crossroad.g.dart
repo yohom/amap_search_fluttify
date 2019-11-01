@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   // generate methods
   Future<double> getDistance() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::getDistance', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setDistance(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::setDistance', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getDirection() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::getDirection', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setDirection(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::setDirection', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getFirstRoadId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::getFirstRoadId', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setFirstRoadId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::setFirstRoadId', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getFirstRoadName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::getFirstRoadName', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setFirstRoadName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::setFirstRoadName', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getSecondRoadId() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::getSecondRoadId', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setSecondRoadId(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::setSecondRoadId', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getSecondRoadName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::getSecondRoadName', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setSecondRoadName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.road.Crossroad::setSecondRoadName', {"var1": var1, "refId": refId});

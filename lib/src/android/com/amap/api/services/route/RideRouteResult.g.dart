@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   // generate methods
   Future<List<com_amap_api_services_route_RidePath>> getPaths() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RideRouteResult::getPaths', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   
   Future<void> setPaths(List<com_amap_api_services_route_RidePath> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RideRouteResult::setPaths', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   
   Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> getRideQuery() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RideRouteResult::getRideQuery', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   
   Future<void> setRideQuery(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RideRouteResult::setRideQuery', {"var1": var1.refId, "refId": refId});

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   // generate methods
   Future<double> getLongitude() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLongitude([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonPoint::getLongitude', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   
   Future<void> setLongitude(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLongitude([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonPoint::setLongitude', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   
   Future<double> getLatitude() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::getLatitude([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonPoint::getLatitude', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   
   Future<void> setLatitude(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::setLatitude([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonPoint::setLatitude', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_core_LatLonPoint extends java_lang_Object with andro
   
   Future<com_amap_api_services_core_LatLonPoint> copy() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::copy([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.core.LatLonPoint@$refId::copy([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonPoint::copy', {"refId": refId});

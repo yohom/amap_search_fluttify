@@ -18,31 +18,46 @@ mixin com_amap_api_services_interfaces_IGeocodeSearch on java_lang_Object {
   @mustCallSuper
   Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('getFromLocation::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getFromLocation::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('getFromLocationName::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getFromLocationName::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('setOnGeocodeSearchListener::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('setOnGeocodeSearchListener::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('getFromLocationAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getFromLocationAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) {
     kNativeObjectPool.add(var1);
-    debugPrint('getFromLocationNameAsyn::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('getFromLocationNameAsyn::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   // generate methods
   Future<String> getCitycode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getCitycode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getCitycode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::getCitycode', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<void> setCitycode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCitycode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCitycode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setCitycode', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<String> getAdcode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getAdcode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getAdcode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::getAdcode', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<void> setAdcode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setAdcode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setAdcode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setAdcode', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<String> getName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::getName', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setName', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getCenter([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getCenter([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::getCenter', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<void> setCenter(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCenter([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setCenter([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setCenter', {"var1": var1.refId, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<String> getLevel() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getLevel([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getLevel([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::getLevel', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<void> setLevel(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setLevel([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setLevel([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setLevel', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<List<com_amap_api_services_district_DistrictItem>> getSubDistrict() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getSubDistrict([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::getSubDistrict([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::getSubDistrict', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
   Future<void> setSubDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setSubDistrict([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setSubDistrict([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setSubDistrict', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});

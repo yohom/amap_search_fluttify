@@ -18,13 +18,19 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
   @mustCallSuper
   Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onCloudSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onCloudSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
   @mustCallSuper
   Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail var1, int var2) {
     kNativeObjectPool.add(var1);
-    debugPrint('onCloudItemDetailSearched::kNativeObjectPool: $kNativeObjectPool');
+  
+    if (!kReleaseMode) {
+      debugPrint('onCloudItemDetailSearched::kNativeObjectPool: $kNativeObjectPool');
+    }
   }
   
 }

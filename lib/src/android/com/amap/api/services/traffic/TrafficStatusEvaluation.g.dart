@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   // generate methods
   Future<String> getExpedite() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getExpedite([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getExpedite([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::getExpedite', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<void> setExpedite(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setExpedite([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setExpedite([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setExpedite', {"var1": var1, "refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<String> getCongested() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getCongested([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getCongested([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::getCongested', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<void> setCongested(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setCongested([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setCongested([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setCongested', {"var1": var1, "refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<String> getBlocked() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getBlocked([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getBlocked([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::getBlocked', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<void> setBlocked(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setBlocked([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setBlocked([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setBlocked', {"var1": var1, "refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<String> getUnknown() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getUnknown([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getUnknown([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::getUnknown', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<void> setUnknown(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setUnknown([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setUnknown([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setUnknown', {"var1": var1, "refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<String> getStatus() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getStatus([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getStatus([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::getStatus', {"refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<void> setStatus(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setStatus([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setStatus([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setStatus', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<String> getDescription() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getDescription([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::getDescription([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::getDescription', {"refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_traffic_TrafficStatusEvaluation extends java_lang_Ob
   
   Future<void> setDescription(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setDescription([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusEvaluation@$refId::setDescription([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusEvaluation::setDescription', {"var1": var1, "refId": refId});

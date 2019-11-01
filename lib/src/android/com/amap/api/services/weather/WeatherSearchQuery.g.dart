@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   // generate methods
   Future<String> getCity() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.WeatherSearchQuery::getCity', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   
   Future<int> getType() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.WeatherSearchQuery::getType', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   
   Future<com_amap_api_services_weather_WeatherSearchQuery> clone() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.WeatherSearchQuery::clone', {"refId": refId});

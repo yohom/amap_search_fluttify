@@ -6,6 +6,7 @@ import 'dart:typed_data';
 
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
@@ -19,7 +20,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   // generate methods
   Future<String> getID() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getID([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getID([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::getID', {"refId": refId});
@@ -39,7 +42,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<String> getName() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getName([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getName([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::getName', {"refId": refId});
@@ -59,7 +64,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::getLocation', {"refId": refId});
@@ -79,7 +86,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<String> getAdcode() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::getAdcode', {"refId": refId});
@@ -99,7 +108,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<String> getTime() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getTime([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getTime([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::getTime', {"refId": refId});
@@ -119,7 +130,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<bool> isStart() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isStart([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isStart([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::isStart', {"refId": refId});
@@ -139,7 +152,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<bool> isEnd() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isEnd([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isEnd([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::isEnd', {"refId": refId});
@@ -159,7 +174,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<double> getWait() async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getWait([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getWait([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::getWait', {"refId": refId});
@@ -179,7 +196,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setID(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setID([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setID([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setID', {"var1": var1, "refId": refId});
@@ -199,7 +218,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setName(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setName([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setName([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setName', {"var1": var1, "refId": refId});
@@ -219,7 +240,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setLocation([])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setLocation([])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setLocation', {"var1": var1.refId, "refId": refId});
@@ -239,7 +262,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setAdcode(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setAdcode', {"var1": var1, "refId": refId});
@@ -259,7 +284,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setTime(String var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setTime([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setTime([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setTime', {"var1": var1, "refId": refId});
@@ -279,7 +306,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setisStart(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisStart([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisStart([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setisStart', {"var1": var1, "refId": refId});
@@ -299,7 +328,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setisEnd(bool var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setisEnd', {"var1": var1, "refId": refId});
@@ -319,7 +350,9 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setWait(double var1) async {
     // print log
-    print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setWait([\'var1\':$var1])');
+    if (!kReleaseMode) {
+      print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setWait([\'var1\':$var1])');
+    }
   
     // invoke native method
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwayStationItem::setWait', {"var1": var1, "refId": refId});
