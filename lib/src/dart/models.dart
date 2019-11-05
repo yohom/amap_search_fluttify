@@ -1158,17 +1158,25 @@ class BusEntrance with _ToFutureString {
   Future<LatLng> get location {
     return platform(
       android: (pool) async {
-        final location = await _androidModel.getLatLonPoint();
-        return LatLng(
-          await location.getLatitude(),
-          await location.getLongitude(),
-        );
+        final location = await _androidModel?.getLatLonPoint();
+        if (location != null) {
+          return LatLng(
+            await location.getLatitude(),
+            await location.getLongitude(),
+          );
+        } else {
+          return null;
+        }
       },
       ios: (pool) async {
-        return LatLng(
-          await _iosModelLocation.get_latitude(),
-          await _iosModelLocation.get_longitude(),
-        );
+        if (_iosModelLocation != null) {
+          return LatLng(
+            await _iosModelLocation.get_latitude(),
+            await _iosModelLocation.get_longitude(),
+          );
+        } else {
+          return null;
+        }
       },
     );
   }
@@ -1201,17 +1209,25 @@ class BusExit with _ToFutureString {
   Future<LatLng> get location {
     return platform(
       android: (pool) async {
-        final location = await _androidModel.getLatLonPoint();
-        return LatLng(
-          await location.getLatitude(),
-          await location.getLongitude(),
-        );
+        final location = await _androidModel?.getLatLonPoint();
+        if (location != null) {
+          return LatLng(
+            await location.getLatitude(),
+            await location.getLongitude(),
+          );
+        } else {
+          return null;
+        }
       },
       ios: (pool) async {
-        return LatLng(
-          await _iosModelLocation.get_latitude(),
-          await _iosModelLocation.get_longitude(),
-        );
+        if (_iosModelLocation != null) {
+          return LatLng(
+            await _iosModelLocation.get_latitude(),
+            await _iosModelLocation.get_longitude(),
+          );
+        } else {
+          return null;
+        }
       },
     );
   }

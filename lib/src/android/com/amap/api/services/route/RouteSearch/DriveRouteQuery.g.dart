@@ -106,7 +106,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     }
   }
   
-  Future<List<com_amap_api_services_core_LatLonPoint>> getAvoidpolygons() async {
+  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getAvoidpolygons() async {
     // print log
     if (!kReleaseMode) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])');
@@ -123,8 +123,8 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     if (result == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll([] /* 暂时不支持多维列表 */);
+      return [] /* 暂时不支持多维列表 */;
     }
   }
   
