@@ -1,6 +1,6 @@
 name: amap_search_fluttify
 description: An `Amap` search component, based on `fluttify` engine.
-version: 0.2.11+6ab85b1
+version: 0.2.11+d2eb645
 author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_search_fluttify
 
