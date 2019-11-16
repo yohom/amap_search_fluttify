@@ -72,7 +72,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -92,7 +92,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -111,7 +111,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getStatus()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getStatus(" + "" + ")");
             }
         
             // invoke native method
@@ -131,7 +131,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setStatus(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setStatus(" + var1 + ")");
             }
         
             // invoke native method
@@ -150,7 +150,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -170,7 +170,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -189,7 +189,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getAngle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getAngle(" + "" + ")");
             }
         
             // invoke native method
@@ -209,7 +209,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setAngle(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setAngle(" + var1 + ")");
             }
         
             // invoke native method
@@ -228,7 +228,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getSpeed()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getSpeed(" + "" + ")");
             }
         
             // invoke native method
@@ -248,7 +248,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setSpeed(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setSpeed(" + var1 + ")");
             }
         
             // invoke native method
@@ -267,7 +267,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getLcodes()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getLcodes(" + "" + ")");
             }
         
             // invoke native method
@@ -287,7 +287,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setLcodes(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setLcodes(" + var1 + ")");
             }
         
             // invoke native method
@@ -306,7 +306,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getCoordinates()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::getCoordinates(" + "" + ")");
             }
         
             // invoke native method
@@ -339,7 +339,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setCoordinates()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusInfo@" + refId + "::setCoordinates(" + var1 + ")");
             }
         
             // invoke native method
@@ -358,7 +358,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::getDescription()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::getDescription(" + "" + ")");
             }
         
             // invoke native method
@@ -378,7 +378,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::setDescription(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::setDescription(" + var1 + ")");
             }
         
             // invoke native method
@@ -397,7 +397,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::getEvaluation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::getEvaluation(" + "" + ")");
             }
         
             // invoke native method
@@ -424,7 +424,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::setEvaluation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::setEvaluation(" + var1 + ")");
             }
         
             // invoke native method
@@ -443,7 +443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::getRoads()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::getRoads(" + "" + ")");
             }
         
             // invoke native method
@@ -476,7 +476,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::setRoads()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusResult@" + refId + "::setRoads(" + var1 + ")");
             }
         
             // invoke native method
@@ -495,7 +495,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@" + refId + "::setTrafficSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + refId + "::setTrafficSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -507,7 +507,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoadTrafficSearched(com.amap.api.services.traffic.TrafficStatusResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRoadTrafficSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -543,7 +543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -570,7 +570,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByRoadAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByRoadAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -590,7 +590,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByCircle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByCircle(" + var1 + ")");
             }
         
             // invoke native method
@@ -617,7 +617,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByCircleAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch@" + refId + "::loadTrafficByCircleAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -639,7 +639,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener@" + refId + "::onRoadTrafficSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener@" + refId + "::onRoadTrafficSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -658,7 +658,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -678,7 +678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -697,7 +697,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -717,7 +717,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -736,7 +736,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -762,7 +762,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::getCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::getCenterPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -789,7 +789,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::setCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::setCenterPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -808,7 +808,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::getRadius()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::getRadius(" + "" + ")");
             }
         
             // invoke native method
@@ -828,7 +828,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::setRadius(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::setRadius(" + var1 + ")");
             }
         
             // invoke native method
@@ -847,7 +847,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -873,7 +873,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getExpedite()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getExpedite(" + "" + ")");
             }
         
             // invoke native method
@@ -893,7 +893,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setExpedite(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setExpedite(" + var1 + ")");
             }
         
             // invoke native method
@@ -912,7 +912,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getCongested()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getCongested(" + "" + ")");
             }
         
             // invoke native method
@@ -932,7 +932,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setCongested(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setCongested(" + var1 + ")");
             }
         
             // invoke native method
@@ -951,7 +951,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getBlocked()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getBlocked(" + "" + ")");
             }
         
             // invoke native method
@@ -971,7 +971,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setBlocked(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setBlocked(" + var1 + ")");
             }
         
             // invoke native method
@@ -990,7 +990,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getUnknown()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getUnknown(" + "" + ")");
             }
         
             // invoke native method
@@ -1010,7 +1010,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setUnknown(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setUnknown(" + var1 + ")");
             }
         
             // invoke native method
@@ -1029,7 +1029,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getStatus()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getStatus(" + "" + ")");
             }
         
             // invoke native method
@@ -1049,7 +1049,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setStatus(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setStatus(" + var1 + ")");
             }
         
             // invoke native method
@@ -1068,7 +1068,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getDescription()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::getDescription(" + "" + ")");
             }
         
             // invoke native method
@@ -1088,7 +1088,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setDescription(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.TrafficStatusEvaluation@" + refId + "::setDescription(" + var1 + ")");
             }
         
             // invoke native method
@@ -1110,7 +1110,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener@" + refId + "::onBusLineSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener@" + refId + "::onBusLineSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -1132,7 +1132,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener@" + refId + "::onBusStationSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener@" + refId + "::onBusStationSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -1151,7 +1151,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -1171,7 +1171,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -1190,7 +1190,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusLineName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusLineName(" + "" + ")");
             }
         
             // invoke native method
@@ -1210,7 +1210,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusLineName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusLineName(" + var1 + ")");
             }
         
             // invoke native method
@@ -1229,7 +1229,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusLineType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusLineType(" + "" + ")");
             }
         
             // invoke native method
@@ -1249,7 +1249,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusLineType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusLineType(" + var1 + ")");
             }
         
             // invoke native method
@@ -1268,7 +1268,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getCityCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getCityCode(" + "" + ")");
             }
         
             // invoke native method
@@ -1288,7 +1288,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setCityCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setCityCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -1307,7 +1307,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getDirectionsCoordinates()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getDirectionsCoordinates(" + "" + ")");
             }
         
             // invoke native method
@@ -1340,7 +1340,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setDirectionsCoordinates()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setDirectionsCoordinates(" + var1 + ")");
             }
         
             // invoke native method
@@ -1359,7 +1359,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBounds()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBounds(" + "" + ")");
             }
         
             // invoke native method
@@ -1392,7 +1392,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBounds()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBounds(" + var1 + ")");
             }
         
             // invoke native method
@@ -1411,7 +1411,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusLineId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusLineId(" + "" + ")");
             }
         
             // invoke native method
@@ -1431,7 +1431,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusLineId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusLineId(" + var1 + ")");
             }
         
             // invoke native method
@@ -1450,7 +1450,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getOriginatingStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getOriginatingStation(" + "" + ")");
             }
         
             // invoke native method
@@ -1470,7 +1470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setOriginatingStation(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setOriginatingStation(" + var1 + ")");
             }
         
             // invoke native method
@@ -1489,7 +1489,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getTerminalStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getTerminalStation(" + "" + ")");
             }
         
             // invoke native method
@@ -1509,7 +1509,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setTerminalStation(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setTerminalStation(" + var1 + ")");
             }
         
             // invoke native method
@@ -1528,7 +1528,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusCompany()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusCompany(" + "" + ")");
             }
         
             // invoke native method
@@ -1548,7 +1548,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusCompany(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusCompany(" + var1 + ")");
             }
         
             // invoke native method
@@ -1567,7 +1567,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBasicPrice()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBasicPrice(" + "" + ")");
             }
         
             // invoke native method
@@ -1587,7 +1587,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBasicPrice(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBasicPrice(" + var1 + ")");
             }
         
             // invoke native method
@@ -1606,7 +1606,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getTotalPrice()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getTotalPrice(" + "" + ")");
             }
         
             // invoke native method
@@ -1626,7 +1626,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setTotalPrice(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setTotalPrice(" + var1 + ")");
             }
         
             // invoke native method
@@ -1645,7 +1645,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusStations()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::getBusStations(" + "" + ")");
             }
         
             // invoke native method
@@ -1678,7 +1678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusStations()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineItem@" + refId + "::setBusStations(" + var1 + ")");
             }
         
             // invoke native method
@@ -1713,7 +1713,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationResult::createPagedResult(\"var1\":$var1, \"var3\":$var3)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationResult::createPagedResult(" + var0 + var1 + var2 + var3 + var4 + ")");
             }
         
             // invoke native method
@@ -1739,7 +1739,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationResult@" + refId + "::getPageCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationResult@" + refId + "::getPageCount(" + "" + ")");
             }
         
             // invoke native method
@@ -1758,7 +1758,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationResult@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationResult@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -1784,7 +1784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationResult@" + refId + "::getSearchSuggestionKeywords()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationResult@" + refId + "::getSearchSuggestionKeywords(" + "" + ")");
             }
         
             // invoke native method
@@ -1803,7 +1803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationResult@" + refId + "::getSearchSuggestionCities()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationResult@" + refId + "::getSearchSuggestionCities(" + "" + ")");
             }
         
             // invoke native method
@@ -1831,7 +1831,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationResult@" + refId + "::getBusStations()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationResult@" + refId + "::getBusStations(" + "" + ")");
             }
         
             // invoke native method
@@ -1859,7 +1859,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@" + refId + "::searchBusStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationSearch@" + refId + "::searchBusStation(" + "" + ")");
             }
         
             // invoke native method
@@ -1885,7 +1885,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@" + refId + "::setOnBusStationSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationSearch@" + refId + "::setOnBusStationSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -1897,7 +1897,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusStationSearched(com.amap.api.services.busline.BusStationResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusStationSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -1932,7 +1932,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@" + refId + "::searchBusStationAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationSearch@" + refId + "::searchBusStationAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -1952,7 +1952,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -1971,7 +1971,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -1997,7 +1997,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@" + refId + "::searchBusLine()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineSearch@" + refId + "::searchBusLine(" + "" + ")");
             }
         
             // invoke native method
@@ -2023,7 +2023,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@" + refId + "::setOnBusLineSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineSearch@" + refId + "::setOnBusLineSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -2035,7 +2035,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusLineSearched(com.amap.api.services.busline.BusLineResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusLineSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -2070,7 +2070,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@" + refId + "::searchBusLineAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineSearch@" + refId + "::searchBusLineAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -2090,7 +2090,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -2109,7 +2109,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -2135,7 +2135,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::getCategory()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::getCategory(" + "" + ")");
             }
         
             // invoke native method
@@ -2161,7 +2161,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::getQueryString()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::getQueryString(" + "" + ")");
             }
         
             // invoke native method
@@ -2181,7 +2181,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::setQueryString(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::setQueryString(" + var1 + ")");
             }
         
             // invoke native method
@@ -2200,7 +2200,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -2220,7 +2220,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -2239,7 +2239,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::getPageSize()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::getPageSize(" + "" + ")");
             }
         
             // invoke native method
@@ -2259,7 +2259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::setPageSize(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::setPageSize(" + var1 + ")");
             }
         
             // invoke native method
@@ -2278,7 +2278,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::getPageNumber()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::getPageNumber(" + "" + ")");
             }
         
             // invoke native method
@@ -2298,7 +2298,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::setPageNumber(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::setPageNumber(" + var1 + ")");
             }
         
             // invoke native method
@@ -2318,7 +2318,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::setCategory()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::setCategory(" + var1 + ")");
             }
         
             // invoke native method
@@ -2337,7 +2337,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -2364,7 +2364,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineQuery@" + refId + "::weakEquals()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineQuery@" + refId + "::weakEquals(" + var1 + ")");
             }
         
             // invoke native method
@@ -2399,7 +2399,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineResult::createPagedResult(\"var1\":$var1, \"var3\":$var3)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineResult::createPagedResult(" + var0 + var1 + var2 + var3 + var4 + ")");
             }
         
             // invoke native method
@@ -2425,7 +2425,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineResult@" + refId + "::getPageCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineResult@" + refId + "::getPageCount(" + "" + ")");
             }
         
             // invoke native method
@@ -2444,7 +2444,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineResult@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineResult@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -2470,7 +2470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineResult@" + refId + "::getSearchSuggestionKeywords()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineResult@" + refId + "::getSearchSuggestionKeywords(" + "" + ")");
             }
         
             // invoke native method
@@ -2489,7 +2489,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineResult@" + refId + "::getSearchSuggestionCities()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineResult@" + refId + "::getSearchSuggestionCities(" + "" + ")");
             }
         
             // invoke native method
@@ -2517,7 +2517,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusLineResult@" + refId + "::getBusLines()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusLineResult@" + refId + "::getBusLines(" + "" + ")");
             }
         
             // invoke native method
@@ -2545,7 +2545,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::getBusStationId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::getBusStationId(" + "" + ")");
             }
         
             // invoke native method
@@ -2565,7 +2565,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::setBusStationId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::setBusStationId(" + var1 + ")");
             }
         
             // invoke native method
@@ -2584,7 +2584,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::getBusStationName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::getBusStationName(" + "" + ")");
             }
         
             // invoke native method
@@ -2604,7 +2604,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::setBusStationName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::setBusStationName(" + var1 + ")");
             }
         
             // invoke native method
@@ -2623,7 +2623,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -2650,7 +2650,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::setLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::setLatLonPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -2669,7 +2669,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::getCityCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::getCityCode(" + "" + ")");
             }
         
             // invoke native method
@@ -2689,7 +2689,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::setCityCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::setCityCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -2708,7 +2708,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -2728,7 +2728,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -2747,7 +2747,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::getBusLineItems()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::getBusLineItems(" + "" + ")");
             }
         
             // invoke native method
@@ -2780,7 +2780,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationItem@" + refId + "::setBusLineItems()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationItem@" + refId + "::setBusLineItems(" + var1 + ")");
             }
         
             // invoke native method
@@ -2799,7 +2799,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::getQueryString()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::getQueryString(" + "" + ")");
             }
         
             // invoke native method
@@ -2818,7 +2818,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -2837,7 +2837,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::getPageSize()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::getPageSize(" + "" + ")");
             }
         
             // invoke native method
@@ -2856,7 +2856,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::getPageNumber()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::getPageNumber(" + "" + ")");
             }
         
             // invoke native method
@@ -2876,7 +2876,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::setQueryString(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::setQueryString(" + var1 + ")");
             }
         
             // invoke native method
@@ -2896,7 +2896,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -2916,7 +2916,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::setPageSize(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::setPageSize(" + var1 + ")");
             }
         
             // invoke native method
@@ -2936,7 +2936,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::setPageNumber(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::setPageNumber(" + var1 + ")");
             }
         
             // invoke native method
@@ -2955,7 +2955,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -2982,7 +2982,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.busline.BusStationQuery@" + refId + "::weakEquals()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.busline.BusStationQuery@" + refId + "::weakEquals(" + var1 + ")");
             }
         
             // invoke native method
@@ -3001,7 +3001,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.AMapException@" + refId + "::getErrorLevel()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.AMapException@" + refId + "::getErrorLevel(" + "" + ")");
             }
         
             // invoke native method
@@ -3020,7 +3020,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.AMapException@" + refId + "::getErrorType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.AMapException@" + refId + "::getErrorType(" + "" + ")");
             }
         
             // invoke native method
@@ -3039,7 +3039,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.AMapException@" + refId + "::getErrorMessage()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.AMapException@" + refId + "::getErrorMessage(" + "" + ")");
             }
         
             // invoke native method
@@ -3058,7 +3058,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.AMapException@" + refId + "::getErrorCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.AMapException@" + refId + "::getErrorCode(" + "" + ")");
             }
         
             // invoke native method
@@ -3077,7 +3077,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::getConnectionTimeOut()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::getConnectionTimeOut(" + "" + ")");
             }
         
             // invoke native method
@@ -3096,7 +3096,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::getSoTimeOut()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::getSoTimeOut(" + "" + ")");
             }
         
             // invoke native method
@@ -3116,7 +3116,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::setConnectionTimeOut(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::setConnectionTimeOut(" + var1 + ")");
             }
         
             // invoke native method
@@ -3136,7 +3136,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::setSoTimeOut(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::setSoTimeOut(" + var1 + ")");
             }
         
             // invoke native method
@@ -3154,7 +3154,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings::getInstance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings::getInstance(" + "" + ")");
             }
         
             // invoke native method
@@ -3181,7 +3181,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::setLanguage(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::setLanguage(" + var1 + ")");
             }
         
             // invoke native method
@@ -3201,7 +3201,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::setProtocol(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::setProtocol(" + var1 + ")");
             }
         
             // invoke native method
@@ -3220,7 +3220,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::getLanguage()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::getLanguage(" + "" + ")");
             }
         
             // invoke native method
@@ -3239,7 +3239,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::getProtocol()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::getProtocol(" + "" + ")");
             }
         
             // invoke native method
@@ -3259,7 +3259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::setApiKey(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::setApiKey(" + var1 + ")");
             }
         
             // invoke native method
@@ -3278,7 +3278,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.ServiceSettings@" + refId + "::destroyInnerAsynThreadPool()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.ServiceSettings@" + refId + "::destroyInnerAsynThreadPool(" + "" + ")");
             }
         
             // invoke native method
@@ -3297,7 +3297,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SearchUtils::getSHA1()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SearchUtils::getSHA1(" + var0 + ")");
             }
         
             // invoke native method
@@ -3316,7 +3316,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SearchUtils::getPkgName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SearchUtils::getPkgName(" + var0 + ")");
             }
         
             // invoke native method
@@ -3334,7 +3334,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SearchUtils::getVersion()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SearchUtils::getVersion(" + "" + ")");
             }
         
             // invoke native method
@@ -3353,7 +3353,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonSharePoint@" + refId + "::getSharePointName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonSharePoint@" + refId + "::getSharePointName(" + "" + ")");
             }
         
             // invoke native method
@@ -3373,7 +3373,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonSharePoint@" + refId + "::setSharePointName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonSharePoint@" + refId + "::setSharePointName(" + var1 + ")");
             }
         
             // invoke native method
@@ -3392,7 +3392,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonPoint@" + refId + "::getLongitude()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonPoint@" + refId + "::getLongitude(" + "" + ")");
             }
         
             // invoke native method
@@ -3412,7 +3412,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonPoint@" + refId + "::setLongitude(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonPoint@" + refId + "::setLongitude(" + var1 + ")");
             }
         
             // invoke native method
@@ -3431,7 +3431,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonPoint@" + refId + "::getLatitude()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonPoint@" + refId + "::getLatitude(" + "" + ")");
             }
         
             // invoke native method
@@ -3451,7 +3451,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonPoint@" + refId + "::setLatitude(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonPoint@" + refId + "::setLatitude(" + var1 + ")");
             }
         
             // invoke native method
@@ -3470,7 +3470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.LatLonPoint@" + refId + "::copy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.LatLonPoint@" + refId + "::copy(" + "" + ")");
             }
         
             // invoke native method
@@ -3496,7 +3496,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getBusinessArea()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getBusinessArea(" + "" + ")");
             }
         
             // invoke native method
@@ -3516,7 +3516,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setBusinessArea(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setBusinessArea(" + var1 + ")");
             }
         
             // invoke native method
@@ -3535,7 +3535,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getAdName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getAdName(" + "" + ")");
             }
         
             // invoke native method
@@ -3555,7 +3555,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setAdName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setAdName(" + var1 + ")");
             }
         
             // invoke native method
@@ -3574,7 +3574,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getCityName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getCityName(" + "" + ")");
             }
         
             // invoke native method
@@ -3594,7 +3594,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setCityName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setCityName(" + var1 + ")");
             }
         
             // invoke native method
@@ -3613,7 +3613,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getProvinceName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getProvinceName(" + "" + ")");
             }
         
             // invoke native method
@@ -3633,7 +3633,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setProvinceName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setProvinceName(" + var1 + ")");
             }
         
             // invoke native method
@@ -3652,7 +3652,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getTypeDes()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getTypeDes(" + "" + ")");
             }
         
             // invoke native method
@@ -3672,7 +3672,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setTypeDes(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setTypeDes(" + var1 + ")");
             }
         
             // invoke native method
@@ -3691,7 +3691,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getTel()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getTel(" + "" + ")");
             }
         
             // invoke native method
@@ -3711,7 +3711,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setTel(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setTel(" + var1 + ")");
             }
         
             // invoke native method
@@ -3730,7 +3730,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -3750,7 +3750,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -3769,7 +3769,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getPoiId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getPoiId(" + "" + ")");
             }
         
             // invoke native method
@@ -3788,7 +3788,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -3808,7 +3808,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -3827,7 +3827,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getTitle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getTitle(" + "" + ")");
             }
         
             // invoke native method
@@ -3846,7 +3846,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getSnippet()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getSnippet(" + "" + ")");
             }
         
             // invoke native method
@@ -3865,7 +3865,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -3891,7 +3891,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getCityCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getCityCode(" + "" + ")");
             }
         
             // invoke native method
@@ -3911,7 +3911,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setCityCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setCityCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -3930,7 +3930,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getEnter()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getEnter(" + "" + ")");
             }
         
             // invoke native method
@@ -3957,7 +3957,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setEnter()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setEnter(" + var1 + ")");
             }
         
             // invoke native method
@@ -3976,7 +3976,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getExit()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getExit(" + "" + ")");
             }
         
             // invoke native method
@@ -4003,7 +4003,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setExit()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setExit(" + var1 + ")");
             }
         
             // invoke native method
@@ -4022,7 +4022,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getWebsite()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getWebsite(" + "" + ")");
             }
         
             // invoke native method
@@ -4042,7 +4042,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setWebsite(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setWebsite(" + var1 + ")");
             }
         
             // invoke native method
@@ -4061,7 +4061,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getPostcode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getPostcode(" + "" + ")");
             }
         
             // invoke native method
@@ -4081,7 +4081,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setPostcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setPostcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -4100,7 +4100,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getEmail()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getEmail(" + "" + ")");
             }
         
             // invoke native method
@@ -4120,7 +4120,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setEmail(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setEmail(" + var1 + ")");
             }
         
             // invoke native method
@@ -4139,7 +4139,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -4159,7 +4159,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -4179,7 +4179,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setIndoorMap(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setIndoorMap(" + var1 + ")");
             }
         
             // invoke native method
@@ -4198,7 +4198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::isIndoorMap()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::isIndoorMap(" + "" + ")");
             }
         
             // invoke native method
@@ -4218,7 +4218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setProvinceCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setProvinceCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -4237,7 +4237,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getProvinceCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getProvinceCode(" + "" + ")");
             }
         
             // invoke native method
@@ -4257,7 +4257,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setParkingType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setParkingType(" + var1 + ")");
             }
         
             // invoke native method
@@ -4276,7 +4276,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getParkingType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getParkingType(" + "" + ")");
             }
         
             // invoke native method
@@ -4300,7 +4300,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setSubPois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setSubPois(" + var1 + ")");
             }
         
             // invoke native method
@@ -4319,7 +4319,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getSubPois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getSubPois(" + "" + ")");
             }
         
             // invoke native method
@@ -4347,7 +4347,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getIndoorData()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getIndoorData(" + "" + ")");
             }
         
             // invoke native method
@@ -4374,7 +4374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setIndoorDate()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setIndoorDate(" + var1 + ")");
             }
         
             // invoke native method
@@ -4393,7 +4393,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getPhotos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getPhotos(" + "" + ")");
             }
         
             // invoke native method
@@ -4426,7 +4426,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setPhotos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setPhotos(" + var1 + ")");
             }
         
             // invoke native method
@@ -4445,7 +4445,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getPoiExtension()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getPoiExtension(" + "" + ")");
             }
         
             // invoke native method
@@ -4472,7 +4472,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setPoiExtension()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setPoiExtension(" + var1 + ")");
             }
         
             // invoke native method
@@ -4491,7 +4491,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getTypeCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getTypeCode(" + "" + ")");
             }
         
             // invoke native method
@@ -4511,7 +4511,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setTypeCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setTypeCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -4530,7 +4530,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::getShopID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::getShopID(" + "" + ")");
             }
         
             // invoke native method
@@ -4550,7 +4550,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.PoiItem@" + refId + "::setShopID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.PoiItem@" + refId + "::setShopID(" + var1 + ")");
             }
         
             // invoke native method
@@ -4569,7 +4569,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::getCityName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::getCityName(" + "" + ")");
             }
         
             // invoke native method
@@ -4589,7 +4589,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::setCityName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::setCityName(" + var1 + ")");
             }
         
             // invoke native method
@@ -4608,7 +4608,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::getCityCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::getCityCode(" + "" + ")");
             }
         
             // invoke native method
@@ -4628,7 +4628,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::setCityCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::setCityCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -4647,7 +4647,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -4667,7 +4667,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -4686,7 +4686,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::getSuggestionNum()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::getSuggestionNum(" + "" + ")");
             }
         
             // invoke native method
@@ -4706,7 +4706,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.core.SuggestionCity@" + refId + "::setSuggestionNum(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.core.SuggestionCity@" + refId + "::setSuggestionNum(" + var1 + ")");
             }
         
             // invoke native method
@@ -4725,7 +4725,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.Photo@" + refId + "::getTitle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.Photo@" + refId + "::getTitle(" + "" + ")");
             }
         
             // invoke native method
@@ -4745,7 +4745,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.Photo@" + refId + "::setTitle(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.Photo@" + refId + "::setTitle(" + var1 + ")");
             }
         
             // invoke native method
@@ -4764,7 +4764,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.Photo@" + refId + "::getUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.Photo@" + refId + "::getUrl(" + "" + ")");
             }
         
             // invoke native method
@@ -4784,7 +4784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.Photo@" + refId + "::setUrl(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.Photo@" + refId + "::setUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -4803,7 +4803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getPoiId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getPoiId(" + "" + ")");
             }
         
             // invoke native method
@@ -4823,7 +4823,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setPoiId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setPoiId(" + var1 + ")");
             }
         
             // invoke native method
@@ -4842,7 +4842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getTitle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getTitle(" + "" + ")");
             }
         
             // invoke native method
@@ -4862,7 +4862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setTitle(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setTitle(" + var1 + ")");
             }
         
             // invoke native method
@@ -4881,7 +4881,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getSubName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getSubName(" + "" + ")");
             }
         
             // invoke native method
@@ -4901,7 +4901,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setSubName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setSubName(" + var1 + ")");
             }
         
             // invoke native method
@@ -4920,7 +4920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -4940,7 +4940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -4959,7 +4959,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -4986,7 +4986,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setLatLonPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -5005,7 +5005,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getSnippet()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getSnippet(" + "" + ")");
             }
         
             // invoke native method
@@ -5025,7 +5025,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setSnippet(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setSnippet(" + var1 + ")");
             }
         
             // invoke native method
@@ -5044,7 +5044,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getSubTypeDes()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::getSubTypeDes(" + "" + ")");
             }
         
             // invoke native method
@@ -5064,7 +5064,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setSubTypeDes(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.SubPoiItem@" + refId + "::setSubTypeDes(" + var1 + ")");
             }
         
             // invoke native method
@@ -5086,7 +5086,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@" + refId + "::onPoiSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@" + refId + "::onPoiSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -5108,7 +5108,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@" + refId + "::onPoiItemSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener@" + refId + "::onPoiItemSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -5127,7 +5127,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiItemExtension@" + refId + "::getOpentime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiItemExtension@" + refId + "::getOpentime(" + "" + ")");
             }
         
             // invoke native method
@@ -5146,7 +5146,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiItemExtension@" + refId + "::getmRating()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiItemExtension@" + refId + "::getmRating(" + "" + ")");
             }
         
             // invoke native method
@@ -5165,7 +5165,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getLowerLeft()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getLowerLeft(" + "" + ")");
             }
         
             // invoke native method
@@ -5191,7 +5191,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getUpperRight()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getUpperRight(" + "" + ")");
             }
         
             // invoke native method
@@ -5217,7 +5217,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getCenter()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getCenter(" + "" + ")");
             }
         
             // invoke native method
@@ -5243,7 +5243,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getRange()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getRange(" + "" + ")");
             }
         
             // invoke native method
@@ -5262,7 +5262,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getShape()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getShape(" + "" + ")");
             }
         
             // invoke native method
@@ -5281,7 +5281,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::isDistanceSort()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::isDistanceSort(" + "" + ")");
             }
         
             // invoke native method
@@ -5300,7 +5300,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getPolyGonList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::getPolyGonList(" + "" + ")");
             }
         
             // invoke native method
@@ -5348,7 +5348,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult::createPagedResult(\"var2\":$var2, \"var4\":$var4, \"var5\":$var5)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult::createPagedResult(" + var0 + var1 + var2 + var3 + var4 + var5 + var6 + ")");
             }
         
             // invoke native method
@@ -5374,7 +5374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@" + refId + "::getPageCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult@" + refId + "::getPageCount(" + "" + ")");
             }
         
             // invoke native method
@@ -5393,7 +5393,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -5419,7 +5419,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@" + refId + "::getBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult@" + refId + "::getBound(" + "" + ")");
             }
         
             // invoke native method
@@ -5445,7 +5445,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@" + refId + "::getPois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult@" + refId + "::getPois(" + "" + ")");
             }
         
             // invoke native method
@@ -5473,7 +5473,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@" + refId + "::getSearchSuggestionKeywords()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult@" + refId + "::getSearchSuggestionKeywords(" + "" + ")");
             }
         
             // invoke native method
@@ -5492,7 +5492,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiResult@" + refId + "::getSearchSuggestionCitys()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiResult@" + refId + "::getSearchSuggestionCitys(" + "" + ")");
             }
         
             // invoke native method
@@ -5520,7 +5520,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setOnPoiSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setOnPoiSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -5532,7 +5532,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiSearched(com.amap.api.services.poisearch.PoiResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onPoiSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -5555,7 +5555,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiItemSearched(com.amap.api.services.core.PoiItem var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onPoiItemSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -5591,7 +5591,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setLanguage(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setLanguage(" + var1 + ")");
             }
         
             // invoke native method
@@ -5610,7 +5610,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::getLanguage()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::getLanguage(" + "" + ")");
             }
         
             // invoke native method
@@ -5629,7 +5629,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOI()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOI(" + "" + ")");
             }
         
             // invoke native method
@@ -5655,7 +5655,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOIAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOIAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -5675,7 +5675,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOIId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOIId(" + var1 + ")");
             }
         
             // invoke native method
@@ -5702,7 +5702,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOIIdAsyn(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::searchPOIIdAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -5722,7 +5722,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -5742,7 +5742,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::setBound(" + var1 + ")");
             }
         
             // invoke native method
@@ -5761,7 +5761,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -5787,7 +5787,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch@" + refId + "::getBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch@" + refId + "::getBound(" + "" + ")");
             }
         
             // invoke native method
@@ -5813,7 +5813,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getBuilding()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getBuilding(" + "" + ")");
             }
         
             // invoke native method
@@ -5833,7 +5833,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setBuilding(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setBuilding(" + var1 + ")");
             }
         
             // invoke native method
@@ -5852,7 +5852,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getQueryString()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getQueryString(" + "" + ")");
             }
         
             // invoke native method
@@ -5872,7 +5872,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setQueryLanguage(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setQueryLanguage(" + var1 + ")");
             }
         
             // invoke native method
@@ -5891,7 +5891,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getCategory()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getCategory(" + "" + ")");
             }
         
             // invoke native method
@@ -5910,7 +5910,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -5929,7 +5929,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getPageNum()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getPageNum(" + "" + ")");
             }
         
             // invoke native method
@@ -5949,7 +5949,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setPageNum(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setPageNum(" + var1 + ")");
             }
         
             // invoke native method
@@ -5969,7 +5969,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setPageSize(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setPageSize(" + var1 + ")");
             }
         
             // invoke native method
@@ -5988,7 +5988,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getPageSize()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getPageSize(" + "" + ")");
             }
         
             // invoke native method
@@ -6008,7 +6008,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setCityLimit(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setCityLimit(" + var1 + ")");
             }
         
             // invoke native method
@@ -6027,7 +6027,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getCityLimit()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getCityLimit(" + "" + ")");
             }
         
             // invoke native method
@@ -6047,7 +6047,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::requireSubPois(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::requireSubPois(" + var1 + ")");
             }
         
             // invoke native method
@@ -6066,7 +6066,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::isRequireSubPois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::isRequireSubPois(" + "" + ")");
             }
         
             // invoke native method
@@ -6085,7 +6085,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::isDistanceSort()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::isDistanceSort(" + "" + ")");
             }
         
             // invoke native method
@@ -6105,7 +6105,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setDistanceSort(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setDistanceSort(" + var1 + ")");
             }
         
             // invoke native method
@@ -6124,7 +6124,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::getLocation(" + "" + ")");
             }
         
             // invoke native method
@@ -6151,7 +6151,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::setLocation(" + var1 + ")");
             }
         
             // invoke native method
@@ -6171,7 +6171,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::queryEquals()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::queryEquals(" + var1 + ")");
             }
         
             // invoke native method
@@ -6190,7 +6190,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@" + refId + "::getPoiId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.IndoorData@" + refId + "::getPoiId(" + "" + ")");
             }
         
             // invoke native method
@@ -6210,7 +6210,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@" + refId + "::setPoiId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.IndoorData@" + refId + "::setPoiId(" + var1 + ")");
             }
         
             // invoke native method
@@ -6229,7 +6229,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@" + refId + "::getFloor()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.IndoorData@" + refId + "::getFloor(" + "" + ")");
             }
         
             // invoke native method
@@ -6249,7 +6249,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@" + refId + "::setFloor(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.IndoorData@" + refId + "::setFloor(" + var1 + ")");
             }
         
             // invoke native method
@@ -6268,7 +6268,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@" + refId + "::getFloorName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.IndoorData@" + refId + "::getFloorName(" + "" + ")");
             }
         
             // invoke native method
@@ -6288,7 +6288,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.poisearch.IndoorData@" + refId + "::setFloorName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.IndoorData@" + refId + "::setFloorName(" + var1 + ")");
             }
         
             // invoke native method
@@ -6307,7 +6307,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Railway@" + refId + "::getID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Railway@" + refId + "::getID(" + "" + ")");
             }
         
             // invoke native method
@@ -6326,7 +6326,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Railway@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Railway@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -6346,7 +6346,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Railway@" + refId + "::setID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Railway@" + refId + "::setID(" + var1 + ")");
             }
         
             // invoke native method
@@ -6366,7 +6366,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Railway@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Railway@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -6385,7 +6385,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::getCost()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::getCost(" + "" + ")");
             }
         
             // invoke native method
@@ -6405,7 +6405,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::setCost(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::setCost(" + var1 + ")");
             }
         
             // invoke native method
@@ -6424,7 +6424,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::isNightBus()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::isNightBus(" + "" + ")");
             }
         
             // invoke native method
@@ -6444,7 +6444,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::setNightBus(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::setNightBus(" + var1 + ")");
             }
         
             // invoke native method
@@ -6463,7 +6463,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::getWalkDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::getWalkDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -6483,7 +6483,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::setWalkDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::setWalkDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -6502,7 +6502,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::getBusDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::getBusDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -6522,7 +6522,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::setBusDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::setBusDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -6541,7 +6541,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::getSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::getSteps(" + "" + ")");
             }
         
             // invoke native method
@@ -6574,7 +6574,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusPath@" + refId + "::setSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusPath@" + refId + "::setSteps(" + var1 + ")");
             }
         
             // invoke native method
@@ -6593,7 +6593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::getPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::getPaths(" + "" + ")");
             }
         
             // invoke native method
@@ -6626,7 +6626,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::setPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::setPaths(" + var1 + ")");
             }
         
             // invoke native method
@@ -6645,7 +6645,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::getTimeInfos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::getTimeInfos(" + "" + ")");
             }
         
             // invoke native method
@@ -6678,7 +6678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::setTimeInfos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::setTimeInfos(" + var1 + ")");
             }
         
             // invoke native method
@@ -6698,7 +6698,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::setDrivePlanQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRoutePlanResult@" + refId + "::setDrivePlanQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -6718,7 +6718,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setMode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setMode(" + var1 + ")");
             }
         
             // invoke native method
@@ -6738,7 +6738,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckSize(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckSize(" + var1 + ")");
             }
         
             // invoke native method
@@ -6758,7 +6758,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckHeight(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckHeight(" + var1 + ")");
             }
         
             // invoke native method
@@ -6778,7 +6778,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckWidth(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckWidth(" + var1 + ")");
             }
         
             // invoke native method
@@ -6798,7 +6798,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckLoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckLoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -6818,7 +6818,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckWeight(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckWeight(" + var1 + ")");
             }
         
             // invoke native method
@@ -6838,7 +6838,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckAxis(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::setTruckAxis(" + var1 + ")");
             }
         
             // invoke native method
@@ -6857,7 +6857,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -6883,7 +6883,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -6902,7 +6902,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::hasPassPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::hasPassPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -6921,7 +6921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getPassedPointStr()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getPassedPointStr(" + "" + ")");
             }
         
             // invoke native method
@@ -6940,7 +6940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckSize()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckSize(" + "" + ")");
             }
         
             // invoke native method
@@ -6959,7 +6959,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckHeight()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckHeight(" + "" + ")");
             }
         
             // invoke native method
@@ -6978,7 +6978,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckWidth()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckWidth(" + "" + ")");
             }
         
             // invoke native method
@@ -6997,7 +6997,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckLoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckLoad(" + "" + ")");
             }
         
             // invoke native method
@@ -7016,7 +7016,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckWeight()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckWeight(" + "" + ")");
             }
         
             // invoke native method
@@ -7035,7 +7035,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckAxis()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::getTruckAxis(" + "" + ")");
             }
         
             // invoke native method
@@ -7054,7 +7054,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TMC@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TMC@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -7073,7 +7073,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TMC@" + refId + "::getStatus()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TMC@" + refId + "::getStatus(" + "" + ")");
             }
         
             // invoke native method
@@ -7093,7 +7093,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TMC@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TMC@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -7113,7 +7113,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TMC@" + refId + "::setStatus(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TMC@" + refId + "::setStatus(" + var1 + ")");
             }
         
             // invoke native method
@@ -7132,7 +7132,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TMC@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TMC@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -7165,7 +7165,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TMC@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TMC@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -7184,7 +7184,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::getOrigin()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::getOrigin(" + "" + ")");
             }
         
             // invoke native method
@@ -7211,7 +7211,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::setOrigin()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::setOrigin(" + var1 + ")");
             }
         
             // invoke native method
@@ -7230,7 +7230,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::getDestination()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::getDestination(" + "" + ")");
             }
         
             // invoke native method
@@ -7257,7 +7257,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::setDestination()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusWalkItem@" + refId + "::setDestination(" + var1 + ")");
             }
         
             // invoke native method
@@ -7276,7 +7276,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteResult@" + refId + "::getStartPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteResult@" + refId + "::getStartPos(" + "" + ")");
             }
         
             // invoke native method
@@ -7303,7 +7303,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteResult@" + refId + "::setStartPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteResult@" + refId + "::setStartPos(" + var1 + ")");
             }
         
             // invoke native method
@@ -7322,7 +7322,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteResult@" + refId + "::getTargetPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteResult@" + refId + "::getTargetPos(" + "" + ")");
             }
         
             // invoke native method
@@ -7349,7 +7349,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteResult@" + refId + "::setTargetPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteResult@" + refId + "::setTargetPos(" + var1 + ")");
             }
         
             // invoke native method
@@ -7368,7 +7368,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::setRouteSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::setRouteSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -7380,7 +7380,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteSearched(com.amap.api.services.route.BusRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -7403,7 +7403,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRouteSearched(com.amap.api.services.route.DriveRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDriveRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -7426,7 +7426,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteSearched(com.amap.api.services.route.WalkRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWalkRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -7449,7 +7449,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRideRouteSearched(com.amap.api.services.route.RideRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRideRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -7484,7 +7484,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::setOnTruckRouteSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::setOnTruckRouteSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -7496,7 +7496,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onTruckRouteSearched(com.amap.api.services.route.TruckRouteRestult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onTruckRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -7531,7 +7531,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::setOnRoutePlanSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::setOnRoutePlanSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -7543,7 +7543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRoutePlanSearched(com.amap.api.services.route.DriveRoutePlanResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDriveRoutePlanSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -7579,7 +7579,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateWalkRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateWalkRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -7606,7 +7606,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateWalkRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateWalkRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -7626,7 +7626,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateBusRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateBusRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -7653,7 +7653,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateBusRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateBusRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -7673,7 +7673,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDriveRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDriveRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -7700,7 +7700,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDriveRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDriveRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -7720,7 +7720,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateRideRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateRideRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -7740,7 +7740,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateRideRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateRideRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -7767,7 +7767,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateTruckRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateTruckRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -7794,7 +7794,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateTruckRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateTruckRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -7814,7 +7814,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDrivePlan()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDrivePlan(" + var1 + ")");
             }
         
             // invoke native method
@@ -7841,7 +7841,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDrivePlanAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch@" + refId + "::calculateDrivePlanAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -7860,7 +7860,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::getWalk()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::getWalk(" + "" + ")");
             }
         
             // invoke native method
@@ -7887,7 +7887,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::setWalk()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::setWalk(" + var1 + ")");
             }
         
             // invoke native method
@@ -7906,7 +7906,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::getBusLines()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::getBusLines(" + "" + ")");
             }
         
             // invoke native method
@@ -7939,7 +7939,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::setBusLines()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::setBusLines(" + var1 + ")");
             }
         
             // invoke native method
@@ -7958,7 +7958,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::getEntrance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::getEntrance(" + "" + ")");
             }
         
             // invoke native method
@@ -7985,7 +7985,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::setEntrance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::setEntrance(" + var1 + ")");
             }
         
             // invoke native method
@@ -8004,7 +8004,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::getExit()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::getExit(" + "" + ")");
             }
         
             // invoke native method
@@ -8031,7 +8031,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::setExit()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::setExit(" + var1 + ")");
             }
         
             // invoke native method
@@ -8050,7 +8050,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::getRailway()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::getRailway(" + "" + ")");
             }
         
             // invoke native method
@@ -8077,7 +8077,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::setRailway()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::setRailway(" + var1 + ")");
             }
         
             // invoke native method
@@ -8096,7 +8096,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::getTaxi()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::getTaxi(" + "" + ")");
             }
         
             // invoke native method
@@ -8123,7 +8123,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusStep@" + refId + "::setTaxi()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusStep@" + refId + "::setTaxi(" + var1 + ")");
             }
         
             // invoke native method
@@ -8142,7 +8142,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::getOrigin()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::getOrigin(" + "" + ")");
             }
         
             // invoke native method
@@ -8168,7 +8168,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::getDestination()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::getDestination(" + "" + ")");
             }
         
             // invoke native method
@@ -8194,7 +8194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -8213,7 +8213,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -8232,7 +8232,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::getmSname()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::getmSname(" + "" + ")");
             }
         
             // invoke native method
@@ -8251,7 +8251,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::getmTname()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::getmTname(" + "" + ")");
             }
         
             // invoke native method
@@ -8271,7 +8271,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::setOrigin()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::setOrigin(" + var1 + ")");
             }
         
             // invoke native method
@@ -8291,7 +8291,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::setDestination()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::setDestination(" + var1 + ")");
             }
         
             // invoke native method
@@ -8311,7 +8311,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -8331,7 +8331,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -8351,7 +8351,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::setSname(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::setSname(" + var1 + ")");
             }
         
             // invoke native method
@@ -8371,7 +8371,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TaxiItem@" + refId + "::setTname(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TaxiItem@" + refId + "::setTname(" + var1 + ")");
             }
         
             // invoke native method
@@ -8390,7 +8390,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusRouteResult@" + refId + "::getTaxiCost()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusRouteResult@" + refId + "::getTaxiCost(" + "" + ")");
             }
         
             // invoke native method
@@ -8410,7 +8410,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusRouteResult@" + refId + "::setTaxiCost(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusRouteResult@" + refId + "::setTaxiCost(" + var1 + ")");
             }
         
             // invoke native method
@@ -8429,7 +8429,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusRouteResult@" + refId + "::getPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusRouteResult@" + refId + "::getPaths(" + "" + ")");
             }
         
             // invoke native method
@@ -8462,7 +8462,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusRouteResult@" + refId + "::setPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusRouteResult@" + refId + "::setPaths(" + var1 + ")");
             }
         
             // invoke native method
@@ -8481,7 +8481,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusRouteResult@" + refId + "::getBusQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusRouteResult@" + refId + "::getBusQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -8508,7 +8508,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.BusRouteResult@" + refId + "::setBusQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.BusRouteResult@" + refId + "::setBusQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -8527,7 +8527,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@" + refId + "::getStartPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RoutePlanResult@" + refId + "::getStartPos(" + "" + ")");
             }
         
             // invoke native method
@@ -8554,7 +8554,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@" + refId + "::setStartPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RoutePlanResult@" + refId + "::setStartPos(" + var1 + ")");
             }
         
             // invoke native method
@@ -8573,7 +8573,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@" + refId + "::getTargetPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RoutePlanResult@" + refId + "::getTargetPos(" + "" + ")");
             }
         
             // invoke native method
@@ -8600,7 +8600,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RoutePlanResult@" + refId + "::setTargetPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RoutePlanResult@" + refId + "::setTargetPos(" + var1 + ")");
             }
         
             // invoke native method
@@ -8622,7 +8622,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener@" + refId + "::onDistanceSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener@" + refId + "::onDistanceSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -8641,7 +8641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwaySpace@" + refId + "::getCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + refId + "::getCode(" + "" + ")");
             }
         
             // invoke native method
@@ -8660,7 +8660,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwaySpace@" + refId + "::getCost()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwaySpace@" + refId + "::getCost(" + "" + ")");
             }
         
             // invoke native method
@@ -8680,7 +8680,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTruckQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTruckQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -8704,7 +8704,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setPaths(" + var1 + ")");
             }
         
             // invoke native method
@@ -8724,7 +8724,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setStartPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setStartPos(" + var1 + ")");
             }
         
             // invoke native method
@@ -8744,7 +8744,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTargetPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::setTargetPos(" + var1 + ")");
             }
         
             // invoke native method
@@ -8763,7 +8763,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTruckQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTruckQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -8789,7 +8789,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getPaths(" + "" + ")");
             }
         
             // invoke native method
@@ -8817,7 +8817,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getStartPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getStartPos(" + "" + ")");
             }
         
             // invoke native method
@@ -8843,7 +8843,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTargetPos()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckRouteRestult@" + refId + "::getTargetPos(" + "" + ")");
             }
         
             // invoke native method
@@ -8869,7 +8869,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -8895,7 +8895,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -8914,7 +8914,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -8940,7 +8940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -8959,7 +8959,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getCarType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getCarType(" + "" + ")");
             }
         
             // invoke native method
@@ -8978,7 +8978,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getPassedByPoints()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getPassedByPoints(" + "" + ")");
             }
         
             // invoke native method
@@ -9006,7 +9006,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidpolygons()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidpolygons(" + "" + ")");
             }
         
             // invoke native method
@@ -9025,7 +9025,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -9044,7 +9044,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getPassedPointStr()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getPassedPointStr(" + "" + ")");
             }
         
             // invoke native method
@@ -9063,7 +9063,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasPassPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasPassPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -9082,7 +9082,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidpolygonsStr()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidpolygonsStr(" + "" + ")");
             }
         
             // invoke native method
@@ -9101,7 +9101,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasAvoidpolygons()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasAvoidpolygons(" + "" + ")");
             }
         
             // invoke native method
@@ -9120,7 +9120,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasAvoidRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::hasAvoidRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -9139,7 +9139,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::isUseFerry()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::isUseFerry(" + "" + ")");
             }
         
             // invoke native method
@@ -9159,7 +9159,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::setUseFerry(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::setUseFerry(" + var1 + ")");
             }
         
             // invoke native method
@@ -9179,7 +9179,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::setCarType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::setCarType(" + var1 + ")");
             }
         
             // invoke native method
@@ -9198,7 +9198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getTime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getTime(" + "" + ")");
             }
         
             // invoke native method
@@ -9217,7 +9217,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getTrip()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getTrip(" + "" + ")");
             }
         
             // invoke native method
@@ -9236,7 +9236,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -9255,7 +9255,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getType(" + "" + ")");
             }
         
             // invoke native method
@@ -9274,7 +9274,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getDeparturestop()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getDeparturestop(" + "" + ")");
             }
         
             // invoke native method
@@ -9300,7 +9300,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getArrivalstop()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getArrivalstop(" + "" + ")");
             }
         
             // invoke native method
@@ -9326,7 +9326,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getViastops()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getViastops(" + "" + ")");
             }
         
             // invoke native method
@@ -9354,7 +9354,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getAlters()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getAlters(" + "" + ")");
             }
         
             // invoke native method
@@ -9382,7 +9382,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getSpaces()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::getSpaces(" + "" + ")");
             }
         
             // invoke native method
@@ -9411,7 +9411,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setTime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setTime(" + var1 + ")");
             }
         
             // invoke native method
@@ -9431,7 +9431,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setTrip(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setTrip(" + var1 + ")");
             }
         
             // invoke native method
@@ -9451,7 +9451,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -9471,7 +9471,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setType(" + var1 + ")");
             }
         
             // invoke native method
@@ -9491,7 +9491,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setDeparturestop()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setDeparturestop(" + var1 + ")");
             }
         
             // invoke native method
@@ -9511,7 +9511,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setArrivalstop()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setArrivalstop(" + var1 + ")");
             }
         
             // invoke native method
@@ -9535,7 +9535,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setViastops()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setViastops(" + var1 + ")");
             }
         
             // invoke native method
@@ -9559,7 +9559,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setAlters()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setAlters(" + var1 + ")");
             }
         
             // invoke native method
@@ -9583,7 +9583,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setSpaces()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteRailwayItem@" + refId + "::setSpaces(" + var1 + ")");
             }
         
             // invoke native method
@@ -9602,7 +9602,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getInstruction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getInstruction(" + "" + ")");
             }
         
             // invoke native method
@@ -9622,7 +9622,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setInstruction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setInstruction(" + var1 + ")");
             }
         
             // invoke native method
@@ -9641,7 +9641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getOrientation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getOrientation(" + "" + ")");
             }
         
             // invoke native method
@@ -9661,7 +9661,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setOrientation(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setOrientation(" + var1 + ")");
             }
         
             // invoke native method
@@ -9680,7 +9680,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -9700,7 +9700,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -9719,7 +9719,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -9739,7 +9739,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -9758,7 +9758,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -9778,7 +9778,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -9797,7 +9797,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -9830,7 +9830,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -9849,7 +9849,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getAction(" + "" + ")");
             }
         
             // invoke native method
@@ -9869,7 +9869,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -9888,7 +9888,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::getAssistantAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::getAssistantAction(" + "" + ")");
             }
         
             // invoke native method
@@ -9908,7 +9908,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkStep@" + refId + "::setAssistantAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkStep@" + refId + "::setAssistantAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -9927,7 +9927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::getID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getID(" + "" + ")");
             }
         
             // invoke native method
@@ -9946,7 +9946,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -9965,7 +9965,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::getLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getLocation(" + "" + ")");
             }
         
             // invoke native method
@@ -9991,7 +9991,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::getAdcode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getAdcode(" + "" + ")");
             }
         
             // invoke native method
@@ -10010,7 +10010,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::getTime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getTime(" + "" + ")");
             }
         
             // invoke native method
@@ -10029,7 +10029,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::isStart()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::isStart(" + "" + ")");
             }
         
             // invoke native method
@@ -10048,7 +10048,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::isEnd()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::isEnd(" + "" + ")");
             }
         
             // invoke native method
@@ -10067,7 +10067,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::getWait()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::getWait(" + "" + ")");
             }
         
             // invoke native method
@@ -10087,7 +10087,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setID(" + var1 + ")");
             }
         
             // invoke native method
@@ -10107,7 +10107,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -10127,7 +10127,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setLocation(" + var1 + ")");
             }
         
             // invoke native method
@@ -10147,7 +10147,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setAdcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setAdcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -10167,7 +10167,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setTime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setTime(" + var1 + ")");
             }
         
             // invoke native method
@@ -10187,7 +10187,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setisStart(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setisStart(" + var1 + ")");
             }
         
             // invoke native method
@@ -10207,7 +10207,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setisEnd(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setisEnd(" + var1 + ")");
             }
         
             // invoke native method
@@ -10227,7 +10227,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RailwayStationItem@" + refId + "::setWait(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RailwayStationItem@" + refId + "::setWait(" + var1 + ")");
             }
         
             // invoke native method
@@ -10246,7 +10246,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideRouteResult@" + refId + "::getPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::getPaths(" + "" + ")");
             }
         
             // invoke native method
@@ -10279,7 +10279,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideRouteResult@" + refId + "::setPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::setPaths(" + var1 + ")");
             }
         
             // invoke native method
@@ -10298,7 +10298,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideRouteResult@" + refId + "::getRideQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::getRideQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -10325,7 +10325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideRouteResult@" + refId + "::setRideQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideRouteResult@" + refId + "::setRideQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -10344,7 +10344,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getFrom()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getFrom(" + "" + ")");
             }
         
             // invoke native method
@@ -10370,7 +10370,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getTo(" + "" + ")");
             }
         
             // invoke native method
@@ -10396,7 +10396,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getStartPoiID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getStartPoiID(" + "" + ")");
             }
         
             // invoke native method
@@ -10416,7 +10416,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setStartPoiID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setStartPoiID(" + var1 + ")");
             }
         
             // invoke native method
@@ -10435,7 +10435,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getDestinationPoiID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getDestinationPoiID(" + "" + ")");
             }
         
             // invoke native method
@@ -10455,7 +10455,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setDestinationPoiID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setDestinationPoiID(" + var1 + ")");
             }
         
             // invoke native method
@@ -10474,7 +10474,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getOriginType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getOriginType(" + "" + ")");
             }
         
             // invoke native method
@@ -10494,7 +10494,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setOriginType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setOriginType(" + var1 + ")");
             }
         
             // invoke native method
@@ -10513,7 +10513,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getDestinationType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getDestinationType(" + "" + ")");
             }
         
             // invoke native method
@@ -10533,7 +10533,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setDestinationType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setDestinationType(" + var1 + ")");
             }
         
             // invoke native method
@@ -10552,7 +10552,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getPlateProvince()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getPlateProvince(" + "" + ")");
             }
         
             // invoke native method
@@ -10572,7 +10572,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setPlateProvince(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setPlateProvince(" + var1 + ")");
             }
         
             // invoke native method
@@ -10591,7 +10591,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getPlateNumber()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::getPlateNumber(" + "" + ")");
             }
         
             // invoke native method
@@ -10611,7 +10611,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setPlateNumber(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::setPlateNumber(" + var1 + ")");
             }
         
             // invoke native method
@@ -10630,7 +10630,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RidePath@" + refId + "::getSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RidePath@" + refId + "::getSteps(" + "" + ")");
             }
         
             // invoke native method
@@ -10663,7 +10663,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RidePath@" + refId + "::setSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RidePath@" + refId + "::setSteps(" + var1 + ")");
             }
         
             // invoke native method
@@ -10682,7 +10682,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -10708,7 +10708,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -10727,7 +10727,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -10746,7 +10746,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getNightFlag()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getNightFlag(" + "" + ")");
             }
         
             // invoke native method
@@ -10765,7 +10765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getCityd()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::getCityd(" + "" + ")");
             }
         
             // invoke native method
@@ -10785,7 +10785,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::setCityd(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::setCityd(" + var1 + ")");
             }
         
             // invoke native method
@@ -10804,7 +10804,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getInstruction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getInstruction(" + "" + ")");
             }
         
             // invoke native method
@@ -10824,7 +10824,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setInstruction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setInstruction(" + var1 + ")");
             }
         
             // invoke native method
@@ -10843,7 +10843,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getOrientation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getOrientation(" + "" + ")");
             }
         
             // invoke native method
@@ -10863,7 +10863,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setOrientation(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setOrientation(" + var1 + ")");
             }
         
             // invoke native method
@@ -10882,7 +10882,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -10902,7 +10902,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -10921,7 +10921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -10941,7 +10941,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -10960,7 +10960,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -10980,7 +10980,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -10999,7 +10999,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -11032,7 +11032,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -11051,7 +11051,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getAction(" + "" + ")");
             }
         
             // invoke native method
@@ -11071,7 +11071,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -11090,7 +11090,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::getAssistantAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::getAssistantAction(" + "" + ")");
             }
         
             // invoke native method
@@ -11110,7 +11110,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RideStep@" + refId + "::setAssistantAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RideStep@" + refId + "::setAssistantAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -11129,7 +11129,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearchCity@" + refId + "::getDistricts()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchCity@" + refId + "::getDistricts(" + "" + ")");
             }
         
             // invoke native method
@@ -11162,7 +11162,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearchCity@" + refId + "::setDistricts()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearchCity@" + refId + "::setDistricts(" + var1 + ")");
             }
         
             // invoke native method
@@ -11184,7 +11184,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onBusRouteSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onBusRouteSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -11206,7 +11206,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onDriveRouteSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onDriveRouteSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -11228,7 +11228,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onWalkRouteSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onWalkRouteSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -11250,7 +11250,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onRideRouteSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.OnRouteSearchListener@" + refId + "::onRideRouteSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -11270,7 +11270,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceResult@" + refId + "::setDistanceQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::setDistanceQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -11289,7 +11289,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceResult@" + refId + "::getDistanceQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::getDistanceQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -11315,7 +11315,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceResult@" + refId + "::getDistanceResults()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::getDistanceResults(" + "" + ")");
             }
         
             // invoke native method
@@ -11348,7 +11348,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceResult@" + refId + "::setDistanceResults()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceResult@" + refId + "::setDistanceResults(" + var1 + ")");
             }
         
             // invoke native method
@@ -11367,7 +11367,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -11393,7 +11393,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -11412,7 +11412,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.District@" + refId + "::getDistrictName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::getDistrictName(" + "" + ")");
             }
         
             // invoke native method
@@ -11432,7 +11432,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.District@" + refId + "::setDistrictName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::setDistrictName(" + var1 + ")");
             }
         
             // invoke native method
@@ -11451,7 +11451,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.District@" + refId + "::getDistrictAdcode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::getDistrictAdcode(" + "" + ")");
             }
         
             // invoke native method
@@ -11471,7 +11471,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.District@" + refId + "::setDistrictAdcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.District@" + refId + "::setDistrictAdcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -11490,7 +11490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@" + refId + "::getPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::getPaths(" + "" + ")");
             }
         
             // invoke native method
@@ -11523,7 +11523,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@" + refId + "::setPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::setPaths(" + var1 + ")");
             }
         
             // invoke native method
@@ -11542,7 +11542,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@" + refId + "::getWalkQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::getWalkQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -11569,7 +11569,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkRouteResult@" + refId + "::setWalkQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkRouteResult@" + refId + "::setWalkQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -11588,7 +11588,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getType(" + "" + ")");
             }
         
             // invoke native method
@@ -11607,7 +11607,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getOrigins()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getOrigins(" + "" + ")");
             }
         
             // invoke native method
@@ -11635,7 +11635,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getDestination()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::getDestination(" + "" + ")");
             }
         
             // invoke native method
@@ -11662,7 +11662,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setType(" + var1 + ")");
             }
         
             // invoke native method
@@ -11686,7 +11686,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setOrigins()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setOrigins(" + var1 + ")");
             }
         
             // invoke native method
@@ -11706,7 +11706,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::addOrigins()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::addOrigins(" + var1 + ")");
             }
         
             // invoke native method
@@ -11726,7 +11726,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setDestination()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::setDestination(" + var1 + ")");
             }
         
             // invoke native method
@@ -11745,7 +11745,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCityName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCityName(" + "" + ")");
             }
         
             // invoke native method
@@ -11765,7 +11765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCityName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCityName(" + var1 + ")");
             }
         
             // invoke native method
@@ -11784,7 +11784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCitycode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCitycode(" + "" + ")");
             }
         
             // invoke native method
@@ -11804,7 +11804,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCitycode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCitycode(" + var1 + ")");
             }
         
             // invoke native method
@@ -11823,7 +11823,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCityAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::getSearchCityAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -11843,7 +11843,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCityhAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.SearchCity@" + refId + "::setSearchCityhAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -11865,7 +11865,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener@" + refId + "::onDriveRoutePlanSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener@" + refId + "::onDriveRoutePlanSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -11884,7 +11884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch@" + refId + "::setDistanceSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + refId + "::setDistanceSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -11896,7 +11896,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistanceSearched(com.amap.api.services.route.DistanceResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDistanceSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -11932,7 +11932,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch@" + refId + "::calculateRouteDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + refId + "::calculateRouteDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -11959,7 +11959,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceSearch@" + refId + "::calculateRouteDistanceAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch@" + refId + "::calculateRouteDistanceAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -11978,7 +11978,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkPath@" + refId + "::getSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkPath@" + refId + "::getSteps(" + "" + ")");
             }
         
             // invoke native method
@@ -12011,7 +12011,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.WalkPath@" + refId + "::setSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.WalkPath@" + refId + "::setSteps(" + var1 + ")");
             }
         
             // invoke native method
@@ -12030,7 +12030,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getDepartureBusStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getDepartureBusStation(" + "" + ")");
             }
         
             // invoke native method
@@ -12057,7 +12057,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setDepartureBusStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setDepartureBusStation(" + var1 + ")");
             }
         
             // invoke native method
@@ -12076,7 +12076,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getArrivalBusStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getArrivalBusStation(" + "" + ")");
             }
         
             // invoke native method
@@ -12103,7 +12103,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setArrivalBusStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setArrivalBusStation(" + var1 + ")");
             }
         
             // invoke native method
@@ -12122,7 +12122,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -12155,7 +12155,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -12174,7 +12174,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPassStationNum()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPassStationNum(" + "" + ")");
             }
         
             // invoke native method
@@ -12194,7 +12194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPassStationNum(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPassStationNum(" + var1 + ")");
             }
         
             // invoke native method
@@ -12213,7 +12213,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPassStations()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getPassStations(" + "" + ")");
             }
         
             // invoke native method
@@ -12246,7 +12246,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPassStations()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setPassStations(" + var1 + ")");
             }
         
             // invoke native method
@@ -12265,7 +12265,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -12285,7 +12285,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteBusLineItem@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -12304,7 +12304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -12330,7 +12330,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getDestParentPoiID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getDestParentPoiID(" + "" + ")");
             }
         
             // invoke native method
@@ -12349,7 +12349,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -12368,7 +12368,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getCarType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getCarType(" + "" + ")");
             }
         
             // invoke native method
@@ -12387,7 +12387,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getFirstTime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getFirstTime(" + "" + ")");
             }
         
             // invoke native method
@@ -12406,7 +12406,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getInterval()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getInterval(" + "" + ")");
             }
         
             // invoke native method
@@ -12425,7 +12425,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::getCount(" + "" + ")");
             }
         
             // invoke native method
@@ -12445,7 +12445,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setDestParentPoiID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setDestParentPoiID(" + var1 + ")");
             }
         
             // invoke native method
@@ -12465,7 +12465,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setMode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setMode(" + var1 + ")");
             }
         
             // invoke native method
@@ -12485,7 +12485,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setCarType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::setCarType(" + var1 + ")");
             }
         
             // invoke native method
@@ -12504,7 +12504,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::getRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -12524,7 +12524,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -12543,7 +12543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -12563,7 +12563,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::setRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -12582,7 +12582,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -12602,7 +12602,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -12621,7 +12621,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::getToll()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getToll(" + "" + ")");
             }
         
             // invoke native method
@@ -12641,7 +12641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::setToll(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setToll(" + var1 + ")");
             }
         
             // invoke native method
@@ -12660,7 +12660,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -12693,7 +12693,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanStep@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanStep@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -12712,7 +12712,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfo@" + refId + "::getStartTime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::getStartTime(" + "" + ")");
             }
         
             // invoke native method
@@ -12732,7 +12732,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfo@" + refId + "::setStartTime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::setStartTime(" + var1 + ")");
             }
         
             // invoke native method
@@ -12751,7 +12751,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfo@" + refId + "::getElements()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::getElements(" + "" + ")");
             }
         
             // invoke native method
@@ -12784,7 +12784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfo@" + refId + "::setElements()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfo@" + refId + "::setElements(" + var1 + ")");
             }
         
             // invoke native method
@@ -12803,7 +12803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getInstruction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getInstruction(" + "" + ")");
             }
         
             // invoke native method
@@ -12823,7 +12823,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setInstruction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setInstruction(" + var1 + ")");
             }
         
             // invoke native method
@@ -12842,7 +12842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getOrientation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getOrientation(" + "" + ")");
             }
         
             // invoke native method
@@ -12862,7 +12862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setOrientation(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setOrientation(" + var1 + ")");
             }
         
             // invoke native method
@@ -12881,7 +12881,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -12901,7 +12901,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -12920,7 +12920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -12940,7 +12940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -12959,7 +12959,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getTolls()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getTolls(" + "" + ")");
             }
         
             // invoke native method
@@ -12979,7 +12979,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setTolls(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setTolls(" + var1 + ")");
             }
         
             // invoke native method
@@ -12998,7 +12998,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getTollDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getTollDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -13018,7 +13018,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setTollDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setTollDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -13037,7 +13037,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getTollRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getTollRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -13057,7 +13057,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setTollRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setTollRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -13076,7 +13076,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -13096,7 +13096,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -13115,7 +13115,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -13148,7 +13148,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -13167,7 +13167,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getAction(" + "" + ")");
             }
         
             // invoke native method
@@ -13187,7 +13187,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -13206,7 +13206,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getAssistantAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getAssistantAction(" + "" + ")");
             }
         
             // invoke native method
@@ -13226,7 +13226,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setAssistantAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setAssistantAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -13245,7 +13245,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getRouteSearchCityList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getRouteSearchCityList(" + "" + ")");
             }
         
             // invoke native method
@@ -13278,7 +13278,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setRouteSearchCityList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setRouteSearchCityList(" + var1 + ")");
             }
         
             // invoke native method
@@ -13297,7 +13297,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::getTMCs()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::getTMCs(" + "" + ")");
             }
         
             // invoke native method
@@ -13330,7 +13330,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveStep@" + refId + "::setTMCs()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveStep@" + refId + "::setTMCs(" + var1 + ")");
             }
         
             // invoke native method
@@ -13350,7 +13350,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setInstruction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setInstruction(" + var1 + ")");
             }
         
             // invoke native method
@@ -13370,7 +13370,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setOrientation(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setOrientation(" + var1 + ")");
             }
         
             // invoke native method
@@ -13390,7 +13390,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -13410,7 +13410,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setTolls(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setTolls(" + var1 + ")");
             }
         
             // invoke native method
@@ -13430,7 +13430,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -13450,7 +13450,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setTollDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setTollDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -13470,7 +13470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setTollRoad(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setTollRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -13490,7 +13490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -13514,7 +13514,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setPolyline(" + var1 + ")");
             }
         
             // invoke native method
@@ -13534,7 +13534,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -13554,7 +13554,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setAssistantAction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setAssistantAction(" + var1 + ")");
             }
         
             // invoke native method
@@ -13578,7 +13578,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setRouteSearchCityList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setRouteSearchCityList(" + var1 + ")");
             }
         
             // invoke native method
@@ -13602,7 +13602,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::setTMCs()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::setTMCs(" + var1 + ")");
             }
         
             // invoke native method
@@ -13621,7 +13621,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getInstruction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getInstruction(" + "" + ")");
             }
         
             // invoke native method
@@ -13640,7 +13640,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getOrientation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getOrientation(" + "" + ")");
             }
         
             // invoke native method
@@ -13659,7 +13659,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -13678,7 +13678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getTolls()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getTolls(" + "" + ")");
             }
         
             // invoke native method
@@ -13697,7 +13697,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -13716,7 +13716,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getTollDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getTollDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -13735,7 +13735,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getTollRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getTollRoad(" + "" + ")");
             }
         
             // invoke native method
@@ -13754,7 +13754,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -13773,7 +13773,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getPolyline()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getPolyline(" + "" + ")");
             }
         
             // invoke native method
@@ -13801,7 +13801,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getAction(" + "" + ")");
             }
         
             // invoke native method
@@ -13820,7 +13820,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getAssistantAction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getAssistantAction(" + "" + ")");
             }
         
             // invoke native method
@@ -13839,7 +13839,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getRouteSearchCityList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getRouteSearchCityList(" + "" + ")");
             }
         
             // invoke native method
@@ -13867,7 +13867,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckStep@" + refId + "::getTMCs()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckStep@" + refId + "::getTMCs(" + "" + ")");
             }
         
             // invoke native method
@@ -13895,7 +13895,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@" + refId + "::getTaxiCost()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRouteResult@" + refId + "::getTaxiCost(" + "" + ")");
             }
         
             // invoke native method
@@ -13915,7 +13915,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@" + refId + "::setTaxiCost(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRouteResult@" + refId + "::setTaxiCost(" + var1 + ")");
             }
         
             // invoke native method
@@ -13934,7 +13934,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@" + refId + "::getPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRouteResult@" + refId + "::getPaths(" + "" + ")");
             }
         
             // invoke native method
@@ -13967,7 +13967,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@" + refId + "::setPaths()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRouteResult@" + refId + "::setPaths(" + var1 + ")");
             }
         
             // invoke native method
@@ -13986,7 +13986,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@" + refId + "::getDriveQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRouteResult@" + refId + "::getDriveQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -14013,7 +14013,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DriveRouteResult@" + refId + "::setDriveQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DriveRouteResult@" + refId + "::setDriveQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -14032,7 +14032,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::getStrategy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::getStrategy(" + "" + ")");
             }
         
             // invoke native method
@@ -14052,7 +14052,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::setStrategy(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::setStrategy(" + var1 + ")");
             }
         
             // invoke native method
@@ -14071,7 +14071,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::getTolls()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::getTolls(" + "" + ")");
             }
         
             // invoke native method
@@ -14091,7 +14091,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::setTolls(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::setTolls(" + var1 + ")");
             }
         
             // invoke native method
@@ -14110,7 +14110,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::getTollDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::getTollDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -14130,7 +14130,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::setTollDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::setTollDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -14149,7 +14149,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::getTotalTrafficlights()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::getTotalTrafficlights(" + "" + ")");
             }
         
             // invoke native method
@@ -14169,7 +14169,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::setTotalTrafficlights(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::setTotalTrafficlights(" + var1 + ")");
             }
         
             // invoke native method
@@ -14188,7 +14188,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::getSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::getSteps(" + "" + ")");
             }
         
             // invoke native method
@@ -14221,7 +14221,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::setSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::setSteps(" + var1 + ")");
             }
         
             // invoke native method
@@ -14240,7 +14240,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::getRestriction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::getRestriction(" + "" + ")");
             }
         
             // invoke native method
@@ -14260,7 +14260,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePath@" + refId + "::setRestriction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePath@" + refId + "::setRestriction(" + var1 + ")");
             }
         
             // invoke native method
@@ -14280,7 +14280,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -14300,7 +14300,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -14320,7 +14320,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setStrategy(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setStrategy(" + var1 + ")");
             }
         
             // invoke native method
@@ -14340,7 +14340,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setTolls(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setTolls(" + var1 + ")");
             }
         
             // invoke native method
@@ -14360,7 +14360,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setTollDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setTollDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -14380,7 +14380,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setTotalTrafficlights(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setTotalTrafficlights(" + var1 + ")");
             }
         
             // invoke native method
@@ -14400,7 +14400,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setRestriction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setRestriction(" + var1 + ")");
             }
         
             // invoke native method
@@ -14424,7 +14424,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::setSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::setSteps(" + var1 + ")");
             }
         
             // invoke native method
@@ -14443,7 +14443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -14462,7 +14462,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -14481,7 +14481,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getStrategy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getStrategy(" + "" + ")");
             }
         
             // invoke native method
@@ -14500,7 +14500,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getTolls()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getTolls(" + "" + ")");
             }
         
             // invoke native method
@@ -14519,7 +14519,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getTollDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getTollDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -14538,7 +14538,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getTotalTrafficlights()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getTotalTrafficlights(" + "" + ")");
             }
         
             // invoke native method
@@ -14557,7 +14557,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getRestriction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getRestriction(" + "" + ")");
             }
         
             // invoke native method
@@ -14576,7 +14576,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TruckPath@" + refId + "::getSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TruckPath@" + refId + "::getSteps(" + "" + ")");
             }
         
             // invoke native method
@@ -14604,7 +14604,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Doorway@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Doorway@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -14624,7 +14624,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Doorway@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Doorway@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -14643,7 +14643,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Doorway@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Doorway@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -14670,7 +14670,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Doorway@" + refId + "::setLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Doorway@" + refId + "::setLatLonPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -14689,7 +14689,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanPath@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -14709,7 +14709,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanPath@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -14728,7 +14728,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@" + refId + "::getTrafficLights()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanPath@" + refId + "::getTrafficLights(" + "" + ")");
             }
         
             // invoke native method
@@ -14748,7 +14748,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@" + refId + "::setTrafficLights(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanPath@" + refId + "::setTrafficLights(" + var1 + ")");
             }
         
             // invoke native method
@@ -14767,7 +14767,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@" + refId + "::getSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanPath@" + refId + "::getSteps(" + "" + ")");
             }
         
             // invoke native method
@@ -14800,7 +14800,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DrivePlanPath@" + refId + "::setSteps()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DrivePlanPath@" + refId + "::setSteps(" + var1 + ")");
             }
         
             // invoke native method
@@ -14819,7 +14819,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::getPathindex()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::getPathindex(" + "" + ")");
             }
         
             // invoke native method
@@ -14839,7 +14839,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::setPathindex(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::setPathindex(" + var1 + ")");
             }
         
             // invoke native method
@@ -14858,7 +14858,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -14878,7 +14878,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -14897,7 +14897,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::getTolls()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::getTolls(" + "" + ")");
             }
         
             // invoke native method
@@ -14917,7 +14917,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::setTolls(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::setTolls(" + var1 + ")");
             }
         
             // invoke native method
@@ -14936,7 +14936,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::getRestriction()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::getRestriction(" + "" + ")");
             }
         
             // invoke native method
@@ -14956,7 +14956,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::setRestriction(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::setRestriction(" + var1 + ")");
             }
         
             // invoke native method
@@ -14980,7 +14980,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::setTMCs()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::setTMCs(" + var1 + ")");
             }
         
             // invoke native method
@@ -14999,7 +14999,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.TimeInfosElement@" + refId + "::getTMCs()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.TimeInfosElement@" + refId + "::getTMCs(" + "" + ")");
             }
         
             // invoke native method
@@ -15030,7 +15030,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener@" + refId + "::onTruckRouteSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener@" + refId + "::onTruckRouteSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -15049,7 +15049,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::getOriginId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::getOriginId(" + "" + ")");
             }
         
             // invoke native method
@@ -15068,7 +15068,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::getDestId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::getDestId(" + "" + ")");
             }
         
             // invoke native method
@@ -15087,7 +15087,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -15106,7 +15106,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -15125,7 +15125,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::getErrorInfo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::getErrorInfo(" + "" + ")");
             }
         
             // invoke native method
@@ -15144,7 +15144,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::getErrorCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::getErrorCode(" + "" + ")");
             }
         
             // invoke native method
@@ -15164,7 +15164,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::setOriginId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::setOriginId(" + var1 + ")");
             }
         
             // invoke native method
@@ -15184,7 +15184,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::setDestId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::setDestId(" + var1 + ")");
             }
         
             // invoke native method
@@ -15204,7 +15204,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -15224,7 +15224,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -15244,7 +15244,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::setErrorInfo(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::setErrorInfo(" + var1 + ")");
             }
         
             // invoke native method
@@ -15264,7 +15264,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.DistanceItem@" + refId + "::setErrorCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceItem@" + refId + "::setErrorCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -15283,7 +15283,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Path@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Path@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -15303,7 +15303,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Path@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Path@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -15322,7 +15322,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Path@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Path@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -15342,7 +15342,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.route.Path@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.Path@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -15362,7 +15362,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::setId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::setId(" + var1 + ")");
             }
         
             // invoke native method
@@ -15382,7 +15382,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -15401,7 +15401,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::getCityCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::getCityCode(" + "" + ")");
             }
         
             // invoke native method
@@ -15421,7 +15421,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::setCityCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::setCityCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -15440,7 +15440,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::getRoadWidth()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::getRoadWidth(" + "" + ")");
             }
         
             // invoke native method
@@ -15460,7 +15460,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::setRoadWidth(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::setRoadWidth(" + var1 + ")");
             }
         
             // invoke native method
@@ -15479,7 +15479,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::getType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::getType(" + "" + ")");
             }
         
             // invoke native method
@@ -15499,7 +15499,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::setType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::setType(" + var1 + ")");
             }
         
             // invoke native method
@@ -15518,7 +15518,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::getCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::getCenterPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -15545,7 +15545,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::setCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::setCenterPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -15564,7 +15564,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::getId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::getId(" + "" + ")");
             }
         
             // invoke native method
@@ -15583,7 +15583,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Road@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Road@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -15602,7 +15602,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -15622,7 +15622,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -15641,7 +15641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::getDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::getDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -15661,7 +15661,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::setDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::setDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -15680,7 +15680,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::getFirstRoadId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::getFirstRoadId(" + "" + ")");
             }
         
             // invoke native method
@@ -15700,7 +15700,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::setFirstRoadId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::setFirstRoadId(" + var1 + ")");
             }
         
             // invoke native method
@@ -15719,7 +15719,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::getFirstRoadName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::getFirstRoadName(" + "" + ")");
             }
         
             // invoke native method
@@ -15739,7 +15739,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::setFirstRoadName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::setFirstRoadName(" + var1 + ")");
             }
         
             // invoke native method
@@ -15758,7 +15758,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::getSecondRoadId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::getSecondRoadId(" + "" + ")");
             }
         
             // invoke native method
@@ -15778,7 +15778,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::setSecondRoadId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::setSecondRoadId(" + var1 + ")");
             }
         
             // invoke native method
@@ -15797,7 +15797,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::getSecondRoadName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::getSecondRoadName(" + "" + ")");
             }
         
             // invoke native method
@@ -15817,7 +15817,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.road.Crossroad@" + refId + "::setSecondRoadName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.road.Crossroad@" + refId + "::setSecondRoadName(" + var1 + ")");
             }
         
             // invoke native method
@@ -15837,7 +15837,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@" + refId + "::onUserInfoCleared(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyListener@" + refId + "::onUserInfoCleared(" + var1 + ")");
             }
         
             // invoke native method
@@ -15859,7 +15859,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@" + refId + "::onNearbyInfoSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyListener@" + refId + "::onNearbyInfoSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -15879,7 +15879,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyListener@" + refId + "::onNearbyInfoUploaded(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyListener@" + refId + "::onNearbyInfoUploaded(" + var1 + ")");
             }
         
             // invoke native method
@@ -15898,7 +15898,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfoCallback@" + refId + "::OnUploadInfoCallback()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfoCallback@" + refId + "::OnUploadInfoCallback(" + "" + ")");
             }
         
             // invoke native method
@@ -15925,7 +15925,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setUserID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setUserID(" + var1 + ")");
             }
         
             // invoke native method
@@ -15944,7 +15944,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getUserID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getUserID(" + "" + ")");
             }
         
             // invoke native method
@@ -15963,7 +15963,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -15990,7 +15990,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -16010,7 +16010,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setTimeStamp(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setTimeStamp(" + var1 + ")");
             }
         
             // invoke native method
@@ -16029,7 +16029,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getTimeStamp()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getTimeStamp(" + "" + ")");
             }
         
             // invoke native method
@@ -16049,7 +16049,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -16068,7 +16068,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -16088,7 +16088,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setDrivingDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::setDrivingDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -16107,7 +16107,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getDrivingDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbyInfo@" + refId + "::getDrivingDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -16127,7 +16127,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@" + refId + "::setPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfo@" + refId + "::setPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -16146,7 +16146,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@" + refId + "::getPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfo@" + refId + "::getPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -16173,7 +16173,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@" + refId + "::setUserID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfo@" + refId + "::setUserID(" + var1 + ")");
             }
         
             // invoke native method
@@ -16192,7 +16192,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@" + refId + "::getUserID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfo@" + refId + "::getUserID(" + "" + ")");
             }
         
             // invoke native method
@@ -16211,7 +16211,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@" + refId + "::getCoordType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfo@" + refId + "::getCoordType(" + "" + ")");
             }
         
             // invoke native method
@@ -16231,7 +16231,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.UploadInfo@" + refId + "::setCoordType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.UploadInfo@" + refId + "::setCoordType(" + var1 + ")");
             }
         
             // invoke native method
@@ -16250,7 +16250,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch::getInstance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch::getInstance(" + var0 + ")");
             }
         
             // invoke native method
@@ -16276,7 +16276,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::addNearbyListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::addNearbyListener(" + "" + ")");
             }
         
             // invoke native method
@@ -16288,7 +16288,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -16308,7 +16308,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -16331,7 +16331,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -16363,7 +16363,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::removeNearbyListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::removeNearbyListener(" + "" + ")");
             }
         
             // invoke native method
@@ -16375,7 +16375,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -16395,7 +16395,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -16418,7 +16418,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -16450,7 +16450,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::clearUserInfoAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::clearUserInfoAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -16470,7 +16470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::setUserID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::setUserID(" + var1 + ")");
             }
         
             // invoke native method
@@ -16490,7 +16490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::startUploadNearbyInfoAuto(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::startUploadNearbyInfoAuto(" + var2 + ")");
             }
         
             // invoke native method
@@ -16502,7 +16502,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public com.amap.api.services.nearby.UploadInfo OnUploadInfoCallback() {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: OnUploadInfoCallback([])");
+                    Log.d("java-callback", "fluttify-java-callback: OnUploadInfoCallback(" + "" + ")");
         
                     // convert to jsonable data
         
@@ -16534,7 +16534,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::stopUploadNearbyInfoAuto()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::stopUploadNearbyInfoAuto(" + "" + ")");
             }
         
             // invoke native method
@@ -16554,7 +16554,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::uploadNearbyInfoAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::uploadNearbyInfoAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -16574,7 +16574,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::searchNearbyInfoAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::searchNearbyInfoAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -16594,7 +16594,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch@" + refId + "::searchNearbyInfo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch@" + refId + "::searchNearbyInfo(" + var1 + ")");
             }
         
             // invoke native method
@@ -16619,7 +16619,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch::destroy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch::destroy(" + "" + ")");
             }
         
             // invoke native method
@@ -16638,7 +16638,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@" + refId + "::getNearbyInfoList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearchResult@" + refId + "::getNearbyInfoList(" + "" + ")");
             }
         
             // invoke native method
@@ -16666,7 +16666,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@" + refId + "::getTotalNum()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearchResult@" + refId + "::getTotalNum(" + "" + ")");
             }
         
             // invoke native method
@@ -16690,7 +16690,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearchResult@" + refId + "::setNearbyInfoList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearchResult@" + refId + "::setNearbyInfoList(" + var1 + ")");
             }
         
             // invoke native method
@@ -16710,7 +16710,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setCenterPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -16729,7 +16729,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getCenterPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -16755,7 +16755,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getRadius()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getRadius(" + "" + ")");
             }
         
             // invoke native method
@@ -16775,7 +16775,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setRadius(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setRadius(" + var1 + ")");
             }
         
             // invoke native method
@@ -16795,7 +16795,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setType(" + var1 + ")");
             }
         
             // invoke native method
@@ -16814,7 +16814,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getType(" + "" + ")");
             }
         
             // invoke native method
@@ -16834,7 +16834,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setCoordType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setCoordType(" + var1 + ")");
             }
         
             // invoke native method
@@ -16853,7 +16853,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getCoordType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getCoordType(" + "" + ")");
             }
         
             // invoke native method
@@ -16873,7 +16873,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setTimeRange(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::setTimeRange(" + var1 + ")");
             }
         
             // invoke native method
@@ -16892,7 +16892,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getTimeRange()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.nearby.NearbySearch.NearbyQuery@" + refId + "::getTimeRange(" + "" + ")");
             }
         
             // invoke native method
@@ -16911,7 +16911,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getID(" + "" + ")");
             }
         
             // invoke native method
@@ -16931,7 +16931,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setID(" + var1 + ")");
             }
         
             // invoke native method
@@ -16950,7 +16950,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getTitle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getTitle(" + "" + ")");
             }
         
             // invoke native method
@@ -16970,7 +16970,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setTitle(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setTitle(" + var1 + ")");
             }
         
             // invoke native method
@@ -16989,7 +16989,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -17016,7 +17016,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -17035,7 +17035,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -17055,7 +17055,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -17074,7 +17074,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getDuration()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::getDuration(" + "" + ")");
             }
         
             // invoke native method
@@ -17094,7 +17094,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setDuration(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOIItem@" + refId + "::setDuration(" + var1 + ")");
             }
         
             // invoke native method
@@ -17113,7 +17113,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::setPoiSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::setPoiSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -17125,7 +17125,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoutePoiSearched(com.amap.api.services.routepoisearch.RoutePOISearchResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRoutePoiSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -17161,7 +17161,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -17180,7 +17180,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::searchRoutePOIAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::searchRoutePOIAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -17199,7 +17199,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::searchRoutePOI()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearch@" + refId + "::searchRoutePOI(" + "" + ")");
             }
         
             // invoke native method
@@ -17225,7 +17225,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchResult@" + refId + "::getRoutePois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchResult@" + refId + "::getRoutePois(" + "" + ")");
             }
         
             // invoke native method
@@ -17253,7 +17253,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchResult@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchResult@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -17282,7 +17282,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener@" + refId + "::onRoutePoiSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener@" + refId + "::onRoutePoiSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -17301,7 +17301,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getFrom()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getFrom(" + "" + ")");
             }
         
             // invoke native method
@@ -17327,7 +17327,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getTo(" + "" + ")");
             }
         
             // invoke native method
@@ -17353,7 +17353,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getMode(" + "" + ")");
             }
         
             // invoke native method
@@ -17372,7 +17372,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getSearchType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getSearchType(" + "" + ")");
             }
         
             // invoke native method
@@ -17398,7 +17398,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getRange()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getRange(" + "" + ")");
             }
         
             // invoke native method
@@ -17417,7 +17417,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getPolylines()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::getPolylines(" + "" + ")");
             }
         
             // invoke native method
@@ -17445,7 +17445,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.routepoisearch.RoutePOISearchQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -17471,7 +17471,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getID(" + "" + ")");
             }
         
             // invoke native method
@@ -17490,7 +17490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -17510,7 +17510,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -17529,7 +17529,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getTitle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getTitle(" + "" + ")");
             }
         
             // invoke native method
@@ -17548,7 +17548,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getSnippet()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getSnippet(" + "" + ")");
             }
         
             // invoke native method
@@ -17567,7 +17567,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -17593,7 +17593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getCreatetime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getCreatetime(" + "" + ")");
             }
         
             // invoke native method
@@ -17613,7 +17613,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::setCreatetime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::setCreatetime(" + var1 + ")");
             }
         
             // invoke native method
@@ -17632,7 +17632,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getUpdatetime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getUpdatetime(" + "" + ")");
             }
         
             // invoke native method
@@ -17652,7 +17652,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::setUpdatetime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::setUpdatetime(" + var1 + ")");
             }
         
             // invoke native method
@@ -17671,7 +17671,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::getCloudImage()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getCloudImage(" + "" + ")");
             }
         
             // invoke native method
@@ -17704,7 +17704,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudItem@" + refId + "::setmCloudImage()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::setmCloudImage(" + var1 + ")");
             }
         
             // invoke native method
@@ -17723,7 +17723,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getQueryString()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getQueryString(" + "" + ")");
             }
         
             // invoke native method
@@ -17743,7 +17743,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setTableID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setTableID(" + var1 + ")");
             }
         
             // invoke native method
@@ -17762,7 +17762,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getTableID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getTableID(" + "" + ")");
             }
         
             // invoke native method
@@ -17781,7 +17781,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getPageNum()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getPageNum(" + "" + ")");
             }
         
             // invoke native method
@@ -17801,7 +17801,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setPageNum(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setPageNum(" + var1 + ")");
             }
         
             // invoke native method
@@ -17821,7 +17821,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setPageSize(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setPageSize(" + var1 + ")");
             }
         
             // invoke native method
@@ -17840,7 +17840,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getPageSize()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getPageSize(" + "" + ")");
             }
         
             // invoke native method
@@ -17860,7 +17860,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setBound(" + var1 + ")");
             }
         
             // invoke native method
@@ -17879,7 +17879,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getBound(" + "" + ")");
             }
         
             // invoke native method
@@ -17908,7 +17908,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::addFilterString(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::addFilterString(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -17927,7 +17927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getFilterString()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getFilterString(" + "" + ")");
             }
         
             // invoke native method
@@ -17951,7 +17951,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::addFilterNum(\"var1\":$var1, \"var2\":$var2, \"var3\":$var3)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::addFilterNum(" + var1 + var2 + var3 + ")");
             }
         
             // invoke native method
@@ -17970,7 +17970,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getFilterNumString()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getFilterNumString(" + "" + ")");
             }
         
             // invoke native method
@@ -17990,7 +17990,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setSortingrules()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::setSortingrules(" + var1 + ")");
             }
         
             // invoke native method
@@ -18009,7 +18009,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getSortingrules()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::getSortingrules(" + "" + ")");
             }
         
             // invoke native method
@@ -18036,7 +18036,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::queryEquals()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::queryEquals(" + var1 + ")");
             }
         
             // invoke native method
@@ -18067,7 +18067,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudResult::createPagedResult(\"var1\":$var1, \"var3\":$var3)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudResult::createPagedResult(" + var0 + var1 + var2 + var3 + var4 + ")");
             }
         
             // invoke native method
@@ -18093,7 +18093,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudResult@" + refId + "::getPageCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudResult@" + refId + "::getPageCount(" + "" + ")");
             }
         
             // invoke native method
@@ -18112,7 +18112,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudResult@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudResult@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -18138,7 +18138,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudResult@" + refId + "::getBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudResult@" + refId + "::getBound(" + "" + ")");
             }
         
             // invoke native method
@@ -18164,7 +18164,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudResult@" + refId + "::getClouds()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudResult@" + refId + "::getClouds(" + "" + ")");
             }
         
             // invoke native method
@@ -18192,7 +18192,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudResult@" + refId + "::getTotalCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudResult@" + refId + "::getTotalCount(" + "" + ")");
             }
         
             // invoke native method
@@ -18211,7 +18211,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@" + refId + "::setOnCloudSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch@" + refId + "::setOnCloudSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -18223,7 +18223,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudSearched(com.amap.api.services.cloud.CloudResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onCloudSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -18246,7 +18246,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudItemDetailSearched(com.amap.api.services.cloud.CloudItemDetail var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onCloudItemDetailSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -18282,7 +18282,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@" + refId + "::searchCloudAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch@" + refId + "::searchCloudAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -18304,7 +18304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch@" + refId + "::searchCloudDetailAsyn(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch@" + refId + "::searchCloudDetailAsyn(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -18323,7 +18323,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getLowerLeft()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getLowerLeft(" + "" + ")");
             }
         
             // invoke native method
@@ -18349,7 +18349,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getUpperRight()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getUpperRight(" + "" + ")");
             }
         
             // invoke native method
@@ -18375,7 +18375,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getCenter()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getCenter(" + "" + ")");
             }
         
             // invoke native method
@@ -18401,7 +18401,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getRange()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getRange(" + "" + ")");
             }
         
             // invoke native method
@@ -18420,7 +18420,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getShape()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getShape(" + "" + ")");
             }
         
             // invoke native method
@@ -18439,7 +18439,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -18458,7 +18458,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getPolyGonList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::getPolyGonList(" + "" + ")");
             }
         
             // invoke native method
@@ -18486,7 +18486,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudImage@" + refId + "::getId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudImage@" + refId + "::getId(" + "" + ")");
             }
         
             // invoke native method
@@ -18506,7 +18506,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudImage@" + refId + "::setId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudImage@" + refId + "::setId(" + var1 + ")");
             }
         
             // invoke native method
@@ -18525,7 +18525,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudImage@" + refId + "::getPreurl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudImage@" + refId + "::getPreurl(" + "" + ")");
             }
         
             // invoke native method
@@ -18545,7 +18545,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudImage@" + refId + "::setPreurl(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudImage@" + refId + "::setPreurl(" + var1 + ")");
             }
         
             // invoke native method
@@ -18564,7 +18564,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudImage@" + refId + "::getUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudImage@" + refId + "::getUrl(" + "" + ")");
             }
         
             // invoke native method
@@ -18584,7 +18584,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudImage@" + refId + "::setUrl(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudImage@" + refId + "::setUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -18606,7 +18606,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@" + refId + "::onCloudSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@" + refId + "::onCloudSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -18628,7 +18628,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@" + refId + "::onCloudItemDetailSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener@" + refId + "::onCloudItemDetailSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -18647,7 +18647,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDate()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDate(" + "" + ")");
             }
         
             // invoke native method
@@ -18667,7 +18667,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDate(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDate(" + var1 + ")");
             }
         
             // invoke native method
@@ -18686,7 +18686,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getWeek()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getWeek(" + "" + ")");
             }
         
             // invoke native method
@@ -18706,7 +18706,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setWeek(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setWeek(" + var1 + ")");
             }
         
             // invoke native method
@@ -18725,7 +18725,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayWeather()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayWeather(" + "" + ")");
             }
         
             // invoke native method
@@ -18745,7 +18745,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayWeather(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayWeather(" + var1 + ")");
             }
         
             // invoke native method
@@ -18764,7 +18764,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightWeather()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightWeather(" + "" + ")");
             }
         
             // invoke native method
@@ -18784,7 +18784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightWeather(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightWeather(" + var1 + ")");
             }
         
             // invoke native method
@@ -18803,7 +18803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayTemp()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayTemp(" + "" + ")");
             }
         
             // invoke native method
@@ -18823,7 +18823,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayTemp(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayTemp(" + var1 + ")");
             }
         
             // invoke native method
@@ -18842,7 +18842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightTemp()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightTemp(" + "" + ")");
             }
         
             // invoke native method
@@ -18862,7 +18862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightTemp(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightTemp(" + var1 + ")");
             }
         
             // invoke native method
@@ -18881,7 +18881,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayWindDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayWindDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -18901,7 +18901,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayWindDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayWindDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -18920,7 +18920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightWindDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightWindDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -18940,7 +18940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightWindDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightWindDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -18959,7 +18959,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayWindPower()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getDayWindPower(" + "" + ")");
             }
         
             // invoke native method
@@ -18979,7 +18979,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayWindPower(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setDayWindPower(" + var1 + ")");
             }
         
             // invoke native method
@@ -18998,7 +18998,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightWindPower()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::getNightWindPower(" + "" + ")");
             }
         
             // invoke native method
@@ -19018,7 +19018,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightWindPower(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalDayWeatherForecast@" + refId + "::setNightWindPower(" + var1 + ")");
             }
         
             // invoke native method
@@ -19037,7 +19037,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearchQuery@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -19056,7 +19056,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@" + refId + "::getType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearchQuery@" + refId + "::getType(" + "" + ")");
             }
         
             // invoke native method
@@ -19075,7 +19075,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearchQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearchQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -19104,7 +19104,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@" + refId + "::onWeatherLiveSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@" + refId + "::onWeatherLiveSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -19126,7 +19126,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@" + refId + "::onWeatherForecastSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener@" + refId + "::onWeatherForecastSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -19147,7 +19147,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult(" + var0 + var1 + ")");
             }
         
             // invoke native method
@@ -19173,7 +19173,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult@" + refId + "::getWeatherForecastQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecastResult@" + refId + "::getWeatherForecastQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -19199,7 +19199,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecastResult@" + refId + "::getForecastResult()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecastResult@" + refId + "::getForecastResult(" + "" + ")");
             }
         
             // invoke native method
@@ -19225,7 +19225,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getProvince()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getProvince(" + "" + ")");
             }
         
             // invoke native method
@@ -19245,7 +19245,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setProvince(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setProvince(" + var1 + ")");
             }
         
             // invoke native method
@@ -19264,7 +19264,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -19284,7 +19284,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -19303,7 +19303,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -19323,7 +19323,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -19342,7 +19342,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getReportTime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getReportTime(" + "" + ")");
             }
         
             // invoke native method
@@ -19362,7 +19362,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setReportTime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setReportTime(" + var1 + ")");
             }
         
             // invoke native method
@@ -19381,7 +19381,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getWeatherForecast()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::getWeatherForecast(" + "" + ")");
             }
         
             // invoke native method
@@ -19414,7 +19414,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setWeatherForecast()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherForecast@" + refId + "::setWeatherForecast(" + var1 + ")");
             }
         
             // invoke native method
@@ -19433,7 +19433,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -19460,7 +19460,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -19479,7 +19479,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@" + refId + "::searchWeatherAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearch@" + refId + "::searchWeatherAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -19498,7 +19498,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.WeatherSearch@" + refId + "::setOnWeatherSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.WeatherSearch@" + refId + "::setOnWeatherSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -19510,7 +19510,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherLiveSearched(com.amap.api.services.weather.LocalWeatherLiveResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWeatherLiveSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -19533,7 +19533,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherForecastSearched(com.amap.api.services.weather.LocalWeatherForecastResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWeatherForecastSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -19568,7 +19568,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getProvince()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getProvince(" + "" + ")");
             }
         
             // invoke native method
@@ -19587,7 +19587,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -19606,7 +19606,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -19625,7 +19625,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getWeather()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getWeather(" + "" + ")");
             }
         
             // invoke native method
@@ -19644,7 +19644,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getTemperature()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getTemperature(" + "" + ")");
             }
         
             // invoke native method
@@ -19663,7 +19663,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getWindDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getWindDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -19682,7 +19682,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getWindPower()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getWindPower(" + "" + ")");
             }
         
             // invoke native method
@@ -19701,7 +19701,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getHumidity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getHumidity(" + "" + ")");
             }
         
             // invoke native method
@@ -19720,7 +19720,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getReportTime()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::getReportTime(" + "" + ")");
             }
         
             // invoke native method
@@ -19740,7 +19740,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setProvince(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setProvince(" + var1 + ")");
             }
         
             // invoke native method
@@ -19760,7 +19760,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -19780,7 +19780,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -19800,7 +19800,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setWeather(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setWeather(" + var1 + ")");
             }
         
             // invoke native method
@@ -19820,7 +19820,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setTemperature(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setTemperature(" + var1 + ")");
             }
         
             // invoke native method
@@ -19840,7 +19840,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setWindDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setWindDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -19860,7 +19860,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setWindPower(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setWindPower(" + var1 + ")");
             }
         
             // invoke native method
@@ -19880,7 +19880,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setHumidity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setHumidity(" + var1 + ")");
             }
         
             // invoke native method
@@ -19900,7 +19900,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setReportTime(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLive@" + refId + "::setReportTime(" + var1 + ")");
             }
         
             // invoke native method
@@ -19921,7 +19921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult(" + var0 + var1 + ")");
             }
         
             // invoke native method
@@ -19947,7 +19947,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult@" + refId + "::getWeatherLiveQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLiveResult@" + refId + "::getWeatherLiveQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -19973,7 +19973,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.weather.LocalWeatherLiveResult@" + refId + "::getLiveResult()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.weather.LocalWeatherLiveResult@" + refId + "::getLiveResult(" + "" + ")");
             }
         
             // invoke native method
@@ -19999,7 +19999,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@" + refId + "::getCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.BusinessArea@" + refId + "::getCenterPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -20026,7 +20026,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@" + refId + "::setCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.BusinessArea@" + refId + "::setCenterPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -20045,7 +20045,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.BusinessArea@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -20065,7 +20065,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.BusinessArea@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.BusinessArea@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -20084,7 +20084,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::getLocationName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::getLocationName(" + "" + ")");
             }
         
             // invoke native method
@@ -20104,7 +20104,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::setLocationName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::setLocationName(" + var1 + ")");
             }
         
             // invoke native method
@@ -20123,7 +20123,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -20143,7 +20143,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeQuery@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -20163,7 +20163,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocation(" + var1 + ")");
             }
         
             // invoke native method
@@ -20190,7 +20190,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocationName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocationName(" + var1 + ")");
             }
         
             // invoke native method
@@ -20218,7 +20218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::setOnGeocodeSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::setOnGeocodeSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -20230,7 +20230,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRegeocodeSearched(com.amap.api.services.geocoder.RegeocodeResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRegeocodeSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -20253,7 +20253,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGeocodeSearched(com.amap.api.services.geocoder.GeocodeResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onGeocodeSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -20289,7 +20289,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocationAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocationAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -20309,7 +20309,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocationNameAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch@" + refId + "::getFromLocationNameAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -20328,7 +20328,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::getRegeocodeQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::getRegeocodeQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -20355,7 +20355,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::setRegeocodeQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::setRegeocodeQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -20374,7 +20374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::getRegeocodeAddress()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::getRegeocodeAddress(" + "" + ")");
             }
         
             // invoke native method
@@ -20401,7 +20401,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::setRegeocodeAddress()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeResult@" + refId + "::setRegeocodeAddress(" + var1 + ")");
             }
         
             // invoke native method
@@ -20420,7 +20420,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::getGeocodeQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::getGeocodeQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -20447,7 +20447,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::setGeocodeQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::setGeocodeQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -20466,7 +20466,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::getGeocodeAddressList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::getGeocodeAddressList(" + "" + ")");
             }
         
             // invoke native method
@@ -20499,7 +20499,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::setGeocodeAddressList()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeResult@" + refId + "::setGeocodeAddressList(" + var1 + ")");
             }
         
             // invoke native method
@@ -20518,7 +20518,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiId(" + "" + ")");
             }
         
             // invoke native method
@@ -20537,7 +20537,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiName(" + "" + ")");
             }
         
             // invoke native method
@@ -20556,7 +20556,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -20575,7 +20575,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiCenterPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiCenterPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -20601,7 +20601,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiArea()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::getAoiArea(" + "" + ")");
             }
         
             // invoke native method
@@ -20621,7 +20621,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::setId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::setId(" + var1 + ")");
             }
         
             // invoke native method
@@ -20641,7 +20641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -20661,7 +20661,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::setAdcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::setAdcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -20681,7 +20681,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::setLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::setLocation(" + var1 + ")");
             }
         
             // invoke native method
@@ -20701,7 +20701,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.AoiItem@" + refId + "::setArea(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.AoiItem@" + refId + "::setArea(" + var1 + ")");
             }
         
             // invoke native method
@@ -20723,7 +20723,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@" + refId + "::onRegeocodeSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@" + refId + "::onRegeocodeSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -20745,7 +20745,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@" + refId + "::onGeocodeSearched(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener@" + refId + "::onGeocodeSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -20764,7 +20764,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getId()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getId(" + "" + ")");
             }
         
             // invoke native method
@@ -20784,7 +20784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setId(" + var1 + ")");
             }
         
             // invoke native method
@@ -20803,7 +20803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -20823,7 +20823,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -20842,7 +20842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -20862,7 +20862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -20881,7 +20881,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -20901,7 +20901,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -20920,7 +20920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getLatLngPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::getLatLngPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -20947,7 +20947,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setLatLngPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeRoad@" + refId + "::setLatLngPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -20966,7 +20966,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getFormatAddress()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getFormatAddress(" + "" + ")");
             }
         
             // invoke native method
@@ -20986,7 +20986,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setFormatAddress(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setFormatAddress(" + var1 + ")");
             }
         
             // invoke native method
@@ -21005,7 +21005,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getProvince()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getProvince(" + "" + ")");
             }
         
             // invoke native method
@@ -21025,7 +21025,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setProvince(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setProvince(" + var1 + ")");
             }
         
             // invoke native method
@@ -21044,7 +21044,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -21064,7 +21064,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -21083,7 +21083,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -21103,7 +21103,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setDistrict(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setDistrict(" + var1 + ")");
             }
         
             // invoke native method
@@ -21122,7 +21122,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getTownship()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getTownship(" + "" + ")");
             }
         
             // invoke native method
@@ -21142,7 +21142,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setTownship(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setTownship(" + var1 + ")");
             }
         
             // invoke native method
@@ -21161,7 +21161,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getNeighborhood()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getNeighborhood(" + "" + ")");
             }
         
             // invoke native method
@@ -21181,7 +21181,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setNeighborhood(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setNeighborhood(" + var1 + ")");
             }
         
             // invoke native method
@@ -21200,7 +21200,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getBuilding()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getBuilding(" + "" + ")");
             }
         
             // invoke native method
@@ -21220,7 +21220,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setBuilding(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setBuilding(" + var1 + ")");
             }
         
             // invoke native method
@@ -21239,7 +21239,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getAdcode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getAdcode(" + "" + ")");
             }
         
             // invoke native method
@@ -21259,7 +21259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setAdcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setAdcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -21278,7 +21278,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -21305,7 +21305,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setLatLonPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -21324,7 +21324,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getLevel()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::getLevel(" + "" + ")");
             }
         
             // invoke native method
@@ -21344,7 +21344,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setLevel(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.GeocodeAddress@" + refId + "::setLevel(" + var1 + ")");
             }
         
             // invoke native method
@@ -21363,7 +21363,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -21390,7 +21390,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -21409,7 +21409,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getRadius()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getRadius(" + "" + ")");
             }
         
             // invoke native method
@@ -21429,7 +21429,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setRadius(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setRadius(" + var1 + ")");
             }
         
             // invoke native method
@@ -21448,7 +21448,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getLatLonType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getLatLonType(" + "" + ")");
             }
         
             // invoke native method
@@ -21468,7 +21468,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setLatLonType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setLatLonType(" + var1 + ")");
             }
         
             // invoke native method
@@ -21487,7 +21487,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getPoiType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::getPoiType(" + "" + ")");
             }
         
             // invoke native method
@@ -21507,7 +21507,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setPoiType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeQuery@" + refId + "::setPoiType(" + var1 + ")");
             }
         
             // invoke native method
@@ -21526,7 +21526,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getStreet()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getStreet(" + "" + ")");
             }
         
             // invoke native method
@@ -21546,7 +21546,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setStreet(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setStreet(" + var1 + ")");
             }
         
             // invoke native method
@@ -21565,7 +21565,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getNumber()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getNumber(" + "" + ")");
             }
         
             // invoke native method
@@ -21585,7 +21585,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setNumber(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setNumber(" + var1 + ")");
             }
         
             // invoke native method
@@ -21604,7 +21604,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getLatLonPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -21631,7 +21631,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setLatLonPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setLatLonPoint(" + var1 + ")");
             }
         
             // invoke native method
@@ -21650,7 +21650,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getDirection()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getDirection(" + "" + ")");
             }
         
             // invoke native method
@@ -21670,7 +21670,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setDirection(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setDirection(" + var1 + ")");
             }
         
             // invoke native method
@@ -21689,7 +21689,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getDistance(" + "" + ")");
             }
         
             // invoke native method
@@ -21709,7 +21709,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setDistance(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::setDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -21728,7 +21728,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getFormatAddress()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getFormatAddress(" + "" + ")");
             }
         
             // invoke native method
@@ -21748,7 +21748,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setFormatAddress(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setFormatAddress(" + var1 + ")");
             }
         
             // invoke native method
@@ -21767,7 +21767,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getProvince()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getProvince(" + "" + ")");
             }
         
             // invoke native method
@@ -21787,7 +21787,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setProvince(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setProvince(" + var1 + ")");
             }
         
             // invoke native method
@@ -21806,7 +21806,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -21826,7 +21826,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCity(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCity(" + var1 + ")");
             }
         
             // invoke native method
@@ -21845,7 +21845,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCityCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCityCode(" + "" + ")");
             }
         
             // invoke native method
@@ -21865,7 +21865,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCityCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCityCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -21884,7 +21884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAdCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAdCode(" + "" + ")");
             }
         
             // invoke native method
@@ -21904,7 +21904,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAdCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAdCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -21923,7 +21923,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -21943,7 +21943,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setDistrict(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setDistrict(" + var1 + ")");
             }
         
             // invoke native method
@@ -21962,7 +21962,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTownship()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTownship(" + "" + ")");
             }
         
             // invoke native method
@@ -21982,7 +21982,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setTownship(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setTownship(" + var1 + ")");
             }
         
             // invoke native method
@@ -22001,7 +22001,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getNeighborhood()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getNeighborhood(" + "" + ")");
             }
         
             // invoke native method
@@ -22021,7 +22021,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setNeighborhood(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setNeighborhood(" + var1 + ")");
             }
         
             // invoke native method
@@ -22040,7 +22040,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getBuilding()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getBuilding(" + "" + ")");
             }
         
             // invoke native method
@@ -22060,7 +22060,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setBuilding(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setBuilding(" + var1 + ")");
             }
         
             // invoke native method
@@ -22079,7 +22079,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getStreetNumber()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getStreetNumber(" + "" + ")");
             }
         
             // invoke native method
@@ -22106,7 +22106,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setStreetNumber()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setStreetNumber(" + var1 + ")");
             }
         
             // invoke native method
@@ -22125,7 +22125,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getRoads()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getRoads(" + "" + ")");
             }
         
             // invoke native method
@@ -22158,7 +22158,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setRoads()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setRoads(" + var1 + ")");
             }
         
             // invoke native method
@@ -22177,7 +22177,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getPois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getPois(" + "" + ")");
             }
         
             // invoke native method
@@ -22210,7 +22210,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setPois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setPois(" + var1 + ")");
             }
         
             // invoke native method
@@ -22229,7 +22229,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCrossroads()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCrossroads(" + "" + ")");
             }
         
             // invoke native method
@@ -22262,7 +22262,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCrossroads()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCrossroads(" + var1 + ")");
             }
         
             // invoke native method
@@ -22281,7 +22281,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getBusinessAreas()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getBusinessAreas(" + "" + ")");
             }
         
             // invoke native method
@@ -22314,7 +22314,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setBusinessAreas()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setBusinessAreas(" + var1 + ")");
             }
         
             // invoke native method
@@ -22333,7 +22333,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getAois(" + "" + ")");
             }
         
             // invoke native method
@@ -22366,7 +22366,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAois()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setAois(" + var1 + ")");
             }
         
             // invoke native method
@@ -22385,7 +22385,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTowncode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getTowncode(" + "" + ")");
             }
         
             // invoke native method
@@ -22405,7 +22405,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setTowncode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setTowncode(" + var1 + ")");
             }
         
             // invoke native method
@@ -22425,7 +22425,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCountry(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::setCountry(" + var1 + ")");
             }
         
             // invoke native method
@@ -22444,7 +22444,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCountry()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.RegeocodeAddress@" + refId + "::getCountry(" + "" + ")");
             }
         
             // invoke native method
@@ -22464,7 +22464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowBoundary(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowBoundary(" + var1 + ")");
             }
         
             // invoke native method
@@ -22483,7 +22483,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowBoundary()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowBoundary(" + "" + ")");
             }
         
             // invoke native method
@@ -22502,7 +22502,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getPageNum()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getPageNum(" + "" + ")");
             }
         
             // invoke native method
@@ -22522,7 +22522,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setPageNum(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setPageNum(" + var1 + ")");
             }
         
             // invoke native method
@@ -22541,7 +22541,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getPageSize()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getPageSize(" + "" + ")");
             }
         
             // invoke native method
@@ -22561,7 +22561,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setPageSize(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setPageSize(" + var1 + ")");
             }
         
             // invoke native method
@@ -22580,7 +22580,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getKeywords()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getKeywords(" + "" + ")");
             }
         
             // invoke native method
@@ -22600,7 +22600,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setKeywords(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setKeywords(" + var1 + ")");
             }
         
             // invoke native method
@@ -22619,7 +22619,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getKeywordsLevel()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::getKeywordsLevel(" + "" + ")");
             }
         
             // invoke native method
@@ -22639,7 +22639,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setKeywordsLevel(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setKeywordsLevel(" + var1 + ")");
             }
         
             // invoke native method
@@ -22658,7 +22658,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowChild()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowChild(" + "" + ")");
             }
         
             // invoke native method
@@ -22678,7 +22678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowChild(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowChild(" + var1 + ")");
             }
         
             // invoke native method
@@ -22697,7 +22697,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowBusinessArea()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::isShowBusinessArea(" + "" + ")");
             }
         
             // invoke native method
@@ -22717,7 +22717,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowBusinessArea(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::setShowBusinessArea(" + var1 + ")");
             }
         
             // invoke native method
@@ -22736,7 +22736,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::checkLevels()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::checkLevels(" + "" + ")");
             }
         
             // invoke native method
@@ -22755,7 +22755,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::checkKeyWords()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::checkKeyWords(" + "" + ")");
             }
         
             // invoke native method
@@ -22775,7 +22775,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::weakEquals()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::weakEquals(" + var1 + ")");
             }
         
             // invoke native method
@@ -22794,7 +22794,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::clone()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearchQuery@" + refId + "::clone(" + "" + ")");
             }
         
             // invoke native method
@@ -22820,7 +22820,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -22847,7 +22847,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -22866,7 +22866,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -22892,7 +22892,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrictAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrictAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -22911,7 +22911,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrictAnsy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::searchDistrictAnsy(" + "" + ")");
             }
         
             // invoke native method
@@ -22930,7 +22930,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch@" + refId + "::setOnDistrictSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch@" + refId + "::setOnDistrictSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -22942,7 +22942,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistrictSearched(com.amap.api.services.district.DistrictResult var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDistrictSearched([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -22975,7 +22975,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::getDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -23008,7 +23008,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::setDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setDistrict(" + var1 + ")");
             }
         
             // invoke native method
@@ -23027,7 +23027,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -23054,7 +23054,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -23073,7 +23073,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::getPageCount()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getPageCount(" + "" + ")");
             }
         
             // invoke native method
@@ -23093,7 +23093,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::setPageCount(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setPageCount(" + var1 + ")");
             }
         
             // invoke native method
@@ -23112,7 +23112,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::getAMapException()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::getAMapException(" + "" + ")");
             }
         
             // invoke native method
@@ -23139,7 +23139,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictResult@" + refId + "::setAMapException()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictResult@" + refId + "::setAMapException(" + var1 + ")");
             }
         
             // invoke native method
@@ -23158,7 +23158,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::getCitycode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getCitycode(" + "" + ")");
             }
         
             // invoke native method
@@ -23178,7 +23178,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::setCitycode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setCitycode(" + var1 + ")");
             }
         
             // invoke native method
@@ -23197,7 +23197,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::getAdcode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getAdcode(" + "" + ")");
             }
         
             // invoke native method
@@ -23217,7 +23217,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::setAdcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setAdcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -23236,7 +23236,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -23256,7 +23256,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -23275,7 +23275,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::getCenter()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getCenter(" + "" + ")");
             }
         
             // invoke native method
@@ -23302,7 +23302,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::setCenter()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setCenter(" + var1 + ")");
             }
         
             // invoke native method
@@ -23321,7 +23321,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::getLevel()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getLevel(" + "" + ")");
             }
         
             // invoke native method
@@ -23341,7 +23341,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::setLevel(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setLevel(" + var1 + ")");
             }
         
             // invoke native method
@@ -23360,7 +23360,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::getSubDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::getSubDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -23393,7 +23393,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictItem@" + refId + "::setSubDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setSubDistrict(" + var1 + ")");
             }
         
             // invoke native method
@@ -23413,7 +23413,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener@" + refId + "::onDistrictSearched()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener@" + refId + "::onDistrictSearched(" + var1 + ")");
             }
         
             // invoke native method
@@ -23439,7 +23439,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Inputtips.InputtipsListener@" + refId + "::onGetInputtips(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips.InputtipsListener@" + refId + "::onGetInputtips(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -23458,7 +23458,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getPoiID()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getPoiID(" + "" + ")");
             }
         
             // invoke native method
@@ -23478,7 +23478,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setID(" + var1 + ")");
             }
         
             // invoke native method
@@ -23497,7 +23497,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getPoint()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getPoint(" + "" + ")");
             }
         
             // invoke native method
@@ -23524,7 +23524,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setPostion()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setPostion(" + var1 + ")");
             }
         
             // invoke native method
@@ -23543,7 +23543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getName(" + "" + ")");
             }
         
             // invoke native method
@@ -23563,7 +23563,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setName(" + var1 + ")");
             }
         
             // invoke native method
@@ -23582,7 +23582,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -23602,7 +23602,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setDistrict(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setDistrict(" + var1 + ")");
             }
         
             // invoke native method
@@ -23621,7 +23621,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getAdcode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getAdcode(" + "" + ")");
             }
         
             // invoke native method
@@ -23641,7 +23641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setAdcode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setAdcode(" + var1 + ")");
             }
         
             // invoke native method
@@ -23660,7 +23660,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getAddress()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getAddress(" + "" + ")");
             }
         
             // invoke native method
@@ -23680,7 +23680,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setAddress(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setAddress(" + var1 + ")");
             }
         
             // invoke native method
@@ -23700,7 +23700,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::setTypeCode(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::setTypeCode(" + var1 + ")");
             }
         
             // invoke native method
@@ -23719,7 +23719,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Tip@" + refId + "::getTypeCode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Tip@" + refId + "::getTypeCode(" + "" + ")");
             }
         
             // invoke native method
@@ -23738,7 +23738,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::getKeyword()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getKeyword(" + "" + ")");
             }
         
             // invoke native method
@@ -23757,7 +23757,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::getCity()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getCity(" + "" + ")");
             }
         
             // invoke native method
@@ -23777,7 +23777,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::setType(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::setType(" + var1 + ")");
             }
         
             // invoke native method
@@ -23796,7 +23796,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::getType()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getType(" + "" + ")");
             }
         
             // invoke native method
@@ -23816,7 +23816,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::setCityLimit(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::setCityLimit(" + var1 + ")");
             }
         
             // invoke native method
@@ -23835,7 +23835,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::getCityLimit()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getCityLimit(" + "" + ")");
             }
         
             // invoke native method
@@ -23855,7 +23855,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::setLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::setLocation(" + var1 + ")");
             }
         
             // invoke native method
@@ -23874,7 +23874,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.InputtipsQuery@" + refId + "::getLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.InputtipsQuery@" + refId + "::getLocation(" + "" + ")");
             }
         
             // invoke native method
@@ -23900,7 +23900,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Inputtips@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -23927,7 +23927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Inputtips@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -23946,7 +23946,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Inputtips@" + refId + "::setInputtipsListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::setInputtipsListener(" + "" + ")");
             }
         
             // invoke native method
@@ -23958,7 +23958,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGetInputtips(List<com.amap.api.services.help.Tip> var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onGetInputtips([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     List<Integer> argvar1 = new ArrayList<>();
@@ -23996,7 +23996,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtipsAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtipsAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -24015,7 +24015,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips(" + "" + ")");
             }
         
             // invoke native method
@@ -24043,7 +24043,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -24070,7 +24070,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -24089,7 +24089,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::searchDistrictAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::searchDistrictAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -24108,7 +24108,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::searchDistrictAnsy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::searchDistrictAnsy(" + "" + ")");
             }
         
             // invoke native method
@@ -24127,7 +24127,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::setOnDistrictSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::setOnDistrictSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -24139,7 +24139,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistrictSearched(com.amap.api.services.district.DistrictResult var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDistrictSearched([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24172,7 +24172,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::searchDistrict()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistrictSearch@" + refId + "::searchDistrict(" + "" + ")");
             }
         
             // invoke native method
@@ -24198,7 +24198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::searchBusStation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::searchBusStation(" + "" + ")");
             }
         
             // invoke native method
@@ -24224,7 +24224,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::setOnBusStationSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::setOnBusStationSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -24236,7 +24236,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusStationSearched(com.amap.api.services.busline.BusStationResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusStationSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24271,7 +24271,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::searchBusStationAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::searchBusStationAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -24291,7 +24291,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -24310,7 +24310,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusStationSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -24336,7 +24336,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::setRouteSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::setRouteSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -24348,7 +24348,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteSearched(com.amap.api.services.route.BusRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24371,7 +24371,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRouteSearched(com.amap.api.services.route.DriveRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDriveRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24394,7 +24394,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteSearched(com.amap.api.services.route.WalkRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWalkRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24417,7 +24417,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRideRouteSearched(com.amap.api.services.route.RideRouteResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRideRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24452,7 +24452,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::setOnTruckRouteSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::setOnTruckRouteSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -24464,7 +24464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onTruckRouteSearched(com.amap.api.services.route.TruckRouteRestult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onTruckRouteSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24499,7 +24499,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::setOnRoutePlanSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::setOnRoutePlanSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -24511,7 +24511,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRoutePlanSearched(com.amap.api.services.route.DriveRoutePlanResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDriveRoutePlanSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -24547,7 +24547,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateWalkRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateWalkRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -24574,7 +24574,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateWalkRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateWalkRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -24594,7 +24594,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateBusRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateBusRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -24621,7 +24621,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateBusRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateBusRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -24641,7 +24641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDriveRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDriveRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -24668,7 +24668,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDriveRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDriveRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -24688,7 +24688,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateRideRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateRideRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -24715,7 +24715,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateRideRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateRideRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -24735,7 +24735,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateTruckRoute()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateTruckRoute(" + var1 + ")");
             }
         
             // invoke native method
@@ -24762,7 +24762,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateTruckRouteAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateTruckRouteAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -24782,7 +24782,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDrivePlan()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDrivePlan(" + var1 + ")");
             }
         
             // invoke native method
@@ -24809,7 +24809,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDrivePlanAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRouteSearch@" + refId + "::calculateDrivePlanAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -24828,7 +24828,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::setOnShareSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::setOnShareSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -24840,7 +24840,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onPoiShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -24862,7 +24862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onLocationShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onLocationShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -24884,7 +24884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNaviShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNaviShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -24906,7 +24906,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -24928,7 +24928,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWalkRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -24950,7 +24950,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDrivingRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDrivingRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -24985,7 +24985,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchPoiShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchPoiShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25005,7 +25005,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchBusRouteShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchBusRouteShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25025,7 +25025,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchWalkRouteShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchWalkRouteShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25045,7 +25045,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchDrivingRouteShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchDrivingRouteShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25065,7 +25065,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchNaviShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchNaviShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25085,7 +25085,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchLocationShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchLocationShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25105,7 +25105,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchPoiShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchPoiShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -25125,7 +25125,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchNaviShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchNaviShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -25145,7 +25145,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchLocationShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchLocationShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -25165,7 +25165,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchBusRouteShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchBusRouteShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -25185,7 +25185,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchDrivingRouteShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchDrivingRouteShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -25205,7 +25205,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchWalkRouteShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IShareSearch@" + refId + "::searchWalkRouteShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -25224,7 +25224,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::setRoutePOISearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::setRoutePOISearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -25236,7 +25236,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoutePoiSearched(com.amap.api.services.routepoisearch.RoutePOISearchResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRoutePoiSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -25271,7 +25271,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::searchRoutePOIAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::searchRoutePOIAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -25290,7 +25290,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::searchRoutePOI()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::searchRoutePOI(" + "" + ")");
             }
         
             // invoke native method
@@ -25317,7 +25317,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -25336,7 +25336,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IRoutePOISearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -25362,7 +25362,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::setTrafficSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::setTrafficSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -25374,7 +25374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoadTrafficSearched(com.amap.api.services.traffic.TrafficStatusResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRoadTrafficSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -25410,7 +25410,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByRoad()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByRoad(" + var1 + ")");
             }
         
             // invoke native method
@@ -25437,7 +25437,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByRoadAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByRoadAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25457,7 +25457,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByCircle()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByCircle(" + var1 + ")");
             }
         
             // invoke native method
@@ -25484,7 +25484,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByCircleAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ITrafficSearch@" + refId + "::loadTrafficByCircleAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25503,7 +25503,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -25530,7 +25530,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -25549,7 +25549,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::setInputtipsListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::setInputtipsListener(" + "" + ")");
             }
         
             // invoke native method
@@ -25561,7 +25561,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGetInputtips(List<com.amap.api.services.help.Tip> var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onGetInputtips([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     List<Integer> argvar1 = new ArrayList<>();
@@ -25599,7 +25599,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::requestInputtipsAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::requestInputtipsAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -25618,7 +25618,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::requestInputtips()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::requestInputtips(" + "" + ")");
             }
         
             // invoke native method
@@ -25647,7 +25647,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocation()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocation(" + var1 + ")");
             }
         
             // invoke native method
@@ -25674,7 +25674,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocationName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocationName(" + var1 + ")");
             }
         
             // invoke native method
@@ -25702,7 +25702,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::setOnGeocodeSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::setOnGeocodeSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -25714,7 +25714,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRegeocodeSearched(com.amap.api.services.geocoder.RegeocodeResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onRegeocodeSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -25737,7 +25737,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGeocodeSearched(com.amap.api.services.geocoder.GeocodeResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onGeocodeSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -25773,7 +25773,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocationAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocationAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25793,7 +25793,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocationNameAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IGeocodeSearch@" + refId + "::getFromLocationNameAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25812,7 +25812,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@" + refId + "::setOnCloudSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ICloudSearch@" + refId + "::setOnCloudSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -25824,7 +25824,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudSearched(com.amap.api.services.cloud.CloudResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onCloudSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -25847,7 +25847,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudItemDetailSearched(com.amap.api.services.cloud.CloudItemDetail var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onCloudItemDetailSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -25883,7 +25883,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@" + refId + "::searchCloudAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ICloudSearch@" + refId + "::searchCloudAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25905,7 +25905,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.ICloudSearch@" + refId + "::searchCloudDetailAsyn(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.ICloudSearch@" + refId + "::searchCloudDetailAsyn(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -25925,7 +25925,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@" + refId + "::calculateRouteDistance()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistanceSearch@" + refId + "::calculateRouteDistance(" + var1 + ")");
             }
         
             // invoke native method
@@ -25952,7 +25952,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@" + refId + "::calculateRouteDistanceAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistanceSearch@" + refId + "::calculateRouteDistanceAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -25971,7 +25971,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IDistanceSearch@" + refId + "::setDistanceSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IDistanceSearch@" + refId + "::setDistanceSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -25983,7 +25983,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistanceSearched(com.amap.api.services.route.DistanceResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDistanceSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26018,7 +26018,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setOnPoiSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setOnPoiSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -26030,7 +26030,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiSearched(com.amap.api.services.poisearch.PoiResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onPoiSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26053,7 +26053,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiItemSearched(com.amap.api.services.core.PoiItem var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onPoiItemSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26089,7 +26089,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setLanguage(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setLanguage(" + var1 + ")");
             }
         
             // invoke native method
@@ -26108,7 +26108,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::getLanguage()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::getLanguage(" + "" + ")");
             }
         
             // invoke native method
@@ -26127,7 +26127,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOI()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOI(" + "" + ")");
             }
         
             // invoke native method
@@ -26153,7 +26153,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOIAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOIAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -26173,7 +26173,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOIId(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOIId(" + var1 + ")");
             }
         
             // invoke native method
@@ -26200,7 +26200,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOIIdAsyn(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::searchPOIIdAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -26220,7 +26220,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -26240,7 +26240,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::setBound(" + var1 + ")");
             }
         
             // invoke native method
@@ -26259,7 +26259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -26285,7 +26285,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::getBound()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IPoiSearch@" + refId + "::getBound(" + "" + ")");
             }
         
             // invoke native method
@@ -26311,7 +26311,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -26338,7 +26338,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -26357,7 +26357,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::searchWeatherAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::searchWeatherAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -26376,7 +26376,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::setOnWeatherSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IWeatherSearch@" + refId + "::setOnWeatherSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -26388,7 +26388,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherLiveSearched(com.amap.api.services.weather.LocalWeatherLiveResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWeatherLiveSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26411,7 +26411,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherForecastSearched(com.amap.api.services.weather.LocalWeatherForecastResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWeatherForecastSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26446,7 +26446,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::addNearbyListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::addNearbyListener(" + "" + ")");
             }
         
             // invoke native method
@@ -26458,7 +26458,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -26478,7 +26478,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26501,7 +26501,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -26533,7 +26533,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::removeNearbyListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::removeNearbyListener(" + "" + ")");
             }
         
             // invoke native method
@@ -26545,7 +26545,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onUserInfoCleared([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -26565,7 +26565,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26588,7 +26588,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNearbyInfoUploaded([\"var1\":$var1])");
+                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1;
@@ -26620,7 +26620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::clearUserInfoAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::clearUserInfoAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -26640,7 +26640,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::setUserID(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::setUserID(" + var1 + ")");
             }
         
             // invoke native method
@@ -26660,7 +26660,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::startUploadNearbyInfoAuto(\"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::startUploadNearbyInfoAuto(" + var2 + ")");
             }
         
             // invoke native method
@@ -26672,7 +26672,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public com.amap.api.services.nearby.UploadInfo OnUploadInfoCallback() {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: OnUploadInfoCallback([])");
+                    Log.d("java-callback", "fluttify-java-callback: OnUploadInfoCallback(" + "" + ")");
         
                     // convert to jsonable data
         
@@ -26704,7 +26704,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::stopUploadNearbyInfoAuto()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::stopUploadNearbyInfoAuto(" + "" + ")");
             }
         
             // invoke native method
@@ -26724,7 +26724,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::uploadNearbyInfoAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::uploadNearbyInfoAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -26744,7 +26744,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::searchNearbyInfoAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::searchNearbyInfoAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -26764,7 +26764,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::searchNearbyInfo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::searchNearbyInfo(" + var1 + ")");
             }
         
             // invoke native method
@@ -26790,7 +26790,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.INearbySearch@" + refId + "::destroy()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::destroy(" + "" + ")");
             }
         
             // invoke native method
@@ -26809,7 +26809,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::searchBusLine()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::searchBusLine(" + "" + ")");
             }
         
             // invoke native method
@@ -26835,7 +26835,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::setOnBusLineSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::setOnBusLineSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -26847,7 +26847,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusLineSearched(com.amap.api.services.busline.BusLineResult var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusLineSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     int argvar1 = var1.hashCode();
@@ -26882,7 +26882,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::searchBusLineAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::searchBusLineAsyn(" + "" + ")");
             }
         
             // invoke native method
@@ -26902,7 +26902,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::setQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::setQuery(" + var1 + ")");
             }
         
             // invoke native method
@@ -26921,7 +26921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::getQuery()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IBusLineSearch@" + refId + "::getQuery(" + "" + ")");
             }
         
             // invoke native method
@@ -26947,7 +26947,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + refId + "::getFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + refId + "::getFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -26973,7 +26973,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + refId + "::getNaviMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareNaviQuery@" + refId + "::getNaviMode(" + "" + ")");
             }
         
             // invoke native method
@@ -26992,7 +26992,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + refId + "::getBusMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + refId + "::getBusMode(" + "" + ")");
             }
         
             // invoke native method
@@ -27011,7 +27011,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + refId + "::getShareFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareBusRouteQuery@" + refId + "::getShareFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -27037,7 +27037,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::setOnShareSearchListener()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::setOnShareSearchListener(" + "" + ")");
             }
         
             // invoke native method
@@ -27049,7 +27049,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onPoiShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -27071,7 +27071,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onLocationShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onLocationShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -27093,7 +27093,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNaviShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onNaviShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -27115,7 +27115,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onBusRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -27137,7 +27137,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onWalkRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -27159,7 +27159,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDrivingRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("kotlin-callback", "fluttify-kotlin-callback: onDrivingRouteShareUrlSearched([\"var1\":$var1, \"var2\":$var2])");
+                    Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
                     String argvar1 = var1;
@@ -27194,7 +27194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchPoiShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchPoiShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -27214,7 +27214,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchBusRouteShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchBusRouteShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -27234,7 +27234,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchWalkRouteShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchWalkRouteShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -27254,7 +27254,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchDrivingRouteShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchDrivingRouteShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -27274,7 +27274,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchNaviShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchNaviShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -27294,7 +27294,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchLocationShareUrlAsyn()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchLocationShareUrlAsyn(" + var1 + ")");
             }
         
             // invoke native method
@@ -27314,7 +27314,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchPoiShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchPoiShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -27334,7 +27334,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchNaviShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchNaviShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -27354,7 +27354,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchLocationShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchLocationShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -27374,7 +27374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchBusRouteShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchBusRouteShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -27394,7 +27394,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchDrivingRouteShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchDrivingRouteShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -27414,7 +27414,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch@" + refId + "::searchWalkRouteShareUrl()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch@" + refId + "::searchWalkRouteShareUrl(" + var1 + ")");
             }
         
             // invoke native method
@@ -27434,7 +27434,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::setFromName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::setFromName(" + var1 + ")");
             }
         
             // invoke native method
@@ -27454,7 +27454,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::setToName(\"var1\":$var1)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::setToName(" + var1 + ")");
             }
         
             // invoke native method
@@ -27473,7 +27473,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getFrom()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getFrom(" + "" + ")");
             }
         
             // invoke native method
@@ -27499,7 +27499,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getTo(" + "" + ")");
             }
         
             // invoke native method
@@ -27525,7 +27525,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getFromName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getFromName(" + "" + ")");
             }
         
             // invoke native method
@@ -27544,7 +27544,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getToName()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareFromAndTo@" + refId + "::getToName(" + "" + ")");
             }
         
             // invoke native method
@@ -27563,7 +27563,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + refId + "::getWalkMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + refId + "::getWalkMode(" + "" + ")");
             }
         
             // invoke native method
@@ -27582,7 +27582,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + refId + "::getShareFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery@" + refId + "::getShareFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -27608,7 +27608,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + refId + "::getDrivingMode()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + refId + "::getDrivingMode(" + "" + ")");
             }
         
             // invoke native method
@@ -27627,7 +27627,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + refId + "::getShareFromAndTo()");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery@" + refId + "::getShareFromAndTo(" + "" + ")");
             }
         
             // invoke native method
@@ -27656,7 +27656,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onPoiShareUrlSearched(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onPoiShareUrlSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -27678,7 +27678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onLocationShareUrlSearched(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onLocationShareUrlSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -27700,7 +27700,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onNaviShareUrlSearched(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onNaviShareUrlSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -27722,7 +27722,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onBusRouteShareUrlSearched(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onBusRouteShareUrlSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -27744,7 +27744,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onWalkRouteShareUrlSearched(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
@@ -27766,7 +27766,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             // print log
             if (BuildConfig.DEBUG) {
-                Log.d("fluttify-kotlin", "fluttify-kotlin: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onDrivingRouteShareUrlSearched(\"var1\":$var1, \"var2\":$var2)");
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.share.ShareSearch.OnShareSearchListener@" + refId + "::onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
             }
         
             // invoke native method
