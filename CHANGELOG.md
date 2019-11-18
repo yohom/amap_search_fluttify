@@ -1,3 +1,6 @@
+## 0.2.13
+- enhance: InputTip增加经纬度信息
+
 ## 0.2.12
 - enhance: poi增加行政区划名称和编号
 
