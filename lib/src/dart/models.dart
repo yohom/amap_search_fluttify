@@ -178,9 +178,23 @@ class InputTip with _ToFutureString {
     );
   }
 
+  /// 经纬度
+  Future<LatLng> get location {
+    return platform(
+      android: (pool) async {
+        final point = await _androidModel.getPoint();
+        return LatLng(await point.getLatitude(), await point.getLongitude());
+      },
+      ios: (pool) async {
+        final point = await _iosModel.get_location();
+        return LatLng(await point.get_latitude(), await point.get_longitude());
+      },
+    );
+  }
+
   @override
   Future<String> toFutureString() async {
-    return 'InputTip{name: ${await name}, poiId: ${await poiId}, address: ${await address}, district: ${await district}';
+    return 'InputTip{name: ${await name}, poiId: ${await poiId}, address: ${await address}, district: ${await district}, location: ${await location}';
   }
 }
 
