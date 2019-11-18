@@ -115,9 +115,25 @@ class Poi with _ToFutureString {
     );
   }
 
+  /// 行政区划名称
+  Future<String> get adName {
+    return platform(
+      android: (pool) => _androidModel.getAdName(),
+      ios: (pool) => _iosModel.get_district(),
+    );
+  }
+
+  /// 行政区划编号
+  Future<String> get adCode {
+    return platform(
+      android: (pool) => _androidModel.getAdCode(),
+      ios: (pool) => _iosModel.get_adcode(),
+    );
+  }
+
   @override
   Future<String> toFutureString() async {
-    return 'Poi{title: ${await title}, latLng: ${await latLng}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, businessArea: ${await businessArea}, distance: ${await distance}';
+    return 'Poi{title: ${await title}, latLng: ${await latLng}, cityName: ${await cityName}, cityCode: ${await cityCode}, provinceName: ${await provinceName}, provinceCode: ${await provinceCode}, tel: ${await tel}, poiId: ${await poiId}, businessArea: ${await businessArea}, distance: ${await distance}, adName: ${await adName}, adCode: ${await adCode}';
   }
 }
 
