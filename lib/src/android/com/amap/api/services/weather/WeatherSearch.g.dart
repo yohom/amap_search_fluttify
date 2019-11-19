@@ -20,7 +20,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_weather_WeatherSearchQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::getQuery([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   Future<void> setQuery(com_amap_api_services_weather_WeatherSearchQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setQuery([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   Future<void> searchWeatherAsyn() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::searchWeatherAsyn([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
   
   Future<void> setOnWeatherSearchListener(com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearch@$refId::setOnWeatherSearchListener([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   
   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   
   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   
   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');
     }
   

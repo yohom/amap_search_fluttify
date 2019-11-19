@@ -20,7 +20,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   // generate methods
   Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::setOnShareSearchListener([])');
     }
   
@@ -106,7 +106,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<void> searchPoiShareUrlAsyn(com_amap_api_services_core_PoiItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrlAsyn([])');
     }
   
@@ -128,7 +128,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<void> searchBusRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrlAsyn([])');
     }
   
@@ -150,7 +150,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<void> searchWalkRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrlAsyn([])');
     }
   
@@ -172,7 +172,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<void> searchDrivingRouteShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrlAsyn([])');
     }
   
@@ -194,7 +194,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<void> searchNaviShareUrlAsyn(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrlAsyn([])');
     }
   
@@ -216,7 +216,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<void> searchLocationShareUrlAsyn(com_amap_api_services_core_LatLonSharePoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrlAsyn([])');
     }
   
@@ -238,7 +238,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<String> searchPoiShareUrl(com_amap_api_services_core_PoiItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchPoiShareUrl([])');
     }
   
@@ -260,7 +260,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<String> searchNaviShareUrl(com_amap_api_services_share_ShareSearch_ShareNaviQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchNaviShareUrl([])');
     }
   
@@ -282,7 +282,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<String> searchLocationShareUrl(com_amap_api_services_core_LatLonSharePoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchLocationShareUrl([])');
     }
   
@@ -304,7 +304,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<String> searchBusRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareBusRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchBusRouteShareUrl([])');
     }
   
@@ -326,7 +326,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<String> searchDrivingRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchDrivingRouteShareUrl([])');
     }
   
@@ -348,7 +348,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   
   Future<String> searchWalkRouteShareUrl(com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch@$refId::searchWalkRouteShareUrl([])');
     }
   

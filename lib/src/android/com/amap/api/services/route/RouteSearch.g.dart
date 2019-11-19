@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   // generate methods
   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setRouteSearchListener([])');
     }
   
@@ -88,7 +88,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> setOnTruckRouteSearchListener(com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnTruckRouteSearchListener([])');
     }
   
@@ -129,7 +129,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> setOnRoutePlanSearchListener(com_amap_api_services_route_RouteSearch_OnRoutePlanSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::setOnRoutePlanSearchListener([])');
     }
   
@@ -170,7 +170,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_WalkRouteResult> calculateWalkRoute(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRoute([])');
     }
   
@@ -192,7 +192,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateWalkRouteAsyn(com_amap_api_services_route_RouteSearch_WalkRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateWalkRouteAsyn([])');
     }
   
@@ -214,7 +214,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_BusRouteResult> calculateBusRoute(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRoute([])');
     }
   
@@ -236,7 +236,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateBusRouteAsyn(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateBusRouteAsyn([])');
     }
   
@@ -258,7 +258,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_DriveRouteResult> calculateDriveRoute(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRoute([])');
     }
   
@@ -280,7 +280,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateDriveRouteAsyn(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDriveRouteAsyn([])');
     }
   
@@ -302,7 +302,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateRideRouteAsyn(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRouteAsyn([])');
     }
   
@@ -324,7 +324,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_RideRouteResult> calculateRideRoute(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateRideRoute([])');
     }
   
@@ -346,7 +346,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_TruckRouteRestult> calculateTruckRoute(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRoute([])');
     }
   
@@ -368,7 +368,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateTruckRouteAsyn(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateTruckRouteAsyn([])');
     }
   
@@ -390,7 +390,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_route_DriveRoutePlanResult> calculateDrivePlan(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlan([])');
     }
   
@@ -412,7 +412,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   
   Future<void> calculateDrivePlanAsyn(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch@$refId::calculateDrivePlanAsyn([])');
     }
   

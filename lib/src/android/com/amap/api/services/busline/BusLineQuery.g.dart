@@ -20,7 +20,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_busline_BusLineQuery_SearchType> getCategory() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCategory([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<String> getQueryString() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getQueryString([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setQueryString(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setQueryString([\'var1\':$var1])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getCity([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setCity(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCity([\'var1\':$var1])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<int> getPageSize() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageSize([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setPageSize(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageSize([\'var1\':$var1])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<int> getPageNumber() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::getPageNumber([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setPageNumber(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setPageNumber([\'var1\':$var1])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<void> setCategory(com_amap_api_services_busline_BusLineQuery_SearchType var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::setCategory([])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<com_amap_api_services_busline_BusLineQuery> clone() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::clone([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_busline_BusLineQuery extends java_lang_Object  {
   
   Future<bool> weakEquals(com_amap_api_services_busline_BusLineQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusLineQuery@$refId::weakEquals([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   // generate methods
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getCity([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   
   Future<int> getType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::getType([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
   
   Future<com_amap_api_services_weather_WeatherSearchQuery> clone() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.WeatherSearchQuery@$refId::clone([])');
     }
   

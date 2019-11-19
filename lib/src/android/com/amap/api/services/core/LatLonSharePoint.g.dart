@@ -20,7 +20,7 @@ class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with 
   // generate methods
   Future<String> getSharePointName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with 
   
   Future<void> setSharePointName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\'var1\':$var1])');
     }
   

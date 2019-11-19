@@ -20,7 +20,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   // generate methods
   Future<List<com_amap_api_services_route_DrivePlanPath>> getPaths() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getPaths([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<void> setPaths(List<com_amap_api_services_route_DrivePlanPath> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setPaths([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<List<com_amap_api_services_route_TimeInfo>> getTimeInfos() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::getTimeInfos([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<void> setTimeInfos(List<com_amap_api_services_route_TimeInfo> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setTimeInfos([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_DriveRoutePlanResult extends java_lang_Object 
   
   Future<void> setDrivePlanQuery(com_amap_api_services_route_RouteSearch_DrivePlanQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRoutePlanResult@$refId::setDrivePlanQuery([])');
     }
   

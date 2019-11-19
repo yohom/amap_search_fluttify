@@ -20,7 +20,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   // generate methods
   Future<void> setDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setDistance([\'var1\':$var1])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setDuration(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setDuration([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setStrategy(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setStrategy([\'var1\':$var1])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setTolls(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTolls([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setTollDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTollDistance([\'var1\':$var1])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setTotalTrafficlights(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setTotalTrafficlights([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setRestriction(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setRestriction([\'var1\':$var1])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<void> setSteps(List<com_amap_api_services_route_TruckStep> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::setSteps([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<double> getDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getDistance([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<int> getDuration() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getDuration([])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<String> getStrategy() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getStrategy([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<double> getTolls() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getTolls([])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<double> getTollDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getTollDistance([])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<int> getTotalTrafficlights() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getTotalTrafficlights([])');
     }
   
@@ -328,7 +328,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<int> getRestriction() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getRestriction([])');
     }
   
@@ -350,7 +350,7 @@ class com_amap_api_services_route_TruckPath extends java_lang_Object with androi
   
   Future<List<com_amap_api_services_route_TruckStep>> getSteps() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckPath@$refId::getSteps([])');
     }
   

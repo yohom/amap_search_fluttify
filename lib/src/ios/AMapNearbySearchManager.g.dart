@@ -67,7 +67,7 @@ class AMapNearbySearchManager extends NSObject  {
   // generate methods
   static Future<AMapNearbySearchManager> sharedInstance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapNearbySearchManager::sharedInstance([])');
     }
   
@@ -89,7 +89,7 @@ class AMapNearbySearchManager extends NSObject  {
   
   Future<void> startAutoUploadNearbyInfo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapNearbySearchManager@$refId::startAutoUploadNearbyInfo([])');
     }
   
@@ -111,7 +111,7 @@ class AMapNearbySearchManager extends NSObject  {
   
   Future<void> stopAutoUploadNearbyInfo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapNearbySearchManager@$refId::stopAutoUploadNearbyInfo([])');
     }
   
@@ -133,7 +133,7 @@ class AMapNearbySearchManager extends NSObject  {
   
   Future<bool> uploadNearbyInfo(AMapNearbyUploadInfo info) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapNearbySearchManager@$refId::uploadNearbyInfo([])');
     }
   
@@ -155,7 +155,7 @@ class AMapNearbySearchManager extends NSObject  {
   
   Future<bool> clearUserInfoWithID(String userID) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapNearbySearchManager@$refId::clearUserInfoWithID([\'userID\':$userID])');
     }
   

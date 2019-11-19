@@ -20,7 +20,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   // generate methods
   Future<double> getDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Path@$refId::getDistance([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   
   Future<void> setDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Path@$refId::setDistance([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   
   Future<int> getDuration() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Path@$refId::getDuration([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_Path extends java_lang_Object with android_os_
   
   Future<void> setDuration(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Path@$refId::setDuration([\'var1\':$var1])');
     }
   

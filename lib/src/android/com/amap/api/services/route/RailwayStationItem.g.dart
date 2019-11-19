@@ -20,7 +20,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   // generate methods
   Future<String> getID() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getID([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<String> getName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getName([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getLocation([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<String> getAdcode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getAdcode([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<String> getTime() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getTime([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<bool> isStart() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isStart([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<bool> isEnd() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::isEnd([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<double> getWait() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::getWait([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setID(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setID([\'var1\':$var1])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setName([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setLocation([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setAdcode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setAdcode([\'var1\':$var1])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setTime(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setTime([\'var1\':$var1])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setisStart(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisStart([\'var1\':$var1])');
     }
   
@@ -328,7 +328,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setisEnd(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setisEnd([\'var1\':$var1])');
     }
   
@@ -350,7 +350,7 @@ class com_amap_api_services_route_RailwayStationItem extends java_lang_Object wi
   
   Future<void> setWait(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwayStationItem@$refId::setWait([\'var1\':$var1])');
     }
   

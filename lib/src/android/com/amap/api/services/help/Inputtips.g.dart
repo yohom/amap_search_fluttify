@@ -20,7 +20,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::getQuery([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setQuery([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::setInputtipsListener([])');
     }
   
@@ -105,7 +105,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   
   Future<void> requestInputtipsAsyn() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtipsAsyn([])');
     }
   
@@ -127,7 +127,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
   
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([])');
     }
   

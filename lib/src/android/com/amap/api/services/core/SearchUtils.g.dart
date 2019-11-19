@@ -20,7 +20,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   // generate methods
   static Future<String> getSHA1(android_content_Context var0) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.SearchUtils::getSHA1([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   
   static Future<String> getPkgName(android_content_Context var0) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.SearchUtils::getPkgName([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   
   static Future<String> getVersion() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.SearchUtils::getVersion([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   // generate methods
   Future<double> getCost() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::getCost([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<void> setCost(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setCost([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<bool> isNightBus() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::isNightBus([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<void> setNightBus(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setNightBus([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<double> getWalkDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::getWalkDistance([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<void> setWalkDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setWalkDistance([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<double> getBusDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::getBusDistance([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<void> setBusDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setBusDistance([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<List<com_amap_api_services_route_BusStep>> getSteps() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::getSteps([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_BusPath extends java_lang_Object with android_
   
   Future<void> setSteps(List<com_amap_api_services_route_BusStep> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusPath@$refId::setSteps([])');
     }
   

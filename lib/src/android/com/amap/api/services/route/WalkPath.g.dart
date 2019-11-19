@@ -20,7 +20,7 @@ class com_amap_api_services_route_WalkPath extends java_lang_Object with android
   // generate methods
   Future<List<com_amap_api_services_route_WalkStep>> getSteps() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::getSteps([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_WalkPath extends java_lang_Object with android
   
   Future<void> setSteps(List<com_amap_api_services_route_WalkStep> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.WalkPath@$refId::setSteps([])');
     }
   

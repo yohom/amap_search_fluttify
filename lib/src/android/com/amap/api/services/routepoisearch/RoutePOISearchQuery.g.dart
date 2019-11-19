@@ -20,7 +20,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getFrom([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getTo([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
   Future<int> getMode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getMode([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> getSearchType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getSearchType([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
   Future<int> getRange() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getRange([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolylines() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::getPolylines([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> clone() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchQuery@$refId::clone([])');
     }
   

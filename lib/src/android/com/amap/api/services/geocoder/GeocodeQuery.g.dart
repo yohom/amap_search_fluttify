@@ -20,7 +20,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   // generate methods
   Future<String> getLocationName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::getLocationName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   
   Future<void> setLocationName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setLocationName([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::getCity([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   
   Future<void> setCity(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeQuery@$refId::setCity([\'var1\':$var1])');
     }
   

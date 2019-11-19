@@ -20,7 +20,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   // generate methods
   Future<String> getBusStationId() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationId([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<void> setBusStationId(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationId([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<String> getBusStationName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusStationName([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<void> setBusStationName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusStationName([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getLatLonPoint([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setLatLonPoint([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<String> getCityCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getCityCode([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<void> setCityCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setCityCode([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<String> getAdCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getAdCode([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<void> setAdCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setAdCode([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<List<com_amap_api_services_busline_BusLineItem>> getBusLineItems() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::getBusLineItems([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   
   Future<void> setBusLineItems(List<com_amap_api_services_busline_BusLineItem> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationItem@$refId::setBusLineItems([])');
     }
   

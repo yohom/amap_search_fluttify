@@ -20,7 +20,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   // generate methods
   static Future<com_amap_api_services_poisearch_PoiResult> createPagedResult(com_amap_api_services_poisearch_PoiSearch_Query var0, com_amap_api_services_poisearch_PoiSearch_SearchBound var1, List<String> var2, List<com_amap_api_services_core_SuggestionCity> var3, int var4, int var5, List<com_amap_api_services_core_PoiItem> var6) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult::createPagedResult([\'var2\':$var2, \'var4\':$var4, \'var5\':$var5])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   
   Future<int> getPageCount() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPageCount([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getQuery([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getBound([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   
   Future<List<com_amap_api_services_core_PoiItem>> getPois() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getPois([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   
   Future<List<String>> getSearchSuggestionKeywords() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionKeywords([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   
   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCitys() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiResult@$refId::getSearchSuggestionCitys([])');
     }
   

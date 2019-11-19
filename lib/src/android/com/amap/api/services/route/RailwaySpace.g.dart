@@ -20,7 +20,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   // generate methods
   Future<String> getCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwaySpace@$refId::getCode([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   
   Future<double> getCost() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RailwaySpace@$refId::getCost([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getCenterPoint([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setCenterPoint([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<int> getRadius() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::getRadius([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<void> setRadius(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::setRadius([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_traffic_CircleTrafficQuery extends java_lang_Object 
   
   Future<com_amap_api_services_traffic_CircleTrafficQuery> clone() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.CircleTrafficQuery@$refId::clone([])');
     }
   

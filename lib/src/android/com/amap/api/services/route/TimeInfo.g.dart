@@ -20,7 +20,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   // generate methods
   Future<int> getStartTime() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getStartTime([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   
   Future<void> setStartTime(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setStartTime([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   
   Future<List<com_amap_api_services_route_TimeInfosElement>> getElements() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::getElements([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   
   Future<void> setElements(List<com_amap_api_services_route_TimeInfosElement> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TimeInfo@$refId::setElements([])');
     }
   

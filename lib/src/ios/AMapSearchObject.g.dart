@@ -20,7 +20,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   // generate methods
   Future<String> formattedDescription() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapSearchObject@$refId::formattedDescription([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   // generate methods
   Future<String> getId() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getId([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setId(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setId([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<String> getName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getName([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setName([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<double> getDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDistance([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDistance([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<String> getDirection() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getDirection([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setDirection(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setDirection([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLngPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::getLatLngPoint([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_geocoder_RegeocodeRoad extends java_lang_Object with
   
   Future<void> setLatLngPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeRoad@$refId::setLatLngPoint([])');
     }
   

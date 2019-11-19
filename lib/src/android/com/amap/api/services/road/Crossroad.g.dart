@@ -20,7 +20,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   // generate methods
   Future<double> getDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDistance([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDistance([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getDirection() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getDirection([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setDirection(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setDirection([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getFirstRoadId() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadId([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setFirstRoadId(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadId([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getFirstRoadName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getFirstRoadName([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setFirstRoadName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setFirstRoadName([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getSecondRoadId() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadId([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setSecondRoadId(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadId([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<String> getSecondRoadName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::getSecondRoadName([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_road_Crossroad extends java_lang_Object with android
   
   Future<void> setSecondRoadName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.road.Crossroad@$refId::setSecondRoadName([\'var1\':$var1])');
     }
   

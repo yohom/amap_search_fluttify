@@ -20,7 +20,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   // generate methods
   Future<String> getKeyword() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getKeyword([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCity([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<void> setType(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setType([\'var1\':$var1])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<String> getType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getType([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<void> setCityLimit(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setCityLimit([\'var1\':$var1])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<bool> getCityLimit() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getCityLimit([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::setLocation([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_help_InputtipsQuery extends java_lang_Object  {
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.InputtipsQuery@$refId::getLocation([])');
     }
   

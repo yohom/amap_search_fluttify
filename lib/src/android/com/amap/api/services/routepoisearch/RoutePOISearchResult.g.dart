@@ -20,7 +20,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   // generate methods
   Future<List<com_amap_api_services_routepoisearch_RoutePOIItem>> getRoutePois() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getRoutePois([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearchResult extends java_lan
   
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.routepoisearch.RoutePOISearchResult@$refId::getQuery([])');
     }
   

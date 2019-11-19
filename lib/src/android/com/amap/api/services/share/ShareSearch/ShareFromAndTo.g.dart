@@ -20,7 +20,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   // generate methods
   Future<void> setFromName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setFromName([\'var1\':$var1])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   
   Future<void> setToName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::setToName([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   
   Future<com_amap_api_services_core_LatLonPoint> getFrom() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFrom([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   
   Future<com_amap_api_services_core_LatLonPoint> getTo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getTo([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   
   Future<String> getFromName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getFromName([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_share_ShareSearch_ShareFromAndTo extends java_lang_O
   
   Future<String> getToName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareFromAndTo@$refId::getToName([])');
     }
   

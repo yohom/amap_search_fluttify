@@ -20,7 +20,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   // generate methods
   Future<int> getType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getType([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getOrigins() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getOrigins([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   
   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::getDestination([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   
   Future<void> setType(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setType([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   
   Future<void> setOrigins(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setOrigins([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   
   Future<void> addOrigins(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::addOrigins([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_DistanceSearch_DistanceQuery extends java_lang
   
   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceSearch.DistanceQuery@$refId::setDestination([])');
     }
   

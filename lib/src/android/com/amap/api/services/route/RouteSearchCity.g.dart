@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteSearchCity extends java_lang_Object with 
   // generate methods
   Future<List<com_amap_api_services_route_District>> getDistricts() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::getDistricts([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RouteSearchCity extends java_lang_Object with 
   
   Future<void> setDistricts(List<com_amap_api_services_route_District> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearchCity@$refId::setDistricts([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   // generate methods
   Future<com_amap_api_services_route_RouteBusWalkItem> getWalk() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getWalk([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setWalk(com_amap_api_services_route_RouteBusWalkItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setWalk([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<List<com_amap_api_services_route_RouteBusLineItem>> getBusLines() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getBusLines([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setBusLines(List<com_amap_api_services_route_RouteBusLineItem> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setBusLines([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_Doorway> getEntrance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getEntrance([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setEntrance(com_amap_api_services_route_Doorway var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setEntrance([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_Doorway> getExit() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getExit([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setExit(com_amap_api_services_route_Doorway var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setExit([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_RouteRailwayItem> getRailway() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getRailway([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setRailway(com_amap_api_services_route_RouteRailwayItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setRailway([])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<com_amap_api_services_route_TaxiItem> getTaxi() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::getTaxi([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   
   Future<void> setTaxi(com_amap_api_services_route_TaxiItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusStep@$refId::setTaxi([])');
     }
   

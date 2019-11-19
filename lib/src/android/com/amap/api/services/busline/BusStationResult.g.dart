@@ -20,7 +20,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
   // generate methods
   static Future<com_amap_api_services_busline_BusStationResult> createPagedResult(com_amap_api_services_busline_BusStationQuery var0, int var1, List<com_amap_api_services_core_SuggestionCity> var2, List<String> var3, List<com_amap_api_services_busline_BusStationItem> var4) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationResult::createPagedResult([\'var1\':$var1, \'var3\':$var3])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
   
   Future<int> getPageCount() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationResult@$refId::getPageCount([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
   
   Future<com_amap_api_services_busline_BusStationQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationResult@$refId::getQuery([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
   
   Future<List<String>> getSearchSuggestionKeywords() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationResult@$refId::getSearchSuggestionKeywords([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
   
   Future<List<com_amap_api_services_core_SuggestionCity>> getSearchSuggestionCities() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationResult@$refId::getSearchSuggestionCities([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_busline_BusStationResult extends java_lang_Object  {
   
   Future<List<com_amap_api_services_busline_BusStationItem>> getBusStations() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationResult@$refId::getBusStations([])');
     }
   
