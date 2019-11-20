@@ -45,7 +45,7 @@ class AmapSearch {
                 keyword, '', city);
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidPoiSearch = await AmapSearchFluttifyFactoryAndroid
@@ -108,7 +108,7 @@ class AmapSearch {
                 keyword, type, city);
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidPoiSearch = await AmapSearchFluttifyFactoryAndroid
@@ -191,7 +191,7 @@ class AmapSearch {
         await query.setCityLimit(true);
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidInputTip = await AmapSearchFluttifyFactoryAndroid
@@ -251,7 +251,7 @@ class AmapSearch {
                 keyword, city);
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidGeocodeSearch = await AmapSearchFluttifyFactoryAndroid
@@ -316,7 +316,7 @@ class AmapSearch {
                 latLngPoint, radius, 'AMAP');
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidGeocodeSearch = await AmapSearchFluttifyFactoryAndroid
@@ -420,7 +420,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
@@ -542,7 +542,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
@@ -634,7 +634,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
@@ -724,7 +724,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
@@ -797,7 +797,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidBusStationSearch = await AmapSearchFluttifyFactoryAndroid
@@ -854,7 +854,7 @@ class AmapSearch {
         await query.setKeywords(district);
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidDistrictSearch = await AmapSearchFluttifyFactoryAndroid
@@ -912,7 +912,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactory_Android.getandroid_app_Activity();
+        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
 
         // 创建搜索对象
         _androidWeatherSearch = await AmapSearchFluttifyFactoryAndroid
@@ -996,7 +996,7 @@ class _AndroidSearchListener extends java_lang_Object
     final poiList = [
       for (final item in (await var1.getPois())) Poi.android(item)
     ];
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(poiList);
       _streamController?.close();
     }
@@ -1009,7 +1009,7 @@ class _AndroidSearchListener extends java_lang_Object
   ) async {
     super.onGetInputtips(var1, var2);
     final inputTipList = [for (final item in var1) InputTip.android(item)];
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(inputTipList);
       _streamController?.close();
     }
@@ -1025,7 +1025,7 @@ class _AndroidSearchListener extends java_lang_Object
       for (final item in (await var1.getGeocodeAddressList()))
         Geocode.android(item)
     ];
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(geocode);
       _streamController?.close();
     }
@@ -1036,7 +1036,7 @@ class _AndroidSearchListener extends java_lang_Object
       com_amap_api_services_geocoder_RegeocodeResult var1, int var2) async {
     super.onRegeocodeSearched(var1, var2);
     final result = await var1.getRegeocodeAddress();
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(ReGeocode.android(result));
       _streamController?.close();
     }
@@ -1048,7 +1048,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onDriveRouteSearched(var1, var2);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(DriveRouteResult.android(var1));
       _streamController?.close();
     }
@@ -1060,7 +1060,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onRideRouteSearched(var1, var2);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(RideRouteResult.android(var1));
       _streamController?.close();
     }
@@ -1072,7 +1072,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onWalkRouteSearched(var1, var2);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(WalkRouteResult.android(var1));
       _streamController?.close();
     }
@@ -1084,7 +1084,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onBusRouteSearched(var1, var2);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(BusRouteResult.android(var1));
       _streamController?.close();
     }
@@ -1094,7 +1094,7 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onBusStationSearched(
       com_amap_api_services_busline_BusStationResult var1, int var2) async {
     super.onBusStationSearched(var1, var2);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(BusStation.android(var1));
       _streamController?.close();
     }
@@ -1104,7 +1104,7 @@ class _AndroidSearchListener extends java_lang_Object
   Future<void> onDistrictSearched(
       com_amap_api_services_district_DistrictResult var1) async {
     super.onDistrictSearched(var1);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(District.android(var1));
       _streamController?.close();
     }
@@ -1125,7 +1125,7 @@ class _AndroidSearchListener extends java_lang_Object
     int var2,
   ) async {
     super.onWeatherForecastSearched(var1, var2);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(Weather.android(var1));
       _streamController?.close();
     }
@@ -1147,7 +1147,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     final poiList = [
       for (final item in (await response.get_pois())) Poi.ios(item)
     ];
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(poiList);
       _streamController?.close();
     }
@@ -1162,7 +1162,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     final inputTipList = [
       for (final item in (await response.get_tips())) InputTip.ios(item)
     ];
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(inputTipList);
       _streamController?.close();
     }
@@ -1177,7 +1177,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     final geocode = [
       for (final item in (await response.get_geocodes())) Geocode.ios(item)
     ];
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(geocode);
       _streamController?.close();
     }
@@ -1190,7 +1190,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     super.onReGeocodeSearchDoneResponse(request, response);
     final reGeocode = ReGeocode.ios(await response.get_regeocode());
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(reGeocode);
       _streamController?.close();
     }
@@ -1212,7 +1212,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     } else if (await isKindOfAMapRidingRouteSearchRequest(request)) {
       route = RideRouteResult.ios(await response.get_route());
     }
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(route);
       _streamController?.close();
     }
@@ -1224,7 +1224,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapBusStopSearchResponse response,
   ) async {
     super.onBusStopSearchDoneResponse(request, response);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(BusStation.ios(response));
       _streamController?.close();
     }
@@ -1236,7 +1236,7 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     AMapDistrictSearchResponse response,
   ) async {
     super.onDistrictSearchDoneResponse(request, response);
-    if (_streamController?.isClosed != true) {
+    if (_streamController?.isClosed == false) {
       _streamController?.add(District.ios(response));
       _streamController?.close();
     }
