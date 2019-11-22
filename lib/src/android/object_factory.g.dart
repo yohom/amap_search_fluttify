@@ -37,22 +37,6 @@ class AmapSearchFluttifyFactoryAndroid {
     return object;
   }
   
-  static Future<com_amap_api_services_traffic_RoadTrafficQuery> createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int(String var1, String var2, int var3) async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int', {"var1": var1, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_traffic_RoadTrafficQuery()..refId = refId..tag = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
-    return object;
-  }
-  
-  static Future<com_amap_api_services_traffic_CircleTrafficQuery> createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int(com_amap_api_services_core_LatLonPoint var1, int var2, int var3) async {
-    final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int', {"var1": var1.refId, "var2": var2, "var3": var3});
-    final object = com_amap_api_services_traffic_CircleTrafficQuery()..refId = refId..tag = 'amap_search_fluttify';
-  
-    kNativeObjectPool.add(object);
-    return object;
-  }
-  
   static Future<com_amap_api_services_traffic_TrafficStatusEvaluation> createcom_amap_api_services_traffic_TrafficStatusEvaluation__() async {
     final int refId = await _channel.invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__');
     final object = com_amap_api_services_traffic_TrafficStatusEvaluation()..refId = refId..tag = 'amap_search_fluttify';

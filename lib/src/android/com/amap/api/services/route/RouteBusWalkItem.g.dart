@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with android_os_Parcelable {
+class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services_route_WalkPath with android_os_Parcelable {
   // generate getters
   
 
@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getOrigin([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   
   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setOrigin([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   
   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::getDestination([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends java_lang_Object with
   
   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusWalkItem@$refId::setDestination([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
   // generate methods
   static Future<com_amap_api_services_weather_LocalWeatherForecastResult> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherForecast var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
   
   Future<com_amap_api_services_weather_WeatherSearchQuery> getWeatherForecastQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecastResult@$refId::getWeatherForecastQuery([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_weather_LocalWeatherForecastResult extends java_lang
   
   Future<com_amap_api_services_weather_LocalWeatherForecast> getForecastResult() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherForecastResult@$refId::getForecastResult([])');
     }
   

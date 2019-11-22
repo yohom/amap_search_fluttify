@@ -20,7 +20,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_busline_BusStationResult> searchBusStation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationSearch@$refId::searchBusStation([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   
   Future<void> setOnBusStationSearchListener(com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationSearch@$refId::setOnBusStationSearchListener([])');
     }
   
@@ -83,7 +83,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   
   Future<void> searchBusStationAsyn() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationSearch@$refId::searchBusStationAsyn([])');
     }
   
@@ -105,7 +105,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   
   Future<void> setQuery(com_amap_api_services_busline_BusStationQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationSearch@$refId::setQuery([])');
     }
   
@@ -127,7 +127,7 @@ class com_amap_api_services_busline_BusStationSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_busline_BusStationQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.busline.BusStationSearch@$refId::getQuery([])');
     }
   

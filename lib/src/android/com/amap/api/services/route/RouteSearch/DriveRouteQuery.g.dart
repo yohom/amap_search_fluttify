@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   // generate methods
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getFromAndTo([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<int> getMode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getMode([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<int> getCarType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getCarType([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPassedByPoints() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedByPoints([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getAvoidpolygons() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<String> getAvoidRoad() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidRoad([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<String> getPassedPointStr() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getPassedPointStr([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<bool> hasPassPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasPassPoint([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<String> getAvoidpolygonsStr() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygonsStr([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<bool> hasAvoidpolygons() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidpolygons([])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<bool> hasAvoidRoad() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::hasAvoidRoad([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<bool> isUseFerry() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::isUseFerry([])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<void> setUseFerry(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setUseFerry([\'var1\':$var1])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
   
   Future<void> setCarType(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::setCarType([\'var1\':$var1])');
     }
   

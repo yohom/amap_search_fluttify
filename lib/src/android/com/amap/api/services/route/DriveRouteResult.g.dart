@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with android_os_Parcelable {
+class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services_route_RouteResult with android_os_Parcelable {
   // generate getters
   
 
@@ -20,7 +20,7 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   // generate methods
   Future<double> getTaxiCost() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getTaxiCost([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<void> setTaxiCost(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<List<com_amap_api_services_route_DrivePath>> getPaths() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getPaths([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<void> setPaths(List<com_amap_api_services_route_DrivePath> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setPaths([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> getDriveQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::getDriveQuery([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_DriveRouteResult extends java_lang_Object with
   
   Future<void> setDriveQuery(com_amap_api_services_route_RouteSearch_DriveRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DriveRouteResult@$refId::setDriveQuery([])');
     }
   

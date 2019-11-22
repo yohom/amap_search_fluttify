@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with android_os_Parcelable {
+class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_core_LatLonPoint with android_os_Parcelable {
   // generate getters
   
 
@@ -20,7 +20,7 @@ class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with 
   // generate methods
   Future<String> getSharePointName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::getSharePointName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_core_LatLonSharePoint extends java_lang_Object with 
   
   Future<void> setSharePointName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.LatLonSharePoint@$refId::setSharePointName([\'var1\':$var1])');
     }
   

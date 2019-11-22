@@ -20,7 +20,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   // generate methods
   Future<List<com_amap_api_services_nearby_NearbyInfo>> getNearbyInfoList() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::getNearbyInfoList([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   
   Future<int> getTotalNum() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::getTotalNum([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   
   Future<void> setNearbyInfoList(List<com_amap_api_services_nearby_NearbyInfo> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.nearby.NearbySearchResult@$refId::setNearbyInfoList([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   // generate methods
   Future<String> getBuilding() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getBuilding([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setBuilding(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setBuilding([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<String> getQueryString() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getQueryString([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setQueryLanguage(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setQueryLanguage([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<String> getCategory() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCategory([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCity([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<int> getPageNum() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageNum([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setPageNum(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageNum([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setPageSize(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setPageSize([\'var1\':$var1])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<int> getPageSize() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getPageSize([])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setCityLimit(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setCityLimit([\'var1\':$var1])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> getCityLimit() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getCityLimit([])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> requireSubPois(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::requireSubPois([\'var1\':$var1])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> isRequireSubPois() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isRequireSubPois([])');
     }
   
@@ -328,7 +328,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> isDistanceSort() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::isDistanceSort([])');
     }
   
@@ -350,7 +350,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setDistanceSort(bool var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setDistanceSort([\'var1\':$var1])');
     }
   
@@ -372,7 +372,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<com_amap_api_services_core_LatLonPoint> getLocation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::getLocation([])');
     }
   
@@ -394,7 +394,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<void> setLocation(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::setLocation([])');
     }
   
@@ -416,7 +416,7 @@ class com_amap_api_services_poisearch_PoiSearch_Query extends java_lang_Object  
   
   Future<bool> queryEquals(com_amap_api_services_poisearch_PoiSearch_Query var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.Query@$refId::queryEquals([])');
     }
   

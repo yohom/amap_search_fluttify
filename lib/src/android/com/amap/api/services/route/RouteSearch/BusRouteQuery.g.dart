@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   // generate methods
   Future<com_amap_api_services_route_RouteSearch_FromAndTo> getFromAndTo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getFromAndTo([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<int> getMode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getMode([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCity([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<int> getNightFlag() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getNightFlag([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<String> getCityd() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::getCityd([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
   
   Future<void> setCityd(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::setCityd([\'var1\':$var1])');
     }
   

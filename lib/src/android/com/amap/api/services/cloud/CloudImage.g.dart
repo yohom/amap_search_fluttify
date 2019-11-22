@@ -20,7 +20,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   // generate methods
   Future<String> getId() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getId([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<void> setId(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setId([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<String> getPreurl() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getPreurl([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<void> setPreurl(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setPreurl([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<String> getUrl() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::getUrl([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_cloud_CloudImage extends java_lang_Object with andro
   
   Future<void> setUrl(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudImage@$refId::setUrl([\'var1\':$var1])');
     }
   

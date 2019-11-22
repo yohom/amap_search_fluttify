@@ -20,7 +20,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   // generate methods
   Future<int> getErrorLevel() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorLevel([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   
   Future<String> getErrorType() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorType([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   
   Future<String> getErrorMessage() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorMessage([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   
   Future<int> getErrorCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.core.AMapException@$refId::getErrorCode([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   // generate methods
   Future<void> setDistanceQuery(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceQuery([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   
   Future<com_amap_api_services_route_DistanceSearch_DistanceQuery> getDistanceQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceQuery([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   
   Future<List<com_amap_api_services_route_DistanceItem>> getDistanceResults() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::getDistanceResults([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_DistanceResult extends java_lang_Object with a
   
   Future<void> setDistanceResults(List<com_amap_api_services_route_DistanceItem> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.DistanceResult@$refId::setDistanceResults([])');
     }
   

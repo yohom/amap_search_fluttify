@@ -20,7 +20,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   // generate methods
   Future<String> getName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   
   Future<void> setName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setName([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::getLatLonPoint([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_Doorway extends java_lang_Object with android_
   
   Future<void> setLatLonPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.Doorway@$refId::setLatLonPoint([])');
     }
   

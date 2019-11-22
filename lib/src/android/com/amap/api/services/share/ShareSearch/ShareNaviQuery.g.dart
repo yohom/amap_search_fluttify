@@ -20,7 +20,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   // generate methods
   Future<com_amap_api_services_share_ShareSearch_ShareFromAndTo> getFromAndTo() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getFromAndTo([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_share_ShareSearch_ShareNaviQuery extends java_lang_O
   
   Future<int> getNaviMode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.share.ShareSearch.ShareNaviQuery@$refId::getNaviMode([])');
     }
   

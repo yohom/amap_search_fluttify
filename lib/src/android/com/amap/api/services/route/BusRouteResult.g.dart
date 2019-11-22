@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_route_BusRouteResult extends java_lang_Object with android_os_Parcelable {
+class com_amap_api_services_route_BusRouteResult extends com_amap_api_services_route_RouteResult with android_os_Parcelable {
   // generate getters
   
 
@@ -20,7 +20,7 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   // generate methods
   Future<double> getTaxiCost() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getTaxiCost([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<void> setTaxiCost(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setTaxiCost([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<List<com_amap_api_services_route_BusPath>> getPaths() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getPaths([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<void> setPaths(List<com_amap_api_services_route_BusPath> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setPaths([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> getBusQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::getBusQuery([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_BusRouteResult extends java_lang_Object with a
   
   Future<void> setBusQuery(com_amap_api_services_route_RouteSearch_BusRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.BusRouteResult@$refId::setBusQuery([])');
     }
   

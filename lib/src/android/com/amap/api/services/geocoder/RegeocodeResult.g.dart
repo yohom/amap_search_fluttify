@@ -20,7 +20,7 @@ class com_amap_api_services_geocoder_RegeocodeResult extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_geocoder_RegeocodeQuery> getRegeocodeQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeQuery([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_geocoder_RegeocodeResult extends java_lang_Object  {
   
   Future<void> setRegeocodeQuery(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeQuery([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_geocoder_RegeocodeResult extends java_lang_Object  {
   
   Future<com_amap_api_services_geocoder_RegeocodeAddress> getRegeocodeAddress() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::getRegeocodeAddress([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_geocoder_RegeocodeResult extends java_lang_Object  {
   
   Future<void> setRegeocodeAddress(com_amap_api_services_geocoder_RegeocodeAddress var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.RegeocodeResult@$refId::setRegeocodeAddress([])');
     }
   

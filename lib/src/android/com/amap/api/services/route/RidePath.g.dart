@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_route_RidePath extends java_lang_Object with android_os_Parcelable {
+class com_amap_api_services_route_RidePath extends com_amap_api_services_route_Path with android_os_Parcelable {
   // generate getters
   
 
@@ -20,7 +20,7 @@ class com_amap_api_services_route_RidePath extends java_lang_Object with android
   // generate methods
   Future<List<com_amap_api_services_route_RideStep>> getSteps() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RidePath@$refId::getSteps([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RidePath extends java_lang_Object with android
   
   Future<void> setSteps(List<com_amap_api_services_route_RideStep> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RidePath@$refId::setSteps([])');
     }
   

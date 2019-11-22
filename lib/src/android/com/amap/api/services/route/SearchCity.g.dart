@@ -20,7 +20,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   // generate methods
   Future<String> getSearchCityName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<void> setSearchCityName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityName([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<String> getSearchCitycode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCitycode([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<void> setSearchCitycode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCitycode([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<String> getSearchCityAdCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::getSearchCityAdCode([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_SearchCity extends java_lang_Object with andro
   
   Future<void> setSearchCityhAdCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.SearchCity@$refId::setSearchCityhAdCode([\'var1\':$var1])');
     }
   

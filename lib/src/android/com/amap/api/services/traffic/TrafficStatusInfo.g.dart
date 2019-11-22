@@ -20,7 +20,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   // generate methods
   Future<String> getName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setName([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<String> getStatus() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getStatus([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setStatus(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setStatus([\'var1\':$var1])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<String> getDirection() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getDirection([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setDirection(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setDirection([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<int> getAngle() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getAngle([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setAngle(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setAngle([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<double> getSpeed() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getSpeed([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setSpeed(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setSpeed([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<String> getLcodes() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getLcodes([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setLcodes(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setLcodes([\'var1\':$var1])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getCoordinates() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::getCoordinates([])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_traffic_TrafficStatusInfo extends java_lang_Object w
   
   Future<void> setCoordinates(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficStatusInfo@$refId::setCoordinates([])');
     }
   

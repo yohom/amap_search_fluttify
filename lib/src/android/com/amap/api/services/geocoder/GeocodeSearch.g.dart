@@ -20,7 +20,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_geocoder_RegeocodeAddress> getFromLocation(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocation([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<List<com_amap_api_services_geocoder_GeocodeAddress>> getFromLocationName(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationName([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<void> setOnGeocodeSearchListener(com_amap_api_services_geocoder_GeocodeSearch_OnGeocodeSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::setOnGeocodeSearchListener([])');
     }
   
@@ -114,7 +114,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<void> getFromLocationAsyn(com_amap_api_services_geocoder_RegeocodeQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationAsyn([])');
     }
   
@@ -136,7 +136,7 @@ class com_amap_api_services_geocoder_GeocodeSearch extends java_lang_Object  {
   
   Future<void> getFromLocationNameAsyn(com_amap_api_services_geocoder_GeocodeQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.GeocodeSearch@$refId::getFromLocationNameAsyn([])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   // generate methods
   Future<void> setOnCloudSearchListener(com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::setOnCloudSearchListener([])');
     }
   
@@ -70,7 +70,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   
   Future<void> searchCloudAsyn(com_amap_api_services_cloud_CloudSearch_Query var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudAsyn([])');
     }
   
@@ -92,7 +92,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   
   Future<void> searchCloudDetailAsyn(String var1, String var2) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudSearch@$refId::searchCloudDetailAsyn([\'var1\':$var1, \'var2\':$var2])');
     }
   

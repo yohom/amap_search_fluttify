@@ -20,7 +20,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   // generate methods
   Future<void> setTruckQuery(com_amap_api_services_route_RouteSearch_TruckRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setTruckQuery([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<void> setPaths(List<com_amap_api_services_route_TruckPath> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setPaths([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<void> setStartPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setStartPos([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<void> setTargetPos(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::setTargetPos([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<com_amap_api_services_route_RouteSearch_TruckRouteQuery> getTruckQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getTruckQuery([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<List<com_amap_api_services_route_TruckPath>> getPaths() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getPaths([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<com_amap_api_services_core_LatLonPoint> getStartPos() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getStartPos([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_TruckRouteRestult extends java_lang_Object wit
   
   Future<com_amap_api_services_core_LatLonPoint> getTargetPos() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TruckRouteRestult@$refId::getTargetPos([])');
     }
   

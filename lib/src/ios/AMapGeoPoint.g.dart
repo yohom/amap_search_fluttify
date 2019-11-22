@@ -42,7 +42,7 @@ class AMapGeoPoint extends AMapSearchObject  {
   // generate methods
   static Future<AMapGeoPoint> locationWithLatitudeLongitude(double lat, double lon) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoPoint::locationWithLatitude([\'lat\':$lat, \'lon\':$lon])');
     }
   

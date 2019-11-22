@@ -20,7 +20,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getLowerLeft([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   
   Future<com_amap_api_services_core_LatLonPoint> getUpperRight() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getUpperRight([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   
   Future<com_amap_api_services_core_LatLonPoint> getCenter() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getCenter([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   
   Future<int> getRange() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getRange([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   
   Future<String> getShape() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getShape([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   
   Future<bool> isDistanceSort() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::isDistanceSort([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyGonList() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::getPolyGonList([])');
     }
   

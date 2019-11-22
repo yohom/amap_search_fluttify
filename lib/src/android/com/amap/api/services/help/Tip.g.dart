@@ -20,7 +20,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   // generate methods
   Future<String> getPoiID() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getPoiID([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setID(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setID([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<com_amap_api_services_core_LatLonPoint> getPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getPoint([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setPostion(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setPostion([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<String> getName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getName([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setName([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<String> getDistrict() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getDistrict([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setDistrict(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setDistrict([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<String> getAdcode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getAdcode([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setAdcode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setAdcode([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<String> getAddress() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getAddress([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setAddress(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setAddress([\'var1\':$var1])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<void> setTypeCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::setTypeCode([\'var1\':$var1])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_help_Tip extends java_lang_Object with android_os_Pa
   
   Future<String> getTypeCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.help.Tip@$refId::getTypeCode([])');
     }
   

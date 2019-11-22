@@ -20,7 +20,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getOrigin() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getOrigin([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<com_amap_api_services_core_LatLonPoint> getDestination() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDestination([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<double> getDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDistance([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<double> getDuration() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getDuration([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<String> getmSname() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmSname([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<String> getmTname() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::getmTname([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setOrigin(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setOrigin([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setDestination(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDestination([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setDistance(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDistance([\'var1\':$var1])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setDuration(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setDuration([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setSname(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setSname([\'var1\':$var1])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   
   Future<void> setTname(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.TaxiItem@$refId::setTname([\'var1\':$var1])');
     }
   

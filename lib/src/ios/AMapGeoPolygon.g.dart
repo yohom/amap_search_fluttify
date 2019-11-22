@@ -30,7 +30,7 @@ class AMapGeoPolygon extends AMapSearchObject  {
   // generate methods
   static Future<AMapGeoPolygon> polygonWithPoints(List<NSObject> points) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: AMapGeoPolygon::polygonWithPoints([])');
     }
   

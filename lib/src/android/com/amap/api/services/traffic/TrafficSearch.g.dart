@@ -20,7 +20,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   // generate methods
   Future<void> setTrafficSearchListener(com_amap_api_services_traffic_TrafficSearch_OnTrafficSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::setTrafficSearchListener([])');
     }
   
@@ -49,94 +49,6 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
               break;
           }
         });
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByRoad(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
-    // print log
-    if (!kReleaseMode) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoad([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoad', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-      kNativeObjectPool.add(com_amap_api_services_traffic_TrafficStatusResult()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_traffic_TrafficStatusResult()..refId = result..tag = 'amap_search_fluttify';
-    }
-  }
-  
-  Future<void> loadTrafficByRoadAsyn(com_amap_api_services_traffic_RoadTrafficQuery var1) async {
-    // print log
-    if (!kReleaseMode) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByRoadAsyn([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoadAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-    
-      return result;
-    }
-  }
-  
-  Future<com_amap_api_services_traffic_TrafficStatusResult> loadTrafficByCircle(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
-    // print log
-    if (!kReleaseMode) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircle([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircle', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-      kNativeObjectPool.add(com_amap_api_services_traffic_TrafficStatusResult()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_traffic_TrafficStatusResult()..refId = result..tag = 'amap_search_fluttify';
-    }
-  }
-  
-  Future<void> loadTrafficByCircleAsyn(com_amap_api_services_traffic_CircleTrafficQuery var1) async {
-    // print log
-    if (!kReleaseMode) {
-      print('fluttify-dart: com.amap.api.services.traffic.TrafficSearch@$refId::loadTrafficByCircleAsyn([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircleAsyn', {"var1": var1.refId, "refId": refId});
-  
-  
-    // handle native call
-  
   
     // convert native result to dart side object
     if (result == null) {

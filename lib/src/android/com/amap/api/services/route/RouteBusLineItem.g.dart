@@ -20,7 +20,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   // generate methods
   Future<com_amap_api_services_busline_BusStationItem> getDepartureBusStation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getDepartureBusStation([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setDepartureBusStation(com_amap_api_services_busline_BusStationItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDepartureBusStation([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<com_amap_api_services_busline_BusStationItem> getArrivalBusStation() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getArrivalBusStation([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setArrivalBusStation(com_amap_api_services_busline_BusStationItem var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setArrivalBusStation([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getPolyline() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPolyline([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setPolyline(List<com_amap_api_services_core_LatLonPoint> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPolyline([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<int> getPassStationNum() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStationNum([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setPassStationNum(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStationNum([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<List<com_amap_api_services_busline_BusStationItem>> getPassStations() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getPassStations([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setPassStations(List<com_amap_api_services_busline_BusStationItem> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setPassStations([])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<double> getDuration() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::getDuration([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   
   Future<void> setDuration(double var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RouteBusLineItem@$refId::setDuration([\'var1\':$var1])');
     }
   

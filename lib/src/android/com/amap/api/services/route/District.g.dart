@@ -20,7 +20,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   // generate methods
   Future<String> getDistrictName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.District@$refId::getDistrictName([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   
   Future<void> setDistrictName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictName([\'var1\':$var1])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   
   Future<String> getDistrictAdcode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.District@$refId::getDistrictAdcode([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   
   Future<void> setDistrictAdcode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.District@$refId::setDistrictAdcode([\'var1\':$var1])');
     }
   

@@ -20,7 +20,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   // generate methods
   Future<String> getProvince() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getProvince([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getCity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getCity([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getAdCode() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getAdCode([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getWeather() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWeather([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getTemperature() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getTemperature([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getWindDirection() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindDirection([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getWindPower() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getWindPower([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getHumidity() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getHumidity([])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<String> getReportTime() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::getReportTime([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setProvince(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setProvince([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setCity(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setCity([\'var1\':$var1])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setAdCode(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setAdCode([\'var1\':$var1])');
     }
   
@@ -284,7 +284,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setWeather(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWeather([\'var1\':$var1])');
     }
   
@@ -306,7 +306,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setTemperature(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setTemperature([\'var1\':$var1])');
     }
   
@@ -328,7 +328,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setWindDirection(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindDirection([\'var1\':$var1])');
     }
   
@@ -350,7 +350,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setWindPower(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setWindPower([\'var1\':$var1])');
     }
   
@@ -372,7 +372,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setHumidity(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setHumidity([\'var1\':$var1])');
     }
   
@@ -394,7 +394,7 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   
   Future<void> setReportTime(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.weather.LocalWeatherLive@$refId::setReportTime([\'var1\':$var1])');
     }
   

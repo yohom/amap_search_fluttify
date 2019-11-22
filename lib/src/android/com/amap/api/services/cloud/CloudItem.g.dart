@@ -20,7 +20,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   // generate methods
   Future<String> getID() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getID([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<int> getDistance() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getDistance([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<void> setDistance(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setDistance([\'var1\':$var1])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<String> getTitle() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getTitle([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<String> getSnippet() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getSnippet([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<com_amap_api_services_core_LatLonPoint> getLatLonPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getLatLonPoint([])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<String> getCreatetime() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCreatetime([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<void> setCreatetime(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setCreatetime([\'var1\':$var1])');
     }
   
@@ -196,7 +196,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<String> getUpdatetime() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getUpdatetime([])');
     }
   
@@ -218,7 +218,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<void> setUpdatetime(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setUpdatetime([\'var1\':$var1])');
     }
   
@@ -240,7 +240,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<List<com_amap_api_services_cloud_CloudImage>> getCloudImage() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::getCloudImage([])');
     }
   
@@ -262,7 +262,7 @@ class com_amap_api_services_cloud_CloudItem extends java_lang_Object with androi
   
   Future<void> setmCloudImage(List<com_amap_api_services_cloud_CloudImage> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.cloud.CloudItem@$refId::setmCloudImage([])');
     }
   

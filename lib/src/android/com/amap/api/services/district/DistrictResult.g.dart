@@ -20,7 +20,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   // generate methods
   Future<List<com_amap_api_services_district_DistrictItem>> getDistrict() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getDistrict([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<void> setDistrict(List<com_amap_api_services_district_DistrictItem> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setDistrict([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getQuery([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setQuery([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<int> getPageCount() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getPageCount([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<void> setPageCount(int var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setPageCount([\'var1\':$var1])');
     }
   
@@ -152,7 +152,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<com_amap_api_services_core_AMapException> getAMapException() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::getAMapException([])');
     }
   
@@ -174,7 +174,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
   
   Future<void> setAMapException(com_amap_api_services_core_AMapException var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictResult@$refId::setAMapException([])');
     }
   

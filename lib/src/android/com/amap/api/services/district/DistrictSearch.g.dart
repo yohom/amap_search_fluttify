@@ -20,7 +20,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   // generate methods
   Future<com_amap_api_services_district_DistrictSearchQuery> getQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::getQuery([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> setQuery(com_amap_api_services_district_DistrictSearchQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setQuery([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<com_amap_api_services_district_DistrictResult> searchDistrict() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrict([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> searchDistrictAsyn() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAsyn([])');
     }
   
@@ -108,7 +108,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> searchDistrictAnsy() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::searchDistrictAnsy([])');
     }
   
@@ -130,7 +130,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   
   Future<void> setOnDistrictSearchListener(com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.district.DistrictSearch@$refId::setOnDistrictSearchListener([])');
     }
   

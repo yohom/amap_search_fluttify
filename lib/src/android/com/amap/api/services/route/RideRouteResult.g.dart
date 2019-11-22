@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-class com_amap_api_services_route_RideRouteResult extends java_lang_Object with android_os_Parcelable {
+class com_amap_api_services_route_RideRouteResult extends com_amap_api_services_route_RouteResult with android_os_Parcelable {
   // generate getters
   
 
@@ -20,7 +20,7 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   // generate methods
   Future<List<com_amap_api_services_route_RidePath>> getPaths() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getPaths([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   
   Future<void> setPaths(List<com_amap_api_services_route_RidePath> var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setPaths([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   
   Future<com_amap_api_services_route_RouteSearch_RideRouteQuery> getRideQuery() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::getRideQuery([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_route_RideRouteResult extends java_lang_Object with 
   
   Future<void> setRideQuery(com_amap_api_services_route_RouteSearch_RideRouteQuery var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.route.RideRouteResult@$refId::setRideQuery([])');
     }
   

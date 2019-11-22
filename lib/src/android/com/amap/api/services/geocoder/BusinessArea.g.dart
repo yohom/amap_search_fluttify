@@ -20,7 +20,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   // generate methods
   Future<com_amap_api_services_core_LatLonPoint> getCenterPoint() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getCenterPoint([])');
     }
   
@@ -42,7 +42,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   
   Future<void> setCenterPoint(com_amap_api_services_core_LatLonPoint var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setCenterPoint([])');
     }
   
@@ -64,7 +64,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   
   Future<String> getName() async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::getName([])');
     }
   
@@ -86,7 +86,7 @@ class com_amap_api_services_geocoder_BusinessArea extends java_lang_Object with 
   
   Future<void> setName(String var1) async {
     // print log
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       print('fluttify-dart: com.amap.api.services.geocoder.BusinessArea@$refId::setName([\'var1\':$var1])');
     }
   
