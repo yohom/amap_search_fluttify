@@ -745,7 +745,7 @@ class DriveStep with _ToFutureString {
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
-            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .map((it) => LatLng(double.parse(it[1]), double.parse(it[0])))
             .toList();
       },
     );
@@ -847,7 +847,7 @@ class WalkStep with _ToFutureString {
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
-            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .map((it) => LatLng(double.parse(it[1]), double.parse(it[0])))
             .toList();
       },
     );
@@ -939,7 +939,7 @@ class RideStep with _ToFutureString {
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
-            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .map((it) => LatLng(double.parse(it[1]), double.parse(it[0])))
             .toList();
       },
     );
@@ -1338,7 +1338,7 @@ class TMC with _ToFutureString {
         return latLngString
             .split(';')
             .map((latLngPair) => latLngPair.split(','))
-            .map((it) => LatLng(double.parse(it[0]), double.parse(it[1])))
+            .map((it) => LatLng(double.parse(it[1]), double.parse(it[0])))
             .toList();
       },
     );
