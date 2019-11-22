@@ -29,6 +29,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
     private Registrar registrar;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
+        // getter
         put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", (args, methodResult) -> {
             // ref object
             int refId = (int) args.get("refId");
@@ -40,6 +41,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(result);
         });
+        // getter
         put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR", (args, methodResult) -> {
             // ref object
             int refId = (int) args.get("refId");
@@ -51,6 +53,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(result);
         });
+        // getter
         put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA", (args, methodResult) -> {
             // ref object
             int refId = (int) args.get("refId");
@@ -62,6 +65,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getName", (args, methodResult) -> {
             // args
         
@@ -81,6 +85,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -101,6 +106,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getStatus", (args, methodResult) -> {
             // args
         
@@ -120,6 +126,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setStatus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -140,6 +147,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getDirection", (args, methodResult) -> {
             // args
         
@@ -159,6 +167,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -179,6 +188,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getAngle", (args, methodResult) -> {
             // args
         
@@ -198,6 +208,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setAngle", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -218,6 +229,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getSpeed", (args, methodResult) -> {
             // args
         
@@ -237,6 +249,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setSpeed", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -257,6 +270,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getLcodes", (args, methodResult) -> {
             // args
         
@@ -276,6 +290,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setLcodes", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -296,6 +311,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::getCoordinates", (args, methodResult) -> {
             // args
         
@@ -324,6 +340,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusInfo::setCoordinates", (args, methodResult) -> {
             // args
             // list arg
@@ -348,6 +365,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusResult::getDescription", (args, methodResult) -> {
             // args
         
@@ -367,6 +385,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusResult::setDescription", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -387,6 +406,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusResult::getEvaluation", (args, methodResult) -> {
             // args
         
@@ -413,6 +433,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusResult::setEvaluation", (args, methodResult) -> {
             // args
             // ref arg
@@ -433,6 +454,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusResult::getRoads", (args, methodResult) -> {
             // args
         
@@ -461,6 +483,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusResult::setRoads", (args, methodResult) -> {
             // args
             // list arg
@@ -485,6 +508,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener", (args, methodResult) -> {
             // args
         
@@ -510,8 +534,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -532,6 +558,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoad", (args, methodResult) -> {
             // args
             // ref arg
@@ -559,6 +586,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByRoadAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -579,6 +607,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircle", (args, methodResult) -> {
             // args
             // ref arg
@@ -606,6 +635,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.traffic.TrafficSearch::loadTrafficByCircleAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -626,6 +656,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -648,221 +679,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
-        put("com.amap.api.services.traffic.RoadTrafficQuery::getName", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::getName(" + "" + ")");
-            }
-        
-            // invoke native method
-            String result = ref.getName();
-        
-            // result
-            methodResult.success(result);
-        });
-        put("com.amap.api.services.traffic.RoadTrafficQuery::setName", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::setName(" + var1 + ")");
-            }
-        
-            // invoke native method
-            ref.setName(var1);
-        
-            // result
-            methodResult.success("success");
-        });
-        put("com.amap.api.services.traffic.RoadTrafficQuery::getAdCode", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::getAdCode(" + "" + ")");
-            }
-        
-            // invoke native method
-            String result = ref.getAdCode();
-        
-            // result
-            methodResult.success(result);
-        });
-        put("com.amap.api.services.traffic.RoadTrafficQuery::setAdCode", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::setAdCode(" + var1 + ")");
-            }
-        
-            // invoke native method
-            ref.setAdCode(var1);
-        
-            // result
-            methodResult.success("success");
-        });
-        put("com.amap.api.services.traffic.RoadTrafficQuery::clone", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.RoadTrafficQuery ref = (com.amap.api.services.traffic.RoadTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.RoadTrafficQuery@" + refId + "::clone(" + "" + ")");
-            }
-        
-            // invoke native method
-            com.amap.api.services.traffic.RoadTrafficQuery result = ref.clone();
-        
-            // result
-            if (result != null) {
-                int returnRefId = result.hashCode();
-                getHEAP().put(returnRefId, result);
-        
-                methodResult.success(returnRefId);
-            } else {
-                methodResult.success(null);
-            }
-        });
-        put("com.amap.api.services.traffic.CircleTrafficQuery::getCenterPoint", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::getCenterPoint(" + "" + ")");
-            }
-        
-            // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenterPoint();
-        
-            // result
-            if (result != null) {
-                int returnRefId = result.hashCode();
-                getHEAP().put(returnRefId, result);
-        
-                methodResult.success(returnRefId);
-            } else {
-                methodResult.success(null);
-            }
-        });
-        put("com.amap.api.services.traffic.CircleTrafficQuery::setCenterPoint", (args, methodResult) -> {
-            // args
-            // ref arg
-            com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) args.get("var1"));
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::setCenterPoint(" + var1 + ")");
-            }
-        
-            // invoke native method
-            ref.setCenterPoint(var1);
-        
-            // result
-            methodResult.success("success");
-        });
-        put("com.amap.api.services.traffic.CircleTrafficQuery::getRadius", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::getRadius(" + "" + ")");
-            }
-        
-            // invoke native method
-            int result = ref.getRadius();
-        
-            // result
-            methodResult.success(result);
-        });
-        put("com.amap.api.services.traffic.CircleTrafficQuery::setRadius", (args, methodResult) -> {
-            // args
-            // jsonable arg
-            int var1 = (int) args.get("var1");
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::setRadius(" + var1 + ")");
-            }
-        
-            // invoke native method
-            ref.setRadius(var1);
-        
-            // result
-            methodResult.success("success");
-        });
-        put("com.amap.api.services.traffic.CircleTrafficQuery::clone", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.traffic.CircleTrafficQuery ref = (com.amap.api.services.traffic.CircleTrafficQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.traffic.CircleTrafficQuery@" + refId + "::clone(" + "" + ")");
-            }
-        
-            // invoke native method
-            com.amap.api.services.traffic.CircleTrafficQuery result = ref.clone();
-        
-            // result
-            if (result != null) {
-                int returnRefId = result.hashCode();
-                getHEAP().put(returnRefId, result);
-        
-                methodResult.success(returnRefId);
-            } else {
-                methodResult.success(null);
-            }
-        });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::getExpedite", (args, methodResult) -> {
             // args
         
@@ -882,6 +699,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::setExpedite", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -902,6 +720,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::getCongested", (args, methodResult) -> {
             // args
         
@@ -921,6 +740,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::setCongested", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -941,6 +761,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::getBlocked", (args, methodResult) -> {
             // args
         
@@ -960,6 +781,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::setBlocked", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -980,6 +802,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::getUnknown", (args, methodResult) -> {
             // args
         
@@ -999,6 +822,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::setUnknown", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1019,6 +843,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::getStatus", (args, methodResult) -> {
             // args
         
@@ -1038,6 +863,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::setStatus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1058,6 +884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::getDescription", (args, methodResult) -> {
             // args
         
@@ -1077,6 +904,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.traffic.TrafficStatusEvaluation::setDescription", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1097,6 +925,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener::onBusLineSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -1119,6 +948,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener::onBusStationSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -1141,6 +971,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -1160,6 +991,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1180,6 +1012,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBusLineName", (args, methodResult) -> {
             // args
         
@@ -1199,6 +1032,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBusLineName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1219,6 +1053,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBusLineType", (args, methodResult) -> {
             // args
         
@@ -1238,6 +1073,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBusLineType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1258,6 +1094,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getCityCode", (args, methodResult) -> {
             // args
         
@@ -1277,6 +1114,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1297,6 +1135,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getDirectionsCoordinates", (args, methodResult) -> {
             // args
         
@@ -1325,6 +1164,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setDirectionsCoordinates", (args, methodResult) -> {
             // args
             // list arg
@@ -1349,6 +1189,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBounds", (args, methodResult) -> {
             // args
         
@@ -1377,6 +1218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBounds", (args, methodResult) -> {
             // args
             // list arg
@@ -1401,6 +1243,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBusLineId", (args, methodResult) -> {
             // args
         
@@ -1420,6 +1263,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBusLineId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1440,6 +1284,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getOriginatingStation", (args, methodResult) -> {
             // args
         
@@ -1459,6 +1304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setOriginatingStation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1479,6 +1325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getTerminalStation", (args, methodResult) -> {
             // args
         
@@ -1498,6 +1345,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setTerminalStation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1518,6 +1366,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBusCompany", (args, methodResult) -> {
             // args
         
@@ -1537,6 +1386,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBusCompany", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1557,6 +1407,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBasicPrice", (args, methodResult) -> {
             // args
         
@@ -1576,6 +1427,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBasicPrice", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1596,6 +1448,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getTotalPrice", (args, methodResult) -> {
             // args
         
@@ -1615,6 +1468,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setTotalPrice", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -1635,6 +1489,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::getBusStations", (args, methodResult) -> {
             // args
         
@@ -1663,6 +1518,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineItem::setBusStations", (args, methodResult) -> {
             // args
             // list arg
@@ -1687,6 +1543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationResult::createPagedResult", (args, methodResult) -> {
             // args
             // ref arg
@@ -1729,6 +1586,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationResult::getPageCount", (args, methodResult) -> {
             // args
         
@@ -1748,6 +1606,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationResult::getQuery", (args, methodResult) -> {
             // args
         
@@ -1774,6 +1633,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationResult::getSearchSuggestionKeywords", (args, methodResult) -> {
             // args
         
@@ -1793,6 +1653,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationResult::getSearchSuggestionCities", (args, methodResult) -> {
             // args
         
@@ -1821,6 +1682,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationResult::getBusStations", (args, methodResult) -> {
             // args
         
@@ -1849,6 +1711,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationSearch::searchBusStation", (args, methodResult) -> {
             // args
         
@@ -1875,6 +1738,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener", (args, methodResult) -> {
             // args
         
@@ -1900,8 +1764,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -1922,6 +1788,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationSearch::searchBusStationAsyn", (args, methodResult) -> {
             // args
         
@@ -1941,6 +1808,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -1961,6 +1829,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -1987,6 +1856,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineSearch::searchBusLine", (args, methodResult) -> {
             // args
         
@@ -2013,6 +1883,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener", (args, methodResult) -> {
             // args
         
@@ -2038,8 +1909,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -2060,6 +1933,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineSearch::searchBusLineAsyn", (args, methodResult) -> {
             // args
         
@@ -2079,6 +1953,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -2099,6 +1974,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -2125,6 +2001,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::getCategory", (args, methodResult) -> {
             // args
         
@@ -2151,6 +2028,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::getQueryString", (args, methodResult) -> {
             // args
         
@@ -2170,6 +2048,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::setQueryString", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2190,6 +2069,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::getCity", (args, methodResult) -> {
             // args
         
@@ -2209,6 +2089,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2229,6 +2110,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::getPageSize", (args, methodResult) -> {
             // args
         
@@ -2248,6 +2130,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::setPageSize", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2268,6 +2151,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::getPageNumber", (args, methodResult) -> {
             // args
         
@@ -2287,6 +2171,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::setPageNumber", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2307,6 +2192,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::setCategory", (args, methodResult) -> {
             // args
             // enum arg
@@ -2327,6 +2213,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::clone", (args, methodResult) -> {
             // args
         
@@ -2353,6 +2240,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineQuery::weakEquals", (args, methodResult) -> {
             // args
             // ref arg
@@ -2373,6 +2261,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineResult::createPagedResult", (args, methodResult) -> {
             // args
             // ref arg
@@ -2415,6 +2304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineResult::getPageCount", (args, methodResult) -> {
             // args
         
@@ -2434,6 +2324,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineResult::getQuery", (args, methodResult) -> {
             // args
         
@@ -2460,6 +2351,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineResult::getSearchSuggestionKeywords", (args, methodResult) -> {
             // args
         
@@ -2479,6 +2371,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusLineResult::getSearchSuggestionCities", (args, methodResult) -> {
             // args
         
@@ -2507,6 +2400,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusLineResult::getBusLines", (args, methodResult) -> {
             // args
         
@@ -2535,6 +2429,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::getBusStationId", (args, methodResult) -> {
             // args
         
@@ -2554,6 +2449,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::setBusStationId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2574,6 +2470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::getBusStationName", (args, methodResult) -> {
             // args
         
@@ -2593,6 +2490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::setBusStationName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2613,6 +2511,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -2639,6 +2538,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::setLatLonPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -2659,6 +2559,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::getCityCode", (args, methodResult) -> {
             // args
         
@@ -2678,6 +2579,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2698,6 +2600,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::getAdCode", (args, methodResult) -> {
             // args
         
@@ -2717,6 +2620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2737,6 +2641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::getBusLineItems", (args, methodResult) -> {
             // args
         
@@ -2765,6 +2670,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationItem::setBusLineItems", (args, methodResult) -> {
             // args
             // list arg
@@ -2789,6 +2695,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::getQueryString", (args, methodResult) -> {
             // args
         
@@ -2808,6 +2715,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::getCity", (args, methodResult) -> {
             // args
         
@@ -2827,6 +2735,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::getPageSize", (args, methodResult) -> {
             // args
         
@@ -2846,6 +2755,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::getPageNumber", (args, methodResult) -> {
             // args
         
@@ -2865,6 +2775,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::setQueryString", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2885,6 +2796,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2905,6 +2817,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::setPageSize", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2925,6 +2838,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::setPageNumber", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -2945,6 +2859,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::clone", (args, methodResult) -> {
             // args
         
@@ -2971,6 +2886,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.busline.BusStationQuery::weakEquals", (args, methodResult) -> {
             // args
             // ref arg
@@ -2991,6 +2907,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.AMapException::getErrorLevel", (args, methodResult) -> {
             // args
         
@@ -3010,6 +2927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.AMapException::getErrorType", (args, methodResult) -> {
             // args
         
@@ -3029,6 +2947,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.AMapException::getErrorMessage", (args, methodResult) -> {
             // args
         
@@ -3048,6 +2967,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.AMapException::getErrorCode", (args, methodResult) -> {
             // args
         
@@ -3067,6 +2987,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::getConnectionTimeOut", (args, methodResult) -> {
             // args
         
@@ -3086,6 +3007,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::getSoTimeOut", (args, methodResult) -> {
             // args
         
@@ -3105,6 +3027,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::setConnectionTimeOut", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3125,6 +3048,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::setSoTimeOut", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3145,6 +3069,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::getInstance", (args, methodResult) -> {
             // args
         
@@ -3170,6 +3095,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::setLanguage", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3190,6 +3116,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::setProtocol", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3210,6 +3137,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::getLanguage", (args, methodResult) -> {
             // args
         
@@ -3229,6 +3157,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::getProtocol", (args, methodResult) -> {
             // args
         
@@ -3248,6 +3177,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::setApiKey", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3268,6 +3198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.ServiceSettings::destroyInnerAsynThreadPool", (args, methodResult) -> {
             // args
         
@@ -3287,6 +3218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.SearchUtils::getSHA1", (args, methodResult) -> {
             // args
             // ref arg
@@ -3306,6 +3238,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.SearchUtils::getPkgName", (args, methodResult) -> {
             // args
             // ref arg
@@ -3325,6 +3258,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.SearchUtils::getVersion", (args, methodResult) -> {
             // args
         
@@ -3343,6 +3277,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.LatLonSharePoint::getSharePointName", (args, methodResult) -> {
             // args
         
@@ -3362,6 +3297,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.LatLonSharePoint::setSharePointName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3382,6 +3318,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.LatLonPoint::getLongitude", (args, methodResult) -> {
             // args
         
@@ -3401,6 +3338,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.LatLonPoint::setLongitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3421,6 +3359,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.LatLonPoint::getLatitude", (args, methodResult) -> {
             // args
         
@@ -3440,6 +3379,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.LatLonPoint::setLatitude", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3460,6 +3400,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.LatLonPoint::copy", (args, methodResult) -> {
             // args
         
@@ -3486,6 +3427,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getBusinessArea", (args, methodResult) -> {
             // args
         
@@ -3505,6 +3447,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setBusinessArea", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3525,6 +3468,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getAdName", (args, methodResult) -> {
             // args
         
@@ -3544,6 +3488,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setAdName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3564,6 +3509,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getCityName", (args, methodResult) -> {
             // args
         
@@ -3583,6 +3529,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setCityName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3603,6 +3550,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getProvinceName", (args, methodResult) -> {
             // args
         
@@ -3622,6 +3570,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setProvinceName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3642,6 +3591,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getTypeDes", (args, methodResult) -> {
             // args
         
@@ -3661,6 +3611,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setTypeDes", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3681,6 +3632,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getTel", (args, methodResult) -> {
             // args
         
@@ -3700,6 +3652,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setTel", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3720,6 +3673,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getAdCode", (args, methodResult) -> {
             // args
         
@@ -3739,6 +3693,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3759,6 +3714,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getPoiId", (args, methodResult) -> {
             // args
         
@@ -3778,6 +3734,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -3797,6 +3754,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3817,6 +3775,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getTitle", (args, methodResult) -> {
             // args
         
@@ -3836,6 +3795,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getSnippet", (args, methodResult) -> {
             // args
         
@@ -3855,6 +3815,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -3881,6 +3842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getCityCode", (args, methodResult) -> {
             // args
         
@@ -3900,6 +3862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -3920,6 +3883,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getEnter", (args, methodResult) -> {
             // args
         
@@ -3946,6 +3910,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setEnter", (args, methodResult) -> {
             // args
             // ref arg
@@ -3966,6 +3931,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getExit", (args, methodResult) -> {
             // args
         
@@ -3992,6 +3958,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setExit", (args, methodResult) -> {
             // args
             // ref arg
@@ -4012,6 +3979,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getWebsite", (args, methodResult) -> {
             // args
         
@@ -4031,6 +3999,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setWebsite", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4051,6 +4020,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getPostcode", (args, methodResult) -> {
             // args
         
@@ -4070,6 +4040,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setPostcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4090,6 +4061,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getEmail", (args, methodResult) -> {
             // args
         
@@ -4109,6 +4081,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setEmail", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4129,6 +4102,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getDirection", (args, methodResult) -> {
             // args
         
@@ -4148,6 +4122,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4168,6 +4143,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setIndoorMap", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4188,6 +4164,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::isIndoorMap", (args, methodResult) -> {
             // args
         
@@ -4207,6 +4184,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setProvinceCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4227,6 +4205,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getProvinceCode", (args, methodResult) -> {
             // args
         
@@ -4246,6 +4225,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setParkingType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4266,6 +4246,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getParkingType", (args, methodResult) -> {
             // args
         
@@ -4285,6 +4266,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setSubPois", (args, methodResult) -> {
             // args
             // list arg
@@ -4309,6 +4291,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getSubPois", (args, methodResult) -> {
             // args
         
@@ -4337,6 +4320,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getIndoorData", (args, methodResult) -> {
             // args
         
@@ -4363,6 +4347,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setIndoorDate", (args, methodResult) -> {
             // args
             // ref arg
@@ -4383,6 +4368,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getPhotos", (args, methodResult) -> {
             // args
         
@@ -4411,6 +4397,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setPhotos", (args, methodResult) -> {
             // args
             // list arg
@@ -4435,6 +4422,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getPoiExtension", (args, methodResult) -> {
             // args
         
@@ -4461,6 +4449,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setPoiExtension", (args, methodResult) -> {
             // args
             // ref arg
@@ -4481,6 +4470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getTypeCode", (args, methodResult) -> {
             // args
         
@@ -4500,6 +4490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setTypeCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4520,6 +4511,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.PoiItem::getShopID", (args, methodResult) -> {
             // args
         
@@ -4539,6 +4531,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.PoiItem::setShopID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4559,6 +4552,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::getCityName", (args, methodResult) -> {
             // args
         
@@ -4578,6 +4572,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::setCityName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4598,6 +4593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::getCityCode", (args, methodResult) -> {
             // args
         
@@ -4617,6 +4613,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4637,6 +4634,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::getAdCode", (args, methodResult) -> {
             // args
         
@@ -4656,6 +4654,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4676,6 +4675,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::getSuggestionNum", (args, methodResult) -> {
             // args
         
@@ -4695,6 +4695,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.core.SuggestionCity::setSuggestionNum", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4715,6 +4716,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.Photo::getTitle", (args, methodResult) -> {
             // args
         
@@ -4734,6 +4736,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.Photo::setTitle", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4754,6 +4757,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.Photo::getUrl", (args, methodResult) -> {
             // args
         
@@ -4773,6 +4777,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.Photo::setUrl", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4793,6 +4798,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getPoiId", (args, methodResult) -> {
             // args
         
@@ -4812,6 +4818,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setPoiId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4832,6 +4839,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getTitle", (args, methodResult) -> {
             // args
         
@@ -4851,6 +4859,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setTitle", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4871,6 +4880,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getSubName", (args, methodResult) -> {
             // args
         
@@ -4890,6 +4900,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setSubName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4910,6 +4921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -4929,6 +4941,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -4949,6 +4962,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -4975,6 +4989,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setLatLonPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -4995,6 +5010,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getSnippet", (args, methodResult) -> {
             // args
         
@@ -5014,6 +5030,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setSnippet", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5034,6 +5051,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::getSubTypeDes", (args, methodResult) -> {
             // args
         
@@ -5053,6 +5071,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.SubPoiItem::setSubTypeDes", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5073,6 +5092,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -5095,6 +5115,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -5117,6 +5138,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiItemExtension::getOpentime", (args, methodResult) -> {
             // args
         
@@ -5136,6 +5158,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiItemExtension::getmRating", (args, methodResult) -> {
             // args
         
@@ -5155,6 +5178,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getLowerLeft", (args, methodResult) -> {
             // args
         
@@ -5181,6 +5205,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getUpperRight", (args, methodResult) -> {
             // args
         
@@ -5207,6 +5232,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getCenter", (args, methodResult) -> {
             // args
         
@@ -5233,6 +5259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getRange", (args, methodResult) -> {
             // args
         
@@ -5252,6 +5279,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getShape", (args, methodResult) -> {
             // args
         
@@ -5271,6 +5299,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::isDistanceSort", (args, methodResult) -> {
             // args
         
@@ -5290,6 +5319,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.SearchBound::getPolyGonList", (args, methodResult) -> {
             // args
         
@@ -5318,6 +5348,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::createPagedResult", (args, methodResult) -> {
             // args
             // ref arg
@@ -5364,6 +5395,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::getPageCount", (args, methodResult) -> {
             // args
         
@@ -5383,6 +5415,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::getQuery", (args, methodResult) -> {
             // args
         
@@ -5409,6 +5442,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::getBound", (args, methodResult) -> {
             // args
         
@@ -5435,6 +5469,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::getPois", (args, methodResult) -> {
             // args
         
@@ -5463,6 +5498,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords", (args, methodResult) -> {
             // args
         
@@ -5482,6 +5518,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys", (args, methodResult) -> {
             // args
         
@@ -5510,6 +5547,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener", (args, methodResult) -> {
             // args
         
@@ -5535,8 +5573,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -5558,8 +5598,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -5580,6 +5622,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::setLanguage", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5600,6 +5643,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::getLanguage", (args, methodResult) -> {
             // args
         
@@ -5619,6 +5663,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::searchPOI", (args, methodResult) -> {
             // args
         
@@ -5645,6 +5690,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::searchPOIAsyn", (args, methodResult) -> {
             // args
         
@@ -5664,6 +5710,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::searchPOIId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5691,6 +5738,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::searchPOIIdAsyn", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5711,6 +5759,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -5731,6 +5780,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::setBound", (args, methodResult) -> {
             // args
             // ref arg
@@ -5751,6 +5801,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -5777,6 +5828,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch::getBound", (args, methodResult) -> {
             // args
         
@@ -5803,6 +5855,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getBuilding", (args, methodResult) -> {
             // args
         
@@ -5822,6 +5875,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setBuilding", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5842,6 +5896,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getQueryString", (args, methodResult) -> {
             // args
         
@@ -5861,6 +5916,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setQueryLanguage", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5881,6 +5937,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getCategory", (args, methodResult) -> {
             // args
         
@@ -5900,6 +5957,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getCity", (args, methodResult) -> {
             // args
         
@@ -5919,6 +5977,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getPageNum", (args, methodResult) -> {
             // args
         
@@ -5938,6 +5997,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setPageNum", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5958,6 +6018,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setPageSize", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -5978,6 +6039,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getPageSize", (args, methodResult) -> {
             // args
         
@@ -5997,6 +6059,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setCityLimit", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6017,6 +6080,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getCityLimit", (args, methodResult) -> {
             // args
         
@@ -6036,6 +6100,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::requireSubPois", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6056,6 +6121,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::isRequireSubPois", (args, methodResult) -> {
             // args
         
@@ -6075,6 +6141,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::isDistanceSort", (args, methodResult) -> {
             // args
         
@@ -6094,6 +6161,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setDistanceSort", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6114,6 +6182,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::getLocation", (args, methodResult) -> {
             // args
         
@@ -6140,6 +6209,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::setLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -6160,6 +6230,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.PoiSearch.Query::queryEquals", (args, methodResult) -> {
             // args
             // ref arg
@@ -6180,6 +6251,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.IndoorData::getPoiId", (args, methodResult) -> {
             // args
         
@@ -6199,6 +6271,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.IndoorData::setPoiId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6219,6 +6292,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.IndoorData::getFloor", (args, methodResult) -> {
             // args
         
@@ -6238,6 +6312,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.IndoorData::setFloor", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6258,6 +6333,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.poisearch.IndoorData::getFloorName", (args, methodResult) -> {
             // args
         
@@ -6277,6 +6353,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.poisearch.IndoorData::setFloorName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6297,6 +6374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.Railway::getID", (args, methodResult) -> {
             // args
         
@@ -6316,6 +6394,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.Railway::getName", (args, methodResult) -> {
             // args
         
@@ -6335,6 +6414,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.Railway::setID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6355,6 +6435,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.Railway::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6375,6 +6456,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusPath::getCost", (args, methodResult) -> {
             // args
         
@@ -6394,6 +6476,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.BusPath::setCost", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6414,6 +6497,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusPath::isNightBus", (args, methodResult) -> {
             // args
         
@@ -6433,6 +6517,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.BusPath::setNightBus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6453,6 +6538,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusPath::getWalkDistance", (args, methodResult) -> {
             // args
         
@@ -6472,6 +6558,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.BusPath::setWalkDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6492,6 +6579,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusPath::getBusDistance", (args, methodResult) -> {
             // args
         
@@ -6511,6 +6599,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.BusPath::setBusDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6531,6 +6620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusPath::getSteps", (args, methodResult) -> {
             // args
         
@@ -6559,6 +6649,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusPath::setSteps", (args, methodResult) -> {
             // args
             // list arg
@@ -6583,6 +6674,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveRoutePlanResult::getPaths", (args, methodResult) -> {
             // args
         
@@ -6611,6 +6703,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveRoutePlanResult::setPaths", (args, methodResult) -> {
             // args
             // list arg
@@ -6635,6 +6728,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveRoutePlanResult::getTimeInfos", (args, methodResult) -> {
             // args
         
@@ -6663,6 +6757,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveRoutePlanResult::setTimeInfos", (args, methodResult) -> {
             // args
             // list arg
@@ -6687,6 +6782,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveRoutePlanResult::setDrivePlanQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -6707,6 +6803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setMode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6727,6 +6824,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckSize", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6747,6 +6845,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckHeight", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6767,6 +6866,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckWidth", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6787,6 +6887,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckLoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6807,6 +6908,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckWeight", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6827,6 +6929,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::setTruckAxis", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -6847,6 +6950,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -6873,6 +6977,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -6892,6 +6997,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::hasPassPoint", (args, methodResult) -> {
             // args
         
@@ -6911,6 +7017,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getPassedPointStr", (args, methodResult) -> {
             // args
         
@@ -6930,6 +7037,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckSize", (args, methodResult) -> {
             // args
         
@@ -6949,6 +7057,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckHeight", (args, methodResult) -> {
             // args
         
@@ -6968,6 +7077,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckWidth", (args, methodResult) -> {
             // args
         
@@ -6987,6 +7097,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckLoad", (args, methodResult) -> {
             // args
         
@@ -7006,6 +7117,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckWeight", (args, methodResult) -> {
             // args
         
@@ -7025,6 +7137,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::getTruckAxis", (args, methodResult) -> {
             // args
         
@@ -7044,6 +7157,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TMC::getDistance", (args, methodResult) -> {
             // args
         
@@ -7063,6 +7177,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TMC::getStatus", (args, methodResult) -> {
             // args
         
@@ -7082,6 +7197,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TMC::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -7102,6 +7218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TMC::setStatus", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -7122,6 +7239,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TMC::getPolyline", (args, methodResult) -> {
             // args
         
@@ -7150,6 +7268,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TMC::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -7174,6 +7293,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusWalkItem::getOrigin", (args, methodResult) -> {
             // args
         
@@ -7200,6 +7320,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteBusWalkItem::setOrigin", (args, methodResult) -> {
             // args
             // ref arg
@@ -7220,6 +7341,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusWalkItem::getDestination", (args, methodResult) -> {
             // args
         
@@ -7246,6 +7368,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteBusWalkItem::setDestination", (args, methodResult) -> {
             // args
             // ref arg
@@ -7266,6 +7389,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteResult::getStartPos", (args, methodResult) -> {
             // args
         
@@ -7292,6 +7416,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteResult::setStartPos", (args, methodResult) -> {
             // args
             // ref arg
@@ -7312,6 +7437,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteResult::getTargetPos", (args, methodResult) -> {
             // args
         
@@ -7338,6 +7464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteResult::setTargetPos", (args, methodResult) -> {
             // args
             // ref arg
@@ -7358,6 +7485,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::setRouteSearchListener", (args, methodResult) -> {
             // args
         
@@ -7383,8 +7511,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -7406,8 +7536,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -7429,8 +7561,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -7452,8 +7586,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -7474,6 +7610,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener", (args, methodResult) -> {
             // args
         
@@ -7499,8 +7636,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -7521,6 +7660,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener", (args, methodResult) -> {
             // args
         
@@ -7546,8 +7686,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -7568,6 +7710,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateWalkRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -7595,6 +7738,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateWalkRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -7615,6 +7759,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateBusRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -7642,6 +7787,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateBusRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -7662,6 +7808,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateDriveRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -7689,6 +7836,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateDriveRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -7709,6 +7857,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateRideRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -7729,6 +7878,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateRideRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -7756,6 +7906,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateTruckRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -7783,6 +7934,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateTruckRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -7803,6 +7955,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateDrivePlan", (args, methodResult) -> {
             // args
             // ref arg
@@ -7830,6 +7983,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch::calculateDrivePlanAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -7850,6 +8004,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusStep::getWalk", (args, methodResult) -> {
             // args
         
@@ -7876,6 +8031,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusStep::setWalk", (args, methodResult) -> {
             // args
             // ref arg
@@ -7896,6 +8052,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusStep::getBusLines", (args, methodResult) -> {
             // args
         
@@ -7924,6 +8081,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusStep::setBusLines", (args, methodResult) -> {
             // args
             // list arg
@@ -7948,6 +8106,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusStep::getEntrance", (args, methodResult) -> {
             // args
         
@@ -7974,6 +8133,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusStep::setEntrance", (args, methodResult) -> {
             // args
             // ref arg
@@ -7994,6 +8154,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusStep::getExit", (args, methodResult) -> {
             // args
         
@@ -8020,6 +8181,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusStep::setExit", (args, methodResult) -> {
             // args
             // ref arg
@@ -8040,6 +8202,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusStep::getRailway", (args, methodResult) -> {
             // args
         
@@ -8066,6 +8229,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusStep::setRailway", (args, methodResult) -> {
             // args
             // ref arg
@@ -8086,6 +8250,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusStep::getTaxi", (args, methodResult) -> {
             // args
         
@@ -8112,6 +8277,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusStep::setTaxi", (args, methodResult) -> {
             // args
             // ref arg
@@ -8132,6 +8298,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::getOrigin", (args, methodResult) -> {
             // args
         
@@ -8158,6 +8325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::getDestination", (args, methodResult) -> {
             // args
         
@@ -8184,6 +8352,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -8203,6 +8372,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::getDuration", (args, methodResult) -> {
             // args
         
@@ -8222,6 +8392,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::getmSname", (args, methodResult) -> {
             // args
         
@@ -8241,6 +8412,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::getmTname", (args, methodResult) -> {
             // args
         
@@ -8260,6 +8432,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::setOrigin", (args, methodResult) -> {
             // args
             // ref arg
@@ -8280,6 +8453,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::setDestination", (args, methodResult) -> {
             // args
             // ref arg
@@ -8300,6 +8474,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -8320,6 +8495,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -8340,6 +8516,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::setSname", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -8360,6 +8537,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TaxiItem::setTname", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -8380,6 +8558,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusRouteResult::getTaxiCost", (args, methodResult) -> {
             // args
         
@@ -8399,6 +8578,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.BusRouteResult::setTaxiCost", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -8419,6 +8599,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusRouteResult::getPaths", (args, methodResult) -> {
             // args
         
@@ -8447,6 +8628,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusRouteResult::setPaths", (args, methodResult) -> {
             // args
             // list arg
@@ -8471,6 +8653,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.BusRouteResult::getBusQuery", (args, methodResult) -> {
             // args
         
@@ -8497,6 +8680,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.BusRouteResult::setBusQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -8517,6 +8701,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RoutePlanResult::getStartPos", (args, methodResult) -> {
             // args
         
@@ -8543,6 +8728,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RoutePlanResult::setStartPos", (args, methodResult) -> {
             // args
             // ref arg
@@ -8563,6 +8749,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RoutePlanResult::getTargetPos", (args, methodResult) -> {
             // args
         
@@ -8589,6 +8776,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RoutePlanResult::setTargetPos", (args, methodResult) -> {
             // args
             // ref arg
@@ -8609,6 +8797,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -8631,6 +8820,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwaySpace::getCode", (args, methodResult) -> {
             // args
         
@@ -8650,6 +8840,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwaySpace::getCost", (args, methodResult) -> {
             // args
         
@@ -8669,6 +8860,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::setTruckQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -8689,6 +8881,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::setPaths", (args, methodResult) -> {
             // args
             // list arg
@@ -8713,6 +8906,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::setStartPos", (args, methodResult) -> {
             // args
             // ref arg
@@ -8733,6 +8927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::setTargetPos", (args, methodResult) -> {
             // args
             // ref arg
@@ -8753,6 +8948,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::getTruckQuery", (args, methodResult) -> {
             // args
         
@@ -8779,6 +8975,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::getPaths", (args, methodResult) -> {
             // args
         
@@ -8807,6 +9004,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::getStartPos", (args, methodResult) -> {
             // args
         
@@ -8833,6 +9031,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TruckRouteRestult::getTargetPos", (args, methodResult) -> {
             // args
         
@@ -8859,6 +9058,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.RideRouteQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -8885,6 +9085,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.RideRouteQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -8904,6 +9105,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -8930,6 +9132,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -8949,6 +9152,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getCarType", (args, methodResult) -> {
             // args
         
@@ -8968,6 +9172,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedByPoints", (args, methodResult) -> {
             // args
         
@@ -8996,6 +9201,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygons", (args, methodResult) -> {
             // args
         
@@ -9015,6 +9221,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(new ArrayList());
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidRoad", (args, methodResult) -> {
             // args
         
@@ -9034,6 +9241,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getPassedPointStr", (args, methodResult) -> {
             // args
         
@@ -9053,6 +9261,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasPassPoint", (args, methodResult) -> {
             // args
         
@@ -9072,6 +9281,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygonsStr", (args, methodResult) -> {
             // args
         
@@ -9091,6 +9301,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasAvoidpolygons", (args, methodResult) -> {
             // args
         
@@ -9110,6 +9321,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::hasAvoidRoad", (args, methodResult) -> {
             // args
         
@@ -9129,6 +9341,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::isUseFerry", (args, methodResult) -> {
             // args
         
@@ -9148,6 +9361,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::setUseFerry", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9168,6 +9382,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::setCarType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9188,6 +9403,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getTime", (args, methodResult) -> {
             // args
         
@@ -9207,6 +9423,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getTrip", (args, methodResult) -> {
             // args
         
@@ -9226,6 +9443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -9245,6 +9463,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getType", (args, methodResult) -> {
             // args
         
@@ -9264,6 +9483,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getDeparturestop", (args, methodResult) -> {
             // args
         
@@ -9290,6 +9510,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getArrivalstop", (args, methodResult) -> {
             // args
         
@@ -9316,6 +9537,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getViastops", (args, methodResult) -> {
             // args
         
@@ -9344,6 +9566,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getAlters", (args, methodResult) -> {
             // args
         
@@ -9372,6 +9595,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::getSpaces", (args, methodResult) -> {
             // args
         
@@ -9400,6 +9624,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9420,6 +9645,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setTrip", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9440,6 +9666,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9460,6 +9687,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9480,6 +9708,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setDeparturestop", (args, methodResult) -> {
             // args
             // ref arg
@@ -9500,6 +9729,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setArrivalstop", (args, methodResult) -> {
             // args
             // ref arg
@@ -9520,6 +9750,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setViastops", (args, methodResult) -> {
             // args
             // list arg
@@ -9544,6 +9775,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setAlters", (args, methodResult) -> {
             // args
             // list arg
@@ -9568,6 +9800,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteRailwayItem::setSpaces", (args, methodResult) -> {
             // args
             // list arg
@@ -9592,6 +9825,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getInstruction", (args, methodResult) -> {
             // args
         
@@ -9611,6 +9845,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setInstruction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9631,6 +9866,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getOrientation", (args, methodResult) -> {
             // args
         
@@ -9650,6 +9886,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setOrientation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9670,6 +9907,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getRoad", (args, methodResult) -> {
             // args
         
@@ -9689,6 +9927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9709,6 +9948,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getDistance", (args, methodResult) -> {
             // args
         
@@ -9728,6 +9968,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9748,6 +9989,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getDuration", (args, methodResult) -> {
             // args
         
@@ -9767,6 +10009,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9787,6 +10030,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getPolyline", (args, methodResult) -> {
             // args
         
@@ -9815,6 +10059,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -9839,6 +10084,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getAction", (args, methodResult) -> {
             // args
         
@@ -9858,6 +10104,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9878,6 +10125,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkStep::getAssistantAction", (args, methodResult) -> {
             // args
         
@@ -9897,6 +10145,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.WalkStep::setAssistantAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -9917,6 +10166,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::getID", (args, methodResult) -> {
             // args
         
@@ -9936,6 +10186,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::getName", (args, methodResult) -> {
             // args
         
@@ -9955,6 +10206,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::getLocation", (args, methodResult) -> {
             // args
         
@@ -9981,6 +10233,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::getAdcode", (args, methodResult) -> {
             // args
         
@@ -10000,6 +10253,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::getTime", (args, methodResult) -> {
             // args
         
@@ -10019,6 +10273,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::isStart", (args, methodResult) -> {
             // args
         
@@ -10038,6 +10293,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::isEnd", (args, methodResult) -> {
             // args
         
@@ -10057,6 +10313,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::getWait", (args, methodResult) -> {
             // args
         
@@ -10076,6 +10333,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10096,6 +10354,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10116,6 +10375,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -10136,6 +10396,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10156,6 +10417,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10176,6 +10438,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setisStart", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10196,6 +10459,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setisEnd", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10216,6 +10480,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RailwayStationItem::setWait", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10236,6 +10501,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideRouteResult::getPaths", (args, methodResult) -> {
             // args
         
@@ -10264,6 +10530,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RideRouteResult::setPaths", (args, methodResult) -> {
             // args
             // list arg
@@ -10288,6 +10555,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideRouteResult::getRideQuery", (args, methodResult) -> {
             // args
         
@@ -10314,6 +10582,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RideRouteResult::setRideQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -10334,6 +10603,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getFrom", (args, methodResult) -> {
             // args
         
@@ -10360,6 +10630,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getTo", (args, methodResult) -> {
             // args
         
@@ -10386,6 +10657,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getStartPoiID", (args, methodResult) -> {
             // args
         
@@ -10405,6 +10677,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::setStartPoiID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10425,6 +10698,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationPoiID", (args, methodResult) -> {
             // args
         
@@ -10444,6 +10718,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationPoiID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10464,6 +10739,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getOriginType", (args, methodResult) -> {
             // args
         
@@ -10483,6 +10759,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::setOriginType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10503,6 +10780,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getDestinationType", (args, methodResult) -> {
             // args
         
@@ -10522,6 +10800,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::setDestinationType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10542,6 +10821,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getPlateProvince", (args, methodResult) -> {
             // args
         
@@ -10561,6 +10841,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::setPlateProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10581,6 +10862,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::getPlateNumber", (args, methodResult) -> {
             // args
         
@@ -10600,6 +10882,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.FromAndTo::setPlateNumber", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10620,6 +10903,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RidePath::getSteps", (args, methodResult) -> {
             // args
         
@@ -10648,6 +10932,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RidePath::setSteps", (args, methodResult) -> {
             // args
             // list arg
@@ -10672,6 +10957,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -10698,6 +10984,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -10717,6 +11004,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getCity", (args, methodResult) -> {
             // args
         
@@ -10736,6 +11024,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getNightFlag", (args, methodResult) -> {
             // args
         
@@ -10755,6 +11044,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.BusRouteQuery::getCityd", (args, methodResult) -> {
             // args
         
@@ -10774,6 +11064,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.BusRouteQuery::setCityd", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10794,6 +11085,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getInstruction", (args, methodResult) -> {
             // args
         
@@ -10813,6 +11105,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setInstruction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10833,6 +11126,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getOrientation", (args, methodResult) -> {
             // args
         
@@ -10852,6 +11146,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setOrientation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10872,6 +11167,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getRoad", (args, methodResult) -> {
             // args
         
@@ -10891,6 +11187,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10911,6 +11208,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getDistance", (args, methodResult) -> {
             // args
         
@@ -10930,6 +11228,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10950,6 +11249,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getDuration", (args, methodResult) -> {
             // args
         
@@ -10969,6 +11269,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -10989,6 +11290,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getPolyline", (args, methodResult) -> {
             // args
         
@@ -11017,6 +11319,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RideStep::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -11041,6 +11344,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getAction", (args, methodResult) -> {
             // args
         
@@ -11060,6 +11364,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11080,6 +11385,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RideStep::getAssistantAction", (args, methodResult) -> {
             // args
         
@@ -11099,6 +11405,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RideStep::setAssistantAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11119,6 +11426,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearchCity::getDistricts", (args, methodResult) -> {
             // args
         
@@ -11147,6 +11455,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearchCity::setDistricts", (args, methodResult) -> {
             // args
             // list arg
@@ -11171,6 +11480,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -11193,6 +11503,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -11215,6 +11526,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -11237,6 +11549,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -11259,6 +11572,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceResult::setDistanceQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -11279,6 +11593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceResult::getDistanceQuery", (args, methodResult) -> {
             // args
         
@@ -11305,6 +11620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DistanceResult::getDistanceResults", (args, methodResult) -> {
             // args
         
@@ -11333,6 +11649,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DistanceResult::setDistanceResults", (args, methodResult) -> {
             // args
             // list arg
@@ -11357,6 +11674,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.WalkRouteQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -11383,6 +11701,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.WalkRouteQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -11402,6 +11721,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.District::getDistrictName", (args, methodResult) -> {
             // args
         
@@ -11421,6 +11741,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.District::setDistrictName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11441,6 +11762,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.District::getDistrictAdcode", (args, methodResult) -> {
             // args
         
@@ -11460,6 +11782,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.District::setDistrictAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11480,6 +11803,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkRouteResult::getPaths", (args, methodResult) -> {
             // args
         
@@ -11508,6 +11832,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.WalkRouteResult::setPaths", (args, methodResult) -> {
             // args
             // list arg
@@ -11532,6 +11857,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkRouteResult::getWalkQuery", (args, methodResult) -> {
             // args
         
@@ -11558,6 +11884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.WalkRouteResult::setWalkQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -11578,6 +11905,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getType", (args, methodResult) -> {
             // args
         
@@ -11597,6 +11925,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getOrigins", (args, methodResult) -> {
             // args
         
@@ -11625,6 +11954,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getDestination", (args, methodResult) -> {
             // args
         
@@ -11651,6 +11981,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11671,6 +12002,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setOrigins", (args, methodResult) -> {
             // args
             // list arg
@@ -11695,6 +12027,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::addOrigins", (args, methodResult) -> {
             // args
             // ref arg
@@ -11715,6 +12048,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::setDestination", (args, methodResult) -> {
             // args
             // ref arg
@@ -11735,6 +12069,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.SearchCity::getSearchCityName", (args, methodResult) -> {
             // args
         
@@ -11754,6 +12089,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.SearchCity::setSearchCityName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11774,6 +12110,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.SearchCity::getSearchCitycode", (args, methodResult) -> {
             // args
         
@@ -11793,6 +12130,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.SearchCity::setSearchCitycode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11813,6 +12151,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.SearchCity::getSearchCityAdCode", (args, methodResult) -> {
             // args
         
@@ -11832,6 +12171,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.SearchCity::setSearchCityhAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -11852,6 +12192,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -11874,6 +12215,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch::setDistanceSearchListener", (args, methodResult) -> {
             // args
         
@@ -11899,8 +12241,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -11921,6 +12265,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch::calculateRouteDistance", (args, methodResult) -> {
             // args
             // ref arg
@@ -11948,6 +12293,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DistanceSearch::calculateRouteDistanceAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -11968,6 +12314,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.WalkPath::getSteps", (args, methodResult) -> {
             // args
         
@@ -11996,6 +12343,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.WalkPath::setSteps", (args, methodResult) -> {
             // args
             // list arg
@@ -12020,6 +12368,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::getDepartureBusStation", (args, methodResult) -> {
             // args
         
@@ -12046,6 +12395,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::setDepartureBusStation", (args, methodResult) -> {
             // args
             // ref arg
@@ -12066,6 +12416,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::getArrivalBusStation", (args, methodResult) -> {
             // args
         
@@ -12092,6 +12443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::setArrivalBusStation", (args, methodResult) -> {
             // args
             // ref arg
@@ -12112,6 +12464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::getPolyline", (args, methodResult) -> {
             // args
         
@@ -12140,6 +12493,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -12164,6 +12518,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::getPassStationNum", (args, methodResult) -> {
             // args
         
@@ -12183,6 +12538,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::setPassStationNum", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12203,6 +12559,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::getPassStations", (args, methodResult) -> {
             // args
         
@@ -12231,6 +12588,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::setPassStations", (args, methodResult) -> {
             // args
             // list arg
@@ -12255,6 +12613,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::getDuration", (args, methodResult) -> {
             // args
         
@@ -12274,6 +12633,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteBusLineItem::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12294,6 +12654,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -12320,6 +12681,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID", (args, methodResult) -> {
             // args
         
@@ -12339,6 +12701,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -12358,6 +12721,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCarType", (args, methodResult) -> {
             // args
         
@@ -12377,6 +12741,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getFirstTime", (args, methodResult) -> {
             // args
         
@@ -12396,6 +12761,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getInterval", (args, methodResult) -> {
             // args
         
@@ -12415,6 +12781,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getCount", (args, methodResult) -> {
             // args
         
@@ -12434,6 +12801,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12454,6 +12822,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setMode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12474,6 +12843,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setCarType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12494,6 +12864,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::getRoad", (args, methodResult) -> {
             // args
         
@@ -12513,6 +12884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12533,6 +12905,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::getAdCode", (args, methodResult) -> {
             // args
         
@@ -12552,6 +12925,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::setRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12572,6 +12946,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::getDistance", (args, methodResult) -> {
             // args
         
@@ -12591,6 +12966,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12611,6 +12987,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::getToll", (args, methodResult) -> {
             // args
         
@@ -12630,6 +13007,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::setToll", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12650,6 +13028,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::getPolyline", (args, methodResult) -> {
             // args
         
@@ -12678,6 +13057,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DrivePlanStep::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -12702,6 +13082,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfo::getStartTime", (args, methodResult) -> {
             // args
         
@@ -12721,6 +13102,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TimeInfo::setStartTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12741,6 +13123,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfo::getElements", (args, methodResult) -> {
             // args
         
@@ -12769,6 +13152,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TimeInfo::setElements", (args, methodResult) -> {
             // args
             // list arg
@@ -12793,6 +13177,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getInstruction", (args, methodResult) -> {
             // args
         
@@ -12812,6 +13197,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setInstruction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12832,6 +13218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getOrientation", (args, methodResult) -> {
             // args
         
@@ -12851,6 +13238,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setOrientation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12871,6 +13259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getRoad", (args, methodResult) -> {
             // args
         
@@ -12890,6 +13279,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12910,6 +13300,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getDistance", (args, methodResult) -> {
             // args
         
@@ -12929,6 +13320,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12949,6 +13341,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getTolls", (args, methodResult) -> {
             // args
         
@@ -12968,6 +13361,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setTolls", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -12988,6 +13382,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getTollDistance", (args, methodResult) -> {
             // args
         
@@ -13007,6 +13402,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setTollDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13027,6 +13423,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getTollRoad", (args, methodResult) -> {
             // args
         
@@ -13046,6 +13443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setTollRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13066,6 +13464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getDuration", (args, methodResult) -> {
             // args
         
@@ -13085,6 +13484,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13105,6 +13505,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getPolyline", (args, methodResult) -> {
             // args
         
@@ -13133,6 +13534,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -13157,6 +13559,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getAction", (args, methodResult) -> {
             // args
         
@@ -13176,6 +13579,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13196,6 +13600,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getAssistantAction", (args, methodResult) -> {
             // args
         
@@ -13215,6 +13620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setAssistantAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13235,6 +13641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getRouteSearchCityList", (args, methodResult) -> {
             // args
         
@@ -13263,6 +13670,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setRouteSearchCityList", (args, methodResult) -> {
             // args
             // list arg
@@ -13287,6 +13695,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveStep::getTMCs", (args, methodResult) -> {
             // args
         
@@ -13315,6 +13724,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveStep::setTMCs", (args, methodResult) -> {
             // args
             // list arg
@@ -13339,6 +13749,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setInstruction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13359,6 +13770,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setOrientation", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13379,6 +13791,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13399,6 +13812,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setTolls", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13419,6 +13833,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13439,6 +13854,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setTollDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13459,6 +13875,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setTollRoad", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13479,6 +13896,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13499,6 +13917,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setPolyline", (args, methodResult) -> {
             // args
             // list arg
@@ -13523,6 +13942,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13543,6 +13963,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setAssistantAction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13563,6 +13984,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setRouteSearchCityList", (args, methodResult) -> {
             // args
             // list arg
@@ -13587,6 +14009,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::setTMCs", (args, methodResult) -> {
             // args
             // list arg
@@ -13611,6 +14034,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getInstruction", (args, methodResult) -> {
             // args
         
@@ -13630,6 +14054,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getOrientation", (args, methodResult) -> {
             // args
         
@@ -13649,6 +14074,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getRoad", (args, methodResult) -> {
             // args
         
@@ -13668,6 +14094,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getTolls", (args, methodResult) -> {
             // args
         
@@ -13687,6 +14114,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getDistance", (args, methodResult) -> {
             // args
         
@@ -13706,6 +14134,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getTollDistance", (args, methodResult) -> {
             // args
         
@@ -13725,6 +14154,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getTollRoad", (args, methodResult) -> {
             // args
         
@@ -13744,6 +14174,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getDuration", (args, methodResult) -> {
             // args
         
@@ -13763,6 +14194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getPolyline", (args, methodResult) -> {
             // args
         
@@ -13791,6 +14223,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getAction", (args, methodResult) -> {
             // args
         
@@ -13810,6 +14243,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getAssistantAction", (args, methodResult) -> {
             // args
         
@@ -13829,6 +14263,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getRouteSearchCityList", (args, methodResult) -> {
             // args
         
@@ -13857,6 +14292,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.TruckStep::getTMCs", (args, methodResult) -> {
             // args
         
@@ -13885,6 +14321,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveRouteResult::getTaxiCost", (args, methodResult) -> {
             // args
         
@@ -13904,6 +14341,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DriveRouteResult::setTaxiCost", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -13924,6 +14362,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveRouteResult::getPaths", (args, methodResult) -> {
             // args
         
@@ -13952,6 +14391,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveRouteResult::setPaths", (args, methodResult) -> {
             // args
             // list arg
@@ -13976,6 +14416,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DriveRouteResult::getDriveQuery", (args, methodResult) -> {
             // args
         
@@ -14002,6 +14443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DriveRouteResult::setDriveQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -14022,6 +14464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePath::getStrategy", (args, methodResult) -> {
             // args
         
@@ -14041,6 +14484,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePath::setStrategy", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14061,6 +14505,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePath::getTolls", (args, methodResult) -> {
             // args
         
@@ -14080,6 +14525,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePath::setTolls", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14100,6 +14546,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePath::getTollDistance", (args, methodResult) -> {
             // args
         
@@ -14119,6 +14566,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePath::setTollDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14139,6 +14587,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePath::getTotalTrafficlights", (args, methodResult) -> {
             // args
         
@@ -14158,6 +14607,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePath::setTotalTrafficlights", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14178,6 +14628,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePath::getSteps", (args, methodResult) -> {
             // args
         
@@ -14206,6 +14657,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DrivePath::setSteps", (args, methodResult) -> {
             // args
             // list arg
@@ -14230,6 +14682,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePath::getRestriction", (args, methodResult) -> {
             // args
         
@@ -14249,6 +14702,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePath::setRestriction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14269,6 +14723,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14289,6 +14744,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14309,6 +14765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setStrategy", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14329,6 +14786,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setTolls", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14349,6 +14807,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setTollDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14369,6 +14828,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setTotalTrafficlights", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14389,6 +14849,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setRestriction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14409,6 +14870,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::setSteps", (args, methodResult) -> {
             // args
             // list arg
@@ -14433,6 +14895,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getDistance", (args, methodResult) -> {
             // args
         
@@ -14452,6 +14915,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getDuration", (args, methodResult) -> {
             // args
         
@@ -14471,6 +14935,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getStrategy", (args, methodResult) -> {
             // args
         
@@ -14490,6 +14955,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getTolls", (args, methodResult) -> {
             // args
         
@@ -14509,6 +14975,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getTollDistance", (args, methodResult) -> {
             // args
         
@@ -14528,6 +14995,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getTotalTrafficlights", (args, methodResult) -> {
             // args
         
@@ -14547,6 +15015,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getRestriction", (args, methodResult) -> {
             // args
         
@@ -14566,6 +15035,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TruckPath::getSteps", (args, methodResult) -> {
             // args
         
@@ -14594,6 +15064,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.Doorway::getName", (args, methodResult) -> {
             // args
         
@@ -14613,6 +15084,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.Doorway::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14633,6 +15105,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.Doorway::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -14659,6 +15132,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.Doorway::setLatLonPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -14679,6 +15153,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanPath::getDistance", (args, methodResult) -> {
             // args
         
@@ -14698,6 +15173,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePlanPath::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14718,6 +15194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanPath::getTrafficLights", (args, methodResult) -> {
             // args
         
@@ -14737,6 +15214,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DrivePlanPath::setTrafficLights", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14757,6 +15235,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DrivePlanPath::getSteps", (args, methodResult) -> {
             // args
         
@@ -14785,6 +15264,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.DrivePlanPath::setSteps", (args, methodResult) -> {
             // args
             // list arg
@@ -14809,6 +15289,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::getPathindex", (args, methodResult) -> {
             // args
         
@@ -14828,6 +15309,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::setPathindex", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14848,6 +15330,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::getDuration", (args, methodResult) -> {
             // args
         
@@ -14867,6 +15350,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14887,6 +15371,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::getTolls", (args, methodResult) -> {
             // args
         
@@ -14906,6 +15391,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::setTolls", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14926,6 +15412,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::getRestriction", (args, methodResult) -> {
             // args
         
@@ -14945,6 +15432,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::setRestriction", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -14965,6 +15453,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::setTMCs", (args, methodResult) -> {
             // args
             // list arg
@@ -14989,6 +15478,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.TimeInfosElement::getTMCs", (args, methodResult) -> {
             // args
         
@@ -15017,6 +15507,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -15039,6 +15530,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::getOriginId", (args, methodResult) -> {
             // args
         
@@ -15058,6 +15550,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::getDestId", (args, methodResult) -> {
             // args
         
@@ -15077,6 +15570,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -15096,6 +15590,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::getDuration", (args, methodResult) -> {
             // args
         
@@ -15115,6 +15610,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::getErrorInfo", (args, methodResult) -> {
             // args
         
@@ -15134,6 +15630,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::getErrorCode", (args, methodResult) -> {
             // args
         
@@ -15153,6 +15650,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::setOriginId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15173,6 +15671,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::setDestId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15193,6 +15692,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15213,6 +15713,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15233,6 +15734,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::setErrorInfo", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15253,6 +15755,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.DistanceItem::setErrorCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15273,6 +15776,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.Path::getDistance", (args, methodResult) -> {
             // args
         
@@ -15292,6 +15796,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.Path::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15312,6 +15817,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.route.Path::getDuration", (args, methodResult) -> {
             // args
         
@@ -15331,6 +15837,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.route.Path::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15351,6 +15858,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::setId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15371,6 +15879,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15391,6 +15900,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::getCityCode", (args, methodResult) -> {
             // args
         
@@ -15410,6 +15920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Road::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15430,6 +15941,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::getRoadWidth", (args, methodResult) -> {
             // args
         
@@ -15449,6 +15961,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Road::setRoadWidth", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15469,6 +15982,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::getType", (args, methodResult) -> {
             // args
         
@@ -15488,6 +16002,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Road::setType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15508,6 +16023,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::getCenterPoint", (args, methodResult) -> {
             // args
         
@@ -15534,6 +16050,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.road.Road::setCenterPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -15554,6 +16071,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Road::getId", (args, methodResult) -> {
             // args
         
@@ -15573,6 +16091,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Road::getName", (args, methodResult) -> {
             // args
         
@@ -15592,6 +16111,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::getDistance", (args, methodResult) -> {
             // args
         
@@ -15611,6 +16131,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15631,6 +16152,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Crossroad::getDirection", (args, methodResult) -> {
             // args
         
@@ -15650,6 +16172,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::setDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15670,6 +16193,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Crossroad::getFirstRoadId", (args, methodResult) -> {
             // args
         
@@ -15689,6 +16213,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::setFirstRoadId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15709,6 +16234,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Crossroad::getFirstRoadName", (args, methodResult) -> {
             // args
         
@@ -15728,6 +16254,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::setFirstRoadName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15748,6 +16275,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Crossroad::getSecondRoadId", (args, methodResult) -> {
             // args
         
@@ -15767,6 +16295,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::setSecondRoadId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15787,6 +16316,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.road.Crossroad::getSecondRoadName", (args, methodResult) -> {
             // args
         
@@ -15806,6 +16336,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.road.Crossroad::setSecondRoadName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15826,6 +16357,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15846,6 +16378,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -15868,6 +16401,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15888,6 +16422,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfoCallback::OnUploadInfoCallback", (args, methodResult) -> {
             // args
         
@@ -15914,6 +16449,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::setUserID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -15934,6 +16470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::getUserID", (args, methodResult) -> {
             // args
         
@@ -15953,6 +16490,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::getPoint", (args, methodResult) -> {
             // args
         
@@ -15979,6 +16517,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::setPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -15999,6 +16538,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::setTimeStamp", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16019,6 +16559,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::getTimeStamp", (args, methodResult) -> {
             // args
         
@@ -16038,6 +16579,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16058,6 +16600,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::getDistance", (args, methodResult) -> {
             // args
         
@@ -16077,6 +16620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::setDrivingDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16097,6 +16641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbyInfo::getDrivingDistance", (args, methodResult) -> {
             // args
         
@@ -16116,6 +16661,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfo::setPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -16136,6 +16682,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfo::getPoint", (args, methodResult) -> {
             // args
         
@@ -16162,6 +16709,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfo::setUserID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16182,6 +16730,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfo::getUserID", (args, methodResult) -> {
             // args
         
@@ -16201,6 +16750,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfo::getCoordType", (args, methodResult) -> {
             // args
         
@@ -16220,6 +16770,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.UploadInfo::setCoordType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16240,6 +16791,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::getInstance", (args, methodResult) -> {
             // args
             // ref arg
@@ -16266,6 +16818,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::addNearbyListener", (args, methodResult) -> {
             // args
         
@@ -16291,6 +16844,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -16311,8 +16865,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -16334,6 +16890,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -16353,6 +16910,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::removeNearbyListener", (args, methodResult) -> {
             // args
         
@@ -16378,6 +16936,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -16398,8 +16957,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -16421,6 +16982,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -16440,6 +17002,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::clearUserInfoAsyn", (args, methodResult) -> {
             // args
         
@@ -16459,6 +17022,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::setUserID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16479,6 +17043,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16524,6 +17089,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::stopUploadNearbyInfoAuto", (args, methodResult) -> {
             // args
         
@@ -16543,6 +17109,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::uploadNearbyInfoAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -16563,6 +17130,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::searchNearbyInfoAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -16583,6 +17151,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::searchNearbyInfo", (args, methodResult) -> {
             // args
             // ref arg
@@ -16610,6 +17179,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch::destroy", (args, methodResult) -> {
             // args
         
@@ -16628,6 +17198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearchResult::getNearbyInfoList", (args, methodResult) -> {
             // args
         
@@ -16656,6 +17227,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearchResult::getTotalNum", (args, methodResult) -> {
             // args
         
@@ -16675,6 +17247,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearchResult::setNearbyInfoList", (args, methodResult) -> {
             // args
             // list arg
@@ -16699,6 +17272,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -16719,6 +17293,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint", (args, methodResult) -> {
             // args
         
@@ -16745,6 +17320,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius", (args, methodResult) -> {
             // args
         
@@ -16764,6 +17340,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16784,6 +17361,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType", (args, methodResult) -> {
             // args
             // enum arg
@@ -16804,6 +17382,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType", (args, methodResult) -> {
             // args
         
@@ -16823,6 +17402,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16843,6 +17423,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType", (args, methodResult) -> {
             // args
         
@@ -16862,6 +17443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16882,6 +17464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange", (args, methodResult) -> {
             // args
         
@@ -16901,6 +17484,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::getID", (args, methodResult) -> {
             // args
         
@@ -16920,6 +17504,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::setID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16940,6 +17525,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::getTitle", (args, methodResult) -> {
             // args
         
@@ -16959,6 +17545,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::setTitle", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -16979,6 +17566,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::getPoint", (args, methodResult) -> {
             // args
         
@@ -17005,6 +17593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::setPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -17025,6 +17614,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -17044,6 +17634,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17064,6 +17655,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::getDuration", (args, methodResult) -> {
             // args
         
@@ -17083,6 +17675,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOIItem::setDuration", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17103,6 +17696,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener", (args, methodResult) -> {
             // args
         
@@ -17128,8 +17722,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -17150,6 +17746,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -17170,6 +17767,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOIAsyn", (args, methodResult) -> {
             // args
         
@@ -17189,6 +17787,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOI", (args, methodResult) -> {
             // args
         
@@ -17215,6 +17814,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchResult::getRoutePois", (args, methodResult) -> {
             // args
         
@@ -17243,6 +17843,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchResult::getQuery", (args, methodResult) -> {
             // args
         
@@ -17269,6 +17870,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::onRoutePoiSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -17291,6 +17893,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getFrom", (args, methodResult) -> {
             // args
         
@@ -17317,6 +17920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getTo", (args, methodResult) -> {
             // args
         
@@ -17343,6 +17947,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getMode", (args, methodResult) -> {
             // args
         
@@ -17362,6 +17967,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getSearchType", (args, methodResult) -> {
             // args
         
@@ -17388,6 +17994,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getRange", (args, methodResult) -> {
             // args
         
@@ -17407,6 +18014,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines", (args, methodResult) -> {
             // args
         
@@ -17435,6 +18043,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::clone", (args, methodResult) -> {
             // args
         
@@ -17461,6 +18070,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getID", (args, methodResult) -> {
             // args
         
@@ -17480,6 +18090,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getDistance", (args, methodResult) -> {
             // args
         
@@ -17499,6 +18110,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17519,6 +18131,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getTitle", (args, methodResult) -> {
             // args
         
@@ -17538,6 +18151,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getSnippet", (args, methodResult) -> {
             // args
         
@@ -17557,6 +18171,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -17583,6 +18198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getCreatetime", (args, methodResult) -> {
             // args
         
@@ -17602,6 +18218,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::setCreatetime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17622,6 +18239,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getUpdatetime", (args, methodResult) -> {
             // args
         
@@ -17641,6 +18259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::setUpdatetime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17661,6 +18280,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::getCloudImage", (args, methodResult) -> {
             // args
         
@@ -17689,6 +18309,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudItem::setmCloudImage", (args, methodResult) -> {
             // args
             // list arg
@@ -17713,6 +18334,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getQueryString", (args, methodResult) -> {
             // args
         
@@ -17732,6 +18354,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::setTableID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17752,6 +18375,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getTableID", (args, methodResult) -> {
             // args
         
@@ -17771,6 +18395,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getPageNum", (args, methodResult) -> {
             // args
         
@@ -17790,6 +18415,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::setPageNum", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17810,6 +18436,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::setPageSize", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17830,6 +18457,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getPageSize", (args, methodResult) -> {
             // args
         
@@ -17849,6 +18477,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::setBound", (args, methodResult) -> {
             // args
             // ref arg
@@ -17869,6 +18498,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getBound", (args, methodResult) -> {
             // args
         
@@ -17895,6 +18525,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::addFilterString", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17917,6 +18548,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getFilterString", (args, methodResult) -> {
             // args
         
@@ -17936,6 +18568,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::addFilterNum", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -17960,6 +18593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getFilterNumString", (args, methodResult) -> {
             // args
         
@@ -17979,6 +18613,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::setSortingrules", (args, methodResult) -> {
             // args
             // ref arg
@@ -17999,6 +18634,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::getSortingrules", (args, methodResult) -> {
             // args
         
@@ -18025,6 +18661,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.Query::queryEquals", (args, methodResult) -> {
             // args
             // ref arg
@@ -18045,6 +18682,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudResult::createPagedResult", (args, methodResult) -> {
             // args
             // ref arg
@@ -18083,6 +18721,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudResult::getPageCount", (args, methodResult) -> {
             // args
         
@@ -18102,6 +18741,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudResult::getQuery", (args, methodResult) -> {
             // args
         
@@ -18128,6 +18768,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudResult::getBound", (args, methodResult) -> {
             // args
         
@@ -18154,6 +18795,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudResult::getClouds", (args, methodResult) -> {
             // args
         
@@ -18182,6 +18824,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudResult::getTotalCount", (args, methodResult) -> {
             // args
         
@@ -18201,6 +18844,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener", (args, methodResult) -> {
             // args
         
@@ -18226,8 +18870,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -18249,8 +18895,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -18271,6 +18919,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch::searchCloudAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -18291,6 +18940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18313,6 +18963,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getLowerLeft", (args, methodResult) -> {
             // args
         
@@ -18339,6 +18990,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getUpperRight", (args, methodResult) -> {
             // args
         
@@ -18365,6 +19017,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getCenter", (args, methodResult) -> {
             // args
         
@@ -18391,6 +19044,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getRange", (args, methodResult) -> {
             // args
         
@@ -18410,6 +19064,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getShape", (args, methodResult) -> {
             // args
         
@@ -18429,6 +19084,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getCity", (args, methodResult) -> {
             // args
         
@@ -18448,6 +19104,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.SearchBound::getPolyGonList", (args, methodResult) -> {
             // args
         
@@ -18476,6 +19133,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.cloud.CloudImage::getId", (args, methodResult) -> {
             // args
         
@@ -18495,6 +19153,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudImage::setId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18515,6 +19174,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudImage::getPreurl", (args, methodResult) -> {
             // args
         
@@ -18534,6 +19194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudImage::setPreurl", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18554,6 +19215,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudImage::getUrl", (args, methodResult) -> {
             // args
         
@@ -18573,6 +19235,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.cloud.CloudImage::setUrl", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18593,6 +19256,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -18615,6 +19279,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -18637,6 +19302,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getDate", (args, methodResult) -> {
             // args
         
@@ -18656,6 +19322,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setDate", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18676,6 +19343,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getWeek", (args, methodResult) -> {
             // args
         
@@ -18695,6 +19363,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setWeek", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18715,6 +19384,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather", (args, methodResult) -> {
             // args
         
@@ -18734,6 +19404,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18754,6 +19425,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather", (args, methodResult) -> {
             // args
         
@@ -18773,6 +19445,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18793,6 +19466,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp", (args, methodResult) -> {
             // args
         
@@ -18812,6 +19486,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18832,6 +19507,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp", (args, methodResult) -> {
             // args
         
@@ -18851,6 +19527,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18871,6 +19548,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection", (args, methodResult) -> {
             // args
         
@@ -18890,6 +19568,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18910,6 +19589,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection", (args, methodResult) -> {
             // args
         
@@ -18929,6 +19609,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18949,6 +19630,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower", (args, methodResult) -> {
             // args
         
@@ -18968,6 +19650,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -18988,6 +19671,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower", (args, methodResult) -> {
             // args
         
@@ -19007,6 +19691,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19027,6 +19712,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearchQuery::getCity", (args, methodResult) -> {
             // args
         
@@ -19046,6 +19732,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearchQuery::getType", (args, methodResult) -> {
             // args
         
@@ -19065,6 +19752,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearchQuery::clone", (args, methodResult) -> {
             // args
         
@@ -19091,6 +19779,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -19113,6 +19802,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -19135,6 +19825,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult", (args, methodResult) -> {
             // args
             // ref arg
@@ -19163,6 +19854,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecastResult::getWeatherForecastQuery", (args, methodResult) -> {
             // args
         
@@ -19189,6 +19881,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecastResult::getForecastResult", (args, methodResult) -> {
             // args
         
@@ -19215,6 +19908,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::getProvince", (args, methodResult) -> {
             // args
         
@@ -19234,6 +19928,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::setProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19254,6 +19949,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::getCity", (args, methodResult) -> {
             // args
         
@@ -19273,6 +19969,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19293,6 +19990,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::getAdCode", (args, methodResult) -> {
             // args
         
@@ -19312,6 +20010,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19332,6 +20031,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::getReportTime", (args, methodResult) -> {
             // args
         
@@ -19351,6 +20051,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::setReportTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19371,6 +20072,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::getWeatherForecast", (args, methodResult) -> {
             // args
         
@@ -19399,6 +20101,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast", (args, methodResult) -> {
             // args
             // list arg
@@ -19423,6 +20126,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -19449,6 +20153,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -19469,6 +20174,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearch::searchWeatherAsyn", (args, methodResult) -> {
             // args
         
@@ -19488,6 +20194,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener", (args, methodResult) -> {
             // args
         
@@ -19513,8 +20220,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -19536,8 +20245,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -19558,6 +20269,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getProvince", (args, methodResult) -> {
             // args
         
@@ -19577,6 +20289,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getCity", (args, methodResult) -> {
             // args
         
@@ -19596,6 +20309,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getAdCode", (args, methodResult) -> {
             // args
         
@@ -19615,6 +20329,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getWeather", (args, methodResult) -> {
             // args
         
@@ -19634,6 +20349,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getTemperature", (args, methodResult) -> {
             // args
         
@@ -19653,6 +20369,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getWindDirection", (args, methodResult) -> {
             // args
         
@@ -19672,6 +20389,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getWindPower", (args, methodResult) -> {
             // args
         
@@ -19691,6 +20409,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getHumidity", (args, methodResult) -> {
             // args
         
@@ -19710,6 +20429,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::getReportTime", (args, methodResult) -> {
             // args
         
@@ -19729,6 +20449,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19749,6 +20470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19769,6 +20491,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19789,6 +20512,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setWeather", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19809,6 +20533,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setTemperature", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19829,6 +20554,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setWindDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19849,6 +20575,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setWindPower", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19869,6 +20596,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setHumidity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19889,6 +20617,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLive::setReportTime", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -19909,6 +20638,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult", (args, methodResult) -> {
             // args
             // ref arg
@@ -19937,6 +20667,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery", (args, methodResult) -> {
             // args
         
@@ -19963,6 +20694,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult", (args, methodResult) -> {
             // args
         
@@ -19989,6 +20721,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.BusinessArea::getCenterPoint", (args, methodResult) -> {
             // args
         
@@ -20015,6 +20748,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.BusinessArea::setCenterPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -20035,6 +20769,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.BusinessArea::getName", (args, methodResult) -> {
             // args
         
@@ -20054,6 +20789,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.BusinessArea::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20074,6 +20810,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeQuery::getLocationName", (args, methodResult) -> {
             // args
         
@@ -20093,6 +20830,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeQuery::setLocationName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20113,6 +20851,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeQuery::getCity", (args, methodResult) -> {
             // args
         
@@ -20132,6 +20871,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeQuery::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20152,6 +20892,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -20179,6 +20920,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName", (args, methodResult) -> {
             // args
             // ref arg
@@ -20208,6 +20950,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener", (args, methodResult) -> {
             // args
         
@@ -20233,8 +20976,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -20256,8 +21001,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -20278,6 +21025,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -20298,6 +21046,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationNameAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -20318,6 +21067,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeQuery", (args, methodResult) -> {
             // args
         
@@ -20344,6 +21094,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -20364,6 +21115,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeAddress", (args, methodResult) -> {
             // args
         
@@ -20390,6 +21142,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeAddress", (args, methodResult) -> {
             // args
             // ref arg
@@ -20410,6 +21163,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery", (args, methodResult) -> {
             // args
         
@@ -20436,6 +21190,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -20456,6 +21211,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList", (args, methodResult) -> {
             // args
         
@@ -20484,6 +21240,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList", (args, methodResult) -> {
             // args
             // list arg
@@ -20508,6 +21265,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::getAoiId", (args, methodResult) -> {
             // args
         
@@ -20527,6 +21285,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::getAoiName", (args, methodResult) -> {
             // args
         
@@ -20546,6 +21305,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::getAdCode", (args, methodResult) -> {
             // args
         
@@ -20565,6 +21325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::getAoiCenterPoint", (args, methodResult) -> {
             // args
         
@@ -20591,6 +21352,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::getAoiArea", (args, methodResult) -> {
             // args
         
@@ -20610,6 +21372,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::setId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20630,6 +21393,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20650,6 +21414,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::setAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20670,6 +21435,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::setLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -20690,6 +21456,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.AoiItem::setArea", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20710,6 +21477,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -20732,6 +21500,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -20754,6 +21523,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::getId", (args, methodResult) -> {
             // args
         
@@ -20773,6 +21543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::setId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20793,6 +21564,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::getName", (args, methodResult) -> {
             // args
         
@@ -20812,6 +21584,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20832,6 +21605,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::getDistance", (args, methodResult) -> {
             // args
         
@@ -20851,6 +21625,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20871,6 +21646,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::getDirection", (args, methodResult) -> {
             // args
         
@@ -20890,6 +21666,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::setDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20910,6 +21687,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::getLatLngPoint", (args, methodResult) -> {
             // args
         
@@ -20936,6 +21714,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeRoad::setLatLngPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -20956,6 +21735,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getFormatAddress", (args, methodResult) -> {
             // args
         
@@ -20975,6 +21755,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setFormatAddress", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -20995,6 +21776,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getProvince", (args, methodResult) -> {
             // args
         
@@ -21014,6 +21796,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21034,6 +21817,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getCity", (args, methodResult) -> {
             // args
         
@@ -21053,6 +21837,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21073,6 +21858,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getDistrict", (args, methodResult) -> {
             // args
         
@@ -21092,6 +21878,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setDistrict", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21112,6 +21899,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getTownship", (args, methodResult) -> {
             // args
         
@@ -21131,6 +21919,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setTownship", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21151,6 +21940,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getNeighborhood", (args, methodResult) -> {
             // args
         
@@ -21170,6 +21960,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setNeighborhood", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21190,6 +21981,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getBuilding", (args, methodResult) -> {
             // args
         
@@ -21209,6 +22001,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setBuilding", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21229,6 +22022,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getAdcode", (args, methodResult) -> {
             // args
         
@@ -21248,6 +22042,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21268,6 +22063,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -21294,6 +22090,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setLatLonPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -21314,6 +22111,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::getLevel", (args, methodResult) -> {
             // args
         
@@ -21333,6 +22131,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.GeocodeAddress::setLevel", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21353,6 +22152,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::getPoint", (args, methodResult) -> {
             // args
         
@@ -21379,6 +22179,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::setPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -21399,6 +22200,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::getRadius", (args, methodResult) -> {
             // args
         
@@ -21418,6 +22220,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::setRadius", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21438,6 +22241,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::getLatLonType", (args, methodResult) -> {
             // args
         
@@ -21457,6 +22261,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::setLatLonType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21477,6 +22282,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::getPoiType", (args, methodResult) -> {
             // args
         
@@ -21496,6 +22302,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeQuery::setPoiType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21516,6 +22323,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::getStreet", (args, methodResult) -> {
             // args
         
@@ -21535,6 +22343,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::setStreet", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21555,6 +22364,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::getNumber", (args, methodResult) -> {
             // args
         
@@ -21574,6 +22384,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::setNumber", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21594,6 +22405,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::getLatLonPoint", (args, methodResult) -> {
             // args
         
@@ -21620,6 +22432,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::setLatLonPoint", (args, methodResult) -> {
             // args
             // ref arg
@@ -21640,6 +22453,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::getDirection", (args, methodResult) -> {
             // args
         
@@ -21659,6 +22473,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::setDirection", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21679,6 +22494,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::getDistance", (args, methodResult) -> {
             // args
         
@@ -21698,6 +22514,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.StreetNumber::setDistance", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21718,6 +22535,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getFormatAddress", (args, methodResult) -> {
             // args
         
@@ -21737,6 +22555,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setFormatAddress", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21757,6 +22576,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getProvince", (args, methodResult) -> {
             // args
         
@@ -21776,6 +22596,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setProvince", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21796,6 +22617,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getCity", (args, methodResult) -> {
             // args
         
@@ -21815,6 +22637,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setCity", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21835,6 +22658,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getCityCode", (args, methodResult) -> {
             // args
         
@@ -21854,6 +22678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setCityCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21874,6 +22699,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getAdCode", (args, methodResult) -> {
             // args
         
@@ -21893,6 +22719,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setAdCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21913,6 +22740,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getDistrict", (args, methodResult) -> {
             // args
         
@@ -21932,6 +22760,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setDistrict", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21952,6 +22781,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getTownship", (args, methodResult) -> {
             // args
         
@@ -21971,6 +22801,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setTownship", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -21991,6 +22822,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getNeighborhood", (args, methodResult) -> {
             // args
         
@@ -22010,6 +22842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setNeighborhood", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22030,6 +22863,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getBuilding", (args, methodResult) -> {
             // args
         
@@ -22049,6 +22883,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setBuilding", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22069,6 +22904,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getStreetNumber", (args, methodResult) -> {
             // args
         
@@ -22095,6 +22931,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setStreetNumber", (args, methodResult) -> {
             // args
             // ref arg
@@ -22115,6 +22952,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getRoads", (args, methodResult) -> {
             // args
         
@@ -22143,6 +22981,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setRoads", (args, methodResult) -> {
             // args
             // list arg
@@ -22167,6 +23006,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getPois", (args, methodResult) -> {
             // args
         
@@ -22195,6 +23035,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setPois", (args, methodResult) -> {
             // args
             // list arg
@@ -22219,6 +23060,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getCrossroads", (args, methodResult) -> {
             // args
         
@@ -22247,6 +23089,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setCrossroads", (args, methodResult) -> {
             // args
             // list arg
@@ -22271,6 +23114,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getBusinessAreas", (args, methodResult) -> {
             // args
         
@@ -22299,6 +23143,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setBusinessAreas", (args, methodResult) -> {
             // args
             // list arg
@@ -22323,6 +23168,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getAois", (args, methodResult) -> {
             // args
         
@@ -22351,6 +23197,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setAois", (args, methodResult) -> {
             // args
             // list arg
@@ -22375,6 +23222,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getTowncode", (args, methodResult) -> {
             // args
         
@@ -22394,6 +23242,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setTowncode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22414,6 +23263,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::setCountry", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22434,6 +23284,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.geocoder.RegeocodeAddress::getCountry", (args, methodResult) -> {
             // args
         
@@ -22453,6 +23304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setShowBoundary", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22473,6 +23325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::isShowBoundary", (args, methodResult) -> {
             // args
         
@@ -22492,6 +23345,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::getPageNum", (args, methodResult) -> {
             // args
         
@@ -22511,6 +23365,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setPageNum", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22531,6 +23386,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::getPageSize", (args, methodResult) -> {
             // args
         
@@ -22550,6 +23406,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setPageSize", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22570,6 +23427,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::getKeywords", (args, methodResult) -> {
             // args
         
@@ -22589,6 +23447,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setKeywords", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22609,6 +23468,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::getKeywordsLevel", (args, methodResult) -> {
             // args
         
@@ -22628,6 +23488,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setKeywordsLevel", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22648,6 +23509,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::isShowChild", (args, methodResult) -> {
             // args
         
@@ -22667,6 +23529,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setShowChild", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22687,6 +23550,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::isShowBusinessArea", (args, methodResult) -> {
             // args
         
@@ -22706,6 +23570,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::setShowBusinessArea", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -22726,6 +23591,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::checkLevels", (args, methodResult) -> {
             // args
         
@@ -22745,6 +23611,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::checkKeyWords", (args, methodResult) -> {
             // args
         
@@ -22764,6 +23631,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::weakEquals", (args, methodResult) -> {
             // args
             // ref arg
@@ -22784,6 +23652,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictSearchQuery::clone", (args, methodResult) -> {
             // args
         
@@ -22810,6 +23679,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -22836,6 +23706,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -22856,6 +23727,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch::searchDistrict", (args, methodResult) -> {
             // args
         
@@ -22882,6 +23754,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch::searchDistrictAsyn", (args, methodResult) -> {
             // args
         
@@ -22901,6 +23774,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch::searchDistrictAnsy", (args, methodResult) -> {
             // args
         
@@ -22920,6 +23794,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener", (args, methodResult) -> {
             // args
         
@@ -22945,6 +23820,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
         
@@ -22965,6 +23841,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::getDistrict", (args, methodResult) -> {
             // args
         
@@ -22993,6 +23870,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::setDistrict", (args, methodResult) -> {
             // args
             // list arg
@@ -23017,6 +23895,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::getQuery", (args, methodResult) -> {
             // args
         
@@ -23043,6 +23922,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -23063,6 +23943,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::getPageCount", (args, methodResult) -> {
             // args
         
@@ -23082,6 +23963,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::setPageCount", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23102,6 +23984,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::getAMapException", (args, methodResult) -> {
             // args
         
@@ -23128,6 +24011,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictResult::setAMapException", (args, methodResult) -> {
             // args
             // ref arg
@@ -23148,6 +24032,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::getCitycode", (args, methodResult) -> {
             // args
         
@@ -23167,6 +24052,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::setCitycode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23187,6 +24073,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::getAdcode", (args, methodResult) -> {
             // args
         
@@ -23206,6 +24093,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::setAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23226,6 +24114,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::getName", (args, methodResult) -> {
             // args
         
@@ -23245,6 +24134,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23265,6 +24155,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::getCenter", (args, methodResult) -> {
             // args
         
@@ -23291,6 +24182,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::setCenter", (args, methodResult) -> {
             // args
             // ref arg
@@ -23311,6 +24203,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::getLevel", (args, methodResult) -> {
             // args
         
@@ -23330,6 +24223,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::setLevel", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23350,6 +24244,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::getSubDistrict", (args, methodResult) -> {
             // args
         
@@ -23378,6 +24273,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.district.DistrictItem::setSubDistrict", (args, methodResult) -> {
             // args
             // list arg
@@ -23402,6 +24298,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched", (args, methodResult) -> {
             // args
             // ref arg
@@ -23422,6 +24319,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips", (args, methodResult) -> {
             // args
             // list arg
@@ -23448,6 +24346,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getPoiID", (args, methodResult) -> {
             // args
         
@@ -23467,6 +24366,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.Tip::setID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23487,6 +24387,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getPoint", (args, methodResult) -> {
             // args
         
@@ -23513,6 +24414,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.help.Tip::setPostion", (args, methodResult) -> {
             // args
             // ref arg
@@ -23533,6 +24435,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getName", (args, methodResult) -> {
             // args
         
@@ -23552,6 +24455,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.Tip::setName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23572,6 +24476,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getDistrict", (args, methodResult) -> {
             // args
         
@@ -23591,6 +24496,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.Tip::setDistrict", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23611,6 +24517,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getAdcode", (args, methodResult) -> {
             // args
         
@@ -23630,6 +24537,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.Tip::setAdcode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23650,6 +24558,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getAddress", (args, methodResult) -> {
             // args
         
@@ -23669,6 +24578,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.Tip::setAddress", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23689,6 +24599,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::setTypeCode", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23709,6 +24620,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Tip::getTypeCode", (args, methodResult) -> {
             // args
         
@@ -23728,6 +24640,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::getKeyword", (args, methodResult) -> {
             // args
         
@@ -23747,6 +24660,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::getCity", (args, methodResult) -> {
             // args
         
@@ -23766,6 +24680,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::setType", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23786,6 +24701,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::getType", (args, methodResult) -> {
             // args
         
@@ -23805,6 +24721,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::setCityLimit", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -23825,6 +24742,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::getCityLimit", (args, methodResult) -> {
             // args
         
@@ -23844,6 +24762,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::setLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -23864,6 +24783,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.InputtipsQuery::getLocation", (args, methodResult) -> {
             // args
         
@@ -23890,6 +24810,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.help.Inputtips::getQuery", (args, methodResult) -> {
             // args
         
@@ -23916,6 +24837,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.help.Inputtips::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -23936,6 +24858,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Inputtips::setInputtipsListener", (args, methodResult) -> {
             // args
         
@@ -23961,11 +24884,13 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // list arg
                     List<Integer> argvar1 = new ArrayList<>();
                     for (com.amap.api.services.help.Tip item : var1) {
                         getHEAP().put(item.hashCode(), item);
                         argvar1.add(item.hashCode());
                     }
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -23986,6 +24911,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Inputtips::requestInputtipsAsyn", (args, methodResult) -> {
             // args
         
@@ -24005,6 +24931,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.help.Inputtips::requestInputtips", (args, methodResult) -> {
             // args
         
@@ -24033,6 +24960,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IDistrictSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -24059,6 +24987,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IDistrictSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -24079,6 +25008,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IDistrictSearch::searchDistrictAsyn", (args, methodResult) -> {
             // args
         
@@ -24098,6 +25028,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IDistrictSearch::searchDistrictAnsy", (args, methodResult) -> {
             // args
         
@@ -24117,6 +25048,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IDistrictSearch::setOnDistrictSearchListener", (args, methodResult) -> {
             // args
         
@@ -24142,6 +25074,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
         
@@ -24162,6 +25095,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IDistrictSearch::searchDistrict", (args, methodResult) -> {
             // args
         
@@ -24188,6 +25122,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IBusStationSearch::searchBusStation", (args, methodResult) -> {
             // args
         
@@ -24214,6 +25149,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IBusStationSearch::setOnBusStationSearchListener", (args, methodResult) -> {
             // args
         
@@ -24239,8 +25175,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24261,6 +25199,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusStationSearch::searchBusStationAsyn", (args, methodResult) -> {
             // args
         
@@ -24280,6 +25219,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusStationSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -24300,6 +25240,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusStationSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -24326,6 +25267,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::setRouteSearchListener", (args, methodResult) -> {
             // args
         
@@ -24351,8 +25293,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24374,8 +25318,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24397,8 +25343,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24420,8 +25368,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24442,6 +25392,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::setOnTruckRouteSearchListener", (args, methodResult) -> {
             // args
         
@@ -24467,8 +25418,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24489,6 +25442,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::setOnRoutePlanSearchListener", (args, methodResult) -> {
             // args
         
@@ -24514,8 +25468,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24536,6 +25492,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateWalkRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -24563,6 +25520,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateWalkRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24583,6 +25541,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateBusRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -24610,6 +25569,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateBusRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24630,6 +25590,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateDriveRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -24657,6 +25618,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateDriveRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24677,6 +25639,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateRideRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -24704,6 +25667,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateRideRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24724,6 +25688,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateTruckRoute", (args, methodResult) -> {
             // args
             // ref arg
@@ -24751,6 +25716,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateTruckRouteAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24771,6 +25737,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateDrivePlan", (args, methodResult) -> {
             // args
             // ref arg
@@ -24798,6 +25765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRouteSearch::calculateDrivePlanAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24818,6 +25786,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::setOnShareSearchListener", (args, methodResult) -> {
             // args
         
@@ -24843,7 +25812,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24865,7 +25836,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24887,7 +25860,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24909,7 +25884,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24931,7 +25908,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24953,7 +25932,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -24974,6 +25955,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -24994,6 +25976,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25014,6 +25997,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25034,6 +26018,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25054,6 +26039,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25074,6 +26060,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25094,6 +26081,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchPoiShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -25114,6 +26102,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchNaviShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -25134,6 +26123,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchLocationShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -25154,6 +26144,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchBusRouteShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -25174,6 +26165,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchDrivingRouteShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -25194,6 +26186,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IShareSearch::searchWalkRouteShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -25214,6 +26207,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IRoutePOISearch::setRoutePOISearchListener", (args, methodResult) -> {
             // args
         
@@ -25239,8 +26233,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25261,6 +26257,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRoutePOISearch::searchRoutePOIAsyn", (args, methodResult) -> {
             // args
         
@@ -25280,6 +26277,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRoutePOISearch::searchRoutePOI", (args, methodResult) -> {
             // args
         
@@ -25306,6 +26304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IRoutePOISearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -25326,6 +26325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IRoutePOISearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -25352,6 +26352,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener", (args, methodResult) -> {
             // args
         
@@ -25377,8 +26378,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25399,6 +26402,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.ITrafficSearch::loadTrafficByRoad", (args, methodResult) -> {
             // args
             // ref arg
@@ -25426,6 +26430,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.ITrafficSearch::loadTrafficByRoadAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25446,6 +26451,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.ITrafficSearch::loadTrafficByCircle", (args, methodResult) -> {
             // args
             // ref arg
@@ -25473,6 +26479,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.ITrafficSearch::loadTrafficByCircleAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25493,6 +26500,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IInputtipsSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -25519,6 +26527,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IInputtipsSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -25539,6 +26548,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IInputtipsSearch::setInputtipsListener", (args, methodResult) -> {
             // args
         
@@ -25564,11 +26574,13 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // list arg
                     List<Integer> argvar1 = new ArrayList<>();
                     for (com.amap.api.services.help.Tip item : var1) {
                         getHEAP().put(item.hashCode(), item);
                         argvar1.add(item.hashCode());
                     }
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25589,6 +26601,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtipsAsyn", (args, methodResult) -> {
             // args
         
@@ -25608,6 +26621,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips", (args, methodResult) -> {
             // args
         
@@ -25636,6 +26650,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocation", (args, methodResult) -> {
             // args
             // ref arg
@@ -25663,6 +26678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocationName", (args, methodResult) -> {
             // args
             // ref arg
@@ -25692,6 +26708,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IGeocodeSearch::setOnGeocodeSearchListener", (args, methodResult) -> {
             // args
         
@@ -25717,8 +26734,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25740,8 +26759,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25762,6 +26783,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocationAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25782,6 +26804,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocationNameAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25802,6 +26825,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener", (args, methodResult) -> {
             // args
         
@@ -25827,8 +26851,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25850,8 +26876,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -25872,6 +26900,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.ICloudSearch::searchCloudAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25892,6 +26921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.ICloudSearch::searchCloudDetailAsyn", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -25914,6 +26944,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IDistanceSearch::calculateRouteDistance", (args, methodResult) -> {
             // args
             // ref arg
@@ -25941,6 +26972,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IDistanceSearch::calculateRouteDistanceAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -25961,6 +26993,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener", (args, methodResult) -> {
             // args
         
@@ -25986,8 +27019,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26008,6 +27043,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener", (args, methodResult) -> {
             // args
         
@@ -26033,8 +27069,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26056,8 +27094,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26078,6 +27118,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::setLanguage", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -26098,6 +27139,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::getLanguage", (args, methodResult) -> {
             // args
         
@@ -26117,6 +27159,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::searchPOI", (args, methodResult) -> {
             // args
         
@@ -26143,6 +27186,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::searchPOIAsyn", (args, methodResult) -> {
             // args
         
@@ -26162,6 +27206,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::searchPOIId", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -26189,6 +27234,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::searchPOIIdAsyn", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -26209,6 +27255,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -26229,6 +27276,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::setBound", (args, methodResult) -> {
             // args
             // ref arg
@@ -26249,6 +27297,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -26275,6 +27324,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IPoiSearch::getBound", (args, methodResult) -> {
             // args
         
@@ -26301,6 +27351,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IWeatherSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -26327,6 +27378,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IWeatherSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -26347,6 +27399,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IWeatherSearch::searchWeatherAsyn", (args, methodResult) -> {
             // args
         
@@ -26366,6 +27419,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IWeatherSearch::setOnWeatherSearchListener", (args, methodResult) -> {
             // args
         
@@ -26391,8 +27445,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26414,8 +27470,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26436,6 +27494,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::addNearbyListener", (args, methodResult) -> {
             // args
         
@@ -26461,6 +27520,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -26481,8 +27541,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26504,6 +27566,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -26523,6 +27586,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::removeNearbyListener", (args, methodResult) -> {
             // args
         
@@ -26548,6 +27612,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -26568,8 +27633,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26591,6 +27658,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     int argvar1 = var1;
         
                     // call dart method
@@ -26610,6 +27678,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::clearUserInfoAsyn", (args, methodResult) -> {
             // args
         
@@ -26629,6 +27698,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::setUserID", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -26649,6 +27719,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::startUploadNearbyInfoAuto", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -26694,6 +27765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::stopUploadNearbyInfoAuto", (args, methodResult) -> {
             // args
         
@@ -26713,6 +27785,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::uploadNearbyInfoAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -26733,6 +27806,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::searchNearbyInfoAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -26753,6 +27827,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::searchNearbyInfo", (args, methodResult) -> {
             // args
             // ref arg
@@ -26780,6 +27855,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.INearbySearch::destroy", (args, methodResult) -> {
             // args
         
@@ -26799,6 +27875,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusLineSearch::searchBusLine", (args, methodResult) -> {
             // args
         
@@ -26825,6 +27902,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener", (args, methodResult) -> {
             // args
         
@@ -26850,8 +27928,10 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // ref arg
                     int argvar1 = var1.hashCode();
                     getHEAP().put(argvar1, var1);
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -26872,6 +27952,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusLineSearch::searchBusLineAsyn", (args, methodResult) -> {
             // args
         
@@ -26891,6 +27972,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusLineSearch::setQuery", (args, methodResult) -> {
             // args
             // ref arg
@@ -26911,6 +27993,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.interfaces.IBusLineSearch::getQuery", (args, methodResult) -> {
             // args
         
@@ -26937,6 +28020,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo", (args, methodResult) -> {
             // args
         
@@ -26963,6 +28047,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode", (args, methodResult) -> {
             // args
         
@@ -26982,6 +28067,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getBusMode", (args, methodResult) -> {
             // args
         
@@ -27001,6 +28087,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getShareFromAndTo", (args, methodResult) -> {
             // args
         
@@ -27027,6 +28114,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::setOnShareSearchListener", (args, methodResult) -> {
             // args
         
@@ -27052,7 +28140,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -27074,7 +28164,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -27096,7 +28188,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -27118,7 +28212,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -27140,7 +28236,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -27162,7 +28260,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
         
                     // convert to jsonable data
+                    // jsonable arg
                     String argvar1 = var1;
+                    // jsonable arg
                     int argvar2 = var2;
         
                     // call dart method
@@ -27183,6 +28283,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchPoiShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -27203,6 +28304,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -27223,6 +28325,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -27243,6 +28346,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -27263,6 +28367,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchNaviShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -27283,6 +28388,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchLocationShareUrlAsyn", (args, methodResult) -> {
             // args
             // ref arg
@@ -27303,6 +28409,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchPoiShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -27323,6 +28430,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchNaviShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -27343,6 +28451,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchLocationShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -27363,6 +28472,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -27383,6 +28493,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -27403,6 +28514,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl", (args, methodResult) -> {
             // args
             // ref arg
@@ -27423,6 +28535,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27443,6 +28556,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27463,6 +28577,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom", (args, methodResult) -> {
             // args
         
@@ -27489,6 +28604,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo", (args, methodResult) -> {
             // args
         
@@ -27515,6 +28631,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFromName", (args, methodResult) -> {
             // args
         
@@ -27534,6 +28651,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getToName", (args, methodResult) -> {
             // args
         
@@ -27553,6 +28671,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode", (args, methodResult) -> {
             // args
         
@@ -27572,6 +28691,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo", (args, methodResult) -> {
             // args
         
@@ -27598,6 +28718,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode", (args, methodResult) -> {
             // args
         
@@ -27617,6 +28738,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success(result);
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo", (args, methodResult) -> {
             // args
         
@@ -27643,6 +28765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 methodResult.success(null);
             }
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27665,6 +28788,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27687,6 +28811,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27709,6 +28834,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27731,6 +28857,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27753,6 +28880,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // method
         put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched", (args, methodResult) -> {
             // args
             // jsonable arg
@@ -27775,6 +28903,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             // result
             methodResult.success("success");
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusInfo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusInfo__");
         
@@ -27792,6 +28921,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusResult__");
         
@@ -27809,6 +28939,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficSearch__android_content_Context");
         
@@ -27827,50 +28958,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
-        put("ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int", (args, methodResult) -> {
-            Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_RoadTrafficQuery__String__String__int");
-        
-            // args
-            // jsonable arg
-            String var1 = (String) args.get("var1");
-            // jsonable arg
-            String var2 = (String) args.get("var2");
-            // jsonable arg
-            int var3 = (int) args.get("var3");
-        
-            // create target object
-            com.amap.api.services.traffic.RoadTrafficQuery obj = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
-            getHEAP().put(obj.hashCode(), obj);
-        
-            // print current HEAP
-            if (getEnableLog()) {
-                Log.d("ObjectFactory", "HEAP: " + getHEAP());
-            }
-        
-            methodResult.success(obj.hashCode());
-        });
-        put("ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int", (args, methodResult) -> {
-            Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int");
-        
-            // args
-            // ref arg
-            com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) args.get("var1"));
-            // jsonable arg
-            int var2 = (int) args.get("var2");
-            // jsonable arg
-            int var3 = (int) args.get("var3");
-        
-            // create target object
-            com.amap.api.services.traffic.CircleTrafficQuery obj = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
-            getHEAP().put(obj.hashCode(), obj);
-        
-            // print current HEAP
-            if (getEnableLog()) {
-                Log.d("ObjectFactory", "HEAP: " + getHEAP());
-            }
-        
-            methodResult.success(obj.hashCode());
-        });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusEvaluation__");
         
@@ -27888,6 +28976,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_busline_BusLineItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineItem__");
         
@@ -27905,6 +28994,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery");
         
@@ -27925,6 +29015,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
         
@@ -27942,6 +29033,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationQuery__String__String");
         
@@ -27962,6 +29054,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_AMapException__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String");
         
@@ -27980,6 +29073,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String");
         
@@ -28002,6 +29096,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_AMapException__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__");
         
@@ -28019,6 +29114,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_SearchUtils__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SearchUtils__");
         
@@ -28036,6 +29132,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonSharePoint__double__double__String");
         
@@ -28058,6 +29155,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonPoint__double__double");
         
@@ -28078,6 +29176,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
         
@@ -28102,6 +29201,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SuggestionCity__String__String__String__int");
         
@@ -28126,6 +29226,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__");
         
@@ -28143,6 +29244,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__String__String");
         
@@ -28163,6 +29265,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
         
@@ -28187,6 +29290,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiItemExtension__String__String");
         
@@ -28207,6 +29311,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
         
@@ -28227,6 +29332,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean");
         
@@ -28249,6 +29355,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
         
@@ -28269,6 +29376,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint");
         
@@ -28291,6 +29399,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
         
@@ -28311,6 +29420,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
         
@@ -28331,6 +29441,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
         
@@ -28353,6 +29464,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
         
@@ -28375,6 +29487,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_Railway__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
         
@@ -28392,6 +29505,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
         
@@ -28409,6 +29523,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
         
@@ -28426,6 +29541,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__int");
         
@@ -28454,6 +29570,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TMC__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
         
@@ -28471,6 +29588,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
         
@@ -28488,6 +29606,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
         
@@ -28505,6 +29624,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
         
@@ -28523,6 +29643,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
         
@@ -28540,6 +29661,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
         
@@ -28557,6 +29679,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_BusRouteResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusRouteResult__");
         
@@ -28574,6 +29697,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RoutePlanResult__");
         
@@ -28591,6 +29715,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwaySpace__String__float");
         
@@ -28611,6 +29736,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckRouteRestult__");
         
@@ -28628,6 +29754,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
         
@@ -28648,6 +29775,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
         
@@ -28666,6 +29794,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__");
         
@@ -28683,6 +29812,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String");
         
@@ -28712,6 +29842,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__");
         
@@ -28729,6 +29860,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteRailwayItem__");
         
@@ -28746,6 +29878,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_WalkStep__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkStep__");
         
@@ -28763,6 +29896,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwayStationItem__");
         
@@ -28780,6 +29914,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RideRouteResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideRouteResult__");
         
@@ -28797,6 +29932,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
         
@@ -28817,6 +29953,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__");
         
@@ -28834,6 +29971,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RidePath__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RidePath__");
         
@@ -28851,6 +29989,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int");
         
@@ -28875,6 +30014,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__");
         
@@ -28892,6 +30032,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RideStep__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideStep__");
         
@@ -28909,6 +30050,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchCity__");
         
@@ -28926,6 +30068,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DistanceResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceResult__");
         
@@ -28943,6 +30086,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
         
@@ -28963,6 +30107,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
         
@@ -28981,6 +30126,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__");
         
@@ -28998,6 +30144,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_District__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_District__");
         
@@ -29015,6 +30162,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_WalkRouteResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkRouteResult__");
         
@@ -29032,6 +30180,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch_DistanceQuery__");
         
@@ -29049,6 +30198,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_SearchCity__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_SearchCity__");
         
@@ -29066,6 +30216,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch__android_content_Context");
         
@@ -29084,6 +30235,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_WalkPath__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkPath__");
         
@@ -29101,6 +30253,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteBusLineItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusLineItem__");
         
@@ -29118,6 +30271,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int");
         
@@ -29142,6 +30296,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__");
         
@@ -29159,6 +30314,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DrivePlanStep__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanStep__");
         
@@ -29176,6 +30332,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TimeInfo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfo__");
         
@@ -29193,6 +30350,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DriveStep__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveStep__");
         
@@ -29210,6 +30368,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TruckStep__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckStep__");
         
@@ -29227,6 +30386,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DriveRouteResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRouteResult__");
         
@@ -29244,6 +30404,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DrivePath__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePath__");
         
@@ -29261,6 +30422,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TruckPath__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckPath__");
         
@@ -29278,6 +30440,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_Doorway__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Doorway__");
         
@@ -29295,6 +30458,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DrivePlanPath__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanPath__");
         
@@ -29312,6 +30476,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_TimeInfosElement__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfosElement__");
         
@@ -29329,6 +30494,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_DistanceItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceItem__");
         
@@ -29346,6 +30512,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_route_Path__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Path__");
         
@@ -29363,6 +30530,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_road_Road__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__");
         
@@ -29380,6 +30548,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_road_Road__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__String__String");
         
@@ -29400,6 +30569,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_road_Crossroad__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Crossroad__");
         
@@ -29417,6 +30587,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_nearby_NearbyInfo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbyInfo__");
         
@@ -29434,6 +30605,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_UploadInfo__");
         
@@ -29451,6 +30623,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearchResult__");
         
@@ -29468,6 +30641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_nearby_NearbySearch_NearbyQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearch_NearbyQuery__");
         
@@ -29485,6 +30659,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOIItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOIItem__");
         
@@ -29502,6 +30677,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String");
         
@@ -29526,6 +30702,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound");
         
@@ -29548,6 +30725,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch__android_content_Context");
         
@@ -29566,6 +30744,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
         
@@ -29586,6 +30765,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
         
@@ -29606,6 +30786,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint");
         
@@ -29628,6 +30809,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__String");
         
@@ -29646,6 +30828,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudImage__String__String__String");
         
@@ -29668,6 +30851,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean");
         
@@ -29688,6 +30872,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__int");
         
@@ -29706,6 +30891,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String");
         
@@ -29730,6 +30916,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalDayWeatherForecast__");
         
@@ -29747,6 +30934,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__String__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__String__int");
         
@@ -29767,6 +30955,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__");
         
@@ -29784,6 +30973,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherForecast__");
         
@@ -29801,6 +30991,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearch__android_content_Context");
         
@@ -29819,6 +31010,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_weather_LocalWeatherLive__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherLive__");
         
@@ -29836,6 +31028,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_BusinessArea__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_BusinessArea__");
         
@@ -29853,6 +31046,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeQuery__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeQuery__String__String");
         
@@ -29873,6 +31067,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeSearch__android_content_Context");
         
@@ -29891,6 +31086,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress");
         
@@ -29911,6 +31107,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress");
         
@@ -29935,6 +31132,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_AoiItem__");
         
@@ -29952,6 +31150,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeRoad__");
         
@@ -29969,6 +31168,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeAddress__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeAddress__");
         
@@ -29986,6 +31186,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String");
         
@@ -30008,6 +31209,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_StreetNumber__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_StreetNumber__");
         
@@ -30025,6 +31227,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeAddress__");
         
@@ -30042,6 +31245,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__");
         
@@ -30059,6 +31263,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int");
         
@@ -30081,6 +31286,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int");
         
@@ -30107,6 +31313,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearch__android_content_Context");
         
@@ -30125,6 +31332,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__com_amap_api_services_district_DistrictItem", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__com_amap_api_services_district_DistrictItem");
         
@@ -30149,6 +31357,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictResult__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__");
         
@@ -30166,6 +31375,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__");
         
@@ -30183,6 +31393,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String");
         
@@ -30209,6 +31420,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_help_Tip__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Tip__");
         
@@ -30226,6 +31438,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_help_InputtipsQuery__String__String", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_InputtipsQuery__String__String");
         
@@ -30246,6 +31459,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery");
         
@@ -30266,6 +31480,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
         
@@ -30286,6 +31501,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
         
@@ -30306,6 +31522,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_share_ShareSearch__android_content_Context", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch__android_content_Context");
         
@@ -30324,6 +31541,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
         
@@ -30344,6 +31562,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
         
@@ -30364,6 +31583,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         
             methodResult.success(obj.hashCode());
         });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
         
