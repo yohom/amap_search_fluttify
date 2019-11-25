@@ -18,6 +18,50 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   
 
   // generate methods
+  Future<void> setDistrictBoundary(List<String> var1) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::setDistrictBoundary([\'var1\':$var1])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::setDistrictBoundary', {"var1": var1, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  Future<List<String>> districtBoundary() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.district.DistrictItem@$refId::districtBoundary([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictItem::districtBoundary', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return (result as List).cast<String>();
+    }
+  }
+  
   Future<String> getCitycode() async {
     // print log
     if (fluttifyLogEnabled) {

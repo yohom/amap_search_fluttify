@@ -51,7 +51,7 @@ class AMapDistrict extends AMapSearchObject  {
   Future<List<String>> get_polylines() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrict::get_polylines", {'refId': refId});
   
-    return result;
+    return (result as List).cast<String>();
   }
   
 
