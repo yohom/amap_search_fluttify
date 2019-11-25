@@ -21,7 +21,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject  {
   Future<List<String>> get_filter() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'refId': refId});
   
-    return result;
+    return (result as List).cast<String>();
   }
   
   Future<String> get_sortFields() async {

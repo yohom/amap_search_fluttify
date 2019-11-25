@@ -841,7 +841,12 @@ class AmapSearch {
   }
 
   /// 获取行政区划数据
-  static Future<District> searchDistrict(String district) async {
+  ///
+  /// [showBoundary]是否返回边界值
+  static Future<District> searchDistrict(
+    String district, {
+    bool showBoundary = false,
+  }) async {
     // 会在listener中关闭
     // ignore: close_sinks
     final _controller = StreamController<District>(sync: true);
@@ -851,7 +856,10 @@ class AmapSearch {
         // 创建请求对象
         final query = await AmapSearchFluttifyFactoryAndroid
             .createcom_amap_api_services_district_DistrictSearchQuery__();
+        // 关键字
         await query.setKeywords(district);
+        // 是否获取边界信息
+        await query.setShowBoundary(showBoundary);
 
         // 获取android上下文
         final context = await PlatformFactoryAndroid.getandroid_app_Activity();
@@ -885,6 +893,8 @@ class AmapSearch {
             .createAMapDistrictSearchRequest();
         // 设置站点名称
         await request.set_keywords(district);
+        // 是否获取边界信息
+        await request.set_requireExtension(showBoundary);
 
         // 开始搜索
         await _iosSearch.AMapDistrictSearch(request);

@@ -23935,6 +23935,47 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             methodResult.success("success");
         });
         // method
+        put("com.amap.api.services.district.DistrictItem::setDistrictBoundary", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            List<String> var1 = (List<String>) args.get("var1");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::setDistrictBoundary(" + var1 + ")");
+            }
+        
+            // invoke native method
+            ref.setDistrictBoundary(var1.toArray(new String[var1.size()]));
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.services.district.DistrictItem::districtBoundary", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.district.DistrictItem@" + refId + "::districtBoundary(" + "" + ")");
+            }
+        
+            // invoke native method
+            String[] result = ref.districtBoundary();
+        
+            // result
+            methodResult.success(new ArrayList<String>(java.util.Arrays.asList(result)));
+        });
+        // method
         put("com.amap.api.services.district.DistrictItem::getCitycode", (args, methodResult) -> {
             // args
         

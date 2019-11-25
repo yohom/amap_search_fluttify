@@ -15,7 +15,7 @@ class AMapSuggestion extends AMapSearchObject  {
   Future<List<String>> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_keywords", {'refId': refId});
   
-    return result;
+    return (result as List).cast<String>();
   }
   
   Future<List<AMapCity>> get_cities() async {
