@@ -1521,9 +1521,39 @@ class DistrictItem with _ToFutureString {
     );
   }
 
+  /// 边界
+  Future<List<LatLng>> get boundary {
+    return platform(
+      android: (pool) async {
+        final boundary = await _androidModel.districtBoundary();
+        return boundary
+            .map((String rawLatLng) => rawLatLng.split(';')) // 按`;`切分成单个经纬度
+            .expand((List<String> rawPair) => rawPair) // 处理上一步产生的每一项
+            .map((String pair) => pair.split(',')) // 把第一步的每一项按`,`切分成经度和纬度
+            .map((List<String> pairLatLng) => LatLng(
+                  double.parse(pairLatLng[1]),
+                  double.parse(pairLatLng[0]),
+                )) // 组装成经纬度对象
+            .toList();
+      },
+      ios: (pool) async {
+        final boundary = await _iosModel.get_polylines();
+        return boundary
+            .map((String rawLatLng) => rawLatLng.split(';')) // 按`;`切分成单个经纬度
+            .expand((List<String> rawPair) => rawPair) // 处理上一步产生的每一项
+            .map((String pair) => pair.split(',')) // 把第一步的每一项按`,`切分成经度和纬度
+            .map((List<String> pairLatLng) => LatLng(
+                  double.parse(pairLatLng[1]),
+                  double.parse(pairLatLng[0]),
+                )) // 组装成经纬度对象
+            .toList();
+      },
+    );
+  }
+
   @override
   Future<String> toFutureString() async {
-    return 'DistrictItem{name: ${await name}, cityCode: ${await cityCode}, adCode: ${await adCode}, center: ${await center}}';
+    return 'DistrictItem{name: ${await name}, cityCode: ${await cityCode}, adCode: ${await adCode}, center: ${await center}, boundary: ${await boundary}';
   }
 }
 
