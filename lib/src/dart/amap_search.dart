@@ -40,16 +40,16 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建查询对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
+        final query =
+            await createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
                 keyword, '', city);
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidPoiSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
+        _androidPoiSearch =
+            await createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
                 context, query);
 
         // 设置回调
@@ -63,14 +63,13 @@ class AmapSearch {
         pool..add(query)..add(context);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建请求对象
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapPOIKeywordsSearchRequest();
+        final request = await createAMapPOIKeywordsSearchRequest();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -103,25 +102,25 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建查询对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
+        final query =
+            await createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String(
                 keyword, type, city);
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidPoiSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
+        _androidPoiSearch =
+            await createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query(
                 context, query);
 
         // 创建中心点
-        final centerLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final centerLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
                 center.latitude, center.longitude);
         // 创建边界
-        final bound = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int(
+        final bound =
+            await createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int(
                 centerLatLng, radius);
         await _androidPoiSearch.setBound(bound);
         // 设置搜索类型
@@ -137,14 +136,13 @@ class AmapSearch {
         pool..add(query)..add(centerLatLng)..add(bound);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建周边搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapPOIAroundSearchRequest();
+        final request = await createAMapPOIAroundSearchRequest();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -152,8 +150,7 @@ class AmapSearch {
         // 设置搜索类别
         await request.set_types(type);
         // 创建中心点
-        final location =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final location = await createAMapGeoPoint();
         await location.set_latitude(center.latitude);
         await location.set_longitude(center.longitude);
         await request.set_location(location);
@@ -184,18 +181,18 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建查询对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_help_InputtipsQuery__String__String(
+        final query =
+            await createcom_amap_api_services_help_InputtipsQuery__String__String(
                 keyword, city);
         // 限制在当前城市
         await query.setCityLimit(true);
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidInputTip = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery(
+        _androidInputTip =
+            await createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery(
                 context, query);
 
         // 设置回调
@@ -209,14 +206,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapInputTipsSearchRequest();
+        final request = await createAMapInputTipsSearchRequest();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -246,16 +242,16 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建查询对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_geocoder_GeocodeQuery__String__String(
+        final query =
+            await createcom_amap_api_services_geocoder_GeocodeQuery__String__String(
                 keyword, city);
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidGeocodeSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context(
+        _androidGeocodeSearch =
+            await createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context(
                 context);
 
         // 设置回调
@@ -269,14 +265,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeocodeSearchRequest();
+        final request = await createAMapGeocodeSearchRequest();
         // 设置关键字
         await request.set_address(keyword);
         // 设置城市
@@ -306,21 +301,21 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建中心点
-        final latLngPoint = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final latLngPoint =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
                 latLng.latitude, latLng.longitude);
 
         // 创建查询对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String(
+        final query =
+            await createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String(
                 latLngPoint, radius, 'AMAP');
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidGeocodeSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context(
+        _androidGeocodeSearch =
+            await createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context(
                 context);
 
         // 设置回调
@@ -334,11 +329,10 @@ class AmapSearch {
         pool..add(latLngPoint)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 创建中心点
-        final amapLocation =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final amapLocation = await createAMapGeoPoint();
         await amapLocation.set_latitude(latLng.latitude);
         await amapLocation.set_longitude(latLng.longitude);
 
@@ -346,8 +340,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapReGeocodeSearchRequest();
+        final request = await createAMapReGeocodeSearchRequest();
         // 设置中心点
         await request.set_location(amapLocation);
         // 设置半径
@@ -382,36 +375,36 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 起点
-        final fromLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final fromLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           from.latitude,
           from.longitude,
         );
         // 终点
-        final toLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final toLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           to.latitude,
           to.longitude,
         );
 
         // 起终点
-        final fromAndTo = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+        final fromAndTo =
+            await createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
                 fromLatLng, toLatLng);
 
         // 途经点
         final List<com_amap_api_services_core_LatLonPoint> passby = [];
         for (var item in passedByPoints) {
-          passby.add(await AmapSearchFluttifyFactoryAndroid
-              .createcom_amap_api_services_core_LatLonPoint__double__double(
+          passby.add(
+              await createcom_amap_api_services_core_LatLonPoint__double__double(
             item.latitude,
             item.longitude,
           ));
         }
 
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String(
+        final query =
+            await createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String(
           fromAndTo,
           0,
           passby,
@@ -420,11 +413,11 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+        _androidRouteSearch =
+            await createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
         // 设置回调
@@ -443,16 +436,14 @@ class AmapSearch {
           ..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng = await createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng = await createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -460,8 +451,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapDrivingRouteSearchRequest();
+        final request = await createAMapDrivingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -473,8 +463,7 @@ class AmapSearch {
         // 设置途经点
         final List<AMapGeoPoint> passby = [];
         for (var item in passedByPoints) {
-          final geoPoint =
-              await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+          final geoPoint = await createAMapGeoPoint();
           await geoPoint.set_latitude(item.latitude);
           await geoPoint.set_longitude(item.longitude);
           passby.add(geoPoint);
@@ -515,26 +504,26 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 起点
-        final fromLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final fromLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           from.latitude,
           from.longitude,
         );
         // 终点
-        final toLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final toLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           to.latitude,
           to.longitude,
         );
 
         // 起终点
-        final fromAndTo = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+        final fromAndTo =
+            await createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
                 fromLatLng, toLatLng);
 
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int(
+        final query =
+            await createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int(
           fromAndTo,
           mode,
           city,
@@ -542,11 +531,11 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+        _androidRouteSearch =
+            await createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
         // 设置回调
@@ -560,16 +549,14 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng = await createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng = await createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -577,8 +564,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapWalkingRouteSearchRequest();
+        final request = await createAMapWalkingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -609,36 +595,36 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 起点
-        final fromLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final fromLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           from.latitude,
           from.longitude,
         );
         // 终点
-        final toLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final toLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           to.latitude,
           to.longitude,
         );
 
         // 起终点
-        final fromAndTo = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+        final fromAndTo =
+            await createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
                 fromLatLng, toLatLng);
 
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int(
+        final query =
+            await createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int(
           fromAndTo,
           mode,
         );
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+        _androidRouteSearch =
+            await createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
         // 设置回调
@@ -652,16 +638,14 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng = await createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng = await createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -669,8 +653,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapWalkingRouteSearchRequest();
+        final request = await createAMapWalkingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -699,36 +682,36 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 起点
-        final fromLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final fromLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           from.latitude,
           from.longitude,
         );
         // 终点
-        final toLatLng = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_core_LatLonPoint__double__double(
+        final toLatLng =
+            await createcom_amap_api_services_core_LatLonPoint__double__double(
           to.latitude,
           to.longitude,
         );
 
         // 起终点
-        final fromAndTo = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
+        final fromAndTo =
+            await createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(
                 fromLatLng, toLatLng);
 
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int(
+        final query =
+            await createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int(
           fromAndTo,
           mode,
         );
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidRouteSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_route_RouteSearch__android_content_Context(
+        _androidRouteSearch =
+            await createcom_amap_api_services_route_RouteSearch__android_content_Context(
                 context);
 
         // 设置回调
@@ -742,16 +725,14 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 创建起点
-        final fromLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final fromLatLng = await createAMapGeoPoint();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng =
-            await AmapSearchFluttifyFactoryIOS.createAMapGeoPoint();
+        final toLatLng = await createAMapGeoPoint();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -759,8 +740,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapRidingRouteSearchRequest();
+        final request = await createAMapRidingRouteSearchRequest();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -790,18 +770,18 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_busline_BusStationQuery__String__String(
+        final query =
+            await createcom_amap_api_services_busline_BusStationQuery__String__String(
           stationName,
           city,
         );
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidBusStationSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery(
+        _androidBusStationSearch =
+            await createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery(
           context,
           query,
         );
@@ -817,14 +797,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapBusStopSearchRequest();
+        final request = await createAMapBusStopSearchRequest();
         // 设置站点名称
         await request.set_keywords(stationName);
         // 设置所在城市
@@ -854,19 +833,19 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_district_DistrictSearchQuery__();
+        final query =
+            await createcom_amap_api_services_district_DistrictSearchQuery__();
         // 关键字
         await query.setKeywords(district);
         // 是否获取边界信息
         await query.setShowBoundary(showBoundary);
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidDistrictSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_district_DistrictSearch__android_content_Context(
+        _androidDistrictSearch =
+            await createcom_amap_api_services_district_DistrictSearch__android_content_Context(
                 context);
 
         // 设置请求
@@ -883,14 +862,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AmapSearchFluttifyFactoryIOS
-            .createAMapDistrictSearchRequest();
+        final request = await createAMapDistrictSearchRequest();
         // 设置站点名称
         await request.set_keywords(district);
         // 是否获取边界信息
@@ -915,18 +893,18 @@ class AmapSearch {
     platform(
       android: (pool) async {
         // 创建请求对象
-        final query = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_weather_WeatherSearchQuery__String__int(
+        final query =
+            await createcom_amap_api_services_weather_WeatherSearchQuery__String__int(
           city,
           mode,
         );
 
         // 获取android上下文
-        final context = await PlatformFactoryAndroid.getandroid_app_Activity();
+        final context = await getandroid_app_Activity();
 
         // 创建搜索对象
-        _androidWeatherSearch = await AmapSearchFluttifyFactoryAndroid
-            .createcom_amap_api_services_weather_WeatherSearch__android_content_Context(
+        _androidWeatherSearch =
+            await createcom_amap_api_services_weather_WeatherSearch__android_content_Context(
                 context);
 
         // 设置请求
@@ -944,14 +922,13 @@ class AmapSearch {
         release(query);
       },
       ios: (pool) async {
-        _iosSearch = await AmapSearchFluttifyFactoryIOS.createAMapSearchAPI();
+        _iosSearch = await createAMapSearchAPI();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request =
-            await AmapSearchFluttifyFactoryIOS.createAMapWeatherSearchRequest();
+        final request = await createAMapWeatherSearchRequest();
         // 设置站点名称
         await request.set_city(city);
         await request.set_type(AMapWeatherType.values[mode]);

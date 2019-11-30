@@ -265,7 +265,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSpeed(var1.floatValue());
+            ref.setSpeed(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -909,7 +909,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -1345,7 +1345,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBasicPrice(var1.floatValue());
+            ref.setBasicPrice(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -1386,7 +1386,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTotalPrice(var1.floatValue());
+            ref.setTotalPrice(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6394,7 +6394,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCost(var1.floatValue());
+            ref.setCost(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6476,7 +6476,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWalkDistance(var1.floatValue());
+            ref.setWalkDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6517,7 +6517,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusDistance(var1.floatValue());
+            ref.setBusDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6763,7 +6763,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckHeight(var1.floatValue());
+            ref.setTruckHeight(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6784,7 +6784,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckWidth(var1.floatValue());
+            ref.setTruckWidth(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6805,7 +6805,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckLoad(var1.floatValue());
+            ref.setTruckLoad(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6826,7 +6826,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckWeight(var1.floatValue());
+            ref.setTruckWeight(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -6847,7 +6847,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckAxis(var1.floatValue());
+            ref.setTruckAxis(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -8392,7 +8392,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -8413,7 +8413,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -8496,7 +8496,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTaxiCost(var1.floatValue());
+            ref.setTaxiCost(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -9584,7 +9584,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -9886,7 +9886,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -9927,7 +9927,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -10398,7 +10398,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWait(var1.floatValue());
+            ref.setWait(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -11146,7 +11146,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -11187,7 +11187,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -12551,7 +12551,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -12884,7 +12884,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13238,7 +13238,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13279,7 +13279,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(var1.floatValue());
+            ref.setTolls(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13320,7 +13320,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(var1.floatValue());
+            ref.setTollDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13402,7 +13402,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13730,7 +13730,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(var1.floatValue());
+            ref.setTolls(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13751,7 +13751,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13772,7 +13772,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(var1.floatValue());
+            ref.setTollDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -13814,7 +13814,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -14259,7 +14259,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTaxiCost(var1.floatValue());
+            ref.setTaxiCost(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -14443,7 +14443,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(var1.floatValue());
+            ref.setTolls(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -14484,7 +14484,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(var1.floatValue());
+            ref.setTollDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -14641,7 +14641,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -14704,7 +14704,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(var1.floatValue());
+            ref.setTolls(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -14725,7 +14725,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(var1.floatValue());
+            ref.setTollDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15091,7 +15091,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15268,7 +15268,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15309,7 +15309,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(var1.floatValue());
+            ref.setTolls(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15610,7 +15610,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15631,7 +15631,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15714,7 +15714,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -15879,7 +15879,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoadWidth(var1.floatValue());
+            ref.setRoadWidth(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -16049,7 +16049,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -17552,7 +17552,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -17593,7 +17593,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1.floatValue());
+            ref.setDuration(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -21374,7 +21374,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setArea(var1.floatValue());
+            ref.setArea(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -21543,7 +21543,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -22138,7 +22138,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRadius(var1.floatValue());
+            ref.setRadius(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -22432,7 +22432,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1.floatValue());
+            ref.setDistance(new Double(var1).floatValue());
         
             // result
             methodResult.success("success");
@@ -29571,7 +29571,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             Double var2 = (Double) args.get("var2");
         
             // create target object
-            com.amap.api.services.route.RailwaySpace obj = new com.amap.api.services.route.RailwaySpace(var1, var2.floatValue());
+            com.amap.api.services.route.RailwaySpace obj = new com.amap.api.services.route.RailwaySpace(var1, new Double(var2).floatValue());
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
@@ -31044,7 +31044,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             String var3 = (String) args.get("var3");
         
             // create target object
-            com.amap.api.services.geocoder.RegeocodeQuery obj = new com.amap.api.services.geocoder.RegeocodeQuery(var1, var2.floatValue(), var3);
+            com.amap.api.services.geocoder.RegeocodeQuery obj = new com.amap.api.services.geocoder.RegeocodeQuery(var1, new Double(var2).floatValue(), var3);
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP

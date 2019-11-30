@@ -16,6 +16,16 @@ mixin AMapSearchDelegate on NSObject {
   
 
   @mustCallSuper
+  Future<void> AMapSearchRequestDidFailWithError(NSObject request, NSError error) {
+    kNativeObjectPool.add(request);
+    kNativeObjectPool.add(error);
+  
+    if (!kReleaseMode) {
+      debugPrint('AMapSearchRequestDidFailWithError::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
   Future<void> onPOISearchDoneResponse(AMapPOISearchBaseRequest request, AMapPOISearchResponse response) {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
