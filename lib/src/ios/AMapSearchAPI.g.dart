@@ -36,6 +36,15 @@ class AMapSearchAPI extends NSObject  {
         // if (refId != this.refId) return;
   
         switch (methodCall.method) {
+          case 'Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError':
+            // print log
+            if (!kReleaseMode) {
+              print('fluttify-dart-callback: AMapSearchRequestDidFailWithError([])');
+            }
+        
+            // handle the native call
+            delegate?.AMapSearchRequestDidFailWithError(NSObject()..refId = (args['request'])..tag = 'amap_search_fluttify', NSError()..refId = (args['error'])..tag = 'amap_search_fluttify');
+            break;
           case 'Callback::AMapSearchDelegate::onPOISearchDoneResponse':
             // print log
             if (!kReleaseMode) {
