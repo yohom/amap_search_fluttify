@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest  {
+  
+
   // generate getters
   Future<String> get_roadName() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchRequest::get_roadName", {'refId': refId});

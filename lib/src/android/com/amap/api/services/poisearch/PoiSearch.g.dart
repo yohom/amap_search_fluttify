@@ -11,6 +11,9 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
+  static final String ENGLISH = "en";
+  static final String CHINESE = "zh-CN";
+
   // generate getters
   
 
@@ -38,7 +41,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onPoiSearched([\'var2\':$args[var2]])');
               }
         
@@ -47,7 +50,7 @@ class com_amap_api_services_poisearch_PoiSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener::onPoiItemSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onPoiItemSearched([\'var2\':$args[var2]])');
               }
         

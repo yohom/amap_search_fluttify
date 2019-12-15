@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
+  
+
   // generate getters
   
 
@@ -148,7 +150,7 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener::onDistrictSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onDistrictSearched([])');
               }
         

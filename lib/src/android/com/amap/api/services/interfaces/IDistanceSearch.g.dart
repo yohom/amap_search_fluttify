@@ -15,11 +15,13 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<com_amap_api_services_route_DistanceResult> calculateRouteDistance(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('calculateRouteDistance::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
   Future<void> calculateRouteDistanceAsyn(com_amap_api_services_route_DistanceSearch_DistanceQuery var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('calculateRouteDistanceAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +39,7 @@ mixin com_amap_api_services_interfaces_IDistanceSearch on java_lang_Object {
   Future<void> setDistanceSearchListener(com_amap_api_services_route_DistanceSearch_OnDistanceSearchListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setDistanceSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }

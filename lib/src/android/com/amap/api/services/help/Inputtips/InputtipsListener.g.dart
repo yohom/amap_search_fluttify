@@ -15,11 +15,13 @@ mixin com_amap_api_services_help_Inputtips_InputtipsListener on java_lang_Object
 
   
 
+  
+
   @mustCallSuper
   Future<void> onGetInputtips(List<com_amap_api_services_help_Tip> var1, int var2) {
     kNativeObjectPool.addAll(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onGetInputtips::kNativeObjectPool: $kNativeObjectPool');
     }
   }

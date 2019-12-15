@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
+  
+
   // generate getters
   
 
@@ -38,7 +40,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onCloudSearched([\'var2\':$args[var2]])');
               }
         
@@ -47,7 +49,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onCloudItemDetailSearched([\'var2\':$args[var2]])');
               }
         

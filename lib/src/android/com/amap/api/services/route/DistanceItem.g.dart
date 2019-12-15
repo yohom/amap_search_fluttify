@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_route_DistanceItem extends java_lang_Object with android_os_Parcelable {
+  
+
   // generate getters
   Future<int> get_ERROR_CODE_NO_DRIVE() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE", {'refId': refId});

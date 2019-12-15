@@ -11,6 +11,9 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
+  static final int GPS = 0;
+  static final int AMAP = 1;
+
   // generate getters
   
 
@@ -60,7 +63,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
               }
         
@@ -69,7 +72,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
               }
         
@@ -78,7 +81,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
               }
         
@@ -119,7 +122,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onUserInfoCleared':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onUserInfoCleared([\'var1\':$args[var1]])');
               }
         
@@ -128,7 +131,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onNearbyInfoSearched([\'var2\':$args[var2]])');
               }
         
@@ -137,7 +140,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.nearby.NearbySearch.NearbyListener::onNearbyInfoUploaded':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onNearbyInfoUploaded([\'var1\':$args[var1]])');
               }
         
@@ -222,7 +225,7 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.nearby.UploadInfoCallback::OnUploadInfoCallback':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: OnUploadInfoCallback([])');
               }
         

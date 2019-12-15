@@ -15,11 +15,13 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<AMapNearbyUploadInfo> nearbyInfoForUploading(AMapNearbySearchManager manager) {
     kNativeObjectPool.add(manager);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('nearbyInfoForUploading::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   Future<void> onNearbyInfoUploadedWithError(NSError error) {
     kNativeObjectPool.add(error);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onNearbyInfoUploadedWithError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +39,7 @@ mixin AMapNearbySearchManagerDelegate on NSObject {
   Future<void> onUserInfoClearedWithError(NSError error) {
     kNativeObjectPool.add(error);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onUserInfoClearedWithError::kNativeObjectPool: $kNativeObjectPool');
     }
   }

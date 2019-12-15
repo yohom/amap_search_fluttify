@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapReGeocode extends AMapSearchObject  {
+  
+
   // generate getters
   Future<String> get_formattedAddress() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocode::get_formattedAddress", {'refId': refId});

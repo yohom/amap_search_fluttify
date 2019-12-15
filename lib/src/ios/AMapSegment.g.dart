@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapSegment extends AMapSearchObject  {
+  
+
   // generate getters
   Future<AMapWalking> get_walking() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_walking", {'refId': refId});

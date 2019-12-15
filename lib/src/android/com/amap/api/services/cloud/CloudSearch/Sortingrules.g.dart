@@ -11,6 +11,9 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Object  {
+  static final int WEIGHT = 0;
+  static final int DISTANCE = 1;
+
   // generate getters
   
 

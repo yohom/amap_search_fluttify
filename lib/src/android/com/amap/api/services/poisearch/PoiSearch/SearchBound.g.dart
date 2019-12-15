@@ -11,6 +11,11 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Object  {
+  static final String BOUND_SHAPE = "Bound";
+  static final String POLYGON_SHAPE = "Polygon";
+  static final String RECTANGLE_SHAPE = "Rectangle";
+  static final String ELLIPSE_SHAPE = "Ellipse";
+
   // generate getters
   
 
@@ -169,6 +174,28 @@ class com_amap_api_services_poisearch_PoiSearch_SearchBound extends java_lang_Ob
     } else {
       kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList();
+    }
+  }
+  
+  Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> clone() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.poisearch.PoiSearch.SearchBound@$refId::clone([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiSearch.SearchBound::clone', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapDistanceSearchRequest extends AMapSearchObject  {
+  
+
   // generate getters
   Future<List<AMapGeoPoint>> get_origins() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchRequest::get_origins", {'refId': refId});

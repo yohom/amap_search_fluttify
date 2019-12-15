@@ -11,6 +11,87 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
+  static final int BusDefault = 0;
+  static final int BusSaveMoney = 1;
+  static final int BusLeaseChange = 2;
+  static final int BusLeaseWalk = 3;
+  static final int BusComfortable = 4;
+  static final int BusNoSubway = 5;
+  static final int DrivingDefault = 0;
+  static final int DrivingSaveMoney = 1;
+  static final int DrivingShortDistance = 2;
+  static final int DrivingNoExpressways = 3;
+  static final int DrivingAvoidCongestion = 4;
+  static final int DrivingMultiStrategy = 5;
+  static final int DrivingNoHighWay = 6;
+  static final int DrivingNoHighWaySaveMoney = 7;
+  static final int DrivingSaveMoneyAvoidCongestion = 8;
+  static final int DrivingNoHighAvoidCongestionSaveMoney = 9;
+  static final int WalkDefault = 0;
+  static final int WalkMultipath = 1;
+  static final int RidingDefault = 0;
+  static final int RidingRecommend = 1;
+  static final int RidingFast = 2;
+  static final int BUS_DEFAULT = 0;
+  static final int BUS_SAVE_MONEY = 1;
+  static final int BUS_LEASE_CHANGE = 2;
+  static final int BUS_LEASE_WALK = 3;
+  static final int BUS_COMFORTABLE = 4;
+  static final int BUS_NO_SUBWAY = 5;
+  static final int WALK_DEFAULT = 0;
+  static final int WALK_MULTI_PATH = 1;
+  static final int RIDING_DEFAULT = 0;
+  static final int RIDING_RECOMMEND = 1;
+  static final int RIDING_FAST = 2;
+  static final int DRIVING_SINGLE_DEFAULT = 0;
+  static final int DRIVING_SINGLE_SAVE_MONEY = 1;
+  static final int DRIVING_SINGLE_SHORTEST = 2;
+  static final int DRIVING_SINGLE_NO_EXPRESSWAYS = 3;
+  static final int DRIVING_SINGLE_AVOID_CONGESTION = 4;
+  static final int DRIVING_MULTI_STRATEGY_FASTEST_SAVE_MONEY_SHORTEST = 5;
+  static final int DRIVING_SINGLE_NO_HIGHWAY = 6;
+  static final int DRIVING_SINGLE_NO_HIGHWAY_SAVE_MONEY = 7;
+  static final int DRIVING_SINGLE_SAVE_MONEY_AVOID_CONGESTION = 8;
+  static final int DRIVING_SINGLE_NO_HIGHWAY_SAVE_MONEY_AVOID_CONGESTION = 9;
+  static final int DRIVING_MULTI_STRATEGY_FASTEST_SHORTEST_AVOID_CONGESTION = 10;
+  static final int DRIVING_MULTI_STRATEGY_FASTEST_SHORTEST = 11;
+  static final int DRIVING_MULTI_CHOICE_AVOID_CONGESTION = 12;
+  static final int DRIVING_MULTI_CHOICE_NO_HIGHWAY = 13;
+  static final int DRIVING_MULTI_CHOICE_SAVE_MONEY = 14;
+  static final int DRIVING_MULTI_CHOICE_AVOID_CONGESTION_NO_HIGHWAY = 15;
+  static final int DRIVING_MULTI_CHOICE_SAVE_MONEY_NO_HIGHWAY = 16;
+  static final int DRIVING_MULTI_CHOICE_AVOID_CONGESTION_SAVE_MONEY = 17;
+  static final int DRIVING_MULTI_CHOICE_AVOID_CONGESTION_NO_HIGHWAY_SAVE_MONEY = 18;
+  static final int DRIVING_MULTI_CHOICE_HIGHWAY = 19;
+  static final int DRIVING_MULTI_CHOICE_HIGHWAY_AVOID_CONGESTION = 20;
+  static final int DRIVING_NORMAL_CAR = 0;
+  static final int DRIVING_PURE_ELECTRIC_VEHICLE = 1;
+  static final int DRIVING_PLUGIN_HYBRID_CAR = 2;
+  static final int TRUCK_AVOID_CONGESTION = 1;
+  static final int TRUCK_NO_HIGHWAY = 2;
+  static final int TRUCK_SAVE_MONEY = 3;
+  static final int TRUCK_AVOID_CONGESTION_NO_HIGHWAY = 4;
+  static final int TRUCK_SAVE_MONEY_NO_HIGHWAY = 5;
+  static final int TRUCK_AVOID_CONGESTION__SAVE_MONEY = 6;
+  static final int TRUCK_AVOID_CONGESTION__SAVE_MONEY_NO_HIGHWAY = 7;
+  static final int TRUCK_CHOICE_HIGHWAY = 8;
+  static final int TRUCK_AVOID_CONGESTION_CHOICE_HIGHWAY = 9;
+  static final int TRUCK_SIZE_MINI = 1;
+  static final int TRUCK_SIZE_LIGHT = 2;
+  static final int TRUCK_SIZE_MEDIUM = 3;
+  static final int TRUCK_SIZE_HEAVY = 4;
+  static final int DRIVEING_PLAN_DEFAULT = 1;
+  static final int DRIVEING_PLAN_NO_HIGHWAY = 2;
+  static final int DRIVEING_PLAN_SAVE_MONEY = 3;
+  static final int DRIVEING_PLAN_AVOID_CONGESTION_NO_HIGHWAY = 4;
+  static final int DRIVEING_PLAN_SAVE_MONEY_NO_HIGHWAY = 5;
+  static final int DRIVEING_PLAN_AVOID_CONGESTION_SAVE_MONEY = 6;
+  static final int DRIVEING_PLAN_AVOID_CONGESTION_SAVE_MONEY_NO_HIGHWAY = 7;
+  static final int DRIVEING_PLAN_CHOICE_HIGHWAY = 8;
+  static final int DRIVEING_PLAN_AVOID_CONGESTION_CHOICE_HIGHWAY = 9;
+  static final int DRIVEING_PLAN_FASTEST_SHORTEST = 10;
+  static final int DRIVEING_PLAN_AVOID_CONGESTION_FASTEST_SAVE_MONEY = 11;
+
   // generate getters
   
 
@@ -38,7 +119,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onBusRouteSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onBusRouteSearched([\'var2\':$args[var2]])');
               }
         
@@ -47,7 +128,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onDriveRouteSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onDriveRouteSearched([\'var2\':$args[var2]])');
               }
         
@@ -56,7 +137,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onWalkRouteSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onWalkRouteSearched([\'var2\':$args[var2]])');
               }
         
@@ -65,7 +146,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRouteSearchListener::onRideRouteSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onRideRouteSearched([\'var2\':$args[var2]])');
               }
         
@@ -106,7 +187,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener::onTruckRouteSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onTruckRouteSearched([\'var2\':$args[var2]])');
               }
         
@@ -147,7 +228,7 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener::onDriveRoutePlanSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onDriveRoutePlanSearched([\'var2\':$args[var2]])');
               }
         

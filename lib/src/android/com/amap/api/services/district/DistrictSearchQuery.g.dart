@@ -11,6 +11,12 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Object with android_os_Parcelable {
+  static final String KEYWORDS_COUNTRY = "country";
+  static final String KEYWORDS_PROVINCE = "province";
+  static final String KEYWORDS_CITY = "city";
+  static final String KEYWORDS_DISTRICT = "district";
+  static final String KEYWORDS_BUSINESS = "biz_area";
+
   // generate getters
   
 

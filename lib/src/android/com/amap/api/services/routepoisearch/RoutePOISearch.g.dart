@@ -11,6 +11,16 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Object  {
+  static final int DrivingDefault = 0;
+  static final int DrivingSaveMoney = 1;
+  static final int DrivingShortDistance = 2;
+  static final int DrivingNoExpressways = 3;
+  static final int DrivingAvoidCongestion = 4;
+  static final int DrivingNoHighWay = 6;
+  static final int DrivingNoHighWaySaveMoney = 7;
+  static final int DrivingSaveMoneyAvoidCongestion = 8;
+  static final int DrivingNoHighAvoidCongestionSaveMoney = 9;
+
   // generate getters
   
 
@@ -38,7 +48,7 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::onRoutePoiSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onRoutePoiSearched([\'var2\':$args[var2]])');
               }
         

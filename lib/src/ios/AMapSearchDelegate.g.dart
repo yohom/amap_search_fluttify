@@ -15,12 +15,14 @@ mixin AMapSearchDelegate on NSObject {
 
   
 
+  
+
   @mustCallSuper
   Future<void> AMapSearchRequestDidFailWithError(NSObject request, NSError error) {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(error);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('AMapSearchRequestDidFailWithError::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -30,7 +32,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onPOISearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -40,7 +42,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRoutePOISearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -50,7 +52,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onGeocodeSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -60,7 +62,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onReGeocodeSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -70,7 +72,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onInputTipsSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -80,7 +82,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBusStopSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -90,7 +92,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBusLineSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -100,7 +102,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onDistrictSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -110,7 +112,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRouteSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -120,7 +122,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onFutureRouteSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -130,7 +132,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onDistanceSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -140,7 +142,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onWeatherSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -150,7 +152,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onRoadTrafficSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -160,7 +162,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onNearbySearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -170,7 +172,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCloudSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -180,7 +182,7 @@ mixin AMapSearchDelegate on NSObject {
     kNativeObjectPool.add(request);
     kNativeObjectPool.add(response);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onShareSearchDoneResponse::kNativeObjectPool: $kNativeObjectPool');
     }
   }

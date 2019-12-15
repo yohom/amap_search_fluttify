@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
+  
+
   // generate getters
   
 
@@ -38,7 +40,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener::onRoadTrafficSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onRoadTrafficSearched([\'var2\':$args[var2]])');
               }
         
