@@ -331,7 +331,7 @@ class ReGeocode with _ToFutureString {
     );
   }
 
-  /// 地址全称
+  /// 兴趣区域列表
   Future<List<AoiItem>> get aoiList {
     return platform(
       android: (pool) async {
@@ -343,6 +343,20 @@ class ReGeocode with _ToFutureString {
         return (await _iosModel.get_aois())
             .map((it) => AoiItem.ios(it))
             .toList();
+      },
+    );
+  }
+
+  /// 兴趣点列表
+  Future<List<Poi>> get poiList {
+    return platform(
+      android: (pool) async {
+        return (await _androidModel.getPois())
+            .map((it) => Poi.android(it))
+            .toList();
+      },
+      ios: (pool) async {
+        return (await _iosModel.get_pois()).map((it) => Poi.ios(it)).toList();
       },
     );
   }
