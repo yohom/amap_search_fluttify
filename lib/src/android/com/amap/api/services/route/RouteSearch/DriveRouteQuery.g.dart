@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_Object with android_os_Parcelable {
+  
+
   // generate getters
   
 
@@ -103,28 +105,6 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     } else {
       kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList();
-    }
-  }
-  
-  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getAvoidpolygons() async {
-    // print log
-    if (fluttifyLogEnabled) {
-      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::getAvoidpolygons([])');
-    }
-  
-    // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygons', {"refId": refId});
-  
-  
-    // handle native call
-  
-  
-    // convert native result to dart side object
-    if (result == null) {
-      return null;
-    } else {
-      kNativeObjectPool.addAll([] /* 暂时不支持多维列表 */);
-      return [] /* 暂时不支持多维列表 */;
     }
   }
   
@@ -257,6 +237,28 @@ class com_amap_api_services_route_RouteSearch_DriveRouteQuery extends java_lang_
     } else {
     
       return result;
+    }
+  }
+  
+  Future<com_amap_api_services_route_RouteSearch_DriveRouteQuery> clone() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.DriveRouteQuery@$refId::clone([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.DriveRouteQuery::clone', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_RouteSearch_DriveRouteQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

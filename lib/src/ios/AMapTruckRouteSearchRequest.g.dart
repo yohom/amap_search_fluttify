@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapTruckRouteSearchRequest extends AMapRouteSearchBaseRequest  {
+  
+
   // generate getters
   Future<int> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTruckRouteSearchRequest::get_strategy", {'refId': refId});

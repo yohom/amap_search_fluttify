@@ -331,18 +331,30 @@ class ReGeocode with _ToFutureString {
     );
   }
 
-  /// 地址全称
-  Future<List<AoiItem>> get aoiList {
+  /// 兴趣区域列表
+  Future<List<Aoi>> get aoiList {
     return platform(
       android: (pool) async {
         return (await _androidModel.getAois())
-            .map((it) => AoiItem.android(it))
+            .map((it) => Aoi.android(it))
             .toList();
       },
       ios: (pool) async {
-        return (await _iosModel.get_aois())
-            .map((it) => AoiItem.ios(it))
+        return (await _iosModel.get_aois()).map((it) => Aoi.ios(it)).toList();
+      },
+    );
+  }
+
+  /// 兴趣点列表
+  Future<List<Poi>> get poiList {
+    return platform(
+      android: (pool) async {
+        return (await _androidModel.getPois())
+            .map((it) => Poi.android(it))
             .toList();
+      },
+      ios: (pool) async {
+        return (await _iosModel.get_pois()).map((it) => Poi.ios(it)).toList();
       },
     );
   }
@@ -353,10 +365,10 @@ class ReGeocode with _ToFutureString {
   }
 }
 
-class AoiItem with _ToFutureString {
-  AoiItem.android(this._androidModel);
+class Aoi with _ToFutureString {
+  Aoi.android(this._androidModel);
 
-  AoiItem.ios(this._iosModel);
+  Aoi.ios(this._iosModel);
 
   com_amap_api_services_geocoder_AoiItem _androidModel;
   AMapAOI _iosModel;
@@ -409,7 +421,7 @@ class AoiItem with _ToFutureString {
 
   @override
   Future<String> toFutureString() async {
-    return 'AoiItem{adcode: ${await adcode}}, area: ${await area}, id: ${await id}, name: ${await name}, centerPoint: ${(await centerPoint).toString()}';
+    return 'Aoi{adcode: ${await adcode}}, area: ${await area}, id: ${await id}, name: ${await name}, centerPoint: ${(await centerPoint).toString()}';
   }
 }
 

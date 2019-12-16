@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import androidx.annotation.NonNull;
 
+// todo 启用新的embedding
 @SuppressWarnings("ALL")
 public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler {
 
@@ -80,7 +82,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -101,7 +113,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -121,7 +142,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStatus();
+            String result;
+            try {
+                result = ref.getStatus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -142,7 +173,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStatus(var1);
+            try {
+                ref.setStatus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -162,7 +202,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDirection();
+            String result;
+            try {
+                result = ref.getDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -183,7 +233,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDirection(var1);
+            try {
+                ref.setDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -203,7 +262,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getAngle();
+            int result;
+            try {
+                result = ref.getAngle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -224,7 +293,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAngle(var1);
+            try {
+                ref.setAngle(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -244,7 +322,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getSpeed();
+            float result;
+            try {
+                result = ref.getSpeed();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -265,7 +353,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSpeed(new Double(var1).floatValue());
+            try {
+                ref.setSpeed(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -285,7 +382,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLcodes();
+            String result;
+            try {
+                result = ref.getLcodes();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -306,7 +413,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLcodes(var1);
+            try {
+                ref.setLcodes(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -326,7 +442,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getCoordinates();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getCoordinates();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -360,7 +486,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCoordinates(new ArrayList(var1));
+            try {
+                ref.setCoordinates(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -380,7 +515,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDescription();
+            String result;
+            try {
+                result = ref.getDescription();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -401,7 +546,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDescription(var1);
+            try {
+                ref.setDescription(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -421,7 +575,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.traffic.TrafficStatusEvaluation result = ref.getEvaluation();
+            com.amap.api.services.traffic.TrafficStatusEvaluation result;
+            try {
+                result = ref.getEvaluation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -449,7 +613,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setEvaluation(var1);
+            try {
+                ref.setEvaluation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -469,7 +642,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.traffic.TrafficStatusInfo> result = ref.getRoads();
+            List<com.amap.api.services.traffic.TrafficStatusInfo> result;
+            try {
+                result = ref.getRoads();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -503,7 +686,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoads(new ArrayList(var1));
+            try {
+                ref.setRoads(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -523,7 +715,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
+            try {
+                ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback");
         
@@ -531,7 +724,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoadTrafficSearched(com.amap.api.services.traffic.TrafficStatusResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -554,6 +749,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -576,7 +779,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onRoadTrafficSearched(var1, var2);
+            try {
+                ref.onRoadTrafficSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -596,7 +808,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getExpedite();
+            String result;
+            try {
+                result = ref.getExpedite();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -617,7 +839,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setExpedite(var1);
+            try {
+                ref.setExpedite(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -637,7 +868,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCongested();
+            String result;
+            try {
+                result = ref.getCongested();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -658,7 +899,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCongested(var1);
+            try {
+                ref.setCongested(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -678,7 +928,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBlocked();
+            String result;
+            try {
+                result = ref.getBlocked();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -699,7 +959,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBlocked(var1);
+            try {
+                ref.setBlocked(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -719,7 +988,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getUnknown();
+            String result;
+            try {
+                result = ref.getUnknown();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -740,7 +1019,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUnknown(var1);
+            try {
+                ref.setUnknown(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -760,7 +1048,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStatus();
+            String result;
+            try {
+                result = ref.getStatus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -781,7 +1079,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStatus(var1);
+            try {
+                ref.setStatus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -801,7 +1108,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDescription();
+            String result;
+            try {
+                result = ref.getDescription();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -822,7 +1139,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDescription(var1);
+            try {
+                ref.setDescription(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -845,7 +1171,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onBusLineSearched(var1, var2);
+            try {
+                ref.onBusLineSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -868,7 +1203,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onBusStationSearched(var1, var2);
+            try {
+                ref.onBusStationSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -888,7 +1232,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -909,7 +1263,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -929,7 +1292,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusLineName();
+            String result;
+            try {
+                result = ref.getBusLineName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -950,7 +1323,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusLineName(var1);
+            try {
+                ref.setBusLineName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -970,7 +1352,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusLineType();
+            String result;
+            try {
+                result = ref.getBusLineType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -991,7 +1383,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusLineType(var1);
+            try {
+                ref.setBusLineType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1011,7 +1412,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1032,7 +1443,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1052,7 +1472,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getDirectionsCoordinates();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getDirectionsCoordinates();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1086,7 +1516,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDirectionsCoordinates(new ArrayList(var1));
+            try {
+                ref.setDirectionsCoordinates(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1106,7 +1545,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getBounds();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getBounds();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1140,7 +1589,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBounds(new ArrayList(var1));
+            try {
+                ref.setBounds(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1160,7 +1618,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusLineId();
+            String result;
+            try {
+                result = ref.getBusLineId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1181,7 +1649,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusLineId(var1);
+            try {
+                ref.setBusLineId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1201,7 +1678,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOriginatingStation();
+            String result;
+            try {
+                result = ref.getOriginatingStation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1222,7 +1709,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOriginatingStation(var1);
+            try {
+                ref.setOriginatingStation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1242,7 +1738,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTerminalStation();
+            String result;
+            try {
+                result = ref.getTerminalStation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1263,7 +1769,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTerminalStation(var1);
+            try {
+                ref.setTerminalStation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1283,7 +1798,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusCompany();
+            String result;
+            try {
+                result = ref.getBusCompany();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1304,7 +1829,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusCompany(var1);
+            try {
+                ref.setBusCompany(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1324,7 +1858,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getBasicPrice();
+            float result;
+            try {
+                result = ref.getBasicPrice();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1345,7 +1889,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBasicPrice(new Double(var1).floatValue());
+            try {
+                ref.setBasicPrice(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1365,7 +1918,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTotalPrice();
+            float result;
+            try {
+                result = ref.getTotalPrice();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1386,7 +1949,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTotalPrice(new Double(var1).floatValue());
+            try {
+                ref.setTotalPrice(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1406,7 +1978,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.busline.BusStationItem> result = ref.getBusStations();
+            List<com.amap.api.services.busline.BusStationItem> result;
+            try {
+                result = ref.getBusStations();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1440,7 +2022,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusStations(new ArrayList(var1));
+            try {
+                ref.setBusStations(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1476,7 +2067,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationResult result = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, new ArrayList(var2), new ArrayList(var3), new ArrayList(var4));
+            com.amap.api.services.busline.BusStationResult result;
+            try {
+                result = com.amap.api.services.busline.BusStationResult.createPagedResult(var0, var1, new ArrayList(var2), new ArrayList(var3), new ArrayList(var4));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1503,7 +2104,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageCount();
+            int result;
+            try {
+                result = ref.getPageCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1523,7 +2134,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationQuery result = ref.getQuery();
+            com.amap.api.services.busline.BusStationQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1550,7 +2171,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<String> result = ref.getSearchSuggestionKeywords();
+            List<String> result;
+            try {
+                result = ref.getSearchSuggestionKeywords();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1570,7 +2201,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.SuggestionCity> result = ref.getSearchSuggestionCities();
+            List<com.amap.api.services.core.SuggestionCity> result;
+            try {
+                result = ref.getSearchSuggestionCities();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1599,7 +2240,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.busline.BusStationItem> result = ref.getBusStations();
+            List<com.amap.api.services.busline.BusStationItem> result;
+            try {
+                result = ref.getBusStations();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1628,7 +2279,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationResult result = ref.searchBusStation();
+            com.amap.api.services.busline.BusStationResult result;
+            try {
+                result = ref.searchBusStation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1655,7 +2316,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
+            try {
+                ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback");
         
@@ -1663,7 +2325,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusStationSearched(com.amap.api.services.busline.BusStationResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -1686,6 +2350,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1705,7 +2377,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchBusStationAsyn();
+            try {
+                ref.searchBusStationAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1726,7 +2407,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1746,7 +2436,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationQuery result = ref.getQuery();
+            com.amap.api.services.busline.BusStationQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1773,7 +2473,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineResult result = ref.searchBusLine();
+            com.amap.api.services.busline.BusLineResult result;
+            try {
+                result = ref.searchBusLine();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1800,7 +2510,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
+            try {
+                ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback");
         
@@ -1808,7 +2519,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusLineSearched(com.amap.api.services.busline.BusLineResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -1831,6 +2544,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1850,7 +2571,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchBusLineAsyn();
+            try {
+                ref.searchBusLineAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1871,7 +2601,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1891,7 +2630,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineQuery result = ref.getQuery();
+            com.amap.api.services.busline.BusLineQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1918,7 +2667,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineQuery.SearchType result = ref.getCategory();
+            com.amap.api.services.busline.BusLineQuery.SearchType result;
+            try {
+                result = ref.getCategory();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -1945,7 +2704,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getQueryString();
+            String result;
+            try {
+                result = ref.getQueryString();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -1966,7 +2735,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQueryString(var1);
+            try {
+                ref.setQueryString(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -1986,7 +2764,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2007,7 +2795,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2027,7 +2824,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageSize();
+            int result;
+            try {
+                result = ref.getPageSize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2048,7 +2855,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageSize(var1);
+            try {
+                ref.setPageSize(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2068,7 +2884,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageNumber();
+            int result;
+            try {
+                result = ref.getPageNumber();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2089,7 +2915,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageNumber(var1);
+            try {
+                ref.setPageNumber(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2110,7 +2945,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCategory(var1);
+            try {
+                ref.setCategory(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2130,7 +2974,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineQuery result = ref.clone();
+            com.amap.api.services.busline.BusLineQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2158,7 +3012,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.weakEquals(var1);
+            boolean result;
+            try {
+                result = ref.weakEquals(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2194,7 +3058,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineResult result = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, new ArrayList(var2), new ArrayList(var3), new ArrayList(var4));
+            com.amap.api.services.busline.BusLineResult result;
+            try {
+                result = com.amap.api.services.busline.BusLineResult.createPagedResult(var0, var1, new ArrayList(var2), new ArrayList(var3), new ArrayList(var4));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2221,7 +3095,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageCount();
+            int result;
+            try {
+                result = ref.getPageCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2241,7 +3125,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineQuery result = ref.getQuery();
+            com.amap.api.services.busline.BusLineQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2268,7 +3162,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<String> result = ref.getSearchSuggestionKeywords();
+            List<String> result;
+            try {
+                result = ref.getSearchSuggestionKeywords();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2288,7 +3192,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.SuggestionCity> result = ref.getSearchSuggestionCities();
+            List<com.amap.api.services.core.SuggestionCity> result;
+            try {
+                result = ref.getSearchSuggestionCities();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2317,7 +3231,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.busline.BusLineItem> result = ref.getBusLines();
+            List<com.amap.api.services.busline.BusLineItem> result;
+            try {
+                result = ref.getBusLines();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2346,7 +3270,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusStationId();
+            String result;
+            try {
+                result = ref.getBusStationId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2367,7 +3301,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusStationId(var1);
+            try {
+                ref.setBusStationId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2387,7 +3330,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusStationName();
+            String result;
+            try {
+                result = ref.getBusStationName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2408,7 +3361,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusStationName(var1);
+            try {
+                ref.setBusStationName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2428,7 +3390,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2456,7 +3428,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLonPoint(var1);
+            try {
+                ref.setLatLonPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2476,7 +3457,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2497,7 +3488,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2517,7 +3517,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2538,7 +3548,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2558,7 +3577,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.busline.BusLineItem> result = ref.getBusLineItems();
+            List<com.amap.api.services.busline.BusLineItem> result;
+            try {
+                result = ref.getBusLineItems();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2592,7 +3621,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusLineItems(new ArrayList(var1));
+            try {
+                ref.setBusLineItems(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2612,7 +3650,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getQueryString();
+            String result;
+            try {
+                result = ref.getQueryString();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2632,7 +3680,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2652,7 +3710,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageSize();
+            int result;
+            try {
+                result = ref.getPageSize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2672,7 +3740,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageNumber();
+            int result;
+            try {
+                result = ref.getPageNumber();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2693,7 +3771,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQueryString(var1);
+            try {
+                ref.setQueryString(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2714,7 +3801,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2735,7 +3831,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageSize(var1);
+            try {
+                ref.setPageSize(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2756,7 +3861,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageNumber(var1);
+            try {
+                ref.setPageNumber(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2776,7 +3890,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationQuery result = ref.clone();
+            com.amap.api.services.busline.BusStationQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -2804,7 +3928,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.weakEquals(var1);
+            boolean result;
+            try {
+                result = ref.weakEquals(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2824,7 +3958,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getErrorLevel();
+            int result;
+            try {
+                result = ref.getErrorLevel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2844,7 +3988,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getErrorType();
+            String result;
+            try {
+                result = ref.getErrorType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2864,7 +4018,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getErrorMessage();
+            String result;
+            try {
+                result = ref.getErrorMessage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2884,7 +4048,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getErrorCode();
+            int result;
+            try {
+                result = ref.getErrorCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2904,7 +4078,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getConnectionTimeOut();
+            int result;
+            try {
+                result = ref.getConnectionTimeOut();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2924,7 +4108,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getSoTimeOut();
+            int result;
+            try {
+                result = ref.getSoTimeOut();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -2945,7 +4139,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setConnectionTimeOut(var1);
+            try {
+                ref.setConnectionTimeOut(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2966,7 +4169,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSoTimeOut(var1);
+            try {
+                ref.setSoTimeOut(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -2985,7 +4197,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.ServiceSettings result = com.amap.api.services.core.ServiceSettings.getInstance();
+            com.amap.api.services.core.ServiceSettings result;
+            try {
+                result = com.amap.api.services.core.ServiceSettings.getInstance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3013,7 +4235,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLanguage(var1);
+            try {
+                ref.setLanguage(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3034,7 +4265,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProtocol(var1);
+            try {
+                ref.setProtocol(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3054,7 +4294,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLanguage();
+            String result;
+            try {
+                result = ref.getLanguage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3074,7 +4324,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getProtocol();
+            int result;
+            try {
+                result = ref.getProtocol();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3095,7 +4355,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setApiKey(var1);
+            try {
+                ref.setApiKey(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3115,7 +4384,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.destroyInnerAsynThreadPool();
+            try {
+                ref.destroyInnerAsynThreadPool();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3135,7 +4413,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = com.amap.api.services.core.SearchUtils.getSHA1(var0);
+            String result;
+            try {
+                result = com.amap.api.services.core.SearchUtils.getSHA1(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3155,7 +4443,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = com.amap.api.services.core.SearchUtils.getPkgName(var0);
+            String result;
+            try {
+                result = com.amap.api.services.core.SearchUtils.getPkgName(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3174,7 +4472,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = com.amap.api.services.core.SearchUtils.getVersion();
+            String result;
+            try {
+                result = com.amap.api.services.core.SearchUtils.getVersion();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3194,7 +4502,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSharePointName();
+            String result;
+            try {
+                result = ref.getSharePointName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3215,7 +4533,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSharePointName(var1);
+            try {
+                ref.setSharePointName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3235,7 +4562,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            double result = ref.getLongitude();
+            double result;
+            try {
+                result = ref.getLongitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3256,7 +4593,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLongitude(var1);
+            try {
+                ref.setLongitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3276,7 +4622,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            double result = ref.getLatitude();
+            double result;
+            try {
+                result = ref.getLatitude();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3297,7 +4653,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatitude(var1);
+            try {
+                ref.setLatitude(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3317,7 +4682,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.copy();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.copy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3344,7 +4719,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBusinessArea();
+            String result;
+            try {
+                result = ref.getBusinessArea();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3365,7 +4750,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusinessArea(var1);
+            try {
+                ref.setBusinessArea(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3385,7 +4779,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdName();
+            String result;
+            try {
+                result = ref.getAdName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3406,7 +4810,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdName(var1);
+            try {
+                ref.setAdName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3426,7 +4839,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityName();
+            String result;
+            try {
+                result = ref.getCityName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3447,7 +4870,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityName(var1);
+            try {
+                ref.setCityName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3467,7 +4899,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getProvinceName();
+            String result;
+            try {
+                result = ref.getProvinceName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3488,7 +4930,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProvinceName(var1);
+            try {
+                ref.setProvinceName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3508,7 +4959,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTypeDes();
+            String result;
+            try {
+                result = ref.getTypeDes();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3529,7 +4990,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTypeDes(var1);
+            try {
+                ref.setTypeDes(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3549,7 +5019,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTel();
+            String result;
+            try {
+                result = ref.getTel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3570,7 +5050,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTel(var1);
+            try {
+                ref.setTel(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3590,7 +5079,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3611,7 +5110,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3631,7 +5139,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPoiId();
+            String result;
+            try {
+                result = ref.getPoiId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3651,7 +5169,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDistance();
+            int result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3672,7 +5200,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1);
+            try {
+                ref.setDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3692,7 +5229,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTitle();
+            String result;
+            try {
+                result = ref.getTitle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3712,7 +5259,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSnippet();
+            String result;
+            try {
+                result = ref.getSnippet();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3732,7 +5289,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3759,7 +5326,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3780,7 +5357,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3800,7 +5386,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getEnter();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getEnter();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3828,7 +5424,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setEnter(var1);
+            try {
+                ref.setEnter(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3848,7 +5453,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getExit();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getExit();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -3876,7 +5491,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setExit(var1);
+            try {
+                ref.setExit(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3896,7 +5520,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getWebsite();
+            String result;
+            try {
+                result = ref.getWebsite();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3917,7 +5551,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWebsite(var1);
+            try {
+                ref.setWebsite(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3937,7 +5580,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPostcode();
+            String result;
+            try {
+                result = ref.getPostcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3958,7 +5611,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPostcode(var1);
+            try {
+                ref.setPostcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -3978,7 +5640,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getEmail();
+            String result;
+            try {
+                result = ref.getEmail();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -3999,7 +5671,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setEmail(var1);
+            try {
+                ref.setEmail(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4019,7 +5700,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDirection();
+            String result;
+            try {
+                result = ref.getDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4040,7 +5731,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDirection(var1);
+            try {
+                ref.setDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4061,7 +5761,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setIndoorMap(var1);
+            try {
+                ref.setIndoorMap(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4081,7 +5790,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isIndoorMap();
+            boolean result;
+            try {
+                result = ref.isIndoorMap();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4102,7 +5821,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProvinceCode(var1);
+            try {
+                ref.setProvinceCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4122,7 +5850,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getProvinceCode();
+            String result;
+            try {
+                result = ref.getProvinceCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4143,7 +5881,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setParkingType(var1);
+            try {
+                ref.setParkingType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4163,7 +5910,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getParkingType();
+            String result;
+            try {
+                result = ref.getParkingType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4188,7 +5945,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSubPois(new ArrayList(var1));
+            try {
+                ref.setSubPois(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4208,7 +5974,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.poisearch.SubPoiItem> result = ref.getSubPois();
+            List<com.amap.api.services.poisearch.SubPoiItem> result;
+            try {
+                result = ref.getSubPois();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4237,7 +6013,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.IndoorData result = ref.getIndoorData();
+            com.amap.api.services.poisearch.IndoorData result;
+            try {
+                result = ref.getIndoorData();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4265,7 +6051,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setIndoorDate(var1);
+            try {
+                ref.setIndoorDate(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4285,7 +6080,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.poisearch.Photo> result = ref.getPhotos();
+            List<com.amap.api.services.poisearch.Photo> result;
+            try {
+                result = ref.getPhotos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4319,7 +6124,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPhotos(new ArrayList(var1));
+            try {
+                ref.setPhotos(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4339,7 +6153,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiItemExtension result = ref.getPoiExtension();
+            com.amap.api.services.poisearch.PoiItemExtension result;
+            try {
+                result = ref.getPoiExtension();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4367,7 +6191,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoiExtension(var1);
+            try {
+                ref.setPoiExtension(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4387,7 +6220,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTypeCode();
+            String result;
+            try {
+                result = ref.getTypeCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4408,7 +6251,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTypeCode(var1);
+            try {
+                ref.setTypeCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4428,7 +6280,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getShopID();
+            String result;
+            try {
+                result = ref.getShopID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4449,7 +6311,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setShopID(var1);
+            try {
+                ref.setShopID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4469,7 +6340,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityName();
+            String result;
+            try {
+                result = ref.getCityName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4490,7 +6371,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityName(var1);
+            try {
+                ref.setCityName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4510,7 +6400,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4531,7 +6431,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4551,7 +6460,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4572,7 +6491,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4592,7 +6520,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getSuggestionNum();
+            int result;
+            try {
+                result = ref.getSuggestionNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4613,7 +6551,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSuggestionNum(var1);
+            try {
+                ref.setSuggestionNum(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4633,7 +6580,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTitle();
+            String result;
+            try {
+                result = ref.getTitle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4654,7 +6611,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTitle(var1);
+            try {
+                ref.setTitle(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4674,7 +6640,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getUrl();
+            String result;
+            try {
+                result = ref.getUrl();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4695,7 +6671,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUrl(var1);
+            try {
+                ref.setUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4715,7 +6700,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPoiId();
+            String result;
+            try {
+                result = ref.getPoiId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4736,7 +6731,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoiId(var1);
+            try {
+                ref.setPoiId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4756,7 +6760,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTitle();
+            String result;
+            try {
+                result = ref.getTitle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4777,7 +6791,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTitle(var1);
+            try {
+                ref.setTitle(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4797,7 +6820,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSubName();
+            String result;
+            try {
+                result = ref.getSubName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4818,7 +6851,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSubName(var1);
+            try {
+                ref.setSubName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4838,7 +6880,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDistance();
+            int result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4859,7 +6911,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1);
+            try {
+                ref.setDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4879,7 +6940,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -4907,7 +6978,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLonPoint(var1);
+            try {
+                ref.setLatLonPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4927,7 +7007,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSnippet();
+            String result;
+            try {
+                result = ref.getSnippet();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4948,7 +7038,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSnippet(var1);
+            try {
+                ref.setSnippet(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -4968,7 +7067,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSubTypeDes();
+            String result;
+            try {
+                result = ref.getSubTypeDes();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -4989,7 +7098,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSubTypeDes(var1);
+            try {
+                ref.setSubTypeDes(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5012,7 +7130,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onPoiSearched(var1, var2);
+            try {
+                ref.onPoiSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5035,7 +7162,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onPoiItemSearched(var1, var2);
+            try {
+                ref.onPoiItemSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5055,7 +7191,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOpentime();
+            String result;
+            try {
+                result = ref.getOpentime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5075,7 +7221,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getmRating();
+            String result;
+            try {
+                result = ref.getmRating();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5095,7 +7251,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLowerLeft();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLowerLeft();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5122,7 +7288,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getUpperRight();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getUpperRight();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5149,7 +7325,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenter();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getCenter();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5176,7 +7362,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRange();
+            int result;
+            try {
+                result = ref.getRange();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5196,7 +7392,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getShape();
+            String result;
+            try {
+                result = ref.getShape();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5216,7 +7422,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isDistanceSort();
+            boolean result;
+            try {
+                result = ref.isDistanceSort();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5236,7 +7452,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyGonList();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyGonList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5246,6 +7472,43 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     resultRefIdList.add(item.hashCode());
                 }
                 methodResult.success(resultRefIdList);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("com.amap.api.services.poisearch.PoiSearch.SearchBound::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.poisearch.PoiSearch.SearchBound ref = (com.amap.api.services.poisearch.PoiSearch.SearchBound) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.SearchBound@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.poisearch.PoiSearch.SearchBound result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
             } else {
                 methodResult.success(null);
             }
@@ -5285,7 +7548,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiResult result = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, new ArrayList(var2), new ArrayList(var3), var4, var5, new ArrayList(var6));
+            com.amap.api.services.poisearch.PoiResult result;
+            try {
+                result = com.amap.api.services.poisearch.PoiResult.createPagedResult(var0, var1, new ArrayList(var2), new ArrayList(var3), var4, var5, new ArrayList(var6));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5312,7 +7585,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageCount();
+            int result;
+            try {
+                result = ref.getPageCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5332,7 +7615,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiSearch.Query result = ref.getQuery();
+            com.amap.api.services.poisearch.PoiSearch.Query result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5359,7 +7652,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiSearch.SearchBound result = ref.getBound();
+            com.amap.api.services.poisearch.PoiSearch.SearchBound result;
+            try {
+                result = ref.getBound();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5386,7 +7689,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.PoiItem> result = ref.getPois();
+            List<com.amap.api.services.core.PoiItem> result;
+            try {
+                result = ref.getPois();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5415,7 +7728,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<String> result = ref.getSearchSuggestionKeywords();
+            List<String> result;
+            try {
+                result = ref.getSearchSuggestionKeywords();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5435,7 +7758,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.SuggestionCity> result = ref.getSearchSuggestionCitys();
+            List<com.amap.api.services.core.SuggestionCity> result;
+            try {
+                result = ref.getSearchSuggestionCitys();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5464,7 +7797,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
+            try {
+                ref.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener::Callback");
         
@@ -5472,7 +7806,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiSearched(com.amap.api.services.poisearch.PoiResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -5497,7 +7833,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiItemSearched(com.amap.api.services.core.PoiItem var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -5520,6 +7858,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5540,7 +7886,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLanguage(var1);
+            try {
+                ref.setLanguage(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5560,7 +7915,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLanguage();
+            String result;
+            try {
+                result = ref.getLanguage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5580,7 +7945,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiResult result = ref.searchPOI();
+            com.amap.api.services.poisearch.PoiResult result;
+            try {
+                result = ref.searchPOI();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5607,7 +7982,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchPOIAsyn();
+            try {
+                ref.searchPOIAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5628,7 +8012,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.PoiItem result = ref.searchPOIId(var1);
+            com.amap.api.services.core.PoiItem result;
+            try {
+                result = ref.searchPOIId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5656,7 +8050,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchPOIIdAsyn(var1);
+            try {
+                ref.searchPOIIdAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5677,7 +8080,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5698,7 +8110,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBound(var1);
+            try {
+                ref.setBound(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5718,7 +8139,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiSearch.Query result = ref.getQuery();
+            com.amap.api.services.poisearch.PoiSearch.Query result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5745,7 +8176,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiSearch.SearchBound result = ref.getBound();
+            com.amap.api.services.poisearch.PoiSearch.SearchBound result;
+            try {
+                result = ref.getBound();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -5772,7 +8213,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBuilding();
+            String result;
+            try {
+                result = ref.getBuilding();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5793,7 +8244,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBuilding(var1);
+            try {
+                ref.setBuilding(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5813,7 +8273,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getQueryString();
+            String result;
+            try {
+                result = ref.getQueryString();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5834,7 +8304,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQueryLanguage(var1);
+            try {
+                ref.setQueryLanguage(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5854,7 +8333,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCategory();
+            String result;
+            try {
+                result = ref.getCategory();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5874,7 +8363,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5894,7 +8393,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageNum();
+            int result;
+            try {
+                result = ref.getPageNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5915,7 +8424,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageNum(var1);
+            try {
+                ref.setPageNum(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5936,7 +8454,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageSize(var1);
+            try {
+                ref.setPageSize(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5956,7 +8483,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageSize();
+            int result;
+            try {
+                result = ref.getPageSize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -5977,7 +8514,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityLimit(var1);
+            try {
+                ref.setCityLimit(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -5997,7 +8543,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.getCityLimit();
+            boolean result;
+            try {
+                result = ref.getCityLimit();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6018,7 +8574,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.requireSubPois(var1);
+            try {
+                ref.requireSubPois(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6038,7 +8603,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isRequireSubPois();
+            boolean result;
+            try {
+                result = ref.isRequireSubPois();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6058,7 +8633,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isDistanceSort();
+            boolean result;
+            try {
+                result = ref.isDistanceSort();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6079,7 +8664,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistanceSort(var1);
+            try {
+                ref.setDistanceSort(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6099,7 +8693,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLocation();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -6127,7 +8731,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLocation(var1);
+            try {
+                ref.setLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6148,10 +8761,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.queryEquals(var1);
+            boolean result;
+            try {
+                result = ref.queryEquals(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.poisearch.PoiSearch.Query::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.poisearch.PoiSearch.Query ref = (com.amap.api.services.poisearch.PoiSearch.Query) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.poisearch.PoiSearch.Query@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.poisearch.PoiSearch.Query result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.poisearch.IndoorData::getPoiId", (args, methodResult) -> {
@@ -6168,7 +8828,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPoiId();
+            String result;
+            try {
+                result = ref.getPoiId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6189,7 +8859,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoiId(var1);
+            try {
+                ref.setPoiId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6209,7 +8888,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getFloor();
+            int result;
+            try {
+                result = ref.getFloor();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6230,7 +8919,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFloor(var1);
+            try {
+                ref.setFloor(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6250,7 +8948,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFloorName();
+            String result;
+            try {
+                result = ref.getFloorName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6271,7 +8979,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFloorName(var1);
+            try {
+                ref.setFloorName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6291,7 +9008,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getID();
+            String result;
+            try {
+                result = ref.getID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6311,7 +9038,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6332,7 +9069,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setID(var1);
+            try {
+                ref.setID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6353,7 +9099,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6373,7 +9128,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getCost();
+            float result;
+            try {
+                result = ref.getCost();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6394,7 +9159,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCost(new Double(var1).floatValue());
+            try {
+                ref.setCost(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6414,7 +9188,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isNightBus();
+            boolean result;
+            try {
+                result = ref.isNightBus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6435,7 +9219,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNightBus(var1);
+            try {
+                ref.setNightBus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6455,7 +9248,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getWalkDistance();
+            float result;
+            try {
+                result = ref.getWalkDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6476,7 +9279,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWalkDistance(new Double(var1).floatValue());
+            try {
+                ref.setWalkDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6496,7 +9308,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getBusDistance();
+            float result;
+            try {
+                result = ref.getBusDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6517,7 +9339,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusDistance(new Double(var1).floatValue());
+            try {
+                ref.setBusDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6537,7 +9368,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.BusStep> result = ref.getSteps();
+            List<com.amap.api.services.route.BusStep> result;
+            try {
+                result = ref.getSteps();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -6571,7 +9412,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSteps(new ArrayList(var1));
+            try {
+                ref.setSteps(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6591,7 +9441,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.DrivePlanPath> result = ref.getPaths();
+            List<com.amap.api.services.route.DrivePlanPath> result;
+            try {
+                result = ref.getPaths();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -6625,7 +9485,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPaths(new ArrayList(var1));
+            try {
+                ref.setPaths(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6645,7 +9514,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TimeInfo> result = ref.getTimeInfos();
+            List<com.amap.api.services.route.TimeInfo> result;
+            try {
+                result = ref.getTimeInfos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -6679,7 +9558,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTimeInfos(new ArrayList(var1));
+            try {
+                ref.setTimeInfos(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6700,7 +9588,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDrivePlanQuery(var1);
+            try {
+                ref.setDrivePlanQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6721,7 +9618,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setMode(var1);
+            try {
+                ref.setMode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6742,7 +9648,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckSize(var1);
+            try {
+                ref.setTruckSize(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6763,7 +9678,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckHeight(new Double(var1).floatValue());
+            try {
+                ref.setTruckHeight(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6784,7 +9708,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckWidth(new Double(var1).floatValue());
+            try {
+                ref.setTruckWidth(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6805,7 +9738,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckLoad(new Double(var1).floatValue());
+            try {
+                ref.setTruckLoad(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6826,7 +9768,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckWeight(new Double(var1).floatValue());
+            try {
+                ref.setTruckWeight(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6847,7 +9798,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckAxis(new Double(var1).floatValue());
+            try {
+                ref.setTruckAxis(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -6867,7 +9827,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.FromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -6894,7 +9864,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6914,7 +9894,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.hasPassPoint();
+            boolean result;
+            try {
+                result = ref.hasPassPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6934,7 +9924,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPassedPointStr();
+            String result;
+            try {
+                result = ref.getPassedPointStr();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6954,7 +9954,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getTruckSize();
+            int result;
+            try {
+                result = ref.getTruckSize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6974,7 +9984,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTruckHeight();
+            float result;
+            try {
+                result = ref.getTruckHeight();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -6994,7 +10014,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTruckWidth();
+            float result;
+            try {
+                result = ref.getTruckWidth();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -7014,7 +10044,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTruckLoad();
+            float result;
+            try {
+                result = ref.getTruckLoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -7034,7 +10074,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTruckWeight();
+            float result;
+            try {
+                result = ref.getTruckWeight();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -7054,10 +10104,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTruckAxis();
+            float result;
+            try {
+                result = ref.getTruckAxis();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.TruckRouteQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.TruckRouteQuery ref = (com.amap.api.services.route.RouteSearch.TruckRouteQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.TruckRouteQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.TruckRouteQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.TMC::getDistance", (args, methodResult) -> {
@@ -7074,7 +10171,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDistance();
+            int result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -7094,7 +10201,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStatus();
+            String result;
+            try {
+                result = ref.getStatus();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -7115,7 +10232,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1);
+            try {
+                ref.setDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7136,7 +10262,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStatus(var1);
+            try {
+                ref.setStatus(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7156,7 +10291,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7190,7 +10335,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7210,7 +10364,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getOrigin();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getOrigin();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7238,7 +10402,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrigin(var1);
+            try {
+                ref.setOrigin(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7258,7 +10431,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getDestination();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getDestination();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7286,7 +10469,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestination(var1);
+            try {
+                ref.setDestination(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7306,7 +10498,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getStartPos();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getStartPos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7334,7 +10536,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStartPos(var1);
+            try {
+                ref.setStartPos(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7354,7 +10565,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getTargetPos();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getTargetPos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7382,7 +10603,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTargetPos(var1);
+            try {
+                ref.setTargetPos(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7402,7 +10632,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
+            try {
+                ref.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback");
         
@@ -7410,7 +10641,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteSearched(com.amap.api.services.route.BusRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7435,7 +10668,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRouteSearched(com.amap.api.services.route.DriveRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7460,7 +10695,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteSearched(com.amap.api.services.route.WalkRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7485,7 +10722,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRideRouteSearched(com.amap.api.services.route.RideRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7508,6 +10747,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7527,7 +10774,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
+            try {
+                ref.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback");
         
@@ -7535,7 +10783,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onTruckRouteSearched(com.amap.api.services.route.TruckRouteRestult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7558,6 +10808,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7577,7 +10835,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
+            try {
+                ref.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback");
         
@@ -7585,7 +10844,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRoutePlanSearched(com.amap.api.services.route.DriveRoutePlanResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -7608,6 +10869,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7628,7 +10897,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.WalkRouteResult result = ref.calculateWalkRoute(var1);
+            com.amap.api.services.route.WalkRouteResult result;
+            try {
+                result = ref.calculateWalkRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7656,7 +10935,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateWalkRouteAsyn(var1);
+            try {
+                ref.calculateWalkRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7677,7 +10965,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.BusRouteResult result = ref.calculateBusRoute(var1);
+            com.amap.api.services.route.BusRouteResult result;
+            try {
+                result = ref.calculateBusRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7705,7 +11003,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateBusRouteAsyn(var1);
+            try {
+                ref.calculateBusRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7726,7 +11033,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DriveRouteResult result = ref.calculateDriveRoute(var1);
+            com.amap.api.services.route.DriveRouteResult result;
+            try {
+                result = ref.calculateDriveRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7754,7 +11071,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateDriveRouteAsyn(var1);
+            try {
+                ref.calculateDriveRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7775,7 +11101,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateRideRouteAsyn(var1);
+            try {
+                ref.calculateRideRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7796,7 +11131,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RideRouteResult result = ref.calculateRideRoute(var1);
+            com.amap.api.services.route.RideRouteResult result;
+            try {
+                result = ref.calculateRideRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7824,7 +11169,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.TruckRouteRestult result = ref.calculateTruckRoute(var1);
+            com.amap.api.services.route.TruckRouteRestult result;
+            try {
+                result = ref.calculateTruckRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7852,7 +11207,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateTruckRouteAsyn(var1);
+            try {
+                ref.calculateTruckRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7873,7 +11237,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DriveRoutePlanResult result = ref.calculateDrivePlan(var1);
+            com.amap.api.services.route.DriveRoutePlanResult result;
+            try {
+                result = ref.calculateDrivePlan(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7901,7 +11275,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateDrivePlanAsyn(var1);
+            try {
+                ref.calculateDrivePlanAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7921,7 +11304,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteBusWalkItem result = ref.getWalk();
+            com.amap.api.services.route.RouteBusWalkItem result;
+            try {
+                result = ref.getWalk();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -7949,7 +11342,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWalk(var1);
+            try {
+                ref.setWalk(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -7969,7 +11371,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RouteBusLineItem> result = ref.getBusLines();
+            List<com.amap.api.services.route.RouteBusLineItem> result;
+            try {
+                result = ref.getBusLines();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8003,7 +11415,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusLines(new ArrayList(var1));
+            try {
+                ref.setBusLines(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8023,7 +11444,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.Doorway result = ref.getEntrance();
+            com.amap.api.services.route.Doorway result;
+            try {
+                result = ref.getEntrance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8051,7 +11482,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setEntrance(var1);
+            try {
+                ref.setEntrance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8071,7 +11511,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.Doorway result = ref.getExit();
+            com.amap.api.services.route.Doorway result;
+            try {
+                result = ref.getExit();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8099,7 +11549,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setExit(var1);
+            try {
+                ref.setExit(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8119,7 +11578,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteRailwayItem result = ref.getRailway();
+            com.amap.api.services.route.RouteRailwayItem result;
+            try {
+                result = ref.getRailway();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8147,7 +11616,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRailway(var1);
+            try {
+                ref.setRailway(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8167,7 +11645,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.TaxiItem result = ref.getTaxi();
+            com.amap.api.services.route.TaxiItem result;
+            try {
+                result = ref.getTaxi();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8195,7 +11683,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTaxi(var1);
+            try {
+                ref.setTaxi(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8215,7 +11712,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getOrigin();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getOrigin();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8242,7 +11749,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getDestination();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getDestination();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8269,7 +11786,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8289,7 +11816,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8309,7 +11846,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getmSname();
+            String result;
+            try {
+                result = ref.getmSname();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8329,7 +11876,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getmTname();
+            String result;
+            try {
+                result = ref.getmTname();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8350,7 +11907,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrigin(var1);
+            try {
+                ref.setOrigin(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8371,7 +11937,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestination(var1);
+            try {
+                ref.setDestination(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8392,7 +11967,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8413,7 +11997,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8434,7 +12027,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSname(var1);
+            try {
+                ref.setSname(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8455,7 +12057,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTname(var1);
+            try {
+                ref.setTname(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8475,7 +12086,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTaxiCost();
+            float result;
+            try {
+                result = ref.getTaxiCost();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8496,7 +12117,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTaxiCost(new Double(var1).floatValue());
+            try {
+                ref.setTaxiCost(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8516,7 +12146,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.BusPath> result = ref.getPaths();
+            List<com.amap.api.services.route.BusPath> result;
+            try {
+                result = ref.getPaths();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8550,7 +12190,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPaths(new ArrayList(var1));
+            try {
+                ref.setPaths(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8570,7 +12219,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.BusRouteQuery result = ref.getBusQuery();
+            com.amap.api.services.route.RouteSearch.BusRouteQuery result;
+            try {
+                result = ref.getBusQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8598,7 +12257,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusQuery(var1);
+            try {
+                ref.setBusQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8618,7 +12286,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getStartPos();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getStartPos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8646,7 +12324,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStartPos(var1);
+            try {
+                ref.setStartPos(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8666,7 +12353,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getTargetPos();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getTargetPos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8694,7 +12391,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTargetPos(var1);
+            try {
+                ref.setTargetPos(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8717,7 +12423,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onDistanceSearched(var1, var2);
+            try {
+                ref.onDistanceSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8737,7 +12452,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCode();
+            String result;
+            try {
+                result = ref.getCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8757,7 +12482,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getCost();
+            float result;
+            try {
+                result = ref.getCost();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -8778,7 +12513,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTruckQuery(var1);
+            try {
+                ref.setTruckQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8803,7 +12547,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPaths(new ArrayList(var1));
+            try {
+                ref.setPaths(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8824,7 +12577,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStartPos(var1);
+            try {
+                ref.setStartPos(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8845,7 +12607,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTargetPos(var1);
+            try {
+                ref.setTargetPos(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -8865,7 +12636,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.TruckRouteQuery result = ref.getTruckQuery();
+            com.amap.api.services.route.RouteSearch.TruckRouteQuery result;
+            try {
+                result = ref.getTruckQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8892,7 +12673,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TruckPath> result = ref.getPaths();
+            List<com.amap.api.services.route.TruckPath> result;
+            try {
+                result = ref.getPaths();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8921,7 +12712,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getStartPos();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getStartPos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8948,7 +12749,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getTargetPos();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getTargetPos();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -8975,7 +12786,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.FromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9002,10 +12823,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.RideRouteQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.RideRouteQuery ref = (com.amap.api.services.route.RouteSearch.RideRouteQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.RideRouteQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.RideRouteQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getFromAndTo", (args, methodResult) -> {
@@ -9022,7 +12890,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.FromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9049,7 +12927,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9069,7 +12957,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getCarType();
+            int result;
+            try {
+                result = ref.getCarType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9089,7 +12987,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPassedByPoints();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPassedByPoints();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9102,26 +13010,6 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             } else {
                 methodResult.success(null);
             }
-        });
-        // method
-        put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidpolygons", (args, methodResult) -> {
-            // args
-        
-        
-            // ref
-            int refId = (int) args.get("refId");
-            com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
-        
-            // print log
-            if (getEnableLog()) {
-                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::getAvoidpolygons(" + "" + ")");
-            }
-        
-            // invoke native method
-            List<List<com.amap.api.services.core.LatLonPoint>> result = ref.getAvoidpolygons();
-        
-            // result
-            methodResult.success(new ArrayList());
         });
         // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::getAvoidRoad", (args, methodResult) -> {
@@ -9138,7 +13026,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAvoidRoad();
+            String result;
+            try {
+                result = ref.getAvoidRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9158,7 +13056,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPassedPointStr();
+            String result;
+            try {
+                result = ref.getPassedPointStr();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9178,7 +13086,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.hasPassPoint();
+            boolean result;
+            try {
+                result = ref.hasPassPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9198,7 +13116,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAvoidpolygonsStr();
+            String result;
+            try {
+                result = ref.getAvoidpolygonsStr();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9218,7 +13146,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.hasAvoidpolygons();
+            boolean result;
+            try {
+                result = ref.hasAvoidpolygons();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9238,10 +13176,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.hasAvoidRoad();
+            boolean result;
+            try {
+                result = ref.hasAvoidRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.DriveRouteQuery ref = (com.amap.api.services.route.RouteSearch.DriveRouteQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DriveRouteQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.DriveRouteQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.RouteSearch.DriveRouteQuery::isUseFerry", (args, methodResult) -> {
@@ -9258,7 +13243,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isUseFerry();
+            boolean result;
+            try {
+                result = ref.isUseFerry();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9279,7 +13274,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUseFerry(var1);
+            try {
+                ref.setUseFerry(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9300,7 +13304,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCarType(var1);
+            try {
+                ref.setCarType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9320,7 +13333,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTime();
+            String result;
+            try {
+                result = ref.getTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9340,7 +13363,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTrip();
+            String result;
+            try {
+                result = ref.getTrip();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9360,7 +13393,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9380,7 +13423,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getType();
+            String result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9400,7 +13453,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RailwayStationItem result = ref.getDeparturestop();
+            com.amap.api.services.route.RailwayStationItem result;
+            try {
+                result = ref.getDeparturestop();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9427,7 +13490,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RailwayStationItem result = ref.getArrivalstop();
+            com.amap.api.services.route.RailwayStationItem result;
+            try {
+                result = ref.getArrivalstop();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9454,7 +13527,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RailwayStationItem> result = ref.getViastops();
+            List<com.amap.api.services.route.RailwayStationItem> result;
+            try {
+                result = ref.getViastops();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9483,7 +13566,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.Railway> result = ref.getAlters();
+            List<com.amap.api.services.route.Railway> result;
+            try {
+                result = ref.getAlters();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9512,7 +13605,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RailwaySpace> result = ref.getSpaces();
+            List<com.amap.api.services.route.RailwaySpace> result;
+            try {
+                result = ref.getSpaces();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9542,7 +13645,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTime(var1);
+            try {
+                ref.setTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9563,7 +13675,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTrip(var1);
+            try {
+                ref.setTrip(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9584,7 +13705,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9605,7 +13735,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setType(var1);
+            try {
+                ref.setType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9626,7 +13765,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDeparturestop(var1);
+            try {
+                ref.setDeparturestop(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9647,7 +13795,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setArrivalstop(var1);
+            try {
+                ref.setArrivalstop(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9672,7 +13829,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setViastops(new ArrayList(var1));
+            try {
+                ref.setViastops(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9697,7 +13863,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAlters(new ArrayList(var1));
+            try {
+                ref.setAlters(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9722,7 +13897,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSpaces(new ArrayList(var1));
+            try {
+                ref.setSpaces(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9742,7 +13926,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getInstruction();
+            String result;
+            try {
+                result = ref.getInstruction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9763,7 +13957,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setInstruction(var1);
+            try {
+                ref.setInstruction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9783,7 +13986,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOrientation();
+            String result;
+            try {
+                result = ref.getOrientation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9804,7 +14017,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrientation(var1);
+            try {
+                ref.setOrientation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9824,7 +14046,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getRoad();
+            String result;
+            try {
+                result = ref.getRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9845,7 +14077,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoad(var1);
+            try {
+                ref.setRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9865,7 +14106,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9886,7 +14137,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9906,7 +14166,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -9927,7 +14197,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -9947,7 +14226,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -9981,7 +14270,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10001,7 +14299,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAction();
+            String result;
+            try {
+                result = ref.getAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10022,7 +14330,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAction(var1);
+            try {
+                ref.setAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10042,7 +14359,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAssistantAction();
+            String result;
+            try {
+                result = ref.getAssistantAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10063,7 +14390,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAssistantAction(var1);
+            try {
+                ref.setAssistantAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10083,7 +14419,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getID();
+            String result;
+            try {
+                result = ref.getID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10103,7 +14449,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10123,7 +14479,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLocation();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10150,7 +14516,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdcode();
+            String result;
+            try {
+                result = ref.getAdcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10170,7 +14546,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTime();
+            String result;
+            try {
+                result = ref.getTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10190,7 +14576,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isStart();
+            boolean result;
+            try {
+                result = ref.isStart();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10210,7 +14606,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isEnd();
+            boolean result;
+            try {
+                result = ref.isEnd();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10230,7 +14636,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getWait();
+            float result;
+            try {
+                result = ref.getWait();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10251,7 +14667,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setID(var1);
+            try {
+                ref.setID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10272,7 +14697,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10293,7 +14727,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLocation(var1);
+            try {
+                ref.setLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10314,7 +14757,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdcode(var1);
+            try {
+                ref.setAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10335,7 +14787,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTime(var1);
+            try {
+                ref.setTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10356,7 +14817,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setisStart(var1);
+            try {
+                ref.setisStart(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10377,7 +14847,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setisEnd(var1);
+            try {
+                ref.setisEnd(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10398,7 +14877,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWait(new Double(var1).floatValue());
+            try {
+                ref.setWait(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10418,7 +14906,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RidePath> result = ref.getPaths();
+            List<com.amap.api.services.route.RidePath> result;
+            try {
+                result = ref.getPaths();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10452,7 +14950,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPaths(new ArrayList(var1));
+            try {
+                ref.setPaths(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10472,7 +14979,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.RideRouteQuery result = ref.getRideQuery();
+            com.amap.api.services.route.RouteSearch.RideRouteQuery result;
+            try {
+                result = ref.getRideQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10500,7 +15017,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRideQuery(var1);
+            try {
+                ref.setRideQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10520,7 +15046,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getFrom();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getFrom();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10547,7 +15083,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getTo();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10574,7 +15120,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStartPoiID();
+            String result;
+            try {
+                result = ref.getStartPoiID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10595,7 +15151,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStartPoiID(var1);
+            try {
+                ref.setStartPoiID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10615,7 +15180,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDestinationPoiID();
+            String result;
+            try {
+                result = ref.getDestinationPoiID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10636,7 +15211,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestinationPoiID(var1);
+            try {
+                ref.setDestinationPoiID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10656,7 +15240,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOriginType();
+            String result;
+            try {
+                result = ref.getOriginType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10677,7 +15271,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOriginType(var1);
+            try {
+                ref.setOriginType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10697,7 +15300,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDestinationType();
+            String result;
+            try {
+                result = ref.getDestinationType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10718,7 +15331,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestinationType(var1);
+            try {
+                ref.setDestinationType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10738,7 +15360,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPlateProvince();
+            String result;
+            try {
+                result = ref.getPlateProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10759,7 +15391,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPlateProvince(var1);
+            try {
+                ref.setPlateProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10779,7 +15420,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPlateNumber();
+            String result;
+            try {
+                result = ref.getPlateNumber();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10800,10 +15451,56 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPlateNumber(var1);
+            try {
+                ref.setPlateNumber(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.FromAndTo::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.FromAndTo ref = (com.amap.api.services.route.RouteSearch.FromAndTo) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.FromAndTo@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.RidePath::getSteps", (args, methodResult) -> {
@@ -10820,7 +15517,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RideStep> result = ref.getSteps();
+            List<com.amap.api.services.route.RideStep> result;
+            try {
+                result = ref.getSteps();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10854,7 +15561,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSteps(new ArrayList(var1));
+            try {
+                ref.setSteps(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -10874,7 +15590,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.FromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -10901,7 +15627,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10921,7 +15657,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10941,7 +15687,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getNightFlag();
+            int result;
+            try {
+                result = ref.getNightFlag();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10961,7 +15717,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityd();
+            String result;
+            try {
+                result = ref.getCityd();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -10982,10 +15748,56 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityd(var1);
+            try {
+                ref.setCityd(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.BusRouteQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.BusRouteQuery ref = (com.amap.api.services.route.RouteSearch.BusRouteQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.BusRouteQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.BusRouteQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.RideStep::getInstruction", (args, methodResult) -> {
@@ -11002,7 +15814,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getInstruction();
+            String result;
+            try {
+                result = ref.getInstruction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11023,7 +15845,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setInstruction(var1);
+            try {
+                ref.setInstruction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11043,7 +15874,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOrientation();
+            String result;
+            try {
+                result = ref.getOrientation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11064,7 +15905,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrientation(var1);
+            try {
+                ref.setOrientation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11084,7 +15934,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getRoad();
+            String result;
+            try {
+                result = ref.getRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11105,7 +15965,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoad(var1);
+            try {
+                ref.setRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11125,7 +15994,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11146,7 +16025,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11166,7 +16054,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11187,7 +16085,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11207,7 +16114,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11241,7 +16158,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11261,7 +16187,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAction();
+            String result;
+            try {
+                result = ref.getAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11282,7 +16218,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAction(var1);
+            try {
+                ref.setAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11302,7 +16247,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAssistantAction();
+            String result;
+            try {
+                result = ref.getAssistantAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11323,7 +16278,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAssistantAction(var1);
+            try {
+                ref.setAssistantAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11343,7 +16307,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.District> result = ref.getDistricts();
+            List<com.amap.api.services.route.District> result;
+            try {
+                result = ref.getDistricts();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11377,7 +16351,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistricts(new ArrayList(var1));
+            try {
+                ref.setDistricts(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11400,7 +16383,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onBusRouteSearched(var1, var2);
+            try {
+                ref.onBusRouteSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11423,7 +16415,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onDriveRouteSearched(var1, var2);
+            try {
+                ref.onDriveRouteSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11446,7 +16447,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onWalkRouteSearched(var1, var2);
+            try {
+                ref.onWalkRouteSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11469,7 +16479,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onRideRouteSearched(var1, var2);
+            try {
+                ref.onRideRouteSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11490,7 +16509,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistanceQuery(var1);
+            try {
+                ref.setDistanceQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11510,7 +16538,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DistanceSearch.DistanceQuery result = ref.getDistanceQuery();
+            com.amap.api.services.route.DistanceSearch.DistanceQuery result;
+            try {
+                result = ref.getDistanceQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11537,7 +16575,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.DistanceItem> result = ref.getDistanceResults();
+            List<com.amap.api.services.route.DistanceItem> result;
+            try {
+                result = ref.getDistanceResults();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11571,7 +16619,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistanceResults(new ArrayList(var1));
+            try {
+                ref.setDistanceResults(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11591,7 +16648,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.FromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11618,10 +16685,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.WalkRouteQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.WalkRouteQuery ref = (com.amap.api.services.route.RouteSearch.WalkRouteQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.WalkRouteQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.WalkRouteQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.District::getDistrictName", (args, methodResult) -> {
@@ -11638,7 +16752,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDistrictName();
+            String result;
+            try {
+                result = ref.getDistrictName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11659,7 +16783,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrictName(var1);
+            try {
+                ref.setDistrictName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11679,7 +16812,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDistrictAdcode();
+            String result;
+            try {
+                result = ref.getDistrictAdcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11700,7 +16843,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrictAdcode(var1);
+            try {
+                ref.setDistrictAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11720,7 +16872,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.WalkPath> result = ref.getPaths();
+            List<com.amap.api.services.route.WalkPath> result;
+            try {
+                result = ref.getPaths();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11754,7 +16916,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPaths(new ArrayList(var1));
+            try {
+                ref.setPaths(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11774,7 +16945,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.WalkRouteQuery result = ref.getWalkQuery();
+            com.amap.api.services.route.RouteSearch.WalkRouteQuery result;
+            try {
+                result = ref.getWalkQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11802,10 +16983,56 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWalkQuery(var1);
+            try {
+                ref.setWalkQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.services.route.DistanceSearch.DistanceQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.DistanceSearch.DistanceQuery ref = (com.amap.api.services.route.DistanceSearch.DistanceQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.DistanceSearch.DistanceQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.DistanceSearch.DistanceQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.DistanceSearch.DistanceQuery::getType", (args, methodResult) -> {
@@ -11822,7 +17049,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getType();
+            int result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -11842,7 +17079,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getOrigins();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getOrigins();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11871,7 +17118,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getDestination();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getDestination();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -11899,7 +17156,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setType(var1);
+            try {
+                ref.setType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11924,7 +17190,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrigins(new ArrayList(var1));
+            try {
+                ref.setOrigins(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11945,7 +17220,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.addOrigins(var1);
+            try {
+                ref.addOrigins(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11966,7 +17250,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestination(var1);
+            try {
+                ref.setDestination(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -11986,7 +17279,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSearchCityName();
+            String result;
+            try {
+                result = ref.getSearchCityName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12007,7 +17310,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSearchCityName(var1);
+            try {
+                ref.setSearchCityName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12027,7 +17339,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSearchCitycode();
+            String result;
+            try {
+                result = ref.getSearchCitycode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12048,7 +17370,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSearchCitycode(var1);
+            try {
+                ref.setSearchCitycode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12068,7 +17399,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSearchCityAdCode();
+            String result;
+            try {
+                result = ref.getSearchCityAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12089,7 +17430,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSearchCityhAdCode(var1);
+            try {
+                ref.setSearchCityhAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12112,7 +17462,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onDriveRoutePlanSearched(var1, var2);
+            try {
+                ref.onDriveRoutePlanSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12132,7 +17491,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
+            try {
+                ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback");
         
@@ -12140,7 +17500,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistanceSearched(com.amap.api.services.route.DistanceResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -12163,6 +17525,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12183,7 +17553,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DistanceResult result = ref.calculateRouteDistance(var1);
+            com.amap.api.services.route.DistanceResult result;
+            try {
+                result = ref.calculateRouteDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12211,7 +17591,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateRouteDistanceAsyn(var1);
+            try {
+                ref.calculateRouteDistanceAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12231,7 +17620,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.WalkStep> result = ref.getSteps();
+            List<com.amap.api.services.route.WalkStep> result;
+            try {
+                result = ref.getSteps();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12265,7 +17664,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSteps(new ArrayList(var1));
+            try {
+                ref.setSteps(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12285,7 +17693,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationItem result = ref.getDepartureBusStation();
+            com.amap.api.services.busline.BusStationItem result;
+            try {
+                result = ref.getDepartureBusStation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12313,7 +17731,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDepartureBusStation(var1);
+            try {
+                ref.setDepartureBusStation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12333,7 +17760,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationItem result = ref.getArrivalBusStation();
+            com.amap.api.services.busline.BusStationItem result;
+            try {
+                result = ref.getArrivalBusStation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12361,7 +17798,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setArrivalBusStation(var1);
+            try {
+                ref.setArrivalBusStation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12381,7 +17827,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12415,7 +17871,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12435,7 +17900,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPassStationNum();
+            int result;
+            try {
+                result = ref.getPassStationNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12456,7 +17931,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPassStationNum(var1);
+            try {
+                ref.setPassStationNum(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12476,7 +17960,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.busline.BusStationItem> result = ref.getPassStations();
+            List<com.amap.api.services.busline.BusStationItem> result;
+            try {
+                result = ref.getPassStations();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12510,7 +18004,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPassStations(new ArrayList(var1));
+            try {
+                ref.setPassStations(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12530,7 +18033,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12551,7 +18064,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12571,7 +18093,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.FromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.route.RouteSearch.FromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12598,7 +18130,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDestParentPoiID();
+            String result;
+            try {
+                result = ref.getDestParentPoiID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12618,7 +18160,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12638,7 +18190,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getCarType();
+            int result;
+            try {
+                result = ref.getCarType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12658,7 +18220,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getFirstTime();
+            int result;
+            try {
+                result = ref.getFirstTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12678,7 +18250,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getInterval();
+            int result;
+            try {
+                result = ref.getInterval();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12698,10 +18280,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getCount();
+            int result;
+            try {
+                result = ref.getCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.route.RouteSearch.DrivePlanQuery@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.route.RouteSearch.DrivePlanQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::setDestParentPoiID", (args, methodResult) -> {
@@ -12719,7 +18348,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestParentPoiID(var1);
+            try {
+                ref.setDestParentPoiID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12740,7 +18378,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setMode(var1);
+            try {
+                ref.setMode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12761,7 +18408,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCarType(var1);
+            try {
+                ref.setCarType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12781,7 +18437,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getRoad();
+            String result;
+            try {
+                result = ref.getRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12802,7 +18468,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12822,7 +18497,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12843,7 +18528,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoad(var1);
+            try {
+                ref.setRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12863,7 +18557,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12884,7 +18588,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12904,7 +18617,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.getToll();
+            boolean result;
+            try {
+                result = ref.getToll();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -12925,7 +18648,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setToll(var1);
+            try {
+                ref.setToll(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12945,7 +18677,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -12979,7 +18721,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -12999,7 +18750,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            long result = ref.getStartTime();
+            long result;
+            try {
+                result = ref.getStartTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13020,7 +18781,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStartTime(var1);
+            try {
+                ref.setStartTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13040,7 +18810,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TimeInfosElement> result = ref.getElements();
+            List<com.amap.api.services.route.TimeInfosElement> result;
+            try {
+                result = ref.getElements();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -13074,7 +18854,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setElements(new ArrayList(var1));
+            try {
+                ref.setElements(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13094,7 +18883,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getInstruction();
+            String result;
+            try {
+                result = ref.getInstruction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13115,7 +18914,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setInstruction(var1);
+            try {
+                ref.setInstruction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13135,7 +18943,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOrientation();
+            String result;
+            try {
+                result = ref.getOrientation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13156,7 +18974,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrientation(var1);
+            try {
+                ref.setOrientation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13176,7 +19003,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getRoad();
+            String result;
+            try {
+                result = ref.getRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13197,7 +19034,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoad(var1);
+            try {
+                ref.setRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13217,7 +19063,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13238,7 +19094,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13258,7 +19123,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTolls();
+            float result;
+            try {
+                result = ref.getTolls();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13279,7 +19154,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(new Double(var1).floatValue());
+            try {
+                ref.setTolls(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13299,7 +19183,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTollDistance();
+            float result;
+            try {
+                result = ref.getTollDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13320,7 +19214,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(new Double(var1).floatValue());
+            try {
+                ref.setTollDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13340,7 +19243,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTollRoad();
+            String result;
+            try {
+                result = ref.getTollRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13361,7 +19274,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollRoad(var1);
+            try {
+                ref.setTollRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13381,7 +19303,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13402,7 +19334,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13422,7 +19363,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -13456,7 +19407,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13476,7 +19436,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAction();
+            String result;
+            try {
+                result = ref.getAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13497,7 +19467,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAction(var1);
+            try {
+                ref.setAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13517,7 +19496,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAssistantAction();
+            String result;
+            try {
+                result = ref.getAssistantAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13538,7 +19527,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAssistantAction(var1);
+            try {
+                ref.setAssistantAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13558,7 +19556,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RouteSearchCity> result = ref.getRouteSearchCityList();
+            List<com.amap.api.services.route.RouteSearchCity> result;
+            try {
+                result = ref.getRouteSearchCityList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -13592,7 +19600,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRouteSearchCityList(new ArrayList(var1));
+            try {
+                ref.setRouteSearchCityList(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13612,7 +19629,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TMC> result = ref.getTMCs();
+            List<com.amap.api.services.route.TMC> result;
+            try {
+                result = ref.getTMCs();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -13646,7 +19673,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTMCs(new ArrayList(var1));
+            try {
+                ref.setTMCs(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13667,7 +19703,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setInstruction(var1);
+            try {
+                ref.setInstruction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13688,7 +19733,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOrientation(var1);
+            try {
+                ref.setOrientation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13709,7 +19763,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoad(var1);
+            try {
+                ref.setRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13730,7 +19793,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(new Double(var1).floatValue());
+            try {
+                ref.setTolls(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13751,7 +19823,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13772,7 +19853,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(new Double(var1).floatValue());
+            try {
+                ref.setTollDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13793,7 +19883,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollRoad(var1);
+            try {
+                ref.setTollRoad(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13814,7 +19913,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13839,7 +19947,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPolyline(new ArrayList(var1));
+            try {
+                ref.setPolyline(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13860,7 +19977,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAction(var1);
+            try {
+                ref.setAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13881,7 +20007,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAssistantAction(var1);
+            try {
+                ref.setAssistantAction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13906,7 +20041,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRouteSearchCityList(new ArrayList(var1));
+            try {
+                ref.setRouteSearchCityList(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13931,7 +20075,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTMCs(new ArrayList(var1));
+            try {
+                ref.setTMCs(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -13951,7 +20104,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getInstruction();
+            String result;
+            try {
+                result = ref.getInstruction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13971,7 +20134,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getOrientation();
+            String result;
+            try {
+                result = ref.getOrientation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -13991,7 +20164,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getRoad();
+            String result;
+            try {
+                result = ref.getRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14011,7 +20194,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTolls();
+            float result;
+            try {
+                result = ref.getTolls();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14031,7 +20224,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14051,7 +20254,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTollDistance();
+            float result;
+            try {
+                result = ref.getTollDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14071,7 +20284,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTollRoad();
+            String result;
+            try {
+                result = ref.getTollRoad();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14091,7 +20314,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14111,7 +20344,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyline();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyline();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14140,7 +20383,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAction();
+            String result;
+            try {
+                result = ref.getAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14160,7 +20413,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAssistantAction();
+            String result;
+            try {
+                result = ref.getAssistantAction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14180,7 +20443,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.RouteSearchCity> result = ref.getRouteSearchCityList();
+            List<com.amap.api.services.route.RouteSearchCity> result;
+            try {
+                result = ref.getRouteSearchCityList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14209,7 +20482,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TMC> result = ref.getTMCs();
+            List<com.amap.api.services.route.TMC> result;
+            try {
+                result = ref.getTMCs();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14238,7 +20521,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTaxiCost();
+            float result;
+            try {
+                result = ref.getTaxiCost();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14259,7 +20552,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTaxiCost(new Double(var1).floatValue());
+            try {
+                ref.setTaxiCost(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14279,7 +20581,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.DrivePath> result = ref.getPaths();
+            List<com.amap.api.services.route.DrivePath> result;
+            try {
+                result = ref.getPaths();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14313,7 +20625,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPaths(new ArrayList(var1));
+            try {
+                ref.setPaths(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14333,7 +20654,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RouteSearch.DriveRouteQuery result = ref.getDriveQuery();
+            com.amap.api.services.route.RouteSearch.DriveRouteQuery result;
+            try {
+                result = ref.getDriveQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14361,7 +20692,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDriveQuery(var1);
+            try {
+                ref.setDriveQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14381,7 +20721,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStrategy();
+            String result;
+            try {
+                result = ref.getStrategy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14402,7 +20752,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStrategy(var1);
+            try {
+                ref.setStrategy(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14422,7 +20781,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTolls();
+            float result;
+            try {
+                result = ref.getTolls();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14443,7 +20812,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(new Double(var1).floatValue());
+            try {
+                ref.setTolls(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14463,7 +20841,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTollDistance();
+            float result;
+            try {
+                result = ref.getTollDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14484,7 +20872,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(new Double(var1).floatValue());
+            try {
+                ref.setTollDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14504,7 +20901,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getTotalTrafficlights();
+            int result;
+            try {
+                result = ref.getTotalTrafficlights();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14525,7 +20932,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTotalTrafficlights(var1);
+            try {
+                ref.setTotalTrafficlights(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14545,7 +20961,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.DriveStep> result = ref.getSteps();
+            List<com.amap.api.services.route.DriveStep> result;
+            try {
+                result = ref.getSteps();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14579,7 +21005,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSteps(new ArrayList(var1));
+            try {
+                ref.setSteps(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14599,7 +21034,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRestriction();
+            int result;
+            try {
+                result = ref.getRestriction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14620,7 +21065,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRestriction(var1);
+            try {
+                ref.setRestriction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14641,7 +21095,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14662,7 +21125,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1);
+            try {
+                ref.setDuration(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14683,7 +21155,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStrategy(var1);
+            try {
+                ref.setStrategy(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14704,7 +21185,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(new Double(var1).floatValue());
+            try {
+                ref.setTolls(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14725,7 +21215,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTollDistance(new Double(var1).floatValue());
+            try {
+                ref.setTollDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14746,7 +21245,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTotalTrafficlights(var1);
+            try {
+                ref.setTotalTrafficlights(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14767,7 +21275,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRestriction(var1);
+            try {
+                ref.setRestriction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14792,7 +21309,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSteps(new ArrayList(var1));
+            try {
+                ref.setSteps(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -14812,7 +21338,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14832,7 +21368,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            long result = ref.getDuration();
+            long result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14852,7 +21398,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStrategy();
+            String result;
+            try {
+                result = ref.getStrategy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14872,7 +21428,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTolls();
+            float result;
+            try {
+                result = ref.getTolls();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14892,7 +21458,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTollDistance();
+            float result;
+            try {
+                result = ref.getTollDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14912,7 +21488,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getTotalTrafficlights();
+            int result;
+            try {
+                result = ref.getTotalTrafficlights();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14932,7 +21518,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRestriction();
+            int result;
+            try {
+                result = ref.getRestriction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -14952,7 +21548,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TruckStep> result = ref.getSteps();
+            List<com.amap.api.services.route.TruckStep> result;
+            try {
+                result = ref.getSteps();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -14981,7 +21587,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15002,7 +21618,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15022,7 +21647,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -15050,7 +21685,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLonPoint(var1);
+            try {
+                ref.setLatLonPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15070,7 +21714,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15091,7 +21745,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15111,7 +21774,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTrafficLights();
+            float result;
+            try {
+                result = ref.getTrafficLights();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15132,7 +21805,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTrafficLights(var1);
+            try {
+                ref.setTrafficLights(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15152,7 +21834,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.DrivePlanStep> result = ref.getSteps();
+            List<com.amap.api.services.route.DrivePlanStep> result;
+            try {
+                result = ref.getSteps();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -15186,7 +21878,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSteps(new ArrayList(var1));
+            try {
+                ref.setSteps(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15206,7 +21907,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPathindex();
+            int result;
+            try {
+                result = ref.getPathindex();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15227,7 +21938,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPathindex(var1);
+            try {
+                ref.setPathindex(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15247,7 +21967,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15268,7 +21998,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15288,7 +22027,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getTolls();
+            float result;
+            try {
+                result = ref.getTolls();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15309,7 +22058,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTolls(new Double(var1).floatValue());
+            try {
+                ref.setTolls(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15329,7 +22087,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRestriction();
+            int result;
+            try {
+                result = ref.getRestriction();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15350,7 +22118,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRestriction(var1);
+            try {
+                ref.setRestriction(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15375,7 +22152,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTMCs(new ArrayList(var1));
+            try {
+                ref.setTMCs(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15395,7 +22181,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.route.TMC> result = ref.getTMCs();
+            List<com.amap.api.services.route.TMC> result;
+            try {
+                result = ref.getTMCs();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -15427,7 +22223,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onTruckRouteSearched(var1, var2);
+            try {
+                ref.onTruckRouteSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15447,7 +22252,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getOriginId();
+            int result;
+            try {
+                result = ref.getOriginId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15467,7 +22282,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDestId();
+            int result;
+            try {
+                result = ref.getDestId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15487,7 +22312,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15507,7 +22342,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15527,7 +22372,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getErrorInfo();
+            String result;
+            try {
+                result = ref.getErrorInfo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15547,7 +22402,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getErrorCode();
+            int result;
+            try {
+                result = ref.getErrorCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15568,7 +22433,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOriginId(var1);
+            try {
+                ref.setOriginId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15589,7 +22463,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDestId(var1);
+            try {
+                ref.setDestId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15610,7 +22493,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15631,7 +22523,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15652,7 +22553,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setErrorInfo(var1);
+            try {
+                ref.setErrorInfo(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15673,7 +22583,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setErrorCode(var1);
+            try {
+                ref.setErrorCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15693,7 +22612,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15714,7 +22643,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15734,7 +22672,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            long result = ref.getDuration();
+            long result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15755,7 +22703,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(var1);
+            try {
+                ref.setDuration(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15776,7 +22733,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setId(var1);
+            try {
+                ref.setId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15797,7 +22763,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15817,7 +22792,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15838,7 +22823,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15858,7 +22852,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getRoadWidth();
+            float result;
+            try {
+                result = ref.getRoadWidth();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15879,7 +22883,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoadWidth(new Double(var1).floatValue());
+            try {
+                ref.setRoadWidth(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15899,7 +22912,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getType();
+            String result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -15920,7 +22943,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setType(var1);
+            try {
+                ref.setType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15940,7 +22972,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenterPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getCenterPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -15968,7 +23010,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCenterPoint(var1);
+            try {
+                ref.setCenterPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -15988,7 +23039,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getId();
+            String result;
+            try {
+                result = ref.getId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16008,7 +23069,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16028,7 +23099,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16049,7 +23130,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16069,7 +23159,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDirection();
+            String result;
+            try {
+                result = ref.getDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16090,7 +23190,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDirection(var1);
+            try {
+                ref.setDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16110,7 +23219,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFirstRoadId();
+            String result;
+            try {
+                result = ref.getFirstRoadId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16131,7 +23250,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFirstRoadId(var1);
+            try {
+                ref.setFirstRoadId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16151,7 +23279,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFirstRoadName();
+            String result;
+            try {
+                result = ref.getFirstRoadName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16172,7 +23310,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFirstRoadName(var1);
+            try {
+                ref.setFirstRoadName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16192,7 +23339,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSecondRoadId();
+            String result;
+            try {
+                result = ref.getSecondRoadId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16213,7 +23370,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSecondRoadId(var1);
+            try {
+                ref.setSecondRoadId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16233,7 +23399,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSecondRoadName();
+            String result;
+            try {
+                result = ref.getSecondRoadName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16254,7 +23430,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSecondRoadName(var1);
+            try {
+                ref.setSecondRoadName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16275,7 +23460,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onUserInfoCleared(var1);
+            try {
+                ref.onUserInfoCleared(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16298,7 +23492,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onNearbyInfoSearched(var1, var2);
+            try {
+                ref.onNearbyInfoSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16319,7 +23522,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onNearbyInfoUploaded(var1);
+            try {
+                ref.onNearbyInfoUploaded(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16339,7 +23551,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.nearby.UploadInfo result = ref.OnUploadInfoCallback();
+            com.amap.api.services.nearby.UploadInfo result;
+            try {
+                result = ref.OnUploadInfoCallback();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -16367,7 +23589,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUserID(var1);
+            try {
+                ref.setUserID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16387,7 +23618,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getUserID();
+            String result;
+            try {
+                result = ref.getUserID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16407,7 +23648,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -16435,7 +23686,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoint(var1);
+            try {
+                ref.setPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16456,7 +23716,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTimeStamp(var1);
+            try {
+                ref.setTimeStamp(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16476,7 +23745,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            long result = ref.getTimeStamp();
+            long result;
+            try {
+                result = ref.getTimeStamp();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16497,7 +23776,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1);
+            try {
+                ref.setDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16517,7 +23805,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDistance();
+            int result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16538,7 +23836,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDrivingDistance(var1);
+            try {
+                ref.setDrivingDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16558,7 +23865,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDrivingDistance();
+            int result;
+            try {
+                result = ref.getDrivingDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16579,7 +23896,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoint(var1);
+            try {
+                ref.setPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16599,7 +23925,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -16627,7 +23963,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUserID(var1);
+            try {
+                ref.setUserID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16647,7 +23992,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getUserID();
+            String result;
+            try {
+                result = ref.getUserID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16667,7 +24022,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getCoordType();
+            int result;
+            try {
+                result = ref.getCoordType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -16688,7 +24053,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCoordType(var1);
+            try {
+                ref.setCoordType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16708,7 +24082,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.nearby.NearbySearch result = com.amap.api.services.nearby.NearbySearch.getInstance(var0);
+            com.amap.api.services.nearby.NearbySearch result;
+            try {
+                result = com.amap.api.services.nearby.NearbySearch.getInstance(var0);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -16735,7 +24119,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
+            try {
+                ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback");
         
@@ -16743,7 +24128,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -16764,7 +24151,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -16789,7 +24178,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -16808,6 +24199,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16827,7 +24226,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
+            try {
+                ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback");
         
@@ -16835,7 +24235,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -16856,7 +24258,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -16881,7 +24285,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -16900,6 +24306,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16919,7 +24333,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.clearUserInfoAsyn();
+            try {
+                ref.clearUserInfoAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16940,7 +24363,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUserID(var1);
+            try {
+                ref.setUserID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -16961,7 +24393,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
+            try {
+                ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback");
         
@@ -16969,7 +24402,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public com.amap.api.services.nearby.UploadInfo OnUploadInfoCallback() {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: OnUploadInfoCallback(" + "" + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: OnUploadInfoCallback(" + "" + ")");
+                    }
         
                     // convert to jsonable data
         
@@ -16987,6 +24422,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             }, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17006,7 +24449,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.stopUploadNearbyInfoAuto();
+            try {
+                ref.stopUploadNearbyInfoAuto();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17027,7 +24479,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.uploadNearbyInfoAsyn(var1);
+            try {
+                ref.uploadNearbyInfoAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17048,7 +24509,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchNearbyInfoAsyn(var1);
+            try {
+                ref.searchNearbyInfoAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17069,7 +24539,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.nearby.NearbySearchResult result = ref.searchNearbyInfo(var1);
+            com.amap.api.services.nearby.NearbySearchResult result;
+            try {
+                result = ref.searchNearbyInfo(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17095,7 +24575,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.nearby.NearbySearch.destroy();
+            try {
+                com.amap.api.services.nearby.NearbySearch.destroy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17115,7 +24604,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.nearby.NearbyInfo> result = ref.getNearbyInfoList();
+            List<com.amap.api.services.nearby.NearbyInfo> result;
+            try {
+                result = ref.getNearbyInfoList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17144,7 +24643,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getTotalNum();
+            int result;
+            try {
+                result = ref.getTotalNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17169,7 +24678,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNearbyInfoList(new ArrayList(var1));
+            try {
+                ref.setNearbyInfoList(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17190,7 +24708,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCenterPoint(var1);
+            try {
+                ref.setCenterPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17210,7 +24737,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenterPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getCenterPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17237,7 +24774,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRadius();
+            int result;
+            try {
+                result = ref.getRadius();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17258,7 +24805,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRadius(var1);
+            try {
+                ref.setRadius(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17279,7 +24835,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setType(var1);
+            try {
+                ref.setType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17299,7 +24864,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getType();
+            int result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17320,7 +24895,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCoordType(var1);
+            try {
+                ref.setCoordType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17340,7 +24924,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getCoordType();
+            int result;
+            try {
+                result = ref.getCoordType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17361,7 +24955,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTimeRange(var1);
+            try {
+                ref.setTimeRange(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17381,7 +24984,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getTimeRange();
+            int result;
+            try {
+                result = ref.getTimeRange();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17401,7 +25014,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getID();
+            String result;
+            try {
+                result = ref.getID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17422,7 +25045,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setID(var1);
+            try {
+                ref.setID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17442,7 +25074,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTitle();
+            String result;
+            try {
+                result = ref.getTitle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17463,7 +25105,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTitle(var1);
+            try {
+                ref.setTitle(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17483,7 +25134,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17511,7 +25172,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoint(var1);
+            try {
+                ref.setPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17531,7 +25201,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17552,7 +25232,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17572,7 +25261,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDuration();
+            float result;
+            try {
+                result = ref.getDuration();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17593,7 +25292,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDuration(new Double(var1).floatValue());
+            try {
+                ref.setDuration(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17613,7 +25321,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoiSearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
+            try {
+                ref.setPoiSearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback");
         
@@ -17621,7 +25330,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoutePoiSearched(com.amap.api.services.routepoisearch.RoutePOISearchResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -17644,6 +25355,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17664,7 +25383,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17684,7 +25412,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchRoutePOIAsyn();
+            try {
+                ref.searchRoutePOIAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17704,7 +25441,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.routepoisearch.RoutePOISearchResult result = ref.searchRoutePOI();
+            com.amap.api.services.routepoisearch.RoutePOISearchResult result;
+            try {
+                result = ref.searchRoutePOI();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17731,7 +25478,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.routepoisearch.RoutePOIItem> result = ref.getRoutePois();
+            List<com.amap.api.services.routepoisearch.RoutePOIItem> result;
+            try {
+                result = ref.getRoutePois();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17760,7 +25517,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.routepoisearch.RoutePOISearchQuery result = ref.getQuery();
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17790,7 +25557,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onRoutePoiSearched(var1, var2);
+            try {
+                ref.onRoutePoiSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -17810,7 +25586,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getFrom();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getFrom();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17837,7 +25623,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getTo();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17864,7 +25660,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getMode();
+            int result;
+            try {
+                result = ref.getMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17884,7 +25690,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType result = ref.getSearchType();
+            com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType result;
+            try {
+                result = ref.getSearchType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17911,7 +25727,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRange();
+            int result;
+            try {
+                result = ref.getRange();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -17931,7 +25757,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolylines();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolylines();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17960,7 +25796,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.routepoisearch.RoutePOISearchQuery result = ref.clone();
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -17987,7 +25833,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getID();
+            String result;
+            try {
+                result = ref.getID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18007,7 +25863,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDistance();
+            int result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18028,7 +25894,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(var1);
+            try {
+                ref.setDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18048,7 +25923,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTitle();
+            String result;
+            try {
+                result = ref.getTitle();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18068,7 +25953,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getSnippet();
+            String result;
+            try {
+                result = ref.getSnippet();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18088,7 +25983,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18115,7 +26020,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCreatetime();
+            String result;
+            try {
+                result = ref.getCreatetime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18136,7 +26051,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCreatetime(var1);
+            try {
+                ref.setCreatetime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18156,7 +26080,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getUpdatetime();
+            String result;
+            try {
+                result = ref.getUpdatetime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18177,7 +26111,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUpdatetime(var1);
+            try {
+                ref.setUpdatetime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18197,7 +26140,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.cloud.CloudImage> result = ref.getCloudImage();
+            List<com.amap.api.services.cloud.CloudImage> result;
+            try {
+                result = ref.getCloudImage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18231,7 +26184,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setmCloudImage(new ArrayList(var1));
+            try {
+                ref.setmCloudImage(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18251,7 +26213,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getQueryString();
+            String result;
+            try {
+                result = ref.getQueryString();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18272,7 +26244,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTableID(var1);
+            try {
+                ref.setTableID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18292,7 +26273,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTableID();
+            String result;
+            try {
+                result = ref.getTableID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18312,7 +26303,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageNum();
+            int result;
+            try {
+                result = ref.getPageNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18333,7 +26334,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageNum(var1);
+            try {
+                ref.setPageNum(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18354,7 +26364,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageSize(var1);
+            try {
+                ref.setPageSize(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18374,7 +26393,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageSize();
+            int result;
+            try {
+                result = ref.getPageSize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18395,7 +26424,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBound(var1);
+            try {
+                ref.setBound(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18415,7 +26453,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.cloud.CloudSearch.SearchBound result = ref.getBound();
+            com.amap.api.services.cloud.CloudSearch.SearchBound result;
+            try {
+                result = ref.getBound();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18445,7 +26493,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.addFilterString(var1, var2);
+            try {
+                ref.addFilterString(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18465,7 +26522,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFilterString();
+            String result;
+            try {
+                result = ref.getFilterString();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18490,7 +26557,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.addFilterNum(var1, var2, var3);
+            try {
+                ref.addFilterNum(var1, var2, var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18510,7 +26586,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFilterNumString();
+            String result;
+            try {
+                result = ref.getFilterNumString();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18531,7 +26617,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSortingrules(var1);
+            try {
+                ref.setSortingrules(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18551,7 +26646,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.cloud.CloudSearch.Sortingrules result = ref.getSortingrules();
+            com.amap.api.services.cloud.CloudSearch.Sortingrules result;
+            try {
+                result = ref.getSortingrules();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18579,10 +26684,57 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.queryEquals(var1);
+            boolean result;
+            try {
+                result = ref.queryEquals(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
+        });
+        // method
+        put("com.amap.api.services.cloud.CloudSearch.Query::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.cloud.CloudSearch.Query ref = (com.amap.api.services.cloud.CloudSearch.Query) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.Query@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.cloud.CloudSearch.Query result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
+            } else {
+                methodResult.success(null);
+            }
         });
         // method
         put("com.amap.api.services.cloud.CloudResult::createPagedResult", (args, methodResult) -> {
@@ -18611,7 +26763,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.cloud.CloudResult result = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, new ArrayList(var4));
+            com.amap.api.services.cloud.CloudResult result;
+            try {
+                result = com.amap.api.services.cloud.CloudResult.createPagedResult(var0, var1, var2, var3, new ArrayList(var4));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18638,7 +26800,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageCount();
+            int result;
+            try {
+                result = ref.getPageCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18658,7 +26830,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.cloud.CloudSearch.Query result = ref.getQuery();
+            com.amap.api.services.cloud.CloudSearch.Query result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18685,7 +26867,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.cloud.CloudSearch.SearchBound result = ref.getBound();
+            com.amap.api.services.cloud.CloudSearch.SearchBound result;
+            try {
+                result = ref.getBound();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18712,7 +26904,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.cloud.CloudItem> result = ref.getClouds();
+            List<com.amap.api.services.cloud.CloudItem> result;
+            try {
+                result = ref.getClouds();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18741,7 +26943,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getTotalCount();
+            int result;
+            try {
+                result = ref.getTotalCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18761,7 +26973,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnCloudSearchListener(new com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener() {
+            try {
+                ref.setOnCloudSearchListener(new com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener::Callback");
         
@@ -18769,7 +26982,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudSearched(com.amap.api.services.cloud.CloudResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -18794,7 +27009,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudItemDetailSearched(com.amap.api.services.cloud.CloudItemDetail var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -18817,6 +27034,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18837,7 +27062,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchCloudAsyn(var1);
+            try {
+                ref.searchCloudAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18860,7 +27094,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchCloudDetailAsyn(var1, var2);
+            try {
+                ref.searchCloudDetailAsyn(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -18880,7 +27123,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLowerLeft();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLowerLeft();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18907,7 +27160,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getUpperRight();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getUpperRight();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18934,7 +27197,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenter();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getCenter();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -18961,7 +27234,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getRange();
+            int result;
+            try {
+                result = ref.getRange();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -18981,7 +27264,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getShape();
+            String result;
+            try {
+                result = ref.getShape();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19001,7 +27294,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19021,7 +27324,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.LatLonPoint> result = ref.getPolyGonList();
+            List<com.amap.api.services.core.LatLonPoint> result;
+            try {
+                result = ref.getPolyGonList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -19031,6 +27344,43 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                     resultRefIdList.add(item.hashCode());
                 }
                 methodResult.success(resultRefIdList);
+            } else {
+                methodResult.success(null);
+            }
+        });
+        // method
+        put("com.amap.api.services.cloud.CloudSearch.SearchBound::clone", (args, methodResult) -> {
+            // args
+        
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.cloud.CloudSearch.SearchBound ref = (com.amap.api.services.cloud.CloudSearch.SearchBound) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudSearch.SearchBound@" + refId + "::clone(" + "" + ")");
+            }
+        
+            // invoke native method
+            com.amap.api.services.cloud.CloudSearch.SearchBound result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            if (result != null) {
+                int returnRefId = result.hashCode();
+                getHEAP().put(returnRefId, result);
+        
+                methodResult.success(returnRefId);
             } else {
                 methodResult.success(null);
             }
@@ -19050,7 +27400,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getId();
+            String result;
+            try {
+                result = ref.getId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19071,7 +27431,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setId(var1);
+            try {
+                ref.setId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19091,7 +27460,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPreurl();
+            String result;
+            try {
+                result = ref.getPreurl();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19112,7 +27491,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPreurl(var1);
+            try {
+                ref.setPreurl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19132,7 +27520,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getUrl();
+            String result;
+            try {
+                result = ref.getUrl();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19153,7 +27551,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUrl(var1);
+            try {
+                ref.setUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19176,7 +27583,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onCloudSearched(var1, var2);
+            try {
+                ref.onCloudSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19199,7 +27615,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onCloudItemDetailSearched(var1, var2);
+            try {
+                ref.onCloudItemDetailSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19219,7 +27644,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDate();
+            String result;
+            try {
+                result = ref.getDate();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19240,7 +27675,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDate(var1);
+            try {
+                ref.setDate(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19260,7 +27704,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getWeek();
+            String result;
+            try {
+                result = ref.getWeek();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19281,7 +27735,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWeek(var1);
+            try {
+                ref.setWeek(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19301,7 +27764,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDayWeather();
+            String result;
+            try {
+                result = ref.getDayWeather();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19322,7 +27795,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDayWeather(var1);
+            try {
+                ref.setDayWeather(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19342,7 +27824,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNightWeather();
+            String result;
+            try {
+                result = ref.getNightWeather();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19363,7 +27855,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNightWeather(var1);
+            try {
+                ref.setNightWeather(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19383,7 +27884,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDayTemp();
+            String result;
+            try {
+                result = ref.getDayTemp();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19404,7 +27915,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDayTemp(var1);
+            try {
+                ref.setDayTemp(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19424,7 +27944,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNightTemp();
+            String result;
+            try {
+                result = ref.getNightTemp();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19445,7 +27975,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNightTemp(var1);
+            try {
+                ref.setNightTemp(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19465,7 +28004,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDayWindDirection();
+            String result;
+            try {
+                result = ref.getDayWindDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19486,7 +28035,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDayWindDirection(var1);
+            try {
+                ref.setDayWindDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19506,7 +28064,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNightWindDirection();
+            String result;
+            try {
+                result = ref.getNightWindDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19527,7 +28095,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNightWindDirection(var1);
+            try {
+                ref.setNightWindDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19547,7 +28124,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDayWindPower();
+            String result;
+            try {
+                result = ref.getDayWindPower();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19568,7 +28155,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDayWindPower(var1);
+            try {
+                ref.setDayWindPower(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19588,7 +28184,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNightWindPower();
+            String result;
+            try {
+                result = ref.getNightWindPower();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19609,7 +28215,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNightWindPower(var1);
+            try {
+                ref.setNightWindPower(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19629,7 +28244,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19649,7 +28274,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getType();
+            int result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19669,7 +28304,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.WeatherSearchQuery result = ref.clone();
+            com.amap.api.services.weather.WeatherSearchQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -19699,7 +28344,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onWeatherLiveSearched(var1, var2);
+            try {
+                ref.onWeatherLiveSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19722,7 +28376,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onWeatherForecastSearched(var1, var2);
+            try {
+                ref.onWeatherForecastSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19744,7 +28407,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.LocalWeatherForecastResult result = com.amap.api.services.weather.LocalWeatherForecastResult.createPagedResult(var0, var1);
+            com.amap.api.services.weather.LocalWeatherForecastResult result;
+            try {
+                result = com.amap.api.services.weather.LocalWeatherForecastResult.createPagedResult(var0, var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -19771,7 +28444,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.WeatherSearchQuery result = ref.getWeatherForecastQuery();
+            com.amap.api.services.weather.WeatherSearchQuery result;
+            try {
+                result = ref.getWeatherForecastQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -19798,7 +28481,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.LocalWeatherForecast result = ref.getForecastResult();
+            com.amap.api.services.weather.LocalWeatherForecast result;
+            try {
+                result = ref.getForecastResult();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -19825,7 +28518,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getProvince();
+            String result;
+            try {
+                result = ref.getProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19846,7 +28549,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProvince(var1);
+            try {
+                ref.setProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19866,7 +28578,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19887,7 +28609,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19907,7 +28638,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19928,7 +28669,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19948,7 +28698,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getReportTime();
+            String result;
+            try {
+                result = ref.getReportTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -19969,7 +28729,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setReportTime(var1);
+            try {
+                ref.setReportTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -19989,7 +28758,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.weather.LocalDayWeatherForecast> result = ref.getWeatherForecast();
+            List<com.amap.api.services.weather.LocalDayWeatherForecast> result;
+            try {
+                result = ref.getWeatherForecast();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20023,7 +28802,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWeatherForecast(new ArrayList(var1));
+            try {
+                ref.setWeatherForecast(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20043,7 +28831,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.WeatherSearchQuery result = ref.getQuery();
+            com.amap.api.services.weather.WeatherSearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20071,7 +28869,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20091,7 +28898,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchWeatherAsyn();
+            try {
+                ref.searchWeatherAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20111,7 +28927,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnWeatherSearchListener(new com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener() {
+            try {
+                ref.setOnWeatherSearchListener(new com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback");
         
@@ -20119,7 +28936,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherLiveSearched(com.amap.api.services.weather.LocalWeatherLiveResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -20144,7 +28963,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherForecastSearched(com.amap.api.services.weather.LocalWeatherForecastResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -20167,6 +28988,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20186,7 +29015,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getProvince();
+            String result;
+            try {
+                result = ref.getProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20206,7 +29045,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20226,7 +29075,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20246,7 +29105,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getWeather();
+            String result;
+            try {
+                result = ref.getWeather();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20266,7 +29135,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTemperature();
+            String result;
+            try {
+                result = ref.getTemperature();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20286,7 +29165,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getWindDirection();
+            String result;
+            try {
+                result = ref.getWindDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20306,7 +29195,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getWindPower();
+            String result;
+            try {
+                result = ref.getWindPower();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20326,7 +29225,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getHumidity();
+            String result;
+            try {
+                result = ref.getHumidity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20346,7 +29255,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getReportTime();
+            String result;
+            try {
+                result = ref.getReportTime();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20367,7 +29286,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProvince(var1);
+            try {
+                ref.setProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20388,7 +29316,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20409,7 +29346,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20430,7 +29376,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWeather(var1);
+            try {
+                ref.setWeather(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20451,7 +29406,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTemperature(var1);
+            try {
+                ref.setTemperature(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20472,7 +29436,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWindDirection(var1);
+            try {
+                ref.setWindDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20493,7 +29466,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setWindPower(var1);
+            try {
+                ref.setWindPower(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20514,7 +29496,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setHumidity(var1);
+            try {
+                ref.setHumidity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20535,7 +29526,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setReportTime(var1);
+            try {
+                ref.setReportTime(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20557,7 +29557,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.LocalWeatherLiveResult result = com.amap.api.services.weather.LocalWeatherLiveResult.createPagedResult(var0, var1);
+            com.amap.api.services.weather.LocalWeatherLiveResult result;
+            try {
+                result = com.amap.api.services.weather.LocalWeatherLiveResult.createPagedResult(var0, var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20584,7 +29594,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.WeatherSearchQuery result = ref.getWeatherLiveQuery();
+            com.amap.api.services.weather.WeatherSearchQuery result;
+            try {
+                result = ref.getWeatherLiveQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20611,7 +29631,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.LocalWeatherLive result = ref.getLiveResult();
+            com.amap.api.services.weather.LocalWeatherLive result;
+            try {
+                result = ref.getLiveResult();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20638,7 +29668,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenterPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getCenterPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20666,7 +29706,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCenterPoint(var1);
+            try {
+                ref.setCenterPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20686,7 +29735,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20707,7 +29766,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20727,7 +29795,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLocationName();
+            String result;
+            try {
+                result = ref.getLocationName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20748,7 +29826,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLocationName(var1);
+            try {
+                ref.setLocationName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20768,7 +29855,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -20789,7 +29886,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20810,7 +29916,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.geocoder.RegeocodeAddress result = ref.getFromLocation(var1);
+            com.amap.api.services.geocoder.RegeocodeAddress result;
+            try {
+                result = ref.getFromLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20838,7 +29954,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.geocoder.GeocodeAddress> result = ref.getFromLocationName(var1);
+            List<com.amap.api.services.geocoder.GeocodeAddress> result;
+            try {
+                result = ref.getFromLocationName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -20867,7 +29993,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnGeocodeSearchListener(new com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener() {
+            try {
+                ref.setOnGeocodeSearchListener(new com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener::Callback");
         
@@ -20875,7 +30002,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRegeocodeSearched(com.amap.api.services.geocoder.RegeocodeResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -20900,7 +30029,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGeocodeSearched(com.amap.api.services.geocoder.GeocodeResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -20923,6 +30054,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20943,7 +30082,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.getFromLocationAsyn(var1);
+            try {
+                ref.getFromLocationAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20964,7 +30112,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.getFromLocationNameAsyn(var1);
+            try {
+                ref.getFromLocationNameAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -20984,7 +30141,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.geocoder.RegeocodeQuery result = ref.getRegeocodeQuery();
+            com.amap.api.services.geocoder.RegeocodeQuery result;
+            try {
+                result = ref.getRegeocodeQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -21012,7 +30179,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRegeocodeQuery(var1);
+            try {
+                ref.setRegeocodeQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21032,7 +30208,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.geocoder.RegeocodeAddress result = ref.getRegeocodeAddress();
+            com.amap.api.services.geocoder.RegeocodeAddress result;
+            try {
+                result = ref.getRegeocodeAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -21060,7 +30246,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRegeocodeAddress(var1);
+            try {
+                ref.setRegeocodeAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21080,7 +30275,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.geocoder.GeocodeQuery result = ref.getGeocodeQuery();
+            com.amap.api.services.geocoder.GeocodeQuery result;
+            try {
+                result = ref.getGeocodeQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -21108,7 +30313,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setGeocodeQuery(var1);
+            try {
+                ref.setGeocodeQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21128,7 +30342,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.geocoder.GeocodeAddress> result = ref.getGeocodeAddressList();
+            List<com.amap.api.services.geocoder.GeocodeAddress> result;
+            try {
+                result = ref.getGeocodeAddressList();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -21162,7 +30386,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setGeocodeAddressList(new ArrayList(var1));
+            try {
+                ref.setGeocodeAddressList(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21182,7 +30415,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAoiId();
+            String result;
+            try {
+                result = ref.getAoiId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21202,7 +30445,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAoiName();
+            String result;
+            try {
+                result = ref.getAoiName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21222,7 +30475,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21242,7 +30505,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getAoiCenterPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getAoiCenterPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -21269,7 +30542,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            Float result = ref.getAoiArea();
+            Float result;
+            try {
+                result = ref.getAoiArea();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21290,7 +30573,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setId(var1);
+            try {
+                ref.setId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21311,7 +30603,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21332,7 +30633,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdcode(var1);
+            try {
+                ref.setAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21353,7 +30663,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLocation(var1);
+            try {
+                ref.setLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21374,7 +30693,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setArea(new Double(var1).floatValue());
+            try {
+                ref.setArea(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21397,7 +30725,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onRegeocodeSearched(var1, var2);
+            try {
+                ref.onRegeocodeSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21420,7 +30757,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onGeocodeSearched(var1, var2);
+            try {
+                ref.onGeocodeSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21440,7 +30786,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getId();
+            String result;
+            try {
+                result = ref.getId();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21461,7 +30817,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setId(var1);
+            try {
+                ref.setId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21481,7 +30846,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21502,7 +30877,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21522,7 +30906,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21543,7 +30937,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21563,7 +30966,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDirection();
+            String result;
+            try {
+                result = ref.getDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21584,7 +30997,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDirection(var1);
+            try {
+                ref.setDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21604,7 +31026,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLngPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLngPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -21632,7 +31064,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLngPoint(var1);
+            try {
+                ref.setLatLngPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21652,7 +31093,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFormatAddress();
+            String result;
+            try {
+                result = ref.getFormatAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21673,7 +31124,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFormatAddress(var1);
+            try {
+                ref.setFormatAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21693,7 +31153,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getProvince();
+            String result;
+            try {
+                result = ref.getProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21714,7 +31184,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProvince(var1);
+            try {
+                ref.setProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21734,7 +31213,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21755,7 +31244,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21775,7 +31273,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDistrict();
+            String result;
+            try {
+                result = ref.getDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21796,7 +31304,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrict(var1);
+            try {
+                ref.setDistrict(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21816,7 +31333,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTownship();
+            String result;
+            try {
+                result = ref.getTownship();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21837,7 +31364,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTownship(var1);
+            try {
+                ref.setTownship(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21857,7 +31393,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNeighborhood();
+            String result;
+            try {
+                result = ref.getNeighborhood();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21878,7 +31424,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNeighborhood(var1);
+            try {
+                ref.setNeighborhood(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21898,7 +31453,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBuilding();
+            String result;
+            try {
+                result = ref.getBuilding();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21919,7 +31484,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBuilding(var1);
+            try {
+                ref.setBuilding(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21939,7 +31513,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdcode();
+            String result;
+            try {
+                result = ref.getAdcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -21960,7 +31544,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdcode(var1);
+            try {
+                ref.setAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -21980,7 +31573,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -22008,7 +31611,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLonPoint(var1);
+            try {
+                ref.setLatLonPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22028,7 +31640,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLevel();
+            String result;
+            try {
+                result = ref.getLevel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22049,7 +31671,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLevel(var1);
+            try {
+                ref.setLevel(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22069,7 +31700,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -22097,7 +31738,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoint(var1);
+            try {
+                ref.setPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22117,7 +31767,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getRadius();
+            float result;
+            try {
+                result = ref.getRadius();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22138,7 +31798,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRadius(new Double(var1).floatValue());
+            try {
+                ref.setRadius(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22158,7 +31827,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLatLonType();
+            String result;
+            try {
+                result = ref.getLatLonType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22179,7 +31858,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLonType(var1);
+            try {
+                ref.setLatLonType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22199,7 +31887,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPoiType();
+            String result;
+            try {
+                result = ref.getPoiType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22220,7 +31918,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPoiType(var1);
+            try {
+                ref.setPoiType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22240,7 +31947,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getStreet();
+            String result;
+            try {
+                result = ref.getStreet();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22261,7 +31978,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStreet(var1);
+            try {
+                ref.setStreet(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22281,7 +32007,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNumber();
+            String result;
+            try {
+                result = ref.getNumber();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22302,7 +32038,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNumber(var1);
+            try {
+                ref.setNumber(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22322,7 +32067,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLatLonPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLatLonPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -22350,7 +32105,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLatLonPoint(var1);
+            try {
+                ref.setLatLonPoint(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22370,7 +32134,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDirection();
+            String result;
+            try {
+                result = ref.getDirection();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22391,7 +32165,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDirection(var1);
+            try {
+                ref.setDirection(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22411,7 +32194,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            float result = ref.getDistance();
+            float result;
+            try {
+                result = ref.getDistance();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22432,7 +32225,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistance(new Double(var1).floatValue());
+            try {
+                ref.setDistance(new Double(var1).floatValue());
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22452,7 +32254,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFormatAddress();
+            String result;
+            try {
+                result = ref.getFormatAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22473,7 +32285,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFormatAddress(var1);
+            try {
+                ref.setFormatAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22493,7 +32314,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getProvince();
+            String result;
+            try {
+                result = ref.getProvince();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22514,7 +32345,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setProvince(var1);
+            try {
+                ref.setProvince(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22534,7 +32374,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22555,7 +32405,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCity(var1);
+            try {
+                ref.setCity(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22575,7 +32434,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCityCode();
+            String result;
+            try {
+                result = ref.getCityCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22596,7 +32465,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityCode(var1);
+            try {
+                ref.setCityCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22616,7 +32494,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdCode();
+            String result;
+            try {
+                result = ref.getAdCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22637,7 +32525,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdCode(var1);
+            try {
+                ref.setAdCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22657,7 +32554,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDistrict();
+            String result;
+            try {
+                result = ref.getDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22678,7 +32585,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrict(var1);
+            try {
+                ref.setDistrict(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22698,7 +32614,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTownship();
+            String result;
+            try {
+                result = ref.getTownship();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22719,7 +32645,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTownship(var1);
+            try {
+                ref.setTownship(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22739,7 +32674,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getNeighborhood();
+            String result;
+            try {
+                result = ref.getNeighborhood();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22760,7 +32705,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setNeighborhood(var1);
+            try {
+                ref.setNeighborhood(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22780,7 +32734,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getBuilding();
+            String result;
+            try {
+                result = ref.getBuilding();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -22801,7 +32765,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBuilding(var1);
+            try {
+                ref.setBuilding(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22821,7 +32794,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.geocoder.StreetNumber result = ref.getStreetNumber();
+            com.amap.api.services.geocoder.StreetNumber result;
+            try {
+                result = ref.getStreetNumber();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -22849,7 +32832,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setStreetNumber(var1);
+            try {
+                ref.setStreetNumber(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22869,7 +32861,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.geocoder.RegeocodeRoad> result = ref.getRoads();
+            List<com.amap.api.services.geocoder.RegeocodeRoad> result;
+            try {
+                result = ref.getRoads();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -22903,7 +32905,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoads(new ArrayList(var1));
+            try {
+                ref.setRoads(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22923,7 +32934,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.core.PoiItem> result = ref.getPois();
+            List<com.amap.api.services.core.PoiItem> result;
+            try {
+                result = ref.getPois();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -22957,7 +32978,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPois(new ArrayList(var1));
+            try {
+                ref.setPois(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -22977,7 +33007,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.road.Crossroad> result = ref.getCrossroads();
+            List<com.amap.api.services.road.Crossroad> result;
+            try {
+                result = ref.getCrossroads();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23011,7 +33051,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCrossroads(new ArrayList(var1));
+            try {
+                ref.setCrossroads(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23031,7 +33080,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.geocoder.BusinessArea> result = ref.getBusinessAreas();
+            List<com.amap.api.services.geocoder.BusinessArea> result;
+            try {
+                result = ref.getBusinessAreas();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23065,7 +33124,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBusinessAreas(new ArrayList(var1));
+            try {
+                ref.setBusinessAreas(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23085,7 +33153,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.geocoder.AoiItem> result = ref.getAois();
+            List<com.amap.api.services.geocoder.AoiItem> result;
+            try {
+                result = ref.getAois();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23119,7 +33197,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAois(new ArrayList(var1));
+            try {
+                ref.setAois(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23139,7 +33226,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTowncode();
+            String result;
+            try {
+                result = ref.getTowncode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23160,7 +33257,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTowncode(var1);
+            try {
+                ref.setTowncode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23181,7 +33287,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCountry(var1);
+            try {
+                ref.setCountry(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23201,7 +33316,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCountry();
+            String result;
+            try {
+                result = ref.getCountry();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23222,7 +33347,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setShowBoundary(var1);
+            try {
+                ref.setShowBoundary(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23242,7 +33376,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isShowBoundary();
+            boolean result;
+            try {
+                result = ref.isShowBoundary();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23262,7 +33406,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageNum();
+            int result;
+            try {
+                result = ref.getPageNum();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23283,7 +33437,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageNum(var1);
+            try {
+                ref.setPageNum(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23303,7 +33466,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageSize();
+            int result;
+            try {
+                result = ref.getPageSize();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23324,7 +33497,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageSize(var1);
+            try {
+                ref.setPageSize(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23344,7 +33526,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getKeywords();
+            String result;
+            try {
+                result = ref.getKeywords();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23365,7 +33557,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setKeywords(var1);
+            try {
+                ref.setKeywords(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23385,7 +33586,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getKeywordsLevel();
+            String result;
+            try {
+                result = ref.getKeywordsLevel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23406,7 +33617,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setKeywordsLevel(var1);
+            try {
+                ref.setKeywordsLevel(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23426,7 +33646,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isShowChild();
+            boolean result;
+            try {
+                result = ref.isShowChild();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23447,7 +33677,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setShowChild(var1);
+            try {
+                ref.setShowChild(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23467,7 +33706,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.isShowBusinessArea();
+            boolean result;
+            try {
+                result = ref.isShowBusinessArea();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23488,7 +33737,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setShowBusinessArea(var1);
+            try {
+                ref.setShowBusinessArea(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23508,7 +33766,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.checkLevels();
+            boolean result;
+            try {
+                result = ref.checkLevels();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23528,7 +33796,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.checkKeyWords();
+            boolean result;
+            try {
+                result = ref.checkKeyWords();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23549,7 +33827,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.weakEquals(var1);
+            boolean result;
+            try {
+                result = ref.weakEquals(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23569,7 +33857,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.district.DistrictSearchQuery result = ref.clone();
+            com.amap.api.services.district.DistrictSearchQuery result;
+            try {
+                result = ref.clone();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23596,7 +33894,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.district.DistrictSearchQuery result = ref.getQuery();
+            com.amap.api.services.district.DistrictSearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23624,7 +33932,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23644,7 +33961,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.district.DistrictResult result = ref.searchDistrict();
+            com.amap.api.services.district.DistrictResult result;
+            try {
+                result = ref.searchDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23671,7 +33998,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchDistrictAsyn();
+            try {
+                ref.searchDistrictAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23691,7 +34027,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchDistrictAnsy();
+            try {
+                ref.searchDistrictAnsy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23711,7 +34056,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
+            try {
+                ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback");
         
@@ -23719,7 +34065,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistrictSearched(com.amap.api.services.district.DistrictResult var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -23739,6 +34087,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23758,7 +34114,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.district.DistrictItem> result = ref.getDistrict();
+            List<com.amap.api.services.district.DistrictItem> result;
+            try {
+                result = ref.getDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23792,7 +34158,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrict(new ArrayList(var1));
+            try {
+                ref.setDistrict(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23812,7 +34187,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.district.DistrictSearchQuery result = ref.getQuery();
+            com.amap.api.services.district.DistrictSearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23840,7 +34225,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23860,7 +34254,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getPageCount();
+            int result;
+            try {
+                result = ref.getPageCount();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -23881,7 +34285,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPageCount(var1);
+            try {
+                ref.setPageCount(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23901,7 +34314,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.AMapException result = ref.getAMapException();
+            com.amap.api.services.core.AMapException result;
+            try {
+                result = ref.getAMapException();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -23929,7 +34352,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAMapException(var1);
+            try {
+                ref.setAMapException(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23950,7 +34382,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrictBoundary(var1.toArray(new String[var1.size()]));
+            try {
+                ref.setDistrictBoundary(var1.toArray(new String[var1.size()]));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -23970,7 +34411,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String[] result = ref.districtBoundary();
+            String[] result;
+            try {
+                result = ref.districtBoundary();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(new ArrayList<String>(java.util.Arrays.asList(result)));
@@ -23990,7 +34441,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCitycode();
+            String result;
+            try {
+                result = ref.getCitycode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24011,7 +34472,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCitycode(var1);
+            try {
+                ref.setCitycode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24031,7 +34501,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdcode();
+            String result;
+            try {
+                result = ref.getAdcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24052,7 +34532,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdcode(var1);
+            try {
+                ref.setAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24072,7 +34561,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24093,7 +34592,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24113,7 +34621,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getCenter();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getCenter();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24141,7 +34659,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCenter(var1);
+            try {
+                ref.setCenter(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24161,7 +34688,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLevel();
+            String result;
+            try {
+                result = ref.getLevel();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24182,7 +34719,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLevel(var1);
+            try {
+                ref.setLevel(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24202,7 +34748,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.district.DistrictItem> result = ref.getSubDistrict();
+            List<com.amap.api.services.district.DistrictItem> result;
+            try {
+                result = ref.getSubDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24236,7 +34792,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setSubDistrict(new ArrayList(var1));
+            try {
+                ref.setSubDistrict(new ArrayList(var1));
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24257,7 +34822,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onDistrictSearched(var1);
+            try {
+                ref.onDistrictSearched(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24284,7 +34858,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onGetInputtips(new ArrayList(var1), var2);
+            try {
+                ref.onGetInputtips(new ArrayList(var1), var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24304,7 +34887,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getPoiID();
+            String result;
+            try {
+                result = ref.getPoiID();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24325,7 +34918,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setID(var1);
+            try {
+                ref.setID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24345,7 +34947,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getPoint();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getPoint();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24373,7 +34985,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setPostion(var1);
+            try {
+                ref.setPostion(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24393,7 +35014,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getName();
+            String result;
+            try {
+                result = ref.getName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24414,7 +35045,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setName(var1);
+            try {
+                ref.setName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24434,7 +35074,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getDistrict();
+            String result;
+            try {
+                result = ref.getDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24455,7 +35105,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistrict(var1);
+            try {
+                ref.setDistrict(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24475,7 +35134,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAdcode();
+            String result;
+            try {
+                result = ref.getAdcode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24496,7 +35165,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAdcode(var1);
+            try {
+                ref.setAdcode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24516,7 +35194,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getAddress();
+            String result;
+            try {
+                result = ref.getAddress();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24537,7 +35225,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setAddress(var1);
+            try {
+                ref.setAddress(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24558,7 +35255,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTypeCode(var1);
+            try {
+                ref.setTypeCode(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24578,7 +35284,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getTypeCode();
+            String result;
+            try {
+                result = ref.getTypeCode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24598,7 +35314,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getKeyword();
+            String result;
+            try {
+                result = ref.getKeyword();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24618,7 +35344,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getCity();
+            String result;
+            try {
+                result = ref.getCity();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24639,7 +35375,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setType(var1);
+            try {
+                ref.setType(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24659,7 +35404,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getType();
+            String result;
+            try {
+                result = ref.getType();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24680,7 +35435,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setCityLimit(var1);
+            try {
+                ref.setCityLimit(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24700,7 +35464,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            boolean result = ref.getCityLimit();
+            boolean result;
+            try {
+                result = ref.getCityLimit();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -24721,7 +35495,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLocation(var1);
+            try {
+                ref.setLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24741,7 +35524,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getLocation();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getLocation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24768,7 +35561,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.help.InputtipsQuery result = ref.getQuery();
+            com.amap.api.services.help.InputtipsQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24796,7 +35599,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24816,7 +35628,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
+            try {
+                ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback");
         
@@ -24824,7 +35637,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGetInputtips(List<com.amap.api.services.help.Tip> var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // list arg
@@ -24850,6 +35665,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24869,7 +35692,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.requestInputtipsAsyn();
+            try {
+                ref.requestInputtipsAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24889,7 +35721,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.help.Tip> result = ref.requestInputtips();
+            List<com.amap.api.services.help.Tip> result;
+            try {
+                result = ref.requestInputtips();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24902,6 +35744,72 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             } else {
                 methodResult.success(null);
             }
+        });
+        // method
+        put("com.amap.api.services.help.Inputtips::requestInputtips__String__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.requestInputtips(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.services.help.Inputtips::requestInputtips__String__String__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // jsonable arg
+            String var3 = (String) args.get("var3");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.help.Inputtips@" + refId + "::requestInputtips(" + var1 + var2 + var3 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.requestInputtips(var1, var2, var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
         });
         // method
         put("com.amap.api.services.interfaces.IDistrictSearch::getQuery", (args, methodResult) -> {
@@ -24918,7 +35826,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.district.DistrictSearchQuery result = ref.getQuery();
+            com.amap.api.services.district.DistrictSearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -24946,7 +35864,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24966,7 +35893,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchDistrictAsyn();
+            try {
+                ref.searchDistrictAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -24986,7 +35922,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchDistrictAnsy();
+            try {
+                ref.searchDistrictAnsy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25006,7 +35951,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
+            try {
+                ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IDistrictSearch::setOnDistrictSearchListener::Callback");
         
@@ -25014,7 +35960,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistrictSearched(com.amap.api.services.district.DistrictResult var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDistrictSearched(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25034,6 +35982,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25053,7 +36009,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.district.DistrictResult result = ref.searchDistrict();
+            com.amap.api.services.district.DistrictResult result;
+            try {
+                result = ref.searchDistrict();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25080,7 +36046,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationResult result = ref.searchBusStation();
+            com.amap.api.services.busline.BusStationResult result;
+            try {
+                result = ref.searchBusStation();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25107,7 +36083,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
+            try {
+                ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IBusStationSearch::setOnBusStationSearchListener::Callback");
         
@@ -25115,7 +36092,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusStationSearched(com.amap.api.services.busline.BusStationResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusStationSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25138,6 +36117,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25157,7 +36144,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchBusStationAsyn();
+            try {
+                ref.searchBusStationAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25178,7 +36174,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25198,7 +36203,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusStationQuery result = ref.getQuery();
+            com.amap.api.services.busline.BusStationQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25225,7 +36240,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
+            try {
+                ref.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRouteSearch::setRouteSearchListener::Callback");
         
@@ -25233,7 +36249,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteSearched(com.amap.api.services.route.BusRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25258,7 +36276,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRouteSearched(com.amap.api.services.route.DriveRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDriveRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25283,7 +36303,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteSearched(com.amap.api.services.route.WalkRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWalkRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25308,7 +36330,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRideRouteSearched(com.amap.api.services.route.RideRouteResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRideRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25331,6 +36355,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25350,7 +36382,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
+            try {
+                ref.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRouteSearch::setOnTruckRouteSearchListener::Callback");
         
@@ -25358,7 +36391,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onTruckRouteSearched(com.amap.api.services.route.TruckRouteRestult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onTruckRouteSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25381,6 +36416,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25400,7 +36443,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
+            try {
+                ref.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRouteSearch::setOnRoutePlanSearchListener::Callback");
         
@@ -25408,7 +36452,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDriveRoutePlanSearched(com.amap.api.services.route.DriveRoutePlanResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDriveRoutePlanSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -25431,6 +36477,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25451,7 +36505,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.WalkRouteResult result = ref.calculateWalkRoute(var1);
+            com.amap.api.services.route.WalkRouteResult result;
+            try {
+                result = ref.calculateWalkRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25479,7 +36543,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateWalkRouteAsyn(var1);
+            try {
+                ref.calculateWalkRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25500,7 +36573,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.BusRouteResult result = ref.calculateBusRoute(var1);
+            com.amap.api.services.route.BusRouteResult result;
+            try {
+                result = ref.calculateBusRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25528,7 +36611,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateBusRouteAsyn(var1);
+            try {
+                ref.calculateBusRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25549,7 +36641,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DriveRouteResult result = ref.calculateDriveRoute(var1);
+            com.amap.api.services.route.DriveRouteResult result;
+            try {
+                result = ref.calculateDriveRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25577,7 +36679,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateDriveRouteAsyn(var1);
+            try {
+                ref.calculateDriveRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25598,7 +36709,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.RideRouteResult result = ref.calculateRideRoute(var1);
+            com.amap.api.services.route.RideRouteResult result;
+            try {
+                result = ref.calculateRideRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25626,7 +36747,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateRideRouteAsyn(var1);
+            try {
+                ref.calculateRideRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25647,7 +36777,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.TruckRouteRestult result = ref.calculateTruckRoute(var1);
+            com.amap.api.services.route.TruckRouteRestult result;
+            try {
+                result = ref.calculateTruckRoute(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25675,7 +36815,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateTruckRouteAsyn(var1);
+            try {
+                ref.calculateTruckRouteAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25696,7 +36845,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DriveRoutePlanResult result = ref.calculateDrivePlan(var1);
+            com.amap.api.services.route.DriveRoutePlanResult result;
+            try {
+                result = ref.calculateDrivePlan(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -25724,7 +36883,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateDrivePlanAsyn(var1);
+            try {
+                ref.calculateDrivePlanAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25744,7 +36912,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
+            try {
+                ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IShareSearch::setOnShareSearchListener::Callback");
         
@@ -25752,7 +36921,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -25776,7 +36947,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onLocationShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -25800,7 +36973,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNaviShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -25824,7 +36999,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -25848,7 +37025,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -25872,7 +37051,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDrivingRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -25894,6 +37075,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25914,7 +37103,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchPoiShareUrlAsyn(var1);
+            try {
+                ref.searchPoiShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25935,7 +37133,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchBusRouteShareUrlAsyn(var1);
+            try {
+                ref.searchBusRouteShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25956,7 +37163,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchWalkRouteShareUrlAsyn(var1);
+            try {
+                ref.searchWalkRouteShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25977,7 +37193,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchDrivingRouteShareUrlAsyn(var1);
+            try {
+                ref.searchDrivingRouteShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -25998,7 +37223,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchNaviShareUrlAsyn(var1);
+            try {
+                ref.searchNaviShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26019,7 +37253,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchLocationShareUrlAsyn(var1);
+            try {
+                ref.searchLocationShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26040,7 +37283,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchPoiShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchPoiShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -26061,7 +37314,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchNaviShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchNaviShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -26082,7 +37345,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchLocationShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchLocationShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -26103,7 +37376,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchBusRouteShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchBusRouteShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -26124,7 +37407,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchDrivingRouteShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchDrivingRouteShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -26145,7 +37438,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchWalkRouteShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchWalkRouteShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -26165,7 +37468,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setRoutePOISearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
+            try {
+                ref.setRoutePOISearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRoutePOISearch::setRoutePOISearchListener::Callback");
         
@@ -26173,7 +37477,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoutePoiSearched(com.amap.api.services.routepoisearch.RoutePOISearchResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRoutePoiSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26196,6 +37502,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26215,7 +37529,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchRoutePOIAsyn();
+            try {
+                ref.searchRoutePOIAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26235,7 +37558,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.routepoisearch.RoutePOISearchResult result = ref.searchRoutePOI();
+            com.amap.api.services.routepoisearch.RoutePOISearchResult result;
+            try {
+                result = ref.searchRoutePOI();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26263,7 +37596,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26283,7 +37625,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.routepoisearch.RoutePOISearchQuery result = ref.getQuery();
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26310,7 +37662,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
+            try {
+                ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener::Callback");
         
@@ -26318,7 +37671,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRoadTrafficSearched(com.amap.api.services.traffic.TrafficStatusResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRoadTrafficSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26341,6 +37696,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26360,7 +37723,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.help.InputtipsQuery result = ref.getQuery();
+            com.amap.api.services.help.InputtipsQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26388,7 +37761,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26408,7 +37790,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
+            try {
+                ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IInputtipsSearch::setInputtipsListener::Callback");
         
@@ -26416,7 +37799,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGetInputtips(List<com.amap.api.services.help.Tip> var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // list arg
@@ -26442,6 +37827,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26461,7 +37854,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.requestInputtipsAsyn();
+            try {
+                ref.requestInputtipsAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26481,7 +37883,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.help.Tip> result = ref.requestInputtips();
+            List<com.amap.api.services.help.Tip> result;
+            try {
+                result = ref.requestInputtips();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26494,6 +37906,72 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             } else {
                 methodResult.success(null);
             }
+        });
+        // method
+        put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::requestInputtips(" + var1 + var2 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.requestInputtips(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
+        });
+        // method
+        put("com.amap.api.services.interfaces.IInputtipsSearch::requestInputtips__String__String__String", (args, methodResult) -> {
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // jsonable arg
+            String var2 = (String) args.get("var2");
+            // jsonable arg
+            String var3 = (String) args.get("var3");
+        
+            // ref
+            int refId = (int) args.get("refId");
+            com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
+        
+            // print log
+            if (getEnableLog()) {
+                Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.IInputtipsSearch@" + refId + "::requestInputtips(" + var1 + var2 + var3 + ")");
+            }
+        
+            // invoke native method
+            try {
+                ref.requestInputtips(var1, var2, var3);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
+        
+            // result
+            methodResult.success("success");
         });
         // method
         put("com.amap.api.services.interfaces.IGeocodeSearch::getFromLocation", (args, methodResult) -> {
@@ -26511,7 +37989,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.geocoder.RegeocodeAddress result = ref.getFromLocation(var1);
+            com.amap.api.services.geocoder.RegeocodeAddress result;
+            try {
+                result = ref.getFromLocation(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26539,7 +38027,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            List<com.amap.api.services.geocoder.GeocodeAddress> result = ref.getFromLocationName(var1);
+            List<com.amap.api.services.geocoder.GeocodeAddress> result;
+            try {
+                result = ref.getFromLocationName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26568,7 +38066,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnGeocodeSearchListener(new com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener() {
+            try {
+                ref.setOnGeocodeSearchListener(new com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IGeocodeSearch::setOnGeocodeSearchListener::Callback");
         
@@ -26576,7 +38075,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onRegeocodeSearched(com.amap.api.services.geocoder.RegeocodeResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onRegeocodeSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26601,7 +38102,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onGeocodeSearched(com.amap.api.services.geocoder.GeocodeResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onGeocodeSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26624,6 +38127,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26644,7 +38155,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.getFromLocationAsyn(var1);
+            try {
+                ref.getFromLocationAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26665,7 +38185,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.getFromLocationNameAsyn(var1);
+            try {
+                ref.getFromLocationNameAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26685,7 +38214,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnCloudSearchListener(new com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener() {
+            try {
+                ref.setOnCloudSearchListener(new com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener::Callback");
         
@@ -26693,7 +38223,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudSearched(com.amap.api.services.cloud.CloudResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onCloudSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26718,7 +38250,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onCloudItemDetailSearched(com.amap.api.services.cloud.CloudItemDetail var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onCloudItemDetailSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26741,6 +38275,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26761,7 +38303,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchCloudAsyn(var1);
+            try {
+                ref.searchCloudAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26784,7 +38335,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchCloudDetailAsyn(var1, var2);
+            try {
+                ref.searchCloudDetailAsyn(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26805,7 +38365,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.route.DistanceResult result = ref.calculateRouteDistance(var1);
+            com.amap.api.services.route.DistanceResult result;
+            try {
+                result = ref.calculateRouteDistance(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -26833,7 +38403,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.calculateRouteDistanceAsyn(var1);
+            try {
+                ref.calculateRouteDistanceAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26853,7 +38432,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
+            try {
+                ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener::Callback");
         
@@ -26861,7 +38441,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDistanceSearched(com.amap.api.services.route.DistanceResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDistanceSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26884,6 +38466,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26903,7 +38493,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
+            try {
+                ref.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener::Callback");
         
@@ -26911,7 +38502,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiSearched(com.amap.api.services.poisearch.PoiResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onPoiSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26936,7 +38529,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiItemSearched(com.amap.api.services.core.PoiItem var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onPoiItemSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -26959,6 +38554,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26979,7 +38582,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setLanguage(var1);
+            try {
+                ref.setLanguage(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -26999,7 +38611,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getLanguage();
+            String result;
+            try {
+                result = ref.getLanguage();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -27019,7 +38641,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiResult result = ref.searchPOI();
+            com.amap.api.services.poisearch.PoiResult result;
+            try {
+                result = ref.searchPOI();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27046,7 +38678,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchPOIAsyn();
+            try {
+                ref.searchPOIAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27067,7 +38708,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.PoiItem result = ref.searchPOIId(var1);
+            com.amap.api.services.core.PoiItem result;
+            try {
+                result = ref.searchPOIId(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27095,7 +38746,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchPOIIdAsyn(var1);
+            try {
+                ref.searchPOIIdAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27116,7 +38776,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27137,7 +38806,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setBound(var1);
+            try {
+                ref.setBound(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27157,7 +38835,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiSearch.Query result = ref.getQuery();
+            com.amap.api.services.poisearch.PoiSearch.Query result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27184,7 +38872,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.poisearch.PoiSearch.SearchBound result = ref.getBound();
+            com.amap.api.services.poisearch.PoiSearch.SearchBound result;
+            try {
+                result = ref.getBound();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27211,7 +38909,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.weather.WeatherSearchQuery result = ref.getQuery();
+            com.amap.api.services.weather.WeatherSearchQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27239,7 +38947,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27259,7 +38976,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchWeatherAsyn();
+            try {
+                ref.searchWeatherAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27279,7 +39005,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnWeatherSearchListener(new com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener() {
+            try {
+                ref.setOnWeatherSearchListener(new com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IWeatherSearch::setOnWeatherSearchListener::Callback");
         
@@ -27287,7 +39014,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherLiveSearched(com.amap.api.services.weather.LocalWeatherLiveResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWeatherLiveSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -27312,7 +39041,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWeatherForecastSearched(com.amap.api.services.weather.LocalWeatherForecastResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWeatherForecastSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -27335,6 +39066,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27354,7 +39093,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
+            try {
+                ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.INearbySearch::addNearbyListener::Callback");
         
@@ -27362,7 +39102,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -27383,7 +39125,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -27408,7 +39152,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -27427,6 +39173,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27446,7 +39200,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
+            try {
+                ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.INearbySearch::removeNearbyListener::Callback");
         
@@ -27454,7 +39209,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onUserInfoCleared(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onUserInfoCleared(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -27475,7 +39232,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoSearched(com.amap.api.services.nearby.NearbySearchResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -27500,7 +39259,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNearbyInfoUploaded(int var1) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNearbyInfoUploaded(" + var1 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -27519,6 +39280,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27538,7 +39307,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.clearUserInfoAsyn();
+            try {
+                ref.clearUserInfoAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27559,7 +39337,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setUserID(var1);
+            try {
+                ref.setUserID(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27580,7 +39367,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
+            try {
+                ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.INearbySearch::startUploadNearbyInfoAuto::Callback");
         
@@ -27588,7 +39376,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public com.amap.api.services.nearby.UploadInfo OnUploadInfoCallback() {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: OnUploadInfoCallback(" + "" + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: OnUploadInfoCallback(" + "" + ")");
+                    }
         
                     // convert to jsonable data
         
@@ -27606,6 +39396,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             }, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27625,7 +39423,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.stopUploadNearbyInfoAuto();
+            try {
+                ref.stopUploadNearbyInfoAuto();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27646,7 +39453,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.uploadNearbyInfoAsyn(var1);
+            try {
+                ref.uploadNearbyInfoAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27667,7 +39483,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchNearbyInfoAsyn(var1);
+            try {
+                ref.searchNearbyInfoAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27688,7 +39513,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.nearby.NearbySearchResult result = ref.searchNearbyInfo(var1);
+            com.amap.api.services.nearby.NearbySearchResult result;
+            try {
+                result = ref.searchNearbyInfo(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27715,7 +39550,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.destroy();
+            try {
+                ref.destroy();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27735,7 +39579,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineResult result = ref.searchBusLine();
+            com.amap.api.services.busline.BusLineResult result;
+            try {
+                result = ref.searchBusLine();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27762,7 +39616,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
+            try {
+                ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener::Callback");
         
@@ -27770,7 +39625,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusLineSearched(com.amap.api.services.busline.BusLineResult var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusLineSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // ref arg
@@ -27793,6 +39650,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27812,7 +39677,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchBusLineAsyn();
+            try {
+                ref.searchBusLineAsyn();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27833,7 +39707,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setQuery(var1);
+            try {
+                ref.setQuery(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -27853,7 +39736,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.busline.BusLineQuery result = ref.getQuery();
+            com.amap.api.services.busline.BusLineQuery result;
+            try {
+                result = ref.getQuery();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27880,7 +39773,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.share.ShareSearch.ShareFromAndTo result = ref.getFromAndTo();
+            com.amap.api.services.share.ShareSearch.ShareFromAndTo result;
+            try {
+                result = ref.getFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27907,7 +39810,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getNaviMode();
+            int result;
+            try {
+                result = ref.getNaviMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -27927,7 +39840,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getBusMode();
+            int result;
+            try {
+                result = ref.getBusMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -27947,7 +39870,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.share.ShareSearch.ShareFromAndTo result = ref.getShareFromAndTo();
+            com.amap.api.services.share.ShareSearch.ShareFromAndTo result;
+            try {
+                result = ref.getShareFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -27974,7 +39907,8 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
+            try {
+                ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
                 // method channel
                 MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback");
         
@@ -27982,7 +39916,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onPoiShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onPoiShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -28006,7 +39942,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onLocationShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onLocationShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -28030,7 +39968,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onNaviShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onNaviShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -28054,7 +39994,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onBusRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onBusRouteShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -28078,7 +40020,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onWalkRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onWalkRouteShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -28102,7 +40046,9 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 @Override
                 public void onDrivingRouteShareUrlSearched(String var1, int var2) {
                     // print log
-                    Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
+                    if (getEnableLog()) {
+                        Log.d("java-callback", "fluttify-java-callback: onDrivingRouteShareUrlSearched(" + var1 + var2 + ")");
+                    }
         
                     // convert to jsonable data
                     // jsonable arg
@@ -28124,6 +40070,14 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
                 }
         
             });
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28144,7 +40098,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchPoiShareUrlAsyn(var1);
+            try {
+                ref.searchPoiShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28165,7 +40128,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchBusRouteShareUrlAsyn(var1);
+            try {
+                ref.searchBusRouteShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28186,7 +40158,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchWalkRouteShareUrlAsyn(var1);
+            try {
+                ref.searchWalkRouteShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28207,7 +40188,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchDrivingRouteShareUrlAsyn(var1);
+            try {
+                ref.searchDrivingRouteShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28228,7 +40218,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchNaviShareUrlAsyn(var1);
+            try {
+                ref.searchNaviShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28249,7 +40248,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.searchLocationShareUrlAsyn(var1);
+            try {
+                ref.searchLocationShareUrlAsyn(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28270,7 +40278,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchPoiShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchPoiShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28291,7 +40309,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchNaviShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchNaviShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28312,7 +40340,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchLocationShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchLocationShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28333,7 +40371,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchBusRouteShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchBusRouteShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28354,7 +40402,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchDrivingRouteShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchDrivingRouteShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28375,7 +40433,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.searchWalkRouteShareUrl(var1);
+            String result;
+            try {
+                result = ref.searchWalkRouteShareUrl(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28396,7 +40464,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setFromName(var1);
+            try {
+                ref.setFromName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28417,7 +40494,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.setToName(var1);
+            try {
+                ref.setToName(var1);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28437,7 +40523,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getFrom();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getFrom();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -28464,7 +40560,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.core.LatLonPoint result = ref.getTo();
+            com.amap.api.services.core.LatLonPoint result;
+            try {
+                result = ref.getTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -28491,7 +40597,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getFromName();
+            String result;
+            try {
+                result = ref.getFromName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28511,7 +40627,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            String result = ref.getToName();
+            String result;
+            try {
+                result = ref.getToName();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28531,7 +40657,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getWalkMode();
+            int result;
+            try {
+                result = ref.getWalkMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28551,7 +40687,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.share.ShareSearch.ShareFromAndTo result = ref.getShareFromAndTo();
+            com.amap.api.services.share.ShareSearch.ShareFromAndTo result;
+            try {
+                result = ref.getShareFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -28578,7 +40724,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            int result = ref.getDrivingMode();
+            int result;
+            try {
+                result = ref.getDrivingMode();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success(result);
@@ -28598,7 +40754,17 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            com.amap.api.services.share.ShareSearch.ShareFromAndTo result = ref.getShareFromAndTo();
+            com.amap.api.services.share.ShareSearch.ShareFromAndTo result;
+            try {
+                result = ref.getShareFromAndTo();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             if (result != null) {
@@ -28628,7 +40794,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onPoiShareUrlSearched(var1, var2);
+            try {
+                ref.onPoiShareUrlSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28651,7 +40826,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onLocationShareUrlSearched(var1, var2);
+            try {
+                ref.onLocationShareUrlSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28674,7 +40858,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onNaviShareUrlSearched(var1, var2);
+            try {
+                ref.onNaviShareUrlSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28697,7 +40890,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onBusRouteShareUrlSearched(var1, var2);
+            try {
+                ref.onBusRouteShareUrlSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28720,7 +40922,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onWalkRouteShareUrlSearched(var1, var2);
+            try {
+                ref.onWalkRouteShareUrlSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");
@@ -28743,7 +40954,16 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             }
         
             // invoke native method
-            ref.onDrivingRouteShareUrlSearched(var1, var2);
+            try {
+                ref.onDrivingRouteShareUrlSearched(var1, var2);
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+                if (getEnableLog()) {
+                    Log.d("Current HEAP: ", getHEAP().toString());
+                }
+                methodResult.error(throwable.getMessage(), null, null);
+                return;
+            }
         
             // result
             methodResult.success("success");

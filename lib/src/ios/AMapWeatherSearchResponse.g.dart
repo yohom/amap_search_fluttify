@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapWeatherSearchResponse extends AMapSearchObject  {
+  
+
   // generate getters
   Future<List<AMapLocalWeatherLive>> get_lives() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchResponse::get_lives", {'refId': refId});

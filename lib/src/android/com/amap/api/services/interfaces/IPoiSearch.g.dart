@@ -15,11 +15,13 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<void> setOnPoiSearchListener(com_amap_api_services_poisearch_PoiSearch_OnPoiSearchListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setOnPoiSearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<void> setLanguage(String var1) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setLanguage::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +39,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<String> getLanguage() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getLanguage::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +48,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<com_amap_api_services_poisearch_PoiResult> searchPOI() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('searchPOI::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +57,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<void> searchPOIAsyn() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('searchPOIAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +66,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<com_amap_api_services_core_PoiItem> searchPOIId(String var1) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('searchPOIId::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -73,7 +75,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<void> searchPOIIdAsyn(String var1) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('searchPOIIdAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -82,7 +84,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<void> setQuery(com_amap_api_services_poisearch_PoiSearch_Query var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -91,7 +93,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<void> setBound(com_amap_api_services_poisearch_PoiSearch_SearchBound var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setBound::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -100,7 +102,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<com_amap_api_services_poisearch_PoiSearch_Query> getQuery() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -109,7 +111,7 @@ mixin com_amap_api_services_interfaces_IPoiSearch on java_lang_Object {
   Future<com_amap_api_services_poisearch_PoiSearch_SearchBound> getBound() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getBound::kNativeObjectPool: $kNativeObjectPool');
     }
   }

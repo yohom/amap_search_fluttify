@@ -15,11 +15,13 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
 
   
 
+  
+
   @mustCallSuper
   Future<void> onCloudSearched(com_amap_api_services_cloud_CloudResult var1, int var2) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCloudSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener on java_lang
   Future<void> onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail var1, int var2) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onCloudItemDetailSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }

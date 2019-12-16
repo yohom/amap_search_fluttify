@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapSearchAPI extends NSObject  {
+  
+
   // generate getters
   Future<int> get_timeout() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
@@ -38,7 +40,7 @@ class AMapSearchAPI extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: AMapSearchRequestDidFailWithError([])');
             }
         
@@ -47,7 +49,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onPOISearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onPOISearchDoneResponse([])');
             }
         
@@ -56,7 +58,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onRoutePOISearchDoneResponse([])');
             }
         
@@ -65,7 +67,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onGeocodeSearchDoneResponse([])');
             }
         
@@ -74,7 +76,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onReGeocodeSearchDoneResponse([])');
             }
         
@@ -83,7 +85,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onInputTipsSearchDoneResponse([])');
             }
         
@@ -92,7 +94,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onBusStopSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onBusStopSearchDoneResponse([])');
             }
         
@@ -101,7 +103,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onBusLineSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onBusLineSearchDoneResponse([])');
             }
         
@@ -110,7 +112,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onDistrictSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onDistrictSearchDoneResponse([])');
             }
         
@@ -119,7 +121,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onRouteSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onRouteSearchDoneResponse([])');
             }
         
@@ -128,7 +130,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onFutureRouteSearchDoneResponse([])');
             }
         
@@ -137,7 +139,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onDistanceSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onDistanceSearchDoneResponse([])');
             }
         
@@ -146,7 +148,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onWeatherSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onWeatherSearchDoneResponse([])');
             }
         
@@ -155,7 +157,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onRoadTrafficSearchDoneResponse([])');
             }
         
@@ -164,7 +166,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onNearbySearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onNearbySearchDoneResponse([])');
             }
         
@@ -173,7 +175,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onCloudSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onCloudSearchDoneResponse([])');
             }
         
@@ -182,7 +184,7 @@ class AMapSearchAPI extends NSObject  {
             break;
           case 'Callback::AMapSearchDelegate::onShareSearchDoneResponse':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onShareSearchDoneResponse([])');
             }
         

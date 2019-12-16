@@ -8,9 +8,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^0.1.3
   permission_handler:
-  decorated_flutter: ^0.8.0
+  decorated_flutter: ^0.10.0
 
 dev_dependencies:
   flutter_test:

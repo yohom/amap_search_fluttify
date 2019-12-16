@@ -11,6 +11,31 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
+  static final int BusDefault = 0;
+  static final int BusSaveMoney = 1;
+  static final int BusLeaseChange = 2;
+  static final int BusLeaseWalk = 3;
+  static final int BusComfortable = 4;
+  static final int BusNoSubway = 5;
+  static final int DrivingDefault = 0;
+  static final int DrivingSaveMoney = 1;
+  static final int DrivingShortDistance = 2;
+  static final int DrivingNoHighWay = 3;
+  static final int DrivingAvoidCongestion = 4;
+  static final int DrivingNoHighWaySaveMoney = 5;
+  static final int DrivingNoHighWayAvoidCongestion = 6;
+  static final int DrivingSaveMoneyAvoidCongestion = 7;
+  static final int DrivingNoHighWaySaveMoneyAvoidCongestion = 8;
+  static final int NaviDefault = 0;
+  static final int NaviSaveMoney = 1;
+  static final int NaviShortDistance = 2;
+  static final int NaviNoHighWay = 3;
+  static final int NaviAvoidCongestion = 4;
+  static final int NaviNoHighWaySaveMoney = 5;
+  static final int NaviNoHighWayAvoidCongestion = 6;
+  static final int NaviSaveMoneyAvoidCongestion = 7;
+  static final int NaviNoHighWaySaveMoneyAvoidCongestion = 8;
+
   // generate getters
   
 
@@ -38,7 +63,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onPoiShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         
@@ -47,7 +72,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onLocationShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         
@@ -56,7 +81,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onNaviShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         
@@ -65,7 +90,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onBusRouteShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         
@@ -74,7 +99,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onWalkRouteShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         
@@ -83,7 +108,7 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onDrivingRouteShareUrlSearched([\'var1\':$args[var1], \'var2\':$args[var2]])');
               }
         

@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Object with android_os_Parcelable {
+  
+
   // generate getters
   
 
@@ -147,6 +149,28 @@ class com_amap_api_services_route_RouteSearch_BusRouteQuery extends java_lang_Ob
     } else {
     
       return result;
+    }
+  }
+  
+  Future<com_amap_api_services_route_RouteSearch_BusRouteQuery> clone() async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.route.RouteSearch.BusRouteQuery@$refId::clone([])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteSearch.BusRouteQuery::clone', {"refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+      kNativeObjectPool.add(com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result..tag = 'amap_search_fluttify');
+      return com_amap_api_services_route_RouteSearch_BusRouteQuery()..refId = result..tag = 'amap_search_fluttify';
     }
   }
   

@@ -15,11 +15,13 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
 
   
 
+  
+
   @mustCallSuper
   Future<void> onPoiShareUrlSearched(String var1, int var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onPoiShareUrlSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
   Future<void> onLocationShareUrlSearched(String var1, int var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onLocationShareUrlSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +39,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
   Future<void> onNaviShareUrlSearched(String var1, int var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onNaviShareUrlSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +48,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
   Future<void> onBusRouteShareUrlSearched(String var1, int var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onBusRouteShareUrlSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +57,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
   Future<void> onWalkRouteShareUrlSearched(String var1, int var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onWalkRouteShareUrlSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -64,7 +66,7 @@ mixin com_amap_api_services_share_ShareSearch_OnShareSearchListener on java_lang
   Future<void> onDrivingRouteShareUrlSearched(String var1, int var2) {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onDrivingRouteShareUrlSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }

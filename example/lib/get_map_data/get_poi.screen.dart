@@ -3,7 +3,6 @@ import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:rxdart/rxdart.dart';
 
 class GetPoiScreen extends StatelessWidget {
   @override
@@ -70,7 +69,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen>
                 city: _cityController.text,
               );
 
-              Observable.fromIterable(poiList)
+              Stream.fromIterable(poiList)
                   .asyncMap((it) async =>
                       'title: ' +
                       (await it.title) +
@@ -151,7 +150,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen>
                 type: _typeController.text,
               );
 
-              Observable.fromIterable(poiList)
+              Stream.fromIterable(poiList)
                   .asyncMap((it) async =>
                       'title: ' +
                       (await it.title) +
@@ -209,7 +208,7 @@ class _InputTipScreenState extends State<InputTipScreen>
                 city: _cityController.text,
               );
 
-              Observable.fromIterable(inputTipList)
+              Stream.fromIterable(inputTipList)
                   .asyncMap((it) => it.toFutureString())
                   .toList()
                   .then((it) => setState(() => _inputTipList = it));

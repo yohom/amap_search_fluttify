@@ -15,11 +15,13 @@ mixin com_amap_api_services_route_RouteSearch_OnTruckRouteSearchListener on java
 
   
 
+  
+
   @mustCallSuper
   Future<void> onTruckRouteSearched(com_amap_api_services_route_TruckRouteRestult var1, int var2) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('onTruckRouteSearched::kNativeObjectPool: $kNativeObjectPool');
     }
   }

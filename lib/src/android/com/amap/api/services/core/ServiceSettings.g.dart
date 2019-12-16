@@ -11,6 +11,11 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
+  static final String ENGLISH = "en";
+  static final String CHINESE = "zh-CN";
+  static final int HTTP = 1;
+  static final int HTTPS = 2;
+
   // generate getters
   
 

@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
+  
+
   // generate getters
   
 
@@ -104,7 +106,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onWeatherLiveSearched([\'var2\':$args[var2]])');
               }
         
@@ -113,7 +115,7 @@ class com_amap_api_services_weather_WeatherSearch extends java_lang_Object  {
               break;
             case 'Callback::com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onWeatherForecastSearched([\'var2\':$args[var2]])');
               }
         

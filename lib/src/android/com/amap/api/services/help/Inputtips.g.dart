@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_help_Inputtips extends java_lang_Object  {
+  
+
   // generate getters
   
 
@@ -82,7 +84,7 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.help.Inputtips.InputtipsListener::onGetInputtips':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onGetInputtips([\'var2\':$args[var2]])');
               }
         
@@ -144,6 +146,50 @@ class com_amap_api_services_help_Inputtips extends java_lang_Object  {
     } else {
       kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it..tag = 'amap_search_fluttify').toList());
       return (result as List).cast<int>().map((it) => com_amap_api_services_help_Tip()..refId = it..tag = 'amap_search_fluttify').toList();
+    }
+  }
+  
+  Future<void> requestInputtips__String__String(String var1, String var2) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.Inputtips::requestInputtips__String__String', {"var1": var1, "var2": var2, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
+    }
+  }
+  
+  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) async {
+    // print log
+    if (fluttifyLogEnabled) {
+      print('fluttify-dart: com.amap.api.services.help.Inputtips@$refId::requestInputtips([\'var1\':$var1, \'var2\':$var2, \'var3\':$var3])');
+    }
+  
+    // invoke native method
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.help.Inputtips::requestInputtips__String__String__String', {"var1": var1, "var2": var2, "var3": var3, "refId": refId});
+  
+  
+    // handle native call
+  
+  
+    // convert native result to dart side object
+    if (result == null) {
+      return null;
+    } else {
+    
+      return result;
     }
   }
   

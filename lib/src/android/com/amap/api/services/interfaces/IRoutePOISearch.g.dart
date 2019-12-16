@@ -15,11 +15,13 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<void> setRoutePOISearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setRoutePOISearchListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
   Future<void> searchRoutePOIAsyn() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('searchRoutePOIAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +39,7 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
   Future<com_amap_api_services_routepoisearch_RoutePOISearchResult> searchRoutePOI() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('searchRoutePOI::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +48,7 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
   Future<void> setQuery(com_amap_api_services_routepoisearch_RoutePOISearchQuery var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,7 +57,7 @@ mixin com_amap_api_services_interfaces_IRoutePOISearch on java_lang_Object {
   Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> getQuery() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }

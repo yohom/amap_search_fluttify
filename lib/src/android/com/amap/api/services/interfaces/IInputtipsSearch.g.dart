@@ -15,11 +15,13 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
 
   
 
+  
+
   @mustCallSuper
   Future<com_amap_api_services_help_InputtipsQuery> getQuery() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('getQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -28,7 +30,7 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   Future<void> setQuery(com_amap_api_services_help_InputtipsQuery var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setQuery::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -37,7 +39,7 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   Future<void> setInputtipsListener(com_amap_api_services_help_Inputtips_InputtipsListener var1) {
     kNativeObjectPool.add(var1);
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('setInputtipsListener::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -46,7 +48,7 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   Future<void> requestInputtipsAsyn() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('requestInputtipsAsyn::kNativeObjectPool: $kNativeObjectPool');
     }
   }
@@ -55,8 +57,26 @@ mixin com_amap_api_services_interfaces_IInputtipsSearch on java_lang_Object {
   Future<List<com_amap_api_services_help_Tip>> requestInputtips() {
   
   
-    if (!kReleaseMode) {
+    if (fluttifyLogEnabled) {
       debugPrint('requestInputtips::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> requestInputtips__String__String(String var1, String var2) {
+  
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('requestInputtips__String__String::kNativeObjectPool: $kNativeObjectPool');
+    }
+  }
+  
+  @mustCallSuper
+  Future<void> requestInputtips__String__String__String(String var1, String var2, String var3) {
+  
+  
+    if (fluttifyLogEnabled) {
+      debugPrint('requestInputtips__String__String__String::kNativeObjectPool: $kNativeObjectPool');
     }
   }
   

@@ -11,6 +11,9 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
+  static final int TYPE_DISTANCE = 0;
+  static final int TYPE_DRIVING_DISTANCE = 1;
+
   // generate getters
   
 
@@ -38,7 +41,7 @@ class com_amap_api_services_route_DistanceSearch extends java_lang_Object  {
           switch (methodCall.method) {
             case 'Callback::com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener::onDistanceSearched':
               // print log
-              if (!kReleaseMode) {
+              if (fluttifyLogEnabled) {
                 print('fluttify-dart-callback: onDistanceSearched([\'var2\':$args[var2]])');
               }
         

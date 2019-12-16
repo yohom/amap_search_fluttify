@@ -11,6 +11,8 @@ import 'package:flutter/services.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
 class AMapNearbySearchManager extends NSObject  {
+  
+
   // generate getters
   Future<bool> get_isAutoUploading() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'refId': refId});
@@ -32,7 +34,7 @@ class AMapNearbySearchManager extends NSObject  {
         switch (methodCall.method) {
           case 'Callback::AMapNearbySearchManagerDelegate::nearbyInfoForUploading':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: nearbyInfoForUploading([])');
             }
         
@@ -41,7 +43,7 @@ class AMapNearbySearchManager extends NSObject  {
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onNearbyInfoUploadedWithError([])');
             }
         
@@ -50,7 +52,7 @@ class AMapNearbySearchManager extends NSObject  {
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
-            if (!kReleaseMode) {
+            if (fluttifyLogEnabled) {
               print('fluttify-dart-callback: onUserInfoClearedWithError([])');
             }
         
