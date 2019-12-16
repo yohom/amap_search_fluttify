@@ -1,3 +1,8 @@
+## 0.4.0
+- enhance: 适配1.12.13
+- feat: ReGeocode增加poiList
+- refactor: [breaking change] AoiIten -> Aoi
+
 ## 0.3.4
 - 解决依赖冲突
 
