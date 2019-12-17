@@ -1,3 +1,6 @@
+## 0.5.0
+- 提升依赖
+
 ## 0.4.0
 - enhance: 适配1.12.13
 - feat: ReGeocode增加poiList
