@@ -5,13 +5,14 @@ author: yohom <382146139@qq.com>
 homepage: https://github.com/fluttify-project/amap_search_fluttify
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
+  flutter: ">=1.12.13 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  foundation_fluttify: ^0.2.7
-  amap_core_fluttify: ^0.2.4
+  amap_core_fluttify: ^0.3.0
+  
 
 dev_dependencies:
   flutter_test:
@@ -19,5 +20,9 @@ dev_dependencies:
 
 flutter:
   plugin:
-    androidPackage: me.yohom.amap_search_fluttify
-    pluginClass: AmapSearchFluttifyPlugin
+    platforms:
+      android:
+        package: me.yohom.amap_search_fluttify
+        pluginClass: AmapSearchFluttifyPlugin
+      ios:
+        pluginClass: AmapSearchFluttifyPlugin
