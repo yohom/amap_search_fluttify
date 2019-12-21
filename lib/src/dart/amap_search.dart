@@ -45,7 +45,7 @@ class AmapSearch {
                 keyword, '', city);
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidPoiSearch =
@@ -107,7 +107,7 @@ class AmapSearch {
                 keyword, type, city);
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidPoiSearch =
@@ -188,7 +188,7 @@ class AmapSearch {
         await query.setCityLimit(true);
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidInputTip =
@@ -247,7 +247,7 @@ class AmapSearch {
                 keyword, city);
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidGeocodeSearch =
@@ -311,7 +311,7 @@ class AmapSearch {
                 latLngPoint, radius, 'AMAP');
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidGeocodeSearch =
@@ -413,7 +413,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidRouteSearch =
@@ -531,7 +531,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidRouteSearch =
@@ -620,7 +620,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidRouteSearch =
@@ -707,7 +707,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidRouteSearch =
@@ -777,7 +777,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidBusStationSearch =
@@ -841,7 +841,7 @@ class AmapSearch {
         await query.setShowBoundary(showBoundary);
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidDistrictSearch =
@@ -900,7 +900,7 @@ class AmapSearch {
         );
 
         // 获取android上下文
-        final context = await getandroid_app_Activity();
+        final context = await android_app_Activity.get();
 
         // 创建搜索对象
         _androidWeatherSearch =
@@ -919,7 +919,6 @@ class AmapSearch {
 
         // 局部变量从HEAP中解除引用
         pool..add(query);
-        release(query);
       },
       ios: (pool) async {
         _iosSearch = await createAMapSearchAPI();
@@ -944,19 +943,20 @@ class AmapSearch {
   }
 
   /// 释放原生端对应的资源, 除了[AMapServices]
-  static void dispose() {
+  static Future<void> dispose() async {
     final isCurrentPlugin = (it) => it.tag == 'amap_search_fluttify';
     kNativeObjectPool
-      ..where(isCurrentPlugin).forEach(release)
+      ..where(isCurrentPlugin).forEach((it) => it.release())
       ..removeWhere(isCurrentPlugin);
-    if (_iosSearch != null) release(_iosSearch);
-    if (_androidPoiSearch != null) release(_androidPoiSearch);
-    if (_androidInputTip != null) release(_androidInputTip);
-    if (_androidGeocodeSearch != null) release(_androidGeocodeSearch);
-    if (_androidRouteSearch != null) release(_androidRouteSearch);
-    if (_androidBusStationSearch != null) release(_androidBusStationSearch);
-    if (_androidDistrictSearch != null) release(_androidDistrictSearch);
-    if (_androidWeatherSearch != null) release(_androidWeatherSearch);
+    if (_iosSearch != null) await _iosSearch.release();
+    if (_androidPoiSearch != null) await _androidPoiSearch.release();
+    if (_androidInputTip != null) await _androidInputTip.release();
+    if (_androidGeocodeSearch != null) await _androidGeocodeSearch.release();
+    if (_androidRouteSearch != null) await _androidRouteSearch.release();
+    if (_androidBusStationSearch != null)
+      await _androidBusStationSearch.release();
+    if (_androidDistrictSearch != null) await _androidDistrictSearch.release();
+    if (_androidWeatherSearch != null) await _androidWeatherSearch.release();
   }
 }
 
