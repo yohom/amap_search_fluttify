@@ -11,24 +11,40 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapReGeocodeSearchResponse extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapReGeocodeSearchResponse> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapReGeocodeSearchResponse');
+    final object = AMapReGeocodeSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapReGeocode> get_regeocode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapReGeocodeSearchResponse::get_regeocode", {'refId': refId});
     kNativeObjectPool.add(AMapReGeocode()..refId = result..tag = 'amap_search_fluttify');
     return AMapReGeocode()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_regeocode(AMapReGeocode regeocode) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchResponse::set_regeocode', {'refId': refId, "regeocode": regeocode.refId});
   
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapFutureRouteSearchResponse extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapFutureRouteSearchResponse> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureRouteSearchResponse');
+    final object = AMapFutureRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<List<AMapPath>> get_paths() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_paths", {'refId': refId});
     kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPath()..refId = it..tag = 'amap_search_fluttify').toList());
@@ -26,8 +39,9 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapFutureTimeInfo()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_paths(List<AMapPath> paths) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_paths', {'refId': refId, "paths": paths.map((it) => it.refId).toList()});
   
@@ -40,7 +54,9 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

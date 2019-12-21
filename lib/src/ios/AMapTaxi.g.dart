@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapTaxi extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapTaxi> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTaxi');
+    final object = AMapTaxi()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTaxi::get_origin", {'refId': refId});
     kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
@@ -50,8 +63,9 @@ class AMapTaxi extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_origin', {'refId': refId, "origin": origin.refId});
   
@@ -88,7 +102,9 @@ class AMapTaxi extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

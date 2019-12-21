@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapStep extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapStep> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapStep');
+    final object = AMapStep()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_instruction() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStep::get_instruction", {'refId': refId});
   
@@ -92,8 +105,9 @@ class AMapStep extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapTMC()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_instruction(String instruction) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_instruction', {'refId': refId, "instruction": instruction});
   
@@ -172,7 +186,9 @@ class AMapStep extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

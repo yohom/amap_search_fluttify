@@ -11,15 +11,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_services_route_RoutePlanResult with android_os_Parcelable {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_route_DriveRoutePlanResult> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__');
+    final object = com_amap_api_services_route_DriveRoutePlanResult()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<List<com_amap_api_services_route_DrivePlanPath>> getPaths() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -130,4 +145,5 @@ class com_amap_api_services_route_DriveRoutePlanResult extends com_amap_api_serv
     }
   }
   
+  //endregion
 }

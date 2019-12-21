@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocalDayWeatherForecast extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocalDayWeatherForecast> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapLocalDayWeatherForecast');
+    final object = AMapLocalDayWeatherForecast()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_date() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalDayWeatherForecast::get_date", {'refId': refId});
   
@@ -74,8 +87,9 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_date(String date) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_date', {'refId': refId, "date": date});
   
@@ -136,7 +150,9 @@ class AMapLocalDayWeatherForecast extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

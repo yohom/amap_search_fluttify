@@ -11,15 +11,39 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Object  {
+  //region constants
   static final int WEIGHT = 0;
   static final int DISTANCE = 1;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String var1, bool var2) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', {"var1": var1, "var2": var2});
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag = 'amap_search_fluttify';
   
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', {"var1": var1});
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
 
-  // generate setters
+  //region getters
   
+  //endregion
 
-  // generate methods
+  //region setters
   
+  //endregion
+
+  //region methods
+  
+  //endregion
 }

@@ -11,15 +11,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapSearchObject extends NSObject with NSCoding, NSCopying {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapSearchObject> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSearchObject');
+    final object = AMapSearchObject()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<String> formattedDescription() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -42,4 +57,5 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
     }
   }
   
+  //endregion
 }

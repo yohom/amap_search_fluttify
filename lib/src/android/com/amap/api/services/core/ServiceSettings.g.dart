@@ -11,18 +11,26 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
+  //region constants
   static final String ENGLISH = "en";
   static final String CHINESE = "zh-CN";
   static final int HTTP = 1;
   static final int HTTPS = 2;
+  //endregion
 
-  // generate getters
+  //region creators
   
+  //endregion
 
-  // generate setters
+  //region getters
   
+  //endregion
 
-  // generate methods
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<int> getConnectionTimeOut() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -265,4 +273,5 @@ class com_amap_api_services_core_ServiceSettings extends java_lang_Object  {
     }
   }
   
+  //endregion
 }

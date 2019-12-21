@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapAddressComponent extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapAddressComponent> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapAddressComponent');
+    final object = AMapAddressComponent()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_country() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapAddressComponent::get_country", {'refId': refId});
   
@@ -86,8 +99,9 @@ class AMapAddressComponent extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapBusinessArea()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_country(String country) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAddressComponent::set_country', {'refId': refId, "country": country});
   
@@ -160,7 +174,9 @@ class AMapAddressComponent extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

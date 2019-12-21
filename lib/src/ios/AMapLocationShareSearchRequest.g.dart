@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocationShareSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapLocationShareSearchRequest');
+    final object = AMapLocationShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocationShareSearchRequest::get_location", {'refId': refId});
     kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
@@ -26,8 +39,9 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_location(AMapGeoPoint location) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocationShareSearchRequest::set_location', {'refId': refId, "location": location.refId});
   
@@ -40,7 +54,9 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

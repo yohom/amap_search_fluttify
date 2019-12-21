@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapCloudPOI extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapCloudPOI> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudPOI');
+    final object = AMapCloudPOI()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<int> get_uid() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOI::get_uid", {'refId': refId});
   
@@ -62,8 +75,9 @@ class AMapCloudPOI extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapCloudImage()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_uid(int uid) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_uid', {'refId': refId, "uid": uid});
   
@@ -112,7 +126,9 @@ class AMapCloudPOI extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

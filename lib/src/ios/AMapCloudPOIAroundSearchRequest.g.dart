@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapCloudPOIAroundSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudPOIAroundSearchRequest');
+    final object = AMapCloudPOIAroundSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapGeoPoint> get_center() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOIAroundSearchRequest::get_center", {'refId': refId});
     kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
@@ -32,8 +45,9 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_center(AMapGeoPoint center) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_center', {'refId': refId, "center": center.refId});
   
@@ -52,7 +66,9 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

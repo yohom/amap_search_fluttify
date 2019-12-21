@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseRequest  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapRoadTrafficCircleSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoadTrafficCircleSearchRequest');
+    final object = AMapRoadTrafficCircleSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapGeoPoint> get_location() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficCircleSearchRequest::get_location", {'refId': refId});
     kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
@@ -26,8 +39,9 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_location(AMapGeoPoint location) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_location', {'refId': refId, "location": location.refId});
   
@@ -40,7 +54,9 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

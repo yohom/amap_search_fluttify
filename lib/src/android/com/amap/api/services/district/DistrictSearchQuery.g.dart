@@ -11,19 +11,50 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Object with android_os_Parcelable {
+  //region constants
   static final String KEYWORDS_COUNTRY = "country";
   static final String KEYWORDS_PROVINCE = "province";
   static final String KEYWORDS_CITY = "city";
   static final String KEYWORDS_DISTRICT = "district";
   static final String KEYWORDS_BUSINESS = "biz_area";
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_district_DistrictSearchQuery> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__');
+    final object = com_amap_api_services_district_DistrictSearchQuery()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  static Future<com_amap_api_services_district_DistrictSearchQuery> create__String__String__int(String var1, String var2, int var3) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int', {"var1": var1, "var2": var2, "var3": var3});
+    final object = com_amap_api_services_district_DistrictSearchQuery()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  static Future<com_amap_api_services_district_DistrictSearchQuery> create__String__String__int__boolean__int(String var1, String var2, int var3, bool var4, int var5) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int', {"var1": var1, "var2": var2, "var3": var3, "var4": var4, "var5": var5});
+    final object = com_amap_api_services_district_DistrictSearchQuery()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<void> setShowBoundary(bool var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -420,4 +451,5 @@ class com_amap_api_services_district_DistrictSearchQuery extends java_lang_Objec
     }
   }
   
+  //endregion
 }

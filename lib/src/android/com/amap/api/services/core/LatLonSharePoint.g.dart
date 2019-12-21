@@ -11,15 +11,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_core_LatLonPoint with android_os_Parcelable {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_core_LatLonSharePoint> create__double__double__String(double var1, double var3, String var5) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String', {"var1": var1, "var3": var3, "var5": var5});
+    final object = com_amap_api_services_core_LatLonSharePoint()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<String> getSharePointName() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -64,4 +79,5 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
     }
   }
   
+  //endregion
 }

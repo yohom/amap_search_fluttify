@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
   s.name             = 'amap_search_fluttify'
   s.version          = '0.0.1'
-  s.summary          = 'An `Amap` search component, Powered by `Fluttify` Engine.'
+  s.summary          = 'An `Amap` Search Component, Powered By `Fluttify` Engine.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC

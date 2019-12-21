@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Object  {
+  //region constants
   static final int DrivingDefault = 0;
   static final int DrivingSaveMoney = 1;
   static final int DrivingShortDistance = 2;
@@ -20,14 +21,21 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   static final int DrivingNoHighWaySaveMoney = 7;
   static final int DrivingSaveMoneyAvoidCongestion = 8;
   static final int DrivingNoHighAvoidCongestionSaveMoney = 9;
+  //endregion
 
-  // generate getters
+  //region creators
   
+  //endregion
 
-  // generate setters
+  //region getters
   
+  //endregion
 
-  // generate methods
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<void> setPoiSearchListener(com_amap_api_services_routepoisearch_RoutePOISearch_OnRoutePOISearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -135,4 +143,5 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
     }
   }
   
+  //endregion
 }

@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapSegment extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapSegment> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSegment');
+    final object = AMapSegment()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapWalking> get_walking() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSegment::get_walking", {'refId': refId});
     kNativeObjectPool.add(AMapWalking()..refId = result..tag = 'amap_search_fluttify');
@@ -62,8 +75,9 @@ class AMapSegment extends AMapSearchObject  {
     return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_walking(AMapWalking walking) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_walking', {'refId': refId, "walking": walking.refId});
   
@@ -112,7 +126,9 @@ class AMapSegment extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

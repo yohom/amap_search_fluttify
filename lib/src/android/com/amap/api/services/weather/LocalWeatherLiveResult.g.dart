@@ -11,15 +11,23 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Object  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
   
+  //endregion
 
-  // generate setters
+  //region getters
   
+  //endregion
 
-  // generate methods
+  //region setters
+  
+  //endregion
+
+  //region methods
   static Future<com_amap_api_services_weather_LocalWeatherLiveResult> createPagedResult(com_amap_api_services_weather_WeatherSearchQuery var0, com_amap_api_services_weather_LocalWeatherLive var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -86,4 +94,5 @@ class com_amap_api_services_weather_LocalWeatherLiveResult extends java_lang_Obj
     }
   }
   
+  //endregion
 }
