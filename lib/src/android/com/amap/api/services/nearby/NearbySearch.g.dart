@@ -11,16 +11,24 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
+  //region constants
   static final int GPS = 0;
   static final int AMAP = 1;
+  //endregion
 
-  // generate getters
+  //region creators
   
+  //endregion
 
-  // generate setters
+  //region getters
   
+  //endregion
 
-  // generate methods
+  //region setters
+  
+  //endregion
+
+  //region methods
   static Future<com_amap_api_services_nearby_NearbySearch> getInstance(android_content_Context var0) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -356,4 +364,5 @@ class com_amap_api_services_nearby_NearbySearch extends java_lang_Object  {
     }
   }
   
+  //endregion
 }

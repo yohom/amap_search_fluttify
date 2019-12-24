@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_core_AMapException extends java_lang_Object  {
+  //region constants
   static final int CODE_AMAP_SUCCESS = 1000;
   static final String AMAP_SIGNATURE_ERROR = "用户签名未通过";
   static final String AMAP_INVALID_USER_KEY = "用户key不正确或过期";
@@ -116,14 +117,44 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
   static final int AMAP_ERROR_CORE = 1;
   static final int AMAP_ERROR_LOCAL = 0;
   static final int AMAP_ERROR_LOCAL_STANDARDIZED = 4;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_core_AMapException> create__String(String var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__String', {"var1": var1});
+    final object = com_amap_api_services_core_AMapException()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  static Future<com_amap_api_services_core_AMapException> create__String__int__String(String var1, int var2, String var3) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String', {"var1": var1, "var2": var2, "var3": var3});
+    final object = com_amap_api_services_core_AMapException()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  static Future<com_amap_api_services_core_AMapException> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_core_AMapException__');
+    final object = com_amap_api_services_core_AMapException()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<int> getErrorLevel() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -212,4 +243,5 @@ class com_amap_api_services_core_AMapException extends java_lang_Object  {
     }
   }
   
+  //endregion
 }

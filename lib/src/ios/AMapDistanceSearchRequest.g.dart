@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapDistanceSearchRequest extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapDistanceSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapDistanceSearchRequest');
+    final object = AMapDistanceSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<List<AMapGeoPoint>> get_origins() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchRequest::get_origins", {'refId': refId});
     kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList());
@@ -32,8 +45,9 @@ class AMapDistanceSearchRequest extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_origins(List<AMapGeoPoint> origins) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_origins', {'refId': refId, "origins": origins.map((it) => it.refId).toList()});
   
@@ -52,7 +66,9 @@ class AMapDistanceSearchRequest extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

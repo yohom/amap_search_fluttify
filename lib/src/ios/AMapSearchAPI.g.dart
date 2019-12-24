@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapSearchAPI extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapSearchAPI> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSearchAPI');
+    final object = AMapSearchAPI()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<int> get_timeout() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapSearchAPI extends NSObject  {
     return AMapSearchLanguage.values[result];
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_delegate(AMapSearchDelegate delegate) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_delegate', {'refId': refId, "delegate": delegate.refId});
   
@@ -209,8 +223,9 @@ class AMapSearchAPI extends NSObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   Future<AMapSearchAPI> init() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -937,4 +952,5 @@ class AMapSearchAPI extends NSObject  {
     }
   }
   
+  //endregion
 }

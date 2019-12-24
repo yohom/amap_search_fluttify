@@ -11,24 +11,40 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapRoadTrafficSearchResponse extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapRoadTrafficSearchResponse> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse');
+    final object = AMapRoadTrafficSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'refId': refId});
     kNativeObjectPool.add(AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify');
     return AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_trafficInfo(AMapTrafficInfo trafficInfo) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo', {'refId': refId, "trafficInfo": trafficInfo.refId});
   
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

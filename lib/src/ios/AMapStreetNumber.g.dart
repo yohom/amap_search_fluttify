@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapStreetNumber extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapStreetNumber> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapStreetNumber');
+    final object = AMapStreetNumber()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_street() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_street", {'refId': refId});
   
@@ -44,8 +57,9 @@ class AMapStreetNumber extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_street(String street) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStreetNumber::set_street', {'refId': refId, "street": street});
   
@@ -76,7 +90,9 @@ class AMapStreetNumber extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

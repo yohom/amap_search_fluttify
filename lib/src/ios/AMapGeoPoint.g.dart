@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapGeoPoint extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapGeoPoint> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapGeoPoint');
+    final object = AMapGeoPoint()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<double> get_latitude() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPoint::get_latitude", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapGeoPoint extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_latitude(double latitude) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPoint::set_latitude', {'refId': refId, "latitude": latitude});
   
@@ -40,8 +54,9 @@ class AMapGeoPoint extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   static Future<AMapGeoPoint> locationWithLatitudeLongitude(double lat, double lon) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -64,4 +79,5 @@ class AMapGeoPoint extends AMapSearchObject  {
     }
   }
   
+  //endregion
 }

@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapFutureRouteSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureRouteSearchRequest');
+    final object = AMapFutureRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_beginTime() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_beginTime", {'refId': refId});
   
@@ -86,8 +99,9 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_beginTime(String beginTime) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_beginTime', {'refId': refId, "beginTime": beginTime});
   
@@ -160,7 +174,9 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
+  //region constants
   static final int BusDefault = 0;
   static final int BusSaveMoney = 1;
   static final int BusLeaseChange = 2;
@@ -91,14 +92,28 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
   static final int DRIVEING_PLAN_AVOID_CONGESTION_CHOICE_HIGHWAY = 9;
   static final int DRIVEING_PLAN_FASTEST_SHORTEST = 10;
   static final int DRIVEING_PLAN_AVOID_CONGESTION_FASTEST_SAVE_MONEY = 11;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_route_RouteSearch> create__android_content_Context(android_content_Context var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context', {"var1": var1.refId});
+    final object = com_amap_api_services_route_RouteSearch()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<void> setRouteSearchListener(com_amap_api_services_route_RouteSearch_OnRouteSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -513,4 +528,5 @@ class com_amap_api_services_route_RouteSearch extends java_lang_Object  {
     }
   }
   
+  //endregion
 }

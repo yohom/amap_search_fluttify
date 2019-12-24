@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapNavigationShareSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapNavigationShareSearchRequest');
+    final object = AMapNavigationShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<int> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNavigationShareSearchRequest::get_strategy", {'refId': refId});
   
@@ -32,8 +45,9 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
     return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_strategy(int strategy) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_strategy', {'refId': refId, "strategy": strategy});
   
@@ -52,7 +66,9 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

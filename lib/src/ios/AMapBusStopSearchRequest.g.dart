@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapBusStopSearchRequest extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapBusStopSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapBusStopSearchRequest');
+    final object = AMapBusStopSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_keywords", {'refId': refId});
   
@@ -38,8 +51,9 @@ class AMapBusStopSearchRequest extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_keywords(String keywords) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_keywords', {'refId': refId, "keywords": keywords});
   
@@ -64,7 +78,9 @@ class AMapBusStopSearchRequest extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

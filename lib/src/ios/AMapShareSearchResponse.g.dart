@@ -11,24 +11,40 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapShareSearchResponse extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapShareSearchResponse> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapShareSearchResponse');
+    final object = AMapShareSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_shareURL() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL", {'refId': refId});
   
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_shareURL(String shareURL) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL', {'refId': refId, "shareURL": shareURL});
   
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

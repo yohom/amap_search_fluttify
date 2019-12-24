@@ -11,17 +11,24 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapNearbySearchManager extends NSObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  
+  //endregion
+
+  //region getters
   Future<bool> get_isAutoUploading() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'refId': refId});
   
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
   
@@ -65,8 +72,9 @@ class AMapNearbySearchManager extends NSObject  {
       });
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   static Future<AMapNearbySearchManager> sharedInstance() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -177,4 +185,5 @@ class AMapNearbySearchManager extends NSObject  {
     }
   }
   
+  //endregion
 }

@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapLocalWeatherForecast extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapLocalWeatherForecast> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapLocalWeatherForecast');
+    final object = AMapLocalWeatherForecast()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_adcode() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherForecast::get_adcode", {'refId': refId});
   
@@ -44,8 +57,9 @@ class AMapLocalWeatherForecast extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapLocalDayWeatherForecast()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_adcode(String adcode) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherForecast::set_adcode', {'refId': refId, "adcode": adcode});
   
@@ -76,7 +90,9 @@ class AMapLocalWeatherForecast extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

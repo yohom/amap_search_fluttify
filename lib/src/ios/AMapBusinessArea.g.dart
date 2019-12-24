@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapBusinessArea extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapBusinessArea> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapBusinessArea');
+    final object = AMapBusinessArea()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusinessArea::get_name", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapBusinessArea extends AMapSearchObject  {
     return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_name(String name) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusinessArea::set_name', {'refId': refId, "name": name});
   
@@ -40,7 +54,9 @@ class AMapBusinessArea extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
   s.name             = 'amap_search_fluttify'
   s.version          = '0.0.1'
-  s.summary          = 'An `Amap` search component, Powered by `Fluttify` Engine.'
+  s.summary          = 'An `Amap` Search Component, Powered By `Fluttify` Engine.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
@@ -18,6 +18,8 @@ A new flutter plugin project.
   s.dependency 'foundation_fluttify'
   # flutter plugin dependency
   s.dependency 'amap_core_fluttify'
+  # sdk dependency
+  s.dependency 'AMapSearch', '6.9.0'
 
   s.ios.deployment_target = '8.0'
   # include project framework
@@ -26,11 +28,11 @@ A new flutter plugin project.
   s.vendored_libraries = '**/*.a'
   # ios system framework
   s.frameworks = [
-        "QuartzCore", "SystemConfiguration", "CoreTelephony", "Security", "OpenGLES", "CoreText", "CoreGraphics", "GLKit"
+        
   ]
   # ios system library
   s.libraries = [
-        "z", "c++"
+        
   ]
   # resources
   s.resources = '*.framework/*.bundle'

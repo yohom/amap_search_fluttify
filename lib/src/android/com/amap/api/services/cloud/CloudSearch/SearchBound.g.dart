@@ -11,18 +11,57 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Object  {
+  //region constants
   static final String BOUND_SHAPE = "Bound";
   static final String POLYGON_SHAPE = "Polygon";
   static final String RECTANGLE_SHAPE = "Rectangle";
   static final String LOCAL_SHAPE = "Local";
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__int(com_amap_api_services_core_LatLonPoint var1, int var2) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int', {"var1": var1.refId, "var2": var2});
+    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint', {"var1": var1.refId, "var2": var2.refId});
+    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__com_amap_api_services_core_LatLonPoint(List<com_amap_api_services_core_LatLonPoint> var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint', {"var1": var1.map((it) => it.refId).toList()});
+    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  static Future<com_amap_api_services_cloud_CloudSearch_SearchBound> create__String(String var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String', {"var1": var1});
+    final object = com_amap_api_services_cloud_CloudSearch_SearchBound()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<com_amap_api_services_core_LatLonPoint> getLowerLeft() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -199,4 +238,5 @@ class com_amap_api_services_cloud_CloudSearch_SearchBound extends java_lang_Obje
     }
   }
   
+  //endregion
 }

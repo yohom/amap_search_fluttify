@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapSuggestion extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapSuggestion> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSuggestion');
+    final object = AMapSuggestion()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<List<String>> get_keywords() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSuggestion::get_keywords", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapSuggestion extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapCity()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_keywords(List<String> keywords) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_keywords', {'refId': refId, "keywords": keywords});
   
@@ -40,7 +54,9 @@ class AMapSuggestion extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

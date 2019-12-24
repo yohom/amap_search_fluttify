@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapFutureTimeInfoElement extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapFutureTimeInfoElement> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureTimeInfoElement');
+    final object = AMapFutureTimeInfoElement()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<int> get_duration() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_duration", {'refId': refId});
   
@@ -38,8 +51,9 @@ class AMapFutureTimeInfoElement extends AMapSearchObject  {
     return (result as List).cast<int>().map((it) => AMapTMC()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_duration(int duration) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_duration', {'refId': refId, "duration": duration});
   
@@ -64,7 +78,9 @@ class AMapFutureTimeInfoElement extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

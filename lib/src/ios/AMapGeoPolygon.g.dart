@@ -11,25 +11,40 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapGeoPolygon extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapGeoPolygon> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapGeoPolygon');
+    final object = AMapGeoPolygon()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<List<AMapGeoPoint>> get_points() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPolygon::get_points", {'refId': refId});
     kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList());
     return (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_points(List<AMapGeoPoint> points) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::set_points', {'refId': refId, "points": points.map((it) => it.refId).toList()});
   
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   static Future<AMapGeoPolygon> polygonWithPoints(List<NSObject> points) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -52,4 +67,5 @@ class AMapGeoPolygon extends AMapSearchObject  {
     }
   }
   
+  //endregion
 }

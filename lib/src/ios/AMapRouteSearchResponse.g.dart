@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapRouteSearchResponse extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapRouteSearchResponse> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRouteSearchResponse');
+    final object = AMapRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<int> get_count() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchResponse::get_count", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
     return AMapRoute()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_count(int count) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_count', {'refId': refId, "count": count});
   
@@ -40,7 +54,9 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

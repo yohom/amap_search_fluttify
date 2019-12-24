@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapDrivingRouteSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapDrivingRouteSearchRequest');
+    final object = AMapDrivingRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<int> get_strategy() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDrivingRouteSearchRequest::get_strategy", {'refId': refId});
   
@@ -92,8 +105,9 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_strategy(int strategy) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_strategy', {'refId': refId, "strategy": strategy});
   
@@ -172,7 +186,9 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

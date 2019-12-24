@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapPOISearchBaseRequest extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapPOISearchBaseRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapPOISearchBaseRequest');
+    final object = AMapPOISearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_types() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOISearchBaseRequest::get_types", {'refId': refId});
   
@@ -56,8 +69,9 @@ class AMapPOISearchBaseRequest extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_types(String types) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_types', {'refId': refId, "types": types});
   
@@ -100,7 +114,9 @@ class AMapPOISearchBaseRequest extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

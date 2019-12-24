@@ -11,24 +11,40 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapDistanceSearchResponse extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapDistanceSearchResponse> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapDistanceSearchResponse');
+    final object = AMapDistanceSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<List<AMapDistanceResult>> get_results() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceSearchResponse::get_results", {'refId': refId});
     kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapDistanceResult()..refId = it..tag = 'amap_search_fluttify').toList());
     return (result as List).cast<int>().map((it) => AMapDistanceResult()..refId = it..tag = 'amap_search_fluttify').toList();
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_results(List<AMapDistanceResult> results) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchResponse::set_results', {'refId': refId, "results": results.map((it) => it.refId).toList()});
   
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

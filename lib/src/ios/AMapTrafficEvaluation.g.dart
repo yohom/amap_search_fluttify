@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapTrafficEvaluation extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapTrafficEvaluation> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTrafficEvaluation');
+    final object = AMapTrafficEvaluation()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_evaluationDescription() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficEvaluation::get_evaluationDescription", {'refId': refId});
   
@@ -50,8 +63,9 @@ class AMapTrafficEvaluation extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_evaluationDescription(String evaluationDescription) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_evaluationDescription', {'refId': refId, "evaluationDescription": evaluationDescription});
   
@@ -88,7 +102,9 @@ class AMapTrafficEvaluation extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

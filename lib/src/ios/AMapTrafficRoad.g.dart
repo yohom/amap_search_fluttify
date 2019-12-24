@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapTrafficRoad extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapTrafficRoad> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTrafficRoad');
+    final object = AMapTrafficRoad()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_name() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_name", {'refId': refId});
   
@@ -50,8 +63,9 @@ class AMapTrafficRoad extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_name(String name) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_name', {'refId': refId, "name": name});
   
@@ -88,7 +102,9 @@ class AMapTrafficRoad extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

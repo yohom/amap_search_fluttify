@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapRailwaySpace extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapRailwaySpace> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRailwaySpace');
+    final object = AMapRailwaySpace()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_code() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailwaySpace::get_code", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapRailwaySpace extends AMapSearchObject  {
     return result;
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_code(String code) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailwaySpace::set_code', {'refId': refId, "code": code});
   
@@ -40,7 +54,9 @@ class AMapRailwaySpace extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

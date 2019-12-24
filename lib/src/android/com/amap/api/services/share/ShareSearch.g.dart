@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
+  //region constants
   static final int BusDefault = 0;
   static final int BusSaveMoney = 1;
   static final int BusLeaseChange = 2;
@@ -35,14 +36,28 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   static final int NaviNoHighWayAvoidCongestion = 6;
   static final int NaviSaveMoneyAvoidCongestion = 7;
   static final int NaviNoHighWaySaveMoneyAvoidCongestion = 8;
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_share_ShareSearch> create__android_content_Context(android_content_Context var1) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_share_ShareSearch__android_content_Context', {"var1": var1.refId});
+    final object = com_amap_api_services_share_ShareSearch()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<void> setOnShareSearchListener(com_amap_api_services_share_ShareSearch_OnShareSearchListener var1) async {
     // print log
     if (fluttifyLogEnabled) {
@@ -393,4 +408,5 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
     }
   }
   
+  //endregion
 }

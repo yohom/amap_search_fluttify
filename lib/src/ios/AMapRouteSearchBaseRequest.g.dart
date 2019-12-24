@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapRouteSearchBaseRequest extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapRouteSearchBaseRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRouteSearchBaseRequest');
+    final object = AMapRouteSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<AMapGeoPoint> get_origin() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_origin", {'refId': refId});
     kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
@@ -26,8 +39,9 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject  {
     return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_origin(AMapGeoPoint origin) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_origin', {'refId': refId, "origin": origin.refId});
   
@@ -40,7 +54,9 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

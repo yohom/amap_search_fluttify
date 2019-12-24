@@ -11,9 +11,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class AMapWeatherSearchRequest extends AMapSearchObject  {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<AMapWeatherSearchRequest> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapWeatherSearchRequest');
+    final object = AMapWeatherSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  //endregion
+
+  //region getters
   Future<String> get_city() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city", {'refId': refId});
   
@@ -26,8 +39,9 @@ class AMapWeatherSearchRequest extends AMapSearchObject  {
     return AMapWeatherType.values[result];
   }
   
+  //endregion
 
-  // generate setters
+  //region setters
   Future<void> set_city(String city) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_city', {'refId': refId, "city": city});
   
@@ -40,7 +54,9 @@ class AMapWeatherSearchRequest extends AMapSearchObject  {
   
   }
   
+  //endregion
 
-  // generate methods
+  //region methods
   
+  //endregion
 }

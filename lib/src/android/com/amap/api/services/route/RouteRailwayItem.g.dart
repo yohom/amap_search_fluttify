@@ -11,15 +11,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services_route_Railway with android_os_Parcelable {
+  //region constants
   
+  //endregion
 
-  // generate getters
+  //region creators
+  static Future<com_amap_api_services_route_RouteRailwayItem> create() async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__');
+    final object = com_amap_api_services_route_RouteRailwayItem()..refId = refId..tag = 'amap_search_fluttify';
   
-
-  // generate setters
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
+  //endregion
 
-  // generate methods
+  //region getters
+  
+  //endregion
+
+  //region setters
+  
+  //endregion
+
+  //region methods
   Future<String> getTime() async {
     // print log
     if (fluttifyLogEnabled) {
@@ -416,4 +431,5 @@ class com_amap_api_services_route_RouteRailwayItem extends com_amap_api_services
     }
   }
   
+  //endregion
 }
