@@ -1,3 +1,6 @@
+## 0.7.1
+- roll engine #5c1b957
+
 ## 0.7.0
 - roll engine #ea37ae9
 
