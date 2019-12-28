@@ -16,7 +16,7 @@ class com_amap_api_services_route_BusStep extends java_lang_Object with android_
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_BusStep> create() async {
+  static Future<com_amap_api_services_route_BusStep> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_BusStep__');
     final object = com_amap_api_services_route_BusStep()..refId = refId..tag = 'amap_search_fluttify';
   

@@ -24,7 +24,7 @@ class com_amap_api_services_district_DistrictResult extends java_lang_Object wit
     return object;
   }
   
-  static Future<com_amap_api_services_district_DistrictResult> create() async {
+  static Future<com_amap_api_services_district_DistrictResult> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictResult__');
     final object = com_amap_api_services_district_DistrictResult()..refId = refId..tag = 'amap_search_fluttify';
   

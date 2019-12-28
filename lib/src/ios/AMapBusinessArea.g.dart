@@ -16,7 +16,7 @@ class AMapBusinessArea extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapBusinessArea> create() async {
+  static Future<AMapBusinessArea> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapBusinessArea');
     final object = AMapBusinessArea()..refId = refId..tag = 'amap_search_fluttify';
   

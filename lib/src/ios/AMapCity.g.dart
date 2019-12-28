@@ -16,7 +16,7 @@ class AMapCity extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapCity> create() async {
+  static Future<AMapCity> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCity');
     final object = AMapCity()..refId = refId..tag = 'amap_search_fluttify';
   

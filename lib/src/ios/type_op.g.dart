@@ -11,1033 +11,1036 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:amap_search_fluttify/src/ios/ios.export.g.dart';
 
 // ignore_for_file: non_constant_identifier_names, camel_case_types, missing_return, unused_import
-Future<bool> isKindOfAMapPOISearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIIDSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIIDSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIKeywordsSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIKeywordsSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIAroundSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIAroundSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIPolygonSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIPolygonSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOISearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoutePOISearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoutePOISearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapInputTipsSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapInputTipsSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapGeocodeSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapGeocodeSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapReGeocodeSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapReGeocodeSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusStopSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusStopSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusLineBaseSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineBaseSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusLineNameSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineNameSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusLineIDSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineIDSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusLineSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDistrictSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDistrictSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRouteSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDrivingRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapWalkingRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalkingRouteSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTransitRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransitRouteSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRidingRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRouteSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRidingRouteSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTruckRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTruckRouteSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDistanceSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDistanceSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapWeatherSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapWeatherSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoadTrafficSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoadTrafficSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoadTrafficCircleSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoadTrafficSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapNearbySearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapNearbySearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudSearchBaseRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudPOIAroundSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIAroundSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudPOIPolygonSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIPolygonSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudPOIIDSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIIDSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudPOILocalSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOILocalSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudPOISearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOISearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapShareSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchBaseRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapLocationShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocationShareSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIShareSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRouteShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteShareSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapNavigationShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNavigationShareSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapShareSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapFutureRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchRequest', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapFutureRouteSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchResponse', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapSearchObject(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchObject', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapGeoPoint(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPoint', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapGeoPolygon(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPolygon', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCity(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCity', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapSuggestion(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSuggestion', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTip(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTip', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapImage(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapImage', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOIExtension(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIExtension', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapIndoorData(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapIndoorData', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapSubPOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSubPOI', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoutePOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOI', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOI', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapAOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAOI', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoad(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoad', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoadInter(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadInter', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapStreetNumber(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStreetNumber', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusinessArea(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusinessArea', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapAddressComponent(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAddressComponent', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapReGeocode(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocode', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapGeocode(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocode', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusStop(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStop', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapBusLine(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLine', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDistrict(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrict', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTMC(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTMC', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapStep(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStep', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapPath(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPath', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapFutureTimeInfoElement(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfoElement', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapFutureTimeInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfo', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapWalking(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalking', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTaxi(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTaxi', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRailwayStation(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwayStation', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRailwaySpace(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwaySpace', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRailway(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailway', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapSegment(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSegment', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTransit(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransit', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapRoute(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoute', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapDistanceResult(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceResult', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapLocalWeatherLive(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherLive', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapLocalDayWeatherForecast(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalDayWeatherForecast', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapLocalWeatherForecast(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherForecast', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapNearbyUserInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUserInfo', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTrafficEvaluation(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficEvaluation', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTrafficRoad(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficRoad', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapTrafficInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficInfo', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudImage(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudImage', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapCloudPOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOI', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapNearbyUploadInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapNearbySearchManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'refId': ref.refId});
-  return result;
-}
-
-Future<bool> isKindOfAMapSearchAPI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchAPI', {'refId': ref.refId});
-  return result;
-}
-
-
-Future<AMapPOISearchBaseRequest> asAMapPOISearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOISearchBaseRequest', {'refId': ref.refId});
-  return AMapPOISearchBaseRequest()..refId = result;
-}
-
-Future<AMapPOIIDSearchRequest> asAMapPOIIDSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIIDSearchRequest', {'refId': ref.refId});
-  return AMapPOIIDSearchRequest()..refId = result;
-}
-
-Future<AMapPOIKeywordsSearchRequest> asAMapPOIKeywordsSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIKeywordsSearchRequest', {'refId': ref.refId});
-  return AMapPOIKeywordsSearchRequest()..refId = result;
-}
-
-Future<AMapPOIAroundSearchRequest> asAMapPOIAroundSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIAroundSearchRequest', {'refId': ref.refId});
-  return AMapPOIAroundSearchRequest()..refId = result;
-}
-
-Future<AMapPOIPolygonSearchRequest> asAMapPOIPolygonSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIPolygonSearchRequest', {'refId': ref.refId});
-  return AMapPOIPolygonSearchRequest()..refId = result;
-}
-
-Future<AMapPOISearchResponse> asAMapPOISearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOISearchResponse', {'refId': ref.refId});
-  return AMapPOISearchResponse()..refId = result;
-}
-
-Future<AMapRoutePOISearchRequest> asAMapRoutePOISearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOISearchRequest', {'refId': ref.refId});
-  return AMapRoutePOISearchRequest()..refId = result;
-}
-
-Future<AMapRoutePOISearchResponse> asAMapRoutePOISearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOISearchResponse', {'refId': ref.refId});
-  return AMapRoutePOISearchResponse()..refId = result;
-}
-
-Future<AMapInputTipsSearchRequest> asAMapInputTipsSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapInputTipsSearchRequest', {'refId': ref.refId});
-  return AMapInputTipsSearchRequest()..refId = result;
-}
-
-Future<AMapInputTipsSearchResponse> asAMapInputTipsSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapInputTipsSearchResponse', {'refId': ref.refId});
-  return AMapInputTipsSearchResponse()..refId = result;
-}
-
-Future<AMapGeocodeSearchRequest> asAMapGeocodeSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocodeSearchRequest', {'refId': ref.refId});
-  return AMapGeocodeSearchRequest()..refId = result;
-}
-
-Future<AMapGeocodeSearchResponse> asAMapGeocodeSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocodeSearchResponse', {'refId': ref.refId});
-  return AMapGeocodeSearchResponse()..refId = result;
-}
-
-Future<AMapReGeocodeSearchRequest> asAMapReGeocodeSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocodeSearchRequest', {'refId': ref.refId});
-  return AMapReGeocodeSearchRequest()..refId = result;
-}
-
-Future<AMapReGeocodeSearchResponse> asAMapReGeocodeSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocodeSearchResponse', {'refId': ref.refId});
-  return AMapReGeocodeSearchResponse()..refId = result;
-}
-
-Future<AMapBusStopSearchRequest> asAMapBusStopSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStopSearchRequest', {'refId': ref.refId});
-  return AMapBusStopSearchRequest()..refId = result;
-}
-
-Future<AMapBusStopSearchResponse> asAMapBusStopSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStopSearchResponse', {'refId': ref.refId});
-  return AMapBusStopSearchResponse()..refId = result;
-}
-
-Future<AMapBusLineBaseSearchRequest> asAMapBusLineBaseSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineBaseSearchRequest', {'refId': ref.refId});
-  return AMapBusLineBaseSearchRequest()..refId = result;
-}
-
-Future<AMapBusLineNameSearchRequest> asAMapBusLineNameSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineNameSearchRequest', {'refId': ref.refId});
-  return AMapBusLineNameSearchRequest()..refId = result;
-}
-
-Future<AMapBusLineIDSearchRequest> asAMapBusLineIDSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineIDSearchRequest', {'refId': ref.refId});
-  return AMapBusLineIDSearchRequest()..refId = result;
-}
-
-Future<AMapBusLineSearchResponse> asAMapBusLineSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineSearchResponse', {'refId': ref.refId});
-  return AMapBusLineSearchResponse()..refId = result;
-}
-
-Future<AMapDistrictSearchRequest> asAMapDistrictSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrictSearchRequest', {'refId': ref.refId});
-  return AMapDistrictSearchRequest()..refId = result;
-}
-
-Future<AMapDistrictSearchResponse> asAMapDistrictSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrictSearchResponse', {'refId': ref.refId});
-  return AMapDistrictSearchResponse()..refId = result;
-}
-
-Future<AMapRouteSearchBaseRequest> asAMapRouteSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteSearchBaseRequest', {'refId': ref.refId});
-  return AMapRouteSearchBaseRequest()..refId = result;
-}
-
-Future<AMapDrivingRouteSearchRequest> asAMapDrivingRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDrivingRouteSearchRequest', {'refId': ref.refId});
-  return AMapDrivingRouteSearchRequest()..refId = result;
-}
-
-Future<AMapWalkingRouteSearchRequest> asAMapWalkingRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWalkingRouteSearchRequest', {'refId': ref.refId});
-  return AMapWalkingRouteSearchRequest()..refId = result;
-}
-
-Future<AMapTransitRouteSearchRequest> asAMapTransitRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTransitRouteSearchRequest', {'refId': ref.refId});
-  return AMapTransitRouteSearchRequest()..refId = result;
-}
-
-Future<AMapRidingRouteSearchRequest> asAMapRidingRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRidingRouteSearchRequest', {'refId': ref.refId});
-  return AMapRidingRouteSearchRequest()..refId = result;
-}
-
-Future<AMapRouteSearchResponse> asAMapRouteSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteSearchResponse', {'refId': ref.refId});
-  return AMapRouteSearchResponse()..refId = result;
-}
-
-Future<AMapRidingRouteSearchResponse> asAMapRidingRouteSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRidingRouteSearchResponse', {'refId': ref.refId});
-  return AMapRidingRouteSearchResponse()..refId = result;
-}
-
-Future<AMapTruckRouteSearchRequest> asAMapTruckRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTruckRouteSearchRequest', {'refId': ref.refId});
-  return AMapTruckRouteSearchRequest()..refId = result;
-}
-
-Future<AMapDistanceSearchRequest> asAMapDistanceSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceSearchRequest', {'refId': ref.refId});
-  return AMapDistanceSearchRequest()..refId = result;
-}
-
-Future<AMapDistanceSearchResponse> asAMapDistanceSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceSearchResponse', {'refId': ref.refId});
-  return AMapDistanceSearchResponse()..refId = result;
-}
-
-Future<AMapWeatherSearchRequest> asAMapWeatherSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWeatherSearchRequest', {'refId': ref.refId});
-  return AMapWeatherSearchRequest()..refId = result;
-}
-
-Future<AMapWeatherSearchResponse> asAMapWeatherSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWeatherSearchResponse', {'refId': ref.refId});
-  return AMapWeatherSearchResponse()..refId = result;
-}
-
-Future<AMapRoadTrafficSearchBaseRequest> asAMapRoadTrafficSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchBaseRequest', {'refId': ref.refId});
-  return AMapRoadTrafficSearchBaseRequest()..refId = result;
-}
-
-Future<AMapRoadTrafficSearchRequest> asAMapRoadTrafficSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchRequest', {'refId': ref.refId});
-  return AMapRoadTrafficSearchRequest()..refId = result;
-}
-
-Future<AMapRoadTrafficCircleSearchRequest> asAMapRoadTrafficCircleSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficCircleSearchRequest', {'refId': ref.refId});
-  return AMapRoadTrafficCircleSearchRequest()..refId = result;
-}
-
-Future<AMapRoadTrafficSearchResponse> asAMapRoadTrafficSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchResponse', {'refId': ref.refId});
-  return AMapRoadTrafficSearchResponse()..refId = result;
-}
-
-Future<AMapNearbySearchRequest> asAMapNearbySearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchRequest', {'refId': ref.refId});
-  return AMapNearbySearchRequest()..refId = result;
-}
-
-Future<AMapNearbySearchResponse> asAMapNearbySearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchResponse', {'refId': ref.refId});
-  return AMapNearbySearchResponse()..refId = result;
-}
-
-Future<AMapCloudSearchBaseRequest> asAMapCloudSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudSearchBaseRequest', {'refId': ref.refId});
-  return AMapCloudSearchBaseRequest()..refId = result;
-}
-
-Future<AMapCloudPOIAroundSearchRequest> asAMapCloudPOIAroundSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIAroundSearchRequest', {'refId': ref.refId});
-  return AMapCloudPOIAroundSearchRequest()..refId = result;
-}
-
-Future<AMapCloudPOIPolygonSearchRequest> asAMapCloudPOIPolygonSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIPolygonSearchRequest', {'refId': ref.refId});
-  return AMapCloudPOIPolygonSearchRequest()..refId = result;
-}
-
-Future<AMapCloudPOIIDSearchRequest> asAMapCloudPOIIDSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIIDSearchRequest', {'refId': ref.refId});
-  return AMapCloudPOIIDSearchRequest()..refId = result;
-}
-
-Future<AMapCloudPOILocalSearchRequest> asAMapCloudPOILocalSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOILocalSearchRequest', {'refId': ref.refId});
-  return AMapCloudPOILocalSearchRequest()..refId = result;
-}
-
-Future<AMapCloudPOISearchResponse> asAMapCloudPOISearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOISearchResponse', {'refId': ref.refId});
-  return AMapCloudPOISearchResponse()..refId = result;
-}
-
-Future<AMapShareSearchBaseRequest> asAMapShareSearchBaseRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapShareSearchBaseRequest', {'refId': ref.refId});
-  return AMapShareSearchBaseRequest()..refId = result;
-}
-
-Future<AMapLocationShareSearchRequest> asAMapLocationShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocationShareSearchRequest', {'refId': ref.refId});
-  return AMapLocationShareSearchRequest()..refId = result;
-}
-
-Future<AMapPOIShareSearchRequest> asAMapPOIShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIShareSearchRequest', {'refId': ref.refId});
-  return AMapPOIShareSearchRequest()..refId = result;
-}
-
-Future<AMapRouteShareSearchRequest> asAMapRouteShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteShareSearchRequest', {'refId': ref.refId});
-  return AMapRouteShareSearchRequest()..refId = result;
-}
-
-Future<AMapNavigationShareSearchRequest> asAMapNavigationShareSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNavigationShareSearchRequest', {'refId': ref.refId});
-  return AMapNavigationShareSearchRequest()..refId = result;
-}
-
-Future<AMapShareSearchResponse> asAMapShareSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapShareSearchResponse', {'refId': ref.refId});
-  return AMapShareSearchResponse()..refId = result;
-}
-
-Future<AMapFutureRouteSearchRequest> asAMapFutureRouteSearchRequest(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureRouteSearchRequest', {'refId': ref.refId});
-  return AMapFutureRouteSearchRequest()..refId = result;
-}
-
-Future<AMapFutureRouteSearchResponse> asAMapFutureRouteSearchResponse(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureRouteSearchResponse', {'refId': ref.refId});
-  return AMapFutureRouteSearchResponse()..refId = result;
-}
-
-Future<AMapSearchObject> asAMapSearchObject(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSearchObject', {'refId': ref.refId});
-  return AMapSearchObject()..refId = result;
-}
-
-Future<AMapGeoPoint> asAMapGeoPoint(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeoPoint', {'refId': ref.refId});
-  return AMapGeoPoint()..refId = result;
-}
-
-Future<AMapGeoPolygon> asAMapGeoPolygon(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeoPolygon', {'refId': ref.refId});
-  return AMapGeoPolygon()..refId = result;
-}
-
-Future<AMapCity> asAMapCity(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCity', {'refId': ref.refId});
-  return AMapCity()..refId = result;
-}
-
-Future<AMapSuggestion> asAMapSuggestion(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSuggestion', {'refId': ref.refId});
-  return AMapSuggestion()..refId = result;
-}
-
-Future<AMapTip> asAMapTip(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTip', {'refId': ref.refId});
-  return AMapTip()..refId = result;
-}
-
-Future<AMapImage> asAMapImage(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapImage', {'refId': ref.refId});
-  return AMapImage()..refId = result;
-}
-
-Future<AMapPOIExtension> asAMapPOIExtension(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIExtension', {'refId': ref.refId});
-  return AMapPOIExtension()..refId = result;
-}
-
-Future<AMapIndoorData> asAMapIndoorData(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapIndoorData', {'refId': ref.refId});
-  return AMapIndoorData()..refId = result;
-}
-
-Future<AMapSubPOI> asAMapSubPOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSubPOI', {'refId': ref.refId});
-  return AMapSubPOI()..refId = result;
-}
-
-Future<AMapRoutePOI> asAMapRoutePOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOI', {'refId': ref.refId});
-  return AMapRoutePOI()..refId = result;
-}
-
-Future<AMapPOI> asAMapPOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOI', {'refId': ref.refId});
-  return AMapPOI()..refId = result;
-}
-
-Future<AMapAOI> asAMapAOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapAOI', {'refId': ref.refId});
-  return AMapAOI()..refId = result;
-}
-
-Future<AMapRoad> asAMapRoad(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoad', {'refId': ref.refId});
-  return AMapRoad()..refId = result;
-}
-
-Future<AMapRoadInter> asAMapRoadInter(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadInter', {'refId': ref.refId});
-  return AMapRoadInter()..refId = result;
-}
-
-Future<AMapStreetNumber> asAMapStreetNumber(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapStreetNumber', {'refId': ref.refId});
-  return AMapStreetNumber()..refId = result;
-}
-
-Future<AMapBusinessArea> asAMapBusinessArea(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusinessArea', {'refId': ref.refId});
-  return AMapBusinessArea()..refId = result;
-}
-
-Future<AMapAddressComponent> asAMapAddressComponent(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapAddressComponent', {'refId': ref.refId});
-  return AMapAddressComponent()..refId = result;
-}
-
-Future<AMapReGeocode> asAMapReGeocode(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocode', {'refId': ref.refId});
-  return AMapReGeocode()..refId = result;
-}
-
-Future<AMapGeocode> asAMapGeocode(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocode', {'refId': ref.refId});
-  return AMapGeocode()..refId = result;
-}
-
-Future<AMapBusStop> asAMapBusStop(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStop', {'refId': ref.refId});
-  return AMapBusStop()..refId = result;
-}
-
-Future<AMapBusLine> asAMapBusLine(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLine', {'refId': ref.refId});
-  return AMapBusLine()..refId = result;
-}
-
-Future<AMapDistrict> asAMapDistrict(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrict', {'refId': ref.refId});
-  return AMapDistrict()..refId = result;
-}
-
-Future<AMapTMC> asAMapTMC(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTMC', {'refId': ref.refId});
-  return AMapTMC()..refId = result;
-}
-
-Future<AMapStep> asAMapStep(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapStep', {'refId': ref.refId});
-  return AMapStep()..refId = result;
-}
-
-Future<AMapPath> asAMapPath(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPath', {'refId': ref.refId});
-  return AMapPath()..refId = result;
-}
-
-Future<AMapFutureTimeInfoElement> asAMapFutureTimeInfoElement(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureTimeInfoElement', {'refId': ref.refId});
-  return AMapFutureTimeInfoElement()..refId = result;
-}
-
-Future<AMapFutureTimeInfo> asAMapFutureTimeInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureTimeInfo', {'refId': ref.refId});
-  return AMapFutureTimeInfo()..refId = result;
-}
-
-Future<AMapWalking> asAMapWalking(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWalking', {'refId': ref.refId});
-  return AMapWalking()..refId = result;
-}
-
-Future<AMapTaxi> asAMapTaxi(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTaxi', {'refId': ref.refId});
-  return AMapTaxi()..refId = result;
-}
-
-Future<AMapRailwayStation> asAMapRailwayStation(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailwayStation', {'refId': ref.refId});
-  return AMapRailwayStation()..refId = result;
-}
-
-Future<AMapRailwaySpace> asAMapRailwaySpace(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailwaySpace', {'refId': ref.refId});
-  return AMapRailwaySpace()..refId = result;
-}
-
-Future<AMapRailway> asAMapRailway(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailway', {'refId': ref.refId});
-  return AMapRailway()..refId = result;
-}
-
-Future<AMapSegment> asAMapSegment(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSegment', {'refId': ref.refId});
-  return AMapSegment()..refId = result;
-}
-
-Future<AMapTransit> asAMapTransit(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTransit', {'refId': ref.refId});
-  return AMapTransit()..refId = result;
-}
-
-Future<AMapRoute> asAMapRoute(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoute', {'refId': ref.refId});
-  return AMapRoute()..refId = result;
-}
-
-Future<AMapDistanceResult> asAMapDistanceResult(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceResult', {'refId': ref.refId});
-  return AMapDistanceResult()..refId = result;
-}
-
-Future<AMapLocalWeatherLive> asAMapLocalWeatherLive(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalWeatherLive', {'refId': ref.refId});
-  return AMapLocalWeatherLive()..refId = result;
-}
-
-Future<AMapLocalDayWeatherForecast> asAMapLocalDayWeatherForecast(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalDayWeatherForecast', {'refId': ref.refId});
-  return AMapLocalDayWeatherForecast()..refId = result;
-}
-
-Future<AMapLocalWeatherForecast> asAMapLocalWeatherForecast(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalWeatherForecast', {'refId': ref.refId});
-  return AMapLocalWeatherForecast()..refId = result;
-}
-
-Future<AMapNearbyUserInfo> asAMapNearbyUserInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbyUserInfo', {'refId': ref.refId});
-  return AMapNearbyUserInfo()..refId = result;
-}
-
-Future<AMapTrafficEvaluation> asAMapTrafficEvaluation(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficEvaluation', {'refId': ref.refId});
-  return AMapTrafficEvaluation()..refId = result;
-}
-
-Future<AMapTrafficRoad> asAMapTrafficRoad(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficRoad', {'refId': ref.refId});
-  return AMapTrafficRoad()..refId = result;
-}
-
-Future<AMapTrafficInfo> asAMapTrafficInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficInfo', {'refId': ref.refId});
-  return AMapTrafficInfo()..refId = result;
-}
-
-Future<AMapCloudImage> asAMapCloudImage(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudImage', {'refId': ref.refId});
-  return AMapCloudImage()..refId = result;
-}
-
-Future<AMapCloudPOI> asAMapCloudPOI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOI', {'refId': ref.refId});
-  return AMapCloudPOI()..refId = result;
-}
-
-Future<AMapNearbyUploadInfo> asAMapNearbyUploadInfo(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbyUploadInfo', {'refId': ref.refId});
-  return AMapNearbyUploadInfo()..refId = result;
-}
-
-Future<AMapNearbySearchManager> asAMapNearbySearchManager(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchManager', {'refId': ref.refId});
-  return AMapNearbySearchManager()..refId = result;
-}
-
-Future<AMapSearchAPI> asAMapSearchAPI(Ref ref) async {
-  final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSearchAPI', {'refId': ref.refId});
-  return AMapSearchAPI()..refId = result;
+extension on Ref {
+  Future<bool> isAMapPOISearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchBaseRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIIDSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIIDSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIKeywordsSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIKeywordsSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIAroundSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIAroundSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIPolygonSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIPolygonSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOISearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOISearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoutePOISearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoutePOISearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOISearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapInputTipsSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapInputTipsSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapInputTipsSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapGeocodeSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapGeocodeSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocodeSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapReGeocodeSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapReGeocodeSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocodeSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusStopSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusStopSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStopSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusLineBaseSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineBaseSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusLineNameSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineNameSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusLineIDSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineIDSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusLineSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLineSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDistrictSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDistrictSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrictSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRouteSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchBaseRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDrivingRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDrivingRouteSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapWalkingRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalkingRouteSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTransitRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransitRouteSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRidingRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRouteSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRidingRouteSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRidingRouteSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTruckRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTruckRouteSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDistanceSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDistanceSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapWeatherSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapWeatherSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWeatherSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoadTrafficSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchBaseRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoadTrafficSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoadTrafficCircleSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficCircleSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoadTrafficSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadTrafficSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNearbySearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNearbySearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudSearchBaseRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudPOIAroundSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIAroundSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudPOIPolygonSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIPolygonSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudPOIIDSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOIIDSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudPOILocalSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOILocalSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudPOISearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOISearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapShareSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchBaseRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapLocationShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocationShareSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIShareSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRouteShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRouteShareSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNavigationShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNavigationShareSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapShareSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapShareSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapFutureRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchRequest', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapFutureRouteSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureRouteSearchResponse', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapSearchObject() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchObject', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapGeoPoint() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPoint', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapGeoPolygon() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeoPolygon', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCity() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCity', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapSuggestion() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSuggestion', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTip() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTip', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapImage() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapImage', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOIExtension() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOIExtension', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapIndoorData() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapIndoorData', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapSubPOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSubPOI', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoutePOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoutePOI', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPOI', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapAOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAOI', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoad() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoad', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoadInter() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoadInter', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapStreetNumber() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStreetNumber', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusinessArea() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusinessArea', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapAddressComponent() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapAddressComponent', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapReGeocode() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapReGeocode', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapGeocode() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapGeocode', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusStop() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusStop', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapBusLine() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapBusLine', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDistrict() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistrict', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTMC() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTMC', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapStep() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapStep', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapPath() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapPath', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapFutureTimeInfoElement() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfoElement', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapFutureTimeInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapFutureTimeInfo', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapWalking() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapWalking', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTaxi() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTaxi', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRailwayStation() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwayStation', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRailwaySpace() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailwaySpace', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRailway() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRailway', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapSegment() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSegment', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTransit() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTransit', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapRoute() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapRoute', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapDistanceResult() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapDistanceResult', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapLocalWeatherLive() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherLive', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapLocalDayWeatherForecast() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalDayWeatherForecast', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapLocalWeatherForecast() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapLocalWeatherForecast', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNearbyUserInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUserInfo', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTrafficEvaluation() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficEvaluation', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTrafficRoad() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficRoad', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapTrafficInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapTrafficInfo', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudImage() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudImage', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapCloudPOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapCloudPOI', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNearbyUploadInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbyUploadInfo', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapNearbySearchManager() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapNearbySearchManager', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> isAMapSearchAPI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfAMapSearchAPI', {'refId': refId});
+    return result;
+  }
+  
+
+  Future<AMapPOISearchBaseRequest> asAMapPOISearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOISearchBaseRequest', {'refId': refId});
+    return AMapPOISearchBaseRequest()..refId = result;
+  }
+  
+  Future<AMapPOIIDSearchRequest> asAMapPOIIDSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIIDSearchRequest', {'refId': refId});
+    return AMapPOIIDSearchRequest()..refId = result;
+  }
+  
+  Future<AMapPOIKeywordsSearchRequest> asAMapPOIKeywordsSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIKeywordsSearchRequest', {'refId': refId});
+    return AMapPOIKeywordsSearchRequest()..refId = result;
+  }
+  
+  Future<AMapPOIAroundSearchRequest> asAMapPOIAroundSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIAroundSearchRequest', {'refId': refId});
+    return AMapPOIAroundSearchRequest()..refId = result;
+  }
+  
+  Future<AMapPOIPolygonSearchRequest> asAMapPOIPolygonSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIPolygonSearchRequest', {'refId': refId});
+    return AMapPOIPolygonSearchRequest()..refId = result;
+  }
+  
+  Future<AMapPOISearchResponse> asAMapPOISearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOISearchResponse', {'refId': refId});
+    return AMapPOISearchResponse()..refId = result;
+  }
+  
+  Future<AMapRoutePOISearchRequest> asAMapRoutePOISearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOISearchRequest', {'refId': refId});
+    return AMapRoutePOISearchRequest()..refId = result;
+  }
+  
+  Future<AMapRoutePOISearchResponse> asAMapRoutePOISearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOISearchResponse', {'refId': refId});
+    return AMapRoutePOISearchResponse()..refId = result;
+  }
+  
+  Future<AMapInputTipsSearchRequest> asAMapInputTipsSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapInputTipsSearchRequest', {'refId': refId});
+    return AMapInputTipsSearchRequest()..refId = result;
+  }
+  
+  Future<AMapInputTipsSearchResponse> asAMapInputTipsSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapInputTipsSearchResponse', {'refId': refId});
+    return AMapInputTipsSearchResponse()..refId = result;
+  }
+  
+  Future<AMapGeocodeSearchRequest> asAMapGeocodeSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocodeSearchRequest', {'refId': refId});
+    return AMapGeocodeSearchRequest()..refId = result;
+  }
+  
+  Future<AMapGeocodeSearchResponse> asAMapGeocodeSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocodeSearchResponse', {'refId': refId});
+    return AMapGeocodeSearchResponse()..refId = result;
+  }
+  
+  Future<AMapReGeocodeSearchRequest> asAMapReGeocodeSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocodeSearchRequest', {'refId': refId});
+    return AMapReGeocodeSearchRequest()..refId = result;
+  }
+  
+  Future<AMapReGeocodeSearchResponse> asAMapReGeocodeSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocodeSearchResponse', {'refId': refId});
+    return AMapReGeocodeSearchResponse()..refId = result;
+  }
+  
+  Future<AMapBusStopSearchRequest> asAMapBusStopSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStopSearchRequest', {'refId': refId});
+    return AMapBusStopSearchRequest()..refId = result;
+  }
+  
+  Future<AMapBusStopSearchResponse> asAMapBusStopSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStopSearchResponse', {'refId': refId});
+    return AMapBusStopSearchResponse()..refId = result;
+  }
+  
+  Future<AMapBusLineBaseSearchRequest> asAMapBusLineBaseSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineBaseSearchRequest', {'refId': refId});
+    return AMapBusLineBaseSearchRequest()..refId = result;
+  }
+  
+  Future<AMapBusLineNameSearchRequest> asAMapBusLineNameSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineNameSearchRequest', {'refId': refId});
+    return AMapBusLineNameSearchRequest()..refId = result;
+  }
+  
+  Future<AMapBusLineIDSearchRequest> asAMapBusLineIDSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineIDSearchRequest', {'refId': refId});
+    return AMapBusLineIDSearchRequest()..refId = result;
+  }
+  
+  Future<AMapBusLineSearchResponse> asAMapBusLineSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLineSearchResponse', {'refId': refId});
+    return AMapBusLineSearchResponse()..refId = result;
+  }
+  
+  Future<AMapDistrictSearchRequest> asAMapDistrictSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrictSearchRequest', {'refId': refId});
+    return AMapDistrictSearchRequest()..refId = result;
+  }
+  
+  Future<AMapDistrictSearchResponse> asAMapDistrictSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrictSearchResponse', {'refId': refId});
+    return AMapDistrictSearchResponse()..refId = result;
+  }
+  
+  Future<AMapRouteSearchBaseRequest> asAMapRouteSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteSearchBaseRequest', {'refId': refId});
+    return AMapRouteSearchBaseRequest()..refId = result;
+  }
+  
+  Future<AMapDrivingRouteSearchRequest> asAMapDrivingRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDrivingRouteSearchRequest', {'refId': refId});
+    return AMapDrivingRouteSearchRequest()..refId = result;
+  }
+  
+  Future<AMapWalkingRouteSearchRequest> asAMapWalkingRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWalkingRouteSearchRequest', {'refId': refId});
+    return AMapWalkingRouteSearchRequest()..refId = result;
+  }
+  
+  Future<AMapTransitRouteSearchRequest> asAMapTransitRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTransitRouteSearchRequest', {'refId': refId});
+    return AMapTransitRouteSearchRequest()..refId = result;
+  }
+  
+  Future<AMapRidingRouteSearchRequest> asAMapRidingRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRidingRouteSearchRequest', {'refId': refId});
+    return AMapRidingRouteSearchRequest()..refId = result;
+  }
+  
+  Future<AMapRouteSearchResponse> asAMapRouteSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteSearchResponse', {'refId': refId});
+    return AMapRouteSearchResponse()..refId = result;
+  }
+  
+  Future<AMapRidingRouteSearchResponse> asAMapRidingRouteSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRidingRouteSearchResponse', {'refId': refId});
+    return AMapRidingRouteSearchResponse()..refId = result;
+  }
+  
+  Future<AMapTruckRouteSearchRequest> asAMapTruckRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTruckRouteSearchRequest', {'refId': refId});
+    return AMapTruckRouteSearchRequest()..refId = result;
+  }
+  
+  Future<AMapDistanceSearchRequest> asAMapDistanceSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceSearchRequest', {'refId': refId});
+    return AMapDistanceSearchRequest()..refId = result;
+  }
+  
+  Future<AMapDistanceSearchResponse> asAMapDistanceSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceSearchResponse', {'refId': refId});
+    return AMapDistanceSearchResponse()..refId = result;
+  }
+  
+  Future<AMapWeatherSearchRequest> asAMapWeatherSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWeatherSearchRequest', {'refId': refId});
+    return AMapWeatherSearchRequest()..refId = result;
+  }
+  
+  Future<AMapWeatherSearchResponse> asAMapWeatherSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWeatherSearchResponse', {'refId': refId});
+    return AMapWeatherSearchResponse()..refId = result;
+  }
+  
+  Future<AMapRoadTrafficSearchBaseRequest> asAMapRoadTrafficSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchBaseRequest', {'refId': refId});
+    return AMapRoadTrafficSearchBaseRequest()..refId = result;
+  }
+  
+  Future<AMapRoadTrafficSearchRequest> asAMapRoadTrafficSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchRequest', {'refId': refId});
+    return AMapRoadTrafficSearchRequest()..refId = result;
+  }
+  
+  Future<AMapRoadTrafficCircleSearchRequest> asAMapRoadTrafficCircleSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficCircleSearchRequest', {'refId': refId});
+    return AMapRoadTrafficCircleSearchRequest()..refId = result;
+  }
+  
+  Future<AMapRoadTrafficSearchResponse> asAMapRoadTrafficSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadTrafficSearchResponse', {'refId': refId});
+    return AMapRoadTrafficSearchResponse()..refId = result;
+  }
+  
+  Future<AMapNearbySearchRequest> asAMapNearbySearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchRequest', {'refId': refId});
+    return AMapNearbySearchRequest()..refId = result;
+  }
+  
+  Future<AMapNearbySearchResponse> asAMapNearbySearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchResponse', {'refId': refId});
+    return AMapNearbySearchResponse()..refId = result;
+  }
+  
+  Future<AMapCloudSearchBaseRequest> asAMapCloudSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudSearchBaseRequest', {'refId': refId});
+    return AMapCloudSearchBaseRequest()..refId = result;
+  }
+  
+  Future<AMapCloudPOIAroundSearchRequest> asAMapCloudPOIAroundSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIAroundSearchRequest', {'refId': refId});
+    return AMapCloudPOIAroundSearchRequest()..refId = result;
+  }
+  
+  Future<AMapCloudPOIPolygonSearchRequest> asAMapCloudPOIPolygonSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIPolygonSearchRequest', {'refId': refId});
+    return AMapCloudPOIPolygonSearchRequest()..refId = result;
+  }
+  
+  Future<AMapCloudPOIIDSearchRequest> asAMapCloudPOIIDSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOIIDSearchRequest', {'refId': refId});
+    return AMapCloudPOIIDSearchRequest()..refId = result;
+  }
+  
+  Future<AMapCloudPOILocalSearchRequest> asAMapCloudPOILocalSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOILocalSearchRequest', {'refId': refId});
+    return AMapCloudPOILocalSearchRequest()..refId = result;
+  }
+  
+  Future<AMapCloudPOISearchResponse> asAMapCloudPOISearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOISearchResponse', {'refId': refId});
+    return AMapCloudPOISearchResponse()..refId = result;
+  }
+  
+  Future<AMapShareSearchBaseRequest> asAMapShareSearchBaseRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapShareSearchBaseRequest', {'refId': refId});
+    return AMapShareSearchBaseRequest()..refId = result;
+  }
+  
+  Future<AMapLocationShareSearchRequest> asAMapLocationShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocationShareSearchRequest', {'refId': refId});
+    return AMapLocationShareSearchRequest()..refId = result;
+  }
+  
+  Future<AMapPOIShareSearchRequest> asAMapPOIShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIShareSearchRequest', {'refId': refId});
+    return AMapPOIShareSearchRequest()..refId = result;
+  }
+  
+  Future<AMapRouteShareSearchRequest> asAMapRouteShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRouteShareSearchRequest', {'refId': refId});
+    return AMapRouteShareSearchRequest()..refId = result;
+  }
+  
+  Future<AMapNavigationShareSearchRequest> asAMapNavigationShareSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNavigationShareSearchRequest', {'refId': refId});
+    return AMapNavigationShareSearchRequest()..refId = result;
+  }
+  
+  Future<AMapShareSearchResponse> asAMapShareSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapShareSearchResponse', {'refId': refId});
+    return AMapShareSearchResponse()..refId = result;
+  }
+  
+  Future<AMapFutureRouteSearchRequest> asAMapFutureRouteSearchRequest() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureRouteSearchRequest', {'refId': refId});
+    return AMapFutureRouteSearchRequest()..refId = result;
+  }
+  
+  Future<AMapFutureRouteSearchResponse> asAMapFutureRouteSearchResponse() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureRouteSearchResponse', {'refId': refId});
+    return AMapFutureRouteSearchResponse()..refId = result;
+  }
+  
+  Future<AMapSearchObject> asAMapSearchObject() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSearchObject', {'refId': refId});
+    return AMapSearchObject()..refId = result;
+  }
+  
+  Future<AMapGeoPoint> asAMapGeoPoint() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeoPoint', {'refId': refId});
+    return AMapGeoPoint()..refId = result;
+  }
+  
+  Future<AMapGeoPolygon> asAMapGeoPolygon() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeoPolygon', {'refId': refId});
+    return AMapGeoPolygon()..refId = result;
+  }
+  
+  Future<AMapCity> asAMapCity() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCity', {'refId': refId});
+    return AMapCity()..refId = result;
+  }
+  
+  Future<AMapSuggestion> asAMapSuggestion() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSuggestion', {'refId': refId});
+    return AMapSuggestion()..refId = result;
+  }
+  
+  Future<AMapTip> asAMapTip() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTip', {'refId': refId});
+    return AMapTip()..refId = result;
+  }
+  
+  Future<AMapImage> asAMapImage() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapImage', {'refId': refId});
+    return AMapImage()..refId = result;
+  }
+  
+  Future<AMapPOIExtension> asAMapPOIExtension() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOIExtension', {'refId': refId});
+    return AMapPOIExtension()..refId = result;
+  }
+  
+  Future<AMapIndoorData> asAMapIndoorData() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapIndoorData', {'refId': refId});
+    return AMapIndoorData()..refId = result;
+  }
+  
+  Future<AMapSubPOI> asAMapSubPOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSubPOI', {'refId': refId});
+    return AMapSubPOI()..refId = result;
+  }
+  
+  Future<AMapRoutePOI> asAMapRoutePOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoutePOI', {'refId': refId});
+    return AMapRoutePOI()..refId = result;
+  }
+  
+  Future<AMapPOI> asAMapPOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPOI', {'refId': refId});
+    return AMapPOI()..refId = result;
+  }
+  
+  Future<AMapAOI> asAMapAOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapAOI', {'refId': refId});
+    return AMapAOI()..refId = result;
+  }
+  
+  Future<AMapRoad> asAMapRoad() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoad', {'refId': refId});
+    return AMapRoad()..refId = result;
+  }
+  
+  Future<AMapRoadInter> asAMapRoadInter() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoadInter', {'refId': refId});
+    return AMapRoadInter()..refId = result;
+  }
+  
+  Future<AMapStreetNumber> asAMapStreetNumber() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapStreetNumber', {'refId': refId});
+    return AMapStreetNumber()..refId = result;
+  }
+  
+  Future<AMapBusinessArea> asAMapBusinessArea() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusinessArea', {'refId': refId});
+    return AMapBusinessArea()..refId = result;
+  }
+  
+  Future<AMapAddressComponent> asAMapAddressComponent() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapAddressComponent', {'refId': refId});
+    return AMapAddressComponent()..refId = result;
+  }
+  
+  Future<AMapReGeocode> asAMapReGeocode() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapReGeocode', {'refId': refId});
+    return AMapReGeocode()..refId = result;
+  }
+  
+  Future<AMapGeocode> asAMapGeocode() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapGeocode', {'refId': refId});
+    return AMapGeocode()..refId = result;
+  }
+  
+  Future<AMapBusStop> asAMapBusStop() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusStop', {'refId': refId});
+    return AMapBusStop()..refId = result;
+  }
+  
+  Future<AMapBusLine> asAMapBusLine() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapBusLine', {'refId': refId});
+    return AMapBusLine()..refId = result;
+  }
+  
+  Future<AMapDistrict> asAMapDistrict() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistrict', {'refId': refId});
+    return AMapDistrict()..refId = result;
+  }
+  
+  Future<AMapTMC> asAMapTMC() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTMC', {'refId': refId});
+    return AMapTMC()..refId = result;
+  }
+  
+  Future<AMapStep> asAMapStep() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapStep', {'refId': refId});
+    return AMapStep()..refId = result;
+  }
+  
+  Future<AMapPath> asAMapPath() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapPath', {'refId': refId});
+    return AMapPath()..refId = result;
+  }
+  
+  Future<AMapFutureTimeInfoElement> asAMapFutureTimeInfoElement() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureTimeInfoElement', {'refId': refId});
+    return AMapFutureTimeInfoElement()..refId = result;
+  }
+  
+  Future<AMapFutureTimeInfo> asAMapFutureTimeInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapFutureTimeInfo', {'refId': refId});
+    return AMapFutureTimeInfo()..refId = result;
+  }
+  
+  Future<AMapWalking> asAMapWalking() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapWalking', {'refId': refId});
+    return AMapWalking()..refId = result;
+  }
+  
+  Future<AMapTaxi> asAMapTaxi() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTaxi', {'refId': refId});
+    return AMapTaxi()..refId = result;
+  }
+  
+  Future<AMapRailwayStation> asAMapRailwayStation() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailwayStation', {'refId': refId});
+    return AMapRailwayStation()..refId = result;
+  }
+  
+  Future<AMapRailwaySpace> asAMapRailwaySpace() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailwaySpace', {'refId': refId});
+    return AMapRailwaySpace()..refId = result;
+  }
+  
+  Future<AMapRailway> asAMapRailway() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRailway', {'refId': refId});
+    return AMapRailway()..refId = result;
+  }
+  
+  Future<AMapSegment> asAMapSegment() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSegment', {'refId': refId});
+    return AMapSegment()..refId = result;
+  }
+  
+  Future<AMapTransit> asAMapTransit() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTransit', {'refId': refId});
+    return AMapTransit()..refId = result;
+  }
+  
+  Future<AMapRoute> asAMapRoute() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapRoute', {'refId': refId});
+    return AMapRoute()..refId = result;
+  }
+  
+  Future<AMapDistanceResult> asAMapDistanceResult() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapDistanceResult', {'refId': refId});
+    return AMapDistanceResult()..refId = result;
+  }
+  
+  Future<AMapLocalWeatherLive> asAMapLocalWeatherLive() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalWeatherLive', {'refId': refId});
+    return AMapLocalWeatherLive()..refId = result;
+  }
+  
+  Future<AMapLocalDayWeatherForecast> asAMapLocalDayWeatherForecast() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalDayWeatherForecast', {'refId': refId});
+    return AMapLocalDayWeatherForecast()..refId = result;
+  }
+  
+  Future<AMapLocalWeatherForecast> asAMapLocalWeatherForecast() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapLocalWeatherForecast', {'refId': refId});
+    return AMapLocalWeatherForecast()..refId = result;
+  }
+  
+  Future<AMapNearbyUserInfo> asAMapNearbyUserInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbyUserInfo', {'refId': refId});
+    return AMapNearbyUserInfo()..refId = result;
+  }
+  
+  Future<AMapTrafficEvaluation> asAMapTrafficEvaluation() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficEvaluation', {'refId': refId});
+    return AMapTrafficEvaluation()..refId = result;
+  }
+  
+  Future<AMapTrafficRoad> asAMapTrafficRoad() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficRoad', {'refId': refId});
+    return AMapTrafficRoad()..refId = result;
+  }
+  
+  Future<AMapTrafficInfo> asAMapTrafficInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapTrafficInfo', {'refId': refId});
+    return AMapTrafficInfo()..refId = result;
+  }
+  
+  Future<AMapCloudImage> asAMapCloudImage() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudImage', {'refId': refId});
+    return AMapCloudImage()..refId = result;
+  }
+  
+  Future<AMapCloudPOI> asAMapCloudPOI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapCloudPOI', {'refId': refId});
+    return AMapCloudPOI()..refId = result;
+  }
+  
+  Future<AMapNearbyUploadInfo> asAMapNearbyUploadInfo() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbyUploadInfo', {'refId': refId});
+    return AMapNearbyUploadInfo()..refId = result;
+  }
+  
+  Future<AMapNearbySearchManager> asAMapNearbySearchManager() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapNearbySearchManager', {'refId': refId});
+    return AMapNearbySearchManager()..refId = result;
+  }
+  
+  Future<AMapSearchAPI> asAMapSearchAPI() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::asAMapSearchAPI', {'refId': refId});
+    return AMapSearchAPI()..refId = result;
+  }
+  
 }

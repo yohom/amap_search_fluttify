@@ -16,7 +16,7 @@ class AMapStreetNumber extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapStreetNumber> create() async {
+  static Future<AMapStreetNumber> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapStreetNumber');
     final object = AMapStreetNumber()..refId = refId..tag = 'amap_search_fluttify';
   

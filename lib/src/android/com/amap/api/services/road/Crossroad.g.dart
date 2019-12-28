@@ -16,7 +16,7 @@ class com_amap_api_services_road_Crossroad extends com_amap_api_services_road_Ro
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_road_Crossroad> create() async {
+  static Future<com_amap_api_services_road_Crossroad> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_road_Crossroad__');
     final object = com_amap_api_services_road_Crossroad()..refId = refId..tag = 'amap_search_fluttify';
   

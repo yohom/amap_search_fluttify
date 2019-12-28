@@ -16,7 +16,7 @@ class AMapDistrictSearchResponse extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapDistrictSearchResponse> create() async {
+  static Future<AMapDistrictSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapDistrictSearchResponse');
     final object = AMapDistrictSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   

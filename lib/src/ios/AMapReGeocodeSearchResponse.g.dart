@@ -16,7 +16,7 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapReGeocodeSearchResponse> create() async {
+  static Future<AMapReGeocodeSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapReGeocodeSearchResponse');
     final object = AMapReGeocodeSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   

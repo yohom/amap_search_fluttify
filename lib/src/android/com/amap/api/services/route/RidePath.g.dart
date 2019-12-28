@@ -16,7 +16,7 @@ class com_amap_api_services_route_RidePath extends com_amap_api_services_route_P
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RidePath> create() async {
+  static Future<com_amap_api_services_route_RidePath> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RidePath__');
     final object = com_amap_api_services_route_RidePath()..refId = refId..tag = 'amap_search_fluttify';
   

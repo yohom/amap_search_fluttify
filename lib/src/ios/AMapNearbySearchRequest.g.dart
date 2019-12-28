@@ -16,7 +16,7 @@ class AMapNearbySearchRequest extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapNearbySearchRequest> create() async {
+  static Future<AMapNearbySearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapNearbySearchRequest');
     final object = AMapNearbySearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

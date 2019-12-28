@@ -16,7 +16,7 @@ class AMapTMC extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapTMC> create() async {
+  static Future<AMapTMC> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTMC');
     final object = AMapTMC()..refId = refId..tag = 'amap_search_fluttify';
   

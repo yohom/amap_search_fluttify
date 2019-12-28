@@ -16,7 +16,7 @@ class AMapRoutePOISearchResponse extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapRoutePOISearchResponse> create() async {
+  static Future<AMapRoutePOISearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoutePOISearchResponse');
     final object = AMapRoutePOISearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   

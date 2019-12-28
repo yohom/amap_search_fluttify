@@ -16,7 +16,7 @@ class AMapRailway extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapRailway> create() async {
+  static Future<AMapRailway> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRailway');
     final object = AMapRailway()..refId = refId..tag = 'amap_search_fluttify';
   

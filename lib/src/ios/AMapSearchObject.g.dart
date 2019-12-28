@@ -16,7 +16,7 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapSearchObject> create() async {
+  static Future<AMapSearchObject> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSearchObject');
     final object = AMapSearchObject()..refId = refId..tag = 'amap_search_fluttify';
   

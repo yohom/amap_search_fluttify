@@ -16,7 +16,7 @@ class AMapInputTipsSearchRequest extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapInputTipsSearchRequest> create() async {
+  static Future<AMapInputTipsSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapInputTipsSearchRequest');
     final object = AMapInputTipsSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

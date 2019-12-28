@@ -16,7 +16,7 @@ class AMapLocalWeatherLive extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapLocalWeatherLive> create() async {
+  static Future<AMapLocalWeatherLive> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapLocalWeatherLive');
     final object = AMapLocalWeatherLive()..refId = refId..tag = 'amap_search_fluttify';
   

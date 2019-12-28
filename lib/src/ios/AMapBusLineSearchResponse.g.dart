@@ -16,7 +16,7 @@ class AMapBusLineSearchResponse extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapBusLineSearchResponse> create() async {
+  static Future<AMapBusLineSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapBusLineSearchResponse');
     final object = AMapBusLineSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   

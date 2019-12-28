@@ -16,7 +16,7 @@ class AMapFutureTimeInfo extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapFutureTimeInfo> create() async {
+  static Future<AMapFutureTimeInfo> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureTimeInfo');
     final object = AMapFutureTimeInfo()..refId = refId..tag = 'amap_search_fluttify';
   

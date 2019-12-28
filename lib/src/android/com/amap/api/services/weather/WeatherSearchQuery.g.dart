@@ -25,7 +25,7 @@ class com_amap_api_services_weather_WeatherSearchQuery extends java_lang_Object 
     return object;
   }
   
-  static Future<com_amap_api_services_weather_WeatherSearchQuery> create() async {
+  static Future<com_amap_api_services_weather_WeatherSearchQuery> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__');
     final object = com_amap_api_services_weather_WeatherSearchQuery()..refId = refId..tag = 'amap_search_fluttify';
   

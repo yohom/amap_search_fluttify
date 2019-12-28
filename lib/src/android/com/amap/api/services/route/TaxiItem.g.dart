@@ -16,7 +16,7 @@ class com_amap_api_services_route_TaxiItem extends java_lang_Object with android
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_TaxiItem> create() async {
+  static Future<com_amap_api_services_route_TaxiItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_TaxiItem__');
     final object = com_amap_api_services_route_TaxiItem()..refId = refId..tag = 'amap_search_fluttify';
   

@@ -16,7 +16,7 @@ class AMapLocationShareSearchRequest extends AMapShareSearchBaseRequest  {
   //endregion
 
   //region creators
-  static Future<AMapLocationShareSearchRequest> create() async {
+  static Future<AMapLocationShareSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapLocationShareSearchRequest');
     final object = AMapLocationShareSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

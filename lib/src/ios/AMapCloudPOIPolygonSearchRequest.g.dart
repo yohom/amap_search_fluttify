@@ -16,7 +16,7 @@ class AMapCloudPOIPolygonSearchRequest extends AMapCloudSearchBaseRequest  {
   //endregion
 
   //region creators
-  static Future<AMapCloudPOIPolygonSearchRequest> create() async {
+  static Future<AMapCloudPOIPolygonSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudPOIPolygonSearchRequest');
     final object = AMapCloudPOIPolygonSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

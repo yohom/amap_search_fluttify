@@ -16,7 +16,7 @@ class AMapRoadInter extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapRoadInter> create() async {
+  static Future<AMapRoadInter> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoadInter');
     final object = AMapRoadInter()..refId = refId..tag = 'amap_search_fluttify';
   
