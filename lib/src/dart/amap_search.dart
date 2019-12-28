@@ -62,13 +62,13 @@ class AmapSearch {
         pool..add(query)..add(context);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建请求对象
-        final request = await AMapPOIKeywordsSearchRequest.create();
+        final request = await AMapPOIKeywordsSearchRequest.create__();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -134,13 +134,13 @@ class AmapSearch {
         pool..add(query)..add(centerLatLng)..add(bound);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建周边搜索请求
-        final request = await AMapPOIAroundSearchRequest.create();
+        final request = await AMapPOIAroundSearchRequest.create__();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -148,7 +148,7 @@ class AmapSearch {
         // 设置搜索类别
         await request.set_types(type);
         // 创建中心点
-        final location = await AMapGeoPoint.create();
+        final location = await AMapGeoPoint.create__();
         await location.set_latitude(center.latitude);
         await location.set_longitude(center.longitude);
         await request.set_location(location);
@@ -203,13 +203,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapInputTipsSearchRequest.create();
+        final request = await AMapInputTipsSearchRequest.create__();
         // 设置关键字
         await request.set_keywords(keyword);
         // 设置城市
@@ -261,13 +261,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapGeocodeSearchRequest.create();
+        final request = await AMapGeocodeSearchRequest.create__();
         // 设置关键字
         await request.set_address(keyword);
         // 设置城市
@@ -324,10 +324,10 @@ class AmapSearch {
         pool..add(latLngPoint)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 创建中心点
-        final amapLocation = await AMapGeoPoint.create();
+        final amapLocation = await AMapGeoPoint.create__();
         await amapLocation.set_latitude(latLng.latitude);
         await amapLocation.set_longitude(latLng.longitude);
 
@@ -335,7 +335,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapReGeocodeSearchRequest.create();
+        final request = await AMapReGeocodeSearchRequest.create__();
         // 设置中心点
         await request.set_location(amapLocation);
         // 设置半径
@@ -430,14 +430,14 @@ class AmapSearch {
           ..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 创建起点
-        final fromLatLng = await AMapGeoPoint.create();
+        final fromLatLng = await AMapGeoPoint.create__();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AMapGeoPoint.create();
+        final toLatLng = await AMapGeoPoint.create__();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -445,7 +445,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapDrivingRouteSearchRequest.create();
+        final request = await AMapDrivingRouteSearchRequest.create__();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -457,7 +457,7 @@ class AmapSearch {
         // 设置途经点
         final List<AMapGeoPoint> passby = [];
         for (var item in passedByPoints) {
-          final geoPoint = await AMapGeoPoint.create();
+          final geoPoint = await AMapGeoPoint.create__();
           await geoPoint.set_latitude(item.latitude);
           await geoPoint.set_longitude(item.longitude);
           passby.add(geoPoint);
@@ -542,14 +542,14 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 创建起点
-        final fromLatLng = await AMapGeoPoint.create();
+        final fromLatLng = await AMapGeoPoint.create__();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AMapGeoPoint.create();
+        final toLatLng = await AMapGeoPoint.create__();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -557,7 +557,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapWalkingRouteSearchRequest.create();
+        final request = await AMapWalkingRouteSearchRequest.create__();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -631,14 +631,14 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 创建起点
-        final fromLatLng = await AMapGeoPoint.create();
+        final fromLatLng = await AMapGeoPoint.create__();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AMapGeoPoint.create();
+        final toLatLng = await AMapGeoPoint.create__();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -646,7 +646,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapWalkingRouteSearchRequest.create();
+        final request = await AMapWalkingRouteSearchRequest.create__();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -718,14 +718,14 @@ class AmapSearch {
         pool..add(fromLatLng)..add(toLatLng)..add(fromAndTo)..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 创建起点
-        final fromLatLng = await AMapGeoPoint.create();
+        final fromLatLng = await AMapGeoPoint.create__();
         await fromLatLng.set_latitude(from.latitude);
         await fromLatLng.set_longitude(from.longitude);
         // 创建终点
-        final toLatLng = await AMapGeoPoint.create();
+        final toLatLng = await AMapGeoPoint.create__();
         await toLatLng.set_latitude(to.latitude);
         await toLatLng.set_longitude(to.longitude);
 
@@ -733,7 +733,7 @@ class AmapSearch {
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapRidingRouteSearchRequest.create();
+        final request = await AMapRidingRouteSearchRequest.create__();
         // 设置起点
         await request.set_origin(fromLatLng);
         // 设置终点
@@ -791,13 +791,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapBusStopSearchRequest.create();
+        final request = await AMapBusStopSearchRequest.create__();
         // 设置站点名称
         await request.set_keywords(stationName);
         // 设置所在城市
@@ -828,7 +828,7 @@ class AmapSearch {
       android: (pool) async {
         // 创建请求对象
         final query =
-            await com_amap_api_services_district_DistrictSearchQuery.create();
+            await com_amap_api_services_district_DistrictSearchQuery.create__();
         // 关键字
         await query.setKeywords(district);
         // 是否获取边界信息
@@ -856,13 +856,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapDistrictSearchRequest.create();
+        final request = await AMapDistrictSearchRequest.create__();
         // 设置站点名称
         await request.set_keywords(district);
         // 是否获取边界信息
@@ -915,13 +915,13 @@ class AmapSearch {
         pool..add(query);
       },
       ios: (pool) async {
-        _iosSearch = await AMapSearchAPI.create();
+        _iosSearch = await AMapSearchAPI.create__();
 
         // 设置回调
         await _iosSearch.set_delegate(_IOSSearchListener(_controller));
 
         // 创建搜索请求
-        final request = await AMapWeatherSearchRequest.create();
+        final request = await AMapWeatherSearchRequest.create__();
         // 设置站点名称
         await request.set_city(city);
         await request.set_type(AMapWeatherType.values[mode]);
@@ -1184,13 +1184,13 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     super.onRouteSearchDoneResponse(request, response);
     dynamic route;
-    if (await isKindOfAMapDrivingRouteSearchRequest(request)) {
+    if (await request.isAMapDrivingRouteSearchRequest()) {
       route = DriveRouteResult.ios(await response.get_route());
-    } else if (await isKindOfAMapWalkingRouteSearchRequest(request)) {
+    } else if (await request.isAMapWalkingRouteSearchRequest()) {
       route = WalkRouteResult.ios(await response.get_route());
-    } else if (await isKindOfAMapBusLineBaseSearchRequest(request)) {
+    } else if (await request.isAMapBusLineBaseSearchRequest()) {
       route = BusRouteResult.ios(await response.get_route());
-    } else if (await isKindOfAMapRidingRouteSearchRequest(request)) {
+    } else if (await request.isAMapRidingRouteSearchRequest()) {
       route = RideRouteResult.ios(await response.get_route());
     }
     if (_streamController?.isClosed == false) {
