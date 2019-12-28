@@ -16,7 +16,7 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
   //endregion
 
   //region creators
-  static Future<AMapRoadTrafficCircleSearchRequest> create() async {
+  static Future<AMapRoadTrafficCircleSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoadTrafficCircleSearchRequest');
     final object = AMapRoadTrafficCircleSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

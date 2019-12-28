@@ -16,7 +16,7 @@ class AMapIndoorData extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapIndoorData> create() async {
+  static Future<AMapIndoorData> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapIndoorData');
     final object = AMapIndoorData()..refId = refId..tag = 'amap_search_fluttify';
   

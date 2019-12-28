@@ -16,7 +16,7 @@ class com_amap_api_services_district_DistrictItem extends java_lang_Object with 
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_district_DistrictItem> create() async {
+  static Future<com_amap_api_services_district_DistrictItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_district_DistrictItem__');
     final object = com_amap_api_services_district_DistrictItem()..refId = refId..tag = 'amap_search_fluttify';
   

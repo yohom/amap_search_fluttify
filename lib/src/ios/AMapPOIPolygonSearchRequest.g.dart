@@ -16,7 +16,7 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest  {
   //endregion
 
   //region creators
-  static Future<AMapPOIPolygonSearchRequest> create() async {
+  static Future<AMapPOIPolygonSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapPOIPolygonSearchRequest');
     final object = AMapPOIPolygonSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

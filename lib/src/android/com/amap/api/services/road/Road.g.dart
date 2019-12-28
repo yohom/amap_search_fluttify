@@ -16,7 +16,7 @@ class com_amap_api_services_road_Road extends java_lang_Object with android_os_P
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_road_Road> create() async {
+  static Future<com_amap_api_services_road_Road> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_road_Road__');
     final object = com_amap_api_services_road_Road()..refId = refId..tag = 'amap_search_fluttify';
   

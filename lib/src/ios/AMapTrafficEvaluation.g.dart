@@ -16,7 +16,7 @@ class AMapTrafficEvaluation extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapTrafficEvaluation> create() async {
+  static Future<AMapTrafficEvaluation> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTrafficEvaluation');
     final object = AMapTrafficEvaluation()..refId = refId..tag = 'amap_search_fluttify';
   

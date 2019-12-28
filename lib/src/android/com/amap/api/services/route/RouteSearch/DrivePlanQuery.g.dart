@@ -24,7 +24,7 @@ class com_amap_api_services_route_RouteSearch_DrivePlanQuery extends java_lang_O
     return object;
   }
   
-  static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create() async {
+  static Future<com_amap_api_services_route_RouteSearch_DrivePlanQuery> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__');
     final object = com_amap_api_services_route_RouteSearch_DrivePlanQuery()..refId = refId..tag = 'amap_search_fluttify';
   

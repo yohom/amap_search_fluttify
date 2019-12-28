@@ -16,7 +16,7 @@ class AMapCloudImage extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapCloudImage> create() async {
+  static Future<AMapCloudImage> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudImage');
     final object = AMapCloudImage()..refId = refId..tag = 'amap_search_fluttify';
   

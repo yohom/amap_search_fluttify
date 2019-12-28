@@ -16,7 +16,7 @@ class AMapSearchAPI extends NSObject  {
   //endregion
 
   //region creators
-  static Future<AMapSearchAPI> create() async {
+  static Future<AMapSearchAPI> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSearchAPI');
     final object = AMapSearchAPI()..refId = refId..tag = 'amap_search_fluttify';
   

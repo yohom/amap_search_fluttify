@@ -16,7 +16,7 @@ class com_amap_api_services_route_RouteBusWalkItem extends com_amap_api_services
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteBusWalkItem> create() async {
+  static Future<com_amap_api_services_route_RouteBusWalkItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__');
     final object = com_amap_api_services_route_RouteBusWalkItem()..refId = refId..tag = 'amap_search_fluttify';
   

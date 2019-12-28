@@ -16,7 +16,7 @@ class AMapSegment extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapSegment> create() async {
+  static Future<AMapSegment> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSegment');
     final object = AMapSegment()..refId = refId..tag = 'amap_search_fluttify';
   

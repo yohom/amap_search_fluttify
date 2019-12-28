@@ -16,7 +16,7 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   //endregion
 
   //region creators
-  static Future<AMapFutureRouteSearchRequest> create() async {
+  static Future<AMapFutureRouteSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureRouteSearchRequest');
     final object = AMapFutureRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

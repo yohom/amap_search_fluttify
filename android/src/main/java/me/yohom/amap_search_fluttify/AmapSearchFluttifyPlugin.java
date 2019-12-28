@@ -13,22 +13,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
+import io.flutter.plugin.platform.PlatformViewRegistry;
+
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
-import androidx.annotation.NonNull;
+import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 
-// todo 启用新的embedding
 @SuppressWarnings("ALL")
-public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler {
+public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler {
 
-    private AmapSearchFluttifyPlugin(Registrar registrar) {
-        this.registrar = registrar;
-    }
-
-    private Registrar registrar;
+    private BinaryMessenger messenger;
 
     private final Map<String, Handler> handlerMap = new HashMap<String, Handler>() {{
         // getter
@@ -718,7 +717,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -2319,7 +2318,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusStationSearch::setOnBusStationSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -2513,7 +2512,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.busline.BusLineSearch::setOnBusLineSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -7800,7 +7799,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.poisearch.PoiSearch::setOnPoiSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -10635,7 +10634,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.RouteSearch::setRouteSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -10777,7 +10776,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.RouteSearch::setOnTruckRouteSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -10838,7 +10837,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.RouteSearch::setOnRoutePlanSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -17494,7 +17493,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.route.DistanceSearch::setDistanceSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -24122,7 +24121,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::addNearbyListener::Callback");
         
                 // call dart method
                 @Override
@@ -24229,7 +24228,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::removeNearbyListener::Callback");
         
                 // call dart method
                 @Override
@@ -24396,7 +24395,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.nearby.NearbySearch::startUploadNearbyInfoAuto::Callback");
         
                 // call dart method
                 @Override
@@ -25324,7 +25323,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setPoiSearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.routepoisearch.RoutePOISearch::setPoiSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -26976,7 +26975,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnCloudSearchListener(new com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -28930,7 +28929,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnWeatherSearchListener(new com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.weather.WeatherSearch::setOnWeatherSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -29996,7 +29995,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnGeocodeSearchListener(new com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.geocoder.GeocodeSearch::setOnGeocodeSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -34059,7 +34058,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.district.DistrictSearch::setOnDistrictSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -35631,7 +35630,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.help.Inputtips::setInputtipsListener::Callback");
         
                 // call dart method
                 @Override
@@ -35954,7 +35953,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnDistrictSearchListener(new com.amap.api.services.district.DistrictSearch.OnDistrictSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IDistrictSearch::setOnDistrictSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IDistrictSearch::setOnDistrictSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -36086,7 +36085,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnBusStationSearchListener(new com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IBusStationSearch::setOnBusStationSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IBusStationSearch::setOnBusStationSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -36243,7 +36242,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnRouteSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRouteSearch::setRouteSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IRouteSearch::setRouteSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -36385,7 +36384,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnTruckRouteSearchListener(new com.amap.api.services.route.RouteSearch.OnTruckRouteSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRouteSearch::setOnTruckRouteSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IRouteSearch::setOnTruckRouteSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -36446,7 +36445,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnRoutePlanSearchListener(new com.amap.api.services.route.RouteSearch.OnRoutePlanSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRouteSearch::setOnRoutePlanSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IRouteSearch::setOnRoutePlanSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -36915,7 +36914,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IShareSearch::setOnShareSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IShareSearch::setOnShareSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -37471,7 +37470,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setRoutePOISearchListener(new com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IRoutePOISearch::setRoutePOISearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IRoutePOISearch::setRoutePOISearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -37665,7 +37664,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setTrafficSearchListener(new com.amap.api.services.traffic.TrafficSearch.OnTrafficSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.ITrafficSearch::setTrafficSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -37793,7 +37792,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setInputtipsListener(new com.amap.api.services.help.Inputtips.InputtipsListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IInputtipsSearch::setInputtipsListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IInputtipsSearch::setInputtipsListener::Callback");
         
                 // call dart method
                 @Override
@@ -38069,7 +38068,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnGeocodeSearchListener(new com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IGeocodeSearch::setOnGeocodeSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IGeocodeSearch::setOnGeocodeSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -38217,7 +38216,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnCloudSearchListener(new com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.ICloudSearch::setOnCloudSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -38435,7 +38434,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setDistanceSearchListener(new com.amap.api.services.route.DistanceSearch.OnDistanceSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IDistanceSearch::setDistanceSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -38496,7 +38495,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnPoiSearchListener(new com.amap.api.services.poisearch.PoiSearch.OnPoiSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IPoiSearch::setOnPoiSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -39008,7 +39007,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnWeatherSearchListener(new com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IWeatherSearch::setOnWeatherSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IWeatherSearch::setOnWeatherSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -39096,7 +39095,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.addNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.INearbySearch::addNearbyListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.INearbySearch::addNearbyListener::Callback");
         
                 // call dart method
                 @Override
@@ -39203,7 +39202,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.removeNearbyListener(new com.amap.api.services.nearby.NearbySearch.NearbyListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.INearbySearch::removeNearbyListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.INearbySearch::removeNearbyListener::Callback");
         
                 // call dart method
                 @Override
@@ -39370,7 +39369,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.startUploadNearbyInfoAuto(new com.amap.api.services.nearby.UploadInfoCallback() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.INearbySearch::startUploadNearbyInfoAuto::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.INearbySearch::startUploadNearbyInfoAuto::Callback");
         
                 // call dart method
                 @Override
@@ -39619,7 +39618,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnBusLineSearchListener(new com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.interfaces.IBusLineSearch::setOnBusLineSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -39910,7 +39909,7 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
             try {
                 ref.setOnShareSearchListener(new com.amap.api.services.share.ShareSearch.OnShareSearchListener() {
                 // method channel
-                MethodChannel callbackChannel = new MethodChannel(registrar.messenger(), "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback");
+                MethodChannel callbackChannel = new MethodChannel(messenger, "com.amap.api.services.share.ShareSearch::setOnShareSearchListener::Callback");
         
                 // call dart method
                 @Override
@@ -43671,12 +43670,39 @@ public class AmapSearchFluttifyPlugin implements MethodChannel.MethodCallHandler
         });
     }};
 
+    // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
-        MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/amap_search_fluttify");
-        channel.setMethodCallHandler(new AmapSearchFluttifyPlugin(registrar));
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "me.yohom/amap_search_fluttify");
+
+        AmapSearchFluttifyPlugin plugin = new AmapSearchFluttifyPlugin();
+        BinaryMessenger messenger = registrar.messenger();
+        plugin.messenger = messenger;
+
+        channel.setMethodCallHandler(plugin);
 
         // register platform view
+        PlatformViewRegistry platformViewRegistry = registrar.platformViewRegistry();
         
+    }
+
+    // v2 android embedding
+    @Override
+    public void onAttachedToEngine(FlutterPluginBinding binding) {
+        final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/amap_search_fluttify");
+
+        messenger = binding.getBinaryMessenger();
+
+        channel.setMethodCallHandler(this);
+
+
+        // register platform view
+        PlatformViewRegistry platformViewRegistry = binding.getPlatformViewRegistry();
+        
+    }
+
+    @Override
+    public void onDetachedFromEngine(FlutterPluginBinding binding) {
+
     }
 
     @Override

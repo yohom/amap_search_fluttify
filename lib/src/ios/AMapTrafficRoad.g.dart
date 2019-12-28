@@ -16,7 +16,7 @@ class AMapTrafficRoad extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapTrafficRoad> create() async {
+  static Future<AMapTrafficRoad> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTrafficRoad');
     final object = AMapTrafficRoad()..refId = refId..tag = 'amap_search_fluttify';
   

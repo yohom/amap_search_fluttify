@@ -16,7 +16,7 @@ class AMapWeatherSearchResponse extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapWeatherSearchResponse> create() async {
+  static Future<AMapWeatherSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapWeatherSearchResponse');
     final object = AMapWeatherSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
   

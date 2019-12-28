@@ -16,7 +16,7 @@ class AMapTransit extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapTransit> create() async {
+  static Future<AMapTransit> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTransit');
     final object = AMapTransit()..refId = refId..tag = 'amap_search_fluttify';
   

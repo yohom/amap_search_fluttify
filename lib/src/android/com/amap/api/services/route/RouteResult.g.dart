@@ -16,7 +16,7 @@ class com_amap_api_services_route_RouteResult extends java_lang_Object with andr
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_RouteResult> create() async {
+  static Future<com_amap_api_services_route_RouteResult> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_RouteResult__');
     final object = com_amap_api_services_route_RouteResult()..refId = refId..tag = 'amap_search_fluttify';
   

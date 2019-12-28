@@ -16,7 +16,7 @@ class com_amap_api_services_route_TMC extends java_lang_Object with android_os_P
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_route_TMC> create() async {
+  static Future<com_amap_api_services_route_TMC> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_route_TMC__');
     final object = com_amap_api_services_route_TMC()..refId = refId..tag = 'amap_search_fluttify';
   

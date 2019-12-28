@@ -16,7 +16,7 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   //endregion
 
   //region creators
-  static Future<AMapNearbyUploadInfo> create() async {
+  static Future<AMapNearbyUploadInfo> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapNearbyUploadInfo');
     final object = AMapNearbyUploadInfo()..refId = refId..tag = 'amap_search_fluttify';
   

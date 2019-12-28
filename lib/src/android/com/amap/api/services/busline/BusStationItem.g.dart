@@ -16,7 +16,7 @@ class com_amap_api_services_busline_BusStationItem extends java_lang_Object with
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_busline_BusStationItem> create() async {
+  static Future<com_amap_api_services_busline_BusStationItem> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_busline_BusStationItem__');
     final object = com_amap_api_services_busline_BusStationItem()..refId = refId..tag = 'amap_search_fluttify';
   

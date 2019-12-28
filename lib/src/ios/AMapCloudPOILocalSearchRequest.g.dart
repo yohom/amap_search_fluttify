@@ -16,7 +16,7 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest  {
   //endregion
 
   //region creators
-  static Future<AMapCloudPOILocalSearchRequest> create() async {
+  static Future<AMapCloudPOILocalSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudPOILocalSearchRequest');
     final object = AMapCloudPOILocalSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
   

@@ -16,7 +16,7 @@ class AMapWalking extends AMapSearchObject  {
   //endregion
 
   //region creators
-  static Future<AMapWalking> create() async {
+  static Future<AMapWalking> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapWalking');
     final object = AMapWalking()..refId = refId..tag = 'amap_search_fluttify';
   
