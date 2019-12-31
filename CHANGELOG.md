@@ -1,3 +1,6 @@
+## 0.7.2
+- roll engine #4d92ce0. 主要解决type_op的冲突.
+
 ## 0.7.1
 - roll engine #5c1b957
 
