@@ -54,5 +54,5 @@ dependencies {
     // flutter plugin dependency
     compileOnly rootProject.findProject(":amap_core_fluttify")
     // sdk dependency
-    implementation 'com.amap.api:search:6.9.2'
+    api 'com.amap.api:search:6.9.2'
 }

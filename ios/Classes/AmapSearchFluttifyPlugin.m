@@ -8715,6 +8715,22 @@ extern BOOL enableLog;
           methodResult(@(result));
       },
       
+      @"AMapNearbyUserInfo::get_updatetime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNearbyUserInfo::get_updatetime");
+          }
+      
+          // ref object
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          // invoke native method
+          NSTimeInterval result = ref.updatetime;
+      
+          // 返回值: Value
+          methodResult(@(result));
+      },
+      
       @"AMapTrafficEvaluation::get_evaluationDescription": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -9196,6 +9212,22 @@ extern BOOL enableLog;
           HEAP[@(resultValue.hash)] = resultValue;
       
           methodResult(@(resultValue.hash));
+      },
+      
+      @"AMapNearbySearchManager::get_uploadTimeInterval": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNearbySearchManager::get_uploadTimeInterval");
+          }
+      
+          // ref object
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          // invoke native method
+          NSTimeInterval result = ref.uploadTimeInterval;
+      
+          // 返回值: Value
+          methodResult(@(result));
       },
       
       @"AMapNearbySearchManager::get_isAutoUploading": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
@@ -16961,6 +16993,23 @@ extern BOOL enableLog;
           methodResult(@"success");
       },
       
+      @"AMapNearbyUserInfo::set_updatetime": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNearbyUserInfo::set_updatetime");
+          }
+      
+          // args
+          // jsonable arg
+          NSTimeInterval updatetime = [args[@"updatetime"] doubleValue];
+      
+          // ref
+          AMapNearbyUserInfo* ref = (AMapNearbyUserInfo*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          ref.updatetime = updatetime;
+          methodResult(@"success");
+      },
+      
       @"AMapTrafficEvaluation::set_evaluationDescription": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
           // print log
           if (enableLog) {
@@ -17463,6 +17512,23 @@ extern BOOL enableLog;
           AMapNearbyUploadInfo* ref = (AMapNearbyUploadInfo*) HEAP[(NSNumber*) args[@"refId"]];
       
           ref.coordinate = coordinate;
+          methodResult(@"success");
+      },
+      
+      @"AMapNearbySearchManager::set_uploadTimeInterval": ^(NSObject <FlutterPluginRegistrar> * registrar, NSDictionary<NSString *, id> * args, FlutterResult methodResult) {
+          // print log
+          if (enableLog) {
+              NSLog(@"AMapNearbySearchManager::set_uploadTimeInterval");
+          }
+      
+          // args
+          // jsonable arg
+          NSTimeInterval uploadTimeInterval = [args[@"uploadTimeInterval"] doubleValue];
+      
+          // ref
+          AMapNearbySearchManager* ref = (AMapNearbySearchManager*) HEAP[(NSNumber*) args[@"refId"]];
+      
+          ref.uploadTimeInterval = uploadTimeInterval;
           methodResult(@"success");
       },
       
