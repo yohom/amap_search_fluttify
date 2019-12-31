@@ -45,6 +45,12 @@ class AMapNearbyUserInfo extends AMapSearchObject  {
     return result;
   }
   
+  Future<double> get_updatetime() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUserInfo::get_updatetime", {'refId': refId});
+  
+    return result;
+  }
+  
   //endregion
 
   //region setters
@@ -62,6 +68,12 @@ class AMapNearbyUserInfo extends AMapSearchObject  {
   
   Future<void> set_distance(double distance) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUserInfo::set_distance', {'refId': refId, "distance": distance});
+  
+  
+  }
+  
+  Future<void> set_updatetime(double updatetime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUserInfo::set_updatetime', {'refId': refId, "updatetime": updatetime});
   
   
   }

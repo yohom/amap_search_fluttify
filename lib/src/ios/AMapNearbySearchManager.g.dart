@@ -20,6 +20,12 @@ class AMapNearbySearchManager extends NSObject  {
   //endregion
 
   //region getters
+  Future<double> get_uploadTimeInterval() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval", {'refId': refId});
+  
+    return result;
+  }
+  
   Future<bool> get_isAutoUploading() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'refId': refId});
   
@@ -29,6 +35,12 @@ class AMapNearbySearchManager extends NSObject  {
   //endregion
 
   //region setters
+  Future<void> set_uploadTimeInterval(double uploadTimeInterval) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval', {'refId': refId, "uploadTimeInterval": uploadTimeInterval});
+  
+  
+  }
+  
   Future<void> set_delegate(AMapNearbySearchManagerDelegate delegate) async {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_delegate', {'refId': refId, "delegate": delegate.refId});
   
