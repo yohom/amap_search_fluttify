@@ -41080,6 +41080,50 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
             methodResult.success(obj.hashCode());
         });
         // factory
+        put("ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery");
+        
+            // args
+            // ref arg
+            android.content.Context var1 = (android.content.Context) getHEAP().get((int) args.get("var1"));
+            // ref arg
+            com.amap.api.services.busline.BusLineQuery var2 = (com.amap.api.services.busline.BusLineQuery) getHEAP().get((int) args.get("var2"));
+        
+            // create target object
+            com.amap.api.services.busline.BusLineSearch obj = new com.amap.api.services.busline.BusLineSearch(var1, var2);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String");
+        
+            // args
+            // jsonable arg
+            String var1 = (String) args.get("var1");
+            // enum arg
+            com.amap.api.services.busline.BusLineQuery.SearchType var2 = com.amap.api.services.busline.BusLineQuery.SearchType.values()[(int) args.get("var2")];
+            // jsonable arg
+            String var3 = (String) args.get("var3");
+        
+            // create target object
+            com.amap.api.services.busline.BusLineQuery obj = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
         put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (args, methodResult) -> {
             Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
         
@@ -42732,6 +42776,106 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
             // create target object
             com.amap.api.services.routepoisearch.RoutePOIItem obj = new com.amap.api.services.routepoisearch.RoutePOIItem();
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+        
+            // args
+            // ref arg
+            android.content.Context var1 = (android.content.Context) getHEAP().get((int) args.get("var1"));
+            // ref arg
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery var2 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get((int) args.get("var2"));
+        
+            // create target object
+            com.amap.api.services.routepoisearch.RoutePOISearch obj = new com.amap.api.services.routepoisearch.RoutePOISearch(var1, var2);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__com_amap_api_services_routepoisearch_RoutePOIItem__com_amap_api_services_routepoisearch_RoutePOISearchQuery", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchResult__com_amap_api_services_routepoisearch_RoutePOIItem__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+        
+            // args
+            // list arg
+            List<Integer> var1RefIdList = (List<Integer>) args.get("var1");
+            List<com.amap.api.services.routepoisearch.RoutePOIItem> var1 = new ArrayList<>();
+            for (int refId : var1RefIdList) {
+                var1.add((com.amap.api.services.routepoisearch.RoutePOIItem) getHEAP().get(refId));
+            }
+            // ref arg
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery var2 = (com.amap.api.services.routepoisearch.RoutePOISearchQuery) getHEAP().get((int) args.get("var2"));
+        
+            // create target object
+            com.amap.api.services.routepoisearch.RoutePOISearchResult obj = new com.amap.api.services.routepoisearch.RoutePOISearchResult(new ArrayList(var1), var2);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+        
+            // args
+            // ref arg
+            com.amap.api.services.core.LatLonPoint var1 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) args.get("var1"));
+            // ref arg
+            com.amap.api.services.core.LatLonPoint var2 = (com.amap.api.services.core.LatLonPoint) getHEAP().get((int) args.get("var2"));
+            // jsonable arg
+            int var3 = (int) args.get("var3");
+            // enum arg
+            com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType var4 = com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType.values()[(int) args.get("var4")];
+            // jsonable arg
+            int var5 = (int) args.get("var5");
+        
+            // create target object
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery obj = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3, var4, var5);
+            getHEAP().put(obj.hashCode(), obj);
+        
+            // print current HEAP
+            if (getEnableLog()) {
+                Log.d("ObjectFactory", "HEAP: " + getHEAP());
+            }
+        
+            methodResult.success(obj.hashCode());
+        });
+        // factory
+        put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int", (args, methodResult) -> {
+            Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+        
+            // args
+            // list arg
+            List<Integer> var1RefIdList = (List<Integer>) args.get("var1");
+            List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+            for (int refId : var1RefIdList) {
+                var1.add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
+            }
+            // enum arg
+            com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType var2 = com.amap.api.services.routepoisearch.RoutePOISearch.RoutePOISearchType.values()[(int) args.get("var2")];
+            // jsonable arg
+            int var3 = (int) args.get("var3");
+        
+            // create target object
+            com.amap.api.services.routepoisearch.RoutePOISearchQuery obj = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(new ArrayList(var1), var2, var3);
             getHEAP().put(obj.hashCode(), obj);
         
             // print current HEAP
