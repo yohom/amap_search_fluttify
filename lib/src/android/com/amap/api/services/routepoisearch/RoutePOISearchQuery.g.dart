@@ -16,6 +16,21 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   //endregion
 
   //region creators
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(com_amap_api_services_core_LatLonPoint var1, com_amap_api_services_core_LatLonPoint var2, int var3, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var4, int var5) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int', {"var1": var1.refId, "var2": var2.refId, "var3": var3, "var4": var4.index, "var5": var5});
+    final object = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
+  
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearchQuery> create__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType var2, int var3) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int', {"var1": var1.map((it) => it.refId).toList(), "var2": var2.index, "var3": var3});
+    final object = com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
   //endregion
 

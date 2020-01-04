@@ -16,6 +16,13 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   //endregion
 
   //region creators
+  static Future<com_amap_api_services_busline_BusLineSearch> create__android_content_Context__com_amap_api_services_busline_BusLineQuery(android_content_Context var1, com_amap_api_services_busline_BusLineQuery var2) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery', {"var1": var1.refId, "var2": var2.refId});
+    final object = com_amap_api_services_busline_BusLineSearch()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
   //endregion
 

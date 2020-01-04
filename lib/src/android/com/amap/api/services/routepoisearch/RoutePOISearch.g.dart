@@ -24,6 +24,13 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   //endregion
 
   //region creators
+  static Future<com_amap_api_services_routepoisearch_RoutePOISearch> create__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery(android_content_Context var1, com_amap_api_services_routepoisearch_RoutePOISearchQuery var2) async {
+    final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery', {"var1": var1.refId, "var2": var2.refId});
+    final object = com_amap_api_services_routepoisearch_RoutePOISearch()..refId = refId..tag = 'amap_search_fluttify';
+  
+    kNativeObjectPool.add(object);
+    return object;
+  }
   
   //endregion
 
