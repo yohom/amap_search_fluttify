@@ -27,6 +27,16 @@ extension TypeOpAmapSearchFluttifyAndroid on Ref {
     return result;
   }
   
+  Future<bool> iscom_amap_api_services_traffic_RoadTrafficQuery() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_RoadTrafficQuery', {'refId': refId});
+    return result;
+  }
+  
+  Future<bool> iscom_amap_api_services_traffic_CircleTrafficQuery() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_CircleTrafficQuery', {'refId': refId});
+    return result;
+  }
+  
   Future<bool> iscom_amap_api_services_traffic_TrafficStatusEvaluation() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::isKindOfcom_amap_api_services_traffic_TrafficStatusEvaluation', {'refId': refId});
     return result;
@@ -651,6 +661,16 @@ extension TypeOpAmapSearchFluttifyAndroid on Ref {
   Future<com_amap_api_services_traffic_TrafficSearch> ascom_amap_api_services_traffic_TrafficSearch() async {
     final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_TrafficSearch', {'refId': refId});
     return com_amap_api_services_traffic_TrafficSearch()..refId = result;
+  }
+  
+  Future<com_amap_api_services_traffic_RoadTrafficQuery> ascom_amap_api_services_traffic_RoadTrafficQuery() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_RoadTrafficQuery', {'refId': refId});
+    return com_amap_api_services_traffic_RoadTrafficQuery()..refId = result;
+  }
+  
+  Future<com_amap_api_services_traffic_CircleTrafficQuery> ascom_amap_api_services_traffic_CircleTrafficQuery() async {
+    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('RefClass::ascom_amap_api_services_traffic_CircleTrafficQuery', {'refId': refId});
+    return com_amap_api_services_traffic_CircleTrafficQuery()..refId = result;
   }
   
   Future<com_amap_api_services_traffic_TrafficStatusEvaluation> ascom_amap_api_services_traffic_TrafficStatusEvaluation() async {
