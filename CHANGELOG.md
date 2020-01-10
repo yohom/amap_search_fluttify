@@ -1,3 +1,7 @@
+## 0.7.4
+- enhance: 提升依赖
+- roll engine #356f11c
+
 ## 0.7.3
 - roll engine #107df19
 - docs: 加入apk下载二维码
