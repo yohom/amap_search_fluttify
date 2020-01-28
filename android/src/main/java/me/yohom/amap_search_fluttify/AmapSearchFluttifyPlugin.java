@@ -729,8 +729,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -2651,8 +2656,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -2845,8 +2855,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -8132,8 +8147,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -8159,8 +8179,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -10967,8 +10992,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -10994,8 +11024,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -11021,8 +11056,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -11048,8 +11088,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -11109,8 +11154,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -11170,8 +11220,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -17826,8 +17881,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -24477,8 +24537,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -24584,8 +24649,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -25656,8 +25726,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -27308,8 +27383,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -27335,8 +27415,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -29262,8 +29347,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -29289,8 +29379,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -30328,8 +30423,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -30355,8 +30455,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -34391,8 +34496,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
         
                     // call dart method
                     callbackChannel.invokeMethod(
@@ -36286,8 +36396,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
         
                     // call dart method
                     callbackChannel.invokeMethod(
@@ -36418,8 +36533,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -36575,8 +36695,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -36602,8 +36727,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -36629,8 +36759,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -36656,8 +36791,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -36717,8 +36857,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -36778,8 +36923,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -37803,8 +37953,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -37997,8 +38152,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38401,8 +38561,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38428,8 +38593,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38549,8 +38719,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38576,8 +38751,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38767,8 +38947,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38828,8 +39013,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -38855,8 +39045,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -39340,8 +39535,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -39367,8 +39567,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -39451,8 +39656,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -39558,8 +39768,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
@@ -39951,8 +40166,13 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         
                     // convert to jsonable data
                     // ref arg
-                    int argvar1 = var1.hashCode();
-                    getHEAP().put(argvar1, var1);
+                    final Integer argvar1;
+                    if (var1 != null) {
+                        argvar1 = var1.hashCode();
+                        getHEAP().put(argvar1, var1);
+                    } else {
+                        argvar1 = null;
+                    }
                     // jsonable arg
                     int argvar2 = var2;
         
