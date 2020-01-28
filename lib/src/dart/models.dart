@@ -1584,6 +1584,15 @@ class Weather with _ToFutureString {
   }
 }
 
+class Cloud {
+  Cloud.android(this._androidModel);
+
+  Cloud.ios(this._iosModel);
+
+  com_amap_api_services_cloud_CloudResult _androidModel;
+  AMapCloudPOISearchResponse _iosModel;
+}
+
 Future<List<String>> _expandToString(Future<List<_ToFutureString>> source) {
   return source
       .asStream()
