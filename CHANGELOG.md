@@ -1,3 +1,7 @@
+## 0.7.5
+- roll engine #1053dca
+- feat: 增加搜索云图方法 searchCloudAround
+
 ## 0.7.4
 - enhance: 提升依赖
 - roll engine #356f11c
