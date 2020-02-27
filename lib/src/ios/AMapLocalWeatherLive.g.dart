@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapLocalWeatherLive extends AMapSearchObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapLocalWeatherLive extends AMapSearchObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapLocalWeatherLive>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length});
+  
+    final List<AMapLocalWeatherLive> typedResult = resultBatch.map((result) => AMapLocalWeatherLive()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -136,6 +149,78 @@ class AMapLocalWeatherLive extends AMapSearchObject  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_reportTime', {'refId': refId, "reportTime": reportTime});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapLocalWeatherLive_Batch on List<AMapLocalWeatherLive> {
+  //region getters
+  Future<List<String>> get_adcode_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_adcode_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_province_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_province_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_city_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_city_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_weather_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_weather_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_temperature_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_temperature_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_windDirection_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_windDirection_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_windPower_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_windPower_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_humidity_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_humidity_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_reportTime_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapLocalWeatherLive::get_reportTime_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

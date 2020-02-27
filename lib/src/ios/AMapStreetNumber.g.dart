@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapStreetNumber extends AMapSearchObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapStreetNumber extends AMapSearchObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapStreetNumber>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapStreetNumber', {'length': length});
+  
+    final List<AMapStreetNumber> typedResult = resultBatch.map((result) => AMapStreetNumber()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -88,6 +101,50 @@ class AMapStreetNumber extends AMapSearchObject  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStreetNumber::set_direction', {'refId': refId, "direction": direction});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapStreetNumber_Batch on List<AMapStreetNumber> {
+  //region getters
+  Future<List<String>> get_street_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_street_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_number_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_number_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapGeoPoint>> get_location_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_location_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<int>> get_distance_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_distance_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_direction_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapStreetNumber::get_direction_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

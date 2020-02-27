@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapBusStopSearchRequest extends AMapSearchObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapBusStopSearchRequest extends AMapSearchObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapBusStopSearchRequest>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapBusStopSearchRequest', {'length': length});
+  
+    final List<AMapBusStopSearchRequest> typedResult = resultBatch.map((result) => AMapBusStopSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,43 @@ class AMapBusStopSearchRequest extends AMapSearchObject  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_page', {'refId': refId, "page": page});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapBusStopSearchRequest_Batch on List<AMapBusStopSearchRequest> {
+  //region getters
+  Future<List<String>> get_keywords_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_city_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_city_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<int>> get_offset_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_offset_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<int>> get_page_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusStopSearchRequest::get_page_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

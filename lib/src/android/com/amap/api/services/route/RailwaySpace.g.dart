@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class com_amap_api_services_route_RailwaySpace extends java_lang_Object with android_os_Parcelable {
   //region constants
   
@@ -22,6 +24,17 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<com_amap_api_services_route_RailwaySpace>> create_batch__String__float(List<String> var1, List<double> var2) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RailwaySpace__String__float', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i]}]);
+  
+    final List<com_amap_api_services_route_RailwaySpace> typedResult = resultBatch.map((result) => com_amap_api_services_route_RailwaySpace()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,55 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
     } else {
     
       return result;
+    }
+  }
+  
+  //endregion
+}
+
+extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_services_route_RailwaySpace> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<List<String>> getCode_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwaySpace::getCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<double>> getCost_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwaySpace::getCost_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
     }
   }
   

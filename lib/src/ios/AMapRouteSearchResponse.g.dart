@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapRouteSearchResponse extends AMapSearchObject  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapRouteSearchResponse>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRouteSearchResponse', {'length': length});
+  
+    final List<AMapRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRouteSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -52,6 +65,29 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_route', {'refId': refId, "route": route.refId});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
+  //region getters
+  Future<List<int>> get_count_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchResponse::get_count_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapRoute>> get_route_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchResponse::get_route_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapRoute()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion

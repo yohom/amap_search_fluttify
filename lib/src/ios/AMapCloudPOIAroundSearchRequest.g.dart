@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapCloudPOIAroundSearchRequest>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest', {'length': length});
+  
+    final List<AMapCloudPOIAroundSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIAroundSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -64,6 +77,36 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords', {'refId': refId, "keywords": keywords});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearchRequest> {
+  //region getters
+  Future<List<AMapGeoPoint>> get_center_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOIAroundSearchRequest::get_center_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  Future<List<int>> get_radius_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOIAroundSearchRequest::get_radius_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_keywords_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOIAroundSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

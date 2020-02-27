@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapPOIKeywordsSearchRequest>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIKeywordsSearchRequest', {'length': length});
+  
+    final List<AMapPOIKeywordsSearchRequest> typedResult = resultBatch.map((result) => AMapPOIKeywordsSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,43 @@ class AMapPOIKeywordsSearchRequest extends AMapPOISearchBaseRequest  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_location', {'refId': refId, "location": location.refId});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchRequest> {
+  //region getters
+  Future<List<String>> get_keywords_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_city_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_city_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<bool>> get_cityLimit_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_cityLimit_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<AMapGeoPoint>> get_location_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIKeywordsSearchRequest::get_location_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion

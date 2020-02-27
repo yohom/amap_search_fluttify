@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapSearchObject>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSearchObject', {'length': length});
+  
+    final List<AMapSearchObject> typedResult = resultBatch.map((result) => AMapSearchObject()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -54,6 +67,35 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
     } else {
     
       return result;
+    }
+  }
+  
+  //endregion
+}
+
+extension AMapSearchObject_Batch on List<AMapSearchObject> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<List<String>> formattedDescription_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchObject::formattedDescription_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
     }
   }
   

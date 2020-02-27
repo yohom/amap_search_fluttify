@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapCloudPOILocalSearchRequest>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudPOILocalSearchRequest', {'length': length});
+  
+    final List<AMapCloudPOILocalSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOILocalSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -52,6 +65,29 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_city', {'refId': refId, "city": city});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest> {
+  //region getters
+  Future<List<String>> get_keywords_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
+  }
+  
+  Future<List<String>> get_city_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_city_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

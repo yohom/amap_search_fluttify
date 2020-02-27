@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang_Object  {
   //region constants
   
@@ -30,6 +32,28 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> create_batch__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<com_amap_api_services_core_LatLonPoint> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<int> var3, List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> var4, List<int> var5) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId, "var2": var2[i].refId, "var3": var3[i], "var4": var4[i].index, "var5": var5[i]}]);
+  
+    final List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
+  }
+  
+  static Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> create_batch__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int(List<List<com_amap_api_services_core_LatLonPoint>> var1, List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType> var2, List<int> var3) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "var2": var2[i].index, "var3": var3[i]}]);
+  
+    final List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -194,6 +218,155 @@ class com_amap_api_services_routepoisearch_RoutePOISearchQuery extends java_lang
     } else {
       kNativeObjectPool.add(com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result..tag = 'amap_search_fluttify');
       return com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result..tag = 'amap_search_fluttify';
+    }
+  }
+  
+  //endregion
+}
+
+extension com_amap_api_services_routepoisearch_RoutePOISearchQuery_Batch on List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<List<com_amap_api_services_core_LatLonPoint>> getFrom_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getFrom_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  Future<List<com_amap_api_services_core_LatLonPoint>> getTo_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getTo_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
+    }
+  }
+  
+  Future<List<int>> getMode_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getMode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType>> getSearchType_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getSearchType_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType.values[result]).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<int>> getRange_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getRange_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolylines_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => com_amap_api_services_core_LatLonPoint()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+      kNativeObjectPool.addAll(typedResult.expand((e) => e));
+      return typedResult;
+    }
+  }
+  
+  Future<List<com_amap_api_services_routepoisearch_RoutePOISearchQuery>> clone_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearchQuery::clone_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_routepoisearch_RoutePOISearchQuery()..refId = result..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
     }
   }
   

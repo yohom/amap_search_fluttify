@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   //region constants
   
@@ -22,6 +24,17 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<com_amap_api_services_traffic_TrafficSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficSearch__android_content_Context', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId}]);
+  
+    final List<com_amap_api_services_traffic_TrafficSearch> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_TrafficSearch()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -75,6 +88,16 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
       return result;
     }
   }
+  
+  //endregion
+}
+
+extension com_amap_api_services_traffic_TrafficSearch_Batch on List<com_amap_api_services_traffic_TrafficSearch> {
+  //region getters
+  
+  //endregion
+
+  //region methods
   
   //endregion
 }
