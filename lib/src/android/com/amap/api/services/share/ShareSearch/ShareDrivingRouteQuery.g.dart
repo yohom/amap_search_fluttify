@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends java_lang_Object  {
   //region constants
   
@@ -22,6 +24,17 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery>> create_batch__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int(List<com_amap_api_services_share_ShareSearch_ShareFromAndTo> var1, List<int> var2) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId, "var2": var2[i]}]);
+  
+    final List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> typedResult = resultBatch.map((result) => com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -76,6 +89,55 @@ class com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery extends jav
     } else {
       kNativeObjectPool.add(com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result..tag = 'amap_search_fluttify');
       return com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result..tag = 'amap_search_fluttify';
+    }
+  }
+  
+  //endregion
+}
+
+extension com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery_Batch on List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> {
+  //region getters
+  
+  //endregion
+
+  //region methods
+  Future<List<int>> getDrivingMode_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => result).toList();
+    
+      return typedResult;
+    }
+  }
+  
+  Future<List<com_amap_api_services_share_ShareSearch_ShareFromAndTo>> getShareFromAndTo_batch() async {
+    // print log
+    // if (fluttifyLogEnabled) {
+    //   #__log__#
+    // }
+  
+    // invoke native method
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+  
+  
+    // convert native result to dart side object
+    if (resultBatch == null) {
+      return null;
+    } else {
+      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_share_ShareSearch_ShareFromAndTo()..refId = result..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll(typedResult);
+      return typedResult;
     }
   }
   

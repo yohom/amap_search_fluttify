@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapBusLineIDSearchRequest>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapBusLineIDSearchRequest', {'length': length});
+  
+    final List<AMapBusLineIDSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineIDSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -40,6 +53,22 @@ class AMapBusLineIDSearchRequest extends AMapBusLineBaseSearchRequest  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusLineIDSearchRequest::set_uid', {'refId': refId, "uid": uid});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapBusLineIDSearchRequest_Batch on List<AMapBusLineIDSearchRequest> {
+  //region getters
+  Future<List<String>> get_uid_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineIDSearchRequest::get_uid_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

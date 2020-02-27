@@ -10,6 +10,8 @@ import 'package:amap_search_fluttify/src/android/android.export.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+import 'package:foundation_fluttify/foundation_fluttify.dart';
+
 class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   //region constants
   
@@ -22,6 +24,17 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   
     kNativeObjectPool.add(object);
     return object;
+  }
+  
+  static Future<List<AMapRidingRouteSearchRequest>> create_batch__(int length) async {
+    // if (#__check_param_size__#) {
+    //   return Future.error('all args must has same length!');
+    // }
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchRequest', {'length': length});
+  
+    final List<AMapRidingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapRidingRouteSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    kNativeObjectPool.addAll(typedResult);
+    return typedResult;
   }
   
   //endregion
@@ -40,6 +53,22 @@ class AMapRidingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
     await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRidingRouteSearchRequest::set_type', {'refId': refId, "type": type});
   
   
+  }
+  
+  //endregion
+
+  //region methods
+  
+  //endregion
+}
+
+extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchRequest> {
+  //region getters
+  Future<List<int>> get_type_batch() async {
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRidingRouteSearchRequest::get_type_batch", [for (final item in this) {'refId': item.refId}]);
+    final typedResult = (resultBatch as List).map((result) => result).toList();
+  
+    return typedResult;
   }
   
   //endregion

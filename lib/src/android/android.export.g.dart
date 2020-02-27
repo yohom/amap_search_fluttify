@@ -160,5 +160,4 @@ export 'com/amap/api/services/share/ShareSearch/OnShareSearchListener.g.dart';
 export 'com/amap/api/services/share/ShareSearch/ShareBusRouteQuery.g.dart';
 export 'com/amap/api/services/share/ShareSearch/ShareNaviQuery.g.dart';
 export 'com/amap/api/services/share/ShareSearch.g.dart';
-export 'package:foundation_fluttify/foundation_fluttify.dart';
 export 'package:amap_core_fluttify/amap_core_fluttify.dart';

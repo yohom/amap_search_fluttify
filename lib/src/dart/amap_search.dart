@@ -28,6 +28,7 @@ class AmapSearch {
       _androidBusStationSearch;
   static com_amap_api_services_district_DistrictSearch _androidDistrictSearch;
   static com_amap_api_services_weather_WeatherSearch _androidWeatherSearch;
+  static com_amap_api_services_cloud_CloudSearch _androidCloudSearch;
 
   /// 关键字搜索poi
   ///
@@ -936,6 +937,79 @@ class AmapSearch {
     return _controller.stream.first;
   }
 
+  /// 搜索云图
+  static Future<Cloud> searchCloudAround(
+    String tableId,
+    String keyword,
+    LatLng center,
+    int radius,
+  ) async {
+    assert(tableId != null);
+    assert(keyword != null);
+    assert(center != null);
+    assert(radius != null);
+
+    // 会在listener中关闭
+    // ignore: close_sinks
+    final _controller = StreamController<Cloud>(sync: true);
+
+    platform(
+      android: (pool) async {
+        // 上下文
+        final context = await android_app_Activity.get();
+        // 检索范围
+        final centerPoint = await com_amap_api_services_core_LatLonPoint
+            .create__double__double(center.latitude, center.longitude);
+        final bound = await com_amap_api_services_cloud_CloudSearch_SearchBound
+            .create__com_amap_api_services_core_LatLonPoint__int(
+                centerPoint, radius);
+        // 查询对象
+        final query = await com_amap_api_services_cloud_CloudSearch_Query
+            .create__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound(
+                tableId, keyword, bound);
+
+        // 创建搜索对象
+        _androidCloudSearch = await com_amap_api_services_cloud_CloudSearch
+            .create__android_content_Context(context);
+
+        // 设置回调
+        await _androidCloudSearch
+            .setOnCloudSearchListener(_AndroidSearchListener(_controller));
+
+        // 设置请求
+        await _androidCloudSearch.searchCloudAsyn(query);
+
+        // 局部变量从HEAP中解除引用
+        pool..add(query)..add(context)..add(centerPoint)..add(bound);
+      },
+      ios: (pool) async {
+        _iosSearch = await AMapSearchAPI.create__();
+
+        // 设置回调
+        await _iosSearch.set_delegate(_IOSSearchListener(_controller));
+
+        // 创建搜索请求
+        final request = await AMapCloudPOIAroundSearchRequest.create__();
+        // 设置站点名称
+        await request.set_tableID(tableId);
+        // 关键字
+        await request.set_keywords(keyword);
+        // 中心点
+        final centerPoint = await AMapGeoPoint.locationWithLatitudeLongitude(
+            center.latitude, center.longitude);
+        await request.set_center(centerPoint);
+        await request.set_radius(radius);
+
+        // 开始搜索
+        await _iosSearch.AMapCloudPOIAroundSearch(request);
+
+        // 局部变量从HEAP中解除引用
+        pool..add(request)..add(centerPoint);
+      },
+    );
+    return _controller.stream.first;
+  }
+
   /// 释放原生端对应的资源, 除了[AMapServices]
   static Future<void> dispose() async {
     final isCurrentPlugin = (it) => it.tag == 'amap_search_fluttify';
@@ -963,7 +1037,8 @@ class _AndroidSearchListener extends java_lang_Object
         com_amap_api_services_route_RouteSearch_OnRouteSearchListener,
         com_amap_api_services_busline_BusStationSearch_OnBusStationSearchListener,
         com_amap_api_services_district_DistrictSearch_OnDistrictSearchListener,
-        com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener {
+        com_amap_api_services_weather_WeatherSearch_OnWeatherSearchListener,
+        com_amap_api_services_cloud_CloudSearch_OnCloudSearchListener {
   _AndroidSearchListener(this._streamController);
 
   final StreamController _streamController;
@@ -1111,6 +1186,18 @@ class _AndroidSearchListener extends java_lang_Object
       _streamController?.close();
     }
   }
+
+  @override
+  Future<void> onCloudSearched(
+    com_amap_api_services_cloud_CloudResult var1,
+    int var2,
+  ) async {
+    super.onCloudSearched(var1, var2);
+    if (_streamController?.isClosed == false) {
+      _streamController?.add(Cloud.android(var1));
+      _streamController?.close();
+    }
+  }
 }
 
 /// ios: 搜索监听
@@ -1219,6 +1306,18 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     super.onDistrictSearchDoneResponse(request, response);
     if (_streamController?.isClosed == false) {
       _streamController?.add(District.ios(response));
+      _streamController?.close();
+    }
+  }
+
+  @override
+  Future<void> onCloudSearchDoneResponse(
+    AMapCloudSearchBaseRequest request,
+    AMapCloudPOISearchResponse response,
+  ) async {
+    super.onCloudSearchDoneResponse(request, response);
+    if (_streamController?.isClosed == false) {
+      _streamController?.add(Cloud.ios(response));
       _streamController?.close();
     }
   }
