@@ -94,13 +94,13 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
 
   //region setters
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }
   
   Future<void> set_type_batch(List<AMapWeatherType> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i].index}]);
   
   
   }

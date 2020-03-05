@@ -151,31 +151,31 @@ extension AMapWalking_Batch on List<AMapWalking> {
 
   //region setters
   Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_origin_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_destination_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
   
   
   }
   
   Future<void> set_duration_batch(List<int> duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_duration_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
   
   
   }
   
   Future<void> set_steps_batch(List<List<AMapStep>> steps) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_steps_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "steps": steps[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_steps_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "steps": steps[i].map((it) => it.refId).toList()}]);
   
   
   }

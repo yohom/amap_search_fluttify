@@ -151,31 +151,31 @@ extension AMapAOI_Batch on List<AMapAOI> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
   
   
   }
   
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_adcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }
   
   Future<void> set_area_batch(List<double> area) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_area_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "area": area[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapAOI::set_area_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "area": area[i]}]);
   
   
   }

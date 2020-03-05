@@ -151,31 +151,31 @@ extension AMapRoute_Batch on List<AMapRoute> {
 
   //region setters
   Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_origin_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_destination_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
   
   
   }
   
   Future<void> set_taxiCost_batch(List<double> taxiCost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_taxiCost_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "taxiCost": taxiCost[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_taxiCost_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "taxiCost": taxiCost[i]}]);
   
   
   }
   
   Future<void> set_paths_batch(List<List<AMapPath>> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_paths_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "paths": paths[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_paths_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "paths": paths[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_transits_batch(List<List<AMapTransit>> transits) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_transits_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "transits": transits[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoute::set_transits_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "transits": transits[i].map((it) => it.refId).toList()}]);
   
   
   }

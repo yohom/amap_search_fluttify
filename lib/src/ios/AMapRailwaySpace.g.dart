@@ -94,13 +94,13 @@ extension AMapRailwaySpace_Batch on List<AMapRailwaySpace> {
 
   //region setters
   Future<void> set_code_batch(List<String> code) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailwaySpace::set_code_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "code": code[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailwaySpace::set_code_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "code": code[i]}]);
   
   
   }
   
   Future<void> set_cost_batch(List<double> cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailwaySpace::set_cost_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailwaySpace::set_cost_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
   
   
   }

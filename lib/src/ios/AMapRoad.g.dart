@@ -151,31 +151,31 @@ extension AMapRoad_Batch on List<AMapRoad> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
   
   
   }
   
   Future<void> set_direction_batch(List<String> direction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_direction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_direction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoad::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }

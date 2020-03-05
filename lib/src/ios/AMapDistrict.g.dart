@@ -189,43 +189,43 @@ extension AMapDistrict_Batch on List<AMapDistrict> {
 
   //region setters
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_adcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
   
   
   }
   
   Future<void> set_citycode_batch(List<String> citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_citycode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_citycode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
   
   
   }
   
   Future<void> set_level_batch(List<String> level) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_level_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "level": level[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_level_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "level": level[i]}]);
   
   
   }
   
   Future<void> set_center_batch(List<AMapGeoPoint> center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_center_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_center_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
   
   
   }
   
   Future<void> set_districts_batch(List<List<AMapDistrict>> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_districts_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "districts": districts[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_districts_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "districts": districts[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_polylines_batch(List<List<String>> polylines) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_polylines_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polylines": polylines[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_polylines_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polylines": polylines[i]}]);
   
   
   }

@@ -113,19 +113,19 @@ extension AMapIndoorData_Batch on List<AMapIndoorData> {
 
   //region setters
   Future<void> set_floor_batch(List<int> floor) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floor_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "floor": floor[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floor_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "floor": floor[i]}]);
   
   
   }
   
   Future<void> set_floorName_batch(List<String> floorName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floorName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "floorName": floorName[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floorName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "floorName": floorName[i]}]);
   
   
   }
   
   Future<void> set_pid_batch(List<String> pid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_pid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pid": pid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_pid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pid": pid[i]}]);
   
   
   }

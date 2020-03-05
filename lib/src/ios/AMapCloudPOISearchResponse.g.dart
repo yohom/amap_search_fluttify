@@ -94,13 +94,13 @@ extension AMapCloudPOISearchResponse_Batch on List<AMapCloudPOISearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOISearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOISearchResponse::set_count_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
   
   
   }
   
   Future<void> set_POIs_batch(List<List<AMapCloudPOI>> POIs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOISearchResponse::set_POIs_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "POIs": POIs[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOISearchResponse::set_POIs_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "POIs": POIs[i].map((it) => it.refId).toList()}]);
   
   
   }

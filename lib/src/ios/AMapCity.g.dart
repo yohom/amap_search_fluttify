@@ -151,31 +151,31 @@ extension AMapCity_Batch on List<AMapCity> {
 
   //region setters
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }
   
   Future<void> set_citycode_batch(List<String> citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_citycode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_citycode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
   
   
   }
   
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_adcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
   
   
   }
   
   Future<void> set_num_batch(List<int> num) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_num_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "num": num[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_num_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "num": num[i]}]);
   
   
   }
   
   Future<void> set_districts_batch(List<List<AMapDistrict>> districts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_districts_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "districts": districts[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCity::set_districts_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "districts": districts[i].map((it) => it.refId).toList()}]);
   
   
   }

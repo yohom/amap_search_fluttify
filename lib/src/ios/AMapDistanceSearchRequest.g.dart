@@ -113,19 +113,19 @@ extension AMapDistanceSearchRequest_Batch on List<AMapDistanceSearchRequest> {
 
   //region setters
   Future<void> set_origins_batch(List<List<AMapGeoPoint>> origins) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_origins_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origins": origins[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_origins_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origins": origins[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_destination_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
   
   
   }
   
   Future<void> set_type_batch(List<int> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_type_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_type_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
   
   
   }

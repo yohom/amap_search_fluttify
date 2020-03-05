@@ -246,61 +246,61 @@ extension AMapLocalDayWeatherForecast_Batch on List<AMapLocalDayWeatherForecast>
 
   //region setters
   Future<void> set_date_batch(List<String> date) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_date_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "date": date[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_date_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "date": date[i]}]);
   
   
   }
   
   Future<void> set_week_batch(List<String> week) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_week_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "week": week[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_week_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "week": week[i]}]);
   
   
   }
   
   Future<void> set_dayWeather_batch(List<String> dayWeather) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayWeather_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayWeather": dayWeather[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayWeather_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayWeather": dayWeather[i]}]);
   
   
   }
   
   Future<void> set_nightWeather_batch(List<String> nightWeather) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightWeather_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightWeather": nightWeather[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightWeather_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightWeather": nightWeather[i]}]);
   
   
   }
   
   Future<void> set_dayTemp_batch(List<String> dayTemp) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayTemp_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayTemp": dayTemp[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayTemp_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayTemp": dayTemp[i]}]);
   
   
   }
   
   Future<void> set_nightTemp_batch(List<String> nightTemp) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightTemp_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightTemp": nightTemp[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightTemp_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightTemp": nightTemp[i]}]);
   
   
   }
   
   Future<void> set_dayWind_batch(List<String> dayWind) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayWind_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayWind": dayWind[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayWind_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayWind": dayWind[i]}]);
   
   
   }
   
   Future<void> set_nightWind_batch(List<String> nightWind) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightWind_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightWind": nightWind[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightWind_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightWind": nightWind[i]}]);
   
   
   }
   
   Future<void> set_dayPower_batch(List<String> dayPower) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayPower_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayPower": dayPower[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_dayPower_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "dayPower": dayPower[i]}]);
   
   
   }
   
   Future<void> set_nightPower_batch(List<String> nightPower) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightPower_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightPower": nightPower[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalDayWeatherForecast::set_nightPower_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightPower": nightPower[i]}]);
   
   
   }

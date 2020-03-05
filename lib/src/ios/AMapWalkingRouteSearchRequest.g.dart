@@ -75,7 +75,7 @@ extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequ
 
   //region setters
   Future<void> set_multipath_batch(List<int> multipath) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalkingRouteSearchRequest::set_multipath_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "multipath": multipath[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalkingRouteSearchRequest::set_multipath_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "multipath": multipath[i]}]);
   
   
   }

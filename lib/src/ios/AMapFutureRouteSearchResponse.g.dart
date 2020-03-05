@@ -94,13 +94,13 @@ extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchRespo
 
   //region setters
   Future<void> set_paths_batch(List<List<AMapPath>> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "paths": paths[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "paths": paths[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_timeInfos_batch(List<List<AMapFutureTimeInfo>> timeInfos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeInfos": timeInfos[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeInfos": timeInfos[i].map((it) => it.refId).toList()}]);
   
   
   }

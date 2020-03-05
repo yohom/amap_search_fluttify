@@ -113,19 +113,19 @@ extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSear
 
   //region setters
   Future<void> set_strategy_batch(List<int> strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_strategy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_strategy_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
   
   
   }
   
   Future<void> set_startCoordinate_batch(List<AMapGeoPoint> startCoordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_startCoordinate_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "startCoordinate": startCoordinate[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_startCoordinate_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "startCoordinate": startCoordinate[i].refId}]);
   
   
   }
   
   Future<void> set_destinationCoordinate_batch(List<AMapGeoPoint> destinationCoordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_destinationCoordinate_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationCoordinate": destinationCoordinate[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_destinationCoordinate_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationCoordinate": destinationCoordinate[i].refId}]);
   
   
   }

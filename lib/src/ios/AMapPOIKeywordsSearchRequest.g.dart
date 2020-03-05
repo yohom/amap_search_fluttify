@@ -132,25 +132,25 @@ extension AMapPOIKeywordsSearchRequest_Batch on List<AMapPOIKeywordsSearchReques
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }
   
   Future<void> set_cityLimit_batch(List<bool> cityLimit) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_cityLimit_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityLimit": cityLimit[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_cityLimit_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityLimit": cityLimit[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIKeywordsSearchRequest::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }

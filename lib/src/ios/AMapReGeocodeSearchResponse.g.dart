@@ -75,7 +75,7 @@ extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse>
 
   //region setters
   Future<void> set_regeocode_batch(List<AMapReGeocode> regeocode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchResponse::set_regeocode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "regeocode": regeocode[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchResponse::set_regeocode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "regeocode": regeocode[i].refId}]);
   
   
   }

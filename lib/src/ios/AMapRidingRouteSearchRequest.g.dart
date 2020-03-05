@@ -75,7 +75,7 @@ extension AMapRidingRouteSearchRequest_Batch on List<AMapRidingRouteSearchReques
 
   //region setters
   Future<void> set_type_batch(List<int> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRidingRouteSearchRequest::set_type_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRidingRouteSearchRequest::set_type_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
   
   
   }

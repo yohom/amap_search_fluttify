@@ -113,19 +113,19 @@ extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearch
 
   //region setters
   Future<void> set_center_batch(List<AMapGeoPoint> center) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_center_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_center_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
   
   
   }
   
   Future<void> set_radius_batch(List<int> radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
   
   
   }
   
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }

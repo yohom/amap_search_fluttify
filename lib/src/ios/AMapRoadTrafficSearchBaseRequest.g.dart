@@ -94,13 +94,13 @@ extension AMapRoadTrafficSearchBaseRequest_Batch on List<AMapRoadTrafficSearchBa
 
   //region setters
   Future<void> set_level_batch(List<int> level) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "level": level[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchBaseRequest::set_level_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "level": level[i]}]);
   
   
   }
   
   Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchBaseRequest::set_requireExtension_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
   
   
   }

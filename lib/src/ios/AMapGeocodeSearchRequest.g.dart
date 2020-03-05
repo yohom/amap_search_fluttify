@@ -94,13 +94,13 @@ extension AMapGeocodeSearchRequest_Batch on List<AMapGeocodeSearchRequest> {
 
   //region setters
   Future<void> set_address_batch(List<String> address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchRequest::set_address_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchRequest::set_address_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }

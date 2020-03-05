@@ -132,25 +132,25 @@ extension AMapPOIShareSearchRequest_Batch on List<AMapPOIShareSearchRequest> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
   
   
   }
   
   Future<void> set_address_batch(List<String> address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_address_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIShareSearchRequest::set_address_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
   
   
   }

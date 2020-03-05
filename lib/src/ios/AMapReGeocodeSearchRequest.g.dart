@@ -132,25 +132,25 @@ extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
 
   //region setters
   Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_requireExtension_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }
   
   Future<void> set_radius_batch(List<int> radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_radius_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
   
   
   }
   
   Future<void> set_poitype_batch(List<String> poitype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_poitype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "poitype": poitype[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_poitype_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "poitype": poitype[i]}]);
   
   
   }

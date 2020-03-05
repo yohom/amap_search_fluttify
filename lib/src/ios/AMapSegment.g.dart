@@ -208,49 +208,49 @@ extension AMapSegment_Batch on List<AMapSegment> {
 
   //region setters
   Future<void> set_walking_batch(List<AMapWalking> walking) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_walking_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "walking": walking[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_walking_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "walking": walking[i].refId}]);
   
   
   }
   
   Future<void> set_buslines_batch(List<List<AMapBusLine>> buslines) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_buslines_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "buslines": buslines[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_buslines_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "buslines": buslines[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_taxi_batch(List<AMapTaxi> taxi) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_taxi_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "taxi": taxi[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_taxi_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "taxi": taxi[i].refId}]);
   
   
   }
   
   Future<void> set_railway_batch(List<AMapRailway> railway) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_railway_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "railway": railway[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_railway_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "railway": railway[i].refId}]);
   
   
   }
   
   Future<void> set_enterName_batch(List<String> enterName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_enterName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "enterName": enterName[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_enterName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "enterName": enterName[i]}]);
   
   
   }
   
   Future<void> set_enterLocation_batch(List<AMapGeoPoint> enterLocation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_enterLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "enterLocation": enterLocation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_enterLocation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "enterLocation": enterLocation[i].refId}]);
   
   
   }
   
   Future<void> set_exitName_batch(List<String> exitName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_exitName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "exitName": exitName[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_exitName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "exitName": exitName[i]}]);
   
   
   }
   
   Future<void> set_exitLocation_batch(List<AMapGeoPoint> exitLocation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_exitLocation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "exitLocation": exitLocation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSegment::set_exitLocation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "exitLocation": exitLocation[i].refId}]);
   
   
   }

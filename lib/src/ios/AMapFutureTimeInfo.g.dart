@@ -94,13 +94,13 @@ extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
 
   //region setters
   Future<void> set_startTime_batch(List<String> startTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfo::set_startTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "startTime": startTime[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfo::set_startTime_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "startTime": startTime[i]}]);
   
   
   }
   
   Future<void> set_elements_batch(List<List<AMapFutureTimeInfoElement>> elements) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfo::set_elements_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "elements": elements[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfo::set_elements_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "elements": elements[i].map((it) => it.refId).toList()}]);
   
   
   }

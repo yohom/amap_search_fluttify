@@ -170,37 +170,37 @@ extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
 
   //region setters
   Future<void> set_evaluationDescription_batch(List<String> evaluationDescription) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_evaluationDescription_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "evaluationDescription": evaluationDescription[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_evaluationDescription_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "evaluationDescription": evaluationDescription[i]}]);
   
   
   }
   
   Future<void> set_status_batch(List<int> status) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_status_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_status_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
   
   
   }
   
   Future<void> set_expedite_batch(List<String> expedite) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_expedite_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "expedite": expedite[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_expedite_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "expedite": expedite[i]}]);
   
   
   }
   
   Future<void> set_congested_batch(List<String> congested) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_congested_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "congested": congested[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_congested_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "congested": congested[i]}]);
   
   
   }
   
   Future<void> set_blocked_batch(List<String> blocked) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_blocked_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "blocked": blocked[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_blocked_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "blocked": blocked[i]}]);
   
   
   }
   
   Future<void> set_unknown_batch(List<String> unknown) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_unknown_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "unknown": unknown[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_unknown_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "unknown": unknown[i]}]);
   
   
   }

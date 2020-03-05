@@ -94,13 +94,13 @@ extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest> {
 
   //region setters
   Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_origin_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_destination_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
   
   
   }

@@ -170,37 +170,37 @@ extension AMapTrafficRoad_Batch on List<AMapTrafficRoad> {
 
   //region setters
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
   
   
   }
   
   Future<void> set_status_batch(List<int> status) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_status_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_status_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
   
   
   }
   
   Future<void> set_direction_batch(List<String> direction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_direction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_direction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
   
   
   }
   
   Future<void> set_angle_batch(List<double> angle) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_angle_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "angle": angle[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_angle_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "angle": angle[i]}]);
   
   
   }
   
   Future<void> set_speed_batch(List<double> speed) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_speed_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "speed": speed[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_speed_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "speed": speed[i]}]);
   
   
   }
   
   Future<void> set_polyline_batch(List<String> polyline) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_polyline_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_polyline_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i]}]);
   
   
   }

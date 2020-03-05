@@ -170,37 +170,37 @@ extension AMapTransit_Batch on List<AMapTransit> {
 
   //region setters
   Future<void> set_cost_batch(List<double> cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_cost_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_cost_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
   
   
   }
   
   Future<void> set_duration_batch(List<int> duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_duration_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
   
   
   }
   
   Future<void> set_nightflag_batch(List<bool> nightflag) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_nightflag_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightflag": nightflag[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_nightflag_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightflag": nightflag[i]}]);
   
   
   }
   
   Future<void> set_walkingDistance_batch(List<int> walkingDistance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_walkingDistance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "walkingDistance": walkingDistance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_walkingDistance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "walkingDistance": walkingDistance[i]}]);
   
   
   }
   
   Future<void> set_segments_batch(List<List<AMapSegment>> segments) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_segments_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "segments": segments[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_segments_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "segments": segments[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransit::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
   
   
   }

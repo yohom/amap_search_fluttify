@@ -94,13 +94,13 @@ extension AMapRoadTrafficCircleSearchRequest_Batch on List<AMapRoadTrafficCircle
 
   //region setters
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }
   
   Future<void> set_radius_batch(List<int> radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_radius_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
   
   
   }

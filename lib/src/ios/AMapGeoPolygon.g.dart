@@ -96,7 +96,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
 
   //region setters
   Future<void> set_points_batch(List<List<AMapGeoPoint>> points) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::set_points_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "points": points[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::set_points_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "points": points[i].map((it) => it.refId).toList()}]);
   
   
   }

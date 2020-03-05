@@ -988,13 +988,13 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
 
   //region setters
   Future<void> set_timeout_batch(List<int> timeout) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeout": timeout[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeout": timeout[i]}]);
   
   
   }
   
   Future<void> set_language_batch(List<AMapSearchLanguage> language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "language": language[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "language": language[i].index}]);
   
   
   }

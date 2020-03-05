@@ -94,13 +94,13 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
 
   //region setters
   Future<void> set_lives_batch(List<List<AMapLocalWeatherLive>> lives) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchResponse::set_lives_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "lives": lives[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchResponse::set_lives_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "lives": lives[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_forecasts_batch(List<List<AMapLocalWeatherForecast>> forecasts) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchResponse::set_forecasts_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "forecasts": forecasts[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchResponse::set_forecasts_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "forecasts": forecasts[i].map((it) => it.refId).toList()}]);
   
   
   }

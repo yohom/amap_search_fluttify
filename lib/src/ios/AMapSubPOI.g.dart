@@ -189,43 +189,43 @@ extension AMapSubPOI_Batch on List<AMapSubPOI> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
   
   
   }
   
   Future<void> set_sname_batch(List<String> sname) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_sname_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sname": sname[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_sname_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sname": sname[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }
   
   Future<void> set_address_batch(List<String> address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_address_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_address_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
   
   
   }
   
   Future<void> set_subtype_batch(List<String> subtype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_subtype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "subtype": subtype[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSubPOI::set_subtype_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "subtype": subtype[i]}]);
   
   
   }

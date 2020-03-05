@@ -170,37 +170,37 @@ extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
 
   //region setters
   Future<void> set_tableID_batch(List<String> tableID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_tableID_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tableID": tableID[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_tableID_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tableID": tableID[i]}]);
   
   
   }
   
   Future<void> set_filter_batch(List<List<String>> filter) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_filter_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "filter": filter[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_filter_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "filter": filter[i]}]);
   
   
   }
   
   Future<void> set_sortFields_batch(List<String> sortFields) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortFields_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortFields": sortFields[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortFields_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortFields": sortFields[i]}]);
   
   
   }
   
   Future<void> set_sortType_batch(List<AMapCloudSortType> sortType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortType": sortType[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortType": sortType[i].index}]);
   
   
   }
   
   Future<void> set_offset_batch(List<int> offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_offset_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_offset_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
   
   
   }
   
   Future<void> set_page_batch(List<int> page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_page_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_page_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
   
   
   }

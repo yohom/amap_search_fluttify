@@ -113,19 +113,19 @@ extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest> {
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_requireExtension_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
   
   
   }
   
   Future<void> set_showBusinessArea_batch(List<bool> showBusinessArea) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "showBusinessArea": showBusinessArea[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "showBusinessArea": showBusinessArea[i]}]);
   
   
   }

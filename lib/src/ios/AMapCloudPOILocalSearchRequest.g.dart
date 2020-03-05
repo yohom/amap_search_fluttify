@@ -94,13 +94,13 @@ extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRe
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }

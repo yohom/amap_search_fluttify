@@ -113,19 +113,19 @@ extension AMapTrafficInfo_Batch on List<AMapTrafficInfo> {
 
   //region setters
   Future<void> set_statusDescription_batch(List<String> statusDescription) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficInfo::set_statusDescription_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "statusDescription": statusDescription[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficInfo::set_statusDescription_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "statusDescription": statusDescription[i]}]);
   
   
   }
   
   Future<void> set_evaluation_batch(List<AMapTrafficEvaluation> evaluation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficInfo::set_evaluation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "evaluation": evaluation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficInfo::set_evaluation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "evaluation": evaluation[i].refId}]);
   
   
   }
   
   Future<void> set_roads_batch(List<List<AMapTrafficRoad>> roads) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficInfo::set_roads_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roads": roads[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficInfo::set_roads_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roads": roads[i].map((it) => it.refId).toList()}]);
   
   
   }

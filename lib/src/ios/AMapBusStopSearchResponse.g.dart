@@ -113,19 +113,19 @@ extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_count_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
   
   
   }
   
   Future<void> set_suggestion_batch(List<AMapSuggestion> suggestion) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_suggestion_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "suggestion": suggestion[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_suggestion_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "suggestion": suggestion[i].refId}]);
   
   
   }
   
   Future<void> set_busstops_batch(List<List<AMapBusStop>> busstops) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_busstops_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "busstops": busstops[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_busstops_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "busstops": busstops[i].map((it) => it.refId).toList()}]);
   
   
   }

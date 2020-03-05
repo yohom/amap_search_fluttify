@@ -94,13 +94,13 @@ extension AMapRoadTrafficSearchRequest_Batch on List<AMapRoadTrafficSearchReques
 
   //region setters
   Future<void> set_roadName_batch(List<String> roadName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchRequest::set_roadName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roadName": roadName[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchRequest::set_roadName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roadName": roadName[i]}]);
   
   
   }
   
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchRequest::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchRequest::set_adcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
   
   
   }

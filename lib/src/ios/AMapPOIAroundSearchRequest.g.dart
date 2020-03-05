@@ -132,25 +132,25 @@ extension AMapPOIAroundSearchRequest_Batch on List<AMapPOIAroundSearchRequest> {
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
   
   
   }
   
   Future<void> set_radius_batch(List<int> radius) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_radius_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIAroundSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }

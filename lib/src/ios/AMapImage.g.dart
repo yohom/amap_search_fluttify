@@ -94,13 +94,13 @@ extension AMapImage_Batch on List<AMapImage> {
 
   //region setters
   Future<void> set_title_batch(List<String> title) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_title_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "title": title[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_title_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "title": title[i]}]);
   
   
   }
   
   Future<void> set_url_batch(List<String> url) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_url_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "url": url[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_url_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "url": url[i]}]);
   
   
   }

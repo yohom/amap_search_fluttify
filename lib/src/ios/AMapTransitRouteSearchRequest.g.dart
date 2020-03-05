@@ -151,31 +151,31 @@ extension AMapTransitRouteSearchRequest_Batch on List<AMapTransitRouteSearchRequ
 
   //region setters
   Future<void> set_strategy_batch(List<int> strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_strategy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_strategy_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }
   
   Future<void> set_destinationCity_batch(List<String> destinationCity) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_destinationCity_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationCity": destinationCity[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_destinationCity_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationCity": destinationCity[i]}]);
   
   
   }
   
   Future<void> set_nightflag_batch(List<bool> nightflag) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_nightflag_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightflag": nightflag[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_nightflag_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "nightflag": nightflag[i]}]);
   
   
   }
   
   Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTransitRouteSearchRequest::set_requireExtension_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
   
   
   }

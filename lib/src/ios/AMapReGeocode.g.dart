@@ -170,37 +170,37 @@ extension AMapReGeocode_Batch on List<AMapReGeocode> {
 
   //region setters
   Future<void> set_formattedAddress_batch(List<String> formattedAddress) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_formattedAddress_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "formattedAddress": formattedAddress[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_formattedAddress_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "formattedAddress": formattedAddress[i]}]);
   
   
   }
   
   Future<void> set_addressComponent_batch(List<AMapAddressComponent> addressComponent) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_addressComponent_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "addressComponent": addressComponent[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_addressComponent_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "addressComponent": addressComponent[i].refId}]);
   
   
   }
   
   Future<void> set_roads_batch(List<List<AMapRoad>> roads) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_roads_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roads": roads[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_roads_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roads": roads[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_roadinters_batch(List<List<AMapRoadInter>> roadinters) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_roadinters_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roadinters": roadinters[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_roadinters_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roadinters": roadinters[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_pois_batch(List<List<AMapPOI>> pois) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_pois_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pois": pois[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_pois_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pois": pois[i].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_aois_batch(List<List<AMapAOI>> aois) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_aois_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "aois": aois[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocode::set_aois_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "aois": aois[i].map((it) => it.refId).toList()}]);
   
   
   }

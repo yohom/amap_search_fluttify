@@ -113,19 +113,19 @@ extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
 
   //region setters
   Future<void> set_rating_batch(List<double> rating) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_rating_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "rating": rating[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_rating_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "rating": rating[i]}]);
   
   
   }
   
   Future<void> set_cost_batch(List<double> cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_cost_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_cost_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
   
   
   }
   
   Future<void> set_openTime_batch(List<String> openTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_openTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "openTime": openTime[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_openTime_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "openTime": openTime[i]}]);
   
   
   }

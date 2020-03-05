@@ -132,25 +132,25 @@ extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
 
   //region setters
   Future<void> set_duration_batch(List<int> duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_duration_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
   
   
   }
   
   Future<void> set_pathindex_batch(List<int> pathindex) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_pathindex_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pathindex": pathindex[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_pathindex_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pathindex": pathindex[i]}]);
   
   
   }
   
   Future<void> set_restriction_batch(List<int> restriction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_restriction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "restriction": restriction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_restriction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "restriction": restriction[i]}]);
   
   
   }
   
   Future<void> set_tmcs_batch(List<List<AMapTMC>> tmcs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_tmcs_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tmcs": tmcs[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_tmcs_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tmcs": tmcs[i].map((it) => it.refId).toList()}]);
   
   
   }

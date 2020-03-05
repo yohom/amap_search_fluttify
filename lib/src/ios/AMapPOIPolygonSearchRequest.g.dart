@@ -94,13 +94,13 @@ extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest>
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIPolygonSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIPolygonSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_polygon_batch(List<AMapGeoPolygon> polygon) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIPolygonSearchRequest::set_polygon_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polygon": polygon[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIPolygonSearchRequest::set_polygon_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polygon": polygon[i].refId}]);
   
   
   }

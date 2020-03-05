@@ -151,31 +151,31 @@ extension AMapInputTipsSearchRequest_Batch on List<AMapInputTipsSearchRequest> {
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }
   
   Future<void> set_types_batch(List<String> types) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_types_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "types": types[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_types_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "types": types[i]}]);
   
   
   }
   
   Future<void> set_cityLimit_batch(List<bool> cityLimit) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_cityLimit_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityLimit": cityLimit[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_cityLimit_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cityLimit": cityLimit[i]}]);
   
   
   }
   
   Future<void> set_location_batch(List<String> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapInputTipsSearchRequest::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i]}]);
   
   
   }

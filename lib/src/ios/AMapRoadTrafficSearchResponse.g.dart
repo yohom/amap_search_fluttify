@@ -75,7 +75,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
 
   //region setters
   Future<void> set_trafficInfo_batch(List<AMapTrafficInfo> trafficInfo) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "trafficInfo": trafficInfo[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "trafficInfo": trafficInfo[i].refId}]);
   
   
   }

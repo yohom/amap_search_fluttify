@@ -94,13 +94,13 @@ extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_count_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
   
   
   }
   
   Future<void> set_geocodes_batch(List<List<AMapGeocode>> geocodes) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "geocodes": geocodes[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "geocodes": geocodes[i].map((it) => it.refId).toList()}]);
   
   
   }

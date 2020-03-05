@@ -75,7 +75,7 @@ extension AMapCloudPOIIDSearchRequest_Batch on List<AMapCloudPOIIDSearchRequest>
 
   //region setters
   Future<void> set_uid_batch(List<int> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIIDSearchRequest::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIIDSearchRequest::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
   
   
   }

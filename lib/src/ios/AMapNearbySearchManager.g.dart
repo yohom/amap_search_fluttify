@@ -222,7 +222,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
 
   //region setters
   Future<void> set_uploadTimeInterval_batch(List<double> uploadTimeInterval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uploadTimeInterval": uploadTimeInterval[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uploadTimeInterval": uploadTimeInterval[i]}]);
   
   
   }

@@ -113,19 +113,19 @@ extension AMapCloudImage_Batch on List<AMapCloudImage> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
   
   
   }
   
   Future<void> set_preurl_batch(List<String> preurl) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_preurl_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "preurl": preurl[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_preurl_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "preurl": preurl[i]}]);
   
   
   }
   
   Future<void> set_url_batch(List<String> url) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_url_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "url": url[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_url_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "url": url[i]}]);
   
   
   }

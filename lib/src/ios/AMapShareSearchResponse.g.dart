@@ -75,7 +75,7 @@ extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
 
   //region setters
   Future<void> set_shareURL_batch(List<String> shareURL) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "shareURL": shareURL[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "shareURL": shareURL[i]}]);
   
   
   }

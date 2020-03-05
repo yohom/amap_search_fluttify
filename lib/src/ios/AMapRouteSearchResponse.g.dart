@@ -94,13 +94,13 @@ extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_count_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
   
   
   }
   
   Future<void> set_route_batch(List<AMapRoute> route) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_route_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "route": route[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_route_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "route": route[i].refId}]);
   
   
   }

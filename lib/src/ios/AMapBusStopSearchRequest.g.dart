@@ -132,25 +132,25 @@ extension AMapBusStopSearchRequest_Batch on List<AMapBusStopSearchRequest> {
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
   
   
   }
   
   Future<void> set_offset_batch(List<int> offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_offset_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_offset_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
   
   
   }
   
   Future<void> set_page_batch(List<int> page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_page_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchRequest::set_page_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
   
   
   }

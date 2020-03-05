@@ -94,13 +94,13 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
 
   //region setters
   Future<void> set_keywords_batch(List<List<String>> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
   
   
   }
   
   Future<void> set_cities_batch(List<List<AMapCity>> cities) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_cities_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cities": cities[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_cities_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cities": cities[i].map((it) => it.refId).toList()}]);
   
   
   }

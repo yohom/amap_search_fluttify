@@ -113,19 +113,19 @@ extension AMapTMC_Batch on List<AMapTMC> {
 
   //region setters
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTMC::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTMC::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
   
   
   }
   
   Future<void> set_status_batch(List<String> status) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTMC::set_status_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTMC::set_status_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
   
   
   }
   
   Future<void> set_polyline_batch(List<String> polyline) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTMC::set_polyline_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTMC::set_polyline_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i]}]);
   
   
   }

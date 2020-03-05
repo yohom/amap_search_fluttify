@@ -75,7 +75,7 @@ extension AMapDistanceSearchResponse_Batch on List<AMapDistanceSearchResponse> {
 
   //region setters
   Future<void> set_results_batch(List<List<AMapDistanceResult>> results) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchResponse::set_results_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "results": results[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchResponse::set_results_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "results": results[i].map((it) => it.refId).toList()}]);
   
   
   }
