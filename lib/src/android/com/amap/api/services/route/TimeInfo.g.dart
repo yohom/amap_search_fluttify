@@ -27,9 +27,9 @@ class com_amap_api_services_route_TimeInfo extends java_lang_Object with android
   }
   
   static Future<List<com_amap_api_services_route_TimeInfo>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TimeInfo__', {'length': length});
   
     final List<com_amap_api_services_route_TimeInfo> typedResult = resultBatch.map((result) => com_amap_api_services_route_TimeInfo()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -144,12 +144,15 @@ extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_servic
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<int>> getStartTime_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TimeInfo::getStartTime_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -166,10 +169,9 @@ extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_servic
   }
   
   Future<void> setStartTime_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TimeInfo::setStartTime_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -186,10 +188,9 @@ extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_servic
   }
   
   Future<List<List<com_amap_api_services_route_TimeInfosElement>>> getElements_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TimeInfo::getElements_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -206,10 +207,9 @@ extension com_amap_api_services_route_TimeInfo_Batch on List<com_amap_api_servic
   }
   
   Future<void> setElements_batch(List<List<com_amap_api_services_route_TimeInfosElement>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TimeInfo::setElements_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);

@@ -27,9 +27,9 @@ class com_amap_api_services_busline_BusLineSearch extends java_lang_Object  {
   }
   
   static Future<List<com_amap_api_services_busline_BusLineSearch>> create_batch__android_content_Context__com_amap_api_services_busline_BusLineQuery(List<android_content_Context> var1, List<com_amap_api_services_busline_BusLineQuery> var2) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId, "var2": var2[i].refId}]);
   
     final List<com_amap_api_services_busline_BusLineSearch> typedResult = resultBatch.map((result) => com_amap_api_services_busline_BusLineSearch()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -185,12 +185,15 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<com_amap_api_services_busline_BusLineResult>> searchBusLine_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineSearch::searchBusLine_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -207,10 +210,9 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
   }
   
   Future<void> searchBusLineAsyn_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineSearch::searchBusLineAsyn_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -227,10 +229,9 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
   }
   
   Future<void> setQuery_batch(List<com_amap_api_services_busline_BusLineQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineSearch::setQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -247,10 +248,9 @@ extension com_amap_api_services_busline_BusLineSearch_Batch on List<com_amap_api
   }
   
   Future<List<com_amap_api_services_busline_BusLineQuery>> getQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.busline.BusLineSearch::getQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

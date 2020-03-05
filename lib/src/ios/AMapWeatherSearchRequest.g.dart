@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapWeatherSearchRequest extends AMapSearchObject  {
+class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapWeatherSearchRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapWeatherSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapWeatherSearchRequest', {'length': length});
   
     final List<AMapWeatherSearchRequest> typedResult = resultBatch.map((result) => AMapWeatherSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
     final typedResult = (resultBatch as List).map((result) => AMapWeatherType.values[result]).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_city_batch(List<String> city) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+  
+  
+  }
+  
+  Future<void> set_type_batch(List<AMapWeatherType> type) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i].index}]);
+  
+  
   }
   
   //endregion

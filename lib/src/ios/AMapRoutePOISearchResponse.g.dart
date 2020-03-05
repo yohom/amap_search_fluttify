@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRoutePOISearchResponse extends AMapSearchObject  {
+class AMapRoutePOISearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRoutePOISearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapRoutePOISearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoutePOISearchResponse', {'length': length});
   
     final List<AMapRoutePOISearchResponse> typedResult = resultBatch.map((result) => AMapRoutePOISearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapRoutePOISearchResponse_Batch on List<AMapRoutePOISearchResponse> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapRoutePOI()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_count_batch(List<int> count) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+  
+  
+  }
+  
+  Future<void> set_pois_batch(List<List<AMapRoutePOI>> pois) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchResponse::set_pois_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pois": pois[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

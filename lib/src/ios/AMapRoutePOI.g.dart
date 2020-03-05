@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRoutePOI extends AMapSearchObject  {
+class AMapRoutePOI extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRoutePOI extends AMapSearchObject  {
   }
   
   static Future<List<AMapRoutePOI>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoutePOI', {'length': length});
   
     final List<AMapRoutePOI> typedResult = resultBatch.map((result) => AMapRoutePOI()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -145,6 +145,39 @@ extension AMapRoutePOI_Batch on List<AMapRoutePOI> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_uid_batch(List<String> uid) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOI::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+  
+  
+  }
+  
+  Future<void> set_name_batch(List<String> name) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOI::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOI::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOI::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_duration_batch(List<int> duration) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOI::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+  
+  
   }
   
   //endregion

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapDistrict extends AMapSearchObject  {
+class AMapDistrict extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapDistrict extends AMapSearchObject  {
   }
   
   static Future<List<AMapDistrict>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapDistrict', {'length': length});
   
     final List<AMapDistrict> typedResult = resultBatch.map((result) => AMapDistrict()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -183,6 +183,51 @@ extension AMapDistrict_Batch on List<AMapDistrict> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<String>()).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_adcode_batch(List<String> adcode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_citycode_batch(List<String> citycode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_citycode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_name_batch(List<String> name) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+  
+  
+  }
+  
+  Future<void> set_level_batch(List<String> level) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_level_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "level": level[i]}]);
+  
+  
+  }
+  
+  Future<void> set_center_batch(List<AMapGeoPoint> center) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_center_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_districts_batch(List<List<AMapDistrict>> districts) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_districts_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "districts": districts[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_polylines_batch(List<List<String>> polylines) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrict::set_polylines_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polylines": polylines[i]}]);
+  
+  
   }
   
   //endregion

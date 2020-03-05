@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
+class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapDrivingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   }
   
   static Future<List<AMapDrivingRouteSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapDrivingRouteSearchRequest', {'length': length});
   
     final List<AMapDrivingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapDrivingRouteSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -297,6 +297,87 @@ extension AMapDrivingRouteSearchRequest_Batch on List<AMapDrivingRouteSearchRequ
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_strategy_batch(List<int> strategy) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_strategy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+  
+  
+  }
+  
+  Future<void> set_waypoints_batch(List<List<AMapGeoPoint>> waypoints) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_waypoints_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "waypoints": waypoints[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_avoidpolygons_batch(List<List<AMapGeoPolygon>> avoidpolygons) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_avoidpolygons_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "avoidpolygons": avoidpolygons[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_avoidroad_batch(List<String> avoidroad) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_avoidroad_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "avoidroad": avoidroad[i]}]);
+  
+  
+  }
+  
+  Future<void> set_originId_batch(List<String> originId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_originId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "originId": originId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_destinationId_batch(List<String> destinationId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_destinationId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationId": destinationId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_origintype_batch(List<String> origintype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_origintype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origintype": origintype[i]}]);
+  
+  
+  }
+  
+  Future<void> set_destinationtype_batch(List<String> destinationtype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_destinationtype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationtype": destinationtype[i]}]);
+  
+  
+  }
+  
+  Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+  
+  
+  }
+  
+  Future<void> set_plateProvince_batch(List<String> plateProvince) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_plateProvince_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "plateProvince": plateProvince[i]}]);
+  
+  
+  }
+  
+  Future<void> set_plateNumber_batch(List<String> plateNumber) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_plateNumber_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "plateNumber": plateNumber[i]}]);
+  
+  
+  }
+  
+  Future<void> set_ferry_batch(List<int> ferry) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_ferry_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "ferry": ferry[i]}]);
+  
+  
+  }
+  
+  Future<void> set_cartype_batch(List<int> cartype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDrivingRouteSearchRequest::set_cartype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cartype": cartype[i]}]);
+  
+  
   }
   
   //endregion

@@ -27,9 +27,9 @@ class com_amap_api_services_route_WalkRouteResult extends com_amap_api_services_
   }
   
   static Future<List<com_amap_api_services_route_WalkRouteResult>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_WalkRouteResult__', {'length': length});
   
     final List<com_amap_api_services_route_WalkRouteResult> typedResult = resultBatch.map((result) => com_amap_api_services_route_WalkRouteResult()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -144,12 +144,15 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<List<com_amap_api_services_route_WalkPath>>> getPaths_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.WalkRouteResult::getPaths_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -166,10 +169,9 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
   }
   
   Future<void> setPaths_batch(List<List<com_amap_api_services_route_WalkPath>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.WalkRouteResult::setPaths_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -186,10 +188,9 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
   }
   
   Future<List<com_amap_api_services_route_RouteSearch_WalkRouteQuery>> getWalkQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.WalkRouteResult::getWalkQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -206,10 +207,9 @@ extension com_amap_api_services_route_WalkRouteResult_Batch on List<com_amap_api
   }
   
   Future<void> setWalkQuery_batch(List<com_amap_api_services_route_RouteSearch_WalkRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.WalkRouteResult::setWalkQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);

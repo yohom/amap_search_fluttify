@@ -1,5 +1,5 @@
 name: amap_search_fluttify
-description: An `Amap` Search Component, Powered By `Fluttify` Engine.
+description: An `Amap` Search Component, Powered By `Fluttify` Engine, A Dart Bindings Generator for Native SDK.
 version: 0.7.5+1053dca
 author: yohom <yohombao@qq.com>
 homepage: https://github.com/fluttify-project/amap_search_fluttify
@@ -11,8 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  amap_core_fluttify: ^0.5.3+356f11c
-  foundation_fluttify: ^0.4.8
+  amap_core_fluttify: ^0.5.6+3ebdbdc
+  foundation_fluttify: ^0.4.14+2
 
 dev_dependencies:
   flutter_test:

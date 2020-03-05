@@ -27,9 +27,9 @@ class AMapSearchObject extends NSObject with NSCoding, NSCopying {
   }
   
   static Future<List<AMapSearchObject>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSearchObject', {'length': length});
   
     final List<AMapSearchObject> typedResult = resultBatch.map((result) => AMapSearchObject()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -78,12 +78,15 @@ extension AMapSearchObject_Batch on List<AMapSearchObject> {
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> formattedDescription_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchObject::formattedDescription_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

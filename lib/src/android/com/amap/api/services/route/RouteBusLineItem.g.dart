@@ -27,9 +27,9 @@ class com_amap_api_services_route_RouteBusLineItem extends com_amap_api_services
   }
   
   static Future<List<com_amap_api_services_route_RouteBusLineItem>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RouteBusLineItem__', {'length': length});
   
     final List<com_amap_api_services_route_RouteBusLineItem> typedResult = resultBatch.map((result) => com_amap_api_services_route_RouteBusLineItem()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -320,12 +320,15 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<com_amap_api_services_busline_BusStationItem>> getDepartureBusStation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getDepartureBusStation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -342,10 +345,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<void> setDepartureBusStation_batch(List<com_amap_api_services_busline_BusStationItem> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setDepartureBusStation_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -362,10 +364,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<List<com_amap_api_services_busline_BusStationItem>> getArrivalBusStation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getArrivalBusStation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -382,10 +383,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<void> setArrivalBusStation_batch(List<com_amap_api_services_busline_BusStationItem> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setArrivalBusStation_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -402,10 +402,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPolyline_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -422,10 +421,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<void> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPolyline_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -442,10 +440,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<List<int>> getPassStationNum_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPassStationNum_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -462,10 +459,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<void> setPassStationNum_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPassStationNum_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -482,10 +478,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<List<List<com_amap_api_services_busline_BusStationItem>>> getPassStations_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getPassStations_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -502,10 +497,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<void> setPassStations_batch(List<List<com_amap_api_services_busline_BusStationItem>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setPassStations_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -522,10 +516,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<List<double>> getDuration_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::getDuration_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -542,10 +535,9 @@ extension com_amap_api_services_route_RouteBusLineItem_Batch on List<com_amap_ap
   }
   
   Future<void> setDuration_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RouteBusLineItem::setDuration_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

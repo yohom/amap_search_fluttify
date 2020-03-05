@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapDistanceResult extends AMapSearchObject  {
+class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapDistanceResult extends AMapSearchObject  {
   }
   
   static Future<List<AMapDistanceResult>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapDistanceResult', {'length': length});
   
     final List<AMapDistanceResult> typedResult = resultBatch.map((result) => AMapDistanceResult()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -164,6 +164,45 @@ extension AMapDistanceResult_Batch on List<AMapDistanceResult> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_originID_batch(List<int> originID) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_originID_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "originID": originID[i]}]);
+  
+  
+  }
+  
+  Future<void> set_destID_batch(List<int> destID) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_destID_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destID": destID[i]}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_duration_batch(List<int> duration) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+  
+  
+  }
+  
+  Future<void> set_info_batch(List<String> info) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_info_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "info": info[i]}]);
+  
+  
+  }
+  
+  Future<void> set_code_batch(List<int> code) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_code_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "code": code[i]}]);
+  
+  
   }
   
   //endregion

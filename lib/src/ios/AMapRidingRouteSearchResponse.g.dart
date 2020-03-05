@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse  {
+class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse  {
   }
   
   static Future<List<AMapRidingRouteSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchResponse', {'length': length});
   
     final List<AMapRidingRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRidingRouteSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -54,6 +54,10 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse  {
 
 extension AMapRidingRouteSearchResponse_Batch on List<AMapRidingRouteSearchResponse> {
   //region getters
+  
+  //endregion
+
+  //region setters
   
   //endregion
 

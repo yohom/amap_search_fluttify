@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapCloudImage extends AMapSearchObject  {
+class AMapCloudImage extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapCloudImage extends AMapSearchObject  {
   }
   
   static Future<List<AMapCloudImage>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudImage', {'length': length});
   
     final List<AMapCloudImage> typedResult = resultBatch.map((result) => AMapCloudImage()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapCloudImage_Batch on List<AMapCloudImage> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_uid_batch(List<String> uid) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+  
+  
+  }
+  
+  Future<void> set_preurl_batch(List<String> preurl) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_preurl_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "preurl": preurl[i]}]);
+  
+  
+  }
+  
+  Future<void> set_url_batch(List<String> url) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudImage::set_url_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "url": url[i]}]);
+  
+  
   }
   
   //endregion

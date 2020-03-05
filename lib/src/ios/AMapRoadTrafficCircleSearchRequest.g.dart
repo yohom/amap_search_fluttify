@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseRequest  {
+class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRoadTrafficCircleSearchRequest extends AMapRoadTrafficSearchBaseReques
   }
   
   static Future<List<AMapRoadTrafficCircleSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest', {'length': length});
   
     final List<AMapRoadTrafficCircleSearchRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficCircleSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapRoadTrafficCircleSearchRequest_Batch on List<AMapRoadTrafficCircle
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_radius_batch(List<int> radius) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficCircleSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+  
+  
   }
   
   //endregion

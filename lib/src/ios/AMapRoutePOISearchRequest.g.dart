@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRoutePOISearchRequest extends AMapSearchObject  {
+class AMapRoutePOISearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRoutePOISearchRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapRoutePOISearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoutePOISearchRequest', {'length': length});
   
     final List<AMapRoutePOISearchRequest> typedResult = resultBatch.map((result) => AMapRoutePOISearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -183,6 +183,51 @@ extension AMapRoutePOISearchRequest_Batch on List<AMapRoutePOISearchRequest> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapGeoPoint()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_searchType_batch(List<AMapRoutePOISearchType> searchType) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_searchType_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "searchType": searchType[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_strategy_batch(List<int> strategy) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_strategy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+  
+  
+  }
+  
+  Future<void> set_range_batch(List<int> range) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_range_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "range": range[i]}]);
+  
+  
+  }
+  
+  Future<void> set_polylineStr_batch(List<String> polylineStr) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_polylineStr_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polylineStr": polylineStr[i]}]);
+  
+  
+  }
+  
+  Future<void> set_polyline_batch(List<List<AMapGeoPoint>> polyline) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoutePOISearchRequest::set_polyline_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapTaxi extends AMapSearchObject  {
+class AMapTaxi extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapTaxi extends AMapSearchObject  {
   }
   
   static Future<List<AMapTaxi>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapTaxi', {'length': length});
   
     final List<AMapTaxi> typedResult = resultBatch.map((result) => AMapTaxi()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -164,6 +164,45 @@ extension AMapTaxi_Batch on List<AMapTaxi> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_duration_batch(List<int> duration) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+  
+  
+  }
+  
+  Future<void> set_sname_batch(List<String> sname) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_sname_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sname": sname[i]}]);
+  
+  
+  }
+  
+  Future<void> set_tname_batch(List<String> tname) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTaxi::set_tname_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tname": tname[i]}]);
+  
+  
   }
   
   //endregion

@@ -50,9 +50,9 @@ class com_amap_api_services_share_ShareSearch extends java_lang_Object  {
   }
   
   static Future<List<com_amap_api_services_share_ShareSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_share_ShareSearch__android_content_Context', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId}]);
   
     final List<com_amap_api_services_share_ShareSearch> typedResult = resultBatch.map((result) => com_amap_api_services_share_ShareSearch()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -429,12 +429,15 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<void> searchPoiShareUrlAsyn_batch(List<com_amap_api_services_core_PoiItem> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchPoiShareUrlAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -451,10 +454,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<void> searchBusRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchBusRouteShareUrlAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -471,10 +473,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<void> searchWalkRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrlAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -491,10 +492,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<void> searchDrivingRouteShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrlAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -511,10 +511,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<void> searchNaviShareUrlAsyn_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchNaviShareUrlAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -531,10 +530,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<void> searchLocationShareUrlAsyn_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchLocationShareUrlAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -551,10 +549,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<List<String>> searchPoiShareUrl_batch(List<com_amap_api_services_core_PoiItem> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchPoiShareUrl_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -571,10 +568,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<List<String>> searchNaviShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareNaviQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchNaviShareUrl_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -591,10 +587,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<List<String>> searchLocationShareUrl_batch(List<com_amap_api_services_core_LatLonSharePoint> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchLocationShareUrl_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -611,10 +606,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<List<String>> searchBusRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareBusRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -631,10 +625,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<List<String>> searchDrivingRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -651,10 +644,9 @@ extension com_amap_api_services_share_ShareSearch_Batch on List<com_amap_api_ser
   }
   
   Future<List<String>> searchWalkRouteShareUrl_batch(List<com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);

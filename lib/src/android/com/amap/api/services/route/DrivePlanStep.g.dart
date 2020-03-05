@@ -27,9 +27,9 @@ class com_amap_api_services_route_DrivePlanStep extends java_lang_Object with an
   }
   
   static Future<List<com_amap_api_services_route_DrivePlanStep>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DrivePlanStep__', {'length': length});
   
     final List<com_amap_api_services_route_DrivePlanStep> typedResult = resultBatch.map((result) => com_amap_api_services_route_DrivePlanStep()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -276,12 +276,15 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getRoad_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getRoad_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -298,10 +301,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<void> setAdCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setAdCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -318,10 +320,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<List<String>> getAdCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getAdCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -338,10 +339,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<void> setRoad_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setRoad_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -358,10 +358,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<List<double>> getDistance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getDistance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -378,10 +377,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<void> setDistance_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setDistance_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -398,10 +396,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<List<bool>> getToll_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getToll_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -418,10 +415,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<void> setToll_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setToll_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -438,10 +434,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::getPolyline_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -458,10 +453,9 @@ extension com_amap_api_services_route_DrivePlanStep_Batch on List<com_amap_api_s
   }
   
   Future<void> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DrivePlanStep::setPolyline_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);

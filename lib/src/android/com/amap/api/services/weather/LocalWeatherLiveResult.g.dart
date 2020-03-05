@@ -104,12 +104,15 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<com_amap_api_services_weather_LocalWeatherLiveResult>> createPagedResult_batch(List<com_amap_api_services_weather_WeatherSearchQuery> var0, List<com_amap_api_services_weather_LocalWeatherLive> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].refId, "refId": this[i].refId}]);
@@ -126,10 +129,9 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
   }
   
   Future<List<com_amap_api_services_weather_WeatherSearchQuery>> getWeatherLiveQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -146,10 +148,9 @@ extension com_amap_api_services_weather_LocalWeatherLiveResult_Batch on List<com
   }
   
   Future<List<com_amap_api_services_weather_LocalWeatherLive>> getLiveResult_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

@@ -27,9 +27,9 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
   }
   
   static Future<List<AMapNearbyUploadInfo>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapNearbyUploadInfo', {'length': length});
   
     final List<AMapNearbyUploadInfo> typedResult = resultBatch.map((result) => AMapNearbyUploadInfo()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
     final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_userID_batch(List<String> userID) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_userID_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "userID": userID[i]}]);
+  
+  
+  }
+  
+  Future<void> set_coordinateType_batch(List<AMapSearchCoordinateType> coordinateType) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "coordinateType": coordinateType[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_coordinate_batch(List<CLLocationCoordinate2D> coordinate) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinate_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "coordinate": coordinate[i].refId}]);
+  
+  
   }
   
   //endregion

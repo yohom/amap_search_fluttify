@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapIndoorData extends AMapSearchObject  {
+class AMapIndoorData extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapIndoorData extends AMapSearchObject  {
   }
   
   static Future<List<AMapIndoorData>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapIndoorData', {'length': length});
   
     final List<AMapIndoorData> typedResult = resultBatch.map((result) => AMapIndoorData()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapIndoorData_Batch on List<AMapIndoorData> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_floor_batch(List<int> floor) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floor_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "floor": floor[i]}]);
+  
+  
+  }
+  
+  Future<void> set_floorName_batch(List<String> floorName) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_floorName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "floorName": floorName[i]}]);
+  
+  
+  }
+  
+  Future<void> set_pid_batch(List<String> pid) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapIndoorData::set_pid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pid": pid[i]}]);
+  
+  
   }
   
   //endregion

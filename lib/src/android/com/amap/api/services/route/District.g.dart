@@ -27,9 +27,9 @@ class com_amap_api_services_route_District extends java_lang_Object with android
   }
   
   static Future<List<com_amap_api_services_route_District>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_District__', {'length': length});
   
     final List<com_amap_api_services_route_District> typedResult = resultBatch.map((result) => com_amap_api_services_route_District()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -144,12 +144,15 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getDistrictName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.District::getDistrictName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -166,10 +169,9 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   }
   
   Future<void> setDistrictName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.District::setDistrictName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -186,10 +188,9 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   }
   
   Future<List<String>> getDistrictAdcode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.District::getDistrictAdcode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -206,10 +207,9 @@ extension com_amap_api_services_route_District_Batch on List<com_amap_api_servic
   }
   
   Future<void> setDistrictAdcode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.District::setDistrictAdcode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
+class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   }
   
   static Future<List<AMapFutureRouteSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapFutureRouteSearchRequest', {'length': length});
   
     final List<AMapFutureRouteSearchRequest> typedResult = resultBatch.map((result) => AMapFutureRouteSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -278,6 +278,81 @@ extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchReques
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_beginTime_batch(List<String> beginTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_beginTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "beginTime": beginTime[i]}]);
+  
+  
+  }
+  
+  Future<void> set_interval_batch(List<int> interval) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_interval_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "interval": interval[i]}]);
+  
+  
+  }
+  
+  Future<void> set_timeCount_batch(List<int> timeCount) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_timeCount_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeCount": timeCount[i]}]);
+  
+  
+  }
+  
+  Future<void> set_strategy_batch(List<int> strategy) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_strategy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+  
+  
+  }
+  
+  Future<void> set_originId_batch(List<String> originId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_originId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "originId": originId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_destinationId_batch(List<String> destinationId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_destinationId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationId": destinationId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_origintype_batch(List<String> origintype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_origintype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origintype": origintype[i]}]);
+  
+  
+  }
+  
+  Future<void> set_destinationtype_batch(List<String> destinationtype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_destinationtype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationtype": destinationtype[i]}]);
+  
+  
+  }
+  
+  Future<void> set_parentId_batch(List<String> parentId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_parentId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "parentId": parentId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_plateProvince_batch(List<String> plateProvince) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_plateProvince_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "plateProvince": plateProvince[i]}]);
+  
+  
+  }
+  
+  Future<void> set_plateNumber_batch(List<String> plateNumber) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_plateNumber_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "plateNumber": plateNumber[i]}]);
+  
+  
+  }
+  
+  Future<void> set_cartype_batch(List<int> cartype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_cartype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cartype": cartype[i]}]);
+  
+  
   }
   
   //endregion

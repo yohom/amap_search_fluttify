@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapSuggestion extends AMapSearchObject  {
+class AMapSuggestion extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapSuggestion extends AMapSearchObject  {
   }
   
   static Future<List<AMapSuggestion>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSuggestion', {'length': length});
   
     final List<AMapSuggestion> typedResult = resultBatch.map((result) => AMapSuggestion()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapSuggestion_Batch on List<AMapSuggestion> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapCity()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_keywords_batch(List<List<String>> keywords) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+  
+  
+  }
+  
+  Future<void> set_cities_batch(List<List<AMapCity>> cities) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSuggestion::set_cities_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cities": cities[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

@@ -27,9 +27,9 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
   }
   
   static Future<List<com_amap_api_services_cloud_CloudItemDetail>> create_batch__String__com_amap_api_services_core_LatLonPoint__String__String(List<String> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<String> var3, List<String> var4) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i].refId, "var3": var3[i], "var4": var4[i]}]);
   
     final List<com_amap_api_services_cloud_CloudItemDetail> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudItemDetail()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -54,6 +54,10 @@ class com_amap_api_services_cloud_CloudItemDetail extends com_amap_api_services_
 
 extension com_amap_api_services_cloud_CloudItemDetail_Batch on List<com_amap_api_services_cloud_CloudItemDetail> {
   //region getters
+  
+  //endregion
+
+  //region setters
   
   //endregion
 

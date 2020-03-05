@@ -27,9 +27,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
   }
   
   static Future<List<com_amap_api_services_core_PoiItem>> create_batch__String__com_amap_api_services_core_LatLonPoint__String__String(List<String> var1, List<com_amap_api_services_core_LatLonPoint> var2, List<String> var3, List<String> var4) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i].refId, "var3": var3[i], "var4": var4[i]}]);
   
     final List<com_amap_api_services_core_PoiItem> typedResult = resultBatch.map((result) => com_amap_api_services_core_PoiItem()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -1200,12 +1200,15 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getBusinessArea_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getBusinessArea_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1222,10 +1225,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setBusinessArea_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1242,10 +1244,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getAdName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1262,10 +1263,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setAdName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1282,10 +1282,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getCityName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1302,10 +1301,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setCityName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1322,10 +1320,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getProvinceName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1342,10 +1339,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setProvinceName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1362,10 +1358,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getTypeDes_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeDes_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1382,10 +1377,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setTypeDes_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1402,10 +1396,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getTel_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1422,10 +1415,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setTel_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTel_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1442,10 +1434,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getAdCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1462,10 +1453,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setAdCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1482,10 +1472,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getPoiId_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiId_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1502,10 +1491,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<int>> getDistance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDistance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1522,10 +1510,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setDistance_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDistance_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1542,10 +1529,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getTitle_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTitle_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1562,10 +1548,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getSnippet_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSnippet_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1582,10 +1567,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1602,10 +1586,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getCityCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1622,10 +1605,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setCityCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1642,10 +1624,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getEnter_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEnter_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1662,10 +1643,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setEnter_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEnter_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -1682,10 +1662,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getExit_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getExit_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1702,10 +1681,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setExit_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setExit_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -1722,10 +1700,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getWebsite_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getWebsite_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1742,10 +1719,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setWebsite_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setWebsite_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1762,10 +1738,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getPostcode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPostcode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1782,10 +1757,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setPostcode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPostcode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1802,10 +1776,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getEmail_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEmail_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1822,10 +1795,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setEmail_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEmail_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1842,10 +1814,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getDirection_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDirection_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1862,10 +1833,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setDirection_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDirection_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1882,10 +1852,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setIndoorMap_batch(List<bool> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1902,10 +1871,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<bool>> isIndoorMap_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::isIndoorMap_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1922,10 +1890,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setProvinceCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1942,10 +1909,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getProvinceCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1962,10 +1928,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setParkingType_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setParkingType_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -1982,10 +1947,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getParkingType_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getParkingType_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2002,10 +1966,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setSubPois_batch(List<List<com_amap_api_services_poisearch_SubPoiItem>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setSubPois_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -2022,10 +1985,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<List<com_amap_api_services_poisearch_SubPoiItem>>> getSubPois_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSubPois_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2042,10 +2004,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<com_amap_api_services_poisearch_IndoorData>> getIndoorData_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2062,10 +2023,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setIndoorDate_batch(List<com_amap_api_services_poisearch_IndoorData> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -2082,10 +2042,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<List<com_amap_api_services_poisearch_Photo>>> getPhotos_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPhotos_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2102,10 +2061,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setPhotos_batch(List<List<com_amap_api_services_poisearch_Photo>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPhotos_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -2122,10 +2080,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<com_amap_api_services_poisearch_PoiItemExtension>> getPoiExtension_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2142,10 +2099,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setPoiExtension_batch(List<com_amap_api_services_poisearch_PoiItemExtension> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -2162,10 +2118,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getTypeCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2182,10 +2137,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setTypeCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -2202,10 +2156,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<List<String>> getShopID_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getShopID_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -2222,10 +2175,9 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
   }
   
   Future<void> setShopID_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setShopID_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

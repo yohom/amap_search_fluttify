@@ -27,9 +27,9 @@ class com_amap_api_services_nearby_NearbySearchResult extends java_lang_Object  
   }
   
   static Future<List<com_amap_api_services_nearby_NearbySearchResult>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_nearby_NearbySearchResult__', {'length': length});
   
     final List<com_amap_api_services_nearby_NearbySearchResult> typedResult = resultBatch.map((result) => com_amap_api_services_nearby_NearbySearchResult()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -122,12 +122,15 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<List<com_amap_api_services_nearby_NearbyInfo>>> getNearbyInfoList_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getNearbyInfoList_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -144,10 +147,9 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
   }
   
   Future<List<int>> getTotalNum_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearchResult::getTotalNum_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -164,10 +166,9 @@ extension com_amap_api_services_nearby_NearbySearchResult_Batch on List<com_amap
   }
   
   Future<void> setNearbyInfoList_batch(List<List<com_amap_api_services_nearby_NearbyInfo>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.nearby.NearbySearchResult::setNearbyInfoList_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);

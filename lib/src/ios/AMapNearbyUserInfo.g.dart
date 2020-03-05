@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapNearbyUserInfo extends AMapSearchObject  {
+class AMapNearbyUserInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapNearbyUserInfo extends AMapSearchObject  {
   }
   
   static Future<List<AMapNearbyUserInfo>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapNearbyUserInfo', {'length': length});
   
     final List<AMapNearbyUserInfo> typedResult = resultBatch.map((result) => AMapNearbyUserInfo()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -126,6 +126,33 @@ extension AMapNearbyUserInfo_Batch on List<AMapNearbyUserInfo> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_userID_batch(List<String> userID) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUserInfo::set_userID_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "userID": userID[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUserInfo::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<double> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUserInfo::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_updatetime_batch(List<double> updatetime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUserInfo::set_updatetime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "updatetime": updatetime[i]}]);
+  
+  
   }
   
   //endregion

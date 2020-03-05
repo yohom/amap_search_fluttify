@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapPOIExtension extends AMapSearchObject  {
+class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapPOIExtension extends AMapSearchObject  {
   }
   
   static Future<List<AMapPOIExtension>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIExtension', {'length': length});
   
     final List<AMapPOIExtension> typedResult = resultBatch.map((result) => AMapPOIExtension()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_rating_batch(List<double> rating) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_rating_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "rating": rating[i]}]);
+  
+  
+  }
+  
+  Future<void> set_cost_batch(List<double> cost) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_cost_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
+  
+  
+  }
+  
+  Future<void> set_openTime_batch(List<String> openTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_openTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "openTime": openTime[i]}]);
+  
+  
   }
   
   //endregion

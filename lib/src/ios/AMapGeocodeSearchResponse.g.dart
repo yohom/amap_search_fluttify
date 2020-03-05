@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapGeocodeSearchResponse extends AMapSearchObject  {
+class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapGeocodeSearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapGeocodeSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeocodeSearchResponse', {'length': length});
   
     final List<AMapGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapGeocodeSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapGeocode()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_count_batch(List<int> count) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+  
+  
+  }
+  
+  Future<void> set_geocodes_batch(List<List<AMapGeocode>> geocodes) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "geocodes": geocodes[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

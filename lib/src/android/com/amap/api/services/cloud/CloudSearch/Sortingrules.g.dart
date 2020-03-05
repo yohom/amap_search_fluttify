@@ -36,9 +36,9 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> create_batch__String__boolean(List<String> var1, List<bool> var2) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i]}]);
   
     final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -47,9 +47,9 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   }
   
   static Future<List<com_amap_api_services_cloud_CloudSearch_Sortingrules>> create_batch__int(List<int> var1) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int i = 0; i < var1.length; i++) {"var1": var1[i]}]);
   
     final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -74,6 +74,10 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
 
 extension com_amap_api_services_cloud_CloudSearch_Sortingrules_Batch on List<com_amap_api_services_cloud_CloudSearch_Sortingrules> {
   //region getters
+  
+  //endregion
+
+  //region setters
   
   //endregion
 

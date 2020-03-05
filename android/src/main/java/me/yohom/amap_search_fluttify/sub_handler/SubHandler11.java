@@ -31,6 +31,76 @@ public class SubHandler11 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getTownship_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getTownship();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setTownship_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setTownship(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
             put("com.amap.api.services.geocoder.GeocodeAddress::getNeighborhood_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
@@ -7208,80 +7278,6 @@ public class SubHandler11 {
                         jsonableResult = result.hashCode();
                         getHEAP().put(jsonableResult, result);
                     }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IWeatherSearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IWeatherSearch ref = (com.amap.api.services.interfaces.IWeatherSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.weather.WeatherSearchQuery result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = result.hashCode();
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IWeatherSearch::setQuery_batch", (argsBatch, methodResult) -> {
-                List<String> resultList = new ArrayList<>();
-            
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
-            
-                    // args
-                    // ref arg
-                    com.amap.api.services.weather.WeatherSearchQuery var1 = (com.amap.api.services.weather.WeatherSearchQuery) getHEAP().get((int) ((Map<String, Object>) args).get("var1"));
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IWeatherSearch ref = (com.amap.api.services.interfaces.IWeatherSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    try {
-                        ref.setQuery(var1);
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    String jsonableResult = "success";
             
                     resultList.add(jsonableResult);
                 }

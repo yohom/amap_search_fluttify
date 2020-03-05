@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapDistanceSearchRequest extends AMapSearchObject  {
+class AMapDistanceSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapDistanceSearchRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapDistanceSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapDistanceSearchRequest', {'length': length});
   
     final List<AMapDistanceSearchRequest> typedResult = resultBatch.map((result) => AMapDistanceSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapDistanceSearchRequest_Batch on List<AMapDistanceSearchRequest> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_origins_batch(List<List<AMapGeoPoint>> origins) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_origins_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origins": origins[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_type_batch(List<int> type) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceSearchRequest::set_type_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
+  
+  
   }
   
   //endregion

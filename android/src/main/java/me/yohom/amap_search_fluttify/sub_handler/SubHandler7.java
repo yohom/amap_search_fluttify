@@ -31,6 +31,41 @@ public class SubHandler7 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.core.PoiItem::getProvinceName_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.core.PoiItem ref = (com.amap.api.services.core.PoiItem) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getProvinceName();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
             put("com.amap.api.services.core.PoiItem::setProvinceName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
@@ -7258,45 +7293,6 @@ public class SubHandler7 {
             
                     // convert result to jsonable result
                     String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.route.BusStep::getTaxi_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.route.BusStep ref = (com.amap.api.services.route.BusStep) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.route.TaxiItem result;
-                    try {
-                        result = ref.getTaxi();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = result.hashCode();
-                        getHEAP().put(jsonableResult, result);
-                    }
             
                     resultList.add(jsonableResult);
                 }

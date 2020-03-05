@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest  {
+class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest  {
   }
   
   static Future<List<AMapBusLineNameSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length});
   
     final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -69,6 +69,15 @@ extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchReques
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_keywords_batch(List<String> keywords) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusLineNameSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+  
+  
   }
   
   //endregion

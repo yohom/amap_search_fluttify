@@ -27,9 +27,9 @@ class com_amap_api_services_geocoder_GeocodeQuery extends java_lang_Object  {
   }
   
   static Future<List<com_amap_api_services_geocoder_GeocodeQuery>> create_batch__String__String(List<String> var1, List<String> var2) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeQuery__String__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i]}]);
   
     final List<com_amap_api_services_geocoder_GeocodeQuery> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_GeocodeQuery()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -144,12 +144,15 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getLocationName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeQuery::getLocationName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -166,10 +169,9 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   Future<void> setLocationName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeQuery::setLocationName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -186,10 +188,9 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   Future<List<String>> getCity_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeQuery::getCity_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -206,10 +207,9 @@ extension com_amap_api_services_geocoder_GeocodeQuery_Batch on List<com_amap_api
   }
   
   Future<void> setCity_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeQuery::setCity_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

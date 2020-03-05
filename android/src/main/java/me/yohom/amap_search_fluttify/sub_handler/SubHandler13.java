@@ -31,6 +31,87 @@ public class SubHandler13 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusStationItem__", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int i = 0; i < length; i++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    }
+            
+                    // args
+            
+            
+                    // create target object
+                    com.amap.api.services.busline.BusStationItem obj = new com.amap.api.services.busline.BusStationItem();
+                    getHEAP().put(obj.hashCode(), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(obj.hashCode());
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
+            put("ObjectFactory::create_batchcom_amap_api_services_busline_BusStationQuery__String__String", (argsBatch, methodResult) -> {
+                List<Integer> resultList = new ArrayList<>();
+            
+                int length = 0;
+                // when batch size is 0, dart side will put a map with key 'length' to indicate the length
+                // of this batch
+                if (argsBatch instanceof Map) {
+                    length = (Integer) ((Map<String, Object>) argsBatch).get("length");
+                }
+                // or directly put the arg batch
+                else if (argsBatch instanceof List) {
+                    length = ((List<Map<String, Object>>) argsBatch).size();
+                }
+            
+                for (int i = 0; i < length; i++) {
+                    Map<String, Object> args = new HashMap<>();
+                    // only when arg batch is not empty, java side needs to parse args;
+                    if (argsBatch instanceof List) {
+                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                    }
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+                    // jsonable arg
+                    String var2 = (String) ((Map<String, Object>) args).get("var2");
+            
+                    // create target object
+                    com.amap.api.services.busline.BusStationQuery obj = new com.amap.api.services.busline.BusStationQuery(var1, var2);
+                    getHEAP().put(obj.hashCode(), obj);
+            
+                    // print current HEAP
+                    if (getEnableLog()) {
+                        Log.d("ObjectFactory", "HEAP: " + getHEAP());
+                    }
+            
+                    resultList.add(obj.hashCode());
+                }
+            
+                methodResult.success(resultList);
+            });
+            // factory
             put("ObjectFactory::create_batchcom_amap_api_services_core_AMapException__String", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             

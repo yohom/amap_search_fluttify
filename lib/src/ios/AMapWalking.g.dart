@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapWalking extends AMapSearchObject  {
+class AMapWalking extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapWalking extends AMapSearchObject  {
   }
   
   static Future<List<AMapWalking>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapWalking', {'length': length});
   
     final List<AMapWalking> typedResult = resultBatch.map((result) => AMapWalking()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -145,6 +145,39 @@ extension AMapWalking_Batch on List<AMapWalking> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_duration_batch(List<int> duration) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+  
+  
+  }
+  
+  Future<void> set_steps_batch(List<List<AMapStep>> steps) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalking::set_steps_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "steps": steps[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
+class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapWalkingRouteSearchRequest extends AMapRouteSearchBaseRequest  {
   }
   
   static Future<List<AMapWalkingRouteSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapWalkingRouteSearchRequest', {'length': length});
   
     final List<AMapWalkingRouteSearchRequest> typedResult = resultBatch.map((result) => AMapWalkingRouteSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -69,6 +69,15 @@ extension AMapWalkingRouteSearchRequest_Batch on List<AMapWalkingRouteSearchRequ
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_multipath_batch(List<int> multipath) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWalkingRouteSearchRequest::set_multipath_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "multipath": multipath[i]}]);
+  
+  
   }
   
   //endregion

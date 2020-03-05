@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapImage extends AMapSearchObject  {
+class AMapImage extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapImage extends AMapSearchObject  {
   }
   
   static Future<List<AMapImage>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapImage', {'length': length});
   
     final List<AMapImage> typedResult = resultBatch.map((result) => AMapImage()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapImage_Batch on List<AMapImage> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_title_batch(List<String> title) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_title_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "title": title[i]}]);
+  
+  
+  }
+  
+  Future<void> set_url_batch(List<String> url) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapImage::set_url_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "url": url[i]}]);
+  
+  
   }
   
   //endregion

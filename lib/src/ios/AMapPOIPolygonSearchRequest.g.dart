@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest  {
+class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapPOIPolygonSearchRequest extends AMapPOISearchBaseRequest  {
   }
   
   static Future<List<AMapPOIPolygonSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIPolygonSearchRequest', {'length': length});
   
     final List<AMapPOIPolygonSearchRequest> typedResult = resultBatch.map((result) => AMapPOIPolygonSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapPOIPolygonSearchRequest_Batch on List<AMapPOIPolygonSearchRequest>
     final typedResult = (resultBatch as List).map((result) => AMapGeoPolygon()..refId = result..tag = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_keywords_batch(List<String> keywords) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIPolygonSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+  
+  
+  }
+  
+  Future<void> set_polygon_batch(List<AMapGeoPolygon> polygon) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIPolygonSearchRequest::set_polygon_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polygon": polygon[i].refId}]);
+  
+  
   }
   
   //endregion

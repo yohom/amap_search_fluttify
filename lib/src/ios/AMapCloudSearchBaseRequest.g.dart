@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapCloudSearchBaseRequest extends AMapSearchObject  {
+class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapCloudSearchBaseRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudSearchBaseRequest', {'length': length});
   
     final List<AMapCloudSearchBaseRequest> typedResult = resultBatch.map((result) => AMapCloudSearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -164,6 +164,45 @@ extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_tableID_batch(List<String> tableID) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_tableID_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tableID": tableID[i]}]);
+  
+  
+  }
+  
+  Future<void> set_filter_batch(List<List<String>> filter) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_filter_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "filter": filter[i]}]);
+  
+  
+  }
+  
+  Future<void> set_sortFields_batch(List<String> sortFields) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortFields_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortFields": sortFields[i]}]);
+  
+  
+  }
+  
+  Future<void> set_sortType_batch(List<AMapCloudSortType> sortType) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortType": sortType[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_offset_batch(List<int> offset) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_offset_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
+  
+  
+  }
+  
+  Future<void> set_page_batch(List<int> page) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_page_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
+  
+  
   }
   
   //endregion

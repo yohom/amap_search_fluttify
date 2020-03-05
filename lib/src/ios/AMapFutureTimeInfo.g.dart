@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapFutureTimeInfo extends AMapSearchObject  {
+class AMapFutureTimeInfo extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapFutureTimeInfo extends AMapSearchObject  {
   }
   
   static Future<List<AMapFutureTimeInfo>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapFutureTimeInfo', {'length': length});
   
     final List<AMapFutureTimeInfo> typedResult = resultBatch.map((result) => AMapFutureTimeInfo()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapFutureTimeInfo_Batch on List<AMapFutureTimeInfo> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapFutureTimeInfoElement()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_startTime_batch(List<String> startTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfo::set_startTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "startTime": startTime[i]}]);
+  
+  
+  }
+  
+  Future<void> set_elements_batch(List<List<AMapFutureTimeInfoElement>> elements) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfo::set_elements_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "elements": elements[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

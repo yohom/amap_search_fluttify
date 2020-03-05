@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapFutureRouteSearchResponse extends AMapSearchObject  {
+class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapFutureRouteSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapFutureRouteSearchResponse', {'length': length});
   
     final List<AMapFutureRouteSearchResponse> typedResult = resultBatch.map((result) => AMapFutureRouteSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchRespo
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapFutureTimeInfo()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_paths_batch(List<List<AMapPath>> paths) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "paths": paths[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_timeInfos_batch(List<List<AMapFutureTimeInfo>> timeInfos) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeInfos": timeInfos[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

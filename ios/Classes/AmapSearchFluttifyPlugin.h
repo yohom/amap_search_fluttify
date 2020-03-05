@@ -12,8 +12,12 @@
 #import <AMapSearchKit/AMapNearbySearchManager.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
 
+typedef void (^Handler)(NSObject <FlutterPluginRegistrar> *, id, FlutterResult);
+
 @interface AmapSearchFluttifyPlugin : NSObject<AMapNearbySearchManagerDelegate, AMapSearchDelegate, FlutterPlugin>
 
 - (instancetype) initWithFlutterPluginRegistrar: (NSObject <FlutterPluginRegistrar> *) registrar;
+
+@property(nonatomic) NSObject<FlutterPluginRegistrar>* registrar;
 
 @end

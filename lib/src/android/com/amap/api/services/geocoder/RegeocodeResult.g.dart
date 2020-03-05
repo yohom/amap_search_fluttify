@@ -27,9 +27,9 @@ class com_amap_api_services_geocoder_RegeocodeResult extends java_lang_Object  {
   }
   
   static Future<List<com_amap_api_services_geocoder_RegeocodeResult>> create_batch__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress(List<com_amap_api_services_geocoder_RegeocodeQuery> var1, List<com_amap_api_services_geocoder_RegeocodeAddress> var2) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId, "var2": var2[i].refId}]);
   
     final List<com_amap_api_services_geocoder_RegeocodeResult> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_RegeocodeResult()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -144,12 +144,15 @@ extension com_amap_api_services_geocoder_RegeocodeResult_Batch on List<com_amap_
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<com_amap_api_services_geocoder_RegeocodeQuery>> getRegeocodeQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -166,10 +169,9 @@ extension com_amap_api_services_geocoder_RegeocodeResult_Batch on List<com_amap_
   }
   
   Future<void> setRegeocodeQuery_batch(List<com_amap_api_services_geocoder_RegeocodeQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -186,10 +188,9 @@ extension com_amap_api_services_geocoder_RegeocodeResult_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_services_geocoder_RegeocodeAddress>> getRegeocodeAddress_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeAddress_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -206,10 +207,9 @@ extension com_amap_api_services_geocoder_RegeocodeResult_Batch on List<com_amap_
   }
   
   Future<void> setRegeocodeAddress_batch(List<com_amap_api_services_geocoder_RegeocodeAddress> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeAddress_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);

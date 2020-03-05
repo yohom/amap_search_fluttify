@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapPOISearchBaseRequest extends AMapSearchObject  {
+class AMapPOISearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapPOISearchBaseRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapPOISearchBaseRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOISearchBaseRequest', {'length': length});
   
     final List<AMapPOISearchBaseRequest> typedResult = resultBatch.map((result) => AMapPOISearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -183,6 +183,51 @@ extension AMapPOISearchBaseRequest_Batch on List<AMapPOISearchBaseRequest> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_types_batch(List<String> types) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_types_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "types": types[i]}]);
+  
+  
+  }
+  
+  Future<void> set_sortrule_batch(List<int> sortrule) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_sortrule_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortrule": sortrule[i]}]);
+  
+  
+  }
+  
+  Future<void> set_offset_batch(List<int> offset) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_offset_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
+  
+  
+  }
+  
+  Future<void> set_page_batch(List<int> page) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_page_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
+  
+  
+  }
+  
+  Future<void> set_building_batch(List<String> building) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_building_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "building": building[i]}]);
+  
+  
+  }
+  
+  Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+  
+  
+  }
+  
+  Future<void> set_requireSubPOIs_batch(List<bool> requireSubPOIs) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOISearchBaseRequest::set_requireSubPOIs_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireSubPOIs": requireSubPOIs[i]}]);
+  
+  
   }
   
   //endregion

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRouteSearchBaseRequest extends AMapSearchObject  {
+class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapRouteSearchBaseRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRouteSearchBaseRequest', {'length': length});
   
     final List<AMapRouteSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRouteSearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest> {
     final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_origin_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_destination_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+  
+  
   }
   
   //endregion

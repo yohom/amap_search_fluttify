@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapReGeocodeSearchRequest extends AMapSearchObject  {
+class AMapReGeocodeSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapReGeocodeSearchRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapReGeocodeSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapReGeocodeSearchRequest', {'length': length});
   
     final List<AMapReGeocodeSearchRequest> typedResult = resultBatch.map((result) => AMapReGeocodeSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -126,6 +126,33 @@ extension AMapReGeocodeSearchRequest_Batch on List<AMapReGeocodeSearchRequest> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_requireExtension_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_radius_batch(List<int> radius) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+  
+  
+  }
+  
+  Future<void> set_poitype_batch(List<String> poitype) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchRequest::set_poitype_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "poitype": poitype[i]}]);
+  
+  
   }
   
   //endregion
