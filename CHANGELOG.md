@@ -1,3 +1,6 @@
+## 0.7.6
+- roll engine #b356b08
+
 ## 0.7.5
 - roll engine #1053dca
 - feat: 增加搜索云图方法 searchCloudAround
