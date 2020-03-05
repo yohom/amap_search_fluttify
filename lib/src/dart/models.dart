@@ -331,6 +331,20 @@ class ReGeocode with _ToFutureString {
     );
   }
 
+  /// 道路列表
+  Future<List<Road>> get roads {
+    return platform(
+      android: (pool) async {
+        return (await _androidModel.getRoads())
+            .map((e) => Road.android(e))
+            .toList();
+      },
+      ios: (pool) async {
+        return (await _iosModel.get_roads()).map((it) => Road.ios(it)).toList();
+      },
+    );
+  }
+
   /// 兴趣区域列表
   Future<List<Aoi>> get aoiList {
     return platform(
@@ -362,6 +376,67 @@ class ReGeocode with _ToFutureString {
   @override
   Future<String> toFutureString() async {
     return 'ReGeocode{provinceName: ${await provinceName}}, cityName: ${await cityName}, cityCode: ${await cityCode}, districtName: ${await districtName}, building: ${await building}, country: ${await country}, formatAddress: ${await formatAddress}, aoiList: ${await _expandToString(aoiList)}';
+  }
+}
+
+/// 道路
+class Road with _ToFutureString {
+  Road.android(this._androidModel) : _iosModel = null;
+
+  Road.ios(this._iosModel) : _androidModel = null;
+
+  final com_amap_api_services_geocoder_RegeocodeRoad _androidModel;
+  final AMapRoad _iosModel;
+
+  Future<String> get id {
+    return platform(
+      android: (pool) => _androidModel.getId(),
+      ios: (pool) => _iosModel.get_uid(),
+    );
+  }
+
+  Future<String> get name {
+    return platform(
+      android: (pool) => _androidModel.getName(),
+      ios: (pool) => _iosModel.get_name(),
+    );
+  }
+
+  Future<double> get distance {
+    return platform(
+      android: (pool) => _androidModel.getDistance(),
+      ios: (pool) => _iosModel.get_distance().then((value) => value.toDouble()),
+    );
+  }
+
+  Future<String> get direction {
+    return platform(
+      android: (pool) => _androidModel.getDirection(),
+      ios: (pool) => _iosModel.get_direction(),
+    );
+  }
+
+  Future<LatLng> get coordinate {
+    return platform(
+      android: (pool) async {
+        final latLng = await _androidModel.getLatLngPoint();
+        pool.add(latLng);
+        return LatLng(await latLng.getLatitude(), await latLng.getLongitude());
+      },
+      ios: (pool) async {
+        final latLng = await _iosModel.get_location();
+        pool.add(latLng);
+        return LatLng(
+          await latLng.get_latitude(),
+          await latLng.get_longitude(),
+        );
+      },
+    );
+  }
+
+  @override
+  Future<String> toFutureString() async {
+    return 'Road{id: ${await id}}, name: ${await name}, distance: ${await distance}, direction: ${await direction}, coordinate: ${await coordinate}';
   }
 }
 
