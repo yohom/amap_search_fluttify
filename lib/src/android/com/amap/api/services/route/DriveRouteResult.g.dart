@@ -27,9 +27,9 @@ class com_amap_api_services_route_DriveRouteResult extends com_amap_api_services
   }
   
   static Future<List<com_amap_api_services_route_DriveRouteResult>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_DriveRouteResult__', {'length': length});
   
     final List<com_amap_api_services_route_DriveRouteResult> typedResult = resultBatch.map((result) => com_amap_api_services_route_DriveRouteResult()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -188,12 +188,15 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<double>> getTaxiCost_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::getTaxiCost_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -210,10 +213,9 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
   }
   
   Future<void> setTaxiCost_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::setTaxiCost_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -230,10 +232,9 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
   }
   
   Future<List<List<com_amap_api_services_route_DrivePath>>> getPaths_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::getPaths_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -250,10 +251,9 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
   }
   
   Future<void> setPaths_batch(List<List<com_amap_api_services_route_DrivePath>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::setPaths_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -270,10 +270,9 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
   }
   
   Future<List<com_amap_api_services_route_RouteSearch_DriveRouteQuery>> getDriveQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::getDriveQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -290,10 +289,9 @@ extension com_amap_api_services_route_DriveRouteResult_Batch on List<com_amap_ap
   }
   
   Future<void> setDriveQuery_batch(List<com_amap_api_services_route_RouteSearch_DriveRouteQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.DriveRouteResult::setDriveQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);

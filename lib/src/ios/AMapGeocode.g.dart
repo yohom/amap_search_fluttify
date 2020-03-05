@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapGeocode extends AMapSearchObject  {
+class AMapGeocode extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapGeocode extends AMapSearchObject  {
   }
   
   static Future<List<AMapGeocode>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeocode', {'length': length});
   
     final List<AMapGeocode> typedResult = resultBatch.map((result) => AMapGeocode()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -259,6 +259,75 @@ extension AMapGeocode_Batch on List<AMapGeocode> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_formattedAddress_batch(List<String> formattedAddress) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_formattedAddress_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "formattedAddress": formattedAddress[i]}]);
+  
+  
+  }
+  
+  Future<void> set_province_batch(List<String> province) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_province_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "province": province[i]}]);
+  
+  
+  }
+  
+  Future<void> set_city_batch(List<String> city) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+  
+  
+  }
+  
+  Future<void> set_citycode_batch(List<String> citycode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_citycode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_district_batch(List<String> district) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_district_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "district": district[i]}]);
+  
+  
+  }
+  
+  Future<void> set_adcode_batch(List<String> adcode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_township_batch(List<String> township) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_township_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "township": township[i]}]);
+  
+  
+  }
+  
+  Future<void> set_neighborhood_batch(List<String> neighborhood) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_neighborhood_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "neighborhood": neighborhood[i]}]);
+  
+  
+  }
+  
+  Future<void> set_building_batch(List<String> building) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_building_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "building": building[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_level_batch(List<String> level) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocode::set_level_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "level": level[i]}]);
+  
+  
   }
   
   //endregion

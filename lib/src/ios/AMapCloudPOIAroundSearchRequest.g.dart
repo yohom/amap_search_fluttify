@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
+class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapCloudPOIAroundSearchRequest extends AMapCloudSearchBaseRequest  {
   }
   
   static Future<List<AMapCloudPOIAroundSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest', {'length': length});
   
     final List<AMapCloudPOIAroundSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOIAroundSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapCloudPOIAroundSearchRequest_Batch on List<AMapCloudPOIAroundSearch
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_center_batch(List<AMapGeoPoint> center) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_center_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_radius_batch(List<int> radius) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+  
+  
+  }
+  
+  Future<void> set_keywords_batch(List<String> keywords) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOIAroundSearchRequest::set_keywords_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+  
+  
   }
   
   //endregion

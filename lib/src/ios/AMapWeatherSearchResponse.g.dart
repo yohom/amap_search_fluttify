@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapWeatherSearchResponse extends AMapSearchObject  {
+class AMapWeatherSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapWeatherSearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapWeatherSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapWeatherSearchResponse', {'length': length});
   
     final List<AMapWeatherSearchResponse> typedResult = resultBatch.map((result) => AMapWeatherSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapWeatherSearchResponse_Batch on List<AMapWeatherSearchResponse> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapLocalWeatherForecast()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_lives_batch(List<List<AMapLocalWeatherLive>> lives) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchResponse::set_lives_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "lives": lives[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_forecasts_batch(List<List<AMapLocalWeatherForecast>> forecasts) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchResponse::set_forecasts_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "forecasts": forecasts[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

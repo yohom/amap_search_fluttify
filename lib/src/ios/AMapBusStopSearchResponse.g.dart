@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapBusStopSearchResponse extends AMapSearchObject  {
+class AMapBusStopSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapBusStopSearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapBusStopSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapBusStopSearchResponse', {'length': length});
   
     final List<AMapBusStopSearchResponse> typedResult = resultBatch.map((result) => AMapBusStopSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapBusStopSearchResponse_Batch on List<AMapBusStopSearchResponse> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapBusStop()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_count_batch(List<int> count) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+  
+  
+  }
+  
+  Future<void> set_suggestion_batch(List<AMapSuggestion> suggestion) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_suggestion_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "suggestion": suggestion[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_busstops_batch(List<List<AMapBusStop>> busstops) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusStopSearchResponse::set_busstops_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "busstops": busstops[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

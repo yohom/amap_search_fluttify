@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapGeoPoint extends AMapSearchObject  {
+class AMapGeoPoint extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapGeoPoint extends AMapSearchObject  {
   }
   
   static Future<List<AMapGeoPoint>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoPoint', {'length': length});
   
     final List<AMapGeoPoint> typedResult = resultBatch.map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -113,12 +113,26 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
   
   //endregion
 
+  //region setters
+  Future<void> set_latitude_batch(List<double> latitude) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPoint::set_latitude_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "latitude": latitude[i]}]);
+  
+  
+  }
+  
+  Future<void> set_longitude_batch(List<double> longitude) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPoint::set_longitude_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "longitude": longitude[i]}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<AMapGeoPoint>> locationWithLatitudeLongitude_batch(List<double> lat, List<double> lon) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (lat.length != lon.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPoint::locationWithLatitudeLongitude_batch', [for (int i = 0; i < this.length; i++) {"lat": lat[i], "lon": lon[i], "refId": this[i].refId}]);

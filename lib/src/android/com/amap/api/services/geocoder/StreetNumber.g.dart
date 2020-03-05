@@ -27,9 +27,9 @@ class com_amap_api_services_geocoder_StreetNumber extends java_lang_Object with 
   }
   
   static Future<List<com_amap_api_services_geocoder_StreetNumber>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_StreetNumber__', {'length': length});
   
     final List<com_amap_api_services_geocoder_StreetNumber> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_StreetNumber()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -276,12 +276,15 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getStreet_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getStreet_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -298,10 +301,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<void> setStreet_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setStreet_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -318,10 +320,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<List<String>> getNumber_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getNumber_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -338,10 +339,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<void> setNumber_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setNumber_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -358,10 +358,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<List<com_amap_api_services_core_LatLonPoint>> getLatLonPoint_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getLatLonPoint_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -378,10 +377,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<void> setLatLonPoint_batch(List<com_amap_api_services_core_LatLonPoint> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setLatLonPoint_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -398,10 +396,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<List<String>> getDirection_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getDirection_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -418,10 +415,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<void> setDirection_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setDirection_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -438,10 +434,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<List<double>> getDistance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::getDistance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -458,10 +453,9 @@ extension com_amap_api_services_geocoder_StreetNumber_Batch on List<com_amap_api
   }
   
   Future<void> setDistance_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.StreetNumber::setDistance_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

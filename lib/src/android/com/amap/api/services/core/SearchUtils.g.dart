@@ -27,9 +27,9 @@ class com_amap_api_services_core_SearchUtils extends java_lang_Object  {
   }
   
   static Future<List<com_amap_api_services_core_SearchUtils>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_SearchUtils__', {'length': length});
   
     final List<com_amap_api_services_core_SearchUtils> typedResult = resultBatch.map((result) => com_amap_api_services_core_SearchUtils()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -122,12 +122,15 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getSHA1_batch(List<android_content_Context> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getSHA1_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -144,10 +147,9 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
   }
   
   Future<List<String>> getPkgName_batch(List<android_content_Context> var0) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getPkgName_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "refId": this[i].refId}]);
@@ -164,10 +166,9 @@ extension com_amap_api_services_core_SearchUtils_Batch on List<com_amap_api_serv
   }
   
   Future<List<String>> getVersion_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.SearchUtils::getVersion_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

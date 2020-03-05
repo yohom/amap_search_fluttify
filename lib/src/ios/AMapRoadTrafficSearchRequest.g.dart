@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest  {
+class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRoadTrafficSearchRequest extends AMapRoadTrafficSearchBaseRequest  {
   }
   
   static Future<List<AMapRoadTrafficSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchRequest', {'length': length});
   
     final List<AMapRoadTrafficSearchRequest> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapRoadTrafficSearchRequest_Batch on List<AMapRoadTrafficSearchReques
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_roadName_batch(List<String> roadName) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchRequest::set_roadName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "roadName": roadName[i]}]);
+  
+  
+  }
+  
+  Future<void> set_adcode_batch(List<String> adcode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchRequest::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+  
+  
   }
   
   //endregion

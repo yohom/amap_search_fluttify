@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest  {
+class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapPOIIDSearchRequest extends AMapPOISearchBaseRequest  {
   }
   
   static Future<List<AMapPOIIDSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIIDSearchRequest', {'length': length});
   
     final List<AMapPOIIDSearchRequest> typedResult = resultBatch.map((result) => AMapPOIIDSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -69,6 +69,15 @@ extension AMapPOIIDSearchRequest_Batch on List<AMapPOIIDSearchRequest> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_uid_batch(List<String> uid) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIIDSearchRequest::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+  
+  
   }
   
   //endregion

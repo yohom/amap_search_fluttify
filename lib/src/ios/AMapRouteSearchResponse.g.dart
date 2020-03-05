@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRouteSearchResponse extends AMapSearchObject  {
+class AMapRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRouteSearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapRouteSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRouteSearchResponse', {'length': length});
   
     final List<AMapRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRouteSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -88,6 +88,21 @@ extension AMapRouteSearchResponse_Batch on List<AMapRouteSearchResponse> {
     final typedResult = (resultBatch as List).map((result) => AMapRoute()..refId = result..tag = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_count_batch(List<int> count) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_count_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+  
+  
+  }
+  
+  Future<void> set_route_batch(List<AMapRoute> route) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchResponse::set_route_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "route": route[i].refId}]);
+  
+  
   }
   
   //endregion

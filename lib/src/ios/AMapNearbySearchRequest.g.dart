@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapNearbySearchRequest extends AMapSearchObject  {
+class AMapNearbySearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapNearbySearchRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapNearbySearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapNearbySearchRequest', {'length': length});
   
     final List<AMapNearbySearchRequest> typedResult = resultBatch.map((result) => AMapNearbySearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -145,6 +145,39 @@ extension AMapNearbySearchRequest_Batch on List<AMapNearbySearchRequest> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_center_batch(List<AMapGeoPoint> center) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_center_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "center": center[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_radius_batch(List<int> radius) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_radius_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "radius": radius[i]}]);
+  
+  
+  }
+  
+  Future<void> set_searchType_batch(List<AMapNearbySearchType> searchType) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_searchType_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "searchType": searchType[i].index}]);
+  
+  
+  }
+  
+  Future<void> set_timeRange_batch(List<int> timeRange) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_timeRange_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeRange": timeRange[i]}]);
+  
+  
+  }
+  
+  Future<void> set_limit_batch(List<int> limit) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchRequest::set_limit_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "limit": limit[i]}]);
+  
+  
   }
   
   //endregion

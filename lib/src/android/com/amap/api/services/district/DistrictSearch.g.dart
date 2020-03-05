@@ -27,9 +27,9 @@ class com_amap_api_services_district_DistrictSearch extends java_lang_Object  {
   }
   
   static Future<List<com_amap_api_services_district_DistrictSearch>> create_batch__android_content_Context(List<android_content_Context> var1) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_district_DistrictSearch__android_content_Context', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId}]);
   
     final List<com_amap_api_services_district_DistrictSearch> typedResult = resultBatch.map((result) => com_amap_api_services_district_DistrictSearch()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -207,12 +207,15 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<com_amap_api_services_district_DistrictSearchQuery>> getQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::getQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -229,10 +232,9 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   Future<void> setQuery_batch(List<com_amap_api_services_district_DistrictSearchQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::setQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -249,10 +251,9 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   Future<List<com_amap_api_services_district_DistrictResult>> searchDistrict_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrict_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -269,10 +270,9 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   Future<void> searchDistrictAsyn_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAsyn_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -289,10 +289,9 @@ extension com_amap_api_services_district_DistrictSearch_Batch on List<com_amap_a
   }
   
   Future<void> searchDistrictAnsy_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.district.DistrictSearch::searchDistrictAnsy_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapStep extends AMapSearchObject  {
+class AMapStep extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapStep extends AMapSearchObject  {
   }
   
   static Future<List<AMapStep>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapStep', {'length': length});
   
     final List<AMapStep> typedResult = resultBatch.map((result) => AMapStep()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -297,6 +297,87 @@ extension AMapStep_Batch on List<AMapStep> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapTMC()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_instruction_batch(List<String> instruction) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_instruction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "instruction": instruction[i]}]);
+  
+  
+  }
+  
+  Future<void> set_orientation_batch(List<String> orientation) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_orientation_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "orientation": orientation[i]}]);
+  
+  
+  }
+  
+  Future<void> set_road_batch(List<String> road) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_road_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "road": road[i]}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_duration_batch(List<int> duration) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+  
+  
+  }
+  
+  Future<void> set_polyline_batch(List<String> polyline) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_polyline_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i]}]);
+  
+  
+  }
+  
+  Future<void> set_action_batch(List<String> action) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_action_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "action": action[i]}]);
+  
+  
+  }
+  
+  Future<void> set_assistantAction_batch(List<String> assistantAction) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_assistantAction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "assistantAction": assistantAction[i]}]);
+  
+  
+  }
+  
+  Future<void> set_tolls_batch(List<double> tolls) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_tolls_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tolls": tolls[i]}]);
+  
+  
+  }
+  
+  Future<void> set_tollDistance_batch(List<int> tollDistance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_tollDistance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tollDistance": tollDistance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_tollRoad_batch(List<String> tollRoad) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_tollRoad_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tollRoad": tollRoad[i]}]);
+  
+  
+  }
+  
+  Future<void> set_cities_batch(List<List<AMapCity>> cities) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_cities_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cities": cities[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  Future<void> set_tmcs_batch(List<List<AMapTMC>> tmcs) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapStep::set_tmcs_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tmcs": tmcs[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

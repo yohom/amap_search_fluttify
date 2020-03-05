@@ -170,12 +170,15 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<com_amap_api_services_cloud_CloudResult>> createPagedResult_batch(List<com_amap_api_services_cloud_CloudSearch_Query> var0, List<int> var1, List<com_amap_api_services_cloud_CloudSearch_SearchBound> var2, List<int> var3, List<List<com_amap_api_services_cloud_CloudItem>> var4) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (var0.length != var1.length || var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::createPagedResult_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i], "var2": var2[i].refId, "var3": var3[i], "var4": var4[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -192,10 +195,9 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   Future<List<int>> getPageCount_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::getPageCount_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -212,10 +214,9 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   Future<List<com_amap_api_services_cloud_CloudSearch_Query>> getQuery_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::getQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -232,10 +233,9 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   Future<List<com_amap_api_services_cloud_CloudSearch_SearchBound>> getBound_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::getBound_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -252,10 +252,9 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   Future<List<List<com_amap_api_services_cloud_CloudItem>>> getClouds_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::getClouds_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -272,10 +271,9 @@ extension com_amap_api_services_cloud_CloudResult_Batch on List<com_amap_api_ser
   }
   
   Future<List<int>> getTotalCount_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudResult::getTotalCount_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

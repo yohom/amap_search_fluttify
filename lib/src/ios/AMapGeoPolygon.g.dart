@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapGeoPolygon extends AMapSearchObject  {
+class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapGeoPolygon extends AMapSearchObject  {
   }
   
   static Future<List<AMapGeoPolygon>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeoPolygon', {'length': length});
   
     final List<AMapGeoPolygon> typedResult = resultBatch.map((result) => AMapGeoPolygon()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -94,12 +94,20 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
   
   //endregion
 
+  //region setters
+  Future<void> set_points_batch(List<List<AMapGeoPoint>> points) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::set_points_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "points": points[i].map((it) => it.refId).toList()}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<AMapGeoPolygon>> polygonWithPoints_batch(List<List<NSObject>> points) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints_batch', [for (int i = 0; i < this.length; i++) {"points": points[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);

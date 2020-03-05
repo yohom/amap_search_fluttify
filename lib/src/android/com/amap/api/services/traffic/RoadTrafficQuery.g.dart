@@ -27,9 +27,9 @@ class com_amap_api_services_traffic_RoadTrafficQuery extends java_lang_Object wi
   }
   
   static Future<List<com_amap_api_services_traffic_RoadTrafficQuery>> create_batch__String__String__int(List<String> var1, List<String> var2, List<int> var3) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length || var2.length != var3.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i], "var3": var3[i]}]);
   
     final List<com_amap_api_services_traffic_RoadTrafficQuery> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_RoadTrafficQuery()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -166,12 +166,15 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::getName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -188,10 +191,9 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
   }
   
   Future<void> setName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::setName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -208,10 +210,9 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
   }
   
   Future<List<String>> getAdCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::getAdCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -228,10 +229,9 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
   }
   
   Future<void> setAdCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::setAdCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -248,10 +248,9 @@ extension com_amap_api_services_traffic_RoadTrafficQuery_Batch on List<com_amap_
   }
   
   Future<List<com_amap_api_services_traffic_RoadTrafficQuery>> clone_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.RoadTrafficQuery::clone_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
+class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapNavigationShareSearchRequest extends AMapShareSearchBaseRequest  {
   }
   
   static Future<List<AMapNavigationShareSearchRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapNavigationShareSearchRequest', {'length': length});
   
     final List<AMapNavigationShareSearchRequest> typedResult = resultBatch.map((result) => AMapNavigationShareSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -107,6 +107,27 @@ extension AMapNavigationShareSearchRequest_Batch on List<AMapNavigationShareSear
     final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_strategy_batch(List<int> strategy) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_strategy_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+  
+  
+  }
+  
+  Future<void> set_startCoordinate_batch(List<AMapGeoPoint> startCoordinate) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_startCoordinate_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "startCoordinate": startCoordinate[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_destinationCoordinate_batch(List<AMapGeoPoint> destinationCoordinate) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNavigationShareSearchRequest::set_destinationCoordinate_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationCoordinate": destinationCoordinate[i].refId}]);
+  
+  
   }
   
   //endregion

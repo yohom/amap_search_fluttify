@@ -220,12 +220,20 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   
   //endregion
 
+  //region setters
+  Future<void> set_uploadTimeInterval_batch(List<double> uploadTimeInterval) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uploadTimeInterval": uploadTimeInterval[i]}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<AMapNearbySearchManager>> sharedInstance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -242,10 +250,9 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   }
   
   Future<void> startAutoUploadNearbyInfo_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -262,10 +269,9 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   }
   
   Future<void> stopAutoUploadNearbyInfo_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -282,10 +288,9 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   }
   
   Future<List<bool>> uploadNearbyInfo_batch(List<AMapNearbyUploadInfo> info) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int i = 0; i < this.length; i++) {"info": info[i].refId, "refId": this[i].refId}]);
@@ -302,10 +307,9 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   }
   
   Future<List<bool>> clearUserInfoWithID_batch(List<String> userID) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int i = 0; i < this.length; i++) {"userID": userID[i], "refId": this[i].refId}]);

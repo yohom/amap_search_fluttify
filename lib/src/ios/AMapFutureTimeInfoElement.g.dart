@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapFutureTimeInfoElement extends AMapSearchObject  {
+class AMapFutureTimeInfoElement extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapFutureTimeInfoElement extends AMapSearchObject  {
   }
   
   static Future<List<AMapFutureTimeInfoElement>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapFutureTimeInfoElement', {'length': length});
   
     final List<AMapFutureTimeInfoElement> typedResult = resultBatch.map((result) => AMapFutureTimeInfoElement()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -126,6 +126,33 @@ extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapTMC()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_duration_batch(List<int> duration) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_duration_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+  
+  
+  }
+  
+  Future<void> set_pathindex_batch(List<int> pathindex) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_pathindex_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pathindex": pathindex[i]}]);
+  
+  
+  }
+  
+  Future<void> set_restriction_batch(List<int> restriction) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_restriction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "restriction": restriction[i]}]);
+  
+  
+  }
+  
+  Future<void> set_tmcs_batch(List<List<AMapTMC>> tmcs) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureTimeInfoElement::set_tmcs_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tmcs": tmcs[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

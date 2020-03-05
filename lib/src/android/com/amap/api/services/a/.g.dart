@@ -39,6 +39,10 @@ extension com_amap_api_services_a__Batch on List<com_amap_api_services_a_> {
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   
   //endregion

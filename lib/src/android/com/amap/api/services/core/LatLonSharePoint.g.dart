@@ -27,9 +27,9 @@ class com_amap_api_services_core_LatLonSharePoint extends com_amap_api_services_
   }
   
   static Future<List<com_amap_api_services_core_LatLonSharePoint>> create_batch__double__double__String(List<double> var1, List<double> var3, List<String> var5) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var3.length || var3.length != var5.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_LatLonSharePoint__double__double__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var3": var3[i], "var5": var5[i]}]);
   
     final List<com_amap_api_services_core_LatLonSharePoint> typedResult = resultBatch.map((result) => com_amap_api_services_core_LatLonSharePoint()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -100,12 +100,15 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getSharePointName_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonSharePoint::getSharePointName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -122,10 +125,9 @@ extension com_amap_api_services_core_LatLonSharePoint_Batch on List<com_amap_api
   }
   
   Future<void> setSharePointName_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.LatLonSharePoint::setSharePointName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

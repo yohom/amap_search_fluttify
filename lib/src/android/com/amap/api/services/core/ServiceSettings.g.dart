@@ -283,12 +283,15 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<int>> getConnectionTimeOut_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getConnectionTimeOut_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -305,10 +308,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<List<int>> getSoTimeOut_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getSoTimeOut_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -325,10 +327,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<void> setConnectionTimeOut_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setConnectionTimeOut_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -345,10 +346,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<void> setSoTimeOut_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setSoTimeOut_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -365,10 +365,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<List<com_amap_api_services_core_ServiceSettings>> getInstance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -385,10 +384,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<void> setLanguage_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setLanguage_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -405,10 +403,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<void> setProtocol_batch(List<int> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setProtocol_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -425,10 +422,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<List<String>> getLanguage_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getLanguage_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -445,10 +441,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<List<int>> getProtocol_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::getProtocol_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -465,10 +460,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<void> setApiKey_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::setApiKey_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -485,10 +479,9 @@ extension com_amap_api_services_core_ServiceSettings_Batch on List<com_amap_api_
   }
   
   Future<void> destroyInnerAsynThreadPool_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.ServiceSettings::destroyInnerAsynThreadPool_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

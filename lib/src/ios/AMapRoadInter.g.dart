@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapRoadInter extends AMapSearchObject  {
+class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapRoadInter extends AMapSearchObject  {
   }
   
   static Future<List<AMapRoadInter>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoadInter', {'length': length});
   
     final List<AMapRoadInter> typedResult = resultBatch.map((result) => AMapRoadInter()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -183,6 +183,51 @@ extension AMapRoadInter_Batch on List<AMapRoadInter> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_direction_batch(List<String> direction) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_direction_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_firstId_batch(List<String> firstId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_firstId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "firstId": firstId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_firstName_batch(List<String> firstName) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_firstName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "firstName": firstName[i]}]);
+  
+  
+  }
+  
+  Future<void> set_secondId_batch(List<String> secondId) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_secondId_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "secondId": secondId[i]}]);
+  
+  
+  }
+  
+  Future<void> set_secondName_batch(List<String> secondName) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_secondName_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "secondName": secondName[i]}]);
+  
+  
   }
   
   //endregion

@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapTrafficEvaluation extends AMapSearchObject  {
+class AMapTrafficEvaluation extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapTrafficEvaluation extends AMapSearchObject  {
   }
   
   static Future<List<AMapTrafficEvaluation>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapTrafficEvaluation', {'length': length});
   
     final List<AMapTrafficEvaluation> typedResult = resultBatch.map((result) => AMapTrafficEvaluation()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -164,6 +164,45 @@ extension AMapTrafficEvaluation_Batch on List<AMapTrafficEvaluation> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_evaluationDescription_batch(List<String> evaluationDescription) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_evaluationDescription_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "evaluationDescription": evaluationDescription[i]}]);
+  
+  
+  }
+  
+  Future<void> set_status_batch(List<int> status) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_status_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
+  
+  
+  }
+  
+  Future<void> set_expedite_batch(List<String> expedite) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_expedite_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "expedite": expedite[i]}]);
+  
+  
+  }
+  
+  Future<void> set_congested_batch(List<String> congested) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_congested_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "congested": congested[i]}]);
+  
+  
+  }
+  
+  Future<void> set_blocked_batch(List<String> blocked) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_blocked_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "blocked": blocked[i]}]);
+  
+  
+  }
+  
+  Future<void> set_unknown_batch(List<String> unknown) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficEvaluation::set_unknown_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "unknown": unknown[i]}]);
+  
+  
   }
   
   //endregion

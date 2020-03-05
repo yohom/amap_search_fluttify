@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapCloudPOI extends AMapSearchObject  {
+class AMapCloudPOI extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapCloudPOI extends AMapSearchObject  {
   }
   
   static Future<List<AMapCloudPOI>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudPOI', {'length': length});
   
     final List<AMapCloudPOI> typedResult = resultBatch.map((result) => AMapCloudPOI()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -202,6 +202,57 @@ extension AMapCloudPOI_Batch on List<AMapCloudPOI> {
     final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapCloudImage()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_uid_batch(List<int> uid) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_uid_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+  
+  
+  }
+  
+  Future<void> set_name_batch(List<String> name) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_name_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+  
+  
+  }
+  
+  Future<void> set_location_batch(List<AMapGeoPoint> location) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_location_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+  
+  
+  }
+  
+  Future<void> set_address_batch(List<String> address) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_address_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
+  
+  
+  }
+  
+  Future<void> set_createTime_batch(List<String> createTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_createTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "createTime": createTime[i]}]);
+  
+  
+  }
+  
+  Future<void> set_updateTime_batch(List<String> updateTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_updateTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "updateTime": updateTime[i]}]);
+  
+  
+  }
+  
+  Future<void> set_distance_batch(List<int> distance) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_distance_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+  
+  
+  }
+  
+  Future<void> set_images_batch(List<List<AMapCloudImage>> images) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOI::set_images_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "images": images[i].map((it) => it.refId).toList()}]);
+  
+  
   }
   
   //endregion

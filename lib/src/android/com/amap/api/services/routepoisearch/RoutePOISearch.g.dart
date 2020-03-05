@@ -35,9 +35,9 @@ class com_amap_api_services_routepoisearch_RoutePOISearch extends java_lang_Obje
   }
   
   static Future<List<com_amap_api_services_routepoisearch_RoutePOISearch>> create_batch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery(List<android_content_Context> var1, List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var2) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId, "var2": var2[i].refId}]);
   
     final List<com_amap_api_services_routepoisearch_RoutePOISearch> typedResult = resultBatch.map((result) => com_amap_api_services_routepoisearch_RoutePOISearch()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -171,12 +171,15 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<void> setQuery_batch(List<com_amap_api_services_routepoisearch_RoutePOISearchQuery> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::setQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -193,10 +196,9 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
   }
   
   Future<void> searchRoutePOIAsyn_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOIAsyn_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -213,10 +215,9 @@ extension com_amap_api_services_routepoisearch_RoutePOISearch_Batch on List<com_
   }
   
   Future<List<com_amap_api_services_routepoisearch_RoutePOISearchResult>> searchRoutePOI_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOI_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

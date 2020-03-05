@@ -27,9 +27,9 @@ class com_amap_api_services_route_RailwaySpace extends java_lang_Object with and
   }
   
   static Future<List<com_amap_api_services_route_RailwaySpace>> create_batch__String__float(List<String> var1, List<double> var2) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (var1.length != var2.length) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_RailwaySpace__String__float', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i]}]);
   
     final List<com_amap_api_services_route_RailwaySpace> typedResult = resultBatch.map((result) => com_amap_api_services_route_RailwaySpace()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -100,12 +100,15 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwaySpace::getCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -122,10 +125,9 @@ extension com_amap_api_services_route_RailwaySpace_Batch on List<com_amap_api_se
   }
   
   Future<List<double>> getCost_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.RailwaySpace::getCost_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);

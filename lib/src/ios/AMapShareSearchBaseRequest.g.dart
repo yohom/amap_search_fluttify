@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapShareSearchBaseRequest extends AMapSearchObject  {
+class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapShareSearchBaseRequest extends AMapSearchObject  {
   }
   
   static Future<List<AMapShareSearchBaseRequest>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length});
   
     final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -54,6 +54,10 @@ class AMapShareSearchBaseRequest extends AMapSearchObject  {
 
 extension AMapShareSearchBaseRequest_Batch on List<AMapShareSearchBaseRequest> {
   //region getters
+  
+  //endregion
+
+  //region setters
   
   //endregion
 

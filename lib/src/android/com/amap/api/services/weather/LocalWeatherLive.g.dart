@@ -27,9 +27,9 @@ class com_amap_api_services_weather_LocalWeatherLive extends java_lang_Object wi
   }
   
   static Future<List<com_amap_api_services_weather_LocalWeatherLive>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_weather_LocalWeatherLive__', {'length': length});
   
     final List<com_amap_api_services_weather_LocalWeatherLive> typedResult = resultBatch.map((result) => com_amap_api_services_weather_LocalWeatherLive()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -452,12 +452,15 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getProvince_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getProvince_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -474,10 +477,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getCity_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getCity_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -494,10 +496,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getAdCode_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getAdCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -514,10 +515,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getWeather_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getWeather_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -534,10 +534,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getTemperature_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getTemperature_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -554,10 +553,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getWindDirection_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getWindDirection_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -574,10 +572,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getWindPower_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getWindPower_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -594,10 +591,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getHumidity_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getHumidity_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -614,10 +610,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<List<String>> getReportTime_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::getReportTime_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -634,10 +629,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setProvince_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setProvince_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -654,10 +648,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setCity_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setCity_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -674,10 +667,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setAdCode_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setAdCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -694,10 +686,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setWeather_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setWeather_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -714,10 +705,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setTemperature_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setTemperature_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -734,10 +724,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setWindDirection_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setWindDirection_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -754,10 +743,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setWindPower_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setWindPower_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -774,10 +762,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setHumidity_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setHumidity_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -794,10 +781,9 @@ extension com_amap_api_services_weather_LocalWeatherLive_Batch on List<com_amap_
   }
   
   Future<void> setReportTime_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.weather.LocalWeatherLive::setReportTime_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);

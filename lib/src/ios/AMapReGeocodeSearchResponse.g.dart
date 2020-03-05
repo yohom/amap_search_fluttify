@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapReGeocodeSearchResponse extends AMapSearchObject  {
+class AMapReGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapReGeocodeSearchResponse extends AMapSearchObject  {
   }
   
   static Future<List<AMapReGeocodeSearchResponse>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapReGeocodeSearchResponse', {'length': length});
   
     final List<AMapReGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapReGeocodeSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -69,6 +69,15 @@ extension AMapReGeocodeSearchResponse_Batch on List<AMapReGeocodeSearchResponse>
     final typedResult = (resultBatch as List).map((result) => AMapReGeocode()..refId = result..tag = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_regeocode_batch(List<AMapReGeocode> regeocode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapReGeocodeSearchResponse::set_regeocode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "regeocode": regeocode[i].refId}]);
+  
+  
   }
   
   //endregion

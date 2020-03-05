@@ -12,7 +12,7 @@ import 'package:flutter/services.dart';
 
 import 'package:foundation_fluttify/foundation_fluttify.dart';
 
-class AMapLocalWeatherLive extends AMapSearchObject  {
+class AMapLocalWeatherLive extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
   
   //endregion
@@ -27,9 +27,9 @@ class AMapLocalWeatherLive extends AMapSearchObject  {
   }
   
   static Future<List<AMapLocalWeatherLive>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapLocalWeatherLive', {'length': length});
   
     final List<AMapLocalWeatherLive> typedResult = resultBatch.map((result) => AMapLocalWeatherLive()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -221,6 +221,63 @@ extension AMapLocalWeatherLive_Batch on List<AMapLocalWeatherLive> {
     final typedResult = (resultBatch as List).map((result) => result).toList();
   
     return typedResult;
+  }
+  
+  //endregion
+
+  //region setters
+  Future<void> set_adcode_batch(List<String> adcode) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_adcode_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+  
+  
+  }
+  
+  Future<void> set_province_batch(List<String> province) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_province_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "province": province[i]}]);
+  
+  
+  }
+  
+  Future<void> set_city_batch(List<String> city) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_city_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+  
+  
+  }
+  
+  Future<void> set_weather_batch(List<String> weather) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_weather_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "weather": weather[i]}]);
+  
+  
+  }
+  
+  Future<void> set_temperature_batch(List<String> temperature) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_temperature_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "temperature": temperature[i]}]);
+  
+  
+  }
+  
+  Future<void> set_windDirection_batch(List<String> windDirection) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_windDirection_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "windDirection": windDirection[i]}]);
+  
+  
+  }
+  
+  Future<void> set_windPower_batch(List<String> windPower) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_windPower_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "windPower": windPower[i]}]);
+  
+  
+  }
+  
+  Future<void> set_humidity_batch(List<String> humidity) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_humidity_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "humidity": humidity[i]}]);
+  
+  
+  }
+  
+  Future<void> set_reportTime_batch(List<String> reportTime) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapLocalWeatherLive::set_reportTime_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "reportTime": reportTime[i]}]);
+  
+  
   }
   
   //endregion

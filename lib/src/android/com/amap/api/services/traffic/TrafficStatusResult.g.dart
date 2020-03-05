@@ -27,9 +27,9 @@ class com_amap_api_services_traffic_TrafficStatusResult extends java_lang_Object
   }
   
   static Future<List<com_amap_api_services_traffic_TrafficStatusResult>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusResult__', {'length': length});
   
     final List<com_amap_api_services_traffic_TrafficStatusResult> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_TrafficStatusResult()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -188,12 +188,15 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<List<String>> getDescription_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::getDescription_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -210,10 +213,9 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   }
   
   Future<void> setDescription_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::setDescription_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -230,10 +232,9 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   }
   
   Future<List<com_amap_api_services_traffic_TrafficStatusEvaluation>> getEvaluation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::getEvaluation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -250,10 +251,9 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   }
   
   Future<void> setEvaluation_batch(List<com_amap_api_services_traffic_TrafficStatusEvaluation> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::setEvaluation_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
@@ -270,10 +270,9 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   }
   
   Future<List<List<com_amap_api_services_traffic_TrafficStatusInfo>>> getRoads_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::getRoads_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -290,10 +289,9 @@ extension com_amap_api_services_traffic_TrafficStatusResult_Batch on List<com_am
   }
   
   Future<void> setRoads_batch(List<List<com_amap_api_services_traffic_TrafficStatusInfo>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficStatusResult::setRoads_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);

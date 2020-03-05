@@ -27,9 +27,9 @@ class AMapSearchAPI extends NSObject  {
   }
   
   static Future<List<AMapSearchAPI>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length});
   
     final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -986,12 +986,26 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   
   //endregion
 
+  //region setters
+  Future<void> set_timeout_batch(List<int> timeout) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeout": timeout[i]}]);
+  
+  
+  }
+  
+  Future<void> set_language_batch(List<AMapSearchLanguage> language) async {
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "language": language[i].index}]);
+  
+  
+  }
+  
+  //endregion
+
   //region methods
   Future<List<AMapSearchAPI>> init_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1008,10 +1022,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> cancelAllRequests_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1028,10 +1041,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapPOIIDSearch_batch(List<AMapPOIIDSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1048,10 +1060,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapPOIKeywordsSearch_batch(List<AMapPOIKeywordsSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1068,10 +1079,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapPOIAroundSearch_batch(List<AMapPOIAroundSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1088,10 +1098,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapPOIPolygonSearch_batch(List<AMapPOIPolygonSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1108,10 +1117,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapRoutePOISearch_batch(List<AMapRoutePOISearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1128,10 +1136,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapGeocodeSearch_batch(List<AMapGeocodeSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1148,10 +1155,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapReGoecodeSearch_batch(List<AMapReGeocodeSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1168,10 +1174,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapInputTipsSearch_batch(List<AMapInputTipsSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1188,10 +1193,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapBusStopSearch_batch(List<AMapBusStopSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1208,10 +1212,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapBusLineIDSearch_batch(List<AMapBusLineIDSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1228,10 +1231,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapBusLineNameSearch_batch(List<AMapBusLineNameSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1248,10 +1250,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapDistrictSearch_batch(List<AMapDistrictSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1268,10 +1269,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapDrivingRouteSearch_batch(List<AMapDrivingRouteSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1288,10 +1288,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapWalkingRouteSearch_batch(List<AMapWalkingRouteSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1308,10 +1307,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapTransitRouteSearch_batch(List<AMapTransitRouteSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1328,10 +1326,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapRidingRouteSearch_batch(List<AMapRidingRouteSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1348,10 +1345,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapTruckRouteSearch_batch(List<AMapTruckRouteSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1368,10 +1364,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapFutureRouteSearch_batch(List<AMapFutureRouteSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1388,10 +1383,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapWeatherSearch_batch(List<AMapWeatherSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1408,10 +1402,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapRoadTrafficSearch_batch(List<AMapRoadTrafficSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1428,10 +1421,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapRoadTrafficCircleSearch_batch(List<AMapRoadTrafficCircleSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1448,10 +1440,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapDistanceSearch_batch(List<AMapDistanceSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1468,10 +1459,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapNearbySearch_batch(List<AMapNearbySearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1488,10 +1478,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapCloudPOIAroundSearch_batch(List<AMapCloudPOIAroundSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1508,10 +1497,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapCloudPOIPolygonSearch_batch(List<AMapCloudPOIPolygonSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1528,10 +1516,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapCloudPOIIDSearch_batch(List<AMapCloudPOIIDSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1548,10 +1535,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapCloudPOILocalSearch_batch(List<AMapCloudPOILocalSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1568,10 +1554,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapLocationShareSearch_batch(List<AMapLocationShareSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1588,10 +1573,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapPOIShareSearch_batch(List<AMapPOIShareSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1608,10 +1592,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapRouteShareSearch_batch(List<AMapRouteShareSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
@@ -1628,10 +1611,9 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   }
   
   Future<void> AMapNavigationShareSearch_batch(List<AMapNavigationShareSearchRequest> request) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);

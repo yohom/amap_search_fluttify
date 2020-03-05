@@ -27,9 +27,9 @@ class com_amap_api_services_route_TruckStep extends java_lang_Object with androi
   }
   
   static Future<List<com_amap_api_services_route_TruckStep>> create_batch__(int length) async {
-    // if (#__check_param_size__#) {
-    //   return Future.error('all args must has same length!');
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_route_TruckStep__', {'length': length});
   
     final List<com_amap_api_services_route_TruckStep> typedResult = resultBatch.map((result) => com_amap_api_services_route_TruckStep()..refId = result..tag = 'amap_search_fluttify').toList();
@@ -628,12 +628,15 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   
   //endregion
 
+  //region setters
+  
+  //endregion
+
   //region methods
   Future<void> setInstruction_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setInstruction_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -650,10 +653,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setOrientation_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setOrientation_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -670,10 +672,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setRoad_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setRoad_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -690,10 +691,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setTolls_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setTolls_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -710,10 +710,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setDistance_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setDistance_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -730,10 +729,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setTollDistance_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setTollDistance_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -750,10 +748,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setTollRoad_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setTollRoad_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -770,10 +767,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setDuration_batch(List<double> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setDuration_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -790,10 +786,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setPolyline_batch(List<List<com_amap_api_services_core_LatLonPoint>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setPolyline_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -810,10 +805,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setAction_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setAction_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -830,10 +824,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setAssistantAction_batch(List<String> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setAssistantAction_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
@@ -850,10 +843,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setRouteSearchCityList_batch(List<List<com_amap_api_services_route_RouteSearchCity>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setRouteSearchCityList_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -870,10 +862,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<void> setTMCs_batch(List<List<com_amap_api_services_route_TMC>> var1) async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::setTMCs_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
@@ -890,10 +881,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<String>> getInstruction_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getInstruction_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -910,10 +900,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<String>> getOrientation_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getOrientation_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -930,10 +919,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<String>> getRoad_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getRoad_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -950,10 +938,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<double>> getTolls_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getTolls_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -970,10 +957,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<double>> getDistance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getDistance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -990,10 +976,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<double>> getTollDistance_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getTollDistance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1010,10 +995,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<String>> getTollRoad_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getTollRoad_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1030,10 +1014,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<double>> getDuration_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getDuration_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1050,10 +1033,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<List<com_amap_api_services_core_LatLonPoint>>> getPolyline_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getPolyline_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1070,10 +1052,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<String>> getAction_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getAction_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1090,10 +1071,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<String>> getAssistantAction_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getAssistantAction_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1110,10 +1090,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<List<com_amap_api_services_route_RouteSearchCity>>> getRouteSearchCityList_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getRouteSearchCityList_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
@@ -1130,10 +1109,9 @@ extension com_amap_api_services_route_TruckStep_Batch on List<com_amap_api_servi
   }
   
   Future<List<List<com_amap_api_services_route_TMC>>> getTMCs_batch() async {
-    // print log
-    // if (fluttifyLogEnabled) {
-    //   #__log__#
-    // }
+    if (false) {
+      return Future.error('all args must has same length!');
+    }
   
     // invoke native method
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.route.TruckStep::getTMCs_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
