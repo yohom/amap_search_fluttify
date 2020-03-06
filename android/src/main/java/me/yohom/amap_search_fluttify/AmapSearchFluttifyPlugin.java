@@ -4,13 +4,10 @@
 
 package me.yohom.amap_search_fluttify;
 
-import android.os.Bundle;
-import android.util.Log;
 import android.app.Activity;
+import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,16 +20,27 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugin.platform.PlatformViewRegistry;
-
-import me.yohom.amap_search_fluttify.sub_handler.*;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler0;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler1;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler10;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler11;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler12;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler13;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler2;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler3;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler4;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler5;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler6;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler7;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler8;
+import me.yohom.amap_search_fluttify.sub_handler.SubHandler9;
 
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
-import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
 
 @SuppressWarnings("ALL")
 public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.MethodCallHandler, ActivityAware {
 
-    private static final List<Map<String, Handler>> handlerMapList = new ArrayList<>();
+    private static List<Map<String, Handler>> handlerMapList;
 
     // v1 android embedding for compatible
     public static void registerWith(Registrar registrar) {
@@ -47,6 +55,7 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         plugin.messenger = messenger;
         plugin.platformViewRegistry = platformViewRegistry;
 
+        handlerMapList = new ArrayList<>();
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
@@ -83,6 +92,7 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         messenger = binding.getBinaryMessenger();
         platformViewRegistry = binding.getPlatformViewRegistry();
 
+        handlerMapList = new ArrayList<>();
         handlerMapList.add(SubHandler0.getSubHandler(messenger));
         handlerMapList.add(SubHandler1.getSubHandler(messenger));
         handlerMapList.add(SubHandler2.getSubHandler(messenger));
@@ -106,7 +116,6 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
         if (getEnableLog()) {
             Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onDetachedFromEngine@" + binding);
         }
-        handlerMapList.clear();
     }
 
     @Override
