@@ -1,3 +1,6 @@
+## 0.7.9
+- roll engine #481e45c1
+
 ## 0.7.8
 - roll engine #dbad1c35
 

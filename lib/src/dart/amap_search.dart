@@ -1013,9 +1013,9 @@ class AmapSearch {
   /// 释放原生端对应的资源, 除了[AMapServices]
   static Future<void> dispose() async {
     final isCurrentPlugin = (it) => it.tag == 'amap_search_fluttify';
-    kNativeObjectPool
-      ..where(isCurrentPlugin).forEach((it) => it.release())
-      ..removeWhere(isCurrentPlugin);
+    await kNativeObjectPool.where(isCurrentPlugin).release_batch();
+    kNativeObjectPool.removeWhere(isCurrentPlugin);
+
     if (_iosSearch != null) await _iosSearch.release();
     if (_androidPoiSearch != null) await _androidPoiSearch.release();
     if (_androidInputTip != null) await _androidInputTip.release();
