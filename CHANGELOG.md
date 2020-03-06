@@ -1,3 +1,6 @@
+## 0.7.8
+- roll engine #dbad1c35
+
 ## 0.7.7
 - roll engine #0a5ab5f1
 - feat: ReGeocode增加roads字段 (#20)
