@@ -74,6 +74,10 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
     // v2 android embedding
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onAttachedToEngine@" + binding);
+        }
+
         final MethodChannel channel = new MethodChannel(binding.getBinaryMessenger(), "me.yohom/amap_search_fluttify");
 
         messenger = binding.getBinaryMessenger();
@@ -99,11 +103,17 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
 
     @Override
     public void onDetachedFromEngine(FlutterPluginBinding binding) {
-
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onDetachedFromEngine@" + binding);
+        }
+        handlerMapList.clear();
     }
 
     @Override
     public void onAttachedToActivity(ActivityPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onAttachedToActivity@" + binding);
+        }
         Activity activity = binding.getActivity();
 
         // register platform view
@@ -111,13 +121,25 @@ public class AmapSearchFluttifyPlugin implements FlutterPlugin, MethodChannel.Me
     }
 
     @Override
-    public void onDetachedFromActivityForConfigChanges() { }
+    public void onDetachedFromActivity() {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onDetachedFromActivity");
+        }
+    }
 
     @Override
-    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) { }
+    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onReattachedToActivityForConfigChanges@" + binding);
+        }
+    }
 
     @Override
-    public void onDetachedFromActivity() { }
+    public void onDetachedFromActivityForConfigChanges() {
+        if (getEnableLog()) {
+            Log.d("fluttify-java", "AmapSearchFluttifyPlugin::onDetachedFromActivityForConfigChanges");
+        }
+    }
 
     @Override
     public void onMethodCall(@NonNull MethodCall methodCall, @NonNull MethodChannel.Result methodResult) {
