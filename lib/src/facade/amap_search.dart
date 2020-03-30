@@ -1090,7 +1090,12 @@ class _AndroidSearchListener extends java_lang_Object
     super.onGeocodeSearched(var1, var2);
     final geocode = [
       for (final item in (await var1.getGeocodeAddressList()))
-        Geocode.android(item)
+        Geocode(
+          latLng: LatLng(
+            await item.getLatLonPoint().then((it) => it.getLatitude()),
+            await item.getLatLonPoint().then((it) => it.getLongitude()),
+          ),
+        )
     ];
     if (_streamController?.isClosed == false) {
       _streamController?.add(geocode);
@@ -1263,7 +1268,13 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   ) async {
     super.onGeocodeSearchDoneResponse(request, response);
     final geocode = [
-      for (final item in (await response.get_geocodes())) Geocode.ios(item)
+      for (final item in (await response.get_geocodes()))
+        Geocode(
+          latLng: LatLng(
+            await item.get_location().then((it) => it.get_latitude()),
+            await item.get_location().then((it) => it.get_longitude()),
+          ),
+        )
     ];
     if (_streamController?.isClosed == false) {
       _streamController?.add(geocode);

@@ -169,37 +169,15 @@ class InputTip {
 }
 
 /// 地理编码 model
-class Geocode with _ToFutureString {
-  Geocode.android(this._androidModel) : _iosModel = null;
-
-  Geocode.ios(this._iosModel) : _androidModel = null;
-
-  final com_amap_api_services_geocoder_GeocodeAddress _androidModel;
-  final AMapGeocode _iosModel;
+class Geocode {
+  Geocode({this.latLng});
 
   /// 经纬度
-  Future<LatLng> get latLng {
-    return platform(
-      android: (pool) async {
-        final location = await _androidModel.getLatLonPoint();
-        return LatLng(
-          await location.getLatitude(),
-          await location.getLongitude(),
-        );
-      },
-      ios: (pool) async {
-        final location = await _iosModel.get_location();
-        return LatLng(
-          await location.get_latitude(),
-          await location.get_longitude(),
-        );
-      },
-    );
-  }
+  LatLng latLng;
 
   @override
-  Future<String> toFutureString() async {
-    return 'Geocode{latLng: ${await latLng}}';
+  String toString() {
+    return 'Geocode{latLng: $latLng}';
   }
 }
 
