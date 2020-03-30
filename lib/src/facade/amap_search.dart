@@ -1016,15 +1016,14 @@ class AmapSearch {
     await kNativeObjectPool.where(isCurrentPlugin).release_batch();
     kNativeObjectPool.removeWhere(isCurrentPlugin);
 
-    if (_iosSearch != null) await _iosSearch.release();
-    if (_androidPoiSearch != null) await _androidPoiSearch.release();
-    if (_androidInputTip != null) await _androidInputTip.release();
-    if (_androidGeocodeSearch != null) await _androidGeocodeSearch.release();
-    if (_androidRouteSearch != null) await _androidRouteSearch.release();
-    if (_androidBusStationSearch != null)
-      await _androidBusStationSearch.release();
-    if (_androidDistrictSearch != null) await _androidDistrictSearch.release();
-    if (_androidWeatherSearch != null) await _androidWeatherSearch.release();
+    await _iosSearch?.release();
+    await _androidPoiSearch?.release();
+    await _androidInputTip?.release();
+    await _androidGeocodeSearch?.release();
+    await _androidRouteSearch?.release();
+    await _androidBusStationSearch?.release();
+    await _androidDistrictSearch?.release();
+    await _androidWeatherSearch?.release();
   }
 }
 
