@@ -727,15 +727,18 @@ class BusPath with _ToFutureString {
 
   /// 公交步骤列表
   Future<List<BusStep>> get busStepList {
-    return platform(android: (pool) async {
-      return (await _androidModel.getSteps())
-          .map((it) => BusStep.android(it))
-          .toList();
-    }, ios: (pool) async {
-      return (await _iosModel.get_segments())
-          .map((it) => BusStep.ios(it))
-          .toList();
-    });
+    return platform(
+      android: (pool) async {
+        return (await _androidModel.getSteps())
+            .map((it) => BusStep.android(it))
+            .toList();
+      },
+      ios: (pool) async {
+        return (await _iosModel.get_segments())
+            .map((it) => BusStep.ios(it))
+            .toList();
+      },
+    );
   }
 
   @override
@@ -822,9 +825,11 @@ class DriveStep with _ToFutureString {
     return platform(
       android: (pool) async {
         final polyline = await _androidModel.getPolyline();
+        final latitudeBatch = await polyline.getLatitude_batch();
+        final longitudeBatch = await polyline.getLongitude_batch();
         return [
-          for (final item in polyline)
-            LatLng(await item.getLatitude(), await item.getLongitude()),
+          for (int i = 0; i < polyline.length; i++)
+            LatLng(latitudeBatch[i], longitudeBatch[i])
         ];
       },
       ios: (pool) async {
@@ -924,9 +929,11 @@ class WalkStep with _ToFutureString {
     return platform(
       android: (pool) async {
         final polyline = await _androidModel.getPolyline();
+        final latitudeBatch = await polyline.getLatitude_batch();
+        final longitudeBatch = await polyline.getLongitude_batch();
         return [
-          for (final item in polyline)
-            LatLng(await item.getLatitude(), await item.getLongitude()),
+          for (int i = 0; i < polyline.length; i++)
+            LatLng(latitudeBatch[i], longitudeBatch[i])
         ];
       },
       ios: (pool) async {
@@ -1016,9 +1023,11 @@ class RideStep with _ToFutureString {
     return platform(
       android: (pool) async {
         final polyline = await _androidModel.getPolyline();
+        final latitudeBatch = await polyline.getLatitude_batch();
+        final longitudeBatch = await polyline.getLongitude_batch();
         return [
-          for (final item in polyline)
-            LatLng(await item.getLatitude(), await item.getLongitude()),
+          for (int i = 0; i < polyline.length; i++)
+            LatLng(latitudeBatch[i], longitudeBatch[i])
         ];
       },
       ios: (pool) async {
@@ -1074,18 +1083,14 @@ class BusStep with _ToFutureString {
   /// 路线
   Future<List<BusLine>> get lines {
     return platform(
-      android: (pool) => _androidModel
-          .getBusLines()
-          .asStream()
-          .asyncExpand((it) => Stream.fromIterable(it))
-          .map((it) => BusLine.android(it))
-          .toList(),
-      ios: (pool) => _iosModel
-          .get_buslines()
-          .asStream()
-          .asyncExpand((it) => Stream.fromIterable(it))
-          .map((it) => BusLine.ios(it))
-          .toList(),
+      android: (pool) async {
+        final busLines = await _androidModel.getBusLines();
+        return [for (final item in busLines) BusLine.android(item)];
+      },
+      ios: (pool) async {
+        final busLines = await _iosModel.get_buslines();
+        return [for (final item in busLines) BusLine.ios(item)];
+      },
     );
   }
 
@@ -1415,9 +1420,11 @@ class TMC with _ToFutureString {
     return platform(
       android: (pool) async {
         final polyline = await _androidModel.getPolyline();
+        final latitudeBatch = await polyline.getLatitude_batch();
+        final longitudeBatch = await polyline.getLongitude_batch();
         return [
-          for (final item in polyline)
-            LatLng(await item.getLatitude(), await item.getLongitude()),
+          for (int i = 0; i < polyline.length; i++)
+            LatLng(latitudeBatch[i], longitudeBatch[i])
         ];
       },
       ios: (pool) async {
@@ -1450,20 +1457,12 @@ class BusStation with _ToFutureString {
   Future<List<BusStationItem>> get busStationList {
     return platform(
       android: (pool) async {
-        return _androidModel
-            .getBusStations()
-            .asStream()
-            .asyncExpand((it) => Stream.fromIterable(it))
-            .map((it) => BusStationItem.android(it))
-            .toList();
+        final busStations = await _androidModel.getBusStations();
+        return [for (final item in busStations) BusStationItem.android(item)];
       },
       ios: (pool) async {
-        return _iosModel
-            .get_busstops()
-            .asStream()
-            .asyncExpand((it) => Stream.fromIterable(it))
-            .map((it) => BusStationItem.ios(it))
-            .toList();
+        final busStations = await _iosModel.get_busstops();
+        return [for (final item in busStations) BusStationItem.ios(item)];
       },
     );
   }
@@ -1537,18 +1536,14 @@ class District with _ToFutureString {
   /// 区域列表
   Future<List<DistrictItem>> get districtList {
     return platform(
-      android: (pool) => _androidModel
-          .getDistrict()
-          .asStream()
-          .asyncExpand((it) => Stream.fromIterable(it))
-          .map((it) => DistrictItem.android(it))
-          .toList(),
-      ios: (pool) => _iosModel
-          .get_districts()
-          .asStream()
-          .asyncExpand((it) => Stream.fromIterable(it))
-          .map((it) => DistrictItem.ios(it))
-          .toList(),
+      android: (pool) async {
+        final districts = await _androidModel.getDistrict();
+        return [for (final item in districts) DistrictItem.android(item)];
+      },
+      ios: (pool) async {
+        final districts = await _iosModel.get_districts();
+        return [for (final item in districts) DistrictItem.ios(item)];
+      },
     );
   }
 
