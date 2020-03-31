@@ -208,10 +208,10 @@ class _InputTipScreenState extends State<InputTipScreen>
                 city: _cityController.text,
               );
 
-              setState(() {
-                _inputTipList =
-                    inputTipList.map((it) => it.toString()).toList();
-              });
+              Stream.fromIterable(inputTipList)
+                  .asyncMap((it) => it.toFutureString())
+                  .toList()
+                  .then((it) => setState(() => _inputTipList = it));
             },
             child: Text('搜索'),
           ),

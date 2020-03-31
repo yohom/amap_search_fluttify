@@ -138,33 +138,63 @@ class Poi with _ToFutureString {
 }
 
 /// 输入提示 model
-class InputTip {
-  InputTip({
-    this.name,
-    this.poiId,
-    this.address,
-    this.district,
-    this.location,
-  });
+class InputTip with _ToFutureString {
+  InputTip.android(this._androidModel) : _iosModel = null;
+
+  InputTip.ios(this._iosModel) : _androidModel = null;
+
+  final com_amap_api_services_help_Tip _androidModel;
+  final AMapTip _iosModel;
 
   /// 提示名称
-  String name;
+  Future<String> get name {
+    return platform(
+      android: (pool) => _androidModel.getName(),
+      ios: (pool) => _iosModel.get_name(),
+    );
+  }
 
   /// 兴趣点id
-  String poiId;
+  Future<String> get poiId {
+    return platform(
+      android: (pool) => _androidModel.getPoiID(),
+      ios: (pool) => _iosModel.get_uid(),
+    );
+  }
 
   /// 地址
-  String address;
+  Future<String> get address {
+    return platform(
+      android: (pool) => _androidModel.getAddress(),
+      ios: (pool) => _iosModel.get_address(),
+    );
+  }
 
   /// 区域
-  String district;
+  Future<String> get district {
+    return platform(
+      android: (pool) => _androidModel.getDistrict(),
+      ios: (pool) => _iosModel.get_district(),
+    );
+  }
 
   /// 经纬度
-  LatLng location;
+  Future<LatLng> get location {
+    return platform(
+      android: (pool) async {
+        final point = await _androidModel.getPoint();
+        return LatLng(await point.getLatitude(), await point.getLongitude());
+      },
+      ios: (pool) async {
+        final point = await _iosModel.get_location();
+        return LatLng(await point.get_latitude(), await point.get_longitude());
+      },
+    );
+  }
 
   @override
-  String toString() {
-    return 'InputTip{name: $name, poiId: $poiId, address: $address, district: $district, location: $location}';
+  Future<String> toFutureString() async {
+    return 'InputTip{name: ${await name}, poiId: ${await poiId}, address: ${await address}, district: ${await district}, location: ${await location}';
   }
 }
 
