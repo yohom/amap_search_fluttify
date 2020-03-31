@@ -69,7 +69,8 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen>
             },
             child: Text('搜索'),
           ),
-          if (_geocodeList.isNotEmpty) Text(_geocodeList[0].toString()),
+          if (_geocodeList.isNotEmpty)
+            FutureText(_geocodeList[0].toFutureString()),
         ],
       ),
     );
