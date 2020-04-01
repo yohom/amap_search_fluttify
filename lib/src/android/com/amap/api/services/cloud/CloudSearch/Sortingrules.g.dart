@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.amap.api.services.cloud.CloudSearch.Sortingrules';
+
   static final int WEIGHT = 0;
   static final int DISTANCE = 1;
   //endregion
@@ -21,7 +23,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__String__boolean(String var1, bool var2) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', {"var1": var1, "var2": var2});
-    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag = 'amap_search_fluttify';
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -29,7 +31,7 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
   
   static Future<com_amap_api_services_cloud_CloudSearch_Sortingrules> create__int(int var1) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', {"var1": var1});
-    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag = 'amap_search_fluttify';
+    final object = com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -39,9 +41,9 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__]}]);
   
-    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -50,9 +52,9 @@ class com_amap_api_services_cloud_CloudSearch_Sortingrules extends java_lang_Obj
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int i = 0; i < var1.length; i++) {"var1": var1[i]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch_Sortingrules__int', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__]}]);
   
-    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudSearch_Sortingrules> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch_Sortingrules()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

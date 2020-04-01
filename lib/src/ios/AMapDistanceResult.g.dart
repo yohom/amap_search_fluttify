@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapDistanceResult';
+
   
   //endregion
 
   //region creators
   static Future<AMapDistanceResult> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapDistanceResult');
-    final object = AMapDistanceResult()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapDistanceResult()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapDistanceResult', {'length': length});
   
-    final List<AMapDistanceResult> typedResult = resultBatch.map((result) => AMapDistanceResult()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapDistanceResult> typedResult = resultBatch.map((result) => AMapDistanceResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,39 +43,39 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<int> get_originID() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_originID", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_originID", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_destID() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_destID", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_destID", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_distance() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_distance", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_distance", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_duration() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_duration", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_duration", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_info() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_info", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_info", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_code() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_code", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_code", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -125,43 +127,43 @@ class AMapDistanceResult extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapDistanceResult_Batch on List<AMapDistanceResult> {
   //region getters
   Future<List<int>> get_originID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_originID_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_originID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_destID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_destID_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_destID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_distance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_distance_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_distance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_duration_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_duration_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_duration_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_info_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_info_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_info_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_code_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_code_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistanceResult::get_code_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -170,37 +172,37 @@ extension AMapDistanceResult_Batch on List<AMapDistanceResult> {
 
   //region setters
   Future<void> set_originID_batch(List<int> originID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_originID_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "originID": originID[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_originID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "originID": originID[__i__]}]);
   
   
   }
   
   Future<void> set_destID_batch(List<int> destID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_destID_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destID": destID[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_destID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "destID": destID[__i__]}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "distance": distance[__i__]}]);
   
   
   }
   
   Future<void> set_duration_batch(List<int> duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_duration_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "duration": duration[__i__]}]);
   
   
   }
   
   Future<void> set_info_batch(List<String> info) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_info_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "info": info[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_info_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "info": info[__i__]}]);
   
   
   }
   
   Future<void> set_code_batch(List<int> code) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_code_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "code": code[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistanceResult::set_code_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "code": code[__i__]}]);
   
   
   }

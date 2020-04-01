@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapRoadInter';
+
   
   //endregion
 
   //region creators
   static Future<AMapRoadInter> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoadInter');
-    final object = AMapRoadInter()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapRoadInter()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoadInter', {'length': length});
   
-    final List<AMapRoadInter> typedResult = resultBatch.map((result) => AMapRoadInter()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapRoadInter> typedResult = resultBatch.map((result) => AMapRoadInter()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,45 +43,45 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<int> get_distance() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_distance", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_distance", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_direction() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_direction", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_direction", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_location() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_location", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<String> get_firstId() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstId", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstId", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_firstName() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstName", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstName", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_secondId() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondId", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondId", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_secondName() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondName", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondName", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -137,50 +139,50 @@ class AMapRoadInter extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapRoadInter_Batch on List<AMapRoadInter> {
   //region getters
   Future<List<int>> get_distance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_distance_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_distance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_direction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_direction_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_direction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_location_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_location_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_location_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<String>> get_firstId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstId_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_firstName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstName_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_firstName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_secondId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondId_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_secondName_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondName_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadInter::get_secondName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -189,43 +191,43 @@ extension AMapRoadInter_Batch on List<AMapRoadInter> {
 
   //region setters
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "distance": distance[__i__]}]);
   
   
   }
   
   Future<void> set_direction_batch(List<String> direction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_direction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_direction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "direction": direction[__i__]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "location": location[__i__].refId}]);
   
   
   }
   
   Future<void> set_firstId_batch(List<String> firstId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_firstId_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "firstId": firstId[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_firstId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "firstId": firstId[__i__]}]);
   
   
   }
   
   Future<void> set_firstName_batch(List<String> firstName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_firstName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "firstName": firstName[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_firstName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "firstName": firstName[__i__]}]);
   
   
   }
   
   Future<void> set_secondId_batch(List<String> secondId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_secondId_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "secondId": secondId[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_secondId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "secondId": secondId[__i__]}]);
   
   
   }
   
   Future<void> set_secondName_batch(List<String> secondName) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_secondName_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "secondName": secondName[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadInter::set_secondName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "secondName": secondName[__i__]}]);
   
   
   }

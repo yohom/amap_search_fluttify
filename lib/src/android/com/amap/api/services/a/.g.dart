@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_a_ extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.amap.api.services.a.';
+
   
   //endregion
 

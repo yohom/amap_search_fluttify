@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapTrafficRoad';
+
   
   //endregion
 
   //region creators
   static Future<AMapTrafficRoad> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapTrafficRoad');
-    final object = AMapTrafficRoad()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapTrafficRoad()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapTrafficRoad', {'length': length});
   
-    final List<AMapTrafficRoad> typedResult = resultBatch.map((result) => AMapTrafficRoad()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapTrafficRoad> typedResult = resultBatch.map((result) => AMapTrafficRoad()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,39 +43,39 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_name() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_name", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_name", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_status() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_status", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_status", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_direction() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_direction", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_direction", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<double> get_angle() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_angle", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_angle", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<double> get_speed() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_speed", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_speed", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_polyline() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_polyline", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_polyline", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -125,43 +127,43 @@ class AMapTrafficRoad extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapTrafficRoad_Batch on List<AMapTrafficRoad> {
   //region getters
   Future<List<String>> get_name_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_name_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_name_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_status_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_status_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_status_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_direction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_direction_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_direction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_angle_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_angle_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_angle_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_speed_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_speed_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_speed_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_polyline_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_polyline_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapTrafficRoad::get_polyline_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -170,37 +172,37 @@ extension AMapTrafficRoad_Batch on List<AMapTrafficRoad> {
 
   //region setters
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "name": name[__i__]}]);
   
   
   }
   
   Future<void> set_status_batch(List<int> status) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_status_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "status": status[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_status_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "status": status[__i__]}]);
   
   
   }
   
   Future<void> set_direction_batch(List<String> direction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_direction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_direction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "direction": direction[__i__]}]);
   
   
   }
   
   Future<void> set_angle_batch(List<double> angle) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_angle_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "angle": angle[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_angle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "angle": angle[__i__]}]);
   
   
   }
   
   Future<void> set_speed_batch(List<double> speed) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_speed_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "speed": speed[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_speed_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "speed": speed[__i__]}]);
   
   
   }
   
   Future<void> set_polyline_batch(List<String> polyline) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_polyline_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "polyline": polyline[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapTrafficRoad::set_polyline_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "polyline": polyline[__i__]}]);
   
   
   }

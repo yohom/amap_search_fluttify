@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapSearchAPI extends NSObject  {
   //region constants
+  static const String name__ = 'AMapSearchAPI';
+
   
   //endregion
 
   //region creators
   static Future<AMapSearchAPI> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapSearchAPI');
-    final object = AMapSearchAPI()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapSearchAPI()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapSearchAPI extends NSObject  {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapSearchAPI', {'length': length});
   
-    final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapSearchAPI> typedResult = resultBatch.map((result) => AMapSearchAPI()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapSearchAPI extends NSObject  {
 
   //region getters
   Future<int> get_timeout() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapSearchLanguage> get_language() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language", {'refId': refId});
   
-    return AMapSearchLanguage.values[result];
+    return AMapSearchLanguage.values[__result__];
   }
   
   //endregion
@@ -65,158 +67,158 @@ class AMapSearchAPI extends NSObject  {
         // if (refId != this.refId) return;
   
         switch (methodCall.method) {
-          case 'Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError':
+          case 'Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: AMapSearchRequestDidFailWithError([])');
+              print('fluttify-dart-callback: AMapSearchRequest_didFailWithError([])');
             }
         
             // handle the native call
-            delegate?.AMapSearchRequestDidFailWithError(NSObject()..refId = (args['request'])..tag = 'amap_search_fluttify', NSError()..refId = (args['error'])..tag = 'amap_search_fluttify');
+            delegate?.AMapSearchRequest_didFailWithError(NSObject()..refId = (args['request'])..tag__ = 'amap_search_fluttify', NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onPOISearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onPOISearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onPOISearchDoneResponse([])');
+              print('fluttify-dart-callback: onPOISearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onPOISearchDoneResponse(AMapPOISearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapPOISearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onPOISearchDone_response(AMapPOISearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onRoutePOISearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRoutePOISearchDoneResponse([])');
+              print('fluttify-dart-callback: onRoutePOISearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onRoutePOISearchDoneResponse(AMapRoutePOISearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapRoutePOISearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onRoutePOISearchDone_response(AMapRoutePOISearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapRoutePOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onGeocodeSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onGeocodeSearchDoneResponse([])');
+              print('fluttify-dart-callback: onGeocodeSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onGeocodeSearchDoneResponse(AMapGeocodeSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapGeocodeSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onGeocodeSearchDone_response(AMapGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onReGeocodeSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onReGeocodeSearchDoneResponse([])');
+              print('fluttify-dart-callback: onReGeocodeSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onReGeocodeSearchDoneResponse(AMapReGeocodeSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapReGeocodeSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onReGeocodeSearchDone_response(AMapReGeocodeSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapReGeocodeSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onInputTipsSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onInputTipsSearchDoneResponse([])');
+              print('fluttify-dart-callback: onInputTipsSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onInputTipsSearchDoneResponse(AMapInputTipsSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapInputTipsSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onInputTipsSearchDone_response(AMapInputTipsSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapInputTipsSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onBusStopSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onBusStopSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onBusStopSearchDoneResponse([])');
+              print('fluttify-dart-callback: onBusStopSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onBusStopSearchDoneResponse(AMapBusStopSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapBusStopSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onBusStopSearchDone_response(AMapBusStopSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapBusStopSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onBusLineSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onBusLineSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onBusLineSearchDoneResponse([])');
+              print('fluttify-dart-callback: onBusLineSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onBusLineSearchDoneResponse(AMapBusLineBaseSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapBusLineSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onBusLineSearchDone_response(AMapBusLineBaseSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapBusLineSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onDistrictSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onDistrictSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onDistrictSearchDoneResponse([])');
+              print('fluttify-dart-callback: onDistrictSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onDistrictSearchDoneResponse(AMapDistrictSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapDistrictSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onDistrictSearchDone_response(AMapDistrictSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapDistrictSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onRouteSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onRouteSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRouteSearchDoneResponse([])');
+              print('fluttify-dart-callback: onRouteSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onRouteSearchDoneResponse(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapRouteSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onRouteSearchDone_response(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onFutureRouteSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onFutureRouteSearchDoneResponse([])');
+              print('fluttify-dart-callback: onFutureRouteSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onFutureRouteSearchDoneResponse(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapFutureRouteSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onFutureRouteSearchDone_response(AMapRouteSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapFutureRouteSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onDistanceSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onDistanceSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onDistanceSearchDoneResponse([])');
+              print('fluttify-dart-callback: onDistanceSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onDistanceSearchDoneResponse(AMapDistanceSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapDistanceSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onDistanceSearchDone_response(AMapDistanceSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapDistanceSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onWeatherSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onWeatherSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onWeatherSearchDoneResponse([])');
+              print('fluttify-dart-callback: onWeatherSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onWeatherSearchDoneResponse(AMapWeatherSearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapWeatherSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onWeatherSearchDone_response(AMapWeatherSearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapWeatherSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onRoadTrafficSearchDoneResponse([])');
+              print('fluttify-dart-callback: onRoadTrafficSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onRoadTrafficSearchDoneResponse(AMapRoadTrafficSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapRoadTrafficSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onRoadTrafficSearchDone_response(AMapRoadTrafficSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapRoadTrafficSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onNearbySearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onNearbySearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onNearbySearchDoneResponse([])');
+              print('fluttify-dart-callback: onNearbySearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onNearbySearchDoneResponse(AMapNearbySearchRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapNearbySearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onNearbySearchDone_response(AMapNearbySearchRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapNearbySearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onCloudSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onCloudSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onCloudSearchDoneResponse([])');
+              print('fluttify-dart-callback: onCloudSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onCloudSearchDoneResponse(AMapCloudSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapCloudPOISearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onCloudSearchDone_response(AMapCloudSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapCloudPOISearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
-          case 'Callback::AMapSearchDelegate::onShareSearchDoneResponse':
+          case 'Callback::AMapSearchDelegate::onShareSearchDone_response':
             // print log
             if (fluttifyLogEnabled) {
-              print('fluttify-dart-callback: onShareSearchDoneResponse([])');
+              print('fluttify-dart-callback: onShareSearchDone_response([])');
             }
         
             // handle the native call
-            delegate?.onShareSearchDoneResponse(AMapShareSearchBaseRequest()..refId = (args['request'])..tag = 'amap_search_fluttify', AMapShareSearchResponse()..refId = (args['response'])..tag = 'amap_search_fluttify');
+            delegate?.onShareSearchDone_response(AMapShareSearchBaseRequest()..refId = (args['request'])..tag__ = 'amap_search_fluttify', AMapShareSearchResponse()..refId = (args['response'])..tag__ = 'amap_search_fluttify');
             break;
           default:
             break;
@@ -246,18 +248,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify');
-      return AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -268,18 +270,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -290,18 +292,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -312,18 +314,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -334,18 +336,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -356,18 +358,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -378,18 +380,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -400,18 +402,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -422,18 +424,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -444,18 +446,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -466,18 +468,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -488,18 +490,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -510,18 +512,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -532,18 +534,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -554,18 +556,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -576,18 +578,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -598,18 +600,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -620,18 +622,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -642,18 +644,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -664,18 +666,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -686,18 +688,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -708,18 +710,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -730,18 +732,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -752,18 +754,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -774,18 +776,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -796,18 +798,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -818,18 +820,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -840,18 +842,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -862,18 +864,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -884,18 +886,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -906,18 +908,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -928,18 +930,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -950,18 +952,18 @@ class AMapSearchAPI extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch', {"request": request.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -971,15 +973,15 @@ class AMapSearchAPI extends NSObject  {
 extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapSearchLanguage.values[result]).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapSearchLanguage.values[__result__]).toList();
   
     return typedResult;
   }
@@ -988,13 +990,13 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
 
   //region setters
   Future<void> set_timeout_batch(List<int> timeout) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeout": timeout[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_timeout_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "timeout": timeout[__i__]}]);
   
   
   }
   
   Future<void> set_language_batch(List<AMapSearchLanguage> language) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "language": language[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::set_language_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "language": language[__i__].index}]);
   
   
   }
@@ -1008,14 +1010,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::init_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => AMapSearchAPI()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1027,14 +1029,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::cancelAllRequests_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1046,14 +1048,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1065,14 +1067,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIKeywordsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1084,14 +1086,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1103,14 +1105,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1122,14 +1124,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoutePOISearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1141,14 +1143,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapGeocodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1160,14 +1162,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapReGoecodeSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1179,14 +1181,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapInputTipsSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1198,14 +1200,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusStopSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1217,14 +1219,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1236,14 +1238,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapBusLineNameSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1255,14 +1257,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistrictSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1274,14 +1276,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDrivingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1293,14 +1295,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWalkingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1312,14 +1314,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTransitRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1331,14 +1333,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRidingRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1350,14 +1352,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapTruckRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1369,14 +1371,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapFutureRouteSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1388,14 +1390,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapWeatherSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1407,14 +1409,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1426,14 +1428,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRoadTrafficCircleSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1445,14 +1447,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapDistanceSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1464,14 +1466,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNearbySearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1483,14 +1485,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIAroundSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1502,14 +1504,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIPolygonSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1521,14 +1523,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOIIDSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1540,14 +1542,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapCloudPOILocalSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1559,14 +1561,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapLocationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1578,14 +1580,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapPOIShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1597,14 +1599,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapRouteShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1616,14 +1618,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int i = 0; i < this.length; i++) {"request": request[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapSearchAPI::AMapNavigationShareSearch_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"request": request[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

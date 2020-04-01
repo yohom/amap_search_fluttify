@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapRailway';
+
   
   //endregion
 
   //region creators
   static Future<AMapRailway> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRailway');
-    final object = AMapRailway()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapRailway()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRailway', {'length': length});
   
-    final List<AMapRailway> typedResult = resultBatch.map((result) => AMapRailway()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapRailway> typedResult = resultBatch.map((result) => AMapRailway()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,69 +43,69 @@ class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_uid() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_uid", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_uid", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_name() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_name", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_name", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_trip() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_trip", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_trip", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_type() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_type", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_type", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_distance() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_distance", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_distance", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_time() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_time", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_time", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapRailwayStation> get_departureStation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_departureStation", {'refId': refId});
-    kNativeObjectPool.add(AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify');
-    return AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_departureStation", {'refId': refId});
+    kNativeObjectPool.add(AMapRailwayStation()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapRailwayStation()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<AMapRailwayStation> get_arrivalStation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_arrivalStation", {'refId': refId});
-    kNativeObjectPool.add(AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify');
-    return AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_arrivalStation", {'refId': refId});
+    kNativeObjectPool.add(AMapRailwayStation()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapRailwayStation()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<List<AMapRailwaySpace>> get_spaces() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_spaces", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_spaces", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapRailwaySpace()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapRailwaySpace()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapRailwayStation>> get_viaStops() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_viaStops", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_viaStops", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapRailwayStation()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapRailwayStation()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapRailway>> get_alters() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_alters", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapRailway()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapRailway()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_alters", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapRailway()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapRailway()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   //endregion
@@ -185,78 +187,78 @@ class AMapRailway extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapRailway_Batch on List<AMapRailway> {
   //region getters
   Future<List<String>> get_uid_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_uid_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_uid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_name_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_name_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_name_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_trip_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_trip_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_trip_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_type_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_type_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_distance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_distance_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_distance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_time_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_time_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_time_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapRailwayStation>> get_departureStation_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_departureStation_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_departureStation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapRailwayStation()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<AMapRailwayStation>> get_arrivalStation_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_arrivalStation_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapRailwayStation()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_arrivalStation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapRailwayStation()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<List<AMapRailwaySpace>>> get_spaces_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_spaces_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapRailwaySpace()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_spaces_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapRailwaySpace()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<List<AMapRailwayStation>>> get_viaStops_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_viaStops_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapRailwayStation()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_viaStops_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapRailwayStation()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<List<AMapRailway>>> get_alters_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_alters_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapRailway()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRailway::get_alters_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapRailway()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
@@ -265,67 +267,67 @@ extension AMapRailway_Batch on List<AMapRailway> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_uid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "uid": uid[__i__]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "name": name[__i__]}]);
   
   
   }
   
   Future<void> set_trip_batch(List<String> trip) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_trip_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "trip": trip[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_trip_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "trip": trip[__i__]}]);
   
   
   }
   
   Future<void> set_type_batch(List<String> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_type_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "type": type[__i__]}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "distance": distance[__i__]}]);
   
   
   }
   
   Future<void> set_time_batch(List<int> time) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_time_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "time": time[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_time_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "time": time[__i__]}]);
   
   
   }
   
   Future<void> set_departureStation_batch(List<AMapRailwayStation> departureStation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_departureStation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "departureStation": departureStation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_departureStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "departureStation": departureStation[__i__].refId}]);
   
   
   }
   
   Future<void> set_arrivalStation_batch(List<AMapRailwayStation> arrivalStation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_arrivalStation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "arrivalStation": arrivalStation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_arrivalStation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "arrivalStation": arrivalStation[__i__].refId}]);
   
   
   }
   
   Future<void> set_spaces_batch(List<List<AMapRailwaySpace>> spaces) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_spaces_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "spaces": spaces[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_spaces_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "spaces": spaces[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_viaStops_batch(List<List<AMapRailwayStation>> viaStops) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_viaStops_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "viaStops": viaStops[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_viaStops_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "viaStops": viaStops[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_alters_batch(List<List<AMapRailway>> alters) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_alters_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "alters": alters[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRailway::set_alters_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "alters": alters[__i__].map((it) => it.refId).toList()}]);
   
   
   }

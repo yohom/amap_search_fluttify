@@ -23,6 +23,7 @@ extern BOOL enableLog;
             // ref object
             AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.plateProvince;
         
             // 返回值: jsonable
@@ -40,6 +41,7 @@ extern BOOL enableLog;
             // ref object
             AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.plateNumber;
         
             // 返回值: jsonable
@@ -57,6 +59,7 @@ extern BOOL enableLog;
             // ref object
             AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.ferry;
         
             // 返回值: Value
@@ -74,6 +77,7 @@ extern BOOL enableLog;
             // ref object
             AMapDrivingRouteSearchRequest* ref = (AMapDrivingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.cartype;
         
             // 返回值: Value
@@ -91,6 +95,7 @@ extern BOOL enableLog;
             // ref object
             AMapWalkingRouteSearchRequest* ref = (AMapWalkingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.multipath;
         
             // 返回值: Value
@@ -108,6 +113,7 @@ extern BOOL enableLog;
             // ref object
             AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.strategy;
         
             // 返回值: Value
@@ -125,6 +131,7 @@ extern BOOL enableLog;
             // ref object
             AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
@@ -142,6 +149,7 @@ extern BOOL enableLog;
             // ref object
             AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.destinationCity;
         
             // 返回值: jsonable
@@ -159,6 +167,7 @@ extern BOOL enableLog;
             // ref object
             AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             BOOL result = ref.nightflag;
         
             // 返回值: Value
@@ -176,6 +185,7 @@ extern BOOL enableLog;
             // ref object
             AMapTransitRouteSearchRequest* ref = (AMapTransitRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             BOOL result = ref.requireExtension;
         
             // 返回值: Value
@@ -193,6 +203,7 @@ extern BOOL enableLog;
             // ref object
             AMapRidingRouteSearchRequest* ref = (AMapRidingRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.type;
         
             // 返回值: Value
@@ -210,6 +221,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.count;
         
             // 返回值: Value
@@ -227,6 +239,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteSearchResponse* ref = (AMapRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapRoute* result = ref.route;
         
             // return a ref
@@ -245,6 +258,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.strategy;
         
             // 返回值: Value
@@ -262,12 +276,13 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.waypoints;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -284,6 +299,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.originId;
         
             // 返回值: jsonable
@@ -301,6 +317,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.destinationId;
         
             // 返回值: jsonable
@@ -318,6 +335,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.origintype;
         
             // 返回值: jsonable
@@ -335,6 +353,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.destinationtype;
         
             // 返回值: jsonable
@@ -352,6 +371,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.plateProvince;
         
             // 返回值: jsonable
@@ -369,6 +389,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.plateNumber;
         
             // 返回值: jsonable
@@ -386,6 +407,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapTruckSizeType result = ref.size;
         
             // 返回值: Value
@@ -403,6 +425,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.height;
         
             // 返回值: Value
@@ -420,6 +443,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.width;
         
             // 返回值: Value
@@ -437,6 +461,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.load;
         
             // 返回值: Value
@@ -454,6 +479,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.weight;
         
             // 返回值: Value
@@ -471,6 +497,7 @@ extern BOOL enableLog;
             // ref object
             AMapTruckRouteSearchRequest* ref = (AMapTruckRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.axis;
         
             // 返回值: Value
@@ -488,12 +515,13 @@ extern BOOL enableLog;
             // ref object
             AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.origins;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -510,6 +538,7 @@ extern BOOL enableLog;
             // ref object
             AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.destination;
         
             // return a ref
@@ -528,6 +557,7 @@ extern BOOL enableLog;
             // ref object
             AMapDistanceSearchRequest* ref = (AMapDistanceSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.type;
         
             // 返回值: Value
@@ -545,12 +575,13 @@ extern BOOL enableLog;
             // ref object
             AMapDistanceSearchResponse* ref = (AMapDistanceSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapDistanceResult*>* result = ref.results;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -567,6 +598,7 @@ extern BOOL enableLog;
             // ref object
             AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
@@ -584,6 +616,7 @@ extern BOOL enableLog;
             // ref object
             AMapWeatherSearchRequest* ref = (AMapWeatherSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapWeatherType result = ref.type;
         
             // 返回值: Value
@@ -601,12 +634,13 @@ extern BOOL enableLog;
             // ref object
             AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapLocalWeatherLive*>* result = ref.lives;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -623,12 +657,13 @@ extern BOOL enableLog;
             // ref object
             AMapWeatherSearchResponse* ref = (AMapWeatherSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapLocalWeatherForecast*>* result = ref.forecasts;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -645,6 +680,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.level;
         
             // 返回值: Value
@@ -662,6 +698,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficSearchBaseRequest* ref = (AMapRoadTrafficSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             BOOL result = ref.requireExtension;
         
             // 返回值: Value
@@ -679,6 +716,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.roadName;
         
             // 返回值: jsonable
@@ -696,6 +734,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficSearchRequest* ref = (AMapRoadTrafficSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
@@ -713,6 +752,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -731,6 +771,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficCircleSearchRequest* ref = (AMapRoadTrafficCircleSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.radius;
         
             // 返回值: Value
@@ -748,6 +789,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadTrafficSearchResponse* ref = (AMapRoadTrafficSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapTrafficInfo* result = ref.trafficInfo;
         
             // return a ref
@@ -766,6 +808,7 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.center;
         
             // return a ref
@@ -784,6 +827,7 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.radius;
         
             // 返回值: Value
@@ -801,6 +845,7 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapNearbySearchType result = ref.searchType;
         
             // 返回值: Value
@@ -818,6 +863,7 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.timeRange;
         
             // 返回值: Value
@@ -835,6 +881,7 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchRequest* ref = (AMapNearbySearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.limit;
         
             // 返回值: Value
@@ -852,6 +899,7 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.count;
         
             // 返回值: Value
@@ -869,12 +917,13 @@ extern BOOL enableLog;
             // ref object
             AMapNearbySearchResponse* ref = (AMapNearbySearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapNearbyUserInfo*>* result = ref.infos;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -891,6 +940,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.tableID;
         
             // 返回值: jsonable
@@ -908,6 +958,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<NSString*>* result = ref.filter;
         
             // 返回值: jsonable
@@ -925,6 +976,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.sortFields;
         
             // 返回值: jsonable
@@ -942,6 +994,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapCloudSortType result = ref.sortType;
         
             // 返回值: Value
@@ -959,6 +1012,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.offset;
         
             // 返回值: Value
@@ -976,6 +1030,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudSearchBaseRequest* ref = (AMapCloudSearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.page;
         
             // 返回值: Value
@@ -993,6 +1048,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.center;
         
             // return a ref
@@ -1011,6 +1067,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.radius;
         
             // 返回值: Value
@@ -1028,6 +1085,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOIAroundSearchRequest* ref = (AMapCloudPOIAroundSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.keywords;
         
             // 返回值: jsonable
@@ -1045,6 +1103,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPolygon* result = ref.polygon;
         
             // return a ref
@@ -1063,6 +1122,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOIPolygonSearchRequest* ref = (AMapCloudPOIPolygonSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.keywords;
         
             // 返回值: jsonable
@@ -1080,6 +1140,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOIIDSearchRequest* ref = (AMapCloudPOIIDSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.uid;
         
             // 返回值: Value
@@ -1097,6 +1158,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.keywords;
         
             // 返回值: jsonable
@@ -1114,6 +1176,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOILocalSearchRequest* ref = (AMapCloudPOILocalSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
@@ -1131,6 +1194,7 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.count;
         
             // 返回值: Value
@@ -1148,12 +1212,13 @@ extern BOOL enableLog;
             // ref object
             AMapCloudPOISearchResponse* ref = (AMapCloudPOISearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapCloudPOI*>* result = ref.POIs;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -1170,6 +1235,7 @@ extern BOOL enableLog;
             // ref object
             AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -1188,6 +1254,7 @@ extern BOOL enableLog;
             // ref object
             AMapLocationShareSearchRequest* ref = (AMapLocationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -1205,6 +1272,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -1222,6 +1290,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -1240,6 +1309,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -1257,6 +1327,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIShareSearchRequest* ref = (AMapPOIShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.address;
         
             // 返回值: jsonable
@@ -1274,6 +1345,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.strategy;
         
             // 返回值: Value
@@ -1291,6 +1363,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.type;
         
             // 返回值: Value
@@ -1308,6 +1381,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.startCoordinate;
         
             // return a ref
@@ -1326,6 +1400,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.destinationCoordinate;
         
             // return a ref
@@ -1344,6 +1419,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.startName;
         
             // 返回值: jsonable
@@ -1361,6 +1437,7 @@ extern BOOL enableLog;
             // ref object
             AMapRouteShareSearchRequest* ref = (AMapRouteShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.destinationName;
         
             // 返回值: jsonable
@@ -1378,6 +1455,7 @@ extern BOOL enableLog;
             // ref object
             AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.strategy;
         
             // 返回值: Value
@@ -1395,6 +1473,7 @@ extern BOOL enableLog;
             // ref object
             AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.startCoordinate;
         
             // return a ref
@@ -1413,6 +1492,7 @@ extern BOOL enableLog;
             // ref object
             AMapNavigationShareSearchRequest* ref = (AMapNavigationShareSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.destinationCoordinate;
         
             // return a ref
@@ -1431,6 +1511,7 @@ extern BOOL enableLog;
             // ref object
             AMapShareSearchResponse* ref = (AMapShareSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.shareURL;
         
             // 返回值: jsonable
@@ -1448,6 +1529,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.beginTime;
         
             // 返回值: jsonable
@@ -1465,6 +1547,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.interval;
         
             // 返回值: Value
@@ -1482,6 +1565,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.timeCount;
         
             // 返回值: Value
@@ -1499,6 +1583,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.strategy;
         
             // 返回值: Value
@@ -1516,6 +1601,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.originId;
         
             // 返回值: jsonable
@@ -1533,6 +1619,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.destinationId;
         
             // 返回值: jsonable
@@ -1550,6 +1637,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.origintype;
         
             // 返回值: jsonable
@@ -1567,6 +1655,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.destinationtype;
         
             // 返回值: jsonable
@@ -1584,6 +1673,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.parentId;
         
             // 返回值: jsonable
@@ -1601,6 +1691,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.plateProvince;
         
             // 返回值: jsonable
@@ -1618,6 +1709,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.plateNumber;
         
             // 返回值: jsonable
@@ -1635,6 +1727,7 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchRequest* ref = (AMapFutureRouteSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.cartype;
         
             // 返回值: Value
@@ -1652,12 +1745,13 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapPath*>* result = ref.paths;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -1674,12 +1768,13 @@ extern BOOL enableLog;
             // ref object
             AMapFutureRouteSearchResponse* ref = (AMapFutureRouteSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapFutureTimeInfo*>* result = ref.timeInfos;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -1696,6 +1791,7 @@ extern BOOL enableLog;
             // ref object
             AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.latitude;
         
             // 返回值: Value
@@ -1713,6 +1809,7 @@ extern BOOL enableLog;
             // ref object
             AMapGeoPoint* ref = (AMapGeoPoint*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.longitude;
         
             // 返回值: Value
@@ -1730,12 +1827,13 @@ extern BOOL enableLog;
             // ref object
             AMapGeoPolygon* ref = (AMapGeoPolygon*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapGeoPoint*>* result = ref.points;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -1752,6 +1850,7 @@ extern BOOL enableLog;
             // ref object
             AMapCity* ref = (AMapCity*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
@@ -1769,6 +1868,7 @@ extern BOOL enableLog;
             // ref object
             AMapCity* ref = (AMapCity*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.citycode;
         
             // 返回值: jsonable
@@ -1786,6 +1886,7 @@ extern BOOL enableLog;
             // ref object
             AMapCity* ref = (AMapCity*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
@@ -1803,6 +1904,7 @@ extern BOOL enableLog;
             // ref object
             AMapCity* ref = (AMapCity*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.num;
         
             // 返回值: Value
@@ -1820,12 +1922,13 @@ extern BOOL enableLog;
             // ref object
             AMapCity* ref = (AMapCity*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapDistrict*>* result = ref.districts;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -1842,6 +1945,7 @@ extern BOOL enableLog;
             // ref object
             AMapSuggestion* ref = (AMapSuggestion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<NSString*>* result = ref.keywords;
         
             // 返回值: jsonable
@@ -1859,12 +1963,13 @@ extern BOOL enableLog;
             // ref object
             AMapSuggestion* ref = (AMapSuggestion*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapCity*>* result = ref.cities;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -1881,6 +1986,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -1898,6 +2004,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -1915,6 +2022,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
@@ -1932,6 +2040,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.district;
         
             // 返回值: jsonable
@@ -1949,6 +2058,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.address;
         
             // 返回值: jsonable
@@ -1966,6 +2076,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -1984,6 +2095,7 @@ extern BOOL enableLog;
             // ref object
             AMapTip* ref = (AMapTip*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.typecode;
         
             // 返回值: jsonable
@@ -2001,6 +2113,7 @@ extern BOOL enableLog;
             // ref object
             AMapImage* ref = (AMapImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.title;
         
             // 返回值: jsonable
@@ -2018,6 +2131,7 @@ extern BOOL enableLog;
             // ref object
             AMapImage* ref = (AMapImage*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.url;
         
             // 返回值: jsonable
@@ -2035,6 +2149,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.rating;
         
             // 返回值: Value
@@ -2052,6 +2167,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.cost;
         
             // 返回值: Value
@@ -2069,6 +2185,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOIExtension* ref = (AMapPOIExtension*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.openTime;
         
             // 返回值: jsonable
@@ -2086,6 +2203,7 @@ extern BOOL enableLog;
             // ref object
             AMapIndoorData* ref = (AMapIndoorData*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.floor;
         
             // 返回值: Value
@@ -2103,6 +2221,7 @@ extern BOOL enableLog;
             // ref object
             AMapIndoorData* ref = (AMapIndoorData*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.floorName;
         
             // 返回值: jsonable
@@ -2120,6 +2239,7 @@ extern BOOL enableLog;
             // ref object
             AMapIndoorData* ref = (AMapIndoorData*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.pid;
         
             // 返回值: jsonable
@@ -2137,6 +2257,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -2154,6 +2275,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -2171,6 +2293,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.sname;
         
             // 返回值: jsonable
@@ -2188,6 +2311,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -2206,6 +2330,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.address;
         
             // 返回值: jsonable
@@ -2223,6 +2348,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.distance;
         
             // 返回值: Value
@@ -2240,6 +2366,7 @@ extern BOOL enableLog;
             // ref object
             AMapSubPOI* ref = (AMapSubPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.subtype;
         
             // 返回值: jsonable
@@ -2257,6 +2384,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -2274,6 +2402,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -2291,6 +2420,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -2309,6 +2439,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.distance;
         
             // 返回值: Value
@@ -2326,6 +2457,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoutePOI* ref = (AMapRoutePOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.duration;
         
             // 返回值: Value
@@ -2343,6 +2475,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -2360,6 +2493,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -2377,6 +2511,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.type;
         
             // 返回值: jsonable
@@ -2394,6 +2529,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.typecode;
         
             // 返回值: jsonable
@@ -2411,6 +2547,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -2429,6 +2566,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.address;
         
             // 返回值: jsonable
@@ -2446,6 +2584,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.tel;
         
             // 返回值: jsonable
@@ -2463,6 +2602,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.distance;
         
             // 返回值: Value
@@ -2480,6 +2620,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.parkingType;
         
             // 返回值: jsonable
@@ -2497,6 +2638,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.shopID;
         
             // 返回值: jsonable
@@ -2514,6 +2656,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.postcode;
         
             // 返回值: jsonable
@@ -2531,6 +2674,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.website;
         
             // 返回值: jsonable
@@ -2548,6 +2692,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.email;
         
             // 返回值: jsonable
@@ -2565,6 +2710,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.province;
         
             // 返回值: jsonable
@@ -2582,6 +2728,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.pcode;
         
             // 返回值: jsonable
@@ -2599,6 +2746,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
@@ -2616,6 +2764,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.citycode;
         
             // 返回值: jsonable
@@ -2633,6 +2782,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.district;
         
             // 返回值: jsonable
@@ -2650,6 +2800,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
@@ -2667,6 +2818,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.gridcode;
         
             // 返回值: jsonable
@@ -2684,6 +2836,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.enterLocation;
         
             // return a ref
@@ -2702,6 +2855,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.exitLocation;
         
             // return a ref
@@ -2720,6 +2874,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.direction;
         
             // 返回值: jsonable
@@ -2737,6 +2892,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             BOOL result = ref.hasIndoorMap;
         
             // 返回值: Value
@@ -2754,6 +2910,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.businessArea;
         
             // 返回值: jsonable
@@ -2771,6 +2928,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapIndoorData* result = ref.indoorData;
         
             // return a ref
@@ -2789,12 +2947,13 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapSubPOI*>* result = ref.subPOIs;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -2811,12 +2970,13 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapImage*>* result = ref.images;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -2833,6 +2993,7 @@ extern BOOL enableLog;
             // ref object
             AMapPOI* ref = (AMapPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapPOIExtension* result = ref.extensionInfo;
         
             // return a ref
@@ -2851,6 +3012,7 @@ extern BOOL enableLog;
             // ref object
             AMapAOI* ref = (AMapAOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -2868,6 +3030,7 @@ extern BOOL enableLog;
             // ref object
             AMapAOI* ref = (AMapAOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -2885,6 +3048,7 @@ extern BOOL enableLog;
             // ref object
             AMapAOI* ref = (AMapAOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
@@ -2902,6 +3066,7 @@ extern BOOL enableLog;
             // ref object
             AMapAOI* ref = (AMapAOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -2920,6 +3085,7 @@ extern BOOL enableLog;
             // ref object
             AMapAOI* ref = (AMapAOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             CGFloat result = ref.area;
         
             // 返回值: Value
@@ -2937,6 +3103,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoad* ref = (AMapRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.uid;
         
             // 返回值: jsonable
@@ -2954,6 +3121,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoad* ref = (AMapRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -2971,6 +3139,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoad* ref = (AMapRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.distance;
         
             // 返回值: Value
@@ -2988,6 +3157,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoad* ref = (AMapRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.direction;
         
             // 返回值: jsonable
@@ -3005,6 +3175,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoad* ref = (AMapRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -3023,6 +3194,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.distance;
         
             // 返回值: Value
@@ -3040,6 +3212,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.direction;
         
             // 返回值: jsonable
@@ -3057,6 +3230,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -3075,6 +3249,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.firstId;
         
             // 返回值: jsonable
@@ -3092,6 +3267,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.firstName;
         
             // 返回值: jsonable
@@ -3109,6 +3285,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.secondId;
         
             // 返回值: jsonable
@@ -3126,6 +3303,7 @@ extern BOOL enableLog;
             // ref object
             AMapRoadInter* ref = (AMapRoadInter*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.secondName;
         
             // 返回值: jsonable
@@ -3143,6 +3321,7 @@ extern BOOL enableLog;
             // ref object
             AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.street;
         
             // 返回值: jsonable
@@ -3160,6 +3339,7 @@ extern BOOL enableLog;
             // ref object
             AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.number;
         
             // 返回值: jsonable
@@ -3177,6 +3357,7 @@ extern BOOL enableLog;
             // ref object
             AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -3195,6 +3376,7 @@ extern BOOL enableLog;
             // ref object
             AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSInteger result = ref.distance;
         
             // 返回值: Value
@@ -3212,6 +3394,7 @@ extern BOOL enableLog;
             // ref object
             AMapStreetNumber* ref = (AMapStreetNumber*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.direction;
         
             // 返回值: jsonable
@@ -3229,6 +3412,7 @@ extern BOOL enableLog;
             // ref object
             AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.name;
         
             // 返回值: jsonable
@@ -3246,6 +3430,7 @@ extern BOOL enableLog;
             // ref object
             AMapBusinessArea* ref = (AMapBusinessArea*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapGeoPoint* result = ref.location;
         
             // return a ref
@@ -3264,6 +3449,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.country;
         
             // 返回值: jsonable
@@ -3281,6 +3467,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.province;
         
             // 返回值: jsonable
@@ -3298,6 +3485,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.city;
         
             // 返回值: jsonable
@@ -3315,6 +3503,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.citycode;
         
             // 返回值: jsonable
@@ -3332,6 +3521,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.district;
         
             // 返回值: jsonable
@@ -3349,6 +3539,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.adcode;
         
             // 返回值: jsonable
@@ -3366,6 +3557,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.township;
         
             // 返回值: jsonable
@@ -3383,6 +3575,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.towncode;
         
             // 返回值: jsonable
@@ -3400,6 +3593,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.neighborhood;
         
             // 返回值: jsonable
@@ -3417,6 +3611,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.building;
         
             // 返回值: jsonable
@@ -3434,6 +3629,7 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapStreetNumber* result = ref.streetNumber;
         
             // return a ref
@@ -3452,12 +3648,13 @@ extern BOOL enableLog;
             // ref object
             AMapAddressComponent* ref = (AMapAddressComponent*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapBusinessArea*>* result = ref.businessAreas;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }
@@ -3474,6 +3671,7 @@ extern BOOL enableLog;
             // ref object
             AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSString* result = ref.formattedAddress;
         
             // 返回值: jsonable
@@ -3491,6 +3689,7 @@ extern BOOL enableLog;
             // ref object
             AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             AMapAddressComponent* result = ref.addressComponent;
         
             // return a ref
@@ -3509,12 +3708,13 @@ extern BOOL enableLog;
             // ref object
             AMapReGeocode* ref = (AMapReGeocode*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
+            // invoke native method
             NSArray<AMapRoad*>* result = ref.roads;
         
             // 返回值: 列表
             NSMutableArray* jsonableResult = [NSMutableArray array];
-            for (int i = 0; i < result.count; i++) {
-                NSObject* object = [result objectAtIndex:i];
+            for (int __i__ = 0; __i__ < result.count; __i__++) {
+                NSObject* object = [result objectAtIndex:__i__];
                 [jsonableResult addObject: @(object.hash)];
                 HEAP[@([object hash])] = object;
             }

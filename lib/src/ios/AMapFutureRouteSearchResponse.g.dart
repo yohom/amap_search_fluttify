@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapFutureRouteSearchResponse';
+
   
   //endregion
 
   //region creators
   static Future<AMapFutureRouteSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureRouteSearchResponse');
-    final object = AMapFutureRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapFutureRouteSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapFutureRouteSearchResponse', {'length': length});
   
-    final List<AMapFutureRouteSearchResponse> typedResult = resultBatch.map((result) => AMapFutureRouteSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapFutureRouteSearchResponse> typedResult = resultBatch.map((result) => AMapFutureRouteSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region getters
   Future<List<AMapPath>> get_paths() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_paths", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapPath()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapPath()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_paths", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapFutureTimeInfo>> get_timeInfos() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapFutureTimeInfo()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapFutureTimeInfo()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapFutureTimeInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapFutureTimeInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   //endregion
@@ -77,15 +79,15 @@ class AMapFutureRouteSearchResponse extends AMapSearchObject with NSCoding, NSCo
 extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchResponse> {
   //region getters
   Future<List<List<AMapPath>>> get_paths_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_paths_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapPath()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_paths_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapPath()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<List<AMapFutureTimeInfo>>> get_timeInfos_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapFutureTimeInfo()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchResponse::get_timeInfos_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapFutureTimeInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
@@ -94,13 +96,13 @@ extension AMapFutureRouteSearchResponse_Batch on List<AMapFutureRouteSearchRespo
 
   //region setters
   Future<void> set_paths_batch(List<List<AMapPath>> paths) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "paths": paths[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_paths_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "paths": paths[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_timeInfos_batch(List<List<AMapFutureTimeInfo>> timeInfos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeInfos": timeInfos[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchResponse::set_timeInfos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "timeInfos": timeInfos[__i__].map((it) => it.refId).toList()}]);
   
   
   }
