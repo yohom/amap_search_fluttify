@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_core_PoiItem extends java_lang_Object with android_os_Parcelable {
   //region constants
+  static const String name__ = 'com.amap.api.services.core.PoiItem';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_core_PoiItem> create__String__com_amap_api_services_core_LatLonPoint__String__String(String var1, com_amap_api_services_core_LatLonPoint var2, String var3, String var4) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', {"var1": var1, "var2": var2.refId, "var3": var3, "var4": var4});
-    final object = com_amap_api_services_core_PoiItem()..refId = refId..tag = 'amap_search_fluttify';
+    final object = com_amap_api_services_core_PoiItem()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,9 +32,9 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     if (var1.length != var2.length || var2.length != var3.length || var3.length != var4.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', [for (int i = 0; i < var1.length; i++) {"var1": var1[i], "var2": var2[i].refId, "var3": var3[i], "var4": var4[i]}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__].refId, "var3": var3[__i__], "var4": var4[__i__]}]);
   
-    final List<com_amap_api_services_core_PoiItem> typedResult = resultBatch.map((result) => com_amap_api_services_core_PoiItem()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_core_PoiItem> typedResult = resultBatch.map((result) => com_amap_api_services_core_PoiItem()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -55,18 +57,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getBusinessArea', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getBusinessArea', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -77,18 +79,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -99,18 +101,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdName', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -121,18 +123,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdName', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -143,18 +145,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityName', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -165,18 +167,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityName', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -187,18 +189,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceName', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceName', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -209,18 +211,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -231,18 +233,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeDes', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeDes', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -253,18 +255,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -275,18 +277,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTel', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTel', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -297,18 +299,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTel', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTel', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -319,18 +321,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdCode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -341,18 +343,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdCode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -363,18 +365,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiId', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiId', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -385,18 +387,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDistance', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDistance', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -407,18 +409,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDistance', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDistance', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -429,18 +431,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTitle', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTitle', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -451,18 +453,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSnippet', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSnippet', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -473,18 +475,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -495,18 +497,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityCode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -517,18 +519,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityCode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -539,18 +541,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEnter', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEnter', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -561,18 +563,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEnter', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEnter', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -583,18 +585,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getExit', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getExit', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -605,18 +607,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setExit', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setExit', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -627,18 +629,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getWebsite', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getWebsite', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -649,18 +651,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setWebsite', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setWebsite', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -671,18 +673,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPostcode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPostcode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -693,18 +695,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPostcode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPostcode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -715,18 +717,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEmail', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEmail', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -737,18 +739,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEmail', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEmail', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -759,18 +761,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDirection', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDirection', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -781,18 +783,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDirection', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDirection', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -803,18 +805,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -825,18 +827,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::isIndoorMap', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::isIndoorMap', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -847,18 +849,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -869,18 +871,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceCode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -891,18 +893,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setParkingType', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setParkingType', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -913,18 +915,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getParkingType', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getParkingType', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -935,18 +937,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setSubPois', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setSubPois', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -957,18 +959,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSubPois', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSubPois', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_poisearch_SubPoiItem()..refId = it..tag = 'amap_search_fluttify').toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_poisearch_SubPoiItem()..refId = it..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_SubPoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_SubPoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
     }
   }
   
@@ -979,18 +981,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_IndoorData()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_IndoorData()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_poisearch_IndoorData()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_IndoorData()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -1001,18 +1003,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1023,18 +1025,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPhotos', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPhotos', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_poisearch_Photo()..refId = it..tag = 'amap_search_fluttify').toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_poisearch_Photo()..refId = it..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_Photo()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_Photo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
     }
   }
   
@@ -1045,18 +1047,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPhotos', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPhotos', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1067,18 +1069,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiItemExtension()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiItemExtension()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -1089,18 +1091,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1111,18 +1113,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeCode', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeCode', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1133,18 +1135,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1155,18 +1157,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getShopID', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getShopID', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1177,18 +1179,18 @@ class com_amap_api_services_core_PoiItem extends java_lang_Object with android_o
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setShopID', {"var1": var1, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setShopID', {"var1": var1, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -1211,14 +1213,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getBusinessArea_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getBusinessArea_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1230,14 +1232,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setBusinessArea_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1249,14 +1251,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1268,14 +1270,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1287,14 +1289,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1306,14 +1308,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1325,14 +1327,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceName_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1344,14 +1346,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceName_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1363,14 +1365,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeDes_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeDes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1382,14 +1384,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeDes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1401,14 +1403,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTel_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1420,14 +1422,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTel_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1439,14 +1441,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1458,14 +1460,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setAdCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1477,14 +1479,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiId_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1496,14 +1498,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDistance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1515,14 +1517,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDistance_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1534,14 +1536,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTitle_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTitle_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1553,14 +1555,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSnippet_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSnippet_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1572,14 +1574,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getLatLonPoint_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1591,14 +1593,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1610,14 +1612,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setCityCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1629,14 +1631,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEnter_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEnter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1648,14 +1650,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEnter_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEnter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1667,14 +1669,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getExit_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_core_LatLonPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_core_LatLonPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1686,14 +1688,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setExit_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setExit_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1705,14 +1707,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getWebsite_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getWebsite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1724,14 +1726,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setWebsite_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setWebsite_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1743,14 +1745,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPostcode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPostcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1762,14 +1764,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPostcode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPostcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1781,14 +1783,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEmail_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getEmail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1800,14 +1802,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEmail_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setEmail_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1819,14 +1821,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDirection_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1838,14 +1840,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDirection_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setDirection_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1857,14 +1859,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1876,14 +1878,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::isIndoorMap_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::isIndoorMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1895,14 +1897,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setProvinceCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1914,14 +1916,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getProvinceCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1933,14 +1935,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setParkingType_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setParkingType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1952,14 +1954,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getParkingType_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getParkingType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1971,14 +1973,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setSubPois_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1990,14 +1992,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSubPois_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getSubPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => com_amap_api_services_poisearch_SubPoiItem()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_SubPoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -2009,14 +2011,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getIndoorData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_poisearch_IndoorData()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_poisearch_IndoorData()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -2028,14 +2030,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setIndoorDate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2047,14 +2049,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPhotos_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPhotos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => com_amap_api_services_poisearch_Photo()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_poisearch_Photo()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -2066,14 +2068,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPhotos_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPhotos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2085,14 +2087,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getPoiExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_poisearch_PoiItemExtension()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_poisearch_PoiItemExtension()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -2104,14 +2106,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setPoiExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2123,14 +2125,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeCode_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2142,14 +2144,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setTypeCode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2161,14 +2163,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getShopID_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::getShopID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -2180,14 +2182,14 @@ extension com_amap_api_services_core_PoiItem_Batch on List<com_amap_api_services
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setShopID_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.core.PoiItem::setShopID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

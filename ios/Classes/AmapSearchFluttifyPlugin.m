@@ -17,6 +17,7 @@
 #import "SubHandler/SubHandler10.h"
 #import "SubHandler/SubHandler11.h"
 #import "SubHandler/SubHandler12.h"
+#import "SubHandler/SubHandlerCustom.h"
 
 // Dart端一次方法调用所存在的栈, 只有当MethodChannel传递参数受限时, 再启用这个容器
 extern NSMutableDictionary<NSString*, NSObject*>* STACK;
@@ -49,6 +50,7 @@ extern BOOL enableLog;
     [_handlerMap addEntriesFromDictionary: [self getSubHandler10]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler11]];
     [_handlerMap addEntriesFromDictionary: [self getSubHandler12]];
+    [_handlerMap addEntriesFromDictionary: [self getSubHandlerCustom]];
   }
 
   return self;
@@ -151,7 +153,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::AMapSearchRequestDidFailWithError");
+    NSLog(@"AMapSearchDelegate::AMapSearchRequest_didFailWithError");
   }
 
   // convert to jsonable arg
@@ -162,7 +164,7 @@ extern BOOL enableLog;
   NSNumber* argerror = @(error.hash);
   HEAP[argerror] = error;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequestDidFailWithError" arguments:@{@"request": argrequest, @"error": argerror}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::AMapSearchRequest_didFailWithError" arguments:@{@"request": argrequest, @"error": argerror}];
   
 }
 
@@ -173,7 +175,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onPOISearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onPOISearchDone_response");
   }
 
   // convert to jsonable arg
@@ -184,7 +186,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onPOISearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -195,7 +197,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onRoutePOISearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onRoutePOISearchDone_response");
   }
 
   // convert to jsonable arg
@@ -206,7 +208,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoutePOISearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -217,7 +219,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onGeocodeSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onGeocodeSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -228,7 +230,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onGeocodeSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -239,7 +241,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onReGeocodeSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onReGeocodeSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -250,7 +252,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onReGeocodeSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -261,7 +263,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onInputTipsSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onInputTipsSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -272,7 +274,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onInputTipsSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -283,7 +285,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onBusStopSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onBusStopSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -294,7 +296,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusStopSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -305,7 +307,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onBusLineSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onBusLineSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -316,7 +318,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onBusLineSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -327,7 +329,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onDistrictSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onDistrictSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -338,7 +340,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistrictSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -349,7 +351,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onRouteSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onRouteSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -360,7 +362,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRouteSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -371,7 +373,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onFutureRouteSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onFutureRouteSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -382,7 +384,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onFutureRouteSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -393,7 +395,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onDistanceSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onDistanceSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -404,7 +406,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onDistanceSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -415,7 +417,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onWeatherSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onWeatherSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -426,7 +428,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onWeatherSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -437,7 +439,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onRoadTrafficSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -448,7 +450,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onRoadTrafficSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -459,7 +461,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onNearbySearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onNearbySearchDone_response");
   }
 
   // convert to jsonable arg
@@ -470,7 +472,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onNearbySearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -481,7 +483,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onCloudSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onCloudSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -492,7 +494,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onCloudSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 
@@ -503,7 +505,7 @@ extern BOOL enableLog;
             binaryMessenger:[_registrar messenger]];
   // print log
   if (enableLog) {
-    NSLog(@"AMapSearchDelegate::onShareSearchDoneResponse");
+    NSLog(@"AMapSearchDelegate::onShareSearchDone_response");
   }
 
   // convert to jsonable arg
@@ -514,7 +516,7 @@ extern BOOL enableLog;
   NSNumber* argresponse = @(response.hash);
   HEAP[argresponse] = response;
 
-  [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDoneResponse" arguments:@{@"request": argrequest, @"response": argresponse}];
+  [channel invokeMethod:@"Callback::AMapSearchDelegate::onShareSearchDone_response" arguments:@{@"request": argrequest, @"response": argresponse}];
   
 }
 

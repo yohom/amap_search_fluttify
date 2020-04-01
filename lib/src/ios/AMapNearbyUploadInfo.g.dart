@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapNearbyUploadInfo extends NSObject with NSCopying {
   //region constants
+  static const String name__ = 'AMapNearbyUploadInfo';
+
   
   //endregion
 
   //region creators
   static Future<AMapNearbyUploadInfo> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapNearbyUploadInfo');
-    final object = AMapNearbyUploadInfo()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapNearbyUploadInfo()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapNearbyUploadInfo', {'length': length});
   
-    final List<AMapNearbyUploadInfo> typedResult = resultBatch.map((result) => AMapNearbyUploadInfo()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapNearbyUploadInfo> typedResult = resultBatch.map((result) => AMapNearbyUploadInfo()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,21 +43,21 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
 
   //region getters
   Future<String> get_userID() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_userID", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_userID", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapSearchCoordinateType> get_coordinateType() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinateType", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinateType", {'refId': refId});
   
-    return AMapSearchCoordinateType.values[result];
+    return AMapSearchCoordinateType.values[__result__];
   }
   
   Future<CLLocationCoordinate2D> get_coordinate() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinate", {'refId': refId});
-    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = result..tag = 'amap_search_fluttify');
-    return CLLocationCoordinate2D()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinate", {'refId': refId});
+    kNativeObjectPool.add(CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   //endregion
@@ -89,22 +91,22 @@ class AMapNearbyUploadInfo extends NSObject with NSCopying {
 extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
   //region getters
   Future<List<String>> get_userID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_userID_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_userID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapSearchCoordinateType>> get_coordinateType_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinateType_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapSearchCoordinateType.values[result]).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinateType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapSearchCoordinateType.values[__result__]).toList();
   
     return typedResult;
   }
   
   Future<List<CLLocationCoordinate2D>> get_coordinate_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinate_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => CLLocationCoordinate2D()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbyUploadInfo::get_coordinate_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => CLLocationCoordinate2D()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -113,19 +115,19 @@ extension AMapNearbyUploadInfo_Batch on List<AMapNearbyUploadInfo> {
 
   //region setters
   Future<void> set_userID_batch(List<String> userID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_userID_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "userID": userID[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_userID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "userID": userID[__i__]}]);
   
   
   }
   
   Future<void> set_coordinateType_batch(List<AMapSearchCoordinateType> coordinateType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "coordinateType": coordinateType[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinateType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "coordinateType": coordinateType[__i__].index}]);
   
   
   }
   
   Future<void> set_coordinate_batch(List<CLLocationCoordinate2D> coordinate) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinate_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "coordinate": coordinate[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbyUploadInfo::set_coordinate_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "coordinate": coordinate[__i__].refId}]);
   
   
   }

@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapBusLineNameSearchRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapBusLineNameSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapBusLineNameSearchRequest');
-    final object = AMapBusLineNameSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapBusLineNameSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapBusLineNameSearchRequest', {'length': length});
   
-    final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapBusLineNameSearchRequest> typedResult = resultBatch.map((result) => AMapBusLineNameSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,9 +43,9 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
 
   //region getters
   Future<String> get_keywords() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineNameSearchRequest::get_keywords", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineNameSearchRequest::get_keywords", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -65,8 +67,8 @@ class AMapBusLineNameSearchRequest extends AMapBusLineBaseSearchRequest with NSC
 extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineNameSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineNameSearchRequest::get_keywords_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -75,7 +77,7 @@ extension AMapBusLineNameSearchRequest_Batch on List<AMapBusLineNameSearchReques
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusLineNameSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapBusLineNameSearchRequest::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "keywords": keywords[__i__]}]);
   
   
   }

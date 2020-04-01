@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapGeocodeSearchResponse';
+
   
   //endregion
 
   //region creators
   static Future<AMapGeocodeSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapGeocodeSearchResponse');
-    final object = AMapGeocodeSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapGeocodeSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapGeocodeSearchResponse', {'length': length});
   
-    final List<AMapGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapGeocodeSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapGeocodeSearchResponse> typedResult = resultBatch.map((result) => AMapGeocodeSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 
   //region getters
   Future<int> get_count() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_count", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_count", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<List<AMapGeocode>> get_geocodes() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapGeocode()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapGeocode()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_geocodes", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapGeocode()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapGeocode()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   //endregion
@@ -77,15 +79,15 @@ class AMapGeocodeSearchResponse extends AMapSearchObject with NSCoding, NSCopyin
 extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_count_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_count_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<List<AMapGeocode>>> get_geocodes_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_geocodes_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapGeocode()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeocodeSearchResponse::get_geocodes_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeocode()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
@@ -94,13 +96,13 @@ extension AMapGeocodeSearchResponse_Batch on List<AMapGeocodeSearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_count_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_count_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "count": count[__i__]}]);
   
   
   }
   
   Future<void> set_geocodes_batch(List<List<AMapGeocode>> geocodes) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "geocodes": geocodes[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeocodeSearchResponse::set_geocodes_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "geocodes": geocodes[__i__].map((it) => it.refId).toList()}]);
   
   
   }

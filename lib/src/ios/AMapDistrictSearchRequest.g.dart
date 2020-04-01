@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapDistrictSearchRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapDistrictSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapDistrictSearchRequest');
-    final object = AMapDistrictSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapDistrictSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapDistrictSearchRequest', {'length': length});
   
-    final List<AMapDistrictSearchRequest> typedResult = resultBatch.map((result) => AMapDistrictSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapDistrictSearchRequest> typedResult = resultBatch.map((result) => AMapDistrictSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,21 +43,21 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
 
   //region getters
   Future<String> get_keywords() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_keywords", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_keywords", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<bool> get_requireExtension() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_requireExtension", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_requireExtension", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<bool> get_showBusinessArea() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_showBusinessArea", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_showBusinessArea", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -89,22 +91,22 @@ class AMapDistrictSearchRequest extends AMapSearchObject with NSCoding, NSCopyin
 extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_keywords_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_requireExtension_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_requireExtension_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_requireExtension_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_showBusinessArea_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_showBusinessArea_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapDistrictSearchRequest::get_showBusinessArea_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -113,19 +115,19 @@ extension AMapDistrictSearchRequest_Batch on List<AMapDistrictSearchRequest> {
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "keywords": keywords[__i__]}]);
   
   
   }
   
   Future<void> set_requireExtension_batch(List<bool> requireExtension) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_requireExtension_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "requireExtension": requireExtension[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_requireExtension_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "requireExtension": requireExtension[__i__]}]);
   
   
   }
   
   Future<void> set_showBusinessArea_batch(List<bool> showBusinessArea) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "showBusinessArea": showBusinessArea[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapDistrictSearchRequest::set_showBusinessArea_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "showBusinessArea": showBusinessArea[__i__]}]);
   
   
   }

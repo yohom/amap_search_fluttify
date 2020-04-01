@@ -1757,7 +1757,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOISearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOISearchBaseRequest* ref = [[AMapPOISearchBaseRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1772,7 +1772,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIIDSearchRequest* ref = [[AMapPOIIDSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1787,7 +1787,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIKeywordsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIKeywordsSearchRequest* ref = [[AMapPOIKeywordsSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1802,7 +1802,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIAroundSearchRequest* ref = [[AMapPOIAroundSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1817,7 +1817,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIPolygonSearchRequest* ref = [[AMapPOIPolygonSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1832,7 +1832,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOISearchResponse* ref = [[AMapPOISearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1847,7 +1847,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoutePOISearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoutePOISearchRequest* ref = [[AMapRoutePOISearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1862,7 +1862,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoutePOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoutePOISearchResponse* ref = [[AMapRoutePOISearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1877,7 +1877,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapInputTipsSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapInputTipsSearchRequest* ref = [[AMapInputTipsSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1892,7 +1892,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapInputTipsSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapInputTipsSearchResponse* ref = [[AMapInputTipsSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1907,7 +1907,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeocodeSearchRequest* ref = [[AMapGeocodeSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1922,7 +1922,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeocodeSearchResponse* ref = [[AMapGeocodeSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1937,7 +1937,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapReGeocodeSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapReGeocodeSearchRequest* ref = [[AMapReGeocodeSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1952,7 +1952,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapReGeocodeSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapReGeocodeSearchResponse* ref = [[AMapReGeocodeSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1967,7 +1967,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusStopSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusStopSearchRequest* ref = [[AMapBusStopSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1982,7 +1982,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusStopSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusStopSearchResponse* ref = [[AMapBusStopSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -1997,7 +1997,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusLineBaseSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineBaseSearchRequest* ref = [[AMapBusLineBaseSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2012,7 +2012,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusLineNameSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineNameSearchRequest* ref = [[AMapBusLineNameSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2027,7 +2027,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusLineIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineIDSearchRequest* ref = [[AMapBusLineIDSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2042,7 +2042,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusLineSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusLineSearchResponse* ref = [[AMapBusLineSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2057,7 +2057,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapDistrictSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistrictSearchRequest* ref = [[AMapDistrictSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2072,7 +2072,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapDistrictSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistrictSearchResponse* ref = [[AMapDistrictSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2087,7 +2087,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRouteSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteSearchBaseRequest* ref = [[AMapRouteSearchBaseRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2102,7 +2102,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapDrivingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDrivingRouteSearchRequest* ref = [[AMapDrivingRouteSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2117,7 +2117,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapWalkingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWalkingRouteSearchRequest* ref = [[AMapWalkingRouteSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2132,7 +2132,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapTransitRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTransitRouteSearchRequest* ref = [[AMapTransitRouteSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2147,7 +2147,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRidingRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRidingRouteSearchRequest* ref = [[AMapRidingRouteSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2162,7 +2162,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteSearchResponse* ref = [[AMapRouteSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2177,7 +2177,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRidingRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRidingRouteSearchResponse* ref = [[AMapRidingRouteSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2192,7 +2192,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapTruckRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTruckRouteSearchRequest* ref = [[AMapTruckRouteSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2207,7 +2207,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapDistanceSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistanceSearchRequest* ref = [[AMapDistanceSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2222,7 +2222,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapDistanceSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapDistanceSearchResponse* ref = [[AMapDistanceSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2237,7 +2237,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapWeatherSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWeatherSearchRequest* ref = [[AMapWeatherSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2252,7 +2252,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapWeatherSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapWeatherSearchResponse* ref = [[AMapWeatherSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2267,7 +2267,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoadTrafficSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficSearchBaseRequest* ref = [[AMapRoadTrafficSearchBaseRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2282,7 +2282,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoadTrafficSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficSearchRequest* ref = [[AMapRoadTrafficSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2297,7 +2297,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoadTrafficCircleSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficCircleSearchRequest* ref = [[AMapRoadTrafficCircleSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2312,7 +2312,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoadTrafficSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadTrafficSearchResponse* ref = [[AMapRoadTrafficSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2327,7 +2327,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapNearbySearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNearbySearchRequest* ref = [[AMapNearbySearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2342,7 +2342,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapNearbySearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNearbySearchResponse* ref = [[AMapNearbySearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2357,7 +2357,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCloudSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudSearchBaseRequest* ref = [[AMapCloudSearchBaseRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2372,7 +2372,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCloudPOIAroundSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOIAroundSearchRequest* ref = [[AMapCloudPOIAroundSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2387,7 +2387,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCloudPOIPolygonSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOIPolygonSearchRequest* ref = [[AMapCloudPOIPolygonSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2402,7 +2402,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCloudPOIIDSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOIIDSearchRequest* ref = [[AMapCloudPOIIDSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2417,7 +2417,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCloudPOILocalSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOILocalSearchRequest* ref = [[AMapCloudPOILocalSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2432,7 +2432,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCloudPOISearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCloudPOISearchResponse* ref = [[AMapCloudPOISearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2447,7 +2447,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapShareSearchBaseRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapShareSearchBaseRequest* ref = [[AMapShareSearchBaseRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2462,7 +2462,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapLocationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapLocationShareSearchRequest* ref = [[AMapLocationShareSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2477,7 +2477,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIShareSearchRequest* ref = [[AMapPOIShareSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2492,7 +2492,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRouteShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRouteShareSearchRequest* ref = [[AMapRouteShareSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2507,7 +2507,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapNavigationShareSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapNavigationShareSearchRequest* ref = [[AMapNavigationShareSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2522,7 +2522,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapShareSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapShareSearchResponse* ref = [[AMapShareSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2537,7 +2537,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapFutureRouteSearchRequest": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapFutureRouteSearchRequest* ref = [[AMapFutureRouteSearchRequest alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2552,7 +2552,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapFutureRouteSearchResponse": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapFutureRouteSearchResponse* ref = [[AMapFutureRouteSearchResponse alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2567,7 +2567,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapSearchObject": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSearchObject* ref = [[AMapSearchObject alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2582,7 +2582,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoPoint": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoPoint* ref = [[AMapGeoPoint alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2597,7 +2597,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeoPolygon": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeoPolygon* ref = [[AMapGeoPolygon alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2612,7 +2612,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapCity": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapCity* ref = [[AMapCity alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2627,7 +2627,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapSuggestion": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSuggestion* ref = [[AMapSuggestion alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2642,7 +2642,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapTip": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapTip* ref = [[AMapTip alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2657,7 +2657,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapImage": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapImage* ref = [[AMapImage alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2672,7 +2672,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOIExtension": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOIExtension* ref = [[AMapPOIExtension alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2687,7 +2687,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapIndoorData": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapIndoorData* ref = [[AMapIndoorData alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2702,7 +2702,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapSubPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapSubPOI* ref = [[AMapSubPOI alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2717,7 +2717,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoutePOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoutePOI* ref = [[AMapRoutePOI alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2732,7 +2732,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapPOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapPOI* ref = [[AMapPOI alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2747,7 +2747,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapAOI": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapAOI* ref = [[AMapAOI alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2762,7 +2762,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoad": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoad* ref = [[AMapRoad alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2777,7 +2777,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapRoadInter": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapRoadInter* ref = [[AMapRoadInter alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2792,7 +2792,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapStreetNumber": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapStreetNumber* ref = [[AMapStreetNumber alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2807,7 +2807,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapBusinessArea": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapBusinessArea* ref = [[AMapBusinessArea alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2822,7 +2822,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapAddressComponent": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapAddressComponent* ref = [[AMapAddressComponent alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2837,7 +2837,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapReGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapReGeocode* ref = [[AMapReGeocode alloc] init];
                 HEAP[@(ref.hash)] = ref;
         
@@ -2852,7 +2852,7 @@ extern BOOL enableLog;
         @"ObjectFactory::create_batchAMapGeocode": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
             NSMutableArray<NSNumber*>* resultList = [NSMutableArray array];
         
-            for (int i = 0; i < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; i++) {
+            for (int __i__ = 0; __i__ < [(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) argsBatch)[@"length"] integerValue]; __i__++) {
                 AMapGeocode* ref = [[AMapGeocode alloc] init];
                 HEAP[@(ref.hash)] = ref;
         

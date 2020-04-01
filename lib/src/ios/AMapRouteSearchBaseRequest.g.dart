@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapRouteSearchBaseRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapRouteSearchBaseRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRouteSearchBaseRequest');
-    final object = AMapRouteSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapRouteSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRouteSearchBaseRequest', {'length': length});
   
-    final List<AMapRouteSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRouteSearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapRouteSearchBaseRequest> typedResult = resultBatch.map((result) => AMapRouteSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region getters
   Future<AMapGeoPoint> get_origin() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_origin", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_origin", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<AMapGeoPoint> get_destination() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_destination", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_destination", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   //endregion
@@ -77,15 +79,15 @@ class AMapRouteSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest> {
   //region getters
   Future<List<AMapGeoPoint>> get_origin_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_origin_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_origin_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_destination_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRouteSearchBaseRequest::get_destination_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -94,13 +96,13 @@ extension AMapRouteSearchBaseRequest_Batch on List<AMapRouteSearchBaseRequest> {
 
   //region setters
   Future<void> set_origin_batch(List<AMapGeoPoint> origin) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_origin_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origin": origin[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_origin_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "origin": origin[__i__].refId}]);
   
   
   }
   
   Future<void> set_destination_batch(List<AMapGeoPoint> destination) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_destination_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destination": destination[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRouteSearchBaseRequest::set_destination_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "destination": destination[__i__].refId}]);
   
   
   }

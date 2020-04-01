@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapNearbySearchManager extends NSObject  {
   //region constants
+  static const String name__ = 'AMapNearbySearchManager';
+
   
   //endregion
 
@@ -23,15 +25,15 @@ class AMapNearbySearchManager extends NSObject  {
 
   //region getters
   Future<double> get_uploadTimeInterval() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<bool> get_isAutoUploading() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -60,7 +62,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.nearbyInfoForUploading(AMapNearbySearchManager()..refId = (args['manager'])..tag = 'amap_search_fluttify');
+            delegate?.nearbyInfoForUploading(AMapNearbySearchManager()..refId = (args['manager'])..tag__ = 'amap_search_fluttify');
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onNearbyInfoUploadedWithError':
             // print log
@@ -69,7 +71,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onNearbyInfoUploadedWithError(NSError()..refId = (args['error'])..tag = 'amap_search_fluttify');
+            delegate?.onNearbyInfoUploadedWithError(NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify');
             break;
           case 'Callback::AMapNearbySearchManagerDelegate::onUserInfoClearedWithError':
             // print log
@@ -78,7 +80,7 @@ class AMapNearbySearchManager extends NSObject  {
             }
         
             // handle the native call
-            delegate?.onUserInfoClearedWithError(NSError()..refId = (args['error'])..tag = 'amap_search_fluttify');
+            delegate?.onUserInfoClearedWithError(NSError()..refId = (args['error'])..tag__ = 'amap_search_fluttify');
             break;
           default:
             break;
@@ -96,18 +98,18 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance', );
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance', );
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(AMapNearbySearchManager()..refId = result..tag = 'amap_search_fluttify');
-      return AMapNearbySearchManager()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -118,18 +120,18 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -140,18 +142,18 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -162,18 +164,18 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo', {"info": info.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo', {"info": info.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -184,18 +186,18 @@ class AMapNearbySearchManager extends NSObject  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::clearUserInfoWithID', {"userID": userID, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::clearUserInfoWithID', {"userID": userID, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -205,15 +207,15 @@ class AMapNearbySearchManager extends NSObject  {
 extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
   //region getters
   Future<List<double>> get_uploadTimeInterval_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_uploadTimeInterval_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_isAutoUploading_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchManager::get_isAutoUploading_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -222,7 +224,7 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
 
   //region setters
   Future<void> set_uploadTimeInterval_batch(List<double> uploadTimeInterval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uploadTimeInterval": uploadTimeInterval[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::set_uploadTimeInterval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "uploadTimeInterval": uploadTimeInterval[__i__]}]);
   
   
   }
@@ -236,14 +238,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::sharedInstance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => AMapNearbySearchManager()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => AMapNearbySearchManager()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -255,14 +257,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::startAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -274,14 +276,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::stopAutoUploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -293,14 +295,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int i = 0; i < this.length; i++) {"info": info[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::uploadNearbyInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"info": info[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -312,14 +314,14 @@ extension AMapNearbySearchManager_Batch on List<AMapNearbySearchManager> {
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int i = 0; i < this.length; i++) {"userID": userID[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchManager::clearUserInfoWithID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"userID": userID[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

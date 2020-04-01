@@ -34,8 +34,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IWeatherSearch::getQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -60,7 +60,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -73,8 +73,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IWeatherSearch::setQuery_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -108,8 +108,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IWeatherSearch::searchWeatherAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -142,8 +142,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::clearUserInfoAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -176,8 +176,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::setUserID_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -211,8 +211,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::stopUploadNearbyInfoAuto_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -245,8 +245,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::uploadNearbyInfoAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -280,8 +280,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::searchNearbyInfoAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -315,8 +315,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::searchNearbyInfo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -342,7 +342,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -355,8 +355,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.INearbySearch::destroy_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -389,8 +389,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IBusLineSearch::searchBusLine_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -415,7 +415,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -428,8 +428,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IBusLineSearch::searchBusLineAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -462,8 +462,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IBusLineSearch::setQuery_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -497,8 +497,8 @@ public class SubHandler12 {
             put("com.amap.api.services.interfaces.IBusLineSearch::getQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -523,7 +523,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -536,8 +536,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getFromAndTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -562,7 +562,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -575,8 +575,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareNaviQuery::getNaviMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -610,8 +610,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getBusMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -645,8 +645,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareBusRouteQuery::getShareFromAndTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -671,7 +671,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -684,8 +684,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchPoiShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -719,8 +719,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -754,8 +754,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -789,8 +789,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -824,8 +824,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchNaviShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -859,8 +859,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchLocationShareUrlAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -894,8 +894,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchPoiShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -930,8 +930,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchNaviShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -966,8 +966,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchLocationShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1002,8 +1002,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchBusRouteShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1038,8 +1038,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchDrivingRouteShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1074,8 +1074,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch::searchWalkRouteShareUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1110,8 +1110,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setFromName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1145,8 +1145,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::setToName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1180,8 +1180,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFrom_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1206,7 +1206,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1219,8 +1219,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1245,7 +1245,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1258,8 +1258,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getFromName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1293,8 +1293,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareFromAndTo::getToName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1328,8 +1328,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getWalkMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1363,8 +1363,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery::getShareFromAndTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1389,7 +1389,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1402,8 +1402,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getDrivingMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1437,8 +1437,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery::getShareFromAndTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1463,7 +1463,7 @@ public class SubHandler12 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1476,8 +1476,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onPoiShareUrlSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1513,8 +1513,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onLocationShareUrlSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1550,8 +1550,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onNaviShareUrlSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1587,8 +1587,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onBusRouteShareUrlSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1624,8 +1624,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onWalkRouteShareUrlSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1661,8 +1661,8 @@ public class SubHandler12 {
             put("com.amap.api.services.share.ShareSearch.OnShareSearchListener::onDrivingRouteShareUrlSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1696,43 +1696,49 @@ public class SubHandler12 {
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusInfo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusInfo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusInfo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusInfo obj = new com.amap.api.services.traffic.TrafficStatusInfo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusResult obj = new com.amap.api.services.traffic.TrafficStatusResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -1740,18 +1746,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.traffic.TrafficSearch obj = new com.amap.api.services.traffic.TrafficSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_RoadTrafficQuery__String__String__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_RoadTrafficQuery__String__String__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_RoadTrafficQuery__String__String__int");
+                }
             
                 // args
                 // jsonable arg
@@ -1763,18 +1771,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.traffic.RoadTrafficQuery obj = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_CircleTrafficQuery__com_amap_api_services_core_LatLonPoint__int__int");
+                }
             
                 // args
                 // ref arg
@@ -1786,54 +1796,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.traffic.CircleTrafficQuery obj = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_traffic_TrafficStatusEvaluation__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusEvaluation__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_traffic_TrafficStatusEvaluation__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.traffic.TrafficStatusEvaluation obj = new com.amap.api.services.traffic.TrafficStatusEvaluation();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusLineItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.busline.BusLineItem obj = new com.amap.api.services.busline.BusLineItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationSearch__android_content_Context__com_amap_api_services_busline_BusStationQuery");
+                }
             
                 // args
                 // ref arg
@@ -1843,18 +1859,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.busline.BusStationSearch obj = new com.amap.api.services.busline.BusStationSearch(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineSearch__android_content_Context__com_amap_api_services_busline_BusLineQuery");
+                }
             
                 // args
                 // ref arg
@@ -1864,18 +1882,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.busline.BusLineSearch obj = new com.amap.api.services.busline.BusLineSearch(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusLineQuery__String__com_amap_api_services_busline_BusLineQuery_SearchType__String");
+                }
             
                 // args
                 // jsonable arg
@@ -1887,36 +1907,40 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.busline.BusLineQuery obj = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusStationItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.busline.BusStationItem obj = new com.amap.api.services.busline.BusStationItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_busline_BusStationQuery__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationQuery__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_busline_BusStationQuery__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -1926,18 +1950,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.busline.BusStationQuery obj = new com.amap.api.services.busline.BusStationQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_AMapException__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String");
+                }
             
                 // args
                 // jsonable arg
@@ -1945,18 +1971,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_AMapException__String__int__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__String__int__String");
+                }
             
                 // args
                 // jsonable arg
@@ -1968,54 +1996,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_AMapException__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_AMapException__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.core.AMapException obj = new com.amap.api.services.core.AMapException();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_SearchUtils__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SearchUtils__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SearchUtils__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.core.SearchUtils obj = new com.amap.api.services.core.SearchUtils();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_LatLonSharePoint__double__double__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonSharePoint__double__double__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonSharePoint__double__double__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2027,18 +2061,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.core.LatLonSharePoint obj = new com.amap.api.services.core.LatLonSharePoint(var1, var3, var5);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_LatLonPoint__double__double", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonPoint__double__double");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_LatLonPoint__double__double");
+                }
             
                 // args
                 // jsonable arg
@@ -2048,18 +2084,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.core.LatLonPoint obj = new com.amap.api.services.core.LatLonPoint(var1, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_PoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2073,18 +2111,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.core.PoiItem obj = new com.amap.api.services.core.PoiItem(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_core_SuggestionCity__String__String__String__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SuggestionCity__String__String__String__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_core_SuggestionCity__String__String__String__int");
+                }
             
                 // args
                 // jsonable arg
@@ -2098,36 +2138,40 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.core.SuggestionCity obj = new com.amap.api.services.core.SuggestionCity(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.poisearch.Photo obj = new com.amap.api.services.poisearch.Photo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_Photo__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_Photo__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2137,18 +2181,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.Photo obj = new com.amap.api.services.poisearch.Photo(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_SubPoiItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2162,18 +2208,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.SubPoiItem obj = new com.amap.api.services.poisearch.SubPoiItem(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiItemExtension__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiItemExtension__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiItemExtension__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2183,18 +2231,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiItemExtension obj = new com.amap.api.services.poisearch.PoiItemExtension(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                }
             
                 // args
                 // ref arg
@@ -2204,18 +2254,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int__boolean");
+                }
             
                 // args
                 // ref arg
@@ -2227,18 +2279,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
             
                 // args
                 // ref arg
@@ -2248,18 +2302,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_SearchBound__com_amap_api_services_core_LatLonPoint");
+                }
             
                 // args
                 // list arg
@@ -2271,18 +2327,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.SearchBound obj = new com.amap.api.services.poisearch.PoiSearch.SearchBound(new ArrayList(var1));
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch__android_content_Context__com_amap_api_services_poisearch_PoiSearch_Query");
+                }
             
                 // args
                 // ref arg
@@ -2292,18 +2350,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch obj = new com.amap.api.services.poisearch.PoiSearch(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2313,18 +2373,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.Query obj = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_PoiSearch_Query__String__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_PoiSearch_Query__String__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2336,18 +2398,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.PoiSearch.Query obj = new com.amap.api.services.poisearch.PoiSearch.Query(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_poisearch_IndoorData__String__int__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_poisearch_IndoorData__String__int__String");
+                }
             
                 // args
                 // jsonable arg
@@ -2359,72 +2423,80 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.poisearch.IndoorData obj = new com.amap.api.services.poisearch.IndoorData(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_Railway__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Railway__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.Railway obj = new com.amap.api.services.route.Railway();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_BusPath__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusPath__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.BusPath obj = new com.amap.api.services.route.BusPath();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DriveRoutePlanResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRoutePlanResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DriveRoutePlanResult obj = new com.amap.api.services.route.DriveRoutePlanResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_TruckRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__int");
+                }
             
                 // args
                 // ref arg
@@ -2442,72 +2514,80 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.TruckRouteQuery obj = new com.amap.api.services.route.RouteSearch.TruckRouteQuery(var1, var2, new ArrayList(var3), var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TMC__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TMC__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TMC obj = new com.amap.api.services.route.TMC();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteBusWalkItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusWalkItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteBusWalkItem obj = new com.amap.api.services.route.RouteBusWalkItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteResult obj = new com.amap.api.services.route.RouteResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -2515,90 +2595,100 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch obj = new com.amap.api.services.route.RouteSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_BusStep__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusStep__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.BusStep obj = new com.amap.api.services.route.BusStep();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TaxiItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TaxiItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TaxiItem obj = new com.amap.api.services.route.TaxiItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_BusRouteResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusRouteResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_BusRouteResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.BusRouteResult obj = new com.amap.api.services.route.BusRouteResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RoutePlanResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RoutePlanResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RoutePlanResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RoutePlanResult obj = new com.amap.api.services.route.RoutePlanResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RailwaySpace__String__float", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwaySpace__String__float");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwaySpace__String__float");
+                }
             
                 // args
                 // jsonable arg
@@ -2608,36 +2698,40 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RailwaySpace obj = new com.amap.api.services.route.RailwaySpace(var1, new Double(var2).floatValue());
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TruckRouteRestult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckRouteRestult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckRouteRestult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TruckRouteRestult obj = new com.amap.api.services.route.TruckRouteRestult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                }
             
                 // args
                 // ref arg
@@ -2647,18 +2741,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.RideRouteQuery obj = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                }
             
                 // args
                 // ref arg
@@ -2666,36 +2762,40 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.RideRouteQuery obj = new com.amap.api.services.route.RouteSearch.RideRouteQuery(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_RideRouteQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_RideRouteQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.RideRouteQuery obj = new com.amap.api.services.route.RouteSearch.RideRouteQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String");
+                }
             
                 // args
                 // ref arg
@@ -2708,114 +2808,126 @@ public class SubHandler12 {
                 for (int refId : var3RefIdList) {
                     var3.add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
                 }
-                List<com.amap.api.services.core.LatLonPoint> var4 = new ArrayList<>();
+                List<List<com.amap.api.services.core.LatLonPoint>> var4 = new ArrayList<>();
                 // jsonable arg
                 String var5 = (String) ((Map<String, Object>) args).get("var5");
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.DriveRouteQuery obj = new com.amap.api.services.route.RouteSearch.DriveRouteQuery(var1, var2, new ArrayList(var3), new ArrayList(var4), var5);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DriveRouteQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DriveRouteQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.DriveRouteQuery obj = new com.amap.api.services.route.RouteSearch.DriveRouteQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteRailwayItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteRailwayItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteRailwayItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteRailwayItem obj = new com.amap.api.services.route.RouteRailwayItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_WalkStep__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkStep__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkStep__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.WalkStep obj = new com.amap.api.services.route.WalkStep();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RailwayStationItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwayStationItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RailwayStationItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RailwayStationItem obj = new com.amap.api.services.route.RailwayStationItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RideRouteResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideRouteResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideRouteResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RideRouteResult obj = new com.amap.api.services.route.RideRouteResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
             
                 // args
                 // ref arg
@@ -2825,54 +2937,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.FromAndTo obj = new com.amap.api.services.route.RouteSearch.FromAndTo(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_FromAndTo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_FromAndTo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.FromAndTo obj = new com.amap.api.services.route.RouteSearch.FromAndTo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RidePath__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RidePath__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RidePath__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RidePath obj = new com.amap.api.services.route.RidePath();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__String__int");
+                }
             
                 // args
                 // ref arg
@@ -2886,90 +3004,100 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.BusRouteQuery obj = new com.amap.api.services.route.RouteSearch.BusRouteQuery(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_BusRouteQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_BusRouteQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.BusRouteQuery obj = new com.amap.api.services.route.RouteSearch.BusRouteQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RideStep__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideStep__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RideStep__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RideStep obj = new com.amap.api.services.route.RideStep();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearchCity__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchCity__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearchCity__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearchCity obj = new com.amap.api.services.route.RouteSearchCity();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DistanceResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DistanceResult obj = new com.amap.api.services.route.DistanceResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int");
+                }
             
                 // args
                 // ref arg
@@ -2979,18 +3107,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.WalkRouteQuery obj = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__com_amap_api_services_route_RouteSearch_FromAndTo");
+                }
             
                 // args
                 // ref arg
@@ -2998,108 +3128,120 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.WalkRouteQuery obj = new com.amap.api.services.route.RouteSearch.WalkRouteQuery(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_WalkRouteQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_WalkRouteQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.WalkRouteQuery obj = new com.amap.api.services.route.RouteSearch.WalkRouteQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_District__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_District__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_District__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.District obj = new com.amap.api.services.route.District();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_WalkRouteResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkRouteResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkRouteResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.WalkRouteResult obj = new com.amap.api.services.route.WalkRouteResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch_DistanceQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch_DistanceQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch_DistanceQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DistanceSearch.DistanceQuery obj = new com.amap.api.services.route.DistanceSearch.DistanceQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_SearchCity__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_SearchCity__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_SearchCity__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.SearchCity obj = new com.amap.api.services.route.SearchCity();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DistanceSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -3107,54 +3249,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.DistanceSearch obj = new com.amap.api.services.route.DistanceSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_WalkPath__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkPath__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_WalkPath__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.WalkPath obj = new com.amap.api.services.route.WalkPath();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteBusLineItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusLineItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteBusLineItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteBusLineItem obj = new com.amap.api.services.route.RouteBusLineItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__com_amap_api_services_route_RouteSearch_FromAndTo__int__int__int");
+                }
             
                 // args
                 // ref arg
@@ -3168,270 +3316,300 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.DrivePlanQuery obj = new com.amap.api.services.route.RouteSearch.DrivePlanQuery(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_RouteSearch_DrivePlanQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_RouteSearch_DrivePlanQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.RouteSearch.DrivePlanQuery obj = new com.amap.api.services.route.RouteSearch.DrivePlanQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DrivePlanStep__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanStep__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanStep__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DrivePlanStep obj = new com.amap.api.services.route.DrivePlanStep();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TimeInfo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TimeInfo obj = new com.amap.api.services.route.TimeInfo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DriveStep__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveStep__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveStep__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DriveStep obj = new com.amap.api.services.route.DriveStep();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TruckStep__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckStep__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckStep__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TruckStep obj = new com.amap.api.services.route.TruckStep();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DriveRouteResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRouteResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DriveRouteResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DriveRouteResult obj = new com.amap.api.services.route.DriveRouteResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DrivePath__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePath__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePath__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DrivePath obj = new com.amap.api.services.route.DrivePath();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TruckPath__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckPath__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TruckPath__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TruckPath obj = new com.amap.api.services.route.TruckPath();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_Doorway__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Doorway__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Doorway__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.Doorway obj = new com.amap.api.services.route.Doorway();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DrivePlanPath__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanPath__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DrivePlanPath__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DrivePlanPath obj = new com.amap.api.services.route.DrivePlanPath();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_TimeInfosElement__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfosElement__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_TimeInfosElement__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.TimeInfosElement obj = new com.amap.api.services.route.TimeInfosElement();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_DistanceItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_DistanceItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.DistanceItem obj = new com.amap.api.services.route.DistanceItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_route_Path__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Path__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_route_Path__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.route.Path obj = new com.amap.api.services.route.Path();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_road_Road__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.road.Road obj = new com.amap.api.services.road.Road();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_road_Road__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Road__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -3441,126 +3619,140 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.road.Road obj = new com.amap.api.services.road.Road(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_road_Crossroad__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Crossroad__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_road_Crossroad__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.road.Crossroad obj = new com.amap.api.services.road.Crossroad();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_nearby_NearbyInfo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbyInfo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbyInfo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.nearby.NearbyInfo obj = new com.amap.api.services.nearby.NearbyInfo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_nearby_UploadInfo__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_UploadInfo__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_UploadInfo__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.nearby.UploadInfo obj = new com.amap.api.services.nearby.UploadInfo();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_nearby_NearbySearchResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearchResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearchResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.nearby.NearbySearchResult obj = new com.amap.api.services.nearby.NearbySearchResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_nearby_NearbySearch_NearbyQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearch_NearbyQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_nearby_NearbySearch_NearbyQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.nearby.NearbySearch.NearbyQuery obj = new com.amap.api.services.nearby.NearbySearch.NearbyQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOIItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOIItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOIItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.routepoisearch.RoutePOIItem obj = new com.amap.api.services.routepoisearch.RoutePOIItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearch__android_content_Context__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+                }
             
                 // args
                 // ref arg
@@ -3570,18 +3762,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.routepoisearch.RoutePOISearch obj = new com.amap.api.services.routepoisearch.RoutePOISearch(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchResult__com_amap_api_services_routepoisearch_RoutePOIItem__com_amap_api_services_routepoisearch_RoutePOISearchQuery", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchResult__com_amap_api_services_routepoisearch_RoutePOIItem__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchResult__com_amap_api_services_routepoisearch_RoutePOIItem__com_amap_api_services_routepoisearch_RoutePOISearchQuery");
+                }
             
                 // args
                 // list arg
@@ -3595,18 +3789,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.routepoisearch.RoutePOISearchResult obj = new com.amap.api.services.routepoisearch.RoutePOISearchResult(new ArrayList(var1), var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__int__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+                }
             
                 // args
                 // ref arg
@@ -3622,18 +3818,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.routepoisearch.RoutePOISearchQuery obj = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(var1, var2, var3, var4, var5);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_routepoisearch_RoutePOISearchQuery__com_amap_api_services_core_LatLonPoint__com_amap_api_services_routepoisearch_RoutePOISearch_RoutePOISearchType__int");
+                }
             
                 // args
                 // list arg
@@ -3649,18 +3847,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.routepoisearch.RoutePOISearchQuery obj = new com.amap.api.services.routepoisearch.RoutePOISearchQuery(new ArrayList(var1), var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItem__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -3674,18 +3874,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudItem obj = new com.amap.api.services.cloud.CloudItem(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Query__String__String__com_amap_api_services_cloud_CloudSearch_SearchBound");
+                }
             
                 // args
                 // jsonable arg
@@ -3697,18 +3899,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.Query obj = new com.amap.api.services.cloud.CloudSearch.Query(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -3716,18 +3920,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch obj = new com.amap.api.services.cloud.CloudSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__int");
+                }
             
                 // args
                 // ref arg
@@ -3737,18 +3943,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
             
                 // args
                 // ref arg
@@ -3758,18 +3966,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__com_amap_api_services_core_LatLonPoint");
+                }
             
                 // args
                 // list arg
@@ -3781,18 +3991,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(new ArrayList(var1));
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_SearchBound__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_SearchBound__String");
+                }
             
                 // args
                 // jsonable arg
@@ -3800,18 +4012,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.SearchBound obj = new com.amap.api.services.cloud.CloudSearch.SearchBound(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudImage__String__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudImage__String__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudImage__String__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -3823,18 +4037,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudImage obj = new com.amap.api.services.cloud.CloudImage(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__String__boolean");
+                }
             
                 // args
                 // jsonable arg
@@ -3844,18 +4060,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.Sortingrules obj = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudSearch_Sortingrules__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudSearch_Sortingrules__int");
+                }
             
                 // args
                 // jsonable arg
@@ -3863,18 +4081,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudSearch.Sortingrules obj = new com.amap.api.services.cloud.CloudSearch.Sortingrules(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_cloud_CloudItemDetail__String__com_amap_api_services_core_LatLonPoint__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -3888,36 +4108,40 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.cloud.CloudItemDetail obj = new com.amap.api.services.cloud.CloudItemDetail(var1, var2, var3, var4);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_weather_LocalDayWeatherForecast__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalDayWeatherForecast__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalDayWeatherForecast__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.weather.LocalDayWeatherForecast obj = new com.amap.api.services.weather.LocalDayWeatherForecast();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__String__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__String__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__String__int");
+                }
             
                 // args
                 // jsonable arg
@@ -3927,54 +4151,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.weather.WeatherSearchQuery obj = new com.amap.api.services.weather.WeatherSearchQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearchQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearchQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.weather.WeatherSearchQuery obj = new com.amap.api.services.weather.WeatherSearchQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_weather_LocalWeatherForecast__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherForecast__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherForecast__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.weather.LocalWeatherForecast obj = new com.amap.api.services.weather.LocalWeatherForecast();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_weather_WeatherSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_WeatherSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -3982,54 +4212,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.weather.WeatherSearch obj = new com.amap.api.services.weather.WeatherSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_weather_LocalWeatherLive__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherLive__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_weather_LocalWeatherLive__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.weather.LocalWeatherLive obj = new com.amap.api.services.weather.LocalWeatherLive();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_BusinessArea__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_BusinessArea__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_BusinessArea__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.geocoder.BusinessArea obj = new com.amap.api.services.geocoder.BusinessArea();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeQuery__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeQuery__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeQuery__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -4039,18 +4275,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.geocoder.GeocodeQuery obj = new com.amap.api.services.geocoder.GeocodeQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -4058,18 +4296,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.geocoder.GeocodeSearch obj = new com.amap.api.services.geocoder.GeocodeSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeResult__com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_geocoder_RegeocodeAddress");
+                }
             
                 // args
                 // ref arg
@@ -4079,18 +4319,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.geocoder.RegeocodeResult obj = new com.amap.api.services.geocoder.RegeocodeResult(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress");
+                }
             
                 // args
                 // ref arg
@@ -4104,72 +4346,80 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.geocoder.GeocodeResult obj = new com.amap.api.services.geocoder.GeocodeResult(var1, new ArrayList(var2));
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_AoiItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_AoiItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_AoiItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.geocoder.AoiItem obj = new com.amap.api.services.geocoder.AoiItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeRoad__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeRoad__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeRoad__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.geocoder.RegeocodeRoad obj = new com.amap.api.services.geocoder.RegeocodeRoad();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_GeocodeAddress__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeAddress__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_GeocodeAddress__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.geocoder.GeocodeAddress obj = new com.amap.api.services.geocoder.GeocodeAddress();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeQuery__com_amap_api_services_core_LatLonPoint__float__String");
+                }
             
                 // args
                 // ref arg
@@ -4181,72 +4431,80 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.geocoder.RegeocodeQuery obj = new com.amap.api.services.geocoder.RegeocodeQuery(var1, new Double(var2).floatValue(), var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_StreetNumber__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_StreetNumber__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_StreetNumber__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.geocoder.StreetNumber obj = new com.amap.api.services.geocoder.StreetNumber();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_geocoder_RegeocodeAddress__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeAddress__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_geocoder_RegeocodeAddress__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.geocoder.RegeocodeAddress obj = new com.amap.api.services.geocoder.RegeocodeAddress();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.district.DistrictSearchQuery obj = new com.amap.api.services.district.DistrictSearchQuery();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int");
+                }
             
                 // args
                 // jsonable arg
@@ -4258,18 +4516,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.district.DistrictSearchQuery obj = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearchQuery__String__String__int__boolean__int");
+                }
             
                 // args
                 // jsonable arg
@@ -4285,18 +4545,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.district.DistrictSearchQuery obj = new com.amap.api.services.district.DistrictSearchQuery(var1, var2, var3, var4, var5);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -4304,18 +4566,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.district.DistrictSearch obj = new com.amap.api.services.district.DistrictSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__com_amap_api_services_district_DistrictItem", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__com_amap_api_services_district_DistrictItem");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__com_amap_api_services_district_DistrictSearchQuery__com_amap_api_services_district_DistrictItem");
+                }
             
                 // args
                 // ref arg
@@ -4329,54 +4593,60 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.district.DistrictResult obj = new com.amap.api.services.district.DistrictResult(var1, new ArrayList(var2));
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictResult__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictResult__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.district.DistrictResult obj = new com.amap.api.services.district.DistrictResult();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictItem__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.district.DistrictItem obj = new com.amap.api.services.district.DistrictItem();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_district_DistrictItem__String__String__String__com_amap_api_services_core_LatLonPoint__String");
+                }
             
                 // args
                 // jsonable arg
@@ -4392,36 +4662,40 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.district.DistrictItem obj = new com.amap.api.services.district.DistrictItem(var1, var2, var3, var4, var5);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_help_Tip__", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Tip__");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Tip__");
+                }
             
                 // args
             
             
                 // create target object
                 com.amap.api.services.help.Tip obj = new com.amap.api.services.help.Tip();
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_help_InputtipsQuery__String__String", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_InputtipsQuery__String__String");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_InputtipsQuery__String__String");
+                }
             
                 // args
                 // jsonable arg
@@ -4431,18 +4705,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.help.InputtipsQuery obj = new com.amap.api.services.help.InputtipsQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_help_Inputtips__android_content_Context__com_amap_api_services_help_InputtipsQuery");
+                }
             
                 // args
                 // ref arg
@@ -4452,18 +4728,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.help.Inputtips obj = new com.amap.api.services.help.Inputtips(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareNaviQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
             
                 // args
                 // ref arg
@@ -4473,18 +4751,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.share.ShareSearch.ShareNaviQuery obj = new com.amap.api.services.share.ShareSearch.ShareNaviQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareBusRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
             
                 // args
                 // ref arg
@@ -4494,18 +4774,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.share.ShareSearch.ShareBusRouteQuery obj = new com.amap.api.services.share.ShareSearch.ShareBusRouteQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_share_ShareSearch__android_content_Context", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch__android_content_Context");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch__android_content_Context");
+                }
             
                 // args
                 // ref arg
@@ -4513,18 +4795,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.share.ShareSearch obj = new com.amap.api.services.share.ShareSearch(var1);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareFromAndTo__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint");
+                }
             
                 // args
                 // ref arg
@@ -4534,18 +4818,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.share.ShareSearch.ShareFromAndTo obj = new com.amap.api.services.share.ShareSearch.ShareFromAndTo(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareWalkRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
             
                 // args
                 // ref arg
@@ -4555,18 +4841,20 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery obj = new com.amap.api.services.share.ShareSearch.ShareWalkRouteQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::createcom_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int", (args, methodResult) -> {
-                Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                if (getEnableLog()) {
+                    Log.d("ObjectFactory", "创建对象: com_amap_api_services_share_ShareSearch_ShareDrivingRouteQuery__com_amap_api_services_share_ShareSearch_ShareFromAndTo__int");
+                }
             
                 // args
                 // ref arg
@@ -4576,14 +4864,14 @@ public class SubHandler12 {
             
                 // create target object
                 com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery obj = new com.amap.api.services.share.ShareSearch.ShareDrivingRouteQuery(var1, var2);
-                getHEAP().put(obj.hashCode(), obj);
+                getHEAP().put(System.identityHashCode(obj), obj);
             
                 // print current HEAP
                 if (getEnableLog()) {
                     Log.d("ObjectFactory", "HEAP: " + getHEAP());
                 }
             
-                methodResult.success(obj.hashCode());
+                methodResult.success(System.identityHashCode(obj));
             });
             // factory
             put("ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficStatusInfo__", (argsBatch, methodResult) -> {
@@ -4600,11 +4888,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4612,14 +4900,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.traffic.TrafficStatusInfo obj = new com.amap.api.services.traffic.TrafficStatusInfo();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4639,11 +4927,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4651,14 +4939,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.traffic.TrafficStatusResult obj = new com.amap.api.services.traffic.TrafficStatusResult();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4678,11 +4966,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4691,14 +4979,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.traffic.TrafficSearch obj = new com.amap.api.services.traffic.TrafficSearch(var1);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4718,11 +5006,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4735,14 +5023,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.traffic.RoadTrafficQuery obj = new com.amap.api.services.traffic.RoadTrafficQuery(var1, var2, var3);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4762,11 +5050,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4779,14 +5067,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.traffic.CircleTrafficQuery obj = new com.amap.api.services.traffic.CircleTrafficQuery(var1, var2, var3);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4806,11 +5094,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4818,14 +5106,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.traffic.TrafficStatusEvaluation obj = new com.amap.api.services.traffic.TrafficStatusEvaluation();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4845,11 +5133,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4857,14 +5145,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.busline.BusLineItem obj = new com.amap.api.services.busline.BusLineItem();
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4884,11 +5172,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4899,14 +5187,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.busline.BusStationSearch obj = new com.amap.api.services.busline.BusStationSearch(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4926,11 +5214,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4941,14 +5229,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.busline.BusLineSearch obj = new com.amap.api.services.busline.BusLineSearch(var1, var2);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);
@@ -4968,11 +5256,11 @@ public class SubHandler12 {
                     length = ((List<Map<String, Object>>) argsBatch).size();
                 }
             
-                for (int i = 0; i < length; i++) {
+                for (int __i__ = 0; __i__ < length; __i__++) {
                     Map<String, Object> args = new HashMap<>();
                     // only when arg batch is not empty, java side needs to parse args;
                     if (argsBatch instanceof List) {
-                        args = ((List<Map<String, Object>>) argsBatch).get(i);
+                        args = ((List<Map<String, Object>>) argsBatch).get(__i__);
                     }
             
                     // args
@@ -4985,14 +5273,14 @@ public class SubHandler12 {
             
                     // create target object
                     com.amap.api.services.busline.BusLineQuery obj = new com.amap.api.services.busline.BusLineQuery(var1, var2, var3);
-                    getHEAP().put(obj.hashCode(), obj);
+                    getHEAP().put(System.identityHashCode(obj), obj);
             
                     // print current HEAP
                     if (getEnableLog()) {
                         Log.d("ObjectFactory", "HEAP: " + getHEAP());
                     }
             
-                    resultList.add(obj.hashCode());
+                    resultList.add(System.identityHashCode(obj));
                 }
             
                 methodResult.success(resultList);

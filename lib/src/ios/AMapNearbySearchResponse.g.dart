@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapNearbySearchResponse';
+
   
   //endregion
 
   //region creators
   static Future<AMapNearbySearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapNearbySearchResponse');
-    final object = AMapNearbySearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapNearbySearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapNearbySearchResponse', {'length': length});
   
-    final List<AMapNearbySearchResponse> typedResult = resultBatch.map((result) => AMapNearbySearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapNearbySearchResponse> typedResult = resultBatch.map((result) => AMapNearbySearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
 
   //region getters
   Future<int> get_count() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_count", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_count", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<List<AMapNearbyUserInfo>> get_infos() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_infos", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_infos", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapNearbyUserInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapNearbyUserInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   //endregion
@@ -77,15 +79,15 @@ class AMapNearbySearchResponse extends AMapSearchObject with NSCoding, NSCopying
 extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_count_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_count_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<List<AMapNearbyUserInfo>>> get_infos_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_infos_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapNearbyUserInfo()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapNearbySearchResponse::get_infos_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapNearbyUserInfo()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
@@ -94,13 +96,13 @@ extension AMapNearbySearchResponse_Batch on List<AMapNearbySearchResponse> {
 
   //region setters
   Future<void> set_count_batch(List<int> count) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchResponse::set_count_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "count": count[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchResponse::set_count_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "count": count[__i__]}]);
   
   
   }
   
   Future<void> set_infos_batch(List<List<AMapNearbyUserInfo>> infos) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchResponse::set_infos_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "infos": infos[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapNearbySearchResponse::set_infos_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "infos": infos[__i__].map((it) => it.refId).toList()}]);
   
   
   }

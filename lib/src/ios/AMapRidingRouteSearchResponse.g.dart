@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapRidingRouteSearchResponse';
+
   
   //endregion
 
   //region creators
   static Future<AMapRidingRouteSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRidingRouteSearchResponse');
-    final object = AMapRidingRouteSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapRidingRouteSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapRidingRouteSearchResponse extends AMapRouteSearchResponse with NSCodin
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRidingRouteSearchResponse', {'length': length});
   
-    final List<AMapRidingRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRidingRouteSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapRidingRouteSearchResponse> typedResult = resultBatch.map((result) => AMapRidingRouteSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

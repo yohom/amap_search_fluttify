@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapPath';
+
   
   //endregion
 
   //region creators
   static Future<AMapPath> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapPath');
-    final object = AMapPath()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapPath()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPath', {'length': length});
   
-    final List<AMapPath> typedResult = resultBatch.map((result) => AMapPath()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapPath> typedResult = resultBatch.map((result) => AMapPath()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,51 +43,51 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<int> get_distance() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_distance", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_distance", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_duration() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_duration", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_duration", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_strategy() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_strategy", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_strategy", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<List<AMapStep>> get_steps() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_steps", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_steps", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   Future<double> get_tolls() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tolls", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tolls", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_tollDistance() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tollDistance", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tollDistance", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_totalTrafficLights() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_totalTrafficLights", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_totalTrafficLights", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_restriction() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_restriction", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_restriction", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -149,57 +151,57 @@ class AMapPath extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapPath_Batch on List<AMapPath> {
   //region getters
   Future<List<int>> get_distance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_distance_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_distance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_duration_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_duration_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_duration_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_strategy_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_strategy_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_strategy_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<List<AMapStep>>> get_steps_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_steps_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapStep()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_steps_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<double>> get_tolls_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tolls_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tolls_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_tollDistance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tollDistance_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_tollDistance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_totalTrafficLights_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_totalTrafficLights_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_totalTrafficLights_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_restriction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_restriction_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPath::get_restriction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -208,49 +210,49 @@ extension AMapPath_Batch on List<AMapPath> {
 
   //region setters
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "distance": distance[__i__]}]);
   
   
   }
   
   Future<void> set_duration_batch(List<int> duration) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_duration_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "duration": duration[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_duration_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "duration": duration[__i__]}]);
   
   
   }
   
   Future<void> set_strategy_batch(List<String> strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_strategy_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_strategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "strategy": strategy[__i__]}]);
   
   
   }
   
   Future<void> set_steps_batch(List<List<AMapStep>> steps) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_steps_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "steps": steps[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_steps_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "steps": steps[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_tolls_batch(List<double> tolls) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_tolls_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tolls": tolls[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_tolls_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "tolls": tolls[__i__]}]);
   
   
   }
   
   Future<void> set_tollDistance_batch(List<int> tollDistance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_tollDistance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tollDistance": tollDistance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_tollDistance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "tollDistance": tollDistance[__i__]}]);
   
   
   }
   
   Future<void> set_totalTrafficLights_batch(List<int> totalTrafficLights) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_totalTrafficLights_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "totalTrafficLights": totalTrafficLights[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_totalTrafficLights_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "totalTrafficLights": totalTrafficLights[__i__]}]);
   
   
   }
   
   Future<void> set_restriction_batch(List<int> restriction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_restriction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "restriction": restriction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPath::set_restriction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "restriction": restriction[__i__]}]);
   
   
   }

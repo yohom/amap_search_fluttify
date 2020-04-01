@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapShareSearchResponse';
+
   
   //endregion
 
   //region creators
   static Future<AMapShareSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapShareSearchResponse');
-    final object = AMapShareSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapShareSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapShareSearchResponse', {'length': length});
   
-    final List<AMapShareSearchResponse> typedResult = resultBatch.map((result) => AMapShareSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapShareSearchResponse> typedResult = resultBatch.map((result) => AMapShareSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,9 +43,9 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 
   //region getters
   Future<String> get_shareURL() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -65,8 +67,8 @@ class AMapShareSearchResponse extends AMapSearchObject with NSCoding, NSCopying 
 extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
   //region getters
   Future<List<String>> get_shareURL_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapShareSearchResponse::get_shareURL_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -75,7 +77,7 @@ extension AMapShareSearchResponse_Batch on List<AMapShareSearchResponse> {
 
   //region setters
   Future<void> set_shareURL_batch(List<String> shareURL) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "shareURL": shareURL[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapShareSearchResponse::set_shareURL_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "shareURL": shareURL[__i__]}]);
   
   
   }

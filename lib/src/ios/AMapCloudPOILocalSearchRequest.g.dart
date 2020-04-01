@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapCloudPOILocalSearchRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapCloudPOILocalSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudPOILocalSearchRequest');
-    final object = AMapCloudPOILocalSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapCloudPOILocalSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudPOILocalSearchRequest', {'length': length});
   
-    final List<AMapCloudPOILocalSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOILocalSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapCloudPOILocalSearchRequest> typedResult = resultBatch.map((result) => AMapCloudPOILocalSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
 
   //region getters
   Future<String> get_keywords() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_city() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_city", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_city", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -77,15 +79,15 @@ class AMapCloudPOILocalSearchRequest extends AMapCloudSearchBaseRequest with NSC
 extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRequest> {
   //region getters
   Future<List<String>> get_keywords_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_keywords_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_city_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_city_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudPOILocalSearchRequest::get_city_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -94,13 +96,13 @@ extension AMapCloudPOILocalSearchRequest_Batch on List<AMapCloudPOILocalSearchRe
 
   //region setters
   Future<void> set_keywords_batch(List<String> keywords) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "keywords": keywords[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_keywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "keywords": keywords[__i__]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudPOILocalSearchRequest::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "city": city[__i__]}]);
   
   
   }

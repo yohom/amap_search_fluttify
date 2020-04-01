@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.amap.api.services.cloud.CloudSearch';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_cloud_CloudSearch> create__android_content_Context(android_content_Context var1) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_cloud_CloudSearch__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_services_cloud_CloudSearch()..refId = refId..tag = 'amap_search_fluttify';
+    final object = com_amap_api_services_cloud_CloudSearch()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,9 +32,9 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch__android_content_Context', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_cloud_CloudSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
   
-    final List<com_amap_api_services_cloud_CloudSearch> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_cloud_CloudSearch> typedResult = resultBatch.map((result) => com_amap_api_services_cloud_CloudSearch()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -55,7 +57,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::setOnCloudSearchListener', {"refId": refId});
   
   
     // handle native call
@@ -73,7 +75,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
+              var1?.onCloudSearched(com_amap_api_services_cloud_CloudResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
               break;
             case 'Callback::com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched':
               // print log
@@ -82,7 +84,7 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
+              var1?.onCloudItemDetailSearched(com_amap_api_services_cloud_CloudItemDetail()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -90,11 +92,11 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
         });
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -105,18 +107,18 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudAsyn', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudAsyn', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -127,18 +129,18 @@ class com_amap_api_services_cloud_CloudSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn', {"var1": var1, "var2": var2, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn', {"var1": var1, "var2": var2, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -161,14 +163,14 @@ extension com_amap_api_services_cloud_CloudSearch_Batch on List<com_amap_api_ser
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -180,14 +182,14 @@ extension com_amap_api_services_cloud_CloudSearch_Batch on List<com_amap_api_ser
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i], "var2": var2[i], "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__], "var2": var2[__i__], "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

@@ -7,14 +7,14 @@ packages:
       name: amap_core_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.6+3ebdbdc"
+    version: "0.6.0+b2681d9"
   amap_search_fluttify:
     dependency: "direct dev"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.7.8+481e45c"
+    version: "0.8.0+b2681d9"
   archive:
     dependency: transitive
     description:
@@ -155,7 +155,7 @@ packages:
       name: foundation_fluttify
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.14+2"
+    version: "0.5.0"
   http:
     dependency: transitive
     description:
@@ -183,7 +183,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.16.1"
+    version: "0.16.0"
   kiwi:
     dependency: transitive
     description:

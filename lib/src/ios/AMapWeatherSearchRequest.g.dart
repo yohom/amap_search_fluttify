@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapWeatherSearchRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapWeatherSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapWeatherSearchRequest');
-    final object = AMapWeatherSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapWeatherSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapWeatherSearchRequest', {'length': length});
   
-    final List<AMapWeatherSearchRequest> typedResult = resultBatch.map((result) => AMapWeatherSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapWeatherSearchRequest> typedResult = resultBatch.map((result) => AMapWeatherSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,15 +43,15 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
 
   //region getters
   Future<String> get_city() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapWeatherType> get_type() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type", {'refId': refId});
   
-    return AMapWeatherType.values[result];
+    return AMapWeatherType.values[__result__];
   }
   
   //endregion
@@ -77,15 +79,15 @@ class AMapWeatherSearchRequest extends AMapSearchObject with NSCoding, NSCopying
 extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
   //region getters
   Future<List<String>> get_city_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapWeatherType>> get_type_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapWeatherType.values[result]).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapWeatherType.values[__result__]).toList();
   
     return typedResult;
   }
@@ -94,13 +96,13 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
 
   //region setters
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "city": city[__i__]}]);
   
   
   }
   
   Future<void> set_type_batch(List<AMapWeatherType> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapWeatherSearchRequest::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "type": type[__i__].index}]);
   
   
   }

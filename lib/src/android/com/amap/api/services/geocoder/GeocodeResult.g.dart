@@ -14,25 +14,27 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.amap.api.services.geocoder.GeocodeResult';
+
   
   //endregion
 
   //region creators
-  static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
+  static Future<com_amap_api_services_geocoder_GeocodeResult> create__com_amap_api_services_geocoder_GeocodeQuery__List_com_amap_api_services_geocoder_GeocodeAddress_(com_amap_api_services_geocoder_GeocodeQuery var1, List<com_amap_api_services_geocoder_GeocodeAddress> var2) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress', {"var1": var1.refId, "var2": var2.map((it) => it.refId).toList()});
-    final object = com_amap_api_services_geocoder_GeocodeResult()..refId = refId..tag = 'amap_search_fluttify';
+    final object = com_amap_api_services_geocoder_GeocodeResult()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
   }
   
-  static Future<List<com_amap_api_services_geocoder_GeocodeResult>> create_batch__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress(List<com_amap_api_services_geocoder_GeocodeQuery> var1, List<List<com_amap_api_services_geocoder_GeocodeAddress>> var2) async {
+  static Future<List<com_amap_api_services_geocoder_GeocodeResult>> create_batch__com_amap_api_services_geocoder_GeocodeQuery__List_com_amap_api_services_geocoder_GeocodeAddress_(List<com_amap_api_services_geocoder_GeocodeQuery> var1, List<List<com_amap_api_services_geocoder_GeocodeAddress>> var2) async {
     if (var1.length != var2.length) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId, "var2": var2[i].map((it) => it.refId).toList()}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_geocoder_GeocodeResult__com_amap_api_services_geocoder_GeocodeQuery__com_amap_api_services_geocoder_GeocodeAddress', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId, "var2": var2[__i__].map((it) => it.refId).toList()}]);
   
-    final List<com_amap_api_services_geocoder_GeocodeResult> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_GeocodeResult()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_geocoder_GeocodeResult> typedResult = resultBatch.map((result) => com_amap_api_services_geocoder_GeocodeResult()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -55,18 +57,18 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_geocoder_GeocodeQuery()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_geocoder_GeocodeQuery()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -77,18 +79,18 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery', {"var1": var1.refId, "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery', {"var1": var1.refId, "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -99,18 +101,18 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it..tag = 'amap_search_fluttify').toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
     }
   }
   
@@ -121,18 +123,18 @@ class com_amap_api_services_geocoder_GeocodeResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList', {"var1": var1.map((it) => it.refId).toList(), "refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -155,14 +157,14 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_geocoder_GeocodeQuery()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_geocoder_GeocodeQuery()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -174,14 +176,14 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].refId, "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].refId, "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -193,14 +195,14 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => com_amap_api_services_geocoder_GeocodeAddress()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_geocoder_GeocodeAddress()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -212,14 +214,14 @@ extension com_amap_api_services_geocoder_GeocodeResult_Batch on List<com_amap_ap
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList_batch', [for (int i = 0; i < this.length; i++) {"var1": var1[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var1": var1[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }

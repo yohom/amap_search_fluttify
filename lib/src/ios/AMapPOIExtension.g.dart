@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapPOIExtension';
+
   
   //endregion
 
   //region creators
   static Future<AMapPOIExtension> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapPOIExtension');
-    final object = AMapPOIExtension()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapPOIExtension()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOIExtension', {'length': length});
   
-    final List<AMapPOIExtension> typedResult = resultBatch.map((result) => AMapPOIExtension()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapPOIExtension> typedResult = resultBatch.map((result) => AMapPOIExtension()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,21 +43,21 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<double> get_rating() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_rating", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_rating", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<double> get_cost() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_cost", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_cost", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_openTime() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_openTime", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_openTime", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -89,22 +91,22 @@ class AMapPOIExtension extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
   //region getters
   Future<List<double>> get_rating_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_rating_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_rating_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_cost_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_cost_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_cost_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_openTime_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_openTime_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_openTime_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -113,19 +115,19 @@ extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
 
   //region setters
   Future<void> set_rating_batch(List<double> rating) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_rating_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "rating": rating[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_rating_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "rating": rating[__i__]}]);
   
   
   }
   
   Future<void> set_cost_batch(List<double> cost) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_cost_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cost": cost[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_cost_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "cost": cost[__i__]}]);
   
   
   }
   
   Future<void> set_openTime_batch(List<String> openTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_openTime_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "openTime": openTime[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOIExtension::set_openTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "openTime": openTime[__i__]}]);
   
   
   }

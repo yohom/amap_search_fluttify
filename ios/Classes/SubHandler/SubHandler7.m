@@ -56,7 +56,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -73,7 +73,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -158,7 +158,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger tollDistance = [args[@"tollDistance"] integerValue];
+            NSInteger tollDistance = [args[@"tollDistance"] longValue];
         
             // ref
             AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -194,8 +194,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
             NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
-            for (int i = 0; i < citiesRefArray.count; i++) {
-                AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < citiesRefArray.count; __i__++) {
+                AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:__i__]];
                 [cities addObject:item];
             }
         
@@ -216,8 +216,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
             NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
-            for (int i = 0; i < tmcsRefArray.count; i++) {
-                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < tmcsRefArray.count; __i__++) {
+                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
                 [tmcs addObject:item];
             }
         
@@ -236,7 +236,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -253,7 +253,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -289,8 +289,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
             NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
-            for (int i = 0; i < stepsRefArray.count; i++) {
-                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < stepsRefArray.count; __i__++) {
+                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:__i__]];
                 [steps addObject:item];
             }
         
@@ -326,7 +326,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger tollDistance = [args[@"tollDistance"] integerValue];
+            NSInteger tollDistance = [args[@"tollDistance"] longValue];
         
             // ref
             AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -343,7 +343,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger totalTrafficLights = [args[@"totalTrafficLights"] integerValue];
+            NSInteger totalTrafficLights = [args[@"totalTrafficLights"] longValue];
         
             // ref
             AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -360,7 +360,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger restriction = [args[@"restriction"] integerValue];
+            NSInteger restriction = [args[@"restriction"] longValue];
         
             // ref
             AMapPath* ref = (AMapPath*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -377,7 +377,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -394,7 +394,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger pathindex = [args[@"pathindex"] integerValue];
+            NSInteger pathindex = [args[@"pathindex"] longValue];
         
             // ref
             AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -411,7 +411,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger restriction = [args[@"restriction"] integerValue];
+            NSInteger restriction = [args[@"restriction"] longValue];
         
             // ref
             AMapFutureTimeInfoElement* ref = (AMapFutureTimeInfoElement*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -430,8 +430,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
             NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
-            for (int i = 0; i < tmcsRefArray.count; i++) {
-                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < tmcsRefArray.count; __i__++) {
+                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
                 [tmcs addObject:item];
             }
         
@@ -469,8 +469,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* elementsRefArray = (NSArray<NSNumber*> *) args[@"elements"];
             NSMutableArray<AMapFutureTimeInfoElement*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
-            for (int i = 0; i < elementsRefArray.count; i++) {
-                AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < elementsRefArray.count; __i__++) {
+                AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:__i__]];
                 [elements addObject:item];
             }
         
@@ -523,7 +523,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -540,7 +540,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapWalking* ref = (AMapWalking*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -559,8 +559,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
             NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
-            for (int i = 0; i < stepsRefArray.count; i++) {
-                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < stepsRefArray.count; __i__++) {
+                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:__i__]];
                 [steps addObject:item];
             }
         
@@ -613,7 +613,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -630,7 +630,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapTaxi* ref = (AMapTaxi*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -766,7 +766,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger wait = [args[@"wait"] integerValue];
+            NSInteger wait = [args[@"wait"] longValue];
         
             // ref
             AMapRailwayStation* ref = (AMapRailwayStation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -919,7 +919,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -936,7 +936,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger time = [args[@"time"] integerValue];
+            NSInteger time = [args[@"time"] longValue];
         
             // ref
             AMapRailway* ref = (AMapRailway*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -989,8 +989,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* spacesRefArray = (NSArray<NSNumber*> *) args[@"spaces"];
             NSMutableArray<AMapRailwaySpace*>* spaces = [NSMutableArray arrayWithCapacity:spacesRefArray.count];
-            for (int i = 0; i < spacesRefArray.count; i++) {
-                AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP[[spacesRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < spacesRefArray.count; __i__++) {
+                AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP[[spacesRefArray objectAtIndex:__i__]];
                 [spaces addObject:item];
             }
         
@@ -1011,8 +1011,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* viaStopsRefArray = (NSArray<NSNumber*> *) args[@"viaStops"];
             NSMutableArray<AMapRailwayStation*>* viaStops = [NSMutableArray arrayWithCapacity:viaStopsRefArray.count];
-            for (int i = 0; i < viaStopsRefArray.count; i++) {
-                AMapRailwayStation* item = (AMapRailwayStation*) HEAP[[viaStopsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < viaStopsRefArray.count; __i__++) {
+                AMapRailwayStation* item = (AMapRailwayStation*) HEAP[[viaStopsRefArray objectAtIndex:__i__]];
                 [viaStops addObject:item];
             }
         
@@ -1033,8 +1033,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* altersRefArray = (NSArray<NSNumber*> *) args[@"alters"];
             NSMutableArray<AMapRailway*>* alters = [NSMutableArray arrayWithCapacity:altersRefArray.count];
-            for (int i = 0; i < altersRefArray.count; i++) {
-                AMapRailway* item = (AMapRailway*) HEAP[[altersRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < altersRefArray.count; __i__++) {
+                AMapRailway* item = (AMapRailway*) HEAP[[altersRefArray objectAtIndex:__i__]];
                 [alters addObject:item];
             }
         
@@ -1072,8 +1072,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
             NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
-            for (int i = 0; i < buslinesRefArray.count; i++) {
-                AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < buslinesRefArray.count; __i__++) {
+                AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:__i__]];
                 [buslines addObject:item];
             }
         
@@ -1211,7 +1211,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1245,7 +1245,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger walkingDistance = [args[@"walkingDistance"] integerValue];
+            NSInteger walkingDistance = [args[@"walkingDistance"] longValue];
         
             // ref
             AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1264,8 +1264,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* segmentsRefArray = (NSArray<NSNumber*> *) args[@"segments"];
             NSMutableArray<AMapSegment*>* segments = [NSMutableArray arrayWithCapacity:segmentsRefArray.count];
-            for (int i = 0; i < segmentsRefArray.count; i++) {
-                AMapSegment* item = (AMapSegment*) HEAP[[segmentsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < segmentsRefArray.count; __i__++) {
+                AMapSegment* item = (AMapSegment*) HEAP[[segmentsRefArray objectAtIndex:__i__]];
                 [segments addObject:item];
             }
         
@@ -1284,7 +1284,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapTransit* ref = (AMapTransit*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1354,8 +1354,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
             NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
-            for (int i = 0; i < pathsRefArray.count; i++) {
-                AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < pathsRefArray.count; __i__++) {
+                AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:__i__]];
                 [paths addObject:item];
             }
         
@@ -1376,8 +1376,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* transitsRefArray = (NSArray<NSNumber*> *) args[@"transits"];
             NSMutableArray<AMapTransit*>* transits = [NSMutableArray arrayWithCapacity:transitsRefArray.count];
-            for (int i = 0; i < transitsRefArray.count; i++) {
-                AMapTransit* item = (AMapTransit*) HEAP[[transitsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < transitsRefArray.count; __i__++) {
+                AMapTransit* item = (AMapTransit*) HEAP[[transitsRefArray objectAtIndex:__i__]];
                 [transits addObject:item];
             }
         
@@ -1396,7 +1396,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger originID = [args[@"originID"] integerValue];
+            NSInteger originID = [args[@"originID"] longValue];
         
             // ref
             AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1413,7 +1413,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger destID = [args[@"destID"] integerValue];
+            NSInteger destID = [args[@"destID"] longValue];
         
             // ref
             AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1430,7 +1430,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1447,7 +1447,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger duration = [args[@"duration"] integerValue];
+            NSInteger duration = [args[@"duration"] longValue];
         
             // ref
             AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1481,7 +1481,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger code = [args[@"code"] integerValue];
+            NSInteger code = [args[@"code"] longValue];
         
             // ref
             AMapDistanceResult* ref = (AMapDistanceResult*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -1891,8 +1891,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* castsRefArray = (NSArray<NSNumber*> *) args[@"casts"];
             NSMutableArray<AMapLocalDayWeatherForecast*>* casts = [NSMutableArray arrayWithCapacity:castsRefArray.count];
-            for (int i = 0; i < castsRefArray.count; i++) {
-                AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP[[castsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < castsRefArray.count; __i__++) {
+                AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP[[castsRefArray objectAtIndex:__i__]];
                 [casts addObject:item];
             }
         
@@ -1996,7 +1996,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger status = [args[@"status"] integerValue];
+            NSInteger status = [args[@"status"] longValue];
         
             // ref
             AMapTrafficEvaluation* ref = (AMapTrafficEvaluation*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2098,7 +2098,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger status = [args[@"status"] integerValue];
+            NSInteger status = [args[@"status"] longValue];
         
             // ref
             AMapTrafficRoad* ref = (AMapTrafficRoad*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2219,8 +2219,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
             NSMutableArray<AMapTrafficRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
-            for (int i = 0; i < roadsRefArray.count; i++) {
-                AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < roadsRefArray.count; __i__++) {
+                AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:__i__]];
                 [roads addObject:item];
             }
         
@@ -2290,7 +2290,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger uid = [args[@"uid"] integerValue];
+            NSInteger uid = [args[@"uid"] longValue];
         
             // ref
             AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2392,7 +2392,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger distance = [args[@"distance"] integerValue];
+            NSInteger distance = [args[@"distance"] longValue];
         
             // ref
             AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2411,8 +2411,8 @@ extern BOOL enableLog;
             // list arg
             NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
             NSMutableArray<AMapCloudImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
-            for (int i = 0; i < imagesRefArray.count; i++) {
-                AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:i]];
+            for (int __i__ = 0; __i__ < imagesRefArray.count; __i__++) {
+                AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:__i__]];
                 [images addObject:item];
             }
         
@@ -2533,7 +2533,7 @@ extern BOOL enableLog;
         
             // args
             // jsonable arg
-            NSInteger timeout = [args[@"timeout"] integerValue];
+            NSInteger timeout = [args[@"timeout"] longValue];
         
             // ref
             AMapSearchAPI* ref = (AMapSearchAPI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2560,8 +2560,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_types_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2578,12 +2578,12 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_sortrule_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger sortrule = [args[@"sortrule"] integerValue];
+                NSInteger sortrule = [args[@"sortrule"] longValue];
         
                 // ref
                 AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2596,12 +2596,12 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_offset_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger offset = [args[@"offset"] integerValue];
+                NSInteger offset = [args[@"offset"] longValue];
         
                 // ref
                 AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2614,12 +2614,12 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_page_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger page = [args[@"page"] integerValue];
+                NSInteger page = [args[@"page"] longValue];
         
                 // ref
                 AMapPOISearchBaseRequest* ref = (AMapPOISearchBaseRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2632,8 +2632,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_building_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2650,8 +2650,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2668,8 +2668,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchBaseRequest::set_requireSubPOIs_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2686,8 +2686,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIIDSearchRequest::set_uid_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2704,8 +2704,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIKeywordsSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2722,8 +2722,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIKeywordsSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2740,8 +2740,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIKeywordsSearchRequest::set_cityLimit_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2758,8 +2758,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIKeywordsSearchRequest::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -2776,8 +2776,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIAroundSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2794,8 +2794,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIAroundSearchRequest::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -2812,12 +2812,12 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIAroundSearchRequest::set_radius_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger radius = [args[@"radius"] integerValue];
+                NSInteger radius = [args[@"radius"] longValue];
         
                 // ref
                 AMapPOIAroundSearchRequest* ref = (AMapPOIAroundSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2830,8 +2830,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIAroundSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2848,8 +2848,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIPolygonSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -2866,8 +2866,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOIPolygonSearchRequest::set_polygon_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -2884,12 +2884,12 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger count = [args[@"count"] integerValue];
+                NSInteger count = [args[@"count"] longValue];
         
                 // ref
                 AMapPOISearchResponse* ref = (AMapPOISearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -2902,8 +2902,8 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchResponse::set_suggestion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -2920,15 +2920,15 @@ extern BOOL enableLog;
         },
         
         @"AMapPOISearchResponse::set_pois_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg
                 NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
                 NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
-                for (int i = 0; i < poisRefArray.count; i++) {
-                    AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:i]];
+                for (int __i__ = 0; __i__ < poisRefArray.count; __i__++) {
+                    AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:__i__]];
                     [pois addObject:item];
                 }
         
@@ -2943,8 +2943,8 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_origin_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -2961,8 +2961,8 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_destination_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -2979,8 +2979,8 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_searchType_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // enum arg
@@ -2997,12 +2997,12 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_strategy_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger strategy = [args[@"strategy"] integerValue];
+                NSInteger strategy = [args[@"strategy"] longValue];
         
                 // ref
                 AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3015,12 +3015,12 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_range_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger range = [args[@"range"] integerValue];
+                NSInteger range = [args[@"range"] longValue];
         
                 // ref
                 AMapRoutePOISearchRequest* ref = (AMapRoutePOISearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3033,8 +3033,8 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_polylineStr_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3051,15 +3051,15 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchRequest::set_polyline_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg
                 NSArray<NSNumber*>* polylineRefArray = (NSArray<NSNumber*> *) args[@"polyline"];
                 NSMutableArray<AMapGeoPoint*>* polyline = [NSMutableArray arrayWithCapacity:polylineRefArray.count];
-                for (int i = 0; i < polylineRefArray.count; i++) {
-                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[polylineRefArray objectAtIndex:i]];
+                for (int __i__ = 0; __i__ < polylineRefArray.count; __i__++) {
+                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[polylineRefArray objectAtIndex:__i__]];
                     [polyline addObject:item];
                 }
         
@@ -3074,12 +3074,12 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger count = [args[@"count"] integerValue];
+                NSInteger count = [args[@"count"] longValue];
         
                 // ref
                 AMapRoutePOISearchResponse* ref = (AMapRoutePOISearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3092,15 +3092,15 @@ extern BOOL enableLog;
         },
         
         @"AMapRoutePOISearchResponse::set_pois_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg
                 NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
                 NSMutableArray<AMapRoutePOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
-                for (int i = 0; i < poisRefArray.count; i++) {
-                    AMapRoutePOI* item = (AMapRoutePOI*) HEAP[[poisRefArray objectAtIndex:i]];
+                for (int __i__ = 0; __i__ < poisRefArray.count; __i__++) {
+                    AMapRoutePOI* item = (AMapRoutePOI*) HEAP[[poisRefArray objectAtIndex:__i__]];
                     [pois addObject:item];
                 }
         
@@ -3115,8 +3115,8 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3133,8 +3133,8 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3151,8 +3151,8 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchRequest::set_types_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3169,8 +3169,8 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchRequest::set_cityLimit_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3187,8 +3187,8 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchRequest::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3205,12 +3205,12 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger count = [args[@"count"] integerValue];
+                NSInteger count = [args[@"count"] longValue];
         
                 // ref
                 AMapInputTipsSearchResponse* ref = (AMapInputTipsSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3223,15 +3223,15 @@ extern BOOL enableLog;
         },
         
         @"AMapInputTipsSearchResponse::set_tips_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg
                 NSArray<NSNumber*>* tipsRefArray = (NSArray<NSNumber*> *) args[@"tips"];
                 NSMutableArray<AMapTip*>* tips = [NSMutableArray arrayWithCapacity:tipsRefArray.count];
-                for (int i = 0; i < tipsRefArray.count; i++) {
-                    AMapTip* item = (AMapTip*) HEAP[[tipsRefArray objectAtIndex:i]];
+                for (int __i__ = 0; __i__ < tipsRefArray.count; __i__++) {
+                    AMapTip* item = (AMapTip*) HEAP[[tipsRefArray objectAtIndex:__i__]];
                     [tips addObject:item];
                 }
         
@@ -3246,8 +3246,8 @@ extern BOOL enableLog;
         },
         
         @"AMapGeocodeSearchRequest::set_address_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3264,8 +3264,8 @@ extern BOOL enableLog;
         },
         
         @"AMapGeocodeSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3282,12 +3282,12 @@ extern BOOL enableLog;
         },
         
         @"AMapGeocodeSearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger count = [args[@"count"] integerValue];
+                NSInteger count = [args[@"count"] longValue];
         
                 // ref
                 AMapGeocodeSearchResponse* ref = (AMapGeocodeSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3300,15 +3300,15 @@ extern BOOL enableLog;
         },
         
         @"AMapGeocodeSearchResponse::set_geocodes_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg
                 NSArray<NSNumber*>* geocodesRefArray = (NSArray<NSNumber*> *) args[@"geocodes"];
                 NSMutableArray<AMapGeocode*>* geocodes = [NSMutableArray arrayWithCapacity:geocodesRefArray.count];
-                for (int i = 0; i < geocodesRefArray.count; i++) {
-                    AMapGeocode* item = (AMapGeocode*) HEAP[[geocodesRefArray objectAtIndex:i]];
+                for (int __i__ = 0; __i__ < geocodesRefArray.count; __i__++) {
+                    AMapGeocode* item = (AMapGeocode*) HEAP[[geocodesRefArray objectAtIndex:__i__]];
                     [geocodes addObject:item];
                 }
         
@@ -3323,8 +3323,8 @@ extern BOOL enableLog;
         },
         
         @"AMapReGeocodeSearchRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3341,8 +3341,8 @@ extern BOOL enableLog;
         },
         
         @"AMapReGeocodeSearchRequest::set_location_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -3359,12 +3359,12 @@ extern BOOL enableLog;
         },
         
         @"AMapReGeocodeSearchRequest::set_radius_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger radius = [args[@"radius"] integerValue];
+                NSInteger radius = [args[@"radius"] longValue];
         
                 // ref
                 AMapReGeocodeSearchRequest* ref = (AMapReGeocodeSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3377,8 +3377,8 @@ extern BOOL enableLog;
         },
         
         @"AMapReGeocodeSearchRequest::set_poitype_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3395,8 +3395,8 @@ extern BOOL enableLog;
         },
         
         @"AMapReGeocodeSearchResponse::set_regeocode_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -3413,8 +3413,8 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchRequest::set_keywords_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3431,8 +3431,8 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3449,12 +3449,12 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchRequest::set_offset_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger offset = [args[@"offset"] integerValue];
+                NSInteger offset = [args[@"offset"] longValue];
         
                 // ref
                 AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3467,12 +3467,12 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchRequest::set_page_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger page = [args[@"page"] integerValue];
+                NSInteger page = [args[@"page"] longValue];
         
                 // ref
                 AMapBusStopSearchRequest* ref = (AMapBusStopSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3485,12 +3485,12 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchResponse::set_count_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
-                NSInteger count = [args[@"count"] integerValue];
+                NSInteger count = [args[@"count"] longValue];
         
                 // ref
                 AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
@@ -3503,8 +3503,8 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchResponse::set_suggestion_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // ref arg
@@ -3521,15 +3521,15 @@ extern BOOL enableLog;
         },
         
         @"AMapBusStopSearchResponse::set_busstops_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // list arg
                 NSArray<NSNumber*>* busstopsRefArray = (NSArray<NSNumber*> *) args[@"busstops"];
                 NSMutableArray<AMapBusStop*>* busstops = [NSMutableArray arrayWithCapacity:busstopsRefArray.count];
-                for (int i = 0; i < busstopsRefArray.count; i++) {
-                    AMapBusStop* item = (AMapBusStop*) HEAP[[busstopsRefArray objectAtIndex:i]];
+                for (int __i__ = 0; __i__ < busstopsRefArray.count; __i__++) {
+                    AMapBusStop* item = (AMapBusStop*) HEAP[[busstopsRefArray objectAtIndex:__i__]];
                     [busstops addObject:item];
                 }
         
@@ -3544,8 +3544,8 @@ extern BOOL enableLog;
         },
         
         @"AMapBusLineBaseSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg
@@ -3562,8 +3562,8 @@ extern BOOL enableLog;
         },
         
         @"AMapBusLineBaseSearchRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int i = 0; i < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; i++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:i];
+            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
+                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
         
                 // args
                 // jsonable arg

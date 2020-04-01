@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapCloudSearchBaseRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapCloudSearchBaseRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapCloudSearchBaseRequest');
-    final object = AMapCloudSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapCloudSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapCloudSearchBaseRequest', {'length': length});
   
-    final List<AMapCloudSearchBaseRequest> typedResult = resultBatch.map((result) => AMapCloudSearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapCloudSearchBaseRequest> typedResult = resultBatch.map((result) => AMapCloudSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,39 +43,39 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 
   //region getters
   Future<String> get_tableID() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_tableID", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_tableID", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<List<String>> get_filter() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_filter", {'refId': refId});
   
-    return (result as List).cast<String>();
+    return (__result__ as List).cast<String>();
   }
   
   Future<String> get_sortFields() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortFields", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortFields", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapCloudSortType> get_sortType() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType", {'refId': refId});
   
-    return AMapCloudSortType.values[result];
+    return AMapCloudSortType.values[__result__];
   }
   
   Future<int> get_offset() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_offset", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_offset", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_page() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_page", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_page", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -125,43 +127,43 @@ class AMapCloudSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
 extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
   //region getters
   Future<List<String>> get_tableID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_tableID_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_tableID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<List<String>>> get_filter_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_filter_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<String>()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_filter_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<String>()).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_sortFields_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortFields_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortFields_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapCloudSortType>> get_sortType_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapCloudSortType.values[result]).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_sortType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapCloudSortType.values[__result__]).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_offset_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_offset_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_offset_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_page_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_page_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapCloudSearchBaseRequest::get_page_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -170,37 +172,37 @@ extension AMapCloudSearchBaseRequest_Batch on List<AMapCloudSearchBaseRequest> {
 
   //region setters
   Future<void> set_tableID_batch(List<String> tableID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_tableID_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tableID": tableID[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_tableID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "tableID": tableID[__i__]}]);
   
   
   }
   
   Future<void> set_filter_batch(List<List<String>> filter) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_filter_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "filter": filter[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_filter_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "filter": filter[__i__]}]);
   
   
   }
   
   Future<void> set_sortFields_batch(List<String> sortFields) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortFields_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortFields": sortFields[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortFields_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sortFields": sortFields[__i__]}]);
   
   
   }
   
   Future<void> set_sortType_batch(List<AMapCloudSortType> sortType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "sortType": sortType[i].index}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_sortType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "sortType": sortType[__i__].index}]);
   
   
   }
   
   Future<void> set_offset_batch(List<int> offset) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_offset_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "offset": offset[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_offset_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "offset": offset[__i__]}]);
   
   
   }
   
   Future<void> set_page_batch(List<int> page) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_page_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "page": page[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapCloudSearchBaseRequest::set_page_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "page": page[__i__]}]);
   
   
   }

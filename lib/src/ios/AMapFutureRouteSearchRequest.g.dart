@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapFutureRouteSearchRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapFutureRouteSearchRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapFutureRouteSearchRequest');
-    final object = AMapFutureRouteSearchRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapFutureRouteSearchRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapFutureRouteSearchRequest', {'length': length});
   
-    final List<AMapFutureRouteSearchRequest> typedResult = resultBatch.map((result) => AMapFutureRouteSearchRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapFutureRouteSearchRequest> typedResult = resultBatch.map((result) => AMapFutureRouteSearchRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,75 +43,75 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
 
   //region getters
   Future<String> get_beginTime() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_beginTime", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_beginTime", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_interval() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_interval", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_interval", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_timeCount() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_timeCount", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_timeCount", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_strategy() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_strategy", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_strategy", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_originId() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_originId", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_originId", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_destinationId() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationId", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationId", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_origintype() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_origintype", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_origintype", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_destinationtype() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_parentId() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_parentId", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_parentId", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_plateProvince() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_plateNumber() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_cartype() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_cartype", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_cartype", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   //endregion
@@ -197,85 +199,85 @@ class AMapFutureRouteSearchRequest extends AMapRouteSearchBaseRequest with NSCod
 extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchRequest> {
   //region getters
   Future<List<String>> get_beginTime_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_beginTime_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_beginTime_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_interval_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_interval_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_interval_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_timeCount_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_timeCount_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_timeCount_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_strategy_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_strategy_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_strategy_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_originId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_originId_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_originId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_destinationId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationId_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_origintype_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_origintype_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_origintype_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_destinationtype_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_destinationtype_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_parentId_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_parentId_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_parentId_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_plateProvince_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateProvince_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_plateNumber_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_plateNumber_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_cartype_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_cartype_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureRouteSearchRequest::get_cartype_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -284,73 +286,73 @@ extension AMapFutureRouteSearchRequest_Batch on List<AMapFutureRouteSearchReques
 
   //region setters
   Future<void> set_beginTime_batch(List<String> beginTime) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_beginTime_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "beginTime": beginTime[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_beginTime_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "beginTime": beginTime[__i__]}]);
   
   
   }
   
   Future<void> set_interval_batch(List<int> interval) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_interval_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "interval": interval[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_interval_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "interval": interval[__i__]}]);
   
   
   }
   
   Future<void> set_timeCount_batch(List<int> timeCount) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_timeCount_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "timeCount": timeCount[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_timeCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "timeCount": timeCount[__i__]}]);
   
   
   }
   
   Future<void> set_strategy_batch(List<int> strategy) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_strategy_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "strategy": strategy[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_strategy_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "strategy": strategy[__i__]}]);
   
   
   }
   
   Future<void> set_originId_batch(List<String> originId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_originId_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "originId": originId[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_originId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "originId": originId[__i__]}]);
   
   
   }
   
   Future<void> set_destinationId_batch(List<String> destinationId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_destinationId_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationId": destinationId[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_destinationId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "destinationId": destinationId[__i__]}]);
   
   
   }
   
   Future<void> set_origintype_batch(List<String> origintype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_origintype_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "origintype": origintype[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_origintype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "origintype": origintype[__i__]}]);
   
   
   }
   
   Future<void> set_destinationtype_batch(List<String> destinationtype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_destinationtype_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "destinationtype": destinationtype[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_destinationtype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "destinationtype": destinationtype[__i__]}]);
   
   
   }
   
   Future<void> set_parentId_batch(List<String> parentId) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_parentId_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "parentId": parentId[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_parentId_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "parentId": parentId[__i__]}]);
   
   
   }
   
   Future<void> set_plateProvince_batch(List<String> plateProvince) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_plateProvince_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "plateProvince": plateProvince[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_plateProvince_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "plateProvince": plateProvince[__i__]}]);
   
   
   }
   
   Future<void> set_plateNumber_batch(List<String> plateNumber) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_plateNumber_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "plateNumber": plateNumber[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_plateNumber_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "plateNumber": plateNumber[__i__]}]);
   
   
   }
   
   Future<void> set_cartype_batch(List<int> cartype) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_cartype_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "cartype": cartype[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapFutureRouteSearchRequest::set_cartype_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "cartype": cartype[__i__]}]);
   
   
   }

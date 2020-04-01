@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapRoadTrafficSearchResponse';
+
   
   //endregion
 
   //region creators
   static Future<AMapRoadTrafficSearchResponse> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapRoadTrafficSearchResponse');
-    final object = AMapRoadTrafficSearchResponse()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapRoadTrafficSearchResponse()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapRoadTrafficSearchResponse', {'length': length});
   
-    final List<AMapRoadTrafficSearchResponse> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchResponse()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapRoadTrafficSearchResponse> typedResult = resultBatch.map((result) => AMapRoadTrafficSearchResponse()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,9 +43,9 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 
   //region getters
   Future<AMapTrafficInfo> get_trafficInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'refId': refId});
-    kNativeObjectPool.add(AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify');
-    return AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo", {'refId': refId});
+    kNativeObjectPool.add(AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   //endregion
@@ -65,8 +67,8 @@ class AMapRoadTrafficSearchResponse extends AMapSearchObject with NSCoding, NSCo
 extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchResponse> {
   //region getters
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapTrafficInfo()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -75,7 +77,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
 
   //region setters
   Future<void> set_trafficInfo_batch(List<AMapTrafficInfo> trafficInfo) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "trafficInfo": trafficInfo[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapRoadTrafficSearchResponse::set_trafficInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "trafficInfo": trafficInfo[__i__].refId}]);
   
   
   }

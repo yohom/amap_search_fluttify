@@ -70,8 +70,8 @@ public class SubHandler0 {
             put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get((int) args.get("refId"));
@@ -89,8 +89,8 @@ public class SubHandler0 {
             put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get((int) args.get("refId"));
@@ -108,8 +108,8 @@ public class SubHandler0 {
             put("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // ref object
                     com.amap.api.services.route.DistanceItem ref = (com.amap.api.services.route.DistanceItem) getHEAP().get((int) args.get("refId"));
@@ -539,8 +539,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.core.LatLonPoint item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -676,7 +676,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -746,8 +746,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.traffic.TrafficStatusInfo item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -821,7 +821,7 @@ public class SubHandler0 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -1049,7 +1049,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1085,7 +1085,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1217,7 +1217,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -1963,8 +1963,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.core.LatLonPoint item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -2038,8 +2038,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.core.LatLonPoint item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -2497,8 +2497,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.busline.BusStationItem item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -2586,7 +2586,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2654,7 +2654,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2724,8 +2724,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.core.SuggestionCity item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -2763,8 +2763,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.busline.BusStationItem item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -2800,7 +2800,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -2838,7 +2838,7 @@ public class SubHandler0 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -2967,7 +2967,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3003,7 +3003,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3041,7 +3041,7 @@ public class SubHandler0 {
                         // ref arg
                         final Integer argvar1;
                         if (var1 != null) {
-                            argvar1 = var1.hashCode();
+                            argvar1 = System.identityHashCode(var1);
                             getHEAP().put(argvar1, var1);
                         } else {
                             argvar1 = null;
@@ -3170,7 +3170,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3206,7 +3206,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3530,7 +3530,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3615,7 +3615,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3683,7 +3683,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -3753,8 +3753,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.core.SuggestionCity item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -3792,8 +3792,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.busline.BusLineItem item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -3957,7 +3957,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -4155,8 +4155,8 @@ public class SubHandler0 {
                 if (result != null) {
                     jsonableResult = new ArrayList<>();
                     for (com.amap.api.services.busline.BusLineItem item : result) {
-                        getHEAP().put(item.hashCode(), item);
-                        jsonableResult.add(item.hashCode());
+                        getHEAP().put(System.identityHashCode(item), item);
+                        jsonableResult.add(System.identityHashCode(item));
                     }
                 }
             
@@ -4484,7 +4484,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -4808,7 +4808,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -5322,7 +5322,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -5966,7 +5966,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6066,7 +6066,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             
@@ -6134,7 +6134,7 @@ public class SubHandler0 {
                 // convert result to jsonable result
                 Integer jsonableResult = null;
                 if (result != null) {
-                    jsonableResult = result.hashCode();
+                    jsonableResult = System.identityHashCode(result);
                     getHEAP().put(jsonableResult, result);
                 }
             

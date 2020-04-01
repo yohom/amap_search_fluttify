@@ -34,8 +34,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearchResult::setNearbyInfoList_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -73,8 +73,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCenterPoint_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -108,8 +108,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCenterPoint_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -134,7 +134,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -147,8 +147,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getRadius_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -182,8 +182,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setRadius_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -217,8 +217,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // enum arg
@@ -252,8 +252,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getType_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -287,8 +287,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setCoordType_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -322,8 +322,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getCoordType_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -357,8 +357,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::setTimeRange_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -392,8 +392,8 @@ public class SubHandler10 {
             put("com.amap.api.services.nearby.NearbySearch.NearbyQuery::getTimeRange_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -427,8 +427,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::getID_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -462,8 +462,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setID_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -497,8 +497,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::getTitle_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -532,8 +532,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setTitle_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -567,8 +567,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::getPoint_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -593,7 +593,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -606,8 +606,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setPoint_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -641,8 +641,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::getDistance_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -676,8 +676,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setDistance_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -711,8 +711,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::getDuration_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -746,8 +746,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOIItem::setDuration_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -781,8 +781,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearch::setQuery_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -816,8 +816,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOIAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -850,8 +850,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearch::searchRoutePOI_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -876,7 +876,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -889,8 +889,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchResult::getRoutePois_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -917,8 +917,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.routepoisearch.RoutePOIItem item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -931,8 +931,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchResult::getQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -957,7 +957,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -970,8 +970,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearch.OnRoutePOISearchListener::onRoutePoiSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -1007,8 +1007,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getFrom_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1033,7 +1033,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1046,8 +1046,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getTo_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1072,7 +1072,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1085,8 +1085,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1120,8 +1120,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getSearchType_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1146,7 +1146,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1159,8 +1159,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getRange_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1194,8 +1194,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::getPolylines_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1222,8 +1222,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.core.LatLonPoint item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -1236,8 +1236,8 @@ public class SubHandler10 {
             put("com.amap.api.services.routepoisearch.RoutePOISearchQuery::clone_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1262,7 +1262,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1275,8 +1275,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getID_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1310,8 +1310,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getDistance_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1345,8 +1345,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::setDistance_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1380,8 +1380,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getTitle_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1415,8 +1415,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getSnippet_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1450,8 +1450,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getLatLonPoint_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1476,7 +1476,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -1489,8 +1489,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getCreatetime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1524,8 +1524,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::setCreatetime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1559,8 +1559,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getUpdatetime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1594,8 +1594,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::setUpdatetime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1629,8 +1629,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::setCustomfield_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1664,8 +1664,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::getCloudImage_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1692,8 +1692,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.cloud.CloudImage item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -1706,8 +1706,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudItem::setmCloudImage_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -1745,8 +1745,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getQueryString_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1780,8 +1780,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setTableID_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1815,8 +1815,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getTableID_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1850,8 +1850,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getPageNum_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1885,8 +1885,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setPageNum_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1920,8 +1920,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setPageSize_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -1955,8 +1955,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getPageSize_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -1990,8 +1990,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setBound_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2025,8 +2025,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getBound_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2051,7 +2051,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2064,8 +2064,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::addFilterString_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2101,8 +2101,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getFilterString_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2136,8 +2136,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::addFilterNum_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2175,8 +2175,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getFilterNumString_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2210,8 +2210,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::setSortingrules_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2245,8 +2245,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::getSortingrules_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2271,7 +2271,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2284,8 +2284,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::queryEquals_batch", (argsBatch, methodResult) -> {
                 List<Boolean> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2320,8 +2320,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.Query::clone_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2346,7 +2346,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2359,8 +2359,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudResult::createPagedResult_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2397,7 +2397,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2410,8 +2410,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudResult::getPageCount_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2445,8 +2445,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudResult::getQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2471,7 +2471,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2484,8 +2484,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudResult::getBound_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2510,7 +2510,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2523,8 +2523,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudResult::getClouds_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2551,8 +2551,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.cloud.CloudItem item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -2565,8 +2565,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudResult::getTotalCount_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2600,8 +2600,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch::searchCloudAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -2635,8 +2635,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch::searchCloudDetailAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -2672,8 +2672,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getLowerLeft_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2698,7 +2698,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2711,8 +2711,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getUpperRight_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2737,7 +2737,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2750,8 +2750,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getCenter_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2776,7 +2776,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2789,8 +2789,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getRange_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2824,8 +2824,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getShape_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2859,8 +2859,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2894,8 +2894,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::getPolyGonList_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2922,8 +2922,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.core.LatLonPoint item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -2936,8 +2936,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.SearchBound::clone_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -2962,7 +2962,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -2975,8 +2975,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudImage::getId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3010,8 +3010,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudImage::setId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3045,8 +3045,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudImage::getPreurl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3080,8 +3080,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudImage::setPreurl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3115,8 +3115,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudImage::getUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3150,8 +3150,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudImage::setUrl_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3185,8 +3185,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -3222,8 +3222,8 @@ public class SubHandler10 {
             put("com.amap.api.services.cloud.CloudSearch.OnCloudSearchListener::onCloudItemDetailSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -3259,8 +3259,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getDate_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3294,8 +3294,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setDate_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3329,8 +3329,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getWeek_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3364,8 +3364,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setWeek_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3399,8 +3399,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWeather_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3434,8 +3434,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWeather_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3469,8 +3469,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWeather_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3504,8 +3504,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWeather_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3539,8 +3539,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayTemp_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3574,8 +3574,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayTemp_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3609,8 +3609,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightTemp_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3644,8 +3644,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightTemp_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3679,8 +3679,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3714,8 +3714,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3749,8 +3749,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3784,8 +3784,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3819,8 +3819,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getDayWindPower_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3854,8 +3854,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setDayWindPower_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3889,8 +3889,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::getNightWindPower_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3924,8 +3924,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalDayWeatherForecast::setNightWindPower_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -3959,8 +3959,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearchQuery::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -3994,8 +3994,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearchQuery::getType_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4029,8 +4029,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearchQuery::clone_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4055,7 +4055,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -4068,8 +4068,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherLiveSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -4105,8 +4105,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearch.OnWeatherSearchListener::onWeatherForecastSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -4142,8 +4142,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecastResult::createPagedResult_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -4170,7 +4170,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -4183,8 +4183,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecastResult::getWeatherForecastQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4209,7 +4209,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -4222,8 +4222,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecastResult::getForecastResult_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4248,7 +4248,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -4261,8 +4261,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::getProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4296,8 +4296,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::setProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4331,8 +4331,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4366,8 +4366,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::setCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4401,8 +4401,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::getAdCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4436,8 +4436,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::setAdCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4471,8 +4471,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::getReportTime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4506,8 +4506,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::setReportTime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -4541,8 +4541,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::getWeatherForecast_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4569,8 +4569,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.weather.LocalDayWeatherForecast item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -4583,8 +4583,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherForecast::setWeatherForecast_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -4622,8 +4622,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearch::getQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4648,7 +4648,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -4661,8 +4661,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearch::setQuery_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -4696,8 +4696,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.WeatherSearch::searchWeatherAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4730,8 +4730,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4765,8 +4765,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4800,8 +4800,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getAdCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4835,8 +4835,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getWeather_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4870,8 +4870,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getTemperature_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4905,8 +4905,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getWindDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4940,8 +4940,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getWindPower_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -4975,8 +4975,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getHumidity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5010,8 +5010,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::getReportTime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5045,8 +5045,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5080,8 +5080,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5115,8 +5115,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setAdCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5150,8 +5150,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setWeather_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5185,8 +5185,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setTemperature_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5220,8 +5220,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setWindDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5255,8 +5255,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setWindPower_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5290,8 +5290,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setHumidity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5325,8 +5325,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLive::setReportTime_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5360,8 +5360,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLiveResult::createPagedResult_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5388,7 +5388,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -5401,8 +5401,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLiveResult::getWeatherLiveQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5427,7 +5427,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -5440,8 +5440,8 @@ public class SubHandler10 {
             put("com.amap.api.services.weather.LocalWeatherLiveResult::getLiveResult_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5466,7 +5466,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -5479,8 +5479,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.BusinessArea::getCenterPoint_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5505,7 +5505,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -5518,8 +5518,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.BusinessArea::setCenterPoint_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5553,8 +5553,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.BusinessArea::getName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5588,8 +5588,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.BusinessArea::setName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5623,8 +5623,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeQuery::getLocationName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5658,8 +5658,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeQuery::setLocationName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5693,8 +5693,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeQuery::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5728,8 +5728,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeQuery::setCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -5763,8 +5763,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocation_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5790,7 +5790,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -5803,8 +5803,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationName_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5832,8 +5832,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.geocoder.GeocodeAddress item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -5846,8 +5846,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5881,8 +5881,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeSearch::getFromLocationNameAsyn_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5916,8 +5916,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -5942,7 +5942,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -5955,8 +5955,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeQuery_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -5990,8 +5990,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeResult::getRegeocodeAddress_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6016,7 +6016,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -6029,8 +6029,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeResult::setRegeocodeAddress_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -6064,8 +6064,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeResult::getGeocodeQuery_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6090,7 +6090,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -6103,8 +6103,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeQuery_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -6138,8 +6138,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeResult::getGeocodeAddressList_batch", (argsBatch, methodResult) -> {
                 List<List<Integer>> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6166,8 +6166,8 @@ public class SubHandler10 {
                     if (result != null) {
                         jsonableResult = new ArrayList<>();
                         for (com.amap.api.services.geocoder.GeocodeAddress item : result) {
-                            getHEAP().put(item.hashCode(), item);
-                            jsonableResult.add(item.hashCode());
+                            getHEAP().put(System.identityHashCode(item), item);
+                            jsonableResult.add(System.identityHashCode(item));
                         }
                     }
             
@@ -6180,8 +6180,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeResult::setGeocodeAddressList_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // list arg
@@ -6219,8 +6219,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::getAoiId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6254,8 +6254,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::getAoiName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6289,8 +6289,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::getAdCode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6324,8 +6324,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::getAoiCenterPoint_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6350,7 +6350,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -6363,8 +6363,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::getAoiArea_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6398,8 +6398,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::setId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6433,8 +6433,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::setName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6468,8 +6468,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::setAdcode_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6503,8 +6503,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::setLocation_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -6538,8 +6538,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.AoiItem::setArea_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6573,8 +6573,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onRegeocodeSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -6610,8 +6610,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeSearch.OnGeocodeSearchListener::onGeocodeSearched_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -6647,8 +6647,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::getId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6682,8 +6682,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setId_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6717,8 +6717,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::getName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6752,8 +6752,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setName_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6787,8 +6787,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::getDistance_batch", (argsBatch, methodResult) -> {
                 List<Float> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6822,8 +6822,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setDistance_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6857,8 +6857,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::getDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6892,8 +6892,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setDirection_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -6927,8 +6927,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::getLatLngPoint_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -6953,7 +6953,7 @@ public class SubHandler10 {
                     // convert result to jsonable result
                     Integer jsonableResult = null;
                     if (result != null) {
-                        jsonableResult = result.hashCode();
+                        jsonableResult = System.identityHashCode(result);
                         getHEAP().put(jsonableResult, result);
                     }
             
@@ -6966,8 +6966,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.RegeocodeRoad::setLatLngPoint_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // ref arg
@@ -7001,8 +7001,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::getFormatAddress_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -7036,8 +7036,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::setFormatAddress_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -7071,8 +7071,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::getProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -7106,8 +7106,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::setProvince_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -7141,8 +7141,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::getCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -7176,8 +7176,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::setCity_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg
@@ -7211,8 +7211,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::getDistrict_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
             
@@ -7246,8 +7246,8 @@ public class SubHandler10 {
             put("com.amap.api.services.geocoder.GeocodeAddress::setDistrict_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
-                for (int i = 0; i < ((List<Map<String, Object>>) argsBatch).size(); i++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(i);
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
             
                     // args
                     // jsonable arg

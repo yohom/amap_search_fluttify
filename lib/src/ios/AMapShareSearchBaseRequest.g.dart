@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapShareSearchBaseRequest';
+
   
   //endregion
 
   //region creators
   static Future<AMapShareSearchBaseRequest> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapShareSearchBaseRequest');
-    final object = AMapShareSearchBaseRequest()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapShareSearchBaseRequest()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapShareSearchBaseRequest extends AMapSearchObject with NSCoding, NSCopyi
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapShareSearchBaseRequest', {'length': length});
   
-    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapShareSearchBaseRequest> typedResult = resultBatch.map((result) => AMapShareSearchBaseRequest()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
   //region constants
+  static const String name__ = 'AMapPOI';
+
   
   //endregion
 
   //region creators
   static Future<AMapPOI> create__() async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createAMapPOI');
-    final object = AMapPOI()..refId = refId..tag = 'amap_search_fluttify';
+    final object = AMapPOI()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -32,7 +34,7 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
     }
     final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchAMapPOI', {'length': length});
   
-    final List<AMapPOI> typedResult = resultBatch.map((result) => AMapPOI()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<AMapPOI> typedResult = resultBatch.map((result) => AMapPOI()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -41,177 +43,177 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
 
   //region getters
   Future<String> get_uid() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_uid", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_uid", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_name() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_name", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_name", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_type() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_type", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_type", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_typecode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_typecode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_typecode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_location() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_location", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_location", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<String> get_address() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_address", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_address", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_tel() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_tel", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_tel", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<int> get_distance() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_distance", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_distance", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_parkingType() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_parkingType", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_parkingType", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_shopID() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_shopID", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_shopID", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_postcode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_postcode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_postcode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_website() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_website", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_website", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_email() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_email", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_email", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_province() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_province", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_province", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_pcode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_pcode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_pcode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_city() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_city", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_city", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_citycode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_citycode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_citycode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_district() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_district", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_district", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_adcode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_adcode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_adcode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_gridcode() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_gridcode", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_gridcode", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapGeoPoint> get_enterLocation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_enterLocation", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_enterLocation", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<AMapGeoPoint> get_exitLocation() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_exitLocation", {'refId': refId});
-    kNativeObjectPool.add(AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify');
-    return AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_exitLocation", {'refId': refId});
+    kNativeObjectPool.add(AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<String> get_direction() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_direction", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_direction", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<bool> get_hasIndoorMap() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_hasIndoorMap", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_hasIndoorMap", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<String> get_businessArea() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_businessArea", {'refId': refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_businessArea", {'refId': refId});
   
-    return result;
+    return __result__;
   }
   
   Future<AMapIndoorData> get_indoorData() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_indoorData", {'refId': refId});
-    kNativeObjectPool.add(AMapIndoorData()..refId = result..tag = 'amap_search_fluttify');
-    return AMapIndoorData()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_indoorData", {'refId': refId});
+    kNativeObjectPool.add(AMapIndoorData()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapIndoorData()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   Future<List<AMapSubPOI>> get_subPOIs() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_subPOIs", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapSubPOI()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapSubPOI()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_subPOIs", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapSubPOI()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapSubPOI()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   Future<List<AMapImage>> get_images() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_images", {'refId': refId});
-    kNativeObjectPool.addAll((result as List).cast<int>().map((it) => AMapImage()..refId = it..tag = 'amap_search_fluttify').toList());
-    return (result as List).cast<int>().map((it) => AMapImage()..refId = it..tag = 'amap_search_fluttify').toList();
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_images", {'refId': refId});
+    kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => AMapImage()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+    return (__result__ as List).cast<int>().map((__it__) => AMapImage()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
   }
   
   Future<AMapPOIExtension> get_extensionInfo() async {
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_extensionInfo", {'refId': refId});
-    kNativeObjectPool.add(AMapPOIExtension()..refId = result..tag = 'amap_search_fluttify');
-    return AMapPOIExtension()..refId = result..tag = 'amap_search_fluttify';
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_extensionInfo", {'refId': refId});
+    kNativeObjectPool.add(AMapPOIExtension()..refId = __result__..tag__ = 'amap_search_fluttify');
+    return AMapPOIExtension()..refId = __result__..tag__ = 'amap_search_fluttify';
   }
   
   //endregion
@@ -401,204 +403,204 @@ class AMapPOI extends AMapSearchObject with NSCoding, NSCopying {
 extension AMapPOI_Batch on List<AMapPOI> {
   //region getters
   Future<List<String>> get_uid_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_uid_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_uid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_name_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_name_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_name_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_type_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_type_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_typecode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_typecode_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_typecode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_location_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_location_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_location_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<String>> get_address_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_address_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_address_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_tel_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_tel_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_tel_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_distance_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_distance_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_distance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_parkingType_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_parkingType_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_parkingType_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_shopID_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_shopID_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_shopID_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_postcode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_postcode_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_postcode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_website_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_website_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_website_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_email_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_email_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_email_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_province_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_province_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_province_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_pcode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_pcode_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_pcode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_city_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_city_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_city_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_citycode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_citycode_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_citycode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_district_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_district_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_district_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_adcode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_adcode_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_adcode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_gridcode_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_gridcode_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_gridcode_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_enterLocation_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_enterLocation_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_enterLocation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_exitLocation_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_exitLocation_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapGeoPoint()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_exitLocation_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<String>> get_direction_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_direction_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_direction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<bool>> get_hasIndoorMap_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_hasIndoorMap_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_hasIndoorMap_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_businessArea_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_businessArea_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => result).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_businessArea_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapIndoorData>> get_indoorData_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_indoorData_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapIndoorData()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_indoorData_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapIndoorData()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<List<AMapSubPOI>>> get_subPOIs_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_subPOIs_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapSubPOI()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_subPOIs_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapSubPOI()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<List<AMapImage>>> get_images_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_images_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => AMapImage()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_images_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapImage()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
   
   Future<List<AMapPOIExtension>> get_extensionInfo_batch() async {
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_extensionInfo_batch", [for (final item in this) {'refId': item.refId}]);
-    final typedResult = (resultBatch as List).map((result) => AMapPOIExtension()..refId = result..tag = 'amap_search_fluttify').toList();
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOI::get_extensionInfo_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
+    final typedResult = (resultBatch as List).map((__result__) => AMapPOIExtension()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -607,175 +609,175 @@ extension AMapPOI_Batch on List<AMapPOI> {
 
   //region setters
   Future<void> set_uid_batch(List<String> uid) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_uid_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "uid": uid[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_uid_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "uid": uid[__i__]}]);
   
   
   }
   
   Future<void> set_name_batch(List<String> name) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_name_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "name": name[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_name_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "name": name[__i__]}]);
   
   
   }
   
   Future<void> set_type_batch(List<String> type) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_type_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "type": type[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_type_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "type": type[__i__]}]);
   
   
   }
   
   Future<void> set_typecode_batch(List<String> typecode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_typecode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "typecode": typecode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_typecode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "typecode": typecode[__i__]}]);
   
   
   }
   
   Future<void> set_location_batch(List<AMapGeoPoint> location) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_location_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "location": location[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_location_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "location": location[__i__].refId}]);
   
   
   }
   
   Future<void> set_address_batch(List<String> address) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_address_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "address": address[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_address_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "address": address[__i__]}]);
   
   
   }
   
   Future<void> set_tel_batch(List<String> tel) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_tel_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "tel": tel[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_tel_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "tel": tel[__i__]}]);
   
   
   }
   
   Future<void> set_distance_batch(List<int> distance) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_distance_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "distance": distance[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_distance_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "distance": distance[__i__]}]);
   
   
   }
   
   Future<void> set_parkingType_batch(List<String> parkingType) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_parkingType_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "parkingType": parkingType[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_parkingType_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "parkingType": parkingType[__i__]}]);
   
   
   }
   
   Future<void> set_shopID_batch(List<String> shopID) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_shopID_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "shopID": shopID[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_shopID_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "shopID": shopID[__i__]}]);
   
   
   }
   
   Future<void> set_postcode_batch(List<String> postcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_postcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "postcode": postcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_postcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "postcode": postcode[__i__]}]);
   
   
   }
   
   Future<void> set_website_batch(List<String> website) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_website_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "website": website[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_website_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "website": website[__i__]}]);
   
   
   }
   
   Future<void> set_email_batch(List<String> email) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_email_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "email": email[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_email_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "email": email[__i__]}]);
   
   
   }
   
   Future<void> set_province_batch(List<String> province) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_province_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "province": province[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_province_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "province": province[__i__]}]);
   
   
   }
   
   Future<void> set_pcode_batch(List<String> pcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_pcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "pcode": pcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_pcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "pcode": pcode[__i__]}]);
   
   
   }
   
   Future<void> set_city_batch(List<String> city) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_city_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "city": city[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_city_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "city": city[__i__]}]);
   
   
   }
   
   Future<void> set_citycode_batch(List<String> citycode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_citycode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "citycode": citycode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_citycode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "citycode": citycode[__i__]}]);
   
   
   }
   
   Future<void> set_district_batch(List<String> district) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_district_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "district": district[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_district_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "district": district[__i__]}]);
   
   
   }
   
   Future<void> set_adcode_batch(List<String> adcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_adcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "adcode": adcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_adcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "adcode": adcode[__i__]}]);
   
   
   }
   
   Future<void> set_gridcode_batch(List<String> gridcode) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_gridcode_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "gridcode": gridcode[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_gridcode_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "gridcode": gridcode[__i__]}]);
   
   
   }
   
   Future<void> set_enterLocation_batch(List<AMapGeoPoint> enterLocation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_enterLocation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "enterLocation": enterLocation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_enterLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "enterLocation": enterLocation[__i__].refId}]);
   
   
   }
   
   Future<void> set_exitLocation_batch(List<AMapGeoPoint> exitLocation) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_exitLocation_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "exitLocation": exitLocation[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_exitLocation_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "exitLocation": exitLocation[__i__].refId}]);
   
   
   }
   
   Future<void> set_direction_batch(List<String> direction) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_direction_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "direction": direction[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_direction_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "direction": direction[__i__]}]);
   
   
   }
   
   Future<void> set_hasIndoorMap_batch(List<bool> hasIndoorMap) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_hasIndoorMap_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "hasIndoorMap": hasIndoorMap[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_hasIndoorMap_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "hasIndoorMap": hasIndoorMap[__i__]}]);
   
   
   }
   
   Future<void> set_businessArea_batch(List<String> businessArea) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_businessArea_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "businessArea": businessArea[i]}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_businessArea_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "businessArea": businessArea[__i__]}]);
   
   
   }
   
   Future<void> set_indoorData_batch(List<AMapIndoorData> indoorData) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_indoorData_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "indoorData": indoorData[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_indoorData_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "indoorData": indoorData[__i__].refId}]);
   
   
   }
   
   Future<void> set_subPOIs_batch(List<List<AMapSubPOI>> subPOIs) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_subPOIs_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "subPOIs": subPOIs[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_subPOIs_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "subPOIs": subPOIs[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_images_batch(List<List<AMapImage>> images) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_images_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "images": images[i].map((it) => it.refId).toList()}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_images_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "images": images[__i__].map((it) => it.refId).toList()}]);
   
   
   }
   
   Future<void> set_extensionInfo_batch(List<AMapPOIExtension> extensionInfo) async {
-    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_extensionInfo_batch', [for (int i = 0; i < this.length; i++) {'refId': this[i].refId, "extensionInfo": extensionInfo[i].refId}]);
+    await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapPOI::set_extensionInfo_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {'refId': this[__i__].refId, "extensionInfo": extensionInfo[__i__].refId}]);
   
   
   }

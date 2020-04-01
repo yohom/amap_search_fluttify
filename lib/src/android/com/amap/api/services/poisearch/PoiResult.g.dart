@@ -14,6 +14,8 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.amap.api.services.poisearch.PoiResult';
+
   
   //endregion
 
@@ -37,18 +39,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult', {"var0": var0.refId, "var1": var1.refId, "var2": var2, "var3": var3.map((it) => it.refId).toList(), "var4": var4, "var5": var5, "var6": var6.map((it) => it.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult', {"var0": var0.refId, "var1": var1.refId, "var2": var2, "var3": var3.map((it) => it.refId).toList(), "var4": var4, "var5": var5, "var6": var6.map((it) => it.refId).toList()});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -59,18 +61,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPageCount', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPageCount', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
@@ -81,18 +83,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getQuery', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getQuery', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -103,18 +105,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getBound', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getBound', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify');
-      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify';
+      kNativeObjectPool.add(com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify');
+      return com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify';
     }
   }
   
@@ -125,18 +127,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPois', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPois', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
     }
   }
   
@@ -147,18 +149,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return (result as List).cast<String>();
+      return (__result__ as List).cast<String>();
     }
   }
   
@@ -169,18 +171,18 @@ class com_amap_api_services_poisearch_PoiResult extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys', {"refId": refId});
   
   
     // handle native call
   
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
-      kNativeObjectPool.addAll((result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it..tag = 'amap_search_fluttify').toList());
-      return (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it..tag = 'amap_search_fluttify').toList();
+      kNativeObjectPool.addAll((__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList());
+      return (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList();
     }
   }
   
@@ -203,14 +205,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult_batch', [for (int i = 0; i < this.length; i++) {"var0": var0[i].refId, "var1": var1[i].refId, "var2": var2[i], "var3": var3[i].map((it) => it.refId).toList(), "var4": var4[i], "var5": var5[i], "var6": var6[i].map((it) => it.refId).toList(), "refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::createPagedResult_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"var0": var0[__i__].refId, "var1": var1[__i__].refId, "var2": var2[__i__], "var3": var3[__i__].map((it) => it.refId).toList(), "var4": var4[__i__], "var5": var5[__i__], "var6": var6[__i__].map((it) => it.refId).toList(), "refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_poisearch_PoiResult()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_poisearch_PoiResult()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -222,14 +224,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPageCount_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPageCount_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => result).toList();
+      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -241,14 +243,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getQuery_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getQuery_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_poisearch_PoiSearch_Query()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -260,14 +262,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getBound_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getBound_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = result..tag = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).map((__result__) => com_amap_api_services_poisearch_PoiSearch_SearchBound()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -279,14 +281,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPois_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getPois_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => com_amap_api_services_core_PoiItem()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_PoiItem()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }
@@ -298,14 +300,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionKeywords_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<String>()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<String>()).toList();
     
       return typedResult;
     }
@@ -317,14 +319,14 @@ extension com_amap_api_services_poisearch_PoiResult_Batch on List<com_amap_api_s
     }
   
     // invoke native method
-    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys_batch', [for (int i = 0; i < this.length; i++) {"refId": this[i].refId}]);
+    final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.poisearch.PoiResult::getSearchSuggestionCitys_batch', [for (int __i__ = 0; __i__ < this.length; __i__++) {"refId": this[__i__].refId}]);
   
   
     // convert native result to dart side object
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((result) => (result as List).cast<int>().map((it) => com_amap_api_services_core_SuggestionCity()..refId = it..tag = 'amap_search_fluttify').toList()).toList();
+      final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => com_amap_api_services_core_SuggestionCity()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
       kNativeObjectPool.addAll(typedResult.expand((e) => e));
       return typedResult;
     }

@@ -14,13 +14,15 @@ import 'package:foundation_fluttify/foundation_fluttify.dart';
 
 class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
   //region constants
+  static const String name__ = 'com.amap.api.services.traffic.TrafficSearch';
+
   
   //endregion
 
   //region creators
   static Future<com_amap_api_services_traffic_TrafficSearch> create__android_content_Context(android_content_Context var1) async {
     final int refId = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::createcom_amap_api_services_traffic_TrafficSearch__android_content_Context', {"var1": var1.refId});
-    final object = com_amap_api_services_traffic_TrafficSearch()..refId = refId..tag = 'amap_search_fluttify';
+    final object = com_amap_api_services_traffic_TrafficSearch()..refId = refId..tag__ = 'amap_search_fluttify';
   
     kNativeObjectPool.add(object);
     return object;
@@ -30,9 +32,9 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
     if (false) {
       return Future.error('all args must have same length!');
     }
-    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficSearch__android_content_Context', [for (int i = 0; i < var1.length; i++) {"var1": var1[i].refId}]);
+    final List resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('ObjectFactory::create_batchcom_amap_api_services_traffic_TrafficSearch__android_content_Context', [for (int __i__ = 0; __i__ < var1.length; __i__++) {"var1": var1[__i__].refId}]);
   
-    final List<com_amap_api_services_traffic_TrafficSearch> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_TrafficSearch()..refId = result..tag = 'amap_search_fluttify').toList();
+    final List<com_amap_api_services_traffic_TrafficSearch> typedResult = resultBatch.map((result) => com_amap_api_services_traffic_TrafficSearch()..refId = result..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
@@ -55,7 +57,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
     }
   
     // invoke native method
-    final result = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener', {"refId": refId});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('com.amap.api.services.traffic.TrafficSearch::setTrafficSearchListener', {"refId": refId});
   
   
     // handle native call
@@ -73,7 +75,7 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
               }
         
               // handle the native call
-              var1?.onRoadTrafficSearched(com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag = 'amap_search_fluttify', args['var2']);
+              var1?.onRoadTrafficSearched(com_amap_api_services_traffic_TrafficStatusResult()..refId = (args['var1'])..tag__ = 'amap_search_fluttify', args['var2']);
               break;
             default:
               break;
@@ -81,11 +83,11 @@ class com_amap_api_services_traffic_TrafficSearch extends java_lang_Object  {
         });
   
     // convert native result to dart side object
-    if (result == null) {
+    if (__result__ == null) {
       return null;
     } else {
     
-      return result;
+      return __result__;
     }
   }
   
