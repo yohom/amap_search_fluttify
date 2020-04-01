@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 import 'dart:async';
 
 import 'package:amap_search_fluttify/src/android/android.export.g.dart';
@@ -400,7 +401,7 @@ class AmapSearch {
 
         // 创建请求对象
         final query = await com_amap_api_services_route_RouteSearch_DriveRouteQuery
-            .create__com_amap_api_services_route_RouteSearch_FromAndTo__int__com_amap_api_services_core_LatLonPoint__com_amap_api_services_core_LatLonPoint__String(
+            .create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_com_amap_api_services_core_LatLonPoint___List_List_com_amap_api_services_core_LatLonPoint____String(
           fromAndTo,
           0,
           passby,
@@ -995,7 +996,7 @@ class AmapSearch {
         // 关键字
         await request.set_keywords(keyword);
         // 中心点
-        final centerPoint = await AMapGeoPoint.locationWithLatitudeLongitude(
+        final centerPoint = await AMapGeoPoint.locationWithLatitude_longitude(
             center.latitude, center.longitude);
         await request.set_center(centerPoint);
         await request.set_radius(radius);
@@ -1206,11 +1207,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   final StreamController _streamController;
 
   @override
-  Future<void> onPOISearchDoneResponse(
+  Future<void> onPOISearchDone_response(
     AMapPOISearchBaseRequest request,
     AMapPOISearchResponse response,
   ) async {
-    super.onPOISearchDoneResponse(request, response);
+    super.onPOISearchDone_response(request, response);
     final poiList = [
       for (final item in (await response.get_pois())) Poi.ios(item)
     ];
@@ -1221,11 +1222,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onInputTipsSearchDoneResponse(
+  Future<void> onInputTipsSearchDone_response(
     AMapInputTipsSearchRequest request,
     AMapInputTipsSearchResponse response,
   ) async {
-    super.onInputTipsSearchDoneResponse(request, response);
+    super.onInputTipsSearchDone_response(request, response);
     final inputTipList = [
       for (final item in (await response.get_tips())) InputTip.ios(item)
     ];
@@ -1236,11 +1237,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onGeocodeSearchDoneResponse(
+  Future<void> onGeocodeSearchDone_response(
     AMapGeocodeSearchRequest request,
     AMapGeocodeSearchResponse response,
   ) async {
-    super.onGeocodeSearchDoneResponse(request, response);
+    super.onGeocodeSearchDone_response(request, response);
     final geocode = [
       for (final item in (await response.get_geocodes())) Geocode.ios(item)
     ];
@@ -1251,11 +1252,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onReGeocodeSearchDoneResponse(
+  Future<void> onReGeocodeSearchDone_response(
     AMapReGeocodeSearchRequest request,
     AMapReGeocodeSearchResponse response,
   ) async {
-    super.onReGeocodeSearchDoneResponse(request, response);
+    super.onReGeocodeSearchDone_response(request, response);
     final reGeocode = ReGeocode.ios(await response.get_regeocode());
     if (_streamController?.isClosed == false) {
       _streamController?.add(reGeocode);
@@ -1264,11 +1265,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onRouteSearchDoneResponse(
+  Future<void> onRouteSearchDone_response(
     AMapRouteSearchBaseRequest request,
     AMapRouteSearchResponse response,
   ) async {
-    super.onRouteSearchDoneResponse(request, response);
+    super.onRouteSearchDone_response(request, response);
     dynamic route;
     if (await request.isAMapDrivingRouteSearchRequest()) {
       route = DriveRouteResult.ios(await response.get_route());
@@ -1286,11 +1287,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onBusStopSearchDoneResponse(
+  Future<void> onBusStopSearchDone_response(
     AMapBusStopSearchRequest request,
     AMapBusStopSearchResponse response,
   ) async {
-    super.onBusStopSearchDoneResponse(request, response);
+    super.onBusStopSearchDone_response(request, response);
     if (_streamController?.isClosed == false) {
       _streamController?.add(BusStation.ios(response));
       _streamController?.close();
@@ -1298,11 +1299,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onDistrictSearchDoneResponse(
+  Future<void> onDistrictSearchDone_response(
     AMapDistrictSearchRequest request,
     AMapDistrictSearchResponse response,
   ) async {
-    super.onDistrictSearchDoneResponse(request, response);
+    super.onDistrictSearchDone_response(request, response);
     if (_streamController?.isClosed == false) {
       _streamController?.add(District.ios(response));
       _streamController?.close();
@@ -1310,11 +1311,11 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
-  Future<void> onCloudSearchDoneResponse(
+  Future<void> onCloudSearchDone_response(
     AMapCloudSearchBaseRequest request,
     AMapCloudPOISearchResponse response,
   ) async {
-    super.onCloudSearchDoneResponse(request, response);
+    super.onCloudSearchDone_response(request, response);
     if (_streamController?.isClosed == false) {
       _streamController?.add(Cloud.ios(response));
       _streamController?.close();
