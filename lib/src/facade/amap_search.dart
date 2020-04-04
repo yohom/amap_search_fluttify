@@ -1013,7 +1013,7 @@ class AmapSearch {
 
   /// 释放原生端对应的资源, 除了[AMapServices]
   static Future<void> dispose() async {
-    final isCurrentPlugin = (it) => it.tag == 'amap_search_fluttify';
+    final isCurrentPlugin = (Ref it) => it.tag__ == 'amap_search_fluttify';
     await kNativeObjectPool.where(isCurrentPlugin).release_batch();
     kNativeObjectPool.removeWhere(isCurrentPlugin);
 
