@@ -101,14 +101,14 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
   //region getters
   Future<List<double>> get_latitude_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPoint::get_latitude_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_longitude_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPoint::get_longitude_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -144,7 +144,7 @@ extension AMapGeoPoint_Batch on List<AMapGeoPoint> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }

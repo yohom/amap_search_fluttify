@@ -116,35 +116,35 @@ extension AMapWalking_Batch on List<AMapWalking> {
   //region getters
   Future<List<AMapGeoPoint>> get_origin_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_origin_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<AMapGeoPoint>> get_destination_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_destination_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoPoint()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<int>> get_distance_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_distance_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_duration_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_duration_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<List<AMapStep>>> get_steps_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWalking::get_steps_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapStep()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }

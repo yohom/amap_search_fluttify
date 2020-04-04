@@ -92,21 +92,21 @@ extension AMapPOIExtension_Batch on List<AMapPOIExtension> {
   //region getters
   Future<List<double>> get_rating_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_rating_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<double>> get_cost_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_cost_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_openTime_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapPOIExtension::get_openTime_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }

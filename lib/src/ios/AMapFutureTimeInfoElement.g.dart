@@ -104,28 +104,28 @@ extension AMapFutureTimeInfoElement_Batch on List<AMapFutureTimeInfoElement> {
   //region getters
   Future<List<int>> get_duration_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_duration_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_pathindex_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_pathindex_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_restriction_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_restriction_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<List<AMapTMC>>> get_tmcs_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapFutureTimeInfoElement::get_tmcs_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapTMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapTMC()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }

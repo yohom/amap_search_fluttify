@@ -92,21 +92,21 @@ extension AMapIndoorData_Batch on List<AMapIndoorData> {
   //region getters
   Future<List<int>> get_floor_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floor_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_floorName_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_floorName_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_pid_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapIndoorData::get_pid_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }

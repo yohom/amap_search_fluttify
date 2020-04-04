@@ -974,14 +974,14 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
   //region getters
   Future<List<int>> get_timeout_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_timeout_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapSearchLanguage>> get_language_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapSearchAPI::get_language_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapSearchLanguage.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapSearchLanguage.values[__result__]).toList();
   
     return typedResult;
   }
@@ -1017,7 +1017,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapSearchAPI()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
@@ -1036,7 +1036,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1055,7 +1055,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1074,7 +1074,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1093,7 +1093,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1112,7 +1112,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1131,7 +1131,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1150,7 +1150,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1169,7 +1169,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1188,7 +1188,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1207,7 +1207,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1226,7 +1226,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1245,7 +1245,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1264,7 +1264,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1283,7 +1283,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1302,7 +1302,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1321,7 +1321,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1340,7 +1340,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1359,7 +1359,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1378,7 +1378,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1397,7 +1397,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1416,7 +1416,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1435,7 +1435,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1454,7 +1454,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1473,7 +1473,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1492,7 +1492,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1511,7 +1511,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1530,7 +1530,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1549,7 +1549,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1568,7 +1568,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1587,7 +1587,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1606,7 +1606,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -1625,7 +1625,7 @@ extension AMapSearchAPI_Batch on List<AMapSearchAPI> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }

@@ -80,14 +80,14 @@ extension AMapImage_Batch on List<AMapImage> {
   //region getters
   Future<List<String>> get_title_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_title_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<String>> get_url_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapImage::get_url_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }

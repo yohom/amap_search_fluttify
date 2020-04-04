@@ -92,21 +92,21 @@ extension AMapBusLineSearchResponse_Batch on List<AMapBusLineSearchResponse> {
   //region getters
   Future<List<int>> get_count_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineSearchResponse::get_count_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapSuggestion>> get_suggestion_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineSearchResponse::get_suggestion_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapSuggestion()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapSuggestion()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }
   
   Future<List<List<AMapBusLine>>> get_buslines_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapBusLineSearchResponse::get_buslines_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapBusLine()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapBusLine()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }

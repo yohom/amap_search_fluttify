@@ -68,7 +68,7 @@ extension AMapRoadTrafficSearchResponse_Batch on List<AMapRoadTrafficSearchRespo
   //region getters
   Future<List<AMapTrafficInfo>> get_trafficInfo_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapRoadTrafficSearchResponse::get_trafficInfo_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapTrafficInfo()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
     kNativeObjectPool.addAll(typedResult);
     return typedResult;
   }

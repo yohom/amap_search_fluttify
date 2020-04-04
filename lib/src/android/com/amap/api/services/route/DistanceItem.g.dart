@@ -338,21 +338,21 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
   //region getters
   Future<List<int>> get_ERROR_CODE_NO_DRIVE_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NO_DRIVE_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_ERROR_CODE_TOO_FAR_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_TOO_FAR_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<int>> get_ERROR_CODE_NOT_IN_CHINA_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("com.amap.api.services.route.DistanceItem::get_ERROR_CODE_NOT_IN_CHINA_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
@@ -377,7 +377,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -396,7 +396,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -415,7 +415,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -434,7 +434,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<double>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -453,7 +453,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -472,7 +472,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -491,7 +491,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -510,7 +510,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -529,7 +529,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -548,7 +548,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -567,7 +567,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }
@@ -586,7 +586,7 @@ extension com_amap_api_services_route_DistanceItem_Batch on List<com_amap_api_se
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+      final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
     
       return typedResult;
     }

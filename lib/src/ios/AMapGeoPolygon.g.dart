@@ -67,7 +67,7 @@ class AMapGeoPolygon extends AMapSearchObject with NSCoding, NSCopying {
     }
   
     // invoke native method
-    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points.map((it) => it.refId).toList()});
+    final __result__ = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod('AMapGeoPolygon::polygonWithPoints', {"points": points.map((__it__) => __it__.refId).toList()});
   
   
     // handle native call
@@ -89,7 +89,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
   //region getters
   Future<List<List<AMapGeoPoint>>> get_points_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapGeoPolygon::get_points_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => (__result__ as List).cast<int>().map((__it__) => AMapGeoPoint()..refId = __it__..tag__ = 'amap_search_fluttify').toList()).toList();
     kNativeObjectPool.addAll(typedResult.expand((e) => e));
     return typedResult;
   }
@@ -119,7 +119,7 @@ extension AMapGeoPolygon_Batch on List<AMapGeoPolygon> {
     if (resultBatch == null) {
       return null;
     } else {
-      final typedResult = (resultBatch as List).map((__result__) => AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
+      final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapGeoPolygon()..refId = __result__..tag__ = 'amap_search_fluttify').toList();
       kNativeObjectPool.addAll(typedResult);
       return typedResult;
     }
