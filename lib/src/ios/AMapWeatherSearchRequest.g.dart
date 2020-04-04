@@ -80,14 +80,14 @@ extension AMapWeatherSearchRequest_Batch on List<AMapWeatherSearchRequest> {
   //region getters
   Future<List<String>> get_city_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_city_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => __result__).toList();
+    final typedResult = (resultBatch as List).cast<String>().map((__result__) => __result__).toList();
   
     return typedResult;
   }
   
   Future<List<AMapWeatherType>> get_type_batch() async {
     final resultBatch = await MethodChannel('me.yohom/amap_search_fluttify').invokeMethod("AMapWeatherSearchRequest::get_type_batch", [for (final __item__ in this) {'refId': __item__.refId}]);
-    final typedResult = (resultBatch as List).map((__result__) => AMapWeatherType.values[__result__]).toList();
+    final typedResult = (resultBatch as List).cast<int>().map((__result__) => AMapWeatherType.values[__result__]).toList();
   
     return typedResult;
   }
