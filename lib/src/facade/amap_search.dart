@@ -465,6 +465,8 @@ class AmapSearch {
           passby.add(geoPoint);
         }
         await request.set_waypoints(passby);
+        // tmc需要设置requireExtension为true
+        await request.set_requireExtension(true);
         // 暂不支持避开区域
 //        await request.set_avoidpolygons([]);
 
@@ -1232,6 +1234,18 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
     ];
     if (_streamController?.isClosed == false) {
       _streamController?.add(inputTipList);
+      _streamController?.close();
+    }
+  }
+
+  @override
+  Future<void> AMapSearchRequest_didFailWithError(
+    NSObject request,
+    NSError error,
+  ) async {
+    super.AMapSearchRequest_didFailWithError(request, error);
+    if (_streamController?.isClosed == false) {
+      _streamController?.addError(Exception(await error.description));
       _streamController?.close();
     }
   }

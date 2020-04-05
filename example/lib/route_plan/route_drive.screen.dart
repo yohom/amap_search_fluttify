@@ -68,19 +68,23 @@ class _RouteDriveScreenState extends State<RouteDriveScreen>
           ),
           RaisedButton(
             onPressed: () async {
-              final routeResult = await AmapSearch.searchDriveRoute(
-                from: LatLng(
-                  double.parse(_fromLatController.text),
-                  double.parse(_fromLngController.text),
-                ),
-                to: LatLng(
-                  double.parse(_toLatController.text),
-                  double.parse(_toLngController.text),
-                ),
-              );
-              routeResult
-                  .toFutureString()
-                  .then((it) => setState(() => _routeResult = it));
+              try {
+                final routeResult = await AmapSearch.searchDriveRoute(
+                  from: LatLng(
+                    double.parse(_fromLatController.text),
+                    double.parse(_fromLngController.text),
+                  ),
+                  to: LatLng(
+                    double.parse(_toLatController.text),
+                    double.parse(_toLngController.text),
+                  ),
+                );
+                routeResult
+                    .toFutureString()
+                    .then((it) => setState(() => _routeResult = it));
+              } catch (e) {
+                setState(() => _routeResult = e.toString());
+              }
             },
             child: Text('搜索'),
           ),
