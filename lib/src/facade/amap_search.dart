@@ -1237,6 +1237,18 @@ class _IOSSearchListener extends NSObject with AMapSearchDelegate {
   }
 
   @override
+  Future<void> AMapSearchRequest_didFailWithError(
+    NSObject request,
+    NSError error,
+  ) async {
+    super.AMapSearchRequest_didFailWithError(request, error);
+    if (_streamController?.isClosed == false) {
+      _streamController?.addError(Exception(await error.description));
+      _streamController?.close();
+    }
+  }
+
+  @override
   Future<void> onGeocodeSearchDone_response(
     AMapGeocodeSearchRequest request,
     AMapGeocodeSearchResponse response,
