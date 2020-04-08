@@ -401,7 +401,7 @@ class AmapSearch {
 
         // 创建请求对象
         final query = await com_amap_api_services_route_RouteSearch_DriveRouteQuery
-            .create__com_amap_api_services_route_RouteSearch_FromAndTo__int__List_com_amap_api_services_core_LatLonPoint___List_List_com_amap_api_services_core_LatLonPoint____String(
+            .create__com_amap_api_services_route_RouteSearch_FromAndTo__int__java_util_List_com_amap_api_services_core_LatLonPoint___java_util_List_java_util_List_com_amap_api_services_core_LatLonPoint____String(
           fromAndTo,
           0,
           passby,
@@ -1019,14 +1019,14 @@ class AmapSearch {
     await kNativeObjectPool.where(isCurrentPlugin).release_batch();
     kNativeObjectPool.removeWhere(isCurrentPlugin);
 
-    await _iosSearch?.release();
-    await _androidPoiSearch?.release();
-    await _androidInputTip?.release();
-    await _androidGeocodeSearch?.release();
-    await _androidRouteSearch?.release();
-    await _androidBusStationSearch?.release();
-    await _androidDistrictSearch?.release();
-    await _androidWeatherSearch?.release();
+    await _iosSearch?.release__();
+    await _androidPoiSearch?.release__();
+    await _androidInputTip?.release__();
+    await _androidGeocodeSearch?.release__();
+    await _androidRouteSearch?.release__();
+    await _androidBusStationSearch?.release__();
+    await _androidDistrictSearch?.release__();
+    await _androidWeatherSearch?.release__();
   }
 }
 

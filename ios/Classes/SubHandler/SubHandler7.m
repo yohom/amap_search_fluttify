@@ -14,6 +14,40 @@ extern BOOL enableLog;
 @implementation AmapSearchFluttifyPlugin (SubHandler7)
 - (NSDictionary<NSString*, Handler>*) getSubHandler7 {
     return @{
+        @"AMapTMC::set_polyline": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapTMC::set_polyline");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* polyline = (NSString*) args[@"polyline"];
+        
+            // ref
+            AMapTMC* ref = (AMapTMC*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.polyline = polyline;
+            methodResult(@"success");
+        },
+        
+        @"AMapStep::set_instruction": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapStep::set_instruction");
+            }
+        
+            // args
+            // jsonable arg
+            NSString* instruction = (NSString*) args[@"instruction"];
+        
+            // ref
+            AMapStep* ref = (AMapStep*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.instruction = instruction;
+            methodResult(@"success");
+        },
+        
         @"AMapStep::set_orientation": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -193,9 +227,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* citiesRefArray = (NSArray<NSNumber*> *) args[@"cities"];
-            NSMutableArray<AMapCity*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
+            NSMutableArray<NSArray<AMapCity*>*>* cities = [NSMutableArray arrayWithCapacity:citiesRefArray.count];
             for (int __i__ = 0; __i__ < citiesRefArray.count; __i__++) {
-                AMapCity* item = (AMapCity*) HEAP[[citiesRefArray objectAtIndex:__i__]];
+                NSArray<AMapCity*>* item = (NSArray<AMapCity*>*) HEAP[[citiesRefArray objectAtIndex:__i__]];
                 [cities addObject:item];
             }
         
@@ -215,9 +249,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
-            NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
+            NSMutableArray<NSArray<AMapTMC*>*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
             for (int __i__ = 0; __i__ < tmcsRefArray.count; __i__++) {
-                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
+                NSArray<AMapTMC*>* item = (NSArray<AMapTMC*>*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
                 [tmcs addObject:item];
             }
         
@@ -288,9 +322,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
-            NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
+            NSMutableArray<NSArray<AMapStep*>*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
             for (int __i__ = 0; __i__ < stepsRefArray.count; __i__++) {
-                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:__i__]];
+                NSArray<AMapStep*>* item = (NSArray<AMapStep*>*) HEAP[[stepsRefArray objectAtIndex:__i__]];
                 [steps addObject:item];
             }
         
@@ -429,9 +463,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* tmcsRefArray = (NSArray<NSNumber*> *) args[@"tmcs"];
-            NSMutableArray<AMapTMC*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
+            NSMutableArray<NSArray<AMapTMC*>*>* tmcs = [NSMutableArray arrayWithCapacity:tmcsRefArray.count];
             for (int __i__ = 0; __i__ < tmcsRefArray.count; __i__++) {
-                AMapTMC* item = (AMapTMC*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
+                NSArray<AMapTMC*>* item = (NSArray<AMapTMC*>*) HEAP[[tmcsRefArray objectAtIndex:__i__]];
                 [tmcs addObject:item];
             }
         
@@ -468,9 +502,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* elementsRefArray = (NSArray<NSNumber*> *) args[@"elements"];
-            NSMutableArray<AMapFutureTimeInfoElement*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
+            NSMutableArray<NSArray<AMapFutureTimeInfoElement*>*>* elements = [NSMutableArray arrayWithCapacity:elementsRefArray.count];
             for (int __i__ = 0; __i__ < elementsRefArray.count; __i__++) {
-                AMapFutureTimeInfoElement* item = (AMapFutureTimeInfoElement*) HEAP[[elementsRefArray objectAtIndex:__i__]];
+                NSArray<AMapFutureTimeInfoElement*>* item = (NSArray<AMapFutureTimeInfoElement*>*) HEAP[[elementsRefArray objectAtIndex:__i__]];
                 [elements addObject:item];
             }
         
@@ -558,9 +592,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* stepsRefArray = (NSArray<NSNumber*> *) args[@"steps"];
-            NSMutableArray<AMapStep*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
+            NSMutableArray<NSArray<AMapStep*>*>* steps = [NSMutableArray arrayWithCapacity:stepsRefArray.count];
             for (int __i__ = 0; __i__ < stepsRefArray.count; __i__++) {
-                AMapStep* item = (AMapStep*) HEAP[[stepsRefArray objectAtIndex:__i__]];
+                NSArray<AMapStep*>* item = (NSArray<AMapStep*>*) HEAP[[stepsRefArray objectAtIndex:__i__]];
                 [steps addObject:item];
             }
         
@@ -988,9 +1022,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* spacesRefArray = (NSArray<NSNumber*> *) args[@"spaces"];
-            NSMutableArray<AMapRailwaySpace*>* spaces = [NSMutableArray arrayWithCapacity:spacesRefArray.count];
+            NSMutableArray<NSArray<AMapRailwaySpace*>*>* spaces = [NSMutableArray arrayWithCapacity:spacesRefArray.count];
             for (int __i__ = 0; __i__ < spacesRefArray.count; __i__++) {
-                AMapRailwaySpace* item = (AMapRailwaySpace*) HEAP[[spacesRefArray objectAtIndex:__i__]];
+                NSArray<AMapRailwaySpace*>* item = (NSArray<AMapRailwaySpace*>*) HEAP[[spacesRefArray objectAtIndex:__i__]];
                 [spaces addObject:item];
             }
         
@@ -1010,9 +1044,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* viaStopsRefArray = (NSArray<NSNumber*> *) args[@"viaStops"];
-            NSMutableArray<AMapRailwayStation*>* viaStops = [NSMutableArray arrayWithCapacity:viaStopsRefArray.count];
+            NSMutableArray<NSArray<AMapRailwayStation*>*>* viaStops = [NSMutableArray arrayWithCapacity:viaStopsRefArray.count];
             for (int __i__ = 0; __i__ < viaStopsRefArray.count; __i__++) {
-                AMapRailwayStation* item = (AMapRailwayStation*) HEAP[[viaStopsRefArray objectAtIndex:__i__]];
+                NSArray<AMapRailwayStation*>* item = (NSArray<AMapRailwayStation*>*) HEAP[[viaStopsRefArray objectAtIndex:__i__]];
                 [viaStops addObject:item];
             }
         
@@ -1032,9 +1066,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* altersRefArray = (NSArray<NSNumber*> *) args[@"alters"];
-            NSMutableArray<AMapRailway*>* alters = [NSMutableArray arrayWithCapacity:altersRefArray.count];
+            NSMutableArray<NSArray<AMapRailway*>*>* alters = [NSMutableArray arrayWithCapacity:altersRefArray.count];
             for (int __i__ = 0; __i__ < altersRefArray.count; __i__++) {
-                AMapRailway* item = (AMapRailway*) HEAP[[altersRefArray objectAtIndex:__i__]];
+                NSArray<AMapRailway*>* item = (NSArray<AMapRailway*>*) HEAP[[altersRefArray objectAtIndex:__i__]];
                 [alters addObject:item];
             }
         
@@ -1071,9 +1105,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* buslinesRefArray = (NSArray<NSNumber*> *) args[@"buslines"];
-            NSMutableArray<AMapBusLine*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
+            NSMutableArray<NSArray<AMapBusLine*>*>* buslines = [NSMutableArray arrayWithCapacity:buslinesRefArray.count];
             for (int __i__ = 0; __i__ < buslinesRefArray.count; __i__++) {
-                AMapBusLine* item = (AMapBusLine*) HEAP[[buslinesRefArray objectAtIndex:__i__]];
+                NSArray<AMapBusLine*>* item = (NSArray<AMapBusLine*>*) HEAP[[buslinesRefArray objectAtIndex:__i__]];
                 [buslines addObject:item];
             }
         
@@ -1263,9 +1297,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* segmentsRefArray = (NSArray<NSNumber*> *) args[@"segments"];
-            NSMutableArray<AMapSegment*>* segments = [NSMutableArray arrayWithCapacity:segmentsRefArray.count];
+            NSMutableArray<NSArray<AMapSegment*>*>* segments = [NSMutableArray arrayWithCapacity:segmentsRefArray.count];
             for (int __i__ = 0; __i__ < segmentsRefArray.count; __i__++) {
-                AMapSegment* item = (AMapSegment*) HEAP[[segmentsRefArray objectAtIndex:__i__]];
+                NSArray<AMapSegment*>* item = (NSArray<AMapSegment*>*) HEAP[[segmentsRefArray objectAtIndex:__i__]];
                 [segments addObject:item];
             }
         
@@ -1353,9 +1387,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* pathsRefArray = (NSArray<NSNumber*> *) args[@"paths"];
-            NSMutableArray<AMapPath*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
+            NSMutableArray<NSArray<AMapPath*>*>* paths = [NSMutableArray arrayWithCapacity:pathsRefArray.count];
             for (int __i__ = 0; __i__ < pathsRefArray.count; __i__++) {
-                AMapPath* item = (AMapPath*) HEAP[[pathsRefArray objectAtIndex:__i__]];
+                NSArray<AMapPath*>* item = (NSArray<AMapPath*>*) HEAP[[pathsRefArray objectAtIndex:__i__]];
                 [paths addObject:item];
             }
         
@@ -1375,9 +1409,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* transitsRefArray = (NSArray<NSNumber*> *) args[@"transits"];
-            NSMutableArray<AMapTransit*>* transits = [NSMutableArray arrayWithCapacity:transitsRefArray.count];
+            NSMutableArray<NSArray<AMapTransit*>*>* transits = [NSMutableArray arrayWithCapacity:transitsRefArray.count];
             for (int __i__ = 0; __i__ < transitsRefArray.count; __i__++) {
-                AMapTransit* item = (AMapTransit*) HEAP[[transitsRefArray objectAtIndex:__i__]];
+                NSArray<AMapTransit*>* item = (NSArray<AMapTransit*>*) HEAP[[transitsRefArray objectAtIndex:__i__]];
                 [transits addObject:item];
             }
         
@@ -1890,9 +1924,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* castsRefArray = (NSArray<NSNumber*> *) args[@"casts"];
-            NSMutableArray<AMapLocalDayWeatherForecast*>* casts = [NSMutableArray arrayWithCapacity:castsRefArray.count];
+            NSMutableArray<NSArray<AMapLocalDayWeatherForecast*>*>* casts = [NSMutableArray arrayWithCapacity:castsRefArray.count];
             for (int __i__ = 0; __i__ < castsRefArray.count; __i__++) {
-                AMapLocalDayWeatherForecast* item = (AMapLocalDayWeatherForecast*) HEAP[[castsRefArray objectAtIndex:__i__]];
+                NSArray<AMapLocalDayWeatherForecast*>* item = (NSArray<AMapLocalDayWeatherForecast*>*) HEAP[[castsRefArray objectAtIndex:__i__]];
                 [casts addObject:item];
             }
         
@@ -2218,9 +2252,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* roadsRefArray = (NSArray<NSNumber*> *) args[@"roads"];
-            NSMutableArray<AMapTrafficRoad*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
+            NSMutableArray<NSArray<AMapTrafficRoad*>*>* roads = [NSMutableArray arrayWithCapacity:roadsRefArray.count];
             for (int __i__ = 0; __i__ < roadsRefArray.count; __i__++) {
-                AMapTrafficRoad* item = (AMapTrafficRoad*) HEAP[[roadsRefArray objectAtIndex:__i__]];
+                NSArray<AMapTrafficRoad*>* item = (NSArray<AMapTrafficRoad*>*) HEAP[[roadsRefArray objectAtIndex:__i__]];
                 [roads addObject:item];
             }
         
@@ -2350,6 +2384,23 @@ extern BOOL enableLog;
             methodResult(@"success");
         },
         
+        @"AMapCloudPOI::set_customFields": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
+            // print log
+            if (enableLog) {
+                NSLog(@"AMapCloudPOI::set_customFields");
+            }
+        
+            // args
+            // jsonable arg
+            NSDictionary* customFields = (NSDictionary*) args[@"customFields"];
+        
+            // ref
+            AMapCloudPOI* ref = (AMapCloudPOI*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
+        
+            ref.customFields = customFields;
+            methodResult(@"success");
+        },
+        
         @"AMapCloudPOI::set_createTime": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {
             // print log
             if (enableLog) {
@@ -2410,9 +2461,9 @@ extern BOOL enableLog;
             // args
             // list arg
             NSArray<NSNumber*>* imagesRefArray = (NSArray<NSNumber*> *) args[@"images"];
-            NSMutableArray<AMapCloudImage*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
+            NSMutableArray<NSArray<AMapCloudImage*>*>* images = [NSMutableArray arrayWithCapacity:imagesRefArray.count];
             for (int __i__ = 0; __i__ < imagesRefArray.count; __i__++) {
-                AMapCloudImage* item = (AMapCloudImage*) HEAP[[imagesRefArray objectAtIndex:__i__]];
+                NSArray<AMapCloudImage*>* item = (NSArray<AMapCloudImage*>*) HEAP[[imagesRefArray objectAtIndex:__i__]];
                 [images addObject:item];
             }
         
@@ -2926,9 +2977,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
-                NSMutableArray<AMapPOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
+                NSMutableArray<NSArray<AMapPOI*>*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
                 for (int __i__ = 0; __i__ < poisRefArray.count; __i__++) {
-                    AMapPOI* item = (AMapPOI*) HEAP[[poisRefArray objectAtIndex:__i__]];
+                    NSArray<AMapPOI*>* item = (NSArray<AMapPOI*>*) HEAP[[poisRefArray objectAtIndex:__i__]];
                     [pois addObject:item];
                 }
         
@@ -3057,9 +3108,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* polylineRefArray = (NSArray<NSNumber*> *) args[@"polyline"];
-                NSMutableArray<AMapGeoPoint*>* polyline = [NSMutableArray arrayWithCapacity:polylineRefArray.count];
+                NSMutableArray<NSArray<AMapGeoPoint*>*>* polyline = [NSMutableArray arrayWithCapacity:polylineRefArray.count];
                 for (int __i__ = 0; __i__ < polylineRefArray.count; __i__++) {
-                    AMapGeoPoint* item = (AMapGeoPoint*) HEAP[[polylineRefArray objectAtIndex:__i__]];
+                    NSArray<AMapGeoPoint*>* item = (NSArray<AMapGeoPoint*>*) HEAP[[polylineRefArray objectAtIndex:__i__]];
                     [polyline addObject:item];
                 }
         
@@ -3098,9 +3149,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* poisRefArray = (NSArray<NSNumber*> *) args[@"pois"];
-                NSMutableArray<AMapRoutePOI*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
+                NSMutableArray<NSArray<AMapRoutePOI*>*>* pois = [NSMutableArray arrayWithCapacity:poisRefArray.count];
                 for (int __i__ = 0; __i__ < poisRefArray.count; __i__++) {
-                    AMapRoutePOI* item = (AMapRoutePOI*) HEAP[[poisRefArray objectAtIndex:__i__]];
+                    NSArray<AMapRoutePOI*>* item = (NSArray<AMapRoutePOI*>*) HEAP[[poisRefArray objectAtIndex:__i__]];
                     [pois addObject:item];
                 }
         
@@ -3229,9 +3280,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* tipsRefArray = (NSArray<NSNumber*> *) args[@"tips"];
-                NSMutableArray<AMapTip*>* tips = [NSMutableArray arrayWithCapacity:tipsRefArray.count];
+                NSMutableArray<NSArray<AMapTip*>*>* tips = [NSMutableArray arrayWithCapacity:tipsRefArray.count];
                 for (int __i__ = 0; __i__ < tipsRefArray.count; __i__++) {
-                    AMapTip* item = (AMapTip*) HEAP[[tipsRefArray objectAtIndex:__i__]];
+                    NSArray<AMapTip*>* item = (NSArray<AMapTip*>*) HEAP[[tipsRefArray objectAtIndex:__i__]];
                     [tips addObject:item];
                 }
         
@@ -3306,9 +3357,9 @@ extern BOOL enableLog;
                 // args
                 // list arg
                 NSArray<NSNumber*>* geocodesRefArray = (NSArray<NSNumber*> *) args[@"geocodes"];
-                NSMutableArray<AMapGeocode*>* geocodes = [NSMutableArray arrayWithCapacity:geocodesRefArray.count];
+                NSMutableArray<NSArray<AMapGeocode*>*>* geocodes = [NSMutableArray arrayWithCapacity:geocodesRefArray.count];
                 for (int __i__ = 0; __i__ < geocodesRefArray.count; __i__++) {
-                    AMapGeocode* item = (AMapGeocode*) HEAP[[geocodesRefArray objectAtIndex:__i__]];
+                    NSArray<AMapGeocode*>* item = (NSArray<AMapGeocode*>*) HEAP[[geocodesRefArray objectAtIndex:__i__]];
                     [geocodes addObject:item];
                 }
         
@@ -3514,65 +3565,6 @@ extern BOOL enableLog;
                 AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
         
                 ref.suggestion = suggestion;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusStopSearchResponse::set_busstops_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // list arg
-                NSArray<NSNumber*>* busstopsRefArray = (NSArray<NSNumber*> *) args[@"busstops"];
-                NSMutableArray<AMapBusStop*>* busstops = [NSMutableArray arrayWithCapacity:busstopsRefArray.count];
-                for (int __i__ = 0; __i__ < busstopsRefArray.count; __i__++) {
-                    AMapBusStop* item = (AMapBusStop*) HEAP[[busstopsRefArray objectAtIndex:__i__]];
-                    [busstops addObject:item];
-                }
-        
-                // ref
-                AMapBusStopSearchResponse* ref = (AMapBusStopSearchResponse*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.busstops = busstops;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineBaseSearchRequest::set_city_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                NSString* city = (NSString*) args[@"city"];
-        
-                // ref
-                AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.city = city;
-                methodResult(@"success");
-            }
-        
-            methodResult(@"success");
-        },
-        
-        @"AMapBusLineBaseSearchRequest::set_requireExtension_batch": ^(NSObject <FlutterPluginRegistrar> * registrar, id argsBatch, FlutterResult methodResult) {
-            for (int __i__ = 0; __i__ < ((NSArray<NSDictionary<NSString*, NSObject*>*>*) argsBatch).count; __i__++) {
-                NSDictionary<NSString*, id>* args = [((NSArray<NSDictionary<NSString*, id>*>*) argsBatch) objectAtIndex:__i__];
-        
-                // args
-                // jsonable arg
-                BOOL requireExtension = [args[@"requireExtension"] boolValue];
-        
-                // ref
-                AMapBusLineBaseSearchRequest* ref = (AMapBusLineBaseSearchRequest*) HEAP[(NSNumber*) ((NSDictionary<NSString*, NSObject*>*) args)[@"refId"]];
-        
-                ref.requireExtension = requireExtension;
                 methodResult(@"success");
             }
         

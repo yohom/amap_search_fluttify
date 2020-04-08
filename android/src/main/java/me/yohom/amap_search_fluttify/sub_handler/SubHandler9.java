@@ -31,6 +31,41 @@ public class SubHandler9 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getDestParentPoiID_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.route.RouteSearch.DrivePlanQuery ref = (com.amap.api.services.route.RouteSearch.DrivePlanQuery) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getDestParentPoiID();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
             put("com.amap.api.services.route.RouteSearch.DrivePlanQuery::getMode_batch", (argsBatch, methodResult) -> {
                 List<Integer> resultList = new ArrayList<>();
             
@@ -644,7 +679,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DrivePlanStep ref = (com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.core.LatLonPoint> result;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> result;
                     try {
                         result = ref.getPolyline();
                     } catch (Throwable throwable) {
@@ -681,7 +716,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
                     }
@@ -795,7 +830,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.TimeInfo ref = (com.amap.api.services.route.TimeInfo) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.TimeInfosElement> result;
+                    java.util.List<com.amap.api.services.route.TimeInfosElement> result;
                     try {
                         result = ref.getElements();
                     } catch (Throwable throwable) {
@@ -832,7 +867,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.TimeInfosElement> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.TimeInfosElement> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.TimeInfosElement) getHEAP().get(refId));
                     }
@@ -1436,7 +1471,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.core.LatLonPoint> result;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> result;
                     try {
                         result = ref.getPolyline();
                     } catch (Throwable throwable) {
@@ -1473,7 +1508,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
                     }
@@ -1657,7 +1692,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.RouteSearchCity> result;
+                    java.util.List<com.amap.api.services.route.RouteSearchCity> result;
                     try {
                         result = ref.getRouteSearchCityList();
                     } catch (Throwable throwable) {
@@ -1694,7 +1729,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.RouteSearchCity> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.RouteSearchCity> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.RouteSearchCity) getHEAP().get(refId));
                     }
@@ -1738,7 +1773,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DriveStep ref = (com.amap.api.services.route.DriveStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.TMC> result;
+                    java.util.List<com.amap.api.services.route.TMC> result;
                     try {
                         result = ref.getTMCs();
                     } catch (Throwable throwable) {
@@ -1775,7 +1810,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.TMC> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.TMC> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.TMC) getHEAP().get(refId));
                     }
@@ -2094,7 +2129,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.core.LatLonPoint> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.core.LatLonPoint) getHEAP().get(refId));
                     }
@@ -2203,7 +2238,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.RouteSearchCity> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.RouteSearchCity> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.RouteSearchCity) getHEAP().get(refId));
                     }
@@ -2242,7 +2277,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.TMC> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.TMC> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.TMC) getHEAP().get(refId));
                     }
@@ -2566,7 +2601,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.TruckStep ref = (com.amap.api.services.route.TruckStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.core.LatLonPoint> result;
+                    java.util.List<com.amap.api.services.core.LatLonPoint> result;
                     try {
                         result = ref.getPolyline();
                     } catch (Throwable throwable) {
@@ -2678,7 +2713,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.TruckStep ref = (com.amap.api.services.route.TruckStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.RouteSearchCity> result;
+                    java.util.List<com.amap.api.services.route.RouteSearchCity> result;
                     try {
                         result = ref.getRouteSearchCityList();
                     } catch (Throwable throwable) {
@@ -2720,7 +2755,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.TruckStep ref = (com.amap.api.services.route.TruckStep) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.TMC> result;
+                    java.util.List<com.amap.api.services.route.TMC> result;
                     try {
                         result = ref.getTMCs();
                     } catch (Throwable throwable) {
@@ -2832,7 +2867,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DriveRouteResult ref = (com.amap.api.services.route.DriveRouteResult) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.DrivePath> result;
+                    java.util.List<com.amap.api.services.route.DrivePath> result;
                     try {
                         result = ref.getPaths();
                     } catch (Throwable throwable) {
@@ -2869,7 +2904,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.DrivePath> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.DrivePath> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.DrivePath) getHEAP().get(refId));
                     }
@@ -3267,7 +3302,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DrivePath ref = (com.amap.api.services.route.DrivePath) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.DriveStep> result;
+                    java.util.List<com.amap.api.services.route.DriveStep> result;
                     try {
                         result = ref.getSteps();
                     } catch (Throwable throwable) {
@@ -3304,7 +3339,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.DriveStep> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.DriveStep> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.DriveStep) getHEAP().get(refId));
                     }
@@ -3658,7 +3693,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.TruckStep> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.TruckStep> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.TruckStep) getHEAP().get(refId));
                     }
@@ -3947,7 +3982,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.TruckPath ref = (com.amap.api.services.route.TruckPath) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.TruckStep> result;
+                    java.util.List<com.amap.api.services.route.TruckStep> result;
                     try {
                         result = ref.getSteps();
                     } catch (Throwable throwable) {
@@ -4273,7 +4308,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.DrivePlanPath ref = (com.amap.api.services.route.DrivePlanPath) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.DrivePlanStep> result;
+                    java.util.List<com.amap.api.services.route.DrivePlanStep> result;
                     try {
                         result = ref.getSteps();
                     } catch (Throwable throwable) {
@@ -4310,7 +4345,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.DrivePlanStep> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.DrivePlanStep> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.DrivePlanStep) getHEAP().get(refId));
                     }
@@ -4629,7 +4664,7 @@ public class SubHandler9 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.route.TMC> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.route.TMC> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.route.TMC) getHEAP().get(refId));
                     }
@@ -4673,7 +4708,7 @@ public class SubHandler9 {
                     com.amap.api.services.route.TimeInfosElement ref = (com.amap.api.services.route.TimeInfosElement) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.route.TMC> result;
+                    java.util.List<com.amap.api.services.route.TMC> result;
                     try {
                         result = ref.getTMCs();
                     } catch (Throwable throwable) {
@@ -7155,7 +7190,7 @@ public class SubHandler9 {
                     com.amap.api.services.nearby.NearbySearchResult ref = (com.amap.api.services.nearby.NearbySearchResult) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.nearby.NearbyInfo> result;
+                    java.util.List<com.amap.api.services.nearby.NearbyInfo> result;
                     try {
                         result = ref.getNearbyInfoList();
                     } catch (Throwable throwable) {
@@ -7176,41 +7211,6 @@ public class SubHandler9 {
                             jsonableResult.add(System.identityHashCode(item));
                         }
                     }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.nearby.NearbySearchResult::getTotalNum_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.nearby.NearbySearchResult ref = (com.amap.api.services.nearby.NearbySearchResult) getHEAP().get(refId);
-            
-                    // invoke native method
-                    int result;
-                    try {
-                        result = ref.getTotalNum();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    int jsonableResult = result;
             
                     resultList.add(jsonableResult);
                 }

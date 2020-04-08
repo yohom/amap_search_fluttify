@@ -31,6 +31,76 @@ public class SubHandler11 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::getDistrict_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+            
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
+            
+                    // invoke native method
+                    String result;
+                    try {
+                        result = ref.getDistrict();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = result;
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
+            put("com.amap.api.services.geocoder.GeocodeAddress::setDistrict_batch", (argsBatch, methodResult) -> {
+                List<String> resultList = new ArrayList<>();
+            
+                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
+                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
+            
+                    // args
+                    // jsonable arg
+                    String var1 = (String) ((Map<String, Object>) args).get("var1");
+            
+                    // ref
+                    int refId = (int) ((Map<String, Object>) args).get("refId");
+                    com.amap.api.services.geocoder.GeocodeAddress ref = (com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId);
+            
+                    // invoke native method
+                    try {
+                        ref.setDistrict(var1);
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                        if (getEnableLog()) {
+                            Log.d("Current HEAP: ", getHEAP().toString());
+                        }
+                        methodResult.error(throwable.getMessage(), null, null);
+                        return;
+                    }
+            
+                    // convert result to jsonable result
+                    String jsonableResult = "success";
+            
+                    resultList.add(jsonableResult);
+                }
+            
+                methodResult.success(resultList);
+            });
+            // method
             put("com.amap.api.services.geocoder.GeocodeAddress::getTownship_batch", (argsBatch, methodResult) -> {
                 List<String> resultList = new ArrayList<>();
             
@@ -1811,7 +1881,7 @@ public class SubHandler11 {
                     com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.geocoder.RegeocodeRoad> result;
+                    java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> result;
                     try {
                         result = ref.getRoads();
                     } catch (Throwable throwable) {
@@ -1848,7 +1918,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.geocoder.RegeocodeRoad) getHEAP().get(refId));
                     }
@@ -1892,7 +1962,7 @@ public class SubHandler11 {
                     com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.core.PoiItem> result;
+                    java.util.List<com.amap.api.services.core.PoiItem> result;
                     try {
                         result = ref.getPois();
                     } catch (Throwable throwable) {
@@ -1929,7 +1999,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.core.PoiItem> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.core.PoiItem> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.core.PoiItem) getHEAP().get(refId));
                     }
@@ -1973,7 +2043,7 @@ public class SubHandler11 {
                     com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.road.Crossroad> result;
+                    java.util.List<com.amap.api.services.road.Crossroad> result;
                     try {
                         result = ref.getCrossroads();
                     } catch (Throwable throwable) {
@@ -2010,7 +2080,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.road.Crossroad> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.road.Crossroad> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.road.Crossroad) getHEAP().get(refId));
                     }
@@ -2054,7 +2124,7 @@ public class SubHandler11 {
                     com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.geocoder.BusinessArea> result;
+                    java.util.List<com.amap.api.services.geocoder.BusinessArea> result;
                     try {
                         result = ref.getBusinessAreas();
                     } catch (Throwable throwable) {
@@ -2091,7 +2161,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.geocoder.BusinessArea> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.geocoder.BusinessArea> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.geocoder.BusinessArea) getHEAP().get(refId));
                     }
@@ -2135,7 +2205,7 @@ public class SubHandler11 {
                     com.amap.api.services.geocoder.RegeocodeAddress ref = (com.amap.api.services.geocoder.RegeocodeAddress) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.geocoder.AoiItem> result;
+                    java.util.List<com.amap.api.services.geocoder.AoiItem> result;
                     try {
                         result = ref.getAois();
                     } catch (Throwable throwable) {
@@ -2172,7 +2242,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.geocoder.AoiItem> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.geocoder.AoiItem> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.geocoder.AoiItem) getHEAP().get(refId));
                     }
@@ -3172,7 +3242,7 @@ public class SubHandler11 {
                     com.amap.api.services.district.DistrictResult ref = (com.amap.api.services.district.DistrictResult) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.district.DistrictItem> result;
+                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> result;
                     try {
                         result = ref.getDistrict();
                     } catch (Throwable throwable) {
@@ -3209,7 +3279,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
+                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
                     }
@@ -3465,7 +3535,7 @@ public class SubHandler11 {
             
                     // args
                     // jsonable arg
-                    List<String> var1 = (List<String>) ((Map<String, Object>) args).get("var1");
+                    ArrayList<String> var1 = (ArrayList<String>) ((Map<String, Object>) args).get("var1");
             
                     // ref
                     int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -3895,7 +3965,7 @@ public class SubHandler11 {
                     com.amap.api.services.district.DistrictItem ref = (com.amap.api.services.district.DistrictItem) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.district.DistrictItem> result;
+                    java.util.List<com.amap.api.services.district.DistrictItem> result;
                     try {
                         result = ref.getSubDistrict();
                     } catch (Throwable throwable) {
@@ -3932,7 +4002,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
+                    java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
                     }
@@ -4006,7 +4076,7 @@ public class SubHandler11 {
                     // args
                     // list arg
                     List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                    List<com.amap.api.services.help.Tip> var1 = new ArrayList<>();
+                    java.util.List<com.amap.api.services.help.Tip> var1 = new ArrayList<>();
                     for (int refId : var1RefIdList) {
                         var1.add((com.amap.api.services.help.Tip) getHEAP().get(refId));
                     }
@@ -4938,7 +5008,7 @@ public class SubHandler11 {
                     com.amap.api.services.help.Inputtips ref = (com.amap.api.services.help.Inputtips) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.help.Tip> result;
+                    java.util.List<com.amap.api.services.help.Tip> result;
                     try {
                         result = ref.requestInputtips();
                     } catch (Throwable throwable) {
@@ -6515,7 +6585,7 @@ public class SubHandler11 {
                     com.amap.api.services.interfaces.IInputtipsSearch ref = (com.amap.api.services.interfaces.IInputtipsSearch) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.help.Tip> result;
+                    java.util.ArrayList<com.amap.api.services.help.Tip> result;
                     try {
                         result = ref.requestInputtips();
                     } catch (Throwable throwable) {
@@ -6674,7 +6744,7 @@ public class SubHandler11 {
                     com.amap.api.services.interfaces.IGeocodeSearch ref = (com.amap.api.services.interfaces.IGeocodeSearch) getHEAP().get(refId);
             
                     // invoke native method
-                    List<com.amap.api.services.geocoder.GeocodeAddress> result;
+                    java.util.List<com.amap.api.services.geocoder.GeocodeAddress> result;
                     try {
                         result = ref.getFromLocationName(var1);
                     } catch (Throwable throwable) {
@@ -7200,84 +7270,6 @@ public class SubHandler11 {
             
                     // convert result to jsonable result
                     String jsonableResult = "success";
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IPoiSearch::getQuery_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.poisearch.PoiSearch.Query result;
-                    try {
-                        result = ref.getQuery();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
-            
-                    resultList.add(jsonableResult);
-                }
-            
-                methodResult.success(resultList);
-            });
-            // method
-            put("com.amap.api.services.interfaces.IPoiSearch::getBound_batch", (argsBatch, methodResult) -> {
-                List<Integer> resultList = new ArrayList<>();
-            
-                for (int __i__ = 0; __i__ < ((List<Map<String, Object>>) argsBatch).size(); __i__++) {
-                    Map<String, Object> args = ((List<Map<String, Object>>) argsBatch).get(__i__);
-            
-                    // args
-            
-            
-                    // ref
-                    int refId = (int) ((Map<String, Object>) args).get("refId");
-                    com.amap.api.services.interfaces.IPoiSearch ref = (com.amap.api.services.interfaces.IPoiSearch) getHEAP().get(refId);
-            
-                    // invoke native method
-                    com.amap.api.services.poisearch.PoiSearch.SearchBound result;
-                    try {
-                        result = ref.getBound();
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                        if (getEnableLog()) {
-                            Log.d("Current HEAP: ", getHEAP().toString());
-                        }
-                        methodResult.error(throwable.getMessage(), null, null);
-                        return;
-                    }
-            
-                    // convert result to jsonable result
-                    Integer jsonableResult = null;
-                    if (result != null) {
-                        jsonableResult = System.identityHashCode(result);
-                        getHEAP().put(jsonableResult, result);
-                    }
             
                     resultList.add(jsonableResult);
                 }

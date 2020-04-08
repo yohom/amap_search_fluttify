@@ -31,6 +31,38 @@ public class SubHandler5 {
     public static Map<String, Handler> getSubHandler(BinaryMessenger messenger) {
         return new HashMap<String, Handler>() {{
             // method
+            put("com.amap.api.services.geocoder.StreetNumber::getNumber", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getNumber(" + "" + ")");
+                }
+            
+                // invoke native method
+                String result;
+                try {
+                    result = ref.getNumber();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                String jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
             put("com.amap.api.services.geocoder.StreetNumber::setNumber", (args, methodResult) -> {
                 // args
                 // jsonable arg
@@ -917,7 +949,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.geocoder.RegeocodeRoad> result;
+                java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> result;
                 try {
                     result = ref.getRoads();
                 } catch (Throwable throwable) {
@@ -946,7 +978,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.geocoder.RegeocodeRoad> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.geocoder.RegeocodeRoad) getHEAP().get(refId));
                 }
@@ -992,7 +1024,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.core.PoiItem> result;
+                java.util.List<com.amap.api.services.core.PoiItem> result;
                 try {
                     result = ref.getPois();
                 } catch (Throwable throwable) {
@@ -1021,7 +1053,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.core.PoiItem> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.core.PoiItem> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.core.PoiItem) getHEAP().get(refId));
                 }
@@ -1067,7 +1099,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.road.Crossroad> result;
+                java.util.List<com.amap.api.services.road.Crossroad> result;
                 try {
                     result = ref.getCrossroads();
                 } catch (Throwable throwable) {
@@ -1096,7 +1128,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.road.Crossroad> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.road.Crossroad> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.road.Crossroad) getHEAP().get(refId));
                 }
@@ -1142,7 +1174,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.geocoder.BusinessArea> result;
+                java.util.List<com.amap.api.services.geocoder.BusinessArea> result;
                 try {
                     result = ref.getBusinessAreas();
                 } catch (Throwable throwable) {
@@ -1171,7 +1203,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.geocoder.BusinessArea> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.geocoder.BusinessArea> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.geocoder.BusinessArea) getHEAP().get(refId));
                 }
@@ -1217,7 +1249,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.geocoder.AoiItem> result;
+                java.util.List<com.amap.api.services.geocoder.AoiItem> result;
                 try {
                     result = ref.getAois();
                 } catch (Throwable throwable) {
@@ -1246,7 +1278,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.geocoder.AoiItem> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.geocoder.AoiItem> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.geocoder.AoiItem) getHEAP().get(refId));
                 }
@@ -2232,7 +2264,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.district.DistrictItem> result;
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> result;
                 try {
                     result = ref.getDistrict();
                 } catch (Throwable throwable) {
@@ -2261,7 +2293,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
                 }
@@ -2496,7 +2528,7 @@ public class SubHandler5 {
             put("com.amap.api.services.district.DistrictItem::setDistrictBoundary", (args, methodResult) -> {
                 // args
                 // jsonable arg
-                List<String> var1 = (List<String>) ((Map<String, Object>) args).get("var1");
+                ArrayList<String> var1 = (ArrayList<String>) ((Map<String, Object>) args).get("var1");
             
                 // ref
                 int refId = (int) ((Map<String, Object>) args).get("refId");
@@ -2895,7 +2927,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.district.DistrictItem> result;
+                java.util.List<com.amap.api.services.district.DistrictItem> result;
                 try {
                     result = ref.getSubDistrict();
                 } catch (Throwable throwable) {
@@ -2924,7 +2956,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
+                java.util.ArrayList<com.amap.api.services.district.DistrictItem> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.district.DistrictItem) getHEAP().get(refId));
                 }
@@ -2992,7 +3024,7 @@ public class SubHandler5 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.help.Tip> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.help.Tip> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.help.Tip) getHEAP().get(refId));
                 }
@@ -3827,7 +3859,7 @@ public class SubHandler5 {
             
                     // call dart method
                     @Override
-                    public void onGetInputtips(List<com.amap.api.services.help.Tip> var1, int var2) {
+                    public void onGetInputtips(java.util.List<com.amap.api.services.help.Tip> var1, int var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
@@ -3917,7 +3949,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.help.Tip> result;
+                java.util.List<com.amap.api.services.help.Tip> result;
                 try {
                     result = ref.requestInputtips();
                 } catch (Throwable throwable) {
@@ -6102,7 +6134,7 @@ public class SubHandler5 {
             
                     // call dart method
                     @Override
-                    public void onGetInputtips(List<com.amap.api.services.help.Tip> var1, int var2) {
+                    public void onGetInputtips(java.util.List<com.amap.api.services.help.Tip> var1, int var2) {
                         // print log
                         if (getEnableLog()) {
                             Log.d("java-callback", "fluttify-java-callback: onGetInputtips(" + var1 + var2 + ")");
@@ -6192,7 +6224,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.help.Tip> result;
+                java.util.ArrayList<com.amap.api.services.help.Tip> result;
                 try {
                     result = ref.requestInputtips();
                 } catch (Throwable throwable) {
@@ -6339,7 +6371,7 @@ public class SubHandler5 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.geocoder.GeocodeAddress> result;
+                java.util.List<com.amap.api.services.geocoder.GeocodeAddress> result;
                 try {
                     result = ref.getFromLocationName(var1);
                 } catch (Throwable throwable) {
@@ -7710,38 +7742,6 @@ public class SubHandler5 {
                 // invoke native method
                 try {
                     ref.clearUserInfoAsyn();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.interfaces.INearbySearch::setUserID", (args, methodResult) -> {
-                // args
-                // jsonable arg
-                String var1 = (String) ((Map<String, Object>) args).get("var1");
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.services.interfaces.INearbySearch ref = (com.amap.api.services.interfaces.INearbySearch) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.interfaces.INearbySearch@" + refId + "::setUserID(" + var1 + ")");
-                }
-            
-                // invoke native method
-                try {
-                    ref.setUserID(var1);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {

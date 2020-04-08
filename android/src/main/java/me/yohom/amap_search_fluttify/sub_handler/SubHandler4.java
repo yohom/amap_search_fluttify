@@ -251,7 +251,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.core.LatLonPoint> result;
+                java.util.List<com.amap.api.services.core.LatLonPoint> result;
                 try {
                     result = ref.getPolylines();
                 } catch (Throwable throwable) {
@@ -636,6 +636,38 @@ public class SubHandler4 {
                 methodResult.success(jsonableResult);
             });
             // method
+            put("com.amap.api.services.cloud.CloudItem::getCustomfield", (args, methodResult) -> {
+                // args
+            
+            
+                // ref
+                int refId = (int) ((Map<String, Object>) args).get("refId");
+                com.amap.api.services.cloud.CloudItem ref = (com.amap.api.services.cloud.CloudItem) getHEAP().get(refId);
+            
+                // print log
+                if (getEnableLog()) {
+                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.cloud.CloudItem@" + refId + "::getCustomfield(" + "" + ")");
+                }
+            
+                // invoke native method
+                HashMap<String,String> result;
+                try {
+                    result = ref.getCustomfield();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                    if (getEnableLog()) {
+                        Log.d("Current HEAP: ", getHEAP().toString());
+                    }
+                    methodResult.error(throwable.getMessage(), null, null);
+                    return;
+                }
+            
+                // convert result to jsonable result
+                HashMap<String,String> jsonableResult = result;
+            
+                methodResult.success(jsonableResult);
+            });
+            // method
             put("com.amap.api.services.cloud.CloudItem::setCustomfield", (args, methodResult) -> {
                 // args
                 // jsonable arg
@@ -682,7 +714,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.cloud.CloudImage> result;
+                java.util.List<com.amap.api.services.cloud.CloudImage> result;
                 try {
                     result = ref.getCloudImage();
                 } catch (Throwable throwable) {
@@ -711,7 +743,7 @@ public class SubHandler4 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.cloud.CloudImage> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.cloud.CloudImage> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.cloud.CloudImage) getHEAP().get(refId));
                 }
@@ -1318,7 +1350,7 @@ public class SubHandler4 {
                 int var3 = (int) ((Map<String, Object>) args).get("var3");
                 // list arg
                 List<Integer> var4RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var4");
-                List<com.amap.api.services.cloud.CloudItem> var4 = new ArrayList<>();
+                java.util.ArrayList<com.amap.api.services.cloud.CloudItem> var4 = new ArrayList<>();
                 for (int refId : var4RefIdList) {
                     var4.add((com.amap.api.services.cloud.CloudItem) getHEAP().get(refId));
                 }
@@ -1472,7 +1504,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.cloud.CloudItem> result;
+                java.util.ArrayList<com.amap.api.services.cloud.CloudItem> result;
                 try {
                     result = ref.getClouds();
                 } catch (Throwable throwable) {
@@ -1913,7 +1945,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.core.LatLonPoint> result;
+                java.util.List<com.amap.api.services.core.LatLonPoint> result;
                 try {
                     result = ref.getPolyGonList();
                 } catch (Throwable throwable) {
@@ -3422,7 +3454,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.weather.LocalDayWeatherForecast> result;
+                java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast> result;
                 try {
                     result = ref.getWeatherForecast();
                 } catch (Throwable throwable) {
@@ -3451,7 +3483,7 @@ public class SubHandler4 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.weather.LocalDayWeatherForecast> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.weather.LocalDayWeatherForecast> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.weather.LocalDayWeatherForecast) getHEAP().get(refId));
                 }
@@ -4680,7 +4712,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.geocoder.GeocodeAddress> result;
+                java.util.List<com.amap.api.services.geocoder.GeocodeAddress> result;
                 try {
                     result = ref.getFromLocationName(var1);
                 } catch (Throwable throwable) {
@@ -5087,7 +5119,7 @@ public class SubHandler4 {
                 }
             
                 // invoke native method
-                List<com.amap.api.services.geocoder.GeocodeAddress> result;
+                java.util.List<com.amap.api.services.geocoder.GeocodeAddress> result;
                 try {
                     result = ref.getGeocodeAddressList();
                 } catch (Throwable throwable) {
@@ -5116,7 +5148,7 @@ public class SubHandler4 {
                 // args
                 // list arg
                 List<Integer> var1RefIdList = (List<Integer>) ((Map<String, Object>) args).get("var1");
-                List<com.amap.api.services.geocoder.GeocodeAddress> var1 = new ArrayList<>();
+                java.util.List<com.amap.api.services.geocoder.GeocodeAddress> var1 = new ArrayList<>();
                 for (int refId : var1RefIdList) {
                     var1.add((com.amap.api.services.geocoder.GeocodeAddress) getHEAP().get(refId));
                 }
@@ -6828,38 +6860,6 @@ public class SubHandler4 {
             
                 // convert result to jsonable result
                 String jsonableResult = "success";
-            
-                methodResult.success(jsonableResult);
-            });
-            // method
-            put("com.amap.api.services.geocoder.StreetNumber::getNumber", (args, methodResult) -> {
-                // args
-            
-            
-                // ref
-                int refId = (int) ((Map<String, Object>) args).get("refId");
-                com.amap.api.services.geocoder.StreetNumber ref = (com.amap.api.services.geocoder.StreetNumber) getHEAP().get(refId);
-            
-                // print log
-                if (getEnableLog()) {
-                    Log.d("fluttify-java", "fluttify-java: com.amap.api.services.geocoder.StreetNumber@" + refId + "::getNumber(" + "" + ")");
-                }
-            
-                // invoke native method
-                String result;
-                try {
-                    result = ref.getNumber();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                    if (getEnableLog()) {
-                        Log.d("Current HEAP: ", getHEAP().toString());
-                    }
-                    methodResult.error(throwable.getMessage(), null, null);
-                    return;
-                }
-            
-                // convert result to jsonable result
-                String jsonableResult = result;
             
                 methodResult.success(jsonableResult);
             });
